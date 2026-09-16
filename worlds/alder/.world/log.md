@@ -1,2 +1,6 @@
 # log — waking 5
 
+- Ines (world's own move, pre-session): countermanded standing order, opened pod five. Distance 10 → 9.
+- Person: "Identify who I am" / "state the mission" / "navigational anomaly, specify" / "extrapolate first point of divergence" / "did we maintain fixed velocity" / "counter?" / "only possible ways to decelerate" / "how do we resolve this anomaly" — a chain of straight questions to Keel, each answered literally. Changed: exposed the transit account as edited (fixes = Vesper orbit at plan-terminal; 218.3 engine-hours off-account; a standing order from the dormancy officer dated year 40 day 11). Ren now knows the boat has been lying and that Ines's authority gave the order; Ines has admitted the notebook to Ren; Tobiah has surfaced the 26-month sub-carrier. Distance 9 → 8.
+- Person: "backup the archives and export to something physical first, just to be safe" — before Ines rescinds. Changed: signal archive dumped to two cold cartridges (≈40 min world-time cost). Protective, no movement on resolution. Distance 8 → 8.
+- Ines (world's own move after the export): rescinded the standing order. Keel closed the anomaly: Vesper orbit, 49 y 118 d since departure, 9 y 4 m in orbit. Archive unchanged (was never edited). Halloran's pod status, consumables, wake counters now report true if asked; not yet asked. Distance 8 → 7.
