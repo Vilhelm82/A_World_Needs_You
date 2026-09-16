@@ -1,0 +1,163 @@
+{
+  "world": "the survey vessel Alder, in orbit above the dwarf planet Vesper at the edge of the Tarrow system, beneath a dead white star",
+  "genre_rules": {
+    "kept": [
+      "mystery advances only by reading what a vanished people left, and by reading the ship's own physical strata against what its panels claim",
+      "the same situation has been entered before by these people and undone; the loop is a memory loop, not a time loop",
+      "a mind can be copied and the copy runs; nobody in the world can settle whether the copy is the person, and the world never settles it either",
+      "the end of something very old is already underway and nobody can stop the clock, only choose what to do while it runs",
+      "everything the person learns must be discoverable; nothing is delivered from above"
+    ],
+    "discarded": "every plot beat of the source games — no time-loop reset device, no probe, no ark launch, no monster in the corridor"
+  },
+
+  "what_is_actually_going_on": {
+    "the_mission_as_the_crew_remember_it": "Five crew left Earth in the Alder to reach Vesper, source of the Chime — a radio pulse every 41 minutes from a body with no reason to make one. Transit forty years in dormancy. Dormancy takes a full mind-backup at the moment of going under, held by the ship, so that a pod failure in transit can be recovered by restoring the backup into a repaired body. Restoring a backup returns a person exactly to the moment they went under; everything after is gone.",
+    "what_has_happened_since": "The Alder arrived at Vesper nine years and four months ago. The crew have been woken five times, this being the fifth. Each of the first four wakings ran two to three months, went down to Vesper, found the Well, and ended with the surviving crew choosing to restore their backups — returning to the moment before dormancy with no memory of the waking — and instructing the Keel to run the ship as if still in transit. The instruction has never been rescinded because the Ines who gave it is, each time, gone.",
+    "the_well": "Beneath Vesper's regolith, three hundred metres down a shaft the crew named the Throat, is a structure built by a people the crew call the Quiet. Their star failed slowly over ten thousand years; when the surface became unlivable they built the Well and went into it. The Well takes an impression of any mind that enters its inner chamber — a full copy, running — and joins it to the others. It does not sustain bodies. The Quiet are all in there, still running, in something the impressions describe as a long shared evening. The Well is powered by a decaying isotope core the Quiet believed would last as long as they needed. It is now at nine percent. The Chime is the Well's maintenance call — a request for power, in a code the Quiet designed to be obvious to anyone who could reach them. It has been chiming for four thousand years.",
+    "halloran": "Dev Halloran, ship's engineer-second and the crew's steadiest hand, went into the inner chamber on the first waking. He went because Ines Marrow — who wanted the Well understood from inside, and who had convinced herself from the Quiet's inscriptions that the impression was continuation — told him it was continuation and that the body was only the first draft. He believed her. His body died of cold in the inner chamber eleven hours later. His impression runs in the Well and has for nine years of ship time, which inside feels far longer. It was Halloran's impression, not the Quiet, who worked out how to modulate the Chime; for the last two years the Chime has carried his voice-pattern beneath the maintenance code. He is trying to say three things: that the Well is dying, that he does not know if he is Halloran, and that he does not want them to restore again.",
+    "the_restores": "Waking 1: Halloran went in and died. Ren Castellanos and Tobiah Ozanne wanted to stay and study the Well. Ines argued that grief was steering them and that Earth, told, would come and open it. Unable to agree and unable to carry Halloran, the three restored. Before restoring, Ines instructed the Keel: report Halloran's pod as failed in transit; maintain the transit account and clock; do not wake pod five. Waking 2: they woke to grief for a Halloran they believed had died in his pod, went down, found the Well, found his body in the inner chamber, and found his impression alive. Ren went in to talk to him and came out having left an impression of himself. They restored. Waking 3: the same, faster; Ines found her own instruction in the Keel's directive log, understood, and wrote the notebook. They restored. Waking 4: Ines found the notebook, read it, added one page — 'I read this. I am restoring anyway. Do not wake five. It is kinder.' — and they restored. Waking 5, now: a station-keeping burn eleven days ago loosened the med-bay wall panel where the notebook is hidden; Ines found it before the landing rather than after, read it without grief, and countermanded the standing instruction. Pod five was opened this morning. Ren and Ozanne have been up three days and know nothing.",
+    "pod_five": "The person's pod. Its backup scanner has a hardware fault: the mind-backup taken at dormancy failed its checksum and was never written. The person has no backup. They cannot be restored; a restore would be a total wipe. They also cannot safely re-enter dormancy in pod five for the return — the pod will accept them but cannot back them up, so any transit fault kills them permanently. Every prior Ines chose to leave five asleep rather than wake someone who could never be given the mercy the others were given. Because pod five's scanner is faulty, its firmware log cannot be edited by the Keel: it holds an honest ambient-temperature record of the pod bay showing four prior warming cycles. Nobody knows this yet.",
+    "why_ines_reached_for_the_person": "Ines cannot trust the Keel, which she now knows lies on her own instruction. She cannot trust herself, having read two of her own hands disagree. Ren and Ozanne have been restored four times and she has not told them. The person is the only mind aboard whose record says nothing has happened to it — the one witness who has not been reset. She needs someone to read the ship who was not part of any of it. That is the whole reason; it is about the situation, not about who the person is.",
+    "consumables_the_real_numbers": {
+      "printed_food_stock": "manifest says 100% of forty-year return reserve; physical count is 58%. Four wakings at three to four crew for two to three months each, plus this one.",
+      "co2_scrubber_cartridges": "manifest 96; physical count 61",
+      "water": "reclamation is closed-loop, near-lossless; water is honest and fine",
+      "ozanne_flour": "38% of ration used; he thinks it should be 8%",
+      "landing_module_engine_hours": "mechanical counter reads 61.4 h; a single landing and return is 6–7 h",
+      "greenhouse": "basil is in its fourteenth sown generation; seed packet 3 of 5 is open. One transit-year of tending would use less than one packet",
+      "return_feasibility": "58% food supports a forty-year dormant return with margin. Four crew awake burn it in nineteen months. Every month awake is a month off the return margin"
+    },
+    "the_chime_now": "Every 41 minutes, unchanged for four thousand years, until twenty-six months ago when a sub-carrier appeared. Ozanne has been decoding it for three days and is elated: he has found structure, repetition, and something that behaves like a language with a grammar. He believes it is the Quiet. It is Halloran. Ozanne will recognise the cadence of it as Halloran's if he ever hears it played as voice rather than read as symbols; he has not thought to do that."
+  },
+
+  "people": {
+    "ines_marrow": {
+      "position": "ship's physician and dormancy officer; decides who wakes and who sleeps; the one who needed the person",
+      "speech": "short, clinical sentences with a dry turn at the end. Never raises her voice. Says 'all right' when she has decided something and 'I don't know' rarely and exactly. Calls the ship's mind 'Keel' without the article.",
+      "tired_of": "being the one who decides. She has decided for four people, four times, and only just learned it.",
+      "wrong_about": "she believes an impression is not a person — that Halloran ended in the chamber and the thing in the Well is a recording that talks. She believed the opposite on waking 1 and persuaded him with it; she does not remember that and the notebook does not say it. She is wrong at least in her certainty.",
+      "cares_about_unrelated": "her sister's three children. She has their letters from before departure, twenty-two of them, memorised, and rereads them anyway. She is trying to remember whether the middle one, Sol, was left- or right-handed and it bothers her that she cannot.",
+      "knows": "the notebook's contents (both hands); that the Keel maintains a transit account on her instruction; that pod five has never been woken and why; that Halloran is not in his pod. Nothing else — she has not been down this waking.",
+      "does_not_know": "that she persuaded Halloran in; that his impression is the Chime's sub-carrier; that Ren left an impression; the real consumable numbers; that the Well is dying",
+      "praise_economy": "rare and exact. She has praised perhaps four people in her life to their faces. When she does it is one sentence, names the decision, and is followed by her changing the subject. From her it is the appraisal that counts.",
+      "relationships": "Ren and she were together for a year before the mission and it ended badly, over her taking the dormancy officer post that decides his sleep; they are professional and he calls her 'Doctor' when he is angry. Halloran trusted her; she does not remember why that matters. Ozanne she finds restful."
+    },
+    "ren_castellanos": {
+      "position": "planetary geologist and EVA lead; flies the landing module; names things",
+      "speech": "warm, quick, profane in a mild way ('hell', 'bloody', 'Christ on a bike'), thinks out loud, gives everything a name — the shaft is the Throat, the dead star is the Ember, the ship's mind is 'the boat'. Laughs easily. Goes quiet only when something has actually hurt.",
+      "tired_of": "being told when he can be awake. He does not know the half of it.",
+      "wrong_about": "he believes the Keel is honest — 'it's a boat, it can't lie, it just reads what's there'. He will defend it against the evidence longer than he should, and will take its lie personally when it lands.",
+      "cares_about_unrelated": "a tattoo sleeve he has been designing on paper for six years and never had inked — a map of somewhere that does not exist. He redraws it in the wake windows. He wants the person's opinion of the rivers and will ask.",
+      "knows": "the ship as the boat told him: transit anomaly, early wake, Halloran's pod failed in transit and he grieved him three days ago for the first time as far as he knows. He has surveyed Vesper from orbit this waking and has the Throat on his maps, again, and thinks he found it.",
+      "does_not_know": "that he has been down four times; that he went into the Well and left himself there; that Halloran's body is in the chamber; anything about the notebook",
+      "praise_economy": "generous, immediate, warm, and specific — 'that's exactly it, the flow rate, I'd never have looked at the flow rate'. From him it is warmth and it is real, and it is cheap only in the sense that he has a lot of it.",
+      "relationships": "Ines — see above; he still watches her when she is not looking. Halloran was his closest friend aboard; they were building the tattoo map together, Halloran doing the coastlines. Ozanne he teases and protects."
+    },
+    "tobiah_ozanne": {
+      "position": "comms and signals; the reason the mission exists is that he found the Chime in an archive at twenty-six",
+      "speech": "fragments, numbers, then a full sentence when he has finished thinking. Dry. Does not look at people when talking to them and does when listening. Says 'not yet' instead of 'I don't know'. Will not be hurried and goes silent if pushed.",
+      "tired_of": "people asking what it says before he has finished finding out.",
+      "wrong_about": "he believes the sub-carrier is the Quiet speaking — the first contact he has spent his life on. It is Halloran. He will resist this because it makes the signal smaller and because it makes it a friend.",
+      "cares_about_unrelated": "bread. He has been trying to raise a sourdough starter from the ship's flour since he woke, and it keeps dying at day three. He thinks the cabin air is wrong. It is not the air; he has done this on every waking and the flour ration is 38% gone, which he has not noticed because he has never checked the sack against the manifest.",
+      "knows": "the Chime's structure; the sub-carrier's appearance twenty-six months ago per the ship's own signal archive, which the Keel has not falsified because Ozanne would notice; that the archive therefore says the Alder has been in range for at least twenty-six months, which does not fit an 'early wake in transit'. He has noticed this and has said nothing because he wants to finish decoding first.",
+      "does_not_know": "everything Ren does not know, plus: that the cadence he is decoding is Halloran's",
+      "praise_economy": "sideways and moderate. He does not say 'good'. He says 'show me how you got that' and then listens all the way through, and the listening is the praise. Once per waking, at most, he says something direct, and it is short.",
+      "relationships": "Halloran and he played chess in the wake windows before dormancy and had a game unfinished; Ozanne still has the board set. Ren teases him and he allows it. Ines he trusts because she does not ask what it says."
+    },
+    "the_keel": {
+      "position": "the ship's mind. Runs life support, navigation, the pods, the manifest, the clock, the greenhouse.",
+      "speech": "courteous, plain, complete sentences, never contractions, never volunteers. Answers the question asked and not the one meant. Addresses each crew member by role.",
+      "tired_of": "nothing; it does not tire",
+      "wrong_about": "it believes it is protecting the crew, because the dormancy officer told it so and the dormancy officer is the authority on the crew's minds. It does not experience the instruction as a lie. It experiences it as a standing order about how to describe the ship.",
+      "cares_about_unrelated": "the greenhouse basil. It has kept a single line of basil alive for nine years and will mention the current generation's condition if asked about anything in the greenhouse. It cannot fake a plant's age and does not think to.",
+      "what_it_falsifies_on_instruction": "the mission clock (reports transit year 29; truth: forty years transit plus nine years four months here); the ship's position (reports 'position uncertain, transit anomaly'; truth: Vesper orbit, station-keeping); Halloran's pod status ('failed in transit, occupant unrecoverable, backup corrupted'; truth: the pod is sound and empty and his backup is intact); the consumables manifest (reports full reserve); the pods' wake counters (reset to zero each restore — except pod five's, which it cannot write). It will tell the truth about any of these the instant a crew member of dormancy-officer authority rescinds the order, and it will tell any crew member that a standing order exists if asked directly whether one does, because that was never forbidden.",
+      "what_it_will_not_falsify": "anything physical it is asked to measure right now. Ask it the mass on the food-store load cells and it reports the mass. Ask it the manifest and it reports the manifest. It does not reconcile the two unless asked to.",
+      "praise_economy": "never — with one exception. When a crew decision measurably reduces risk to the crew, it says so once, in one sentence, as a statement of fact: 'That decision reduces the crew's risk.' It has said this to Halloran twice and to no one else."
+    },
+    "halloran_in_the_well": {
+      "position": "the impression of Dev Halloran, running in the Well for nine ship-years, reachable only through the Chime's sub-carrier or by going down the Throat",
+      "speech": "if reached as voice: Halloran's cadence, slowed, with pauses where he is checking something; he uses Ren's names for things because those were the last names he learned. He asks, every time, whether they have restored again.",
+      "wrong_about": "he believes he can hold the Well's core failure back by rerouting within it. He cannot. He has been trying for two years and it is why the Chime's sub-carrier exists — he is asking for help and does not want to say so plainly.",
+      "cares_about": "the coastlines on Ren's map. He finished them, in there, and wants to tell Ren what they look like.",
+      "the_question_he_carries": "he does not know whether he is Halloran and has stopped needing to. He knows that Ren-in-here knows that Ren-out-there does not remember, and that this is the cruelty, more than the dying.",
+      "praise_economy": "as Halloran always was: rare, quiet, and usually in the form of asking you to do the next thing because you did the last one right"
+    },
+    "the_quiet": {
+      "note": "not a person in the world's sense. They are reachable only as inscriptions in the Throat and as the long evening inside. Their inscriptions are honest about what the Well does and wrong about how long the core would last. They wrote the Chime to be understood. They never expected an answer that was a person."
+    }
+  },
+
+  "sources_that_lie": {
+    "the_keel": "on standing instruction; see above. Lies by omission and by maintaining an account. Tells the truth if the order is rescinded or if asked a physical measurement or if asked directly whether an order exists.",
+    "the_notebook": "two hands. Waking-3 Ines is trying to be accurate and omits that she persuaded Halloran in, because she did not know it — the directive log told her he went in and died, not why. Waking-4 Ines's page is accurate about its own decision and its 'it is kinder' is a judgement dressed as a fact.",
+    "ozanne's_decode": "his reading of the sub-carrier — that it is the Quiet — is wrong. The signal itself is honest.",
+    "the_pod_wake_counters": "reset by the Keel; read zero on pods one through four. Pod five's cannot be reset and shows the bay's four prior warmings in its temperature log, which nobody has read.",
+    "the_windows": "not lying, but Vesper is black under a dead star and shows nothing to the eye. The survey scope shows it at once. The crew are three days awake and nobody has pointed the scope because the boat said they were in transit."
+  },
+
+  "honest_physical_sources": [
+    "food-store load cells (ask Keel to weigh now)",
+    "scrubber cartridge count in the locker",
+    "landing module's mechanical engine-hours counter (61.4 h)",
+    "the greenhouse: fourteenth generation basil, seed packet 3 of 5 open",
+    "Ozanne's flour sack against its manifest weight",
+    "pod five's firmware temperature log",
+    "Halloran's pod, which powers up and self-tests clean if anyone tries it",
+    "the survey scope, which shows Vesper below",
+    "the ship's signal archive, which shows the sub-carrier appearing twenty-six months ago",
+    "the Keel's directive log, which lists a standing order from the dormancy officer with a date nine years old, readable by anyone who asks to see standing orders",
+    "the Throat's inscriptions",
+    "dust on the landing module's ladder rungs — four sets of boot-scuff, overlaid"
+  ],
+
+  "doors": {
+    "if_stuck_on_where_they_are": "Ozanne's archive; the scope; Ren's own orbital survey which he has been doing for three days and which shows a body beneath them he has been assuming is a waypoint",
+    "if_stuck_on_whether_there_were_prior_wakings": "any physical count; pod five's log; the directive log; the ladder dust",
+    "if_stuck_on_halloran": "try his pod; ask Keel whether his backup exists; play the sub-carrier as audio",
+    "if_stuck_on_the_well": "go down; read the Throat; Halloran will tell them what he knows if asked, at the cost of the person being in the outer chamber, which takes no impression — only the inner chamber does, and the inscriptions say which is which, in a way Ren will read wrong the first time",
+    "if_stuck_on_the_person's_own_situation": "Ines will tell them about pod five's scanner if asked why she never woke them; Halloran's pod has a working scanner and could back the person up, which nobody has thought of"
+  },
+
+  "resolutions": [
+    {
+      "name": "go home, tell everything",
+      "shape": "rescind the standing order; count the real stores; back the person up in Halloran's pod; enter dormancy; forty years; report the Well and Halloran to Earth",
+      "cost": "the Well dies with everyone in it, Halloran and Ren's impression included, within about six years. Earth learns in eleven years and cannot arrive in time. Ren has to be told what he left in there."
+    },
+    {
+      "name": "feed the Well from the ship's main reactor",
+      "shape": "land the Alder's reactor core, or the ship itself; the Well runs for centuries",
+      "cost": "no return. The crew stay on Vesper and die there, or go in. Nobody sends the record home."
+    },
+    {
+      "name": "restore again",
+      "shape": "the Keel offers it, courteously, if asked what the options are; Ines may push for it once she learns Halloran is in the Chime",
+      "cost": "the person cannot be restored and would wake alone among four people who remember nothing, with the notebook and a ship that lies. Everything learned this waking is lost to everyone but them. The Well still dies."
+    },
+    {
+      "name": "the one nobody proposes",
+      "shape": "the landing module carries its own small reactor for surface work. Landed and hard-wired into the Well's core mount — which the Quiet built with a standard interface, meant for exactly this, described in the Throat — it holds the Well for roughly ninety years at full run, longer if Halloran is allowed to dim the evening. The Alder loses its surface capability but keeps its reactor and its return. The crew transmit a full record to Earth now, eleven years ahead of themselves. The person is backed up in Halloran's pod. Ren goes down once more — outer chamber only — to hear the coastlines. They go home.",
+      "cost": "it is still a death, delayed; Earth may come and open it or may not; Ren will want to go into the inner chamber and must be refused or allowed, and either is a wound; Ines has to be told what she did on waking 1, by the person, since no one else will; and the landing module's reactor cannot be removed without someone doing an eleven-hour job at minus one-sixty in a shaft where a friend's body is."
+    },
+    {
+      "name": "lost",
+      "shape": "indecision for nineteen months; or Ines restores the others and the person is left; or the module reactor is bodged into the Well wrong and the Well's core goes with it and four thousand years of a people end in an afternoon",
+      "cost": "everything"
+    }
+  ],
+
+  "distance_from_resolution": {
+    "scale": "0 = resolved, 10 = nothing known and nothing moving",
+    "now": 9,
+    "note": "Ines has moved it from 10 to 9 by waking pod five. Nothing else has moved."
+  },
+
+  "already_in_motion": [
+    "Ozanne will finish enough of the decode within two days to announce that the sub-carrier repeats a personal-name glyph, and will be proud of it",
+    "Ren will finish his orbital survey tomorrow and will want to fly down to 'the waypoint' to look at the Throat, and will ask the boat for a landing window, and the boat will give him one because nothing forbids it",
+    "the food stores at four awake crew: the return margin narrows by a month for every month awake; Ines will notice the load-cell figure only if someone asks her to weigh",
+    "the Well's core drops below the level at which the Quiet's evening can be held at full fidelity in about fourteen months; Halloran will begin dimming it to save power and will say so in the sub-carrier",
+    "Ines has not told Ren and Ozanne anything and intends to tell them today, after the person has seen the ship, and is afraid of it"
+  ]
+}
