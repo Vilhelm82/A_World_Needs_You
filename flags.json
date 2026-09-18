@@ -1,0 +1,17 @@
+{
+  "_note": "Each flag is one ruling. true = the ruling is in force. Flip one, run a world, see whether it earned its place. The set in force is stamped into the world when it is made, so results can be attributed.",
+
+  "senses_narration": true,
+  "perception_is_pull": true,
+  "no_salience_hints": true,
+  "reactions_are_the_persons": true,
+  "record_and_audit": true,
+  "contained_world": true,
+  "thin_truth": true,
+  "truth_only_deepens": true,
+  "resolutions": true,
+  "distance_per_resolution": true,
+  "distance_is_descriptive": true,
+  "need_is_optional": true,
+  "write_before_describe": true
+}

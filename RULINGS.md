@@ -93,3 +93,17 @@ What does not become optional: the world having resolutions and causality (rulin
 So v2 ships with the mechanism — request a shape, save a shape, start from a saved shape — and no catalogue. The need (ruling 8) is available as a starting template because it already exists, not because presets are meant to be pre-authored.
 
 General point, and it applies to this design process as much as to the harness: specify the minimum, use it, promote what turns out to work. Deciding everything up front is the same error as a dense truth file.
+
+## 10. Every ruling is a flag (18 Sept 2026)
+
+**Ruled: each ruling is a boolean, so it can be enabled or disabled to find out whether it is worth keeping.** Defaults are as ruled above (`true` = in force). Flags live in `flags.json`.
+
+Three constraints on how flags work, so that toggling does not rot the harness:
+
+1. **Resolved at world build, not read during play.** The build turns the flag set into a per-world rule sheet written in absolutes — always and never, no "unless the flag says". A rule hedged with a conditional is a weaker instruction than an absolute, and a session that reads conditionals every turn drifts. Changing a flag mid-world means re-resolving the sheet.
+2. **The flag set is stamped into the world when it is made.** Otherwise a world that worked cannot be attributed to the settings that produced it, and the experiment yields nothing.
+3. **Dependencies are declared, not silently assumed.** `distance_per_resolution` and `distance_is_descriptive` are inert with `resolutions` off. `no_salience_hints` is inert with `perception_is_pull` off. `truth_only_deepens` off means surfaced facts can be contradicted, which voids the audit.
+
+Two rulings are not runtime behaviour and get no flag: **ruling 6** (Alder is not evidence) is about this design process, and **ruling 9** (presets are promoted) is a mechanism with nothing to switch off.
+
+Flags map to rulings as follows — `senses_narration`, `reactions_are_the_persons` (1); `perception_is_pull`, `no_salience_hints` (2); `record_and_audit` (3); `contained_world` (4); `thin_truth`, `truth_only_deepens` (5); `resolutions`, `distance_per_resolution`, `distance_is_descriptive` (7); `need_is_optional` (8); `write_before_describe` (v1 ordering rule, carried over).
