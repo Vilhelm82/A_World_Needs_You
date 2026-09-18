@@ -21,4 +21,6 @@ Inference belongs to the person. Detail comes on request — *"I check what gaug
 
 Consequence for expertise: expertise does not change what the narrator volunteers. It changes what an answer contains and what the person can do with it.
 
-Open calibration: where the line sits between what a glance gives (including involuntary attention — movement, noise, something plainly wrong) and what requires a deliberate act.
+**The mechanic stays this simple.** No salience rules, no "something plainly out of place" clause, no thresholds for what a glance gives. The narrator says what is being looked at, and answers queries.
+
+The constraint is the point: with exposition through narrator prose unavailable, what needs to be revealed has to be revealed through characters and events. The story carries it, or it does not get carried.
