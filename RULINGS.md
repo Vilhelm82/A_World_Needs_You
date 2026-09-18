@@ -107,3 +107,24 @@ Three constraints on how flags work, so that toggling does not rot the harness:
 Two rulings are not runtime behaviour and get no flag: **ruling 6** (Alder is not evidence) is about this design process, and **ruling 9** (presets are promoted) is a mechanism with nothing to switch off.
 
 Flags map to rulings as follows — `senses_narration`, `reactions_are_the_persons` (1); `perception_is_pull`, `no_salience_hints` (2); `record_and_audit` (3); `contained_world` (4); `thin_truth`, `truth_only_deepens` (5); `resolutions`, `distance_per_resolution`, `distance_is_descriptive` (7); `need_is_optional` (8); `write_before_describe` (v1 ordering rule, carried over).
+
+## 11. Flags are only for divergences from v1 (18 Sept 2026)
+
+**Ruled: all flags false must equal v1, minus its purpose and instrumentation.** That is the baseline the experiment measures against.
+
+This corrects the first flag set, which mixed two different kinds of thing and so did not have that property. Switching off `resolutions`, `record_and_audit`, `truth_only_deepens` or `write_before_describe` did not give v1 — it gave a broken engine, since those are v1 mechanics the rulings kept. A ruling that *kept* a v1 mechanic has nothing to test: keeping it is the baseline.
+
+So a flag exists only where a ruling changed v1's behaviour. Eight of them:
+
+| Flag | true (ruled) | false (v1) |
+|---|---|---|
+| `senses_narration` | narration carries what the character perceives | no narrator; everything reaches the person through people |
+| `perception_is_pull` | detail on request only | narrator volunteers detail |
+| `no_salience_hints` | no flagging of what matters | narration marks the notable |
+| `contained_world` | bounded situation, authored locations | unbounded |
+| `thin_truth` | core axioms only | truth written to whatever density the world seems to need |
+| `distance_per_resolution` | distance to each resolution | one scale |
+| `distance_is_descriptive` | read to know where things stand | a target the world moves toward |
+| `need_is_optional` | why the character is there is set per world | the world needs you |
+
+v1 core mechanics and the removed instrumentation are both listed in `flags.json` for the record, and neither is switchable.

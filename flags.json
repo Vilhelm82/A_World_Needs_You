@@ -1,17 +1,39 @@
 {
-  "_note": "Each flag is one ruling. true = the ruling is in force. Flip one, run a world, see whether it earned its place. The set in force is stamped into the world when it is made, so results can be attributed.",
+  "_note": "All flags false = v1, minus its purpose and instrumentation. Each flag is one place where a ruling diverged from v1; true = the ruling is in force, false = v1's behaviour. Defaults are as ruled. The set in force is stamped into a world when it is made.",
 
   "senses_narration": true,
   "perception_is_pull": true,
   "no_salience_hints": true,
-  "reactions_are_the_persons": true,
-  "record_and_audit": true,
   "contained_world": true,
   "thin_truth": true,
-  "truth_only_deepens": true,
-  "resolutions": true,
   "distance_per_resolution": true,
   "distance_is_descriptive": true,
   "need_is_optional": true,
-  "write_before_describe": true
+
+  "_dependencies": {
+    "perception_is_pull": "inert with senses_narration false — v1 had no narrator to query",
+    "no_salience_hints": "inert with perception_is_pull false",
+    "distance_per_resolution": "false = v1's single scale toward one resolution",
+    "distance_is_descriptive": "false = distance is a target the world steers toward"
+  },
+
+  "_not_flaggable": {
+    "_why": "v1 core mechanics. Switching these off yields neither v1 nor any ruling — just a broken engine.",
+    "truth_written_first": "truth exists before the first scene",
+    "truth_only_deepens": "surfaced facts are never contradicted; causes are added beneath them",
+    "write_before_describe": "consequences are written into the truth before they are narrated",
+    "resolutions_exist": "a world has resolutions with costs",
+    "record_and_audit": "the record is kept and is auditable afterwards",
+    "reactions_are_the_persons": "the world never states what the character thinks or feels",
+    "sources_that_lie": "some sources are unreliable, and how they are unreliable is written",
+    "people_made_before_they_speak": "a person is made in full before they say anything",
+    "growth_from_decisions": "the world grows only from what the person decides",
+    "never_a_test_never_a_game": "no game-master register, no scoring, no quests",
+    "never_reads_engagement": "the world never adapts to how interested the person seems"
+  },
+
+  "_removed_unconditionally": {
+    "_why": "v1's purpose and instrumentation. Not flags — gone.",
+    "items": ["the mark", "the clock question", "records to an office", "covert tailoring to the person", "stand-down answers"]
+  }
 }
