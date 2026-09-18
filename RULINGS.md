@@ -64,3 +64,16 @@ Refines ruling 4: a contained world is built in full at the level of *scope*, no
 **Ruled: nothing in v2 is to be based on `world/alder`.** It was a quick session Will lost interest in and abandoned. It is not a baseline, not a model, and not a source of design conclusions.
 
 Withdrawn with it: the argument that a 25 KB truth file is evidence of density. File size was a bad proxy for brittleness. What makes a world brittle is how much the truth commits to in advance, not how many bytes it takes to say it.
+
+## 7. Resolutions and distance stay — they are the story (18 Sept 2026)
+
+**Ruled: resolutions are what make a world a story rather than a set of events. Distance from resolution is what gives that story dynamics.** Both are core to v2, not v1 residue.
+
+Withdrawn: the proposal to replace them with open-ended "pressures". Pressures without a destination are a world that simmers forever — the standard failure of open-ended generated narrative.
+
+How they are to work:
+
+- **Several resolutions, each with its own cost.** The freedom is in which one the person reaches and how, not in whether the story has a shape. A contained story (ruling 4) has a shape by definition.
+- **Distance is per resolution, not a single scale.** An action moves the world nearer one resolution and further from another. That is the dynamic.
+- **Distance is descriptive, never prescriptive.** It is read to know where things stand, derived from what has happened. It is never a target the world steers the person toward, and never a pacing quota to fill.
+- Resolutions are the destinations the causality permits. They are not a promise that one will be reached.
