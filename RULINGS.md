@@ -77,3 +77,11 @@ How they are to work:
 - **Distance is per resolution, not a single scale.** An action moves the world nearer one resolution and further from another. That is the dynamic.
 - **Distance is descriptive, never prescriptive.** It is read to know where things stand, derived from what has happened. It is never a target the world steers the person toward, and never a pacing quota to fill.
 - Resolutions are the destinations the causality permits. They are not a promise that one will be reached.
+
+## 8. "The world needs you" becomes a preset (18 Sept 2026)
+
+**Ruled: the need is a thematic preset, not a global restriction.** It may offer itself as the initial template when a world is being made, and the person may take it or leave it.
+
+The engine does not assume the character's presence bears on something wrong. Why the character is there is set per world.
+
+What does not become optional: the world having resolutions and causality (ruling 7). A world without a need still has a shape.
