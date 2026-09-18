@@ -58,3 +58,9 @@ The truth may be added to as new content surfaces, but only ever to **expand** o
 The wall does not move to catch what is thrown. New truth is decided by what the existing axioms entail — never by what the person appears to be hoping for.
 
 Refines ruling 4: a contained world is built in full at the level of *scope*, not at the level of *detail*. Thin at the top, unbounded beneath.
+
+## 6. Alder is not evidence (18 Sept 2026)
+
+**Ruled: nothing in v2 is to be based on `world/alder`.** It was a quick session Will lost interest in and abandoned. It is not a baseline, not a model, and not a source of design conclusions.
+
+Withdrawn with it: the argument that a 25 KB truth file is evidence of density. File size was a bad proxy for brittleness. What makes a world brittle is how much the truth commits to in advance, not how many bytes it takes to say it.

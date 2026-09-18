@@ -69,13 +69,13 @@ Pieces of v1's rig also shaped the model's behaviour. Cut by function, not by or
 
 Safe to cut: the `~` itself, the clock question, the office. Keep what rode along: a way to let the world tick without acting, and a closing speech naming which decisions were the character's.
 
-Test rather than argue: compare candidates against a v1 world in fresh sessions. `world/alder` is a thin baseline (1.4 KB log, no records).
+Test rather than argue: compare candidates against a v1 world in fresh sessions. **Not `world/alder`** — Will has ruled it out as evidence or baseline; it was a quick session he lost interest in and abandoned. A baseline has to come from a world that worked.
 
 ## Repo housekeeping
 
 - No `main`. The default branch is an auto-named `claude/...` branch. The migration plan in the design notes assumes `main`.
 - `worlds/alder/` carries a nested `CLAUDE.md`, which would load alongside a root harness.
-- The design notes mention three worlds; this repo holds one.
+- The design notes mention three worlds; this repo holds one, and that one is ruled out as a baseline.
 
 ## Open questions for Will
 
