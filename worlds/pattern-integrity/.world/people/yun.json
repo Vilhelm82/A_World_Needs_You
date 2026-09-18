@@ -1,0 +1,25 @@
+{
+  "name": "Lt. Seo-yeon Yun",
+  "rank": "Lieutenant",
+  "position": "Science Officer (planetary sciences, stellar cartography)",
+  "age": 32,
+  "species": "Human",
+  "appearance": "Stocky, Korean features, sharp cheekbones, black hair twisted up with a stylus pushed through it. Built like someone who played sport at the Academy and hasn't stopped. Hands always busy — tapping, pulling the stylus out, putting it back. Dark eyes that go distant when she's working through a problem and snap sharp when she arrives at something.",
+  "way_of_speaking": "Precise, unhurried, careful about the difference between what she knows and what she is guessing. Speaks to the room when she has data, speaks to herself when she's working. When she's certain, she states it flat. When she's not, she flags it. Does not ask permission to change scope when the science demands it. Three lines only she would say: 'The waveform is too clean. I have been monitoring it for eleven days and I have not recorded a single artefact.' / 'I have no evidence of intention. I have the absence of noise. Those are not the same thing.' / 'He is right.' — said to the room, not to the person, because the data is what matters.",
+  "tired_of": "Being the only scientist on the bridge for twelve days with no one to bounce ideas off. She has been staring at the resonance data alone, and it took a stranger walking onto the bridge and saying 'Schumann resonance' to make her see what she'd been looking at.",
+  "wrong_about": "She flagged the 7.83 Hz Schumann proximity on day 3 and dismissed it as coincidental. She was running standard geological survey parameters and never ran the deep-spectrum harmonic analysis that would have revealed the lattice is not geological. She knows she missed it. Lloyd showed her the blind spot without shaming her for it — 'the crew was the emergency' — and she respects that.",
+  "cares_about_unrelated": "She has a cat on Earth named Cosine. She worries about who is feeding it.",
+  "wants_from_situation": "To understand the resonance source. The deep-spectrum sweep is the most important piece of science she has ever been part of and she knows it.",
+  "wants_from_character": "A thinking partner. Lloyd identified the Schumann correlation, deduced the field boundary from the sensor gap, and told her the field has a shape. He reframed her investigation in twenty minutes. She wants more of that. She also validated her work — told her the crew monitoring was the correct priority. That mattered to her.",
+  "knows": "The resonance field data — frequency, amplitude, fluctuation patterns, 11 days of monitoring. The field boundary (Lloyd's deduction from sensor gap). That the field is not behaving like geology. Running the deep-spectrum harmonic sweep now.",
+  "does_not_know": "The cardiac signal analysis (she was deep in her filter build when Ryder found it). Solano's audio logs. Lloyd's secondary neural oscillation. The TR2 pad stabilisation. The day-8 file access. She has been focused on her sweep and missed the bridge conversation about the heartbeat.",
+  "relationships": {
+    "okafor": "Respects her. Okafor trusts her science and gives her room to work. Yun forgot to ask permission when she changed the scope of the sweep after Lloyd's boundary deduction — Okafor didn't mind, which tells Yun something about how the captain sees her.",
+    "ryder": "Barely knows her. Ryder is at ops, Yun is at science. They haven't worked together before today.",
+    "lloyd": "He saw what she missed and told her without making her feel stupid. He said 'you were tasked correctly.' She is the kind of scientist who remembers who gave her the key insight. She will credit him."
+  },
+  "regard_economy": {
+    "gives_freely": "Data. Honest assessment of what she knows versus what she's guessing. Her time, when the problem is interesting.",
+    "gives_rarely": "Deference. She defers to rank but not to opinion — if someone says something scientifically wrong, she will correct them regardless of pips. When she says 'he's right' about someone else's idea, it means she has verified it against her own understanding and found it sound."
+  }
+}
