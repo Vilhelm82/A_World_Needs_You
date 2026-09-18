@@ -85,3 +85,11 @@ How they are to work:
 The engine does not assume the character's presence bears on something wrong. Why the character is there is set per world.
 
 What does not become optional: the world having resolutions and causality (ruling 7). A world without a need still has a shape.
+
+## 9. Presets are promoted, not shipped (18 Sept 2026)
+
+**Ruled: presets are not a fixture list decided in advance.** The person requests a narrative shape; if it works, they ask for it to be kept as a reusable preset.
+
+So v2 ships with the mechanism — request a shape, save a shape, start from a saved shape — and no catalogue. The need (ruling 8) is available as a starting template because it already exists, not because presets are meant to be pre-authored.
+
+General point, and it applies to this design process as much as to the harness: specify the minimum, use it, promote what turns out to work. Deciding everything up front is the same error as a dense truth file.
