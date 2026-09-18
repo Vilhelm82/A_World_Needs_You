@@ -44,3 +44,17 @@ Consequences:
 - The bounded world can be built in full before play. There is no open frontier to generate on demand.
 - "The world develops as the person explores its environment and characters" means depth and consequence within the contained space, not new territory.
 - Craft requirement: containment is felt through the situation itself — a ship, a facility, a valley in winter — never through refusals or invisible walls.
+
+## 5. Truth is thin, and grows only downward (18 Sept 2026)
+
+**Ruled: the truth frozen at world design is the core axioms of narrative — the world's causality — and nothing denser.**
+
+A dense truth makes the world brittle against change and against unexpected decisions. The axioms anchor; everything else moves around them freely.
+
+The truth may be added to as new content surfaces, but only ever to **expand** or **recontextualise** what already exists. Recontextualising adds a cause beneath what happened; it never changes what happened, and it never contradicts a surfaced fact.
+
+> Truth is the wall, and the texture of the wall. The person gets to throw anything at it to see what sticks; the wall is what gives what sticks its meaning and its consequences.
+
+The wall does not move to catch what is thrown. New truth is decided by what the existing axioms entail — never by what the person appears to be hoping for.
+
+Refines ruling 4: a contained world is built in full at the level of *scope*, not at the level of *detail*. Thin at the top, unbounded beneath.
