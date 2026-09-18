@@ -18,7 +18,7 @@ So v1 was ahead on epistemics and behind on plumbing and player control. v2 keep
 | Per-person praise economies | Numeric NPC attitude trackers | Nothing comparable found. A meter says how much someone likes you; an economy says what it costs them to say so. |
 | No walls, only paths | Three Clue Rule; Blades' refusal to block; GUMSHOE's free core clues | v1 states the general principle. v2 turns it into a build-time check: three doors per secret, of different kinds. |
 | Pressure as consequence, never a displayed clock | PbtA fronts, Blades progress clocks, threat clocks in other Claude Code harnesses | Same process underneath; v1 keeps the counter out of sight. |
-| Decision log with distance-to-resolution | — | Forces an honest estimate of progress every turn. Kept as `DID` lines. |
+| Decision log with distance-to-resolution | — | Forces a straight estimate of progress every turn. Kept as `DID` lines. |
 
 ## What the field does that v1 didn't — and what v2 took
 
@@ -29,7 +29,7 @@ So v1 was ahead on epistemics and behind on plumbing and player control. v2 keep
 5. **A control surface for the player.** Session zero, personas, AI instructions. v1 had none, on purpose. → `charter.md` plus `//`.
 6. **The character is the player's.** Rule one of every RP prompt in the wild. v1 only implied it. → floor 4, with its two edges: backstory is theirs to state, and anything that solves a problem for free is an attempt.
 7. **An anti-generic pass.** One harness runs a "genericness critic" over its world. → six candidates and a die when the setting is yours to choose; the *Particular* pass; *never take the first name*.
-8. **Real dice, committed stakes.** The commercial platforms all agree the model shouldn't own the numbers. → `resolution: dice`: stakes and odds to the ledger, then a shell roll, then the telling. Same principle as truth-first, one layer down.
+8. **Real dice, committed stakes.** The commercial platforms I read agree the model shouldn't own the numbers. → `resolution: dice`: stakes and odds to the ledger, then a shell roll, then the telling. Same principle as truth-first, one layer down.
 9. **A world that moves offscreen, in bounded steps.** Faction turns, PbtA's "think offscreen too", scheduled consequences. v1 had one sentence. → `movers`, `pressures` as staged processes, and the world's own turn — deliberately small.
 10. **Telegraphing.** Blades and one of the harnesses both insist on it. → *signs before blows*, which is what makes a harsh world feel fair.
 11. **Safety tools.** Lines and veils; Script Change's rewind, pause, fast-forward. → Table dials and `//` commands.
