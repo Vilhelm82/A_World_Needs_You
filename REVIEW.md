@@ -2,13 +2,13 @@
 
 ## Status
 
-**Design stage, not signed off.** `CLAUDE.md` and `README.md` on this branch are an unrequested draft: the brief was research and design only, and the build was meant to follow Will's rulings. Treat the harness here as a worked example of one set of choices, not as the v2 build. `DESIGN_NOTES.md` is the requested deliverable.
+**Design stage, rulings pending.** `DESIGN_NOTES.md` is the design deliverable. `CLAUDE.md` and `README.md` on this branch are a first draft against it.
 
 Lines marked **(Will)** are his stated requirements. Everything else is Claude's assessment and is open to overruling.
 
 ## The brief, as restated by Will
 
-The original prompt was lost to a client error. Restated in chat:
+As restated 18 Sept 2026:
 
 - **(Will)** Generalise the v1 framework (A World Needs You) for a wider use case.
 - **(Will)** Draw on popular online frameworks that aim at the same experience: a consistent, coherent world that keeps developing as the user explores its environment and characters.
