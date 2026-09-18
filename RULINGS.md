@@ -24,3 +24,23 @@ Consequence for expertise: expertise does not change what the narrator volunteer
 **The mechanic stays this simple.** No salience rules, no "something plainly out of place" clause, no thresholds for what a glance gives. The narrator says what is being looked at, and answers queries.
 
 The constraint is the point: with exposition through narrator prose unavailable, what needs to be revealed has to be revealed through characters and events. The story carries it, or it does not get carried.
+
+## 3. The truth, the record and the audit stay (18 Sept 2026)
+
+**Ruled: nothing replaces them. They work, and they are engine, not instrumentation.**
+
+What belonged to v1's purpose was the record as *data about the person* — the mark, the clock question, records going to the office. What the record does for the world — keeping the model answerable to something other than the person in front of it, and making a bent world detectable afterwards — is kept as is.
+
+The later reader is now Will, or a fresh session.
+
+## 4. Contained story, not open world (18 Sept 2026)
+
+**Ruled: this is a contained story in a contained environment. The freedom is what the person can do within that sandboxed narrative and world, not where they can go.**
+
+Locations are authored and reached because the story made them matter: if the character is in a room looking at wires, the story already made that room an obvious choice of importance.
+
+Consequences:
+
+- The bounded world can be built in full before play. There is no open frontier to generate on demand.
+- "The world develops as the person explores its environment and characters" means depth and consequence within the contained space, not new territory.
+- Craft requirement: containment is felt through the situation itself — a ship, a facility, a valley in winter — never through refusals or invisible walls.
