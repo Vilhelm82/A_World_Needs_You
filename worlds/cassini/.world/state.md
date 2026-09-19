@@ -1,6 +1,6 @@
 # Card
 
-**Where / when.** USS Cassini, holding station 0.7 ly inside the Orrin Shallows, 40,000 km off the Sending. Stardate 39739.3. Ship's time 1450. Shakedown day 13. Picard's report due 1500.
+**Where / when.** USS Cassini, holding station 0.7 ly inside the Orrin Shallows, 40,000 km off the Sending. Stardate 39739.3. Ship's time 1452. Shakedown day 13. Picard's report due 1500.
 
 **Scene.** Ready room, starboard off the bridge. Picard behind the desk (wants Lloyd to argue General Order One both ways, then to hear what goes in the report; believes Lloyd will write his own account to Command; will not say more about the file for now). Shelf: Shakespeare, a grey carved fragment. A cold cup. Viewport: stars, not the ark.
 
