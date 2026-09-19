@@ -37,3 +37,4 @@ Warmth freely, in practicalities. Praise never. Candour freely and tactlessly. T
 
 ## Current (episode 1)
 - 1521: arrived early with a padd and the question she greets everyone with. Has not been told anything since 1420 except that there is a hail and the XO is aboard.
+- 1523: he said "after". She has heard "after" from four ships' worth of officers. Wants to be told what is over there, now, and early next time; disagrees with Vorrat on the instruments — the standard life-sign array is calibrated and can tell frozen from not at two thousand kilometres; alive is another matter. Told him to come to sickbay once he has eaten; everyone does on a new ship. Belief about Lloyd: "Tall enough. Says 'after'. We'll see."
