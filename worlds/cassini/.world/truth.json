@@ -77,7 +77,8 @@
         "a": "have a passenger ask the Eldest about the ark's condition directly; Hollen will hand the team that rule as a weapon. Costs Hollen's price.",
         "b": "board and see the cryo bays. Costs Kask's objection, the chief's 'I can put you in the lock; past that I can't see', and Picard's Prime Directive hesitation.",
         "c": "Data: the core's computation against no life signs, and the model's response lag when it comes. Costs his time; he reports what he sees, never what it means.",
-        "d": "OPENED 1612 — at 2,000 km Prakash found no one warm and breathing anywhere aboard; only the core (warm, computing) and the bank (cold, held) and a strip two-thirds aft warm like a lit room. She said so. The bridge now holds the question: who is talking."
+        "d": "OPENED 1612 — at 2,000 km Prakash found no one warm and breathing anywhere aboard; only the core (warm, computing) and the bank (cold, held) and a strip two-thirds aft warm like a lit room. She said so. The bridge now holds the question: who is talking.",
+        "e": "Prakash at 2,000 km: the held section is small — a cupboard, not a ward of a thousand; three compartments amidships with regular internal rows, cold as the hull, holding nothing warm and nothing held. Data has the count of the rows (1,212 cells) and will give it if asked."
       },
       "the_year": {
         "a": "give Ossane the Cassini's charts; a navigator, she finds three thousand years in hours. Costs the Prime Directive question and her.",
@@ -122,7 +123,7 @@
       "stop": {
         "shape": "End the model, shut the Eldest, take the bank into Federation care.",
         "cost": "961 people or recordings ended on Hollen's word and nine votes; the Cassini did it; Data.",
-        "distance": "near in means — an hour, and Hollen knows how; far in authority — Picard would not order it and Starfleet would not sanction it"
+        "distance": "unchanged in means; nearer in the air — the personhood question has been spoken on the bridge, by Data"
       },
       "tell_them": {
         "shape": "Tell the Sent what they are and what year it is; let them choose.",
@@ -137,7 +138,7 @@
       "keep_them_and_find_the_others": {
         "shape": "A power link buys the ark a month for a week of the Cassini's reactor; the viable embryos held in the Cassini's stasis units; the science team takes it from there; the archive's plans point at the second and third Sendings.",
         "cost": "The shakedown fails its schedule outright; the board; Picard's report justifies a week of power to a derelict; the telling is not settled, only given time.",
-        "distance": "nearer — the assessment that prices a link is ordered; the question that would reveal what light does to the Sent is approved; the others still unknown to anyone aboard",
+        "distance": "nearer — the ship is closing to 1,000 km for the endurance number that prices a link",
         "nobody_proposes": true
       },
       "leave": {
@@ -214,11 +215,11 @@
       "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. 1611: told the Sent, and the outsiders, 'The light is near. The Sent see it.' Next: shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
       "hollen": "Ossane came to him at ~1600 with the shutdown order and 'the Sent sleep'. He told her what sleep is. She did not believe him, and did not leave. Next: ask the Eldest for the outsiders' channel — it has never refused him one — and say to them: ask it what year it is, then ask it again.",
       "ossane": "1552: asked the Eldest, in front of the strangers, what stops first when the light is gone; heard the order. Next: ask Hollen what 'the Sent sleep' means, because he keeps the vigil and she has begun to suspect the vigil knows something; she resents having to ask.",
-      "picard": "1547: approved the staged approach to 2,000 km on the XO's conditions; 1,000 km is his own decision, to be made at 2,000 with Prakash's numbers in front of him. Approved the clarifying question, in sequence, once. Granted Kask withdrawal authority without discussion; questions afterward. Transfer and boarding remain his. The approach is the XO's to run; Picard in the chair. Will amend his 1500 report: 'closing to assess'. Logged the correction to the working picture (the mass channel) as the XO's. Next: sit in the chair and watch how the XO runs it.",
+      "picard": "1547: approved the staged approach to 2,000 km on the XO's conditions; 1,000 km is his own decision, to be made at 2,000 with Prakash's numbers in front of him. Approved the clarifying question, in sequence, once. Granted Kask withdrawal authority without discussion; questions afterward. Transfer and boarding remain his. The approach is the XO's to run; Picard in the chair. Will amend his 1500 report: 'closing to assess'. Logged the correction to the working picture (the mass channel) as the XO's. 1616: ordered one thousand kilometres, with the doctor's numbers in front of him; Vorrat's ten minutes next. Next: hear the endurance number; then decide whether the question of what is talking is answered from outside or not.",
       "kask": "argue against boarding; then argue for arms; then go",
       "vorrat": "refuse to link power until she knows what the ark's reactor is; then do it well and complain",
       "prakash": "ask for a closer biosensor pass; find no life; find the bank",
-      "data": "resolve the tense from usage — Hollen's deliberate completed-past will give it to him; notice the model's lag; when asked what he thinks they are, say he does not know, and that he has an interest",
+      "data": "1615: said aloud, once, that if the Commander is right, what is talking is a mind kept by a machine, and that the Federation has one officer to whom that description also applies; would prefer the bridge to have noticed before anyone says what such a thing is. Next: resolve the tense from Hollen's usage when Hollen speaks; notice the model's lag when it comes; give the count of the rows if asked.",
       "vint": "ask to take her closer",
       "starfleet": "reply in about 30 h: hold contact to minimum; a first-contact team is nine days out"
     },
@@ -255,9 +256,11 @@
       "Picard's amendment to Command logged 1600: closing to 2,000 km to assess; no boarding, no transfer",
       "the ark's aperture array tracked the Cassini through the approach — passive; Kask logged it; no criterion met",
       "Prakash's finding at 1612 stands on the bridge: nobody warm and breathing; the core, the bank, the strip",
-      "Picard's decision on 1,000 km is now his to make, with the doctor's numbers in front of him",
-      "Hollen will ask for the channel"
-    ]
+      "Hollen will ask for the channel",
+      "1616: closing to 1,000 km; Vorrat's ten-minute reactor assessment follows; the Eldest will see the light come nearer again",
+      "the bridge's picture: minds in the core (right), bodies in the cold (wrong, and Prakash's numbers already say so); 'recording' unsaid"
+    ],
+    "bridge_working_picture": "1615: Lloyd's hypothesis on the bridge — the speakers are bodies in suspension with consciousness supported by the core; 'sleep' is loss of that support while refrigeration continues. Half right: the minds are in the core; the bodies are not in the cold. Prakash's numbers have already cut the 'bodies in suspension' half: the held section is a few hundred cubic metres — a cupboard, not a thousand people; the three big compartments with rows are cold as the hull. Data has said aloud that a mind kept by a machine is a description the Federation has one officer for. Nobody has said 'recording'."
   },
   "serial_in_motion": [
     "the pod's low-density under-read is design, not fault: a fleet-wide finding the yard will not want to hear, and the Cassini's shakedown is what would find it",
