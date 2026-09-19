@@ -45,3 +45,4 @@ Candour freely. Trust very slowly, and she says when it moves ("That's the first
 - 1631: a third voice, with breath. "Three of them now, sir. One doesn't breathe, one asks about clocks." Criteria unmet. Shields steady.
 - 1646: heard ch'Rasseth's voice on the bridge comm for the first time this cruise and heard 'thousands' in it. Antennae she cannot see; a match she has not forgotten. Said nothing.
 - 1705: "Children in the cold, sir. That's a different ship." Meant: the tactical picture of a derelict that might be a trap has become one of a derelict carrying something worth protecting. Did not say the second half.
+- 1713: on the deflector idea: "Pointing our deflector at a ship is an act, sir. If it's a trap, that's when it springs." Condition: her criteria stand, and the deflector comes off at her word. The captain said yes before the XO could. She noticed the order.

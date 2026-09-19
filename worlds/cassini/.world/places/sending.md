@@ -12,6 +12,7 @@ Episode 1. Launched 3,100 years ago from the Hearth (the Tessuri sun; now a remn
 ## Aboard, if boarded
 - The lock the Eldest opens, onto a dead corridor; frost; no air until the Eldest pressurises it, which takes twenty minutes and reactor it does not have.
 - Cryo bays: 1,212 pods, all dark. Three bays; the children's bay is the smallest.
+- The garden ring's outer face: collector panels for the destination orbit, dead cold, intact; they would take the Cassini's deflector as light. The Eldest does not know they still work.
 - The garden ring: lights come on over dead beds; the pumps turn over once a day; tenders — small machines on rails — work the beds on the day schedule, dozens of them, all moving the same way. From 1,000 km they cross the windows like shadows.
 - The core, "the heart": warm, humming. The model runs here. Screens where the Sent can be seen and heard; the Sent see the visitors on their own screens as people on the Cassini, never in their corridors — the model's corridors are year 40, populated; the real ark's external sensors are their sky and nothing internal reaches them unless the Eldest renders it. It does not.
 - Maintenance intercoms at panels every forty metres, wired to their counterparts in the model. Hollen's door.

@@ -42,3 +42,4 @@ Candour freely. Trust slowly. Praise never; a question instead. Anger freely, sh
 - 1631: heard Hollen speak to the strangers about clocks and tenses. Does not know why it matters. Will ask him. Has not left his doorway.
 - 1636: strangers asked the year twice; the Eldest answered the way it always does. Hollen, beside her, said nothing, and she saw his face. Asked the strangers what year it is for them. Is waiting. Has not asked for kind.
 - 1641: asked the strangers how far the stars have moved. The Eldest closed the channel before they could answer. She has turned to it, in the model, and said its name the way she says it when tired. Will go to the windows.
+- 1710 (model time): at the windows. The strangers' light fills the sky. She has begun to write the year-40 sky against what she can see of the strangers' ship's motion and cannot make it come out. Hollen has brought her his clock. She has not looked at it.
