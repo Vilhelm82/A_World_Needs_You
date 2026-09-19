@@ -182,3 +182,9 @@ Append-only. Never cleared.
 - SAID — Picard: Vorrat has her hour. "Then we have an hour and a number." (true.)
 - MOVED — 1714: Lloyd tells Prakash, on comm, that the Eldest calls the cold 'the children of the Sending'. Prakash: an embryo bank or their word for one; she would stake her licence (true). She retracts 'a very long time': she does not know how long anyone has been anything (true).
 - TOLD — to Prakash, 1714: the Eldest's four answers.
+- DID — "In an hour we may find out." → Prakash: "Hm." Cut to 1726: the number. Distance: tell_them — the Cassini holds the whole chronology; leave far; stop sharper; others unchanged.
+- SAID — Prakash, 1714: "Hm. Eat something first." (true.)
+- MOVED — 1714–1726: nothing on the band. Vorrat on the collectors. The tenders. Ossane at the model's windows (unseen). 1726: astrometrics calls.
+- SAID — ch'Rasseth, 1726: three thousand one hundred years since the sky was observed, plus or minus a hundred; the second digit is a one; he will not swear to the third (true). The solution requires the point of observation: forty-one light-years from here; there is no star there now; an unattributed supernova remnant, catalogue age about two thousand four hundred years (true). The ringed star — the one they marked — is in the catalogue: forty-four light-years from here, surveyed by probe in the 2330s, nothing larger than a moon (true).
+- SAID — Picard: "Thank you, Lieutenant. Nothing goes out." (true.) To Lloyd: three hours aboard and not eaten, by the doctor's account; go; he will be called at 1810; the Chief's hour ends at 1813 and nothing will happen before it (true).
+- MOVED — 1728: the bridge quiet. Kask looking at the screen. Vint's hands flat. Data still. The ring lit; the tenders crossing. Picard in the chair. The world can rest here.

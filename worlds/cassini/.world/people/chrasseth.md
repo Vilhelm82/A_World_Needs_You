@@ -27,3 +27,4 @@ Knows: the field does not match the catalogue at the present epoch; it matches i
 
 ## Regard — his economy
 Candour freely, with an edge. Praise rare and grudging. Anger hot, over in a minute, antennae flat. Trust by competence. Warmth by precision: he gives you the error bars.
+- 1726: gave the number with its error bars, and the two things that came with the solution — the point of observation is a remnant; the ringed star has nothing. Said them because they were in the solution and because he had been asked the real question. Antennae flat afterward; he has not told anyone that he wishes he had been slower.

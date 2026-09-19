@@ -87,10 +87,10 @@
         "b": "the physical logs, out of order. Costs hours aboard a dead ark with Data reading.",
         "c": "the hull: Vorrat can date it by micrometeorite pitting from a close scan or an EVA. She will complain and do it.",
         "wall": "asking the Eldest 'how long since launch' gets the hope clause. Hollen knows this door is painted on.",
-        "d": "IN HAND 1646 — asked to constrain elapsed time, ch'Rasseth said the field matches only if the stars move; rough solution: thousands of years, not hundreds, not tens of thousands; forty minutes to the second digit (about 1726). The bridge has heard 'thousands'."
+        "d": "OPENED 1726 — ch'Rasseth: 3,100 years since the sky was observed, ±100; second digit a one, third not sworn to. The bridge holds the number."
       },
       "home_is_gone": {
-        "a": "astrometrics: the Eldest's sky image (received 1442) gives the Tessuri home sky at launch; matched against the catalogue it locates the Hearth, and the catalogue shows a remnant about 2,400 years old at that position. Costs hours and the knowing.",
+        "a": "OPENED 1727, as a by-product of the dating — ch'Rasseth solved the point of observation: 41 ly from here; no star there now; an unattributed supernova remnant, age about 2,400 years. He said it because it was in the solution. The bridge holds it.",
         "b": "the Eldest's archive holds the light change. It will trade it to the Cassini's captain for a world on offer. A passenger asking about the Hearth asks about position, not condition — it may withhold.",
         "c": "Ossane's calendar: the long night has a date; Data can convert it. Costs asking her for a book nobody reads."
       },
@@ -108,7 +108,8 @@
       "the_other_sendings": {
         "a": "the Eldest offers it as inducement: find us a world and we will tell you where the others were to go.",
         "b": "Ossane was told as a child 'we are the first' and has never asked what it meant.",
-        "c": "the launch plans are the first entries of 3,100 years of logs, which nobody reads first."
+        "c": "the launch plans are the first entries of 3,100 years of logs, which nobody reads first.",
+        "note": "ch'Rasseth also placed the ringed star (the Hearth-that-follows): in the catalogue, 44 ly from here, surveyed by probe in the 2330s, nothing larger than a moon. The Sending went there and found nothing, as the truth says; the bridge now knows it could have found nothing."
       },
       "picards_belief_about_lloyd": {
         "a": "ask him straight. Costs admitting you noticed his coolness; he respects it.",
@@ -130,12 +131,12 @@
       "stop": {
         "shape": "End the model, shut the Eldest, take the bank into Federation care.",
         "cost": "961 people or recordings ended on Hollen's word and nine votes; the Cassini did it; Data.",
-        "distance": "sharper — 961 'carried' who cannot be found warm; Hollen's ask stands unspoken to the Cassini; Data has said the word 'mind kept by a machine'"
+        "distance": "sharper — the bridge knows the Sent have been 'carried' 3,100 years and that their home is gone; Hollen's ask has not reached the Cassini in words"
       },
       "tell_them": {
         "shape": "Tell the Sent what they are and what year it is; let them choose.",
         "cost": "The model at full power, in reactor days; the Eldest closes channels (it cannot close the maintenance intercoms); Ossane; the split — some choose to stop, some to go on, and going on needs power the ark does not have.",
-        "distance": "a means to buy the Sent's voices without a cable is being characterised (an hour, ~1813); the number comes at 1726; what the Cassini knows the Sent do not"
+        "distance": "the Cassini holds the whole chronology: 3,100 years; the destination empty; home a remnant 2,400 years old. The Sent hold none of it. The channel is closed until light; light may be an hour away. Whether to give the number, and to whom, is now the only question in this resolution."
       },
       "carry_them": {
         "shape": "Run the model on the Cassini: the pod's survey computer is the only spare capacity.",
@@ -151,7 +152,7 @@
       "leave": {
         "shape": "Hold contact to the minimum, mark the position, leave the ark to the science team in nine days.",
         "cost": "The garden goes dark in that time; the model slows; the bank fails further; the Sent's last conversation is with the Cassini; the report says 'we left'.",
-        "distance": "far — the bridge has heard 'thousands'"
+        "distance": "far — leaving now means leaving with the number"
       }
     },
     "pressures": {
@@ -278,11 +279,13 @@
       "1656: Prakash's bank finding stands: thousands of fist-sized containers at 80 K; not bodies; not a ward",
       "the Eldest's four answers (1703–05) were not relayed to the Sent; the Sent still believe 1,212 with the children in cryo",
       "Data has said aloud that 1,212 is the count of the cells in the rows",
-      "the number at ~1726",
       "Vorrat characterising the ring's collectors until ~1813; will say what a deflector trickle could give and whether the panels take it",
       "Kask's condition on any deflector light: her criteria stand and the deflector comes off at her word; Picard agreed",
       "Data has said: if the 251 are aboard, they are at hull temperature; and so, he did not add, would be the 961's bodies, if they had any aboard",
-      "the fifth request refused until light; light may now be buyable without a cable"
+      "the fifth request refused until light; light may now be buyable without a cable",
+      "1726–27: the number, the remnant and the empty destination are on the bridge; Picard: nothing goes out",
+      "Picard sent the XO to eat at 1728; to be called at 1810; Prakash's 'come and see me' stands; Vorrat's hour ends ~1813",
+      "the world may rest here: nothing in the truth changes before 1810 except the Eldest asking for light again at intervals and the ark's reactor losing what the day cost it"
     ],
     "bridge_working_picture": "1706: the Cassini holds: 1,212 aboard at departure = 1,212 cells in the three cold compartments (Data said so); 961 'carried' now; the speakers 'kept' by the ship, the keeping being light; the cold holds 'children', thousands of fist-sized containers at 80 K. 'Recording' unsaid. The shape is nearly visible: 251 fewer than the cells; 'carried' is not 'alive'.",
     "the_eldests_rules": {
