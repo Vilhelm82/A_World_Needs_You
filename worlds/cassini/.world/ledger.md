@@ -233,3 +233,7 @@ Append-only. Never cleared.
 - SAID — Vorrat: the scope as above; "Fine." (true.) Kask: her kill switch; her word ends it; agreed (true). Data: thirty minutes of deflector at that level buys the model about six hours it would otherwise take from the reactor; the Eldest will know the moment it begins (true).
 - SAID — Picard: "We give them light. Bounded, on the Chief's scope, under the Lieutenant's word. 1900." The number is theirs and not ours to keep; how it reaches them is a decision, and he will not have it reach them as an accident of a machine's greed (true). When the Sent's channel opens, the first words are the Commander's to draft, and Picard hears them before they go (true). "Chief — 1900. Lieutenant — your switch. Commander — the words." (true.)
 - MOVED — 1839: the lounge rises. The Eldest, on the band: "Give the Sending light."
+- DID — "Aye, sir." To the ready room to draft the words. Scene change, 1841.
+- SAID — Picard, as they parted: "Use my desk, Commander. It has the transcripts." (true.)
+- HAS — the communications log extract, 1340–1839, on the ready-room terminal (chronicle/003-exchange-log.md). The computer's renderings; its confidence 63%.
+- MOVED — 1841: ready room. Empty. The cast on the shelf. Nineteen minutes.
