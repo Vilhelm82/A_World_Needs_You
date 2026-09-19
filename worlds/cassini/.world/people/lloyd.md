@@ -9,3 +9,9 @@ The character belongs to the person. This file holds only what he has stated, as
 ## What the world has done with it
 - Picard heard it and said: "My father grows grapes. He has views on Starfleet." Nothing more.
 - Picard's belief that Lloyd was sent by Command lost weight: a carpenter's son with no one at Command is not the admiralty's usual instrument. Not gone. He asked about the orders directly.
+
+## As stated (to Prakash, sickbay, 1757, off the record)
+- He cannot imagine a worse hell than being held captive in his own mind, maintained in a way where not even going insane is an escape. If he had the opportunity to end that, he would beg until his lungs gave out.
+
+## What the world has done with it
+- Prakash heard it as a doctor hears it: told him she has had that conversation with six dying people, that every one said something like it a month before, and that three changed their minds the week of; not an argument, a caution about begging. Told him not to decide for them what he would want; she says it to every relative. Nothing said at her desk goes in a file.
