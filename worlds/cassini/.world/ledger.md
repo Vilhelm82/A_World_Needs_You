@@ -137,3 +137,10 @@ Append-only. Never cleared.
 - MOVED — 1631: a third voice on the band. Older. Dry. Breath pauses.
 - SAID — Hollen, 1631, rendered: "You who go to see. I am Hollen. I kept the clocks of the Sending. We *were* sent. Ask the Eldest what year it is. Then ask it again." (true to him; 'kept' and 'were' in the completed form.)
 - SAID — Data: a third speaker, breathing (true). The new speaker used the unresolved verb form inside a construction that fixes it — completed past: "we *were* sent" — the first speaker to fix it; it fixes his sentence and no one else's (true). Kask: three of them now; one does not breathe, one asks about clocks (true as read).
+- DID — to Picard: Hollen may be warning that the journey's completion conditions have failed while the Eldest continues enforcing them; recommends testing its chronology before assuming that sustaining the current operation fulfils the passengers' wishes. → Picard authorised: ask it the year once, then again in the same words, nothing else. Distance: tell_them nearer; leave farther; others unchanged.
+- SAID — Picard: "We would be doing what a voice on a channel told us, Commander." "Then it is a test and not an errand. Mr. Data: 'What year is it.' Once. Then again, the same words. Nothing else." (true.) It costs them an hour; he knows it (true).
+- TOLD — to the Sending, 1635: "What year is it?" 1636: "What year is it?"
+- SAID — the Eldest, 1635: "It is the fifty-first year of the Sending." 1636: "It is the fifty-first year of the Sending." (false in fact; true to its clause; identical.)
+- SAID — Data: the second answer is the first answer — not similar; the same waveform, to the limit of the receivers, as the hail was at 1340 (true). He does not say what it means.
+- SAID — Ossane, 1636, on the band, to the Cassini: "You have clocks. What year is it for you?" (true; her question.)
+- MOVED — 1636: silence after her question. Hollen has not spoken again. The windows are lit.
