@@ -37,3 +37,7 @@ Append-only. Never cleared.
 - SAID — Data: the construction rendered 'of' is the one rendered 'from home' in the first hail; origin rather than belonging — "you are not from it" (true).
 - SAID — Kask: they now know we are not from here and that we understand them; two things they did not have five minutes ago (true).
 - SAID — Vint: they have never seen a ship; who goes out in something that size and has never seen a ship (true as quoted; his question). Picard: "Ensign."
+- DID — "By what means does the Eldest distinguish our light as that of a ship?" (to the bridge) → Data gives what the vessel could see and the medium; Kask a worst case; Picard asks whether that is the question to send. Distance: unchanged.
+- SAID — Data: the hail is on radio, not subspace; the reply was sent on the same band (true). At 40,000 km with running lights, nacelle grilles and deflector lit, the Cassini resolves to a modest optical aperture as an artificial, symmetrical object; the vessel carries an aperture array at the bow consistent with optical astronomy (true). By what means the Eldest reasons, he cannot say (true).
+- SAID — Kask: worst case, it has seen ships and they have not; no number on it (speculation; truth: the Eldest has never seen a ship).
+- SAID — Picard: is that the question Lloyd would send; a question asked back instead of an answer is also an answer (true).
