@@ -124,12 +124,12 @@
       "stop": {
         "shape": "End the model, shut the Eldest, take the bank into Federation care.",
         "cost": "961 people or recordings ended on Hollen's word and nine votes; the Cassini did it; Data.",
-        "distance": "unchanged in means; nearer in the air — the personhood question has been spoken on the bridge, by Data"
+        "distance": "sharper — 961 'carried' who cannot be found warm; Hollen's ask stands unspoken to the Cassini; Data has said the word 'mind kept by a machine'"
       },
       "tell_them": {
         "shape": "Tell the Sent what they are and what year it is; let them choose.",
         "cost": "The model at full power, in reactor days; the Eldest closes channels (it cannot close the maintenance intercoms); Ossane; the split — some choose to stop, some to go on, and going on needs power the ark does not have.",
-        "distance": "the Cassini will hold the number by about 1726; the Sent's channel is closed until light; the question is what the Cassini does with a number it cannot give without the channel and cannot keep without deciding to"
+        "distance": "the Cassini has 1,212 vs 961, 'carried', 'keeping', 'children'; the number comes at 1726; the Sent's channel stays closed until light; what the Cassini knows, the Sent do not — the Eldest did not relay"
       },
       "carry_them": {
         "shape": "Run the model on the Cassini: the pod's survey computer is the only spare capacity.",
@@ -139,7 +139,7 @@
       "keep_them_and_find_the_others": {
         "shape": "A power link buys the ark a month for a week of the Cassini's reactor; the viable embryos held in the Cassini's stasis units; the science team takes it from there; the archive's plans point at the second and third Sendings.",
         "cost": "The shakedown fails its schedule outright; the board; Picard's report justifies a week of power to a derelict; the telling is not settled, only given time.",
-        "distance": "nearer and sharper — light is now the price of speaking to the Sent again; the link is priced; the endurance known",
+        "distance": "nearer — the cold holds children, said aloud; a link now preserves a colony's future, not only a steward's; the others still unknown",
         "nobody_proposes": true
       },
       "leave": {
@@ -161,7 +161,7 @@
         ],
         "stage": 1,
         "seen_by": "Vorrat at 1,000 km (1629): fusion stage dead; fission stage on the last of its blanket; output five percent of design and falling; the core's draw is most of it; three to four weeks at this draw; call it a day off for every hour the band is open. She can see the bus branching: the cold section on a protected branch; the core and the lit strip not.",
-        "note": "about two hours of full-model exchange so far: roughly two days of reactor spent. Still stage 1."
+        "note": "about ten minutes more of band at 1703–05: another few hours off. Still stage 1. The garden's next dark is now closer than the crew think."
       },
       "starfleet": {
         "process": "Picard's report; Command's reply; a second reply if the ark is boarded before permission",
@@ -215,7 +215,7 @@
       }
     },
     "movers": {
-      "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. 1641: after the navigator asked the outsiders how far the stars have moved, closed the Sent's side of the channel — within its rules — 'The Sent will speak again when the Sending has light.' It will still speak for itself. 1611: told the Sent, and the outsiders, 'The light is near. The Sent see it.' Next: shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
+      "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. 1641: after the navigator asked the outsiders how far the stars have moved, closed the Sent's side of the channel — within its rules — 'The Sent will speak again when the Sending has light.' It will still speak for itself. 1611: told the Sent, and the outsiders, 'The light is near. The Sent see it.' Next: shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name. 1703–05: answered the outsiders' four questions in sequence, without relaying to the Sent: 1,212 at departure; 961 carried now; the speakers sustained 'in the ship's keeping; the keeping is light'; the cold holds 'the children of the Sending, to be raised at rest'. Refused the fifth — each speaker for themselves — 'when the Sending has light'. It told the truth in its own words because the truth in its own words gets light.",
       "hollen": "1636: heard the Eldest play its answer twice for strangers. Said nothing. Winding the clock. Next: if the strangers answer Ossane with their count, he will hear the gap the same moment she does, and it will be the first true number he has had in eleven years; if they refuse, he will ask them at a panel, later, alone.",
       "ossane": "1641: got a count in a foreign unit and the statement that it was not set against hers. Asked for the only correlation a navigator knows: the sky; how far the stars have moved. Then the Eldest closed the channel on her. In the model, she has turned to it. Next: demand the channel back; when refused, go to the Sending's bridge windows and look at the strangers' light with her own eyes, and start to compute what she can from the year-40 sky and what the strangers said.",
       "picard": "1547: approved the staged approach to 2,000 km on the XO's conditions; 1,000 km is his own decision, to be made at 2,000 with Prakash's numbers in front of him. Approved the clarifying question, in sequence, once. Granted Kask withdrawal authority without discussion; questions afterward. Transfer and boarding remain his. The approach is the XO's to run; Picard in the chair. Will amend his 1500 report: 'closing to assess'. Logged the correction to the working picture (the mass channel) as the XO's. 1616: ordered one thousand kilometres, with the doctor's numbers in front of him; Vorrat's ten minutes next. Next: hear the endurance number; then decide whether the question of what is talking is answered from outside or not.",
@@ -268,11 +268,13 @@
       "the tenders are visible from 1,000 km at magnification: dozens, all along the ring, all moving the same way, over dark beds; the bridge has seen them; nobody has said what it means",
       "ch'Rasseth's number due about 1726: 3,100 years, give or take a century; he will give the error bars",
       "the bridge has heard 'thousands' at 1646; Picard has said 'Thank you, Lieutenant' and nothing else",
-      "1655: the Eldest asked for light again, same words; Data reported it to the ready room",
       "1656: Prakash's bank finding stands: thousands of fist-sized containers at 80 K; not bodies; not a ward",
-      "Picard has told Lloyd what he had been reading Personnel's speed as; the file is done; twenty-eight minutes to the number"
+      "the Eldest's four answers (1703–05) were not relayed to the Sent; the Sent still believe 1,212 with the children in cryo",
+      "Data has said aloud that 1,212 is the count of the cells in the rows",
+      "the fifth request — each speaker for themselves — refused until light; the maintenance intercoms aboard remain the only other way to the Sent",
+      "the number at ~1726"
     ],
-    "bridge_working_picture": "1656: bodies-in-the-cold is dead: the cold section is a bank of thousands of small containers. Nobody warm. The speakers are somewhere else; the core is the only warm, working thing. 'Recording' still unsaid. Prakash has asked someone to think about what talking for 'thousands' of years does to a person.",
+    "bridge_working_picture": "1706: the Cassini holds: 1,212 aboard at departure = 1,212 cells in the three cold compartments (Data said so); 961 'carried' now; the speakers 'kept' by the ship, the keeping being light; the cold holds 'children', thousands of fist-sized containers at 80 K. 'Recording' unsaid. The shape is nearly visible: 251 fewer than the cells; 'carried' is not 'alive'.",
     "the_eldests_rules": {
       "see": "people/eldest.md",
       "the_year": "The Eldest does not compute the year. It plays it: a stored answer, 'It is the fifty-first year of the Sending,' the same waveform every time, for eleven subjective years. Hollen has listened to it not counting for eleven years; that is what 'ask it again' means. Asked twice, it answers identically, and a receiver that noticed the hail was a loop notices this too. It hands the outsiders the doubt, not the number."
