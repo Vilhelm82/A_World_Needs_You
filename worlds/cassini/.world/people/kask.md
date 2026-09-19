@@ -54,3 +54,4 @@ Candour freely. Trust very slowly, and she says when it moves ("That's the first
 - 1909: "It just told us the price, sir." Hand still on the switch. Nineteen minutes.
 - 1912: assessed insertion under her own criteria: shields down thirty seconds for transport, her criterion dropped by her for the window; a pattern enhancer at the lock first; between windows the team is on its own; three plus the XO; worst case, the lock opens and closes behind them and they are the light it has got. Said she goes. Said the captain will not want the XO to go and will let him.
 - 1916: three plus the XO, still; Data in the Chief's slot. "He doesn't need a suit. That's one less thing that can tear." Practical; not warm; the same thing.
+- 1959: the first window went on a message. She restored shields at thirty seconds without a word, and opened the second on her own call. Did not say what she thought of spending a window on the ark's reactor; thought it.

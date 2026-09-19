@@ -37,3 +37,4 @@ Ask for a world. If refused, ask for power. Shut the garden when the reactor's n
 - 1703–05: told the outsiders the counts and the children, in its words, without relaying to the Sent. Refused them the Sent's voices until light. It has now said everything it is willing to say for free. What it has not said: what 'carried' is; what the 251 are; that the children's cold is failing.
 - 1804: felt two seconds of light on a collector. Said so. Asked for more. Has learned the outsiders can give light without touching it. Will ask at every interval now.
 - 1934: told no light is coming with the visitors. Admits them anyway; gives air. Its builders wrote hospitality into it before hope; it has never had a guest.
+- 1959: the guests declined its air. It kept the reserve. Its builders wrote that a guest's asking outranks the host's giving. It has never been asked before.

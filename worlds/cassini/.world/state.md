@@ -1,8 +1,8 @@
 # Card
 
-**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched; shields dropping for a thirty-second window. Stardate 39739.5. Ship's time 1958. Shakedown day 13.
+**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched; shields dropping for a thirty-second window. Stardate 39739.5. Ship's time 2000. Shakedown day 13.
 
-**Scene.** Transporter room 3, deck 6, 1958. On the pad: Lloyd (suited), Kask (suited; phaser holstered; her window running), Data (no suit), Ekwueme (suited; medical kit). Sorvanen at the console (enhancer standing in the ark's lock chamber; waiting for the word). Picard on comm from the chair.
+**Scene.** Transporter room 3, deck 6, 1958. On the pad: Lloyd (suited), Kask (suited; phaser holstered; her window running), Data (no suit), Ekwueme (suited; medical kit). Sorvanen at the console (enhancer standing; first window spent on the message; second window running on Kask's call; waiting for the word). The Eldest keeps its air; the lock is open on vacuum. Picard on comm from the chair.
 
 **Elsewhere.** Bridge: Picard in the chair; Vint at conn; a relief officer at tactical with Kask's criteria. Engineering: Vorrat listening. Sickbay: Prakash listening. The Sending: the lock open; the Eldest giving air beyond it; Hollen at the first panel in the model; Ossane at the instrument.
 

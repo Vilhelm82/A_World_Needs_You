@@ -298,3 +298,9 @@ Append-only. Never cleared.
 - SAID — Kask: type two, stun, holstered; it stays holstered unless she says (true). Ekwueme: "May I?" — checking the seal on Lloyd's suit; "Doctor says first question first. I'll be asking it too." (true.) Sorvanen: enhancer goes first on its own cycle; then the four; "I can put you in the lock. Past that I can't see." Shields down is Tactical's call and he waits for it (true).
 - SAID — Picard, on comm, 1958: "Commander. The Eldest says the lock is open. Lieutenant Kask has the window. Go when the chief says." (true.)
 - MOVED — 1958: enhancer away; it reads back from inside the lock chamber — a lock, a clear cycle. Sorvanen: "Enhancer's standing. Shields on the Lieutenant's call." Kask: "Shields down. Thirty seconds. Now." Sorvanen: "In your own time, sir. Which is now."
+- DID — before the beam: sent "Our protective suits supply our air. Please preserve your reserves; we do not require the lock to be pressurised." → Kask's first window expired; the Eldest kept its air; a second window opened. Distance: keep_them — twenty minutes of the ark's reactor not spent; others unchanged.
+- SAID — Kask: "Window's running, sir." Then, at thirty: "Shields up. That's thirty." (true; no complaint.) Sorvanen: hands off the console; "I wait." (true.)
+- TOLD — to the Sending, 1959, via the bridge: our suits supply our air; please preserve your reserves; we do not require the lock to be pressurised.
+- SAID — the Eldest, 1959: "The Eldest keeps its air. The lock is open." (true; it did not spend the twenty minutes.)
+- SAID — Picard, on comm: "Noted, Commander. It kept its air." (true.) Kask: "Shields down. Thirty. Now." Sorvanen: "In your own time, sir. Which is now." (true.)
+- MOVED — 2000: the second window running. The pad. The Sending's lock open on vacuum a thousand kilometres away.
