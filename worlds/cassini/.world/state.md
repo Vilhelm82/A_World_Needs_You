@@ -1,8 +1,8 @@
 # Card
 
-**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up; deflector off since 1931. Stardate 39739.5. Ship's time 1932. Shakedown day 13.
+**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up; deflector off since 1931. Stardate 39739.5. Ship's time 1935. Shakedown day 13.
 
-**Scene.** Bridge, 1932. The light off; the windows yellow-green again. Boarding ordered for 2000: transporter room three; Lloyd, Kask, Data, one of Prakash's; into the forward lock on Kask's window; the Eldest has said the lock will open. Picard in the chair (amendment to Command sent 1925; will hold the chair while the team is over). Kask (hand off the switch; to the armoury and the enhancer). Data (to ops until 1955). Vint at conn.
+**Scene.** Bridge, 1932. The light off; the windows yellow-green again. Boarding ordered for 2000: transporter room three; Lloyd, Kask, Data, one of Prakash's; into the forward lock on Kask's window; the Eldest has agreed: the lock will open, it will give air (twenty minutes of its reactor, counted), no transfer. Picard in the chair (amendment to Command sent 1925; will hold the chair while the team is over). Kask (hand off the switch; to the armoury and the enhancer). Data (to ops until 1955). Vint at conn.
 
 **Elsewhere.** Engineering: Vorrat (the enhancer; her tech stood down; the converter half built). Sickbay: Prakash briefing her nurse; will find Data before 2000 if she can. Astrometrics: ch'Rasseth. The Sending: the model back on the reactor; the Eldest waiting at the lock; Hollen at the first panel inside the lock corridor, in the model, waiting; Ossane at the instrument.
 
@@ -14,6 +14,6 @@
 
 # Carry
 
-**Rest point, 1932.** Nothing changes before 2000. Standing down here costs nothing; the transporter room is the next thing.
+**Rest point, 1935.** Nothing changes before 2000. Standing down here costs nothing; the transporter room is the next thing.
 
 Episode 1, *The Sending*, open. Nothing decided by Lloyd yet. The world as truth.json has it at build; distance per resolution as written there. Every standing person's belief about Lloyd is their file's opening line. The transporter chief has not spoken.

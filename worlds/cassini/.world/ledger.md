@@ -288,3 +288,8 @@ Append-only. Never cleared.
 - MOVED — 1931: the light ends on the scope; Vorrat: "Ramping down. Off. Clean." The four windows go back to yellow-green. The core's draw returns to the ark's reactor (Data).
 - SAID — the Eldest, 1931: "Give the Sending light." Told by Data, on Picard's word, that the strangers will come aboard: "Bring light. The lock will open." (true to it; it takes visitors for a source.)
 - MOVED — 1932: the bridge stands down from the light. Kask's hand comes off the switch. Twenty-eight minutes to the transporter room.
+- DID — to Picard: state that we bring independently powered equipment for our own use, with no power transfer authorised, and confirm whether it will admit us on those terms. → Picard: "Honest. Send it." The Eldest agreed. Distance: unchanged.
+- TOLD — to the Sending, 1934: we will come aboard with equipment powered by ourselves, for our own use; no transfer of power is authorised; will you admit us on those terms?
+- SAID — the Eldest, 1934: "The lock will open. The Eldest will give air. The Sent will speak when the Sending has light." (true to it; it will pay for the air.)
+- SAID — Vorrat: that is twenty minutes of its reactor for our lungs; count it (true). Picard: "Counted." (true.)
+- MOVED — 1935: twenty-five minutes to the transporter room.
