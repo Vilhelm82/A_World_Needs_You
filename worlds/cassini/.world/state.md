@@ -1,8 +1,8 @@
 # Card
 
-**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up. Stardate 39739.4. Ship's time 1753. Shakedown day 13. Called at 1810; Vorrat's hour ends ~1813.
+**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up. Stardate 39739.4. Ship's time 1756. Shakedown day 13. Called at 1810; Vorrat's hour ends ~1813.
 
-**Scene.** Sickbay, deck 12, Prakash's office, 1753. Prakash with a tricorder (physical done; 'you're tired and don't know it'; the chessboard with Nila's game; has said aloud she has never examined Data; wants to know who the patient is). A nurse in the ward, silent, unnamed.
+**Scene.** Sickbay, deck 12, Prakash's office, 1753. Prakash with a tricorder (physical done; 'you're tired and don't know it'; the chessboard with Nila's game; will ask Data tonight what he needs; has asked what she does if one of the Sent says 'I want it to stop'). A nurse in the ward, silent, unnamed.
 
 **Elsewhere.** Bridge: Picard in the chair (has the number; nothing goes out). Data at ops. Kask at tactical. Vint at conn. Bridge: Picard in the chair (has the number; nothing goes out). Data at ops. Kask at tactical. Vint at conn. Engineering: Vorrat characterising the ring's collectors until ~1813; 'or we could take it at its word'. Sickbay: Prakash (told 'children'; an embryo bank, she'd stake her licence; retracted 'a very long time'). Astrometrics: ch'Rasseth — done; antennae flat. The Sending: the Sent told nothing of 1703–05; Ossane at the windows; Hollen winding; the Eldest waiting for light.
 
