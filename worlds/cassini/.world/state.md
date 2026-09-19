@@ -1,8 +1,8 @@
 # Card
 
-**Where / when.** USS Cassini (Nebula-class, NCC-60349), holding station 0.7 ly inside the Orrin Shallows, 40,000 km off an unknown vessel. Stardate 39739.2. Ship's time 1424. Shakedown day 13.
+**Where / when.** USS Cassini (Nebula-class, NCC-60349), holding station 0.7 ly inside the Orrin Shallows, 40,000 km off an unknown vessel. Stardate 39739.2. Ship's time 1427. Shakedown day 13.
 
-**Scene.** Bridge, 1424. Picard standing centre (wants to know what he is talking to before he answers it; believes Lloyd was sent; will ask 'what do you know' before 'what do you think'). Data at ops (wants to be asked). Kask at tactical (wants nobody near it; watching Picard). Vint at conn (wants to take her closer). Viewscreen: the vessel at magnification, ring lit. Relief officers at science/engineering stations: unnamed until they speak.
+**Scene.** Bridge, 1427. Picard standing centre (wants to know what he is talking to before he answers it; believes Lloyd was sent; will ask 'what do you know' before 'what do you think'). Data at ops (wants to be asked). Kask at tactical (wants nobody near it; watching Picard). Vint at conn (wants to take her closer). Viewscreen: the vessel at magnification, ring lit. Relief officers at science/engineering stations: unnamed until they speak.
 
 **Elsewhere.** Engineering: Vorrat (wants her day back). Sickbay: Prakash (wants a closer biosensor pass).
 
