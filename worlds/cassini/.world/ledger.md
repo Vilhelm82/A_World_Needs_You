@@ -150,3 +150,6 @@ Append-only. Never cleared.
 - SAID — Ossane, 1641: "Then set them. You hold our sky. Stars move. Tell me how far ours have moved." (true; her request.)
 - SAID — the Eldest, 1641: "The Sent are tired. The Sent will speak again when the Sending has light." (true to it; the channel to the Sent closed.) Then silence.
 - SAID — Data: the Sent's side of the channel has been closed at their end; the Eldest's carrier remains; it will answer for itself (true). Kask: "It just shut her up, sir." (true as read.)
+- DID — "You see that too, sir?" → Picard: "I see it." Data magnified. Distance: unchanged.
+- SAID — Picard: "I see it." (true.) Data, at magnification: a machine, small, on a rail, moving along the beds at about walking pace; another in the next window; the beds are dark — whatever is in them is not green (true). Vint: dozens, all along the ring, all going the same way (true). Kask: machines; does not meet a criterion; she would like it to (true as read). Prakash, on comm: "Warm like a lit room and nothing growing in it. That's what I said." (true.)
+- MOVED — 1643: the bridge watches the tenders cross the windows. The band silent. The Eldest's carrier open.

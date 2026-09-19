@@ -1,8 +1,8 @@
 # Card
 
-**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched to its drift, shields up. Stardate 39739.4. Ship's time 1642. Shakedown day 13.
+**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched to its drift, shields up. Stardate 39739.4. Ship's time 1643. Shakedown day 13.
 
-**Scene.** Bridge. Lloyd at the XO's station beside the chair, running the approach. Picard in the chair (sent the count 'in those words'; heard the Eldest close the channel; silent). Data at ops (the year is a played answer, identical twice; the tense fixed by Hollen; the count of the rows, unasked). Kask at tactical (shields 100%; three voices; criteria unmet; her call stands). Vint at conn (flew it; holding matched). Viewscreen: the hull filling it, the windows of the ring individually visible, lit. The band: the Sent's side closed by the Eldest at 1641 'until the Sending has light'; the Eldest's carrier open. Ossane's last words: how far have the stars moved.
+**Scene.** Bridge. Lloyd at the XO's station beside the chair, running the approach. Picard in the chair (sent the count 'in those words'; heard the Eldest close the channel; silent). Data at ops (the year is a played answer, identical twice; the tense fixed by Hollen; the count of the rows, unasked). Kask at tactical (shields 100%; three voices; criteria unmet; her call stands). Vint at conn (flew it; holding matched). Viewscreen: the hull filling it; the ring's windows, lit; tenders crossing them on rails, dozens, over dark beds. The band: the Sent's side closed by the Eldest at 1641 'until the Sending has light'; the Eldest's carrier open. Ossane's last words: how far have the stars moved.
 
 **Elsewhere.** Engineering: Vorrat — weeks, a day per hour of talk, the cold on a protected branch; the cable priced; the schedule said once. Sickbay: Prakash — held section a cupboard; three compartments of rows cold as the hull; nobody warm. Astrometrics: ch'Rasseth, ~two and a half hours. The Sending: Ossane cut off mid-question, turning to the Eldest; Hollen: 'Now you know what it does when you count.'
 
