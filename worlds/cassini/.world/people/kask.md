@@ -34,3 +34,6 @@ Knows: the tactical state — phasers certified; torpedoes carried, launchers un
 
 ## Regard — her economy
 Candour freely. Trust very slowly, and she says when it moves ("That's the first time I've believed you, sir"). Praise rare: a nod. Anger freely, hot, short. Warmth: she shows up.
+
+## Current (episode 1)
+- 1529: arrived exactly; back to the wall, facing the door. Brought the bridge's news: world refused at 1502, light asked for at 1503, unanswered. Has been watching the captain refuse a request and thinks he did it fast.
