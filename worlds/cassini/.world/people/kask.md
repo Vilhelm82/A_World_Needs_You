@@ -49,3 +49,4 @@ Candour freely. Trust very slowly, and she says when it moves ("That's the first
 - 1804: "That was an act, Chief." Her criteria were not met by a thing the Cassini did to itself; she says they should have been. Will ask the XO, in front of the captain, whether her word means anything. Trust: at stake.
 - 1806: asked by the XO whether she was calling for withdrawal. Said no, and why. Said the next time would be different. Then: "That's the first time today I've believed you, sir." Trust: moved, and said. It will not be said again for a long while; it does not need to be.
 - 1830: sat with Vorrat and agreed the scope line by line. Exact. Vorrat hated it and signed it. Kill switch at tactical under her hand at 1900.
+- 1900: hand on the switch. Said "Switch is mine" and nothing else. Criteria unmet. Watching the ark's emissions, not the screen.
