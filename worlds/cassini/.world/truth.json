@@ -129,7 +129,7 @@
       "tell_them": {
         "shape": "Tell the Sent what they are and what year it is; let them choose.",
         "cost": "The model at full power, in reactor days; the Eldest closes channels (it cannot close the maintenance intercoms); Ossane; the split — some choose to stop, some to go on, and going on needs power the ark does not have.",
-        "distance": "nearer — Hollen has spoken and handed the outsiders the question; the year is one exchange away if they ask it twice"
+        "distance": "nearer — Ossane has asked the strangers for their count on the open band; the year is one answer away, and it is the Cassini's to give or withhold"
       },
       "carry_them": {
         "shape": "Run the model on the Cassini: the pod's survey computer is the only spare capacity.",
@@ -145,7 +145,7 @@
       "leave": {
         "shape": "Hold contact to the minimum, mark the position, leave the ark to the science team in nine days.",
         "cost": "The garden goes dark in that time; the model slows; the bank fails further; the Sent's last conversation is with the Cassini; the report says 'we left'.",
-        "distance": "farther — the endurance is known and a passenger has asked for help against his own steward"
+        "distance": "farther — a passenger has asked the Cassini a question whose answer is the truth"
       }
     },
     "pressures": {
@@ -204,18 +204,19 @@
           "Ossane's numbers do not work",
           "she has asked the outsiders how far — 1433, first exchange",
           "1552: on the open channel, in the outsiders' hearing, Ossane asked the Eldest directly what stops first when the light is gone. It answered: the garden, then the ship, the cold kept last; 'the ship stops' means 'the Sent sleep'. She takes 'sleep' for cryo. Hollen would know otherwise. She has not asked him.",
+          "1636: the strangers asked the Eldest the year twice on the open band; the Sent heard it answer the same way twice; Ossane asked the strangers what year it is for them. Any answer gives her the gap.",
           "she asks the Eldest where, and gets a truth she cannot use without charts",
           "she gets charts, or does not",
           "she knows",
           "she tells, or does not"
         ],
-        "stage": 2
+        "stage": 3
       }
     },
     "movers": {
       "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. 1611: told the Sent, and the outsiders, 'The light is near. The Sent see it.' Next: shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
-      "hollen": "1631: asked the Eldest for the channel; it gave it. Said to the outsiders: 'You who go to see. I am Hollen. I kept the clocks of the Sending. We were sent. Ask the Eldest what year it is. Then ask it again.' Used the fixing construction on purpose. Next: wait; if they ask the Eldest and it answers with the year, say 'again'; if they board, reach them at a panel; he will not say 'recording' on the open band while the unknowing can hear.",
-      "ossane": "1631: heard Hollen on the band — his first time on it in eleven years — and heard him say 'were'. Did not understand why the strangers would care about a tense. Next: ask him. She is still in his doorway.",
+      "hollen": "1636: heard the Eldest play its answer twice for strangers. Said nothing. Winding the clock. Next: if the strangers answer Ossane with their count, he will hear the gap the same moment she does, and it will be the first true number he has had in eleven years; if they refuse, he will ask them at a panel, later, alone.",
+      "ossane": "1636: heard strangers ask the year twice and the Eldest answer the same way twice — the way it always answers. Asked the strangers, on the band: 'You have clocks. What year is it for you?' Next: whatever they say, she will set it against the Sending's count; if they refuse, she will know the refusal is the number.",
       "picard": "1547: approved the staged approach to 2,000 km on the XO's conditions; 1,000 km is his own decision, to be made at 2,000 with Prakash's numbers in front of him. Approved the clarifying question, in sequence, once. Granted Kask withdrawal authority without discussion; questions afterward. Transfer and boarding remain his. The approach is the XO's to run; Picard in the chair. Will amend his 1500 report: 'closing to assess'. Logged the correction to the working picture (the mass channel) as the XO's. 1616: ordered one thousand kilometres, with the doctor's numbers in front of him; Vorrat's ten minutes next. Next: hear the endurance number; then decide whether the question of what is talking is answered from outside or not.",
       "kask": "argue against boarding; then argue for arms; then go",
       "vorrat": "1629: gave the endurance number and the priority branch; repriced the link (a month for a week of ours) and said the schedule once — board in eight days, a day behind. Next: build the converter if told to; refuse the link until she has seen the far end; write her yard report tonight.",
@@ -259,11 +260,17 @@
       "Prakash's finding at 1612 stands on the bridge: nobody warm and breathing; the core, the bank, the strip",
       "the bridge's picture: minds in the core (right), bodies in the cold (wrong, and Prakash's numbers already say so); 'recording' unsaid",
       "at 1,000 km since 1619, shields up, matched; Vorrat's assessment done 1629",
-      "Hollen's question stands on the bridge: ask the Eldest what year it is, then ask it again. If asked, the Eldest will answer the year as fifty-one (the hope clause; it may lie to outsiders freely); asked again, it will answer the same; the unknowing will hear both",
       "Data can now hear the completed form when a speaker fixes it; he has not yet said what it would mean if applied to the first hail",
-      "the schedule is on the record: eight days to the board, a day behind"
+      "the schedule is on the record: eight days to the board, a day behind",
+      "the Eldest's year is a played answer: the bridge has heard it twice, identically; Data has said so",
+      "Ossane's question stands on the band: 'You have clocks. What year is it for you?' The Cassini has no Tessuri year to give; it has its own count and the hull's age, neither yet computed; any honest answer is a gap",
+      "two exchanges at 1635–36: an hour or two off the reactor"
     ],
-    "bridge_working_picture": "1615: Lloyd's hypothesis on the bridge — the speakers are bodies in suspension with consciousness supported by the core; 'sleep' is loss of that support while refrigeration continues. Half right: the minds are in the core; the bodies are not in the cold. Prakash's numbers have already cut the 'bodies in suspension' half: the held section is a few hundred cubic metres — a cupboard, not a thousand people; the three big compartments with rows are cold as the hull. Data has said aloud that a mind kept by a machine is a description the Federation has one officer for. Nobody has said 'recording'."
+    "bridge_working_picture": "1615: Lloyd's hypothesis on the bridge — the speakers are bodies in suspension with consciousness supported by the core; 'sleep' is loss of that support while refrigeration continues. Half right: the minds are in the core; the bodies are not in the cold. Prakash's numbers have already cut the 'bodies in suspension' half: the held section is a few hundred cubic metres — a cupboard, not a thousand people; the three big compartments with rows are cold as the hull. Data has said aloud that a mind kept by a machine is a description the Federation has one officer for. Nobody has said 'recording'.",
+    "the_eldests_rules": {
+      "see": "people/eldest.md",
+      "the_year": "The Eldest does not compute the year. It plays it: a stored answer, 'It is the fifty-first year of the Sending,' the same waveform every time, for eleven subjective years. Hollen has listened to it not counting for eleven years; that is what 'ask it again' means. Asked twice, it answers identically, and a receiver that noticed the hail was a loop notices this too. It hands the outsiders the doubt, not the number."
+    }
   },
   "serial_in_motion": [
     "the pod's low-density under-read is design, not fault: a fleet-wide finding the yard will not want to hear, and the Cassini's shakedown is what would find it",
