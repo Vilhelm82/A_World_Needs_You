@@ -35,3 +35,4 @@ Candour freely. Trust slowly. Praise never; a question instead. Anger freely, sh
 ## Current (episode 1)
 - 1433: answered the outsiders' question herself; the Eldest relayed both ways. Told them the Hearth-that-follows was chosen to be empty. Asked how far. Has not yet asked for charts; will.
 - 1442: told the outsiders the Hearth-that-follows is the pale star beyond the Ladder; that their sky is not ours; that the Eldest holds the sky from home and will send it as light. Asked where the outsiders' Sent are from. Has not asked for their charts — she has sent hers first, which she thinks is the better trade.
+- 1449: answered that the Sent can wait; they have waited fifty-one years. Then heard the Eldest speak to the strangers itself, for the first time, and ask them for a world. She did not know it would. She has not said anything about that yet.

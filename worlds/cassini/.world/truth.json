@@ -21,7 +21,8 @@
       "Lloyd's past is the person's to state. Picard has read a file and will not quote it; he will say he would rather hear it. The world never invents Lloyd's history.",
       "Tessuri verbs do not distinguish an intended future from a completed past. The translator renders both until Data resolves it from usage.",
       "Tessuri nouns carry classifiers. The computer has resolved one with confidence: things that give light. 'Hearth', 'Hearth-that-follows' and 'light' in the hail share it. That is why Data called it 'the name of the star'; it is equally consistent with a fire. The computer has no verb it is confident renders 'recognise'; it uses 'know'.",
-      "Tessuri has no separate word for 'crew': the people aboard a ship are its Sent. 'Explorers' renders as 'those who go to see'; 'peaceful' as 'not-harm'."
+      "Tessuri has no separate word for 'crew': the people aboard a ship are its Sent. 'Explorers' renders as 'those who go to see'; 'peaceful' as 'not-harm'.",
+      "'Specialists' renders as 'those who know the sky'. The Eldest's voice on the band carries no breath pauses; ops can see that in the waveform."
     ],
     "discarded": "everything after 2362; the Enterprise-D; every canon plot"
   },
@@ -115,7 +116,7 @@
       "resettle": {
         "shape": "Starfleet grants a world; the ark is towed; the Eldest lands and raises the viable embryos with the recorded as teachers.",
         "cost": "The recorded never learn what they are unless told; children raised by the dead; the lie carried into Federation space; the shakedown ends.",
-        "distance": "far — nothing has moved; needs Starfleet, a tow, and a decision about the lie"
+        "distance": "far, but on the table — the Eldest has asked; needs Starfleet, a tow, and a decision about the lie"
       },
       "stop": {
         "shape": "End the model, shut the Eldest, take the bank into Federation care.",
@@ -205,7 +206,7 @@
       }
     },
     "movers": {
-      "the_eldest": "ask for a world; if refused, ask for power; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name",
+      "the_eldest": "ASKED for a world at 1449 (step taken). Next: if refused or unanswered, ask for power — 'light' — from the Cassini; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
       "hollen": "reach the away team at a maintenance intercom the moment anyone is aboard; ask them to stop the Eldest; if refused, try to tell the unknowing through the intercoms himself",
       "ossane": "ask the Cassini where it thinks the Sending is; ask for charts; work it out",
       "picard": "consult his XO; hold the ship off until he knows what he is talking to; send the report; do this right",
@@ -227,9 +228,11 @@
       "the first exchange took ninety seconds; the model is at full speed; each such exchange costs the reactor",
       "the Cassini has not identified itself; the Sent know only 'a ship' (the Eldest's word) that understands them",
       "the Eldest's sky image is assembling in an isolated buffer at ops; astrometrics (ch'Rasseth) has not been told; matching it takes hours",
-      "Ossane has asked where the Cassini's Sent are from; unanswered",
       "the Sent have been told the light is a ship with Sent aboard who go to see and do not harm; the Cassini is still unnamed",
-      "Picard intends to send his report at 1500"
+      "Picard intends to send his report at 1500",
+      "the Sent's question 'from where' stands unanswered; Picard is not ready to answer it and has said so to Lloyd",
+      "the Eldest has spoken to the outsiders directly and asked for a world; the Sent heard it ask — Ossane heard the Eldest speak for them to strangers for the first time",
+      "Picard is taking Lloyd into the ready room before the 1500 report; Data has the bridge"
     ]
   },
   "serial_in_motion": [
