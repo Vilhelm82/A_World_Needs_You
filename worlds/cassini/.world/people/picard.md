@@ -37,3 +37,8 @@ Knows: the ship's specs and what is uncertified; the orders; the hail so far, at
 
 ## Regard — his economy
 Praise almost never; exact when it comes, and it names the decision. Candour freely, in private only. Anger rarely; cold; the room drops. Trust slowly, then total. Warmth almost never; clumsy. What he actually weighs (he is not fully aware of it): candour in private, restraint in public, the crew over the schedule, whether the XO holds the whole ship in his head, whether he can say "I don't know". What he believes he weighs: decisiveness.
+
+## Current reads (episode 1)
+- 1428: reads the fourth sentence as a ship that expected to be met. Wrong: the Sent expected an empty world; Ossane's question asks whether the Hearth-that-follows is already someone's. He has not thought of that.
+- 1428: the number against the hull troubles him; he has not said what he thinks it means.
+- Lloyd's first move on the bridge was to ask for the captain's read before giving his own. Picard filed it under "sent" and under "careful", and has not decided which.
