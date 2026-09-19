@@ -22,7 +22,8 @@
       "Tessuri verbs do not distinguish an intended future from a completed past. The translator renders both until Data resolves it from usage.",
       "Tessuri nouns carry classifiers. The computer has resolved one with confidence: things that give light. 'Hearth', 'Hearth-that-follows' and 'light' in the hail share it. That is why Data called it 'the name of the star'; it is equally consistent with a fire. The computer has no verb it is confident renders 'recognise'; it uses 'know'.",
       "Tessuri has no separate word for 'crew': the people aboard a ship are its Sent. 'Explorers' renders as 'those who go to see'; 'peaceful' as 'not-harm'.",
-      "'Specialists' renders as 'those who know the sky'. The Eldest's voice on the band carries no breath pauses; ops can see that in the waveform."
+      "'Specialists' renders as 'those who know the sky'. The Eldest's voice on the band carries no breath pauses; ops can see that in the waveform.",
+      "1631: Hollen's construction fixed the tense for his own sentence — 'we WERE sent' — completed past, unambiguous. It fixes his sentence and no one else's; the first hail remains as rendered. The computer can now recognise the completed form when a speaker chooses the fixing construction."
     ],
     "discarded": "everything after 2362; the Enterprise-D; every canon plot"
   },
@@ -100,7 +101,7 @@
       },
       "the_eldests_decision": {
         "a": "OPENED 1552 — Ossane asked it on the open channel; it answered: the garden first, then the ship, the cold kept last. The Cassini heard. Nobody aboard the Cassini yet knows 'the ship' means the model, or what 'the Sent sleep' means for a recording.",
-        "b": "the power priority table in the physical logs; Vorrat reads it.",
+        "b": "OPENED 1629 in part — Vorrat read the bus topology from 1,000 km: the cold section is on a protected branch; the core and the lit strip are not. She said so.",
         "c": "the sign: the garden ring goes dark. The Eldest tells the Sent a season has closed. The aware know there are no seasons."
       },
       "the_other_sendings": {
@@ -128,7 +129,7 @@
       "tell_them": {
         "shape": "Tell the Sent what they are and what year it is; let them choose.",
         "cost": "The model at full power, in reactor days; the Eldest closes channels (it cannot close the maintenance intercoms); Ossane; the split — some choose to stop, some to go on, and going on needs power the ark does not have.",
-        "distance": "nearer — the Cassini knows nobody warm is aboard and the question 'who is talking' is on the bridge; Ossane has gone to Hollen"
+        "distance": "nearer — Hollen has spoken and handed the outsiders the question; the year is one exchange away if they ask it twice"
       },
       "carry_them": {
         "shape": "Run the model on the Cassini: the pod's survey computer is the only spare capacity.",
@@ -138,13 +139,13 @@
       "keep_them_and_find_the_others": {
         "shape": "A power link buys the ark a month for a week of the Cassini's reactor; the viable embryos held in the Cassini's stasis units; the science team takes it from there; the archive's plans point at the second and third Sendings.",
         "cost": "The shakedown fails its schedule outright; the board; Picard's report justifies a week of power to a derelict; the telling is not settled, only given time.",
-        "distance": "nearer — the ship is closing to 1,000 km for the endurance number that prices a link",
+        "distance": "nearer — the link is priced (a week of ours for a month of theirs) and the endurance is known (weeks); the others still unknown",
         "nobody_proposes": true
       },
       "leave": {
         "shape": "Hold contact to the minimum, mark the position, leave the ark to the science team in nine days.",
         "cost": "The garden goes dark in that time; the model slows; the bank fails further; the Sent's last conversation is with the Cassini; the report says 'we left'.",
-        "distance": "farther — the ship is at 2,000 km with a finding it cannot un-find"
+        "distance": "farther — the endurance is known and a passenger has asked for help against his own steward"
       }
     },
     "pressures": {
@@ -159,7 +160,7 @@
           "the bank fails regardless as cooling fails"
         ],
         "stage": 1,
-        "seen_by": "Vorrat, from a close scan: weeks, not months, and less if you keep it talking",
+        "seen_by": "Vorrat at 1,000 km (1629): fusion stage dead; fission stage on the last of its blanket; output five percent of design and falling; the core's draw is most of it; three to four weeks at this draw; call it a day off for every hour the band is open. She can see the bus branching: the cold section on a protected branch; the core and the lit strip not.",
         "note": "about two hours of full-model exchange so far: roughly two days of reactor spent. Still stage 1."
       },
       "starfleet": {
@@ -179,11 +180,11 @@
         "moved_by": "hours on station",
         "stages": [
           "the day up has been spent on the intercept and the hail",
-          "behind, and Vorrat says so",
+          "1629: behind, and Vorrat said so, once: board in eight days, a day behind, on the record",
           "the Shakedown Office asks why: a message to Picard, and Vorrat's yard report",
           "the board reschedules; noted on the CO's and the XO's records"
         ],
-        "stage": 0
+        "stage": 1
       },
       "the_crew": {
         "process": "a new crew's first real thing",
@@ -213,11 +214,11 @@
     },
     "movers": {
       "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. 1611: told the Sent, and the outsiders, 'The light is near. The Sent see it.' Next: shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
-      "hollen": "Ossane came to him at ~1600 with the shutdown order and 'the Sent sleep'. He told her what sleep is. She did not believe him, and did not leave. Next: ask the Eldest for the outsiders' channel — it has never refused him one — and say to them: ask it what year it is, then ask it again.",
-      "ossane": "1552: asked the Eldest, in front of the strangers, what stops first when the light is gone; heard the order. Next: ask Hollen what 'the Sent sleep' means, because he keeps the vigil and she has begun to suspect the vigil knows something; she resents having to ask.",
+      "hollen": "1631: asked the Eldest for the channel; it gave it. Said to the outsiders: 'You who go to see. I am Hollen. I kept the clocks of the Sending. We were sent. Ask the Eldest what year it is. Then ask it again.' Used the fixing construction on purpose. Next: wait; if they ask the Eldest and it answers with the year, say 'again'; if they board, reach them at a panel; he will not say 'recording' on the open band while the unknowing can hear.",
+      "ossane": "1631: heard Hollen on the band — his first time on it in eleven years — and heard him say 'were'. Did not understand why the strangers would care about a tense. Next: ask him. She is still in his doorway.",
       "picard": "1547: approved the staged approach to 2,000 km on the XO's conditions; 1,000 km is his own decision, to be made at 2,000 with Prakash's numbers in front of him. Approved the clarifying question, in sequence, once. Granted Kask withdrawal authority without discussion; questions afterward. Transfer and boarding remain his. The approach is the XO's to run; Picard in the chair. Will amend his 1500 report: 'closing to assess'. Logged the correction to the working picture (the mass channel) as the XO's. 1616: ordered one thousand kilometres, with the doctor's numbers in front of him; Vorrat's ten minutes next. Next: hear the endurance number; then decide whether the question of what is talking is answered from outside or not.",
       "kask": "argue against boarding; then argue for arms; then go",
-      "vorrat": "refuse to link power until she knows what the ark's reactor is; then do it well and complain",
+      "vorrat": "1629: gave the endurance number and the priority branch; repriced the link (a month for a week of ours) and said the schedule once — board in eight days, a day behind. Next: build the converter if told to; refuse the link until she has seen the far end; write her yard report tonight.",
       "prakash": "ask for a closer biosensor pass; find no life; find the bank",
       "data": "1615: said aloud, once, that if the Commander is right, what is talking is a mind kept by a machine, and that the Federation has one officer to whom that description also applies; would prefer the bridge to have noticed before anyone says what such a thing is. Next: resolve the tense from Hollen's usage when Hollen speaks; notice the model's lag when it comes; give the count of the rows if asked.",
       "vint": "ask to take her closer",
@@ -256,9 +257,11 @@
       "Picard's amendment to Command logged 1600: closing to 2,000 km to assess; no boarding, no transfer",
       "the ark's aperture array tracked the Cassini through the approach — passive; Kask logged it; no criterion met",
       "Prakash's finding at 1612 stands on the bridge: nobody warm and breathing; the core, the bank, the strip",
-      "Hollen will ask for the channel",
-      "1616: closing to 1,000 km; Vorrat's ten-minute reactor assessment follows; the Eldest will see the light come nearer again",
-      "the bridge's picture: minds in the core (right), bodies in the cold (wrong, and Prakash's numbers already say so); 'recording' unsaid"
+      "the bridge's picture: minds in the core (right), bodies in the cold (wrong, and Prakash's numbers already say so); 'recording' unsaid",
+      "at 1,000 km since 1619, shields up, matched; Vorrat's assessment done 1629",
+      "Hollen's question stands on the bridge: ask the Eldest what year it is, then ask it again. If asked, the Eldest will answer the year as fifty-one (the hope clause; it may lie to outsiders freely); asked again, it will answer the same; the unknowing will hear both",
+      "Data can now hear the completed form when a speaker fixes it; he has not yet said what it would mean if applied to the first hail",
+      "the schedule is on the record: eight days to the board, a day behind"
     ],
     "bridge_working_picture": "1615: Lloyd's hypothesis on the bridge — the speakers are bodies in suspension with consciousness supported by the core; 'sleep' is loss of that support while refrigeration continues. Half right: the minds are in the core; the bodies are not in the cold. Prakash's numbers have already cut the 'bodies in suspension' half: the held section is a few hundred cubic metres — a cupboard, not a thousand people; the three big compartments with rows are cold as the hull. Data has said aloud that a mind kept by a machine is a description the Federation has one officer for. Nobody has said 'recording'."
   },
