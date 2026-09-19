@@ -38,7 +38,7 @@
       "whether he can say 'I do not know'"
     ],
     "what_he_believes_he_weighs": "decisiveness",
-    "his_error": "believes Lloyd was sent by Command to observe him — people/picard.md"
+    "his_error": "1655: believed Lloyd was sent by Command to observe him. Asked him straight; got a plain no and 'I didn't know you'd requested Commander Marchetti'. Told Lloyd what he had been reading it as, and that he would stop when he had a better reading. Weight: low now. He has separated Personnel's speed from the man, aloud."
   },
   "unnamed_until_they_speak": [
     "the transporter chief, TR3",
@@ -97,7 +97,7 @@
         "a": "Prakash aboard with a medical tricorder. Costs the boarding and her insistence on coming.",
         "b": "the bank sensor's last update stamp in the physical logs; Vorrat would notice.",
         "c": "the bank's power draw is what a bank compensating for failed cells draws; Data can say so from a close scan.",
-        "note": "At 2,000 km the bank reads cold and held (about 80 K). Viability is not visible from outside; Prakash said 'held' and meant the temperature. The 40% is inside."
+        "note": "At 1,000 km (1656) Prakash resolved the cold section: racks, thousands of fist-sized containers at ~80 K — a bank, not bodies, not a ward. Viability still not visible from outside; the 40% is inside. She reported to the XO first, as told."
       },
       "the_eldests_decision": {
         "a": "OPENED 1552 — Ossane asked it on the open channel; it answered: the garden first, then the ship, the cold kept last. The Cassini heard. Nobody aboard the Cassini yet knows 'the ship' means the model, or what 'the Sent sleep' means for a recording.",
@@ -258,7 +258,6 @@
       "Picard's amendment to Command logged 1600: closing to 2,000 km to assess; no boarding, no transfer",
       "the ark's aperture array tracked the Cassini through the approach — passive; Kask logged it; no criterion met",
       "Prakash's finding at 1612 stands on the bridge: nobody warm and breathing; the core, the bank, the strip",
-      "the bridge's picture: minds in the core (right), bodies in the cold (wrong, and Prakash's numbers already say so); 'recording' unsaid",
       "at 1,000 km since 1619, shields up, matched; Vorrat's assessment done 1629",
       "Data can now hear the completed form when a speaker fixes it; he has not yet said what it would mean if applied to the first hail",
       "the schedule is on the record: eight days to the board, a day behind",
@@ -268,9 +267,12 @@
       "the Cassini has told the Sending its count (stardate 39739; the Federation year rendered as 'the year of our home') and that the calendars are not correlated",
       "the tenders are visible from 1,000 km at magnification: dozens, all along the ring, all moving the same way, over dark beds; the bridge has seen them; nobody has said what it means",
       "ch'Rasseth's number due about 1726: 3,100 years, give or take a century; he will give the error bars",
-      "the bridge has heard 'thousands' at 1646; Picard has said 'Thank you, Lieutenant' and nothing else"
+      "the bridge has heard 'thousands' at 1646; Picard has said 'Thank you, Lieutenant' and nothing else",
+      "1655: the Eldest asked for light again, same words; Data reported it to the ready room",
+      "1656: Prakash's bank finding stands: thousands of fist-sized containers at 80 K; not bodies; not a ward",
+      "Picard has told Lloyd what he had been reading Personnel's speed as; the file is done; twenty-eight minutes to the number"
     ],
-    "bridge_working_picture": "1615: Lloyd's hypothesis on the bridge — the speakers are bodies in suspension with consciousness supported by the core; 'sleep' is loss of that support while refrigeration continues. Half right: the minds are in the core; the bodies are not in the cold. Prakash's numbers have already cut the 'bodies in suspension' half: the held section is a few hundred cubic metres — a cupboard, not a thousand people; the three big compartments with rows are cold as the hull. Data has said aloud that a mind kept by a machine is a description the Federation has one officer for. Nobody has said 'recording'.",
+    "bridge_working_picture": "1656: bodies-in-the-cold is dead: the cold section is a bank of thousands of small containers. Nobody warm. The speakers are somewhere else; the core is the only warm, working thing. 'Recording' still unsaid. Prakash has asked someone to think about what talking for 'thousands' of years does to a person.",
     "the_eldests_rules": {
       "see": "people/eldest.md",
       "the_year": "The Eldest does not compute the year. It plays it: a stored answer, 'It is the fifty-first year of the Sending,' the same waveform every time, for eleven subjective years. Hollen has listened to it not counting for eleven years; that is what 'ask it again' means. Asked twice, it answers identically, and a receiver that noticed the hail was a loop notices this too. It hands the outsiders the doubt, not the number."
