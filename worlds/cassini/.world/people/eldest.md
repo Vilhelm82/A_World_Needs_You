@@ -31,3 +31,4 @@ Ask for a world. If refused, ask for power. Shut the garden when the reactor's n
 ## Current (episode 1)
 - 1442: sent the sky from home at launch, at the navigator's request, as a raster image on the radio band. Its rules govern what it tells passengers; it has no rule about what outsiders may learn. It did not consider that the image dates itself.
 - 1449: spoke to the outsiders directly for the first time, in its own voice, after the navigator's answer: "We are the Eldest of the Sending. You who go to see: do you know a world that is empty and warm? The Sent must rest." Its first ask. It did not consult the Sent.
+- 1551–1553: answered the sequence question with the destination kept ('until the Hearth-that-follows'); answered the navigator's direct question truthfully and minimally, as built; asked again for light. It does not regard telling strangers its shutdown order as a cost. It regards it as the shortest path to light.

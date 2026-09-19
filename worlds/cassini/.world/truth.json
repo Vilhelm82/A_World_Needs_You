@@ -97,7 +97,7 @@
         "c": "the bank's power draw is what a bank compensating for failed cells draws; Data can say so from a close scan."
       },
       "the_eldests_decision": {
-        "a": "a passenger asks it what it will shut down first; it must answer.",
+        "a": "OPENED 1552 — Ossane asked it on the open channel; it answered: the garden first, then the ship, the cold kept last. The Cassini heard. Nobody aboard the Cassini yet knows 'the ship' means the model, or what 'the Sent sleep' means for a recording.",
         "b": "the power priority table in the physical logs; Vorrat reads it.",
         "c": "the sign: the garden ring goes dark. The Eldest tells the Sent a season has closed. The aware know there are no seasons."
       },
@@ -200,18 +200,19 @@
         "stages": [
           "Ossane's numbers do not work",
           "she has asked the outsiders how far — 1433, first exchange",
+          "1552: on the open channel, in the outsiders' hearing, Ossane asked the Eldest directly what stops first when the light is gone. It answered: the garden, then the ship, the cold kept last; 'the ship stops' means 'the Sent sleep'. She takes 'sleep' for cryo. Hollen would know otherwise. She has not asked him.",
           "she asks the Eldest where, and gets a truth she cannot use without charts",
           "she gets charts, or does not",
           "she knows",
           "she tells, or does not"
         ],
-        "stage": 1
+        "stage": 2
       }
     },
     "movers": {
-      "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503; unanswered. ASKED AGAIN 1546, same words. Next: ask again at intervals; when the Cassini closes, it will see the light come nearer and say so to the Sent as hope; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
+      "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. Next: when the Cassini closes, tell the Sent the light comes nearer; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
       "hollen": "reach the away team at a maintenance intercom the moment anyone is aboard; ask them to stop the Eldest; if refused, try to tell the unknowing through the intercoms himself",
-      "ossane": "ask the Cassini where it thinks the Sending is; ask for charts; work it out",
+      "ossane": "1552: asked the Eldest, in front of the strangers, what stops first when the light is gone; heard the order. Next: ask Hollen what 'the Sent sleep' means, because he keeps the vigil and she has begun to suspect the vigil knows something; she resents having to ask.",
       "picard": "1547: approved the staged approach to 2,000 km on the XO's conditions; 1,000 km is his own decision, to be made at 2,000 with Prakash's numbers in front of him. Approved the clarifying question, in sequence, once. Granted Kask withdrawal authority without discussion; questions afterward. Transfer and boarding remain his. The approach is the XO's to run; Picard in the chair. Will amend his 1500 report: 'closing to assess'. Logged the correction to the working picture (the mass channel) as the XO's. Next: sit in the chair and watch how the XO runs it.",
       "kask": "argue against boarding; then argue for arms; then go",
       "vorrat": "refuse to link power until she knows what the ark's reactor is; then do it well and complain",
@@ -246,9 +247,10 @@
       "Prakash wants a ten-minute hold at 2,000 km, not a pass; will say 'ward' if it is one",
       "Data: the question to the Sent should be asked as a sequence — the language marks sequence with a particle the computer has with confidence — so the tense cannot spoil it; every exchange costs them",
       "the approach: Vorrat's fifteen minutes on the deflector (to ~1605); Kask's criteria to the bridge in writing; then the XO runs the approach to 2,000 km with shields up; Prakash's ten-minute hold; Picard decides 1,000 there",
-      "the question to the Sent — 'First, you receive the light. What happens next to the Sent? What happens after that?' — approved, to be sent once, in sequence, by Data; the Eldest will answer to outsiders without rules; Ossane will hear the question and the answer",
-      "the Eldest asked again for light at 1546, same words; the bridge reported it",
-      "Picard's amendment to Command at ~1600: closing to assess"
+      "Picard's amendment to Command at ~1600: closing to assess",
+      "the Cassini has heard the Eldest's shutdown order: garden, then 'the ship', the cold kept last; and that 'the ship stops' means 'the Sent sleep'. Data has 'garden' with confidence, with the classifier for grown things. Nobody has said aloud that the lit ring is the garden.",
+      "Kask reads the volunteered shutdown order as a thing you do not tell strangers unless you want something; Prakash will want 'the cold is kept last'",
+      "the deflector retune completes at ~1605; the approach to 2,000 km follows on the XO's order, Picard in the chair"
     ]
   },
   "serial_in_motion": [
