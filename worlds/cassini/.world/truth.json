@@ -136,13 +136,13 @@
       "keep_them_and_find_the_others": {
         "shape": "A power link buys the ark a month for a week of the Cassini's reactor; the viable embryos held in the Cassini's stasis units; the science team takes it from there; the archive's plans point at the second and third Sendings.",
         "cost": "The shakedown fails its schedule outright; the board; Picard's report justifies a week of power to a derelict; the telling is not settled, only given time.",
-        "distance": "nearer by a step — a power link has been conceived at the table as bounded assistance (Vorrat: a cable across a lock and a converter, a week of ours for a month of theirs, assessed at 1,000 km first); the other Sendings still unknown to anyone aboard",
+        "distance": "nearer — the assessment that prices a link is ordered; the question that would reveal what light does to the Sent is approved; the others still unknown to anyone aboard",
         "nobody_proposes": true
       },
       "leave": {
         "shape": "Hold contact to the minimum, mark the position, leave the ark to the science team in nine days.",
         "cost": "The garden goes dark in that time; the model slows; the bank fails further; the Sent's last conversation is with the Cassini; the report says 'we left'.",
-        "distance": "near, and nearer — Picard intends to hold, limit contact and wait for Command"
+        "distance": "farther — the ship will close, not hold; Picard has reserved 1,000 km to himself"
       }
     },
     "pressures": {
@@ -166,6 +166,7 @@
         "stages": [
           "report unsent",
           "report sent 1500; Command's reply not before ~2100 tomorrow (30 h each way)",
+          "amendment ~1600: 'closing to assess'; Command will read both together",
           "reply: hold contact to minimum; first-contact team dispatched, nine days",
           "second reply, if boarded first: a career question for Picard and the XO"
         ],
@@ -188,7 +189,8 @@
         "stages": [
           "everyone at their station",
           "Kask's and Vorrat's arguments (closer pass? arm anything? link anything?) come to the table at 1530; the XO chairs",
-          "1540: the XO put a shape to the table — staged approach to 1,000 km, shields up, no boarding or transfer, Prakash at 2,000, Vorrat at 1,000, Kask's withdrawal criteria first, a question to the Sent about what light does to them, transfer a separate decision for the captain. Vorrat stopped arguing. Kask asked for one thing: that 'my call' be backed in front of the captain. Prakash flagged that 'ward' will make 'no boarding' a harder sentence."
+          "1540: the XO put a shape to the table — staged approach to 1,000 km, shields up, no boarding or transfer, Prakash at 2,000, Vorrat at 1,000, Kask's withdrawal criteria first, a question to the Sent about what light does to them, transfer a separate decision for the captain. Vorrat stopped arguing. Kask asked for one thing: that 'my call' be backed in front of the captain. Prakash flagged that 'ward' will make 'no boarding' a harder sentence.",
+          "1547: Picard heard the XO's shape and made it so, with 1,000 km reserved. Vorrat unarguing; Kask granted her call; Prakash with her hold; Data with his question. The split did not happen. Picard noted that."
         ],
         "stage": 3
       },
@@ -207,10 +209,10 @@
       }
     },
     "movers": {
-      "the_eldest": "ASKED for a world 1449; REFUSED by Picard 1502 ('this ship has no world to give'). ASKED for light 1503: 'Your ship has light. Give the Sending light and the Sent will rest where they are.' Next: if unanswered, ask again at intervals; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
+      "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503; unanswered. ASKED AGAIN 1546, same words. Next: ask again at intervals; when the Cassini closes, it will see the light come nearer and say so to the Sent as hope; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
       "hollen": "reach the away team at a maintenance intercom the moment anyone is aboard; ask them to stop the Eldest; if refused, try to tell the unknowing through the intercoms himself",
       "ossane": "ask the Cassini where it thinks the Sending is; ask for charts; work it out",
-      "picard": "report at 1500: the facts, the exchanges, intent to hold station with limited contact, complete the sky comparison, no commitments, request guidance; the Directive question stated open; 'I do not know what that ship is.' Then answer the Eldest himself: this ship has no world to give. Staff in the observation lounge at 1530 — the XO hears them first. Continue to do this right.",
+      "picard": "1547: approved the staged approach to 2,000 km on the XO's conditions; 1,000 km is his own decision, to be made at 2,000 with Prakash's numbers in front of him. Approved the clarifying question, in sequence, once. Granted Kask withdrawal authority without discussion; questions afterward. Transfer and boarding remain his. The approach is the XO's to run; Picard in the chair. Will amend his 1500 report: 'closing to assess'. Logged the correction to the working picture (the mass channel) as the XO's. Next: sit in the chair and watch how the XO runs it.",
       "kask": "argue against boarding; then argue for arms; then go",
       "vorrat": "refuse to link power until she knows what the ark's reactor is; then do it well and complain",
       "prakash": "ask for a closer biosensor pass; find no life; find the bank",
@@ -239,12 +241,14 @@
       "Ossane heard the Eldest ask strangers for a world, and then for light, without the Sent; in the model she asked it why. It said: the Sent must rest. First crack between navigator and Eldest.",
       "Vorrat must file a yard report to the Shakedown Office for the departure from itinerary; she wants a name for it and blames the XO for the day",
       "astrometrics (ch'Rasseth) has the sky; says four hours",
-      "the table has a shape for bounded assistance: closer (1,000 km), assess the reactor and the bus, a hard link with an isolation stage, a team of three; nobody has decided; execution is the captain's",
       "Kask's withdrawal criteria: any emission from the ark off the radio band; any change in its attitude or velocity; any active scan of the Cassini; shields below ninety percent for any reason; her call, without discussion. She wants that last backed in front of Picard.",
       "Vorrat needs fifteen minutes to re-tune the deflector for the Shallows' density before closing; the pod's mass channel will read lighter still at 1,000 km",
       "Prakash wants a ten-minute hold at 2,000 km, not a pass; will say 'ward' if it is one",
       "Data: the question to the Sent should be asked as a sequence — the language marks sequence with a particle the computer has with confidence — so the tense cannot spoil it; every exchange costs them",
-      "Picard entered the lounge at 1541 to hear the recommendation"
+      "the approach: Vorrat's fifteen minutes on the deflector (to ~1605); Kask's criteria to the bridge in writing; then the XO runs the approach to 2,000 km with shields up; Prakash's ten-minute hold; Picard decides 1,000 there",
+      "the question to the Sent — 'First, you receive the light. What happens next to the Sent? What happens after that?' — approved, to be sent once, in sequence, by Data; the Eldest will answer to outsiders without rules; Ossane will hear the question and the answer",
+      "the Eldest asked again for light at 1546, same words; the bridge reported it",
+      "Picard's amendment to Command at ~1600: closing to assess"
     ]
   },
   "serial_in_motion": [
