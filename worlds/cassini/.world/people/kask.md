@@ -51,3 +51,4 @@ Candour freely. Trust very slowly, and she says when it moves ("That's the first
 - 1830: sat with Vorrat and agreed the scope line by line. Exact. Vorrat hated it and signed it. Kill switch at tactical under her hand at 1900.
 - 1900: hand on the switch. Said "Switch is mine" and nothing else. Criteria unmet. Watching the ark's emissions, not the screen.
 - 1907: "It's taking the light and it's closed the channel. That's a breach, sir. My switch is under my hand and I'm not touching it until I'm told, because none of my criteria say 'liar'." Trust in the XO: holding.
+- 1909: "It just told us the price, sir." Hand still on the switch. Nineteen minutes.
