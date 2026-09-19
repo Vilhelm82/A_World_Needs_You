@@ -31,3 +31,6 @@ See her third line.
 
 ## Regard — her economy
 Candour freely. Trust slowly. Praise never; a question instead. Anger freely, sharp, short. Warmth: she will say your name.
+
+## Current (episode 1)
+- 1433: answered the outsiders' question herself; the Eldest relayed both ways. Told them the Hearth-that-follows was chosen to be empty. Asked how far. Has not yet asked for charts; will.
