@@ -1,6 +1,6 @@
 # Card
 
-**Where / when.** USS Cassini, holding station 0.7 ly inside the Orrin Shallows, 40,000 km off the Sending. Stardate 39739.3. Ship's time 1535. Shakedown day 13. Staff at 1530.
+**Where / when.** USS Cassini, holding station 0.7 ly inside the Orrin Shallows, 40,000 km off the Sending. Stardate 39739.3. Ship's time 1537. Shakedown day 13. Staff at 1530.
 
 **Scene.** Observation lounge, aft of the bridge: the long table, aft windows (stars, no ark). Vorrat, seated now (has her report's name; wants her run back — four of six days need the ship moving; will type the ark's reactor at 1,000 km; watching whether he reads). Prakash, briefed by Lloyd (wants two thousand km with her own array; ward/morgue/where-are-they). Kask, back to the wall (shields at 1,000 km, no transporters under shields, three in suits, isolation stage; wants backing once; trust unmoved). Data, just arrived (the word 'light'; the sky at astrometrics, four hours from 1457; wants to be asked). Picard after; has the chair.
 
