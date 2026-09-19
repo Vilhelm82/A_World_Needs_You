@@ -27,3 +27,6 @@ Knows: the ark's condition — reactor at end of life; power priority already se
 
 ## Next step if nobody stops it
 Ask for a world. If refused, ask for power. Shut the garden when the reactor's next stage comes; tell the Sent a season has closed. Then slow the model.
+
+## Current (episode 1)
+- 1442: sent the sky from home at launch, at the navigator's request, as a raster image on the radio band. Its rules govern what it tells passengers; it has no rule about what outsiders may learn. It did not consider that the image dates itself.

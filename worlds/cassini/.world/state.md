@@ -1,12 +1,12 @@
 # Card
 
-**Where / when.** USS Cassini (Nebula-class, NCC-60349), holding station 0.7 ly inside the Orrin Shallows, 40,000 km off an unknown vessel. Stardate 39739.2. Ship's time 1438. Shakedown day 13.
+**Where / when.** USS Cassini (Nebula-class, NCC-60349), holding station 0.7 ly inside the Orrin Shallows, 40,000 km off an unknown vessel. Stardate 39739.2. Ship's time 1444. Shakedown day 13.
 
-**Scene.** Bridge, 1438. Picard standing centre (wants to know what he is talking to before he answers it; believes Lloyd was sent; will ask 'what do you know' before 'what do you think'). Data at ops (wants to be asked). Kask at tactical (wants nobody near it; watching Picard). Vint at conn (wants to take her closer). Viewscreen: the vessel at magnification, ring lit. Relief officers at science/engineering stations: unnamed until they speak.
+**Scene.** Bridge, 1444. Picard standing centre (wants to know what he is talking to before he answers it; believes Lloyd was sent; will ask 'what do you know' before 'what do you think'). Data at ops (wants to be asked). Kask at tactical (wants nobody near it; watching Picard). Vint at conn (wants to take her closer). Viewscreen: the vessel at magnification, ring lit. Relief officers at science/engineering stations: unnamed until they speak.
 
 **Elsewhere.** Engineering: Vorrat (wants her day back). Sickbay: Prakash (wants a closer biosensor pass).
 
-**Pressures live.** First exchange done at 1433 (ninety seconds); the Sent know the light understands them and is not of their star; they asked how far. Translator 60%, tense unresolved; a light-giving noun class resolved. Cassini unidentified. Reactor: stage 1, the ring lit. Starfleet: report drafted, unsent. Shakedown: the day up is spent. Crew: at stations. The Sent's knowledge: Ossane's numbers do not work.
+**Pressures live.** Two exchanges done (1433, 1442). The Sent know: a ship, its Sent aboard, those-who-go-to-see, not-harm, and that we do not know their star. They asked where we are from (unanswered). A sky image from the Eldest is assembling at ops, isolated; astrometrics not yet told; matching takes hours. Translator 60%, tense unresolved. Cassini unnamed. Picard's report due 1500. Reactor: stage 1, the ring lit. Starfleet: report drafted, unsent. Shakedown: the day up is spent. Crew: at stations. The Sent's knowledge: Ossane's numbers do not work.
 
 **Lloyd carries.** Posting orders (chronicle/001). Shakedown itinerary (chronicle/002). Rank Lt. Cmdr.; billet XO. Duffel on deck 8. Combadge.
 

@@ -20,7 +20,8 @@
       "Subspace to Starfleet Command from the Shallows lags about 30 h each way through the boundary relay.",
       "Lloyd's past is the person's to state. Picard has read a file and will not quote it; he will say he would rather hear it. The world never invents Lloyd's history.",
       "Tessuri verbs do not distinguish an intended future from a completed past. The translator renders both until Data resolves it from usage.",
-      "Tessuri nouns carry classifiers. The computer has resolved one with confidence: things that give light. 'Hearth', 'Hearth-that-follows' and 'light' in the hail share it. That is why Data called it 'the name of the star'; it is equally consistent with a fire. The computer has no verb it is confident renders 'recognise'; it uses 'know'."
+      "Tessuri nouns carry classifiers. The computer has resolved one with confidence: things that give light. 'Hearth', 'Hearth-that-follows' and 'light' in the hail share it. That is why Data called it 'the name of the star'; it is equally consistent with a fire. The computer has no verb it is confident renders 'recognise'; it uses 'know'.",
+      "Tessuri has no separate word for 'crew': the people aboard a ship are its Sent. 'Explorers' renders as 'those who go to see'; 'peaceful' as 'not-harm'."
     ],
     "discarded": "everything after 2362; the Enterprise-D; every canon plot"
   },
@@ -81,10 +82,11 @@
         "a": "give Ossane the Cassini's charts; a navigator, she finds three thousand years in hours. Costs the Prime Directive question and her.",
         "b": "the physical logs, out of order. Costs hours aboard a dead ark with Data reading.",
         "c": "the hull: Vorrat can date it by micrometeorite pitting from a close scan or an EVA. She will complain and do it.",
-        "wall": "asking the Eldest 'how long since launch' gets the hope clause. Hollen knows this door is painted on."
+        "wall": "asking the Eldest 'how long since launch' gets the hope clause. Hollen knows this door is painted on.",
+        "d": "the sky image the Eldest sent at 1442 is the sky from home at launch; the stars have moved since. Astrometrics can date it by proper motion to within about a century. Costs hours of astrometrics time and someone thinking to ask. Nobody has."
       },
       "home_is_gone": {
-        "a": "astrometrics: from the Tessuri's year-40 sky, Data or Vint can find their star; the catalogue shows a remnant about 2,400 years old. Costs Data's time and the knowing.",
+        "a": "astrometrics: the Eldest's sky image (received 1442) gives the Tessuri home sky at launch; matched against the catalogue it locates the Hearth, and the catalogue shows a remnant about 2,400 years old at that position. Costs hours and the knowing.",
         "b": "the Eldest's archive holds the light change. It will trade it to the Cassini's captain for a world on offer. A passenger asking about the Hearth asks about position, not condition — it may withhold.",
         "c": "Ossane's calendar: the long night has a date; Data can convert it. Costs asking her for a book nobody reads."
       },
@@ -222,9 +224,12 @@
       "the Hokule'a has turned for SB129; Lloyd's duffel is on deck 8",
       "Data's translator work: tense",
       "Picard's belief about Lloyd; Data's belief about Picard",
-      "Ossane has asked the Cassini how far the Hearth-that-follows is from it; she will ask for charts next",
       "the first exchange took ninety seconds; the model is at full speed; each such exchange costs the reactor",
-      "the Cassini has not identified itself; the Sent know only 'a ship' (the Eldest's word) that understands them"
+      "the Cassini has not identified itself; the Sent know only 'a ship' (the Eldest's word) that understands them",
+      "the Eldest's sky image is assembling in an isolated buffer at ops; astrometrics (ch'Rasseth) has not been told; matching it takes hours",
+      "Ossane has asked where the Cassini's Sent are from; unanswered",
+      "the Sent have been told the light is a ship with Sent aboard who go to see and do not harm; the Cassini is still unnamed",
+      "Picard intends to send his report at 1500"
     ]
   },
   "serial_in_motion": [
