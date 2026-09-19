@@ -144,3 +144,9 @@ Append-only. Never cleared.
 - SAID — Data: the second answer is the first answer — not similar; the same waveform, to the limit of the receivers, as the hail was at 1340 (true). He does not say what it means.
 - SAID — Ossane, 1636, on the band, to the Cassini: "You have clocks. What year is it for you?" (true; her question.)
 - MOVED — 1636: silence after her question. Hollen has not spoken again. The windows are lit.
+- DID — to Picard: supply our time reference, explicitly stating the calendars have not been correlated; neither endorse the Eldest's chronology nor suggest ours disproves it. → Picard: "In those words." Sent. Ossane asked for the correlation by the sky. The Eldest closed the Sent's side of the channel. Distance: tell_them — channel closed, the year now the Cassini's to compute and keep or give; keep_them nearer and sharper; leave farther.
+- SAID — Picard: "In those words, Mr. Data." (true.) Data: the count will arrive as a number in a unit they will take for their own year; he will send the number, the unit as 'the year of our home', and that the two have not been set against each other (true).
+- TOLD — to the Sending, 1640: our count is thirty-nine thousand seven hundred thirty-nine in our reckoning, in the year of our home that we call 2362; our calendars and yours have not been set against each other; we do not say which is right.
+- SAID — Ossane, 1641: "Then set them. You hold our sky. Stars move. Tell me how far ours have moved." (true; her request.)
+- SAID — the Eldest, 1641: "The Sent are tired. The Sent will speak again when the Sending has light." (true to it; the channel to the Sent closed.) Then silence.
+- SAID — Data: the Sent's side of the channel has been closed at their end; the Eldest's carrier remains; it will answer for itself (true). Kask: "It just shut her up, sir." (true as read.)

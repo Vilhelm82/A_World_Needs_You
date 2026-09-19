@@ -35,3 +35,4 @@ Candour freely, brutal. Trust once, fully, and never again if broken. Praise nev
 ## Current (episode 1)
 - ~1600: Ossane came to his room with the shutdown order and 'the Sent sleep'. He told her what sleep is for them. She said he was mad and did not leave. He watched her not leave. The strangers are at two thousand and asked the right question in the right order; he will ask the Eldest for the channel.
 - 1631: on the band, for the first time in eleven years. Said 'were'. Gave them the question. Did not say what they are; the unknowing were listening. Now waits, and winds the clock.
+- 1641: heard the strangers say 'not correlated' and Ossane ask for the stars. Heard the Eldest close the channel. Said to her, in the model: "Now you know what it does when you count." First thing he has said to her since the doorway.
