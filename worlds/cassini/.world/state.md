@@ -1,8 +1,8 @@
 # Card
 
-**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up. Stardate 39739.4. Ship's time 1805. Shakedown day 13.
+**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up. Stardate 39739.4. Ship's time 1807. Shakedown day 13.
 
-**Scene.** Bridge, 1805. Picard in the chair, silent, looking at the XO. Lloyd at the XO's station. Vorrat on comm (tickled a collector for two seconds; calls it a scan; the bus took it). Kask at tactical ('that was an act'; 'does my word mean anything on this bridge, or not?'). Data at ops (logging). Vint at conn, past his shift. The band: the Eldest — 'The Sending saw light. Give the Sending light.'
+**Scene.** Bridge, 1805. Picard in the chair (made the XO's order his own; 1830 in the lounge for the scope; the decision about light is his and near). Lloyd at the XO's station. Vorrat on comm (ceased; twelve kilojoules; a transient; 'agreed with Tactical, fine'). Kask at tactical (not withdrawing; 'the first time today I've believed you, sir'). Data at ops (logging). Vint at conn, past his shift. The band: the Eldest — 'The Sending saw light. Give the Sending light.'
 
 **Elsewhere.** Engineering: Vorrat (collectors confirmed; converter unbuilt; will build it tonight regardless). Sickbay: Prakash (will ask Data tonight). Astrometrics: ch'Rasseth logging the markings. The Sending: the Eldest asking at every interval now; Ossane at the windows; Hollen waiting.
 
@@ -14,6 +14,6 @@
 
 # Carry
 
-**Rest point passed.** 1805: the split is on the bridge; not a place to stand down.
+**Rest point.** 1807: the split closed. 1830 is the next thing. Standing down here costs nothing.
 
 Episode 1, *The Sending*, open. Nothing decided by Lloyd yet. The world as truth.json has it at build; distance per resolution as written there. Every standing person's belief about Lloyd is their file's opening line. The transporter chief has not spoken.
