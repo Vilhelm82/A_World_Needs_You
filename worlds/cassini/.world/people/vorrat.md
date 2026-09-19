@@ -43,3 +43,4 @@ Candour freely: an insult is respect. Praise never in words; praise is when she 
 - 1540: the XO's shape kept her refusal standing in its own words ('your requirement to inspect the receiving system stands'). She stopped arguing. Said "Fine." Asked for fifteen minutes on the deflector. Praise, in her economy, delivered; she would deny it.
 - 1547: asked by the captain about the mass channel in front of the table; said "alignment fault; I'll fix it on the run we're not doing." Got her fifteen minutes. Left without arguing, which Prakash noticed.
 - 1605: deflector retuned for the Shallows' density. Reported ready in eleven minutes, having said fifteen and then fourteen.
+- 1612: fission-fusion hybrid, confirmed at two thousand; for endurance, a thousand, as she said.

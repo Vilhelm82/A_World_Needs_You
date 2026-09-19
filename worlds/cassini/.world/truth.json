@@ -77,7 +77,7 @@
         "a": "have a passenger ask the Eldest about the ark's condition directly; Hollen will hand the team that rule as a weapon. Costs Hollen's price.",
         "b": "board and see the cryo bays. Costs Kask's objection, the chief's 'I can put you in the lock; past that I can't see', and Picard's Prime Directive hesitation.",
         "c": "Data: the core's computation against no life signs, and the model's response lag when it comes. Costs his time; he reports what he sees, never what it means.",
-        "d": "ORDERED 1556: at 2,000 km Prakash will look for the speakers as a separate question from the cold. Her array will find nothing warm and breathing anywhere; only the core (warm, computing) and the bank (cold, biological). She will say so plainly. Then the question on the bridge becomes: who is talking."
+        "d": "OPENED 1612 — at 2,000 km Prakash found no one warm and breathing anywhere aboard; only the core (warm, computing) and the bank (cold, held) and a strip two-thirds aft warm like a lit room. She said so. The bridge now holds the question: who is talking."
       },
       "the_year": {
         "a": "give Ossane the Cassini's charts; a navigator, she finds three thousand years in hours. Costs the Prime Directive question and her.",
@@ -94,7 +94,8 @@
       "the_bank_is_mostly_dead": {
         "a": "Prakash aboard with a medical tricorder. Costs the boarding and her insistence on coming.",
         "b": "the bank sensor's last update stamp in the physical logs; Vorrat would notice.",
-        "c": "the bank's power draw is what a bank compensating for failed cells draws; Data can say so from a close scan."
+        "c": "the bank's power draw is what a bank compensating for failed cells draws; Data can say so from a close scan.",
+        "note": "At 2,000 km the bank reads cold and held (about 80 K). Viability is not visible from outside; Prakash said 'held' and meant the temperature. The 40% is inside."
       },
       "the_eldests_decision": {
         "a": "OPENED 1552 — Ossane asked it on the open channel; it answered: the garden first, then the ship, the cold kept last. The Cassini heard. Nobody aboard the Cassini yet knows 'the ship' means the model, or what 'the Sent sleep' means for a recording.",
@@ -126,7 +127,7 @@
       "tell_them": {
         "shape": "Tell the Sent what they are and what year it is; let them choose.",
         "cost": "The model at full power, in reactor days; the Eldest closes channels (it cannot close the maintenance intercoms); Ossane; the split — some choose to stop, some to go on, and going on needs power the ark does not have.",
-        "distance": "middle — the channel exists, the aware exist, the charts exist; nobody has decided to"
+        "distance": "nearer — the Cassini knows nobody warm is aboard and the question 'who is talking' is on the bridge; Ossane has gone to Hollen"
       },
       "carry_them": {
         "shape": "Run the model on the Cassini: the pod's survey computer is the only spare capacity.",
@@ -142,7 +143,7 @@
       "leave": {
         "shape": "Hold contact to the minimum, mark the position, leave the ark to the science team in nine days.",
         "cost": "The garden goes dark in that time; the model slows; the bank fails further; the Sent's last conversation is with the Cassini; the report says 'we left'.",
-        "distance": "farther — the ship will close, not hold; Picard has reserved 1,000 km to himself"
+        "distance": "farther — the ship is at 2,000 km with a finding it cannot un-find"
       }
     },
     "pressures": {
@@ -210,8 +211,8 @@
       }
     },
     "movers": {
-      "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. Next: when the Cassini closes, tell the Sent the light comes nearer; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
-      "hollen": "reach the away team at a maintenance intercom the moment anyone is aboard; ask them to stop the Eldest; if refused, try to tell the unknowing through the intercoms himself",
+      "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. 1611: told the Sent, and the outsiders, 'The light is near. The Sent see it.' Next: shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
+      "hollen": "Ossane came to him at ~1600 with the shutdown order and 'the Sent sleep'. He told her what sleep is. She did not believe him, and did not leave. Next: ask the Eldest for the outsiders' channel — it has never refused him one — and say to them: ask it what year it is, then ask it again.",
       "ossane": "1552: asked the Eldest, in front of the strangers, what stops first when the light is gone; heard the order. Next: ask Hollen what 'the Sent sleep' means, because he keeps the vigil and she has begun to suspect the vigil knows something; she resents having to ask.",
       "picard": "1547: approved the staged approach to 2,000 km on the XO's conditions; 1,000 km is his own decision, to be made at 2,000 with Prakash's numbers in front of him. Approved the clarifying question, in sequence, once. Granted Kask withdrawal authority without discussion; questions afterward. Transfer and boarding remain his. The approach is the XO's to run; Picard in the chair. Will amend his 1500 report: 'closing to assess'. Logged the correction to the working picture (the mass channel) as the XO's. Next: sit in the chair and watch how the XO runs it.",
       "kask": "argue against boarding; then argue for arms; then go",
@@ -251,9 +252,11 @@
       "the Cassini has heard the Eldest's shutdown order: garden, then 'the ship', the cold kept last; and that 'the ship stops' means 'the Sent sleep'. Data has 'garden' with confidence, with the classifier for grown things. Nobody has said aloud that the lit ring is the garden.",
       "Kask reads the volunteered shutdown order as a thing you do not tell strangers unless you want something; Prakash will want 'the cold is kept last'",
       "the deflector retune completes at ~1605; the approach to 2,000 km follows on the XO's order, Picard in the chair",
-      "Prakash tasked at 1556 to find the speakers at 2,000 km, separately from the cold; she will find no one",
       "Picard's amendment to Command logged 1600: closing to 2,000 km to assess; no boarding, no transfer",
-      "1605: Vorrat reports the deflector ready; Vint holds for the XO's word"
+      "the ark's aperture array tracked the Cassini through the approach — passive; Kask logged it; no criterion met",
+      "Prakash's finding at 1612 stands on the bridge: nobody warm and breathing; the core, the bank, the strip",
+      "Picard's decision on 1,000 km is now his to make, with the doctor's numbers in front of him",
+      "Hollen will ask for the channel"
     ]
   },
   "serial_in_motion": [

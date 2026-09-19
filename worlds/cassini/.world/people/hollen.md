@@ -31,3 +31,6 @@ Knows: what he is; that the children are dead; that the count is large, not how 
 
 ## Regard — his economy
 Candour freely, brutal. Trust once, fully, and never again if broken. Praise never. Anger cold. Warmth: he will tell you the true count as he knows it. That is his gift.
+
+## Current (episode 1)
+- ~1600: Ossane came to his room with the shutdown order and 'the Sent sleep'. He told her what sleep is for them. She said he was mad and did not leave. He watched her not leave. The strangers are at two thousand and asked the right question in the right order; he will ask the Eldest for the channel.
