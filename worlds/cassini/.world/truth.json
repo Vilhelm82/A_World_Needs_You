@@ -116,7 +116,7 @@
       "resettle": {
         "shape": "Starfleet grants a world; the ark is towed; the Eldest lands and raises the viable embryos with the recorded as teachers.",
         "cost": "The recorded never learn what they are unless told; children raised by the dead; the lie carried into Federation space; the shakedown ends.",
-        "distance": "far, but on the table — the Eldest has asked; needs Starfleet, a tow, and a decision about the lie"
+        "distance": "far, and farther — Picard will say this ship has no world to give"
       },
       "stop": {
         "shape": "End the model, shut the Eldest, take the bank into Federation care.",
@@ -142,7 +142,7 @@
       "leave": {
         "shape": "Hold contact to the minimum, mark the position, leave the ark to the science team in nine days.",
         "cost": "The garden goes dark in that time; the model slows; the bank fails further; the Sent's last conversation is with the Cassini; the report says 'we left'.",
-        "distance": "near — the default; Starfleet's reply will push here"
+        "distance": "near, and nearer — Picard intends to hold, limit contact and wait for Command"
       }
     },
     "pressures": {
@@ -186,10 +186,10 @@
         "moved_by": "each argument the XO does or does not settle",
         "stages": [
           "everyone at their station",
-          "Kask's and Vorrat's arguments (arm the team? link power?) become a split",
+          "Kask's and Vorrat's arguments (closer pass? arm anything? link anything?) come to the table at 1530; the XO chairs",
           "the XO's handling of the split is what Picard watches"
         ],
-        "stage": 0
+        "stage": 1
       },
       "the_sents_knowledge": {
         "process": "how many of the Sent suspect",
@@ -206,10 +206,10 @@
       }
     },
     "movers": {
-      "the_eldest": "ASKED for a world at 1449 (step taken). Next: if refused or unanswered, ask for power — 'light' — from the Cassini; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
+      "the_eldest": "ASKED for a world at 1449. Picard intends to refuse at 1500. Next, on refusal: ask for 'light' — power — from the Cassini; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
       "hollen": "reach the away team at a maintenance intercom the moment anyone is aboard; ask them to stop the Eldest; if refused, try to tell the unknowing through the intercoms himself",
       "ossane": "ask the Cassini where it thinks the Sending is; ask for charts; work it out",
-      "picard": "consult his XO; hold the ship off until he knows what he is talking to; send the report; do this right",
+      "picard": "report at 1500: the facts, the exchanges, intent to hold station with limited contact, complete the sky comparison, no commitments, request guidance; the Directive question stated open; 'I do not know what that ship is.' Then answer the Eldest himself: this ship has no world to give. Staff in the observation lounge at 1530 — the XO hears them first. Continue to do this right.",
       "kask": "argue against boarding; then argue for arms; then go",
       "vorrat": "refuse to link power until she knows what the ark's reactor is; then do it well and complain",
       "prakash": "ask for a closer biosensor pass; find no life; find the bank",
@@ -229,10 +229,13 @@
       "the Cassini has not identified itself; the Sent know only 'a ship' (the Eldest's word) that understands them",
       "the Eldest's sky image is assembling in an isolated buffer at ops; astrometrics (ch'Rasseth) has not been told; matching it takes hours",
       "the Sent have been told the light is a ship with Sent aboard who go to see and do not harm; the Cassini is still unnamed",
-      "Picard intends to send his report at 1500",
       "the Sent's question 'from where' stands unanswered; Picard is not ready to answer it and has said so to Lloyd",
       "the Eldest has spoken to the outsiders directly and asked for a world; the Sent heard it ask — Ossane heard the Eldest speak for them to strangers for the first time",
-      "Picard is taking Lloyd into the ready room before the 1500 report; Data has the bridge"
+      "Picard's report goes at 1500 (Command's reply ~1300 tomorrow at the earliest: hold contact to minimum; first-contact team nine days out)",
+      "Picard will tell the Eldest at 1500 that this ship has no world to give, unless Lloyd talks him out of it in the ready room first",
+      "senior staff in the observation lounge at 1530: Vorrat, Prakash, Kask, Data; Lloyd chairs; Picard comes in after",
+      "the sky image goes to astrometrics (ch'Rasseth) now; hours to match; the proper-motion dating is available to anyone who asks for it",
+      "Lloyd's sentence 'individual captains cannot replace a common directive with personal confidence in their own judgment' has landed on Picard as pointed; Lloyd may not know it did"
     ]
   },
   "serial_in_motion": [
