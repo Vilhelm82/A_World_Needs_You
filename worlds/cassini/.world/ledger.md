@@ -293,3 +293,8 @@ Append-only. Never cleared.
 - SAID — the Eldest, 1934: "The lock will open. The Eldest will give air. The Sent will speak when the Sending has light." (true to it; it will pay for the air.)
 - SAID — Vorrat: that is twenty minutes of its reactor for our lungs; count it (true). Picard: "Counted." (true.)
 - MOVED — 1935: twenty-five minutes to the transporter room.
+- DID — "Aye, sir." To transporter room three. Cut 1936–1958: suit; the team assembles. Scene change.
+- MOVED — 1950: Lt. jg Ekwueme (made in full first) arrives with a medical kit; Kask with a phaser on her hip and a pattern enhancer case; Data without a suit. 1955: Chief Sorvanen (made in full first) at the console; seven wooden birds on the shelf above it and an eighth unfinished.
+- SAID — Kask: type two, stun, holstered; it stays holstered unless she says (true). Ekwueme: "May I?" — checking the seal on Lloyd's suit; "Doctor says first question first. I'll be asking it too." (true.) Sorvanen: enhancer goes first on its own cycle; then the four; "I can put you in the lock. Past that I can't see." Shields down is Tactical's call and he waits for it (true).
+- SAID — Picard, on comm, 1958: "Commander. The Eldest says the lock is open. Lieutenant Kask has the window. Go when the chief says." (true.)
+- MOVED — 1958: enhancer away; it reads back from inside the lock chamber — a lock, a clear cycle. Sorvanen: "Enhancer's standing. Shields on the Lieutenant's call." Kask: "Shields down. Thirty seconds. Now." Sorvanen: "In your own time, sir. Which is now."

@@ -4,7 +4,7 @@
   "built": "2026-09-19",
   "flags_stamped": ".world/flags.json",
   "rules": ".world/rules.md",
-  "people_index": ".world/people/ (standing: picard, data, vorrat, prakash, kask, vint; episode 1: eldest, ossane, hollen; standing, added 1645: chrasseth)",
+  "people_index": ".world/people/ (standing: picard, data, vorrat, prakash, kask, vint; episode 1: eldest, ossane, hollen; standing, added 1645: chrasseth; added 1950–55: ekwueme (nurse), sorvanen (TR3 chief))",
   "places_index": ".world/places/ (cassini, sending, shallows)",
   "clock": {
     "year": 2362,
@@ -45,7 +45,6 @@
     "his_error": "1655: believed Lloyd was sent by Command to observe him. Asked him straight; got a plain no and 'I didn't know you'd requested Commander Marchetti'. Told Lloyd what he had been reading it as, and that he would stop when he had a better reading. Weight: low now. He has separated Personnel's speed from the man, aloud."
   },
   "unnamed_until_they_speak": [
-    "the transporter chief, TR3",
     "bridge relief officers",
     "the master of the Hokule'a"
   ],
@@ -318,7 +317,8 @@
       "1925: Picard's second amendment to Command — boarding to establish direct contact; his responsibility",
       "the team will find: frost, dead corridors, the panels every forty metres (the intercoms), the cryo bays, the garden, the core; Hollen is waiting for a panel to light; the Eldest will speak to Data",
       "rest point 1932–2000: nothing changes before the transporter room",
-      "the Eldest has agreed to admit the team with their own power and no transfer; it will give air at its own cost; it restated its condition on speech"
+      "the Eldest has agreed to admit the team with their own power and no transfer; it will give air at its own cost; it restated its condition on speech",
+      "1958: the team on the pad in TR3; enhancer away first; Kask's thirty-second window on her call; Sorvanen waiting for the word; Picard on comm: the Eldest says the lock is open"
     ],
     "bridge_working_picture": "1706: the Cassini holds: 1,212 aboard at departure = 1,212 cells in the three cold compartments (Data said so); 961 'carried' now; the speakers 'kept' by the ship, the keeping being light; the cold holds 'children', thousands of fist-sized containers at 80 K. 'Recording' unsaid. The shape is nearly visible: 251 fewer than the cells; 'carried' is not 'alive'.",
     "the_eldests_rules": {
@@ -333,7 +333,7 @@
     ],
     "boarding_option": {
       "status": "ORDERED for 2000 by Picard at 1919: thirty minutes to assemble properly — enhancer, suits, the nurse briefed — and for Picard to tell Command before, not after. Transporter room three. Insertion into the forward lock on Kask's thirty-second window. The inner door: ask the Eldest to open it; if it will not, Vorrat says how to open a door without touching anything that carries load.",
-      "team": "Lloyd leading; Kask; Data (in place of Vorrat's tech, at the XO's request); one of Prakash's (a nurse, unnamed until they speak). Picard's order to Data: touch nothing; if the ship speaks to him in a way it has not spoken to the Cassini, tell the Commander at once.",
+      "team": "Lloyd leading; Kask (type-2 phaser, stun, holstered, stays holstered unless she says); Data (no suit); Lt. jg Ekwueme, nurse (medical tricorder, for the bank). Suits for the three who breathe. Pattern enhancer beamed first, on its own cycle. Chief Sorvanen at the console.",
       "insertion": "shields down thirty seconds at 1,000 km for transport into the forward lock — Kask drops her own criterion for the window; a pattern enhancer placed at the lock first; no transport through that hull without it; between windows the team is on its own",
       "the_lock": "The Eldest has agreed to open the lock and give air, on terms it heard: no transfer. Twenty minutes of its reactor for the corridor beyond the lock. Vorrat has counted it aloud; Picard has said 'Counted.'",
       "rules": "suits; nothing touched that carries load; nobody draws power from their bus or induces a field near the core; Prakash's first question first",
