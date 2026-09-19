@@ -1,6 +1,6 @@
 # Card
 
-**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up. Stardate 39739.4. Ship's time 1740. Shakedown day 13. The number is in: 3,100 ± 100; home a remnant; the destination empty. Lloyd sent to eat; called at 1810.
+**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up. Stardate 39739.4. Ship's time 1743. Shakedown day 13. The number is in: 3,100 ± 100; home a remnant; the destination empty. Lloyd sent to eat; called at 1810.
 
 **Scene.** Forward lounge, deck 10, 1731. ch'Rasseth at the near port window with a drink (has been told he may say when the question is wrong; 'then I will'; told the XO about the chart's bearing marks). The two crew have gone. Lloyd eating: chicken parmigiana, a synthehol lager. The Sending in the port windows at 1,000 km: the ring; the bow array pointed this way. The replicator with Vint's failed order on its panel. Lloyd has until 1810.
 
