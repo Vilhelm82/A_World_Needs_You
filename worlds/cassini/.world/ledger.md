@@ -257,3 +257,10 @@ Append-only. Never cleared.
 - SAID — Data: by the passenger's own words at 1442, the ringed star is the Hearth-that-follows; 'Hearth' alone is the point of observation — the remnant (true).
 - SAID — the Eldest, 1905, unprompted: "The Hearth is far. The Sending is fifty-one years from it." (false; steering.)
 - MOVED — 1905: twenty-six minutes of light. Kask's hand on the switch. Ossane silent at the pickup.
+- DID — "Her home, Captain. I confused the two." Corrected: "We have located the Hearth, forty-one light-years from here. The star recorded in your sky is now a stellar remnant. Our records place that change approximately twenty-four hundred of our years ago. We do not know what happened to the people who remained there." → Picard: in their days; send it. The Sent heard it. The Eldest closed the channel. Distance: tell_them — the Hearth told; stop — channel closed; leave far.
+- SAID — Picard: "In their days, Mr. Data. Send it." (true.) Data: about eight hundred and nine thousand of their days (true).
+- TOLD — to the Sending, 1906: "We have located the Hearth, forty-one light-years from here. The star recorded in your sky is now a stellar remnant. Our records place that change about eight hundred and nine thousand of your days ago. We do not know what happened to the people who remained there."
+- MOVED — 1907: silence on the band for 0.8 seconds after the message ended. Then the passenger carrier dropped — before anyone on their side had spoken.
+- SAID — the Eldest, 1907: "The Sent are tired." (false as a reason; the channel closed by it.) Data: the carrier dropped 0.8 seconds after the message; nobody on their side spoke (true).
+- SAID — Kask: it is taking the light and has closed the channel; that is a breach; her switch is under her hand and she is not touching it until told, because none of her criteria say 'liar' (true).
+- SAID — Picard: twenty-four minutes of light and no one to speak to; his instinct is to keep it on — the light is for them, not for it; "Tell me why I'm wrong, Commander." (true.)
