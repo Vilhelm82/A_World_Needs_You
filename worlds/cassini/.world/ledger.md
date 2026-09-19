@@ -32,3 +32,8 @@ Append-only. Never cleared.
 - TOLD — to the Sending, 1431: "How would you know its people?" Nothing else. The Sent now know the light understands them and is not of the Hearth-that-follows.
 - MOVED — 1433: reply, new waveform, the same woman's voice, live. Rendered: "We [know / knew] no people there. The Hearth-that-follows [is / was] to be empty. It [is / was] chosen for that. You [are / were] not of it. The Eldest [says / said] your light is a ship. We have not seen a ship. How far [is / was] it from you?" (true to what was sent; the Eldest relayed; 'Eldest' is the computer's rendering of a title).
 - SAID — Data: this is not the recording; a new waveform (true). 'Eldest' rendered from a kinship-class noun, the computer's confidence moderate (true).
+- DID — observation to the bridge: "you are not of it" suggests they distinguish us from whoever or whatever belongs to this place → Picard asks, in public, whether they did not say it was chosen to be empty; Data gives the construction; Kask her two things; Vint blurts and is named. Distance: unchanged.
+- SAID — Picard: "I heard 'chosen to be empty'." (true to the reply). They have asked how far, and he does not know what they are asking the distance to (true).
+- SAID — Data: the construction rendered 'of' is the one rendered 'from home' in the first hail; origin rather than belonging — "you are not from it" (true).
+- SAID — Kask: they now know we are not from here and that we understand them; two things they did not have five minutes ago (true).
+- SAID — Vint: they have never seen a ship; who goes out in something that size and has never seen a ship (true as quoted; his question). Picard: "Ensign."
