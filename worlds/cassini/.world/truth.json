@@ -77,7 +77,7 @@
         "a": "have a passenger ask the Eldest about the ark's condition directly; Hollen will hand the team that rule as a weapon. Costs Hollen's price.",
         "b": "board and see the cryo bays. Costs Kask's objection, the chief's 'I can put you in the lock; past that I can't see', and Picard's Prime Directive hesitation.",
         "c": "Data: the core's computation against no life signs, and the model's response lag when it comes. Costs his time; he reports what he sees, never what it means.",
-        "d": "Prakash: no life anywhere but the bank. Costs a closer pass the pod cannot give at range."
+        "d": "ORDERED 1556: at 2,000 km Prakash will look for the speakers as a separate question from the cold. Her array will find nothing warm and breathing anywhere; only the core (warm, computing) and the bank (cold, biological). She will say so plainly. Then the question on the bridge becomes: who is talking."
       },
       "the_year": {
         "a": "give Ossane the Cassini's charts; a navigator, she finds three thousand years in hours. Costs the Prime Directive question and her.",
@@ -250,7 +250,10 @@
       "Picard's amendment to Command at ~1600: closing to assess",
       "the Cassini has heard the Eldest's shutdown order: garden, then 'the ship', the cold kept last; and that 'the ship stops' means 'the Sent sleep'. Data has 'garden' with confidence, with the classifier for grown things. Nobody has said aloud that the lit ring is the garden.",
       "Kask reads the volunteered shutdown order as a thing you do not tell strangers unless you want something; Prakash will want 'the cold is kept last'",
-      "the deflector retune completes at ~1605; the approach to 2,000 km follows on the XO's order, Picard in the chair"
+      "the deflector retune completes at ~1605; the approach to 2,000 km follows on the XO's order, Picard in the chair",
+      "Prakash tasked at 1556 to find the speakers at 2,000 km, separately from the cold; she will find no one",
+      "Picard's amendment to Command logged 1600: closing to 2,000 km to assess; no boarding, no transfer",
+      "1605: Vorrat reports the deflector ready; Vint holds for the XO's word"
     ]
   },
   "serial_in_motion": [
