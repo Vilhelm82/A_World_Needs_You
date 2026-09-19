@@ -44,3 +44,4 @@ Candour always. Praise freely and literally. Anger never. Trust by default, revi
 - 1556: noted for the bridge that the Eldest uses two words — 'carried' for the cold, 'sleep' for the Sent — and that they are not the same word.
 - 1612: at 2,000 km described the core's activity: highly regular, massively parallel, the pattern of a single very large process rather than many small ones, rising when the band is open and falling when it is silent. Offered it as a description of the pattern, not its purpose.
 - 1615: said it. Picard said "Noted." Kask looked at him for the first time since 1340. Has not evaluated what he feels about having said it, because he does not, and has noted that he checked.
+- 1626: heard the Commander say that welfare does not require bodies we recognise. Said "Yes, sir," and turned back to ops. Has filed it. 1631: heard Hollen fix the tense. Reported it precisely: his sentence, not hers.
