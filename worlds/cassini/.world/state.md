@@ -1,6 +1,6 @@
 # Card
 
-**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up; deflector on four collector panels at 0.4% since 1900, to ~1931. Stardate 39739.5. Ship's time 1904. Shakedown day 13.
+**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up; deflector on four collector panels at 0.4% since 1900, to ~1931. Stardate 39739.5. Ship's time 1905. Shakedown day 13.
 
 **Scene.** Bridge, 1901. The number told (1,045,000 days). Ossane: 'two thousand six hundred years'; then 'where is the Hearth? Is it in your sky?' Hollen: 'I did not count the years we were not run.' The Eldest over him: fifty-one. Picard in the chair, silent, looking at the XO — the remnant was to be 'the next part'. Data at ops (carrier steady). Kask at tactical (switch is hers). Vint at conn. Vorrat on comm (bus taking it, clean).
 

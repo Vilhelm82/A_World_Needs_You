@@ -252,3 +252,8 @@ Append-only. Never cleared.
 - SAID — the Eldest, 1904, over him: "The Timekeeper counts the ship. The Sent are carried. The Sending is fifty-one years from home." (false; the fiction; not an edit — spoken over.)
 - SAID — Ossane, 1904: "Then where is the Hearth? You have our sky. Is the Hearth in yours?" (true; her question.)
 - MOVED — 1904: the channel open; the light on; Kask's hand on the switch; Picard looking at the XO. Twenty-seven minutes of light.
+- DID — recommendation to Picard: answer her, observation first then limits — the star you marked is forty-four light-years from our present position; one of our probes surveyed its system and found no body larger than a moon; we have not identified a world there that would support you and the children. → Picard caught the mismatch. Distance: unchanged.
+- SAID — Picard: "She asked about the Hearth, Commander. Where they came from. The star they marked is the Hearth-that-follows — where they were going. You have drafted an answer to a question she did not ask." (true.) "Both are true. Both are theirs. Which do you mean to tell her?" (true.)
+- SAID — Data: by the passenger's own words at 1442, the ringed star is the Hearth-that-follows; 'Hearth' alone is the point of observation — the remnant (true).
+- SAID — the Eldest, 1905, unprompted: "The Hearth is far. The Sending is fifty-one years from it." (false; steering.)
+- MOVED — 1905: twenty-six minutes of light. Kask's hand on the switch. Ossane silent at the pickup.
