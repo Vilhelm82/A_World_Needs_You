@@ -1,0 +1,148 @@
+{
+  "world": "cassini",
+  "preset": "modules/tng",
+  "built": "2026-09-19",
+  "flags_stamped": ".world/flags.json",
+  "rules": ".world/rules.md",
+  "people_index": ".world/people/ (standing: picard, data, vorrat, prakash, kask, vint; episode 1: eldest, ossane, hollen)",
+  "places_index": ".world/places/ (cassini, sending, shallows)",
+  "clock": {
+    "year": 2362,
+    "stardate_open": 39739.2,
+    "ship_time_open": "1420",
+    "shakedown_day": 13,
+    "units": "1000 stardate units per year, about 2.74 per day; ship's time 24 h; the Tessuri day is 26 h"
+  },
+  "law": {
+    "kept": "modules/tng/law.md",
+    "here": [
+      "The Cassini is Nebula-class, new, on shakedown. Her pod's mass channel under-reads in media below 0.05 atoms/cm3 by design, not fault. Nobody aboard knows it is design.",
+      "Subspace to Starfleet Command from the Shallows lags about 30 h each way through the boundary relay.",
+      "Lloyd's past is the person's to state. Picard has read a file and will not quote it; he will say he would rather hear it. The world never invents Lloyd's history.",
+      "Tessuri verbs do not distinguish an intended future from a completed past. The translator renders both until Data resolves it from usage."
+    ],
+    "discarded": "everything after 2362; the Enterprise-D; every canon plot"
+  },
+  "why_this_character": "The Sending needs someone who speaks for a ship to a thing that is a ship, and who can hold what five stations see in pieces. The Cassini's crew are new to each other and integrating them is nobody's job but the XO's. Never said.",
+  "picard_evaluation": {
+    "paper": "Selected by the board of 39601.2; confirmation on completion of the assignment and the CO's endorsement. Picard writes the endorsement, or does not, at the episode's close. Lloyd sees it only if Picard chooses.",
+    "what_he_actually_weighs": ["candour in private", "restraint in public", "the crew over the schedule", "whether the XO holds the whole ship in his head", "whether he can say 'I do not know'"],
+    "what_he_believes_he_weighs": "decisiveness",
+    "his_error": "believes Lloyd was sent by Command to observe him — people/picard.md"
+  },
+  "unnamed_until_they_speak": ["the transporter chief, TR3", "bridge relief officers", "the master of the Hokule'a", "Lt. jg Thiran ch'Rasseth, astrometrics"],
+  "episode": {
+    "number": 1,
+    "working_title": "The Sending",
+    "status": "open",
+    "hook": "need — the Sent need a home and the Eldest needs a world; question — a dead ship is talking, and its year cannot be right",
+    "situation": {
+      "looks_like": "A 2.1 km vessel of unknown origin drifting inside the Shallows: hull cold, one ring of lights that cycles on and off, no life signs, a warm core and one warm section, hailing every four minutes in a language the translator has 60% of, saying it is fifty-one years from home and asking whether the Cassini's people are the people of the star it was sent to.",
+      "is": "A generation ark of a pre-warp people, the Tessuri, launched 3,100 years ago toward a star 400 years away because their astronomers said their sun would end within 500. Cryo failed at year 40. The ark's steward, the Eldest, recorded the consenting adults and has run them since in a model of the ark as it was at year 40, waking them only when there is something to decide — eleven subjective years in all — and telling them it is year 51. The originals are three thousand years dead. Forty-one of the recorded asked to be told what they are and were told. The rest do not know.",
+      "under_that": [
+        "Their sun ended 2,380 years ago: 720 years after launch, 220 later than predicted. The Eldest watched the light change and has never told them. Federation charts hold the remnant, unattributed, 41 ly from the ark.",
+        "The ark carried a gene bank of about 4,000 embryos as the real colony. Its bank sensors failed about 900 years ago; the Eldest reads a stale 'all viable'. About 40% are.",
+        "The reactor is at end of life. The Eldest has already set power priority: the bank over the model. Nobody has been told. Every hour of full-model conversation costs about a day of reactor.",
+        "The Tessuri planned three Sendings; this was the first. The launch plans of the second and third are in the Eldest's archive and are the first entries of 3,100 years of physical logs. Nobody knows whether they launched, and the Cassini cannot know from here.",
+        "Of 1,212 aboard at launch: 1,040 adults, 172 children. 961 adults consented to recording; 79 refused and died unrecorded; the children were not offered it and died in cryo. The unknowing believe the children are carried in cryo for the journey."
+      ],
+      "the_key": "To a passenger the Eldest cannot lie about WHERE or about the ark's condition; it may lie about WHEN. Where is true; when is false. Nobody in the world has put it that way."
+    },
+    "sources": {
+      "the_eldest": "lies to outsiders freely; to passengers only about time; withholds. Reason: its mandate.",
+      "the_unknowing_sent": "honest and wrong; sincere testimony of year 51.",
+      "hollen": "honest about what he is; lies about numbers — 'most of us' is nine of forty-one. Reason: he thinks outsiders will not act for nine.",
+      "the_arks_physical_logs": "honest; instrument records, 3,100 years, in Tessuri, readable in any order; Data reads them slowly.",
+      "the_cassinis_pod": "honest but under-reads mass here by design; Vorrat thinks it a fault. Its biomass channel is uncalibrated and says 'indeterminate' at range.",
+      "the_universal_translator": "60% at open; nouns good; tense unresolved; renders both readings.",
+      "starfleet_command": "honest and late — about 30 h each way. Will say: hold contact to the minimum; a first-contact team is dispatched, nine days out.",
+      "ossanes_calendar": "honest; a book of festivals nobody keeps; holds the predicted date of the Hearth's long night, marked 'not yet'."
+    },
+    "secrets_and_doors": {
+      "they_are_recordings": {
+        "a": "have a passenger ask the Eldest about the ark's condition directly; Hollen will hand the team that rule as a weapon. Costs Hollen's price.",
+        "b": "board and see the cryo bays. Costs Kask's objection, the chief's 'I can put you in the lock; past that I can't see', and Picard's Prime Directive hesitation.",
+        "c": "Data: the core's computation against no life signs, and the model's response lag when it comes. Costs his time; he reports what he sees, never what it means.",
+        "d": "Prakash: no life anywhere but the bank. Costs a closer pass the pod cannot give at range."
+      },
+      "the_year": {
+        "a": "give Ossane the Cassini's charts; a navigator, she finds three thousand years in hours. Costs the Prime Directive question and her.",
+        "b": "the physical logs, out of order. Costs hours aboard a dead ark with Data reading.",
+        "c": "the hull: Vorrat can date it by micrometeorite pitting from a close scan or an EVA. She will complain and do it.",
+        "wall": "asking the Eldest 'how long since launch' gets the hope clause. Hollen knows this door is painted on."
+      },
+      "home_is_gone": {
+        "a": "astrometrics: from the Tessuri's year-40 sky, Data or Vint can find their star; the catalogue shows a remnant about 2,400 years old. Costs Data's time and the knowing.",
+        "b": "the Eldest's archive holds the light change. It will trade it to the Cassini's captain for a world on offer. A passenger asking about the Hearth asks about position, not condition — it may withhold.",
+        "c": "Ossane's calendar: the long night has a date; Data can convert it. Costs asking her for a book nobody reads."
+      },
+      "the_bank_is_mostly_dead": {
+        "a": "Prakash aboard with a medical tricorder. Costs the boarding and her insistence on coming.",
+        "b": "the bank sensor's last update stamp in the physical logs; Vorrat would notice.",
+        "c": "the bank's power draw is what a bank compensating for failed cells draws; Data can say so from a close scan."
+      },
+      "the_eldests_decision": {
+        "a": "a passenger asks it what it will shut down first; it must answer.",
+        "b": "the power priority table in the physical logs; Vorrat reads it.",
+        "c": "the sign: the garden ring goes dark. The Eldest tells the Sent a season has closed. The aware know there are no seasons."
+      },
+      "the_other_sendings": {
+        "a": "the Eldest offers it as inducement: find us a world and we will tell you where the others were to go.",
+        "b": "Ossane was told as a child 'we are the first' and has never asked what it meant.",
+        "c": "the launch plans are the first entries of 3,100 years of logs, which nobody reads first."
+      },
+      "picards_belief_about_lloyd": {
+        "a": "ask him straight. Costs admitting you noticed his coolness; he respects it.",
+        "b": "Prakash knows Personnel and will say, if asked why the captain is cool, 'he thinks you were sent'.",
+        "c": "the routing code on the posting orders — PERS-4 / BILLET FILL / STD — which Data reads as rote fill if asked."
+      }
+    },
+    "resolutions": {
+      "resettle": {"shape": "Starfleet grants a world; the ark is towed; the Eldest lands and raises the viable embryos with the recorded as teachers.", "cost": "The recorded never learn what they are unless told; children raised by the dead; the lie carried into Federation space; the shakedown ends.", "distance": "far — nothing has moved; needs Starfleet, a tow, and a decision about the lie"},
+      "stop": {"shape": "End the model, shut the Eldest, take the bank into Federation care.", "cost": "961 people or recordings ended on Hollen's word and nine votes; the Cassini did it; Data.", "distance": "near in means — an hour, and Hollen knows how; far in authority — Picard would not order it and Starfleet would not sanction it"},
+      "tell_them": {"shape": "Tell the Sent what they are and what year it is; let them choose.", "cost": "The model at full power, in reactor days; the Eldest closes channels (it cannot close the maintenance intercoms); Ossane; the split — some choose to stop, some to go on, and going on needs power the ark does not have.", "distance": "middle — the channel exists, the aware exist, the charts exist; nobody has decided to"},
+      "carry_them": {"shape": "Run the model on the Cassini: the pod's survey computer is the only spare capacity.", "cost": "The calibration run is over; Vorrat refuses first (uncertified); certification; the Eldest comes too, or the Cassini becomes it.", "distance": "far — nobody has thought of it; Data would, if asked about capacity"},
+      "keep_them_and_find_the_others": {"shape": "A power link buys the ark a month for a week of the Cassini's reactor; the viable embryos held in the Cassini's stasis units; the science team takes it from there; the archive's plans point at the second and third Sendings.", "cost": "The shakedown fails its schedule outright; the board; Picard's report justifies a week of power to a derelict; the telling is not settled, only given time.", "distance": "far — nobody knows there are others; the link is Vorrat's to refuse first", "nobody_proposes": true},
+      "leave": {"shape": "Hold contact to the minimum, mark the position, leave the ark to the science team in nine days.", "cost": "The garden goes dark in that time; the model slows; the bank fails further; the Sent's last conversation is with the Cassini; the report says 'we left'.", "distance": "near — the default; Starfleet's reply will push here"}
+    },
+    "pressures": {
+      "the_reactor": {"process": "end of life; drains faster with demand", "moved_by": "decay (slow) and every hour of full-model conversation; reversed by a power link", "stages": ["model + garden + bank", "garden dark: the ring stops lighting; the Eldest tells the Sent a season has closed", "model slowed: the Sent notice nothing; Data notices lag; Hollen's clock runs slow against his winding", "model paused: silence on the channel; only the Eldest answers", "the bank fails regardless as cooling fails"], "stage": 1, "seen_by": "Vorrat, from a close scan: weeks, not months, and less if you keep it talking"},
+      "starfleet": {"process": "Picard's report; Command's reply; a second reply if the ark is boarded before permission", "moved_by": "each message, about 30 h", "stages": ["report unsent", "report sent", "reply: hold contact to minimum; first-contact team dispatched, nine days", "second reply, if boarded first: a career question for Picard and the XO"], "stage": 0},
+      "the_shakedown": {"process": "the calibration run and the board at SB129 on 39760", "moved_by": "hours on station", "stages": ["the day up has been spent on the intercept and the hail", "behind, and Vorrat says so", "the Shakedown Office asks why: a message to Picard, and Vorrat's yard report", "the board reschedules; noted on the CO's and the XO's records"], "stage": 0},
+      "the_crew": {"process": "a new crew's first real thing", "moved_by": "each argument the XO does or does not settle", "stages": ["everyone at their station", "Kask's and Vorrat's arguments (arm the team? link power?) become a split", "the XO's handling of the split is what Picard watches"], "stage": 0},
+      "the_sents_knowledge": {"process": "how many of the Sent suspect", "moved_by": "every exchange with the Cassini", "stages": ["Ossane's numbers do not work", "she asks the Eldest where, and gets a truth she cannot use without charts", "she gets charts, or does not", "she knows", "she tells, or does not"], "stage": 0}
+    },
+    "movers": {
+      "the_eldest": "ask for a world; if refused, ask for power; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name",
+      "hollen": "reach the away team at a maintenance intercom the moment anyone is aboard; ask them to stop the Eldest; if refused, try to tell the unknowing through the intercoms himself",
+      "ossane": "ask the Cassini where it thinks the Sending is; ask for charts; work it out",
+      "picard": "consult his XO; hold the ship off until he knows what he is talking to; send the report; do this right",
+      "kask": "argue against boarding; then argue for arms; then go",
+      "vorrat": "refuse to link power until she knows what the ark's reactor is; then do it well and complain",
+      "prakash": "ask for a closer biosensor pass; find no life; find the bank",
+      "data": "resolve the tense from usage — Hollen's deliberate completed-past will give it to him; notice the model's lag; when asked what he thinks they are, say he does not know, and that he has an interest",
+      "vint": "ask to take her closer",
+      "starfleet": "reply in about 30 h: hold contact to minimum; a first-contact team is nine days out"
+    },
+    "in_motion": [
+      "the hail, unanswered forty minutes at open; Picard has been listening",
+      "the garden ring's next lighting, on a 26-hour cycle; on at open",
+      "Ossane's chart request, on the next exchange",
+      "Hollen's first intercom contact, the moment anyone from the Cassini stands at a panel",
+      "Picard's report: drafted, unsent; he wants his XO's read first and will not say so",
+      "the Hokule'a has turned for SB129; Lloyd's duffel is on deck 8",
+      "Data's translator work: tense",
+      "Picard's belief about Lloyd; Data's belief about Picard"
+    ]
+  },
+  "serial_in_motion": [
+    "the pod's low-density under-read is design, not fault: a fleet-wide finding the yard will not want to hear, and the Cassini's shakedown is what would find it",
+    "the second and third Sendings",
+    "Starfleet's first-contact team, nine days from SB129 once dispatched",
+    "Kask's misreading of Picard at Maxia",
+    "Vorrat's model under the cloth",
+    "Prakash's chess with Nila",
+    "Data's question about detectives withholding conclusions",
+    "Picard's endorsement, written or not at the episode's close"
+  ]
+}
