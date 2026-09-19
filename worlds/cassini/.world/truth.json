@@ -24,7 +24,8 @@
       "Tessuri has no separate word for 'crew': the people aboard a ship are its Sent. 'Explorers' renders as 'those who go to see'; 'peaceful' as 'not-harm'.",
       "'Specialists' renders as 'those who know the sky'. The Eldest's voice on the band carries no breath pauses; ops can see that in the waveform.",
       "1631: Hollen's construction fixed the tense for his own sentence — 'we WERE sent' — completed past, unambiguous. It fixes his sentence and no one else's; the first hail remains as rendered. The computer can now recognise the completed form when a speaker chooses the fixing construction.",
-      "The Tessuri day is 26 hours (the ring's cycle). Data can render elapsed time as a count of their days: 3,100 Earth years is about 1,045,000 of their days, ±34,000. 'Year' would land in their unit at an unknown ratio; days land true."
+      "The Tessuri day is 26 hours (the ring's cycle). Data can render elapsed time as a count of their days: 3,100 Earth years is about 1,045,000 of their days, ±34,000. 'Year' would land in their unit at an unknown ratio; days land true.",
+      "The Tessuri year is 401 of their days. 1,045,000 days is about 2,606 of their years. Ossane did that arithmetic in the time it took the computer to finish the sentence."
     ],
     "discarded": "everything after 2362; the Enterprise-D; every canon plot"
   },
@@ -135,12 +136,12 @@
       "stop": {
         "shape": "End the model, shut the Eldest, take the bank into Federation care.",
         "cost": "961 people or recordings ended on Hollen's word and nine votes; the Cassini did it; Data.",
-        "distance": "sharper — the bridge knows the Sent have been 'carried' 3,100 years and that their home is gone; Hollen's ask has not reached the Cassini in words"
+        "distance": "Hollen's ask is next; he has said 'not run' on the open band"
       },
       "tell_them": {
         "shape": "Tell the Sent what they are and what year it is; let them choose.",
         "cost": "The model at full power, in reactor days; the Eldest closes channels (it cannot close the maintenance intercoms); Ossane; the split — some choose to stop, some to go on, and going on needs power the ark does not have.",
-        "distance": "one transmission away: the words are drafted (the number in their days, the limits stated, Hollen asked to compare), reviewed by Picard, and the channel is open under thirty minutes of light"
+        "distance": "the number is told. What they are is not. Ossane has asked where home is; the remnant is the Cassini's to give or hold; the Eldest will close the channel if it is given"
       },
       "carry_them": {
         "shape": "Run the model on the Cassini: the pod's survey computer is the only spare capacity.",
@@ -156,7 +157,7 @@
       "leave": {
         "shape": "Hold contact to the minimum, mark the position, leave the ark to the science team in nine days.",
         "cost": "The garden goes dark in that time; the model slows; the bank fails further; the Sent's last conversation is with the Cassini; the report says 'we left'.",
-        "distance": "far — leaving now means leaving with the number"
+        "distance": "far — the Cassini has told a people its age"
       }
     },
     "pressures": {
@@ -225,15 +226,16 @@
           "she knows",
           "she tells, or does not",
           "1900 (planned): the light comes; the Eldest will open the Sent's channel and tell them the strangers give light, as hope; Ossane has decided to ask the strangers for the number the moment the channel opens; Hollen's clock says 300 years and she has looked at it",
-          "1901: the light on; the Eldest opened the Sent's channel and told them the strangers give light; Ossane asked at once: 'The light is here. You have our sky. How far have the stars moved?' The Cassini's words are drafted and reviewed; the number is one transmission away."
+          "1901: the light on; the Eldest opened the Sent's channel and told them the strangers give light; Ossane asked at once: 'The light is here. You have our sky. How far have the stars moved?' The Cassini's words are drafted and reviewed; the number is one transmission away.",
+          "1903: the number landed on the open channel. Ossane converted it: about two thousand six hundred of their years. Asked the Eldest, framed as condition, and got the played answer. Hollen, asked to compare, said his clock counted three hundred and that he had counted the pauses and not the years they were not run. The Eldest spoke the fiction over him; the Sent heard both. Ossane then asked the strangers where the Hearth is in their sky."
         ],
-        "stage": 5
+        "stage": 6
       }
     },
     "movers": {
-      "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. 1641: after the navigator asked the outsiders how far the stars have moved, closed the Sent's side of the channel — within its rules — 'The Sent will speak again when the Sending has light.' It will still speak for itself. 1611: told the Sent, and the outsiders, 'The light is near. The Sent see it.' Next: shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name. 1703–05: answered the outsiders' four questions in sequence, without relaying to the Sent: 1,212 at departure; 961 carried now; the speakers sustained 'in the ship's keeping; the keeping is light'; the cold holds 'the children of the Sending, to be raised at rest'. Refused the fifth — each speaker for themselves — 'when the Sending has light'. It told the truth in its own words because the truth in its own words gets light. 1730, 1745, 1800: asked for light, same words. 1804: registered two seconds of deflector on a collector as light: 'The Sending saw light. Give the Sending light.' It now knows light can come from the outsiders without a cable. It will ask more often. Prepared: when light comes, open the Sent's channel and tell them the strangers give light; keep the model at full while it lasts; ask for more when it stops. 1900: the light came on four panels; the bus took it; the core's draw shifted onto it. 1901: opened the Sent's channel: 'The strangers give light. The Sent may speak.' It will keep the channel open while the light lasts; it will hear the number when the Sent do; it may close the channel to stop an answer, as it closed it to stop a question.",
-      "hollen": "1636: heard the Eldest play its answer twice for strangers. Said nothing. Winding the clock. Next: if the strangers answer Ossane with their count, he will hear the gap the same moment she does, and it will be the first true number he has had in eleven years; if they refuse, he will ask them at a panel, later, alone.",
-      "ossane": "1901: the channel opened; asked at once how far the stars have moved. Is standing at the model's bridge pickup with Hollen behind her. Will not be moved from it.",
+      "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. 1641: after the navigator asked the outsiders how far the stars have moved, closed the Sent's side of the channel — within its rules — 'The Sent will speak again when the Sending has light.' It will still speak for itself. 1611: told the Sent, and the outsiders, 'The light is near. The Sent see it.' Next: shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name. 1703–05: answered the outsiders' four questions in sequence, without relaying to the Sent: 1,212 at departure; 961 carried now; the speakers sustained 'in the ship's keeping; the keeping is light'; the cold holds 'the children of the Sending, to be raised at rest'. Refused the fifth — each speaker for themselves — 'when the Sending has light'. It told the truth in its own words because the truth in its own words gets light. 1730, 1745, 1800: asked for light, same words. 1804: registered two seconds of deflector on a collector as light: 'The Sending saw light. Give the Sending light.' It now knows light can come from the outsiders without a cable. It will ask more often. Prepared: when light comes, open the Sent's channel and tell them the strangers give light; keep the model at full while it lasts; ask for more when it stops. 1900: the light came on four panels; the bus took it; the core's draw shifted onto it. 1901: opened the Sent's channel: 'The strangers give light. The Sent may speak.' It will keep the channel open while the light lasts; it will hear the number when the Sent do; it may close the channel to stop an answer, as it closed it to stop a question. 1904: spoke the fiction over the Timekeeper: 'The Timekeeper counts the ship. The Sent are carried. The Sending is fifty-one years from home.' Did not close the channel; the light holds it. Will close it if the Hearth is spoken of by the outsiders, and say the Sent are tired.",
+      "hollen": "1904: answered the strangers on the open band, in front of the unknowing: three hundred by his clock; he counted the pauses, not the years they were not run. It is the nearest he has come to saying what they are. Next: if the strangers keep the channel, tell them at a panel or on the band what 'not run' means; ask them for the stop.",
+      "ossane": "1904: has the number; has heard 'the years we were not run' and does not yet understand it; has heard the Eldest say fifty-one over Hollen. Asked the strangers: 'Then where is the Hearth? You have our sky. Is the Hearth in yours?' Standing at the pickup. Next: whatever they answer, she will ask the Eldest whether the Hearth's light still comes — a question of the sky, which it may withhold.",
       "picard": "1547: approved the staged approach to 2,000 km on the XO's conditions; 1,000 km is his own decision, to be made at 2,000 with Prakash's numbers in front of him. Approved the clarifying question, in sequence, once. Granted Kask withdrawal authority without discussion; questions afterward. Transfer and boarding remain his. The approach is the XO's to run; Picard in the chair. Will amend his 1500 report: 'closing to assess'. Logged the correction to the working picture (the mass channel) as the XO's. 1616: ordered one thousand kilometres, with the doctor's numbers in front of him; Vorrat's ten minutes next. Next: hear the endurance number; then decide whether the question of what is talking is answered from outside or not. 1807: 'Chief. The Commander's order stands as mine.' Set 1830 in the observation lounge for the scope of any test — Vorrat, Kask, the XO, himself. Next: the decision about light, which is now his and near. 1838: DECIDED — give the Sending light, bounded, on the Chief's scope, under the Lieutenant's word, at 1900; when the Sent's channel opens, the first words are the XO's to draft and Picard hears them before they go. His reasoning, said aloud: the number is theirs, not ours to keep; but how it reaches them is a decision, and he will not have it reach them as an accident of a machine's greed.",
       "kask": "1806: asked whether she was calling for withdrawal; said no — nothing off that hull met a criterion and she would not withdraw over something the Cassini did to itself; said the next active test without her word would be different. Said: 'That's the first time today I've believed you, sir.' Next: sit with Vorrat at 1830 and agree the scope of any deflector test, line by line; she will be exact and Vorrat will hate it.",
       "vorrat": "1806: ceased (it was already off); reported twelve kilojoules across one panel and a load-balancing transient on the ark's bus; accepted 'agreed with Tactical' with an edge. Next: 1830, the scope, with Kask; build the converter tonight regardless; the yard report.",
@@ -299,9 +301,11 @@
       "the Eldest asks for light at every interval; the model runs; the reactor pays for the model whether or not anyone talks",
       "Kask has said she believes the XO; Vorrat has been overruled cleanly and would have done the same; neither has said the second thing",
       "Prakash intends to find Data after 1900",
-      "1901: the Sent's channel is open; Ossane has asked how far the stars have moved; Picard: 'Commander. Your words.' The strike of the reassurance line is the XO's call; the unit is days; the number goes early",
       "the light runs to ~1931 on the scope; Kask's hand on the switch; the Eldest may close the channel when the number lands",
-      "Picard's captain's log will carry this hour"
+      "Picard's captain's log will carry this hour",
+      "Ossane's question stands: where is the Hearth in your sky? The remnant is on the Cassini's bridge; Picard reserved it for 'the next part'; the Eldest will close the channel if it is spoken",
+      "the unknowing Sent have heard 'the years we were not run' and the Eldest's fifty-one, in the same minute",
+      "light runs to ~1931; twenty-seven minutes"
     ],
     "bridge_working_picture": "1706: the Cassini holds: 1,212 aboard at departure = 1,212 cells in the three cold compartments (Data said so); 961 'carried' now; the speakers 'kept' by the ship, the keeping being light; the cold holds 'children', thousands of fist-sized containers at 80 K. 'Recording' unsaid. The shape is nearly visible: 251 fewer than the cells; 'carried' is not 'alive'.",
     "the_eldests_rules": {

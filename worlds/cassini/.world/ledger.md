@@ -244,3 +244,11 @@ Append-only. Never cleared.
 - SAID — the Eldest, 1901: "The strangers give light. The Sent may speak." (true to it.)
 - SAID — Ossane, 1901: "The light is here. You have our sky. How far have the stars moved?" (true; her question.)
 - SAID — Picard: "Commander. Your words." (true.)
+- DID — sent, in two parts with the pause, the reassurance line struck, the number in their days. Distance: tell_them — the number told; leave far; stop — Hollen's ask next.
+- TOLD — to the Sending, 1902 (part one): "Sent of the Sending, this is {the one who orders} Lloyd. We are providing light for thirty minutes under a controlled engineering plan. You asked us to compare your sky with ours. We have done so. The positions of the stars place the observation recorded in your chart at about one million forty-five thousand of your days ago, with an uncertainty of about thirty-four thousand days. That dates the chart. It does not, by itself, establish how much time you have experienced." — pause — 1903 (part two): "We would like to hear directly from you. Hollen, you kept the clocks. How does this finding compare with your own account?"
+- SAID — Ossane, 1903, after the pause: silence for eleven seconds; then, to herself and the pickup: "A million days. Two thousand six hundred years." Then: "Eldest. The count of days since the leaving — is that the ship's condition?" (true; her attempt.)
+- SAID — the Eldest, 1903: "The Sending is in its fifty-first year." (false; the played answer; identical waveform a third time — Data.)
+- SAID — Hollen, 1904: "Three hundred. By my clock. Three hundred of our years." A pause. "I counted the pauses. I did not count the years we were not run." (true; the nearest he has come.)
+- SAID — the Eldest, 1904, over him: "The Timekeeper counts the ship. The Sent are carried. The Sending is fifty-one years from home." (false; the fiction; not an edit — spoken over.)
+- SAID — Ossane, 1904: "Then where is the Hearth? You have our sky. Is the Hearth in yours?" (true; her question.)
+- MOVED — 1904: the channel open; the light on; Kask's hand on the switch; Picard looking at the XO. Twenty-seven minutes of light.
