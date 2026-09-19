@@ -203,3 +203,6 @@ Append-only. Never cleared.
 - DID — to ch'Rasseth: what finally convinced him to let it run beyond a hundred years? → His answer. Distance: unchanged.
 - SAID — ch'Rasseth: a fast star in the field — a red dwarf with high proper motion, about half a degree in three thousand years; at a hundred years it should sit where the catalogue has it and it sat a thumb's width off; he called it a misidentification for an hour; then he found the second one; then the Commander's question came down and he stopped pretending (true). "I didn't want the number, Commander. Nobody wants that number." (true.)
 - MOVED — 1743: he finishes the drink and does not leave the window.
+- DID — to ch'Rasseth: the delay matters, and so does challenging his own answer; bring a discrepancy forward while still trying to explain it — he need not believe the number to say the model is not fitting; log the additional markings, presence as observation, 'return bearings' as interpretation, distinguished, both included; the captain should have it. → "Aye, sir," with an edge; he goes to do it. Distance: unchanged.
+- SAID — ch'Rasseth: "Observation and interpretation, separately. I know the difference, Commander. I'll write it that way." (true.) "Now, then." (true.) He leaves.
+- MOVED — 1746: the lounge empty but for Lloyd. The plate half done. The window. Twenty-four minutes.

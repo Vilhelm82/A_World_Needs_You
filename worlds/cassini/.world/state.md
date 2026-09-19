@@ -1,8 +1,8 @@
 # Card
 
-**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up. Stardate 39739.4. Ship's time 1743. Shakedown day 13. The number is in: 3,100 ± 100; home a remnant; the destination empty. Lloyd sent to eat; called at 1810.
+**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up. Stardate 39739.4. Ship's time 1746. Shakedown day 13. The number is in: 3,100 ± 100; home a remnant; the destination empty. Lloyd sent to eat; called at 1810.
 
-**Scene.** Forward lounge, deck 10, 1731. ch'Rasseth at the near port window with a drink (has been told he may say when the question is wrong; 'then I will'; told the XO about the chart's bearing marks). The two crew have gone. Lloyd eating: chicken parmigiana, a synthehol lager. The Sending in the port windows at 1,000 km: the ring; the bow array pointed this way. The replicator with Vint's failed order on its panel. Lloyd has until 1810.
+**Scene.** Forward lounge, deck 10, 1731. Alone. ch'Rasseth gone to log the markings (observation and interpretation, separately). The plate half done. Lloyd eating: chicken parmigiana, a synthehol lager. The Sending in the port windows at 1,000 km: the ring; the bow array pointed this way. The replicator with Vint's failed order on its panel. Lloyd has until 1810.
 
 **Elsewhere.** Bridge: Picard in the chair (has the number; nothing goes out). Data at ops. Kask at tactical. Vint at conn. Bridge: Picard in the chair (has the number; nothing goes out). Data at ops. Kask at tactical. Vint at conn. Engineering: Vorrat characterising the ring's collectors until ~1813; 'or we could take it at its word'. Sickbay: Prakash (told 'children'; an embryo bank, she'd stake her licence; retracted 'a very long time'). Astrometrics: ch'Rasseth — done; antennae flat. The Sending: the Sent told nothing of 1703–05; Ossane at the windows; Hollen winding; the Eldest waiting for light.
 
