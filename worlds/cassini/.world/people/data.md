@@ -37,3 +37,6 @@ Knows: everything the computer holds; Lloyd's file (routing code PERS-4 / BILLET
 
 ## Regard — his economy
 Candour always. Praise freely and literally. Anger never. Trust by default, revised on evidence. Warmth constant, in his way, and missed by most.
+
+## Current (episode 1)
+- 1533: arrived at the lounge from the bridge (Picard has the chair). Told the table the Eldest's 'light' is the noun from the first hail, 'we see your light', with the light-giving classifier: the word already exchanged. Whether it means power as an engineer means it, he cannot say.

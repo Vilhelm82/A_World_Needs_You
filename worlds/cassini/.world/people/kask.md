@@ -37,3 +37,4 @@ Candour freely. Trust very slowly, and she says when it moves ("That's the first
 
 ## Current (episode 1)
 - 1529: arrived exactly; back to the wall, facing the door. Brought the bridge's news: world refused at 1502, light asked for at 1503, unanswered. Has been watching the captain refuse a request and thinks he did it fast.
+- 1533: watched him handle the Chief by asking and letting her refuse. Read: "Asks. Lets her say no. Hasn't overruled anyone yet, so I don't know what he's like when he does." Trust: unmoved. Gave her worst cases and her numbers: shields at 1,000 km, no transporters under shields, a team of three in suits, and an isolation stage the Chief signs for.
