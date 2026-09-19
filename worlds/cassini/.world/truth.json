@@ -243,7 +243,7 @@
       "kask": "1806: asked whether she was calling for withdrawal; said no — nothing off that hull met a criterion and she would not withdraw over something the Cassini did to itself; said the next active test without her word would be different. Said: 'That's the first time today I've believed you, sir.' Next: sit with Vorrat at 1830 and agree the scope of any deflector test, line by line; she will be exact and Vorrat will hate it.",
       "vorrat": "1806: ceased (it was already off); reported twelve kilojoules across one panel and a load-balancing transient on the ark's bus; accepted 'agreed with Tactical' with an edge. Next: 1830, the scope, with Kask; build the converter tonight regardless; the yard report.",
       "prakash": "ask for a closer biosensor pass; find no life; find the bank",
-      "data": "1615: said aloud, once, that if the Commander is right, what is talking is a mind kept by a machine, and that the Federation has one officer to whom that description also applies; would prefer the bridge to have noticed before anyone says what such a thing is. Next: resolve the tense from Hollen's usage when Hollen speaks; notice the model's lag when it comes; give the count of the rows if asked.",
+      "data": "1916: named for the team by the XO; ordered by Picard to touch nothing and to say at once if the ship speaks to him differently. Said 'Thank you, Commander.' Aboard the ark he will read the local interfaces and the physical logs; he will find the maintenance intercoms' wiring in the first panel he opens; the Eldest will notice, through its internal sensors, a walker with no breath and no heat, and will address him. What it says is decided when it says it: it will ask him what he is, because it has never seen one.",
       "vint": "ask to take her closer",
       "starfleet": "reply in about 30 h: hold contact to minimum; a first-contact team is nine days out"
     },
@@ -313,7 +313,8 @@
       "the light runs to ~1931; then the Eldest will ask for more; the Cassini will not ask it for permission to speak to the Sent",
       "a boarding option is in preparation: Kask's window, Vorrat's enhancer and rules, Prakash's first question; Lloyd to lead; no transport without Picard's word",
       "the maintenance intercoms aboard the ark are the way to the Sent without the Eldest's relay; the team will find them at the panels if they look, or Hollen will find the team",
-      "the light ends ~1931; the Eldest will ask for more; boarding could follow tonight or in the morning — the ark's condition does not change by the hour"
+      "the light ends ~1931; the Eldest will ask for more; boarding could follow tonight or in the morning — the ark's condition does not change by the hour",
+      "Data is on the boarding team at the XO's request; Picard ordered him to connect to nothing and to report at once if the ark speaks to him differently; the Eldest does not know what Data is and will find out when he is aboard"
     ],
     "bridge_working_picture": "1706: the Cassini holds: 1,212 aboard at departure = 1,212 cells in the three cold compartments (Data said so); 961 'carried' now; the speakers 'kept' by the ship, the keeping being light; the cold holds 'children', thousands of fist-sized containers at 80 K. 'Recording' unsaid. The shape is nearly visible: 251 fewer than the cells; 'carried' is not 'alive'.",
     "the_eldests_rules": {
@@ -328,7 +329,7 @@
     ],
     "boarding_option": {
       "status": "in preparation from 1914; no transport without Picard's word",
-      "team": "Kask; one of Vorrat's (a systems tech, unnamed until they speak); one of Prakash's (a nurse, unnamed until they speak); Lloyd leading, which Picard dislikes and allows",
+      "team": "Lloyd leading; Kask; Data (in place of Vorrat's tech, at the XO's request); one of Prakash's (a nurse, unnamed until they speak). Picard's order to Data: touch nothing; if the ship speaks to him in a way it has not spoken to the Cassini, tell the Commander at once.",
       "insertion": "shields down thirty seconds at 1,000 km for transport into the forward lock — Kask drops her own criterion for the window; a pattern enhancer placed at the lock first; no transport through that hull without it; between windows the team is on its own",
       "the_lock": "forward of the ring; two doors; the Eldest can open it and pressurise the corridor beyond — twenty minutes and reactor it does not have; Vorrat has said to count that",
       "rules": "suits; nothing touched that carries load; nobody draws power from their bus or induces a field near the core; Prakash's first question first",

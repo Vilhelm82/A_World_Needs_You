@@ -1,6 +1,6 @@
 # Card
 
-**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up; deflector on four collector panels at 0.4% since 1900, to ~1931. Stardate 39739.5. Ship's time 1914. Shakedown day 13.
+**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up; deflector on four collector panels at 0.4% since 1900, to ~1931. Stardate 39739.5. Ship's time 1917. Shakedown day 13.
 
 **Scene.** Bridge, 1901. The number and the Hearth told. The Eldest closed the Sent's channel 0.8 s after the Hearth message; 'The Sent are tired.' The light still on (to ~1931). The Eldest's price on the record: 'Speak of light, and the Sent will speak.' Picard refused it; the light runs its interval (to ~1931) and then 'we find another way' — he does not know it. Kask: hand on the switch. Data at ops ('hope' = a held thing). Kask at tactical (switch is hers). Vint at conn. Vorrat on comm (bus taking it, clean).
 
@@ -14,6 +14,6 @@
 
 # Carry
 
-**Next.** The light ends ~1931. A boarding option is in preparation (Kask's window, Vorrat's enhancer, Prakash's first question; Lloyd leads; Picard's word to go). A rest is possible after the light ends; the ark's condition does not change by the hour.
+**Next.** The light ends ~1931. A boarding option is in preparation (Kask's window, Vorrat's enhancer, Prakash's first question; team: Lloyd, Kask, Data, one of Prakash's; Picard's word to go). A rest is possible after the light ends; the ark's condition does not change by the hour.
 
 Episode 1, *The Sending*, open. Nothing decided by Lloyd yet. The world as truth.json has it at build; distance per resolution as written there. Every standing person's belief about Lloyd is their file's opening line. The transporter chief has not spoken.

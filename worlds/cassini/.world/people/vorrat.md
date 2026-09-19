@@ -51,3 +51,4 @@ Candour freely: an insult is respect. Praise never in words; praise is when she 
 - 1830: brought the scope; had it cut down by Kask line by line; signed it. Said "Fine" for the fourth time today. Will run it at 1900. The converter is half built in the bay behind engineering; nobody has asked.
 - 1900: "Ramping. Sixty seconds. Zero point four. Four panels." At 1901: "Bus is taking it. Clean. Cleaner than it has any right to be." Did not say 'I told you'; it was audible anyway.
 - 1912: the lock forward of the ring, two doors, standard enough; the chief can put a team in it with shields down and a clear line; no air inside, suits; if the Eldest pumps air it spends its reactor on them — count that; her people go with tricorders and their hands in their pockets; nothing that carries load gets touched. Named no one for the team yet.
+- 1916: her tech stood down; Data reads for her. "Fine. He'll tell me afterwards. He always does." Did not argue, which is five.
