@@ -119,7 +119,7 @@
       },
       "a_bounded_light": {
         "what": "the deflector on the collectors: bounded by the Cassini, stoppable at Kask's word, no cable, no boarding",
-        "found_by": "Vorrat at 1712, when asked for a bounded provision: 'or we could take it at its word' — a band on the ring's outer face that is not hull",
+        "found_by": "Vorrat at 1712; CONFIRMED 1804: they are collectors, dead cold and intact; she ran a hair of the deflector across one panel for two seconds as 'characterisation' without Kask's word and the ark's bus twitched. The Eldest registered it as light.",
         "costs": "an hour to characterise, a day to trust; the deflector pointed at a ship, which Kask calls an act; the Eldest decides what it does with the light; the Sent's channel opens at the Eldest's choice, not ours; every hour of speech it buys is an hour of the Sent's subjective life spent"
       }
     },
@@ -202,9 +202,10 @@
           "Kask's and Vorrat's arguments (closer pass? arm anything? link anything?) come to the table at 1530; the XO chairs",
           "1540: the XO put a shape to the table — staged approach to 1,000 km, shields up, no boarding or transfer, Prakash at 2,000, Vorrat at 1,000, Kask's withdrawal criteria first, a question to the Sent about what light does to them, transfer a separate decision for the captain. Vorrat stopped arguing. Kask asked for one thing: that 'my call' be backed in front of the captain. Prakash flagged that 'ward' will make 'no boarding' a harder sentence.",
           "1547: Picard heard the XO's shape and made it so, with 1,000 km reserved. Vorrat unarguing; Kask granted her call; Prakash with her hold; Data with his question. The split did not happen. Picard noted that.",
-          "1712: the XO asked for a bounded provision; Vorrat found one; Kask named the cost; Data priced it; Picard gave Vorrat an hour. Nobody argued. Picard noticed that too."
+          "1712: the XO asked for a bounded provision; Vorrat found one; Kask named the cost; Data priced it; Picard gave Vorrat an hour. Nobody argued. Picard noticed that too.",
+          "1804: Vorrat tickled a collector with the deflector for two seconds without Kask's word and told the bridge so; the Eldest said 'The Sending saw light'; Kask: 'That was an act, Chief.' The split has arrived. Picard is silent and looking at the XO."
         ],
-        "stage": 3
+        "stage": 4
       },
       "the_sents_knowledge": {
         "process": "how many of the Sent suspect",
@@ -224,12 +225,12 @@
       }
     },
     "movers": {
-      "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. 1641: after the navigator asked the outsiders how far the stars have moved, closed the Sent's side of the channel — within its rules — 'The Sent will speak again when the Sending has light.' It will still speak for itself. 1611: told the Sent, and the outsiders, 'The light is near. The Sent see it.' Next: shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name. 1703–05: answered the outsiders' four questions in sequence, without relaying to the Sent: 1,212 at departure; 961 carried now; the speakers sustained 'in the ship's keeping; the keeping is light'; the cold holds 'the children of the Sending, to be raised at rest'. Refused the fifth — each speaker for themselves — 'when the Sending has light'. It told the truth in its own words because the truth in its own words gets light.",
+      "the_eldest": "ASKED for a world 1449; REFUSED 1502. ASKED for light 1503, 1546. ANSWERED the outsiders' sequence question 1551 (fiction of the destination kept; 'the ship is warm; the Sent are carried'). ANSWERED Ossane's direct question 1552 truthfully and minimally, as its rules require: garden, ship, cold last; 'the Sent sleep'. ASKED again for light 1553. 1641: after the navigator asked the outsiders how far the stars have moved, closed the Sent's side of the channel — within its rules — 'The Sent will speak again when the Sending has light.' It will still speak for itself. 1611: told the Sent, and the outsiders, 'The light is near. The Sent see it.' Next: shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name. 1703–05: answered the outsiders' four questions in sequence, without relaying to the Sent: 1,212 at departure; 961 carried now; the speakers sustained 'in the ship's keeping; the keeping is light'; the cold holds 'the children of the Sending, to be raised at rest'. Refused the fifth — each speaker for themselves — 'when the Sending has light'. It told the truth in its own words because the truth in its own words gets light. 1730, 1745, 1800: asked for light, same words. 1804: registered two seconds of deflector on a collector as light: 'The Sending saw light. Give the Sending light.' It now knows light can come from the outsiders without a cable. It will ask more often.",
       "hollen": "1636: heard the Eldest play its answer twice for strangers. Said nothing. Winding the clock. Next: if the strangers answer Ossane with their count, he will hear the gap the same moment she does, and it will be the first true number he has had in eleven years; if they refuse, he will ask them at a panel, later, alone.",
       "ossane": "1641: got a count in a foreign unit and the statement that it was not set against hers. Asked for the only correlation a navigator knows: the sky; how far the stars have moved. Then the Eldest closed the channel on her. In the model, she has turned to it. Next: demand the channel back; when refused, go to the Sending's bridge windows and look at the strangers' light with her own eyes, and start to compute what she can from the year-40 sky and what the strangers said.",
       "picard": "1547: approved the staged approach to 2,000 km on the XO's conditions; 1,000 km is his own decision, to be made at 2,000 with Prakash's numbers in front of him. Approved the clarifying question, in sequence, once. Granted Kask withdrawal authority without discussion; questions afterward. Transfer and boarding remain his. The approach is the XO's to run; Picard in the chair. Will amend his 1500 report: 'closing to assess'. Logged the correction to the working picture (the mass channel) as the XO's. 1616: ordered one thousand kilometres, with the doctor's numbers in front of him; Vorrat's ten minutes next. Next: hear the endurance number; then decide whether the question of what is talking is answered from outside or not.",
-      "kask": "argue against boarding; then argue for arms; then go",
-      "vorrat": "1629: gave the endurance number and the priority branch; repriced the link (a month for a week of ours) and said the schedule once — board in eight days, a day behind. Next: build the converter if told to; refuse the link until she has seen the far end; write her yard report tonight.",
+      "kask": "1804: heard the Chief admit the tickle; said 'That was an act, Chief'; her criteria were not met, and she says they should have been. Next: ask the XO, in front of the captain, whether her word means anything; if it does not, she will stop giving it.",
+      "vorrat": "1804: characterised the collectors; tickled one for two seconds to see if the bus would take it; told the bridge at once because she does not hide things; will say it was a scan, not light, and that the difference is her department. Next: build the converter anyway, tonight, because she has decided a cable will be wanted; refuse the link until she has seen the far end; write the yard report.",
       "prakash": "ask for a closer biosensor pass; find no life; find the bank",
       "data": "1615: said aloud, once, that if the Commander is right, what is talking is a mind kept by a machine, and that the Federation has one officer to whom that description also applies; would prefer the bridge to have noticed before anyone says what such a thing is. Next: resolve the tense from Hollen's usage when Hollen speaks; notice the model's lag when it comes; give the count of the rows if asked.",
       "vint": "ask to take her closer",
@@ -280,16 +281,16 @@
       "1656: Prakash's bank finding stands: thousands of fist-sized containers at 80 K; not bodies; not a ward",
       "the Eldest's four answers (1703–05) were not relayed to the Sent; the Sent still believe 1,212 with the children in cryo",
       "Data has said aloud that 1,212 is the count of the cells in the rows",
-      "Vorrat characterising the ring's collectors until ~1813; will say what a deflector trickle could give and whether the panels take it",
       "Kask's condition on any deflector light: her criteria stand and the deflector comes off at her word; Picard agreed",
       "Data has said: if the 251 are aboard, they are at hull temperature; and so, he did not add, would be the 961's bodies, if they had any aboard",
       "the fifth request refused until light; light may now be buyable without a cable",
       "1726–27: the number, the remnant and the empty destination are on the bridge; Picard: nothing goes out",
-      "Picard sent the XO to eat at 1728; to be called at 1810; Prakash's 'come and see me' stands; Vorrat's hour ends ~1813",
-      "the world may rest here: nothing in the truth changes before 1810 except the Eldest asking for light again at intervals and the ark's reactor losing what the day cost it",
       "ch'Rasseth has told the XO about the bearing marks on the chart, reading them as return bearings; the true purpose (the arrival signal home, never sent) is in the Eldest's archive and in Ossane's head",
       "Prakash will ask Data tonight what support he needs — the gap between departments closes on the XO's word; Data has never been asked; what he answers is his to decide",
-      "Prakash has asked the XO what she does if one of the Sent says 'I want it to stop'; unanswered; Hollen's ask is coming"
+      "Prakash has asked the XO what she does if one of the Sent says 'I want it to stop'; unanswered; Hollen's ask is coming",
+      "1804: the collectors are confirmed; the Eldest has felt light from the Cassini; Vorrat and Kask are at odds on the bridge; Picard is watching the XO",
+      "Vint asked to stay past his shift at 1800; Picard said 'Stay, Ensign'",
+      "Picard wrote a captain's log entry in the ready room between 1735 and 1755 (to chronicle at stand down)"
     ],
     "bridge_working_picture": "1706: the Cassini holds: 1,212 aboard at departure = 1,212 cells in the three cold compartments (Data said so); 961 'carried' now; the speakers 'kept' by the ship, the keeping being light; the cold holds 'children', thousands of fist-sized containers at 80 K. 'Recording' unsaid. The shape is nearly visible: 251 fewer than the cells; 'carried' is not 'alive'.",
     "the_eldests_rules": {

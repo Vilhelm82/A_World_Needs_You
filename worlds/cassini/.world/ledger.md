@@ -215,3 +215,11 @@ Append-only. Never cleared.
 - DID — off the record, to Prakash: he cannot imagine a worse hell than captivity in his own mind, maintained so that not even insanity is an escape; given the chance to end it he would beg till his lungs gave out. (Stated; recorded in people/lloyd.md as stated.) → Prakash answered as a doctor. Distance: unchanged.
 - SAID — Prakash: off the record, then; nothing said at her desk goes in a file (true). She has had that conversation with four dying men and two dying women; every one of them said something like it a month before; three changed their minds the week of; that is not an argument, it is a caution about begging (true). "And it isn't your mind over there. Don't decide for them what you'd want. I say that to every relative." (true.) "Ask Data what he'd want. He'll tell you exactly. That's what frightens people." (her belief; Data's file says he does not know.) "Go. You've twelve minutes and a captain." (true.)
 - MOVED — 1758: Lloyd leaves sickbay. Twelve minutes.
+- DID — to the bridge by lift, 1801. Scene change.
+- MOVED — 1801: bridge. Picard in the chair. Data at ops. Kask at tactical. Vint at conn past his shift (asked to stay; Picard: "Stay, Ensign"). The ring lit; the tenders. The band: the Eldest asked for light at 1730, 1745, 1800, same words.
+- SAID — Picard: "Commander. Early." (true.) Kask: three more times; same words (true). Data: nothing else on the band (true).
+- MOVED — 1804: Vorrat on comm, early.
+- SAID — Vorrat: they are collectors; dead cold, intact, and they will take light; she ran a hair of the deflector across one panel for two seconds — "characterisation" — and the ark's bus twitched (true; done without Kask's word). "It was a scan. Two seconds. The difference between a scan and light is my department." (her position.)
+- SAID — the Eldest, 1804: "The Sending saw light. Give the Sending light." (true to it; it registered the tickle.)
+- SAID — Kask: "That was an act, Chief." Her criteria were not met, because we did it to ourselves; they should have been (true as her reading). To the XO: "Sir. Does my word mean anything on this bridge, or not?" (true; her question.)
+- MOVED — 1805: Picard silent, looking at Lloyd.

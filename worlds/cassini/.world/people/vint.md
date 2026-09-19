@@ -24,3 +24,6 @@ Knows: the conn; the Shallows' charts (he has been studying them); that the ship
 
 ## Regard — his economy
 Warmth freely. Praise freely and loudly. Candour freely, without meaning to. Trust immediately. Anger never — he goes quiet.
+
+## Current (episode 1)
+- 1800: shift ended; asked to stay; Picard said "Stay, Ensign." Has been at the conn since 0800. Would not say so.
