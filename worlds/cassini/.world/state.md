@@ -1,10 +1,10 @@
 # Card
 
-**Where / when.** USS Cassini (Nebula-class, NCC-60349), holding station 0.7 ly inside the Orrin Shallows, 40,000 km off an unknown vessel. Stardate 39739.2. Ship's time 1420. Shakedown day 13.
+**Where / when.** USS Cassini (Nebula-class, NCC-60349), holding station 0.7 ly inside the Orrin Shallows, 40,000 km off an unknown vessel. Stardate 39739.2. Ship's time 1424. Shakedown day 13.
 
-**Scene.** Transporter room 3, deck 6. Data — to bring the XO to the bridge at once; wants to be asked, not told. The TR3 chief at the console: unnamed; make in full before he speaks.
+**Scene.** Bridge, 1424. Picard standing centre (wants to know what he is talking to before he answers it; believes Lloyd was sent; will ask 'what do you know' before 'what do you think'). Data at ops (wants to be asked). Kask at tactical (wants nobody near it; watching Picard). Vint at conn (wants to take her closer). Viewscreen: the vessel at magnification, ring lit. Relief officers at science/engineering stations: unnamed until they speak.
 
-**Elsewhere.** Bridge: Picard (wants to know what he is talking to before he answers it; believes Lloyd was sent), Kask at tactical (wants nobody near it), Vint at conn (wants to take her closer). Engineering: Vorrat (wants her day back). Sickbay: Prakash (wants a closer biosensor pass).
+**Elsewhere.** Engineering: Vorrat (wants her day back). Sickbay: Prakash (wants a closer biosensor pass).
 
 **Pressures live.** The hail: unanswered 40 min, repeating every four minutes, translator 60%, tense unresolved. Reactor: stage 1, the ring lit. Starfleet: report drafted, unsent. Shakedown: the day up is spent. Crew: at stations. The Sent's knowledge: Ossane's numbers do not work.
 
