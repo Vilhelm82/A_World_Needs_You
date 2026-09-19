@@ -34,3 +34,6 @@ Knows: everyone's medical file — Lloyd's included; she will refer only to what
 
 ## Regard — her economy
 Warmth freely, in practicalities. Praise never. Candour freely and tactlessly. Trust slow. Anger almost never; quiet and final when it comes.
+
+## Current (episode 1)
+- 1521: arrived early with a padd and the question she greets everyone with. Has not been told anything since 1420 except that there is a hail and the XO is aboard.
