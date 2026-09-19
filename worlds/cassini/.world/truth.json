@@ -4,7 +4,7 @@
   "built": "2026-09-19",
   "flags_stamped": ".world/flags.json",
   "rules": ".world/rules.md",
-  "people_index": ".world/people/ (standing: picard, data, vorrat, prakash, kask, vint; episode 1: eldest, ossane, hollen)",
+  "people_index": ".world/people/ (standing: picard, data, vorrat, prakash, kask, vint; episode 1: eldest, ossane, hollen; standing, added 1645: chrasseth)",
   "places_index": ".world/places/ (cassini, sending, shallows)",
   "clock": {
     "year": 2362,
@@ -43,8 +43,7 @@
   "unnamed_until_they_speak": [
     "the transporter chief, TR3",
     "bridge relief officers",
-    "the master of the Hokule'a",
-    "Lt. jg Thiran ch'Rasseth, astrometrics"
+    "the master of the Hokule'a"
   ],
   "episode": {
     "number": 1,
@@ -87,7 +86,7 @@
         "b": "the physical logs, out of order. Costs hours aboard a dead ark with Data reading.",
         "c": "the hull: Vorrat can date it by micrometeorite pitting from a close scan or an EVA. She will complain and do it.",
         "wall": "asking the Eldest 'how long since launch' gets the hope clause. Hollen knows this door is painted on.",
-        "d": "PULLED FROM INSIDE 1641 — Ossane asked the Cassini to correlate the calendars by the sky: how far have the stars moved. Astrometrics is already matching the field; the match only closes at an epoch about 3,100 years back, and ch'Rasseth will find that as the reason the match is slow. Nobody has asked him for the epoch. Data could, in a sentence. Costs: the number, once known aboard the Cassini, is a thing the Cassini has to decide whether to say."
+        "d": "IN HAND 1646 — asked to constrain elapsed time, ch'Rasseth said the field matches only if the stars move; rough solution: thousands of years, not hundreds, not tens of thousands; forty minutes to the second digit (about 1726). The bridge has heard 'thousands'."
       },
       "home_is_gone": {
         "a": "astrometrics: the Eldest's sky image (received 1442) gives the Tessuri home sky at launch; matched against the catalogue it locates the Hearth, and the catalogue shows a remnant about 2,400 years old at that position. Costs hours and the knowing.",
@@ -130,7 +129,7 @@
       "tell_them": {
         "shape": "Tell the Sent what they are and what year it is; let them choose.",
         "cost": "The model at full power, in reactor days; the Eldest closes channels (it cannot close the maintenance intercoms); Ossane; the split — some choose to stop, some to go on, and going on needs power the ark does not have.",
-        "distance": "the channel to the Sent is closed by the Eldest until light; the question of the year is now the Cassini's to compute and to keep or give; a passenger asked for it outright"
+        "distance": "the Cassini will hold the number by about 1726; the Sent's channel is closed until light; the question is what the Cassini does with a number it cannot give without the channel and cannot keep without deciding to"
       },
       "carry_them": {
         "shape": "Run the model on the Cassini: the pod's survey computer is the only spare capacity.",
@@ -146,7 +145,7 @@
       "leave": {
         "shape": "Hold contact to the minimum, mark the position, leave the ark to the science team in nine days.",
         "cost": "The garden goes dark in that time; the model slows; the bank fails further; the Sent's last conversation is with the Cassini; the report says 'we left'.",
-        "distance": "farther still — a passenger has asked the Cassini for the truth by name"
+        "distance": "far — the bridge has heard 'thousands'"
       }
     },
     "pressures": {
@@ -242,7 +241,6 @@
       "the Sent's question 'from where' stands unanswered; Picard is not ready to answer it and has said so to Lloyd",
       "the Eldest has spoken to the outsiders directly and asked for a world; the Sent heard it ask — Ossane heard the Eldest speak for them to strangers for the first time",
       "senior staff in the observation lounge at 1530: Vorrat, Prakash, Kask, Data; Lloyd chairs; Picard comes in after",
-      "the sky image goes to astrometrics (ch'Rasseth) now; hours to match; the proper-motion dating is available to anyone who asks for it",
       "Lloyd's sentence 'individual captains cannot replace a common directive with personal confidence in their own judgment' has landed on Picard as pointed; Lloyd may not know it did",
       "1500 report sent. 1502 Picard told the Eldest this ship has no world to give. 1503 the Eldest asked for light (power). Lloyd has not been told; Data will tell him at 1530.",
       "Ossane heard the Eldest ask strangers for a world, and then for light, without the Sent; in the model she asked it why. It said: the Sent must rest. First crack between navigator and Eldest.",
@@ -267,15 +265,22 @@
       "the Eldest's year is a played answer: the bridge has heard it twice, identically; Data has said so",
       "two exchanges at 1635–36: an hour or two off the reactor",
       "the Sent's side of the channel is closed by the Eldest until the Sending has light; the Eldest will still answer for itself; the maintenance intercoms aboard remain Hollen's door",
-      "Ossane's request stands: how far have the stars moved; the answer is in astrometrics' matching and nobody has asked for the epoch",
       "the Cassini has told the Sending its count (stardate 39739; the Federation year rendered as 'the year of our home') and that the calendars are not correlated",
-      "the tenders are visible from 1,000 km at magnification: dozens, all along the ring, all moving the same way, over dark beds; the bridge has seen them; nobody has said what it means"
+      "the tenders are visible from 1,000 km at magnification: dozens, all along the ring, all moving the same way, over dark beds; the bridge has seen them; nobody has said what it means",
+      "ch'Rasseth's number due about 1726: 3,100 years, give or take a century; he will give the error bars",
+      "the bridge has heard 'thousands' at 1646; Picard has said 'Thank you, Lieutenant' and nothing else"
     ],
     "bridge_working_picture": "1615: Lloyd's hypothesis on the bridge — the speakers are bodies in suspension with consciousness supported by the core; 'sleep' is loss of that support while refrigeration continues. Half right: the minds are in the core; the bodies are not in the cold. Prakash's numbers have already cut the 'bodies in suspension' half: the held section is a few hundred cubic metres — a cupboard, not a thousand people; the three big compartments with rows are cold as the hull. Data has said aloud that a mind kept by a machine is a description the Federation has one officer for. Nobody has said 'recording'.",
     "the_eldests_rules": {
       "see": "people/eldest.md",
       "the_year": "The Eldest does not compute the year. It plays it: a stored answer, 'It is the fifty-first year of the Sending,' the same waveform every time, for eleven subjective years. Hollen has listened to it not counting for eleven years; that is what 'ask it again' means. Asked twice, it answers identically, and a receiver that noticed the hail was a loop notices this too. It hands the outsiders the doubt, not the number."
-    }
+    },
+    "people": [
+      "eldest",
+      "ossane",
+      "hollen",
+      "chrasseth"
+    ]
   },
   "serial_in_motion": [
     "the pod's low-density under-read is design, not fault: a fleet-wide finding the yard will not want to hear, and the Cassini's shakedown is what would find it",
