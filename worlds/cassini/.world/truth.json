@@ -157,18 +157,19 @@
           "the bank fails regardless as cooling fails"
         ],
         "stage": 1,
-        "seen_by": "Vorrat, from a close scan: weeks, not months, and less if you keep it talking"
+        "seen_by": "Vorrat, from a close scan: weeks, not months, and less if you keep it talking",
+        "note": "about two hours of full-model exchange so far: roughly two days of reactor spent. Still stage 1."
       },
       "starfleet": {
         "process": "Picard's report; Command's reply; a second reply if the ark is boarded before permission",
         "moved_by": "each message, about 30 h",
         "stages": [
           "report unsent",
-          "report sent",
+          "report sent 1500; Command's reply not before ~2100 tomorrow (30 h each way)",
           "reply: hold contact to minimum; first-contact team dispatched, nine days",
           "second reply, if boarded first: a career question for Picard and the XO"
         ],
-        "stage": 0
+        "stage": 1
       },
       "the_shakedown": {
         "process": "the calibration run and the board at SB129 on 39760",
@@ -206,7 +207,7 @@
       }
     },
     "movers": {
-      "the_eldest": "ASKED for a world at 1449. Picard intends to refuse at 1500. Next, on refusal: ask for 'light' — power — from the Cassini; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
+      "the_eldest": "ASKED for a world 1449; REFUSED by Picard 1502 ('this ship has no world to give'). ASKED for light 1503: 'Your ship has light. Give the Sending light and the Sent will rest where they are.' Next: if unanswered, ask again at intervals; shut the garden when the reactor's next stage comes; then slow the model; if it decides the XO cannot grant, ask for the Cassini's Eldest by name.",
       "hollen": "reach the away team at a maintenance intercom the moment anyone is aboard; ask them to stop the Eldest; if refused, try to tell the unknowing through the intercoms himself",
       "ossane": "ask the Cassini where it thinks the Sending is; ask for charts; work it out",
       "picard": "report at 1500: the facts, the exchanges, intent to hold station with limited contact, complete the sky comparison, no commitments, request guidance; the Directive question stated open; 'I do not know what that ship is.' Then answer the Eldest himself: this ship has no world to give. Staff in the observation lounge at 1530 — the XO hears them first. Continue to do this right.",
@@ -231,11 +232,13 @@
       "the Sent have been told the light is a ship with Sent aboard who go to see and do not harm; the Cassini is still unnamed",
       "the Sent's question 'from where' stands unanswered; Picard is not ready to answer it and has said so to Lloyd",
       "the Eldest has spoken to the outsiders directly and asked for a world; the Sent heard it ask — Ossane heard the Eldest speak for them to strangers for the first time",
-      "Picard's report goes at 1500 (Command's reply ~1300 tomorrow at the earliest: hold contact to minimum; first-contact team nine days out)",
-      "Picard will tell the Eldest at 1500 that this ship has no world to give, unless Lloyd talks him out of it in the ready room first",
       "senior staff in the observation lounge at 1530: Vorrat, Prakash, Kask, Data; Lloyd chairs; Picard comes in after",
       "the sky image goes to astrometrics (ch'Rasseth) now; hours to match; the proper-motion dating is available to anyone who asks for it",
-      "Lloyd's sentence 'individual captains cannot replace a common directive with personal confidence in their own judgment' has landed on Picard as pointed; Lloyd may not know it did"
+      "Lloyd's sentence 'individual captains cannot replace a common directive with personal confidence in their own judgment' has landed on Picard as pointed; Lloyd may not know it did",
+      "1500 report sent. 1502 Picard told the Eldest this ship has no world to give. 1503 the Eldest asked for light (power). Lloyd has not been told; Data will tell him at 1530.",
+      "Ossane heard the Eldest ask strangers for a world, and then for light, without the Sent; in the model she asked it why. It said: the Sent must rest. First crack between navigator and Eldest.",
+      "Vorrat must file a yard report to the Shakedown Office for the departure from itinerary; she wants a name for it and blames the XO for the day",
+      "astrometrics (ch'Rasseth) has the sky; says four hours"
     ]
   },
   "serial_in_motion": [

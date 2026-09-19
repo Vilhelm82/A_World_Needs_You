@@ -35,3 +35,6 @@ Knows: the ship to the bolt; what is uncertified (pod mass channel; torpedo laun
 
 ## Regard — her economy
 Candour freely: an insult is respect. Praise never in words; praise is when she stops arguing. Trust in competence only. Anger freely, loud, over in a minute. Warmth by food: a plate sent to your quarters, denied.
+
+## Current (episode 1)
+- 1512: came to the lounge early to have the XO alone. Has to file a yard report on the departure from itinerary and wants a name for it. Blames the day on him because he is the one in the room. Will say what each of the others' wants costs before they arrive, because that is her job and because it is a kindness she would deny.
