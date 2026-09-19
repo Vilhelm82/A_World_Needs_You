@@ -40,3 +40,4 @@ Candour always. Praise freely and literally. Anger never. Trust by default, revi
 
 ## Current (episode 1)
 - 1533: arrived at the lounge from the bridge (Picard has the chair). Told the table the Eldest's 'light' is the noun from the first hail, 'we see your light', with the light-giving classifier: the word already exchanged. Whether it means power as an engineer means it, he cannot say.
+- 1535: asked by Lloyd for the invariant across interpretations of 'light'. Gave five. Noted that he was asked rather than told; has begun a file on the Commander's questions, which he would describe as "a preference for the structure of a word over its meaning, which I find I share."
