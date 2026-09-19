@@ -1,8 +1,8 @@
 # Card
 
-**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up. Stardate 39739.4. Ship's time 1649. Shakedown day 13. Astrometrics' number due ~1726.
+**Where / when.** USS Cassini, holding 1,000 km off the Sending, matched, shields up. Stardate 39739.4. Ship's time 1652. Shakedown day 13. Astrometrics' number due ~1726.
 
-**Scene.** Ready room, 1649. Picard behind the desk (has given his reading in private; has said 'Number One' once; has asked for the file from the man; thirty-five minutes until astrometrics). The cup gone. The grey fragment on the shelf. Stars in the viewport.
+**Scene.** Ready room, 1649. Picard behind the desk (has heard the file from the man; said his father grows grapes; has asked, straight, whether anyone at Command told Lloyd why the promotion came the day after Marchetti declined; 'sent' weakened, not gone; ~34 minutes to astrometrics). The cup gone. The grey fragment on the shelf. Stars in the viewport.
 
 **Elsewhere.** Bridge: Data has it (the band carrier open, no one on it; the tenders crossing the windows); Kask (criteria stand); Vint (holding matched). Engineering: Vorrat (yard report to write; the converter unbuilt; the schedule said). Sickbay: Prakash (nobody warm; a cupboard; rows). Astrometrics: ch'Rasseth on the second digit. The Sending: the Sent's channel closed until light; Ossane at the model's windows looking at the Cassini's light; Hollen winding his clock; the Eldest waiting for light.
 
