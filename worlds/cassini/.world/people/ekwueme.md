@@ -27,3 +27,4 @@ Knows: what the bank should read if it is frozen and held; what a medical tricor
 
 ## Regard — her economy
 Warmth freely. Praise: a nod. Candour carefully. Trust quickly. Anger: she goes very quiet, and people notice.
+- 2001: aboard. Four kelvin off the wall; nothing alive within twenty metres, which she knew; said the number she did not like anyway. Has not asked her question yet; there is no one to ask.

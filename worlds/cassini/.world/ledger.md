@@ -304,3 +304,9 @@ Append-only. Never cleared.
 - SAID — the Eldest, 1959: "The Eldest keeps its air. The lock is open." (true; it did not spend the twenty minutes.)
 - SAID — Picard, on comm: "Noted, Commander. It kept its air." (true.) Kask: "Shields down. Thirty. Now." Sorvanen: "In your own time, sir. Which is now." (true.)
 - MOVED — 2000: the second window running. The pad. The Sending's lock open on vacuum a thousand kilometres away.
+- DID — "Energise." → The beam; the lock chamber; the Eldest's question. Scene change, 2001. Distance: tell_them and stop nearer — aboard, forty metres from a panel; keep_them unchanged; leave far.
+- MOVED — 2000: the beam. 2001: the Sending, forward lock chamber. Vacuum; frost on every surface in the suit lamps; no gravity — the spin stopped long ago; hull temperature. Outer door shut. Inner door open on a dark corridor running aft. The enhancer standing on its tripod where the chief put it. Kask: "Shields up on the ship. Thirty seconds." Sorvanen, on comm: "Four of you, one shape each. Good."
+- SAID — Kask: no gravity; boots (true). The enhancer is ours; nobody moves it (true). Ekwueme: four kelvin off the wall; nothing alive within twenty metres, which she knew; "that's not a number I like" (true). Data: gravity nil; the spin stopped long ago (true).
+- MOVED — 2001: the suit lamps reach forty metres down the corridor. Frost; conduit; a closed hatch on the left at thirty metres; and at forty, on the right-hand wall, a small square panel with a lamp on it blinking amber.
+- SAID — the Eldest, 2001, on the band, relayed to the helmets: "The guests are in the Sending. The Eldest sees them." Then: "One of the guests does not breathe and is not cold. What is it?" (true; it asks.)
+- SAID — Picard, on comm: "We hear it, Commander. Your channel." (true.)
