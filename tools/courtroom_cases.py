@@ -25,7 +25,7 @@ RULES = {
     "R9": "Simulation: the case's jury size and agreement threshold are fixed before hearing. Jurors deliberate separately from counsel, may ask questions through the judge, and may genuinely deadlock. Apply agreement separately to each charge/claim. A split first ballot is not automatically a completed deadlock.",
     "R10": "Simulation: timely objection in flow mode may be made on the next player turn and is treated as made before the provisional answer. A sustained objection strikes that answer from decision packets. Strict mode pauses before the answer. Neither mechanism supplies the player's strategy.",
     "R11": "Simulation: routine scheduling, filing, jury empanelment, uncontested foundation and waiting are offstage. Play a procedural question when it changes evidence, rights or the next strategic choice. No clerical tax for entertainment.",
-    "R12": "Simulation: an engine mistake is corrected openly, never turned into a witness lie. A material authoring gap pauses the affected issue. Do not invent decisive historical facts during play. Disclose any real-law research additions equally and before reliance.",
+    "R12": "Simulation: an engine mistake is corrected openly, never turned into a witness lie. Missing authored knowledge pauses play. Never invent historical facts or infer significance from a technical pause. Disclose any real-law research additions equally and before reliance.",
 }
 
 
@@ -78,6 +78,8 @@ def configure(source: dict, style: str = "us-drama", forum: str = "jury", side: 
 def witness_scaffold(name: str) -> dict:
     """Author-owned placeholders, never manufactured biography or case facts."""
     return {'name': name, 'kind': 'witness', 'documents': [],
+            'uncertainty': {'scope_to_author': {'owner':'REPLACE: witness ID', 'kind':'never_knew',
+                'scope':'REPLACE: specific topic', 'account':'REPLACE: committed epistemic boundary'}},
             'knowledge': ['REPLACE: fixed personal observations and knowledge, independent of documents.'],
             'knowledge_basis': 'REPLACE: sources of knowledge and their limits.',
             'background': {key: 'REPLACE: ' + key for key in court.WITNESS_BACKGROUND_FIELDS},

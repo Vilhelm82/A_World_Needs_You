@@ -8,7 +8,7 @@ server environment, never this file or a case packet.
 from __future__ import annotations
 
 from collections.abc import Mapping
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import ipaddress
 import json
 from pathlib import Path
@@ -95,6 +95,10 @@ class RuntimeConfig:
     storage_root: Path
     allow_remote: bool = False
     auth_plugin: Path | None = None
+    grounding_sample_rate: float = 0.1
+    grounding_model: ModelConfig | None = None
+    coverage_models: Mapping[str, ModelConfig] = field(default_factory=dict)
+    amendment_max_attempts: int = 3
 
     @classmethod
     def load(cls, path):
@@ -105,7 +109,7 @@ class RuntimeConfig:
             raise c.CourtError('Cannot read runtime config as valid UTF-8 JSON.') from None
         c.require(isinstance(data, dict), 'Runtime config must be a JSON object.')
         _reject_credentials(data)
-        c.require(set(data) <= {'backend', 'base_url', 'defaults', 'roles', 'storage_root', 'allow_remote', 'auth_plugin'},
+        c.require(set(data) <= {'backend', 'base_url', 'defaults', 'roles', 'storage_root', 'allow_remote', 'auth_plugin', 'grounding', 'coverage', 'amendments'},
                   'Unknown runtime config fields.')
         backend = data.get('backend', 'opencode')
         c.require(backend == 'opencode', 'Runtime config backend must be opencode.')
@@ -133,7 +137,21 @@ class RuntimeConfig:
             c.require(auth_plugin.suffix in {'.js', '.mjs'} and auth_plugin.is_file() and
                       REPOSITORY not in auth_plugin.parents,
                       'auth_plugin must be an existing external JavaScript entry file.')
-        return cls(backend=backend, base_url=base_url,
+        grounding = data.get('grounding', {})
+        c.require(isinstance(grounding, dict) and set(grounding) <= {'sample_rate','model'}, 'Invalid grounding runtime settings.')
+        rate = grounding.get('sample_rate', 0.1)
+        c.require(type(rate) in {int,float} and 0 <= rate <= 1, 'Grounding sample_rate must be between 0 and 1.')
+        checker = _model(grounding['model']) if 'model' in grounding else None
+        coverage = data.get('coverage', {})
+        c.require(isinstance(coverage, dict) and set(coverage) <= {'examiner','blind_examiner','grader_a','grader_b','grader_c'},
+                  'Coverage models must name examiner, blind_examiner, grader_a, grader_b or grader_c.')
+        amendments=data.get('amendments',{})
+        c.require(isinstance(amendments,dict) and set(amendments)<={'max_attempts'},'Invalid amendment runtime settings.')
+        attempts=amendments.get('max_attempts',3)
+        c.require(type(attempts) is int and 1<=attempts<=5,'Amendment max_attempts must be an integer from 1 to 5.')
+        return cls(grounding_sample_rate=float(rate), grounding_model=checker, backend=backend, base_url=base_url,
+                   coverage_models=MappingProxyType({kind:_model(value) for kind,value in coverage.items()}),
+                   amendment_max_attempts=attempts,
                    defaults=MappingProxyType({kind: _model(value) for kind, value in defaults.items()}),
                    roles=MappingProxyType({identity: _model(value) for identity, value in roles.items()}),
                    storage_root=storage_root, allow_remote=allow_remote, auth_plugin=auth_plugin)
@@ -163,6 +181,24 @@ class RuntimeConfig:
                 assignments[identity] = model
         c.require(not missing, 'Missing model assignment for: ' + ', '.join(missing))
         return assignments
+
+    def grounding_assignments(self, case):
+        model = self.grounding_model or self.defaults.get('bench')
+        c.require(model is not None, 'Configure a grounding checker model or a bench default.')
+        return {'grounding_'+who: model for who in c.members(case,'witness')}
+
+    def amendment_assignments(self, case):
+        from courtroom_amendments import all_envelopes
+        envelopes=all_envelopes(case)
+        if not envelopes: return {}
+        from courtroom_rehearsal import assignments
+        result=assignments(case,self)
+        checker=self.grounding_model or self.defaults.get('bench')
+        c.require(checker is not None,'Amendments require a configured author/checker model.')
+        from courtroom_amendments import session_identity
+        for scope in envelopes.values():
+            for kind in ('author_1','author_2','author_3','checker'):result[session_identity(kind,scope)]=checker
+        return result
 
     @staticmethod
     def validate_models(assignments, catalog):

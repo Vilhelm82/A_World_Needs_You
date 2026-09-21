@@ -1,6 +1,6 @@
 // Audited with OpenCode 1.18.31. Optional provider plugins expose authentication only.
 import path from 'node:path';
-const SYSTEM = 'You are one isolated courtroom identity. Follow only the identity instructions and court packets supplied in this conversation. You have no tools or access to files, repositories, other sessions, or outside information. Return exactly one raw JSON object with text (string), data (object), and optional private_reasoning (brief fictional private notes, not hidden chain of thought) or authoring_gap as instructed by your identity packet. Do not use Markdown fences or surrounding prose.';
+const SYSTEM = 'You are one isolated courtroom identity. Follow only the identity instructions and court packets supplied in this conversation. You have no tools or access to files, repositories, other sessions, or outside information. Return exactly one raw JSON object with text (string), data (object), and optional private_reasoning (brief fictional private notes, not hidden chain of thought) or grounding or authoring_gap as instructed by your identity packet. Do not use Markdown fences or surrounding prose.';
 
 const deny = () => { throw new Error('Courtroom host rejected an unsafe operation.'); };
 const empty = value => value === undefined || (Array.isArray(value) ? value.length === 0 : value && typeof value === 'object' && Object.keys(value).length === 0);

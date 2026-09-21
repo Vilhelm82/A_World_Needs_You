@@ -37,7 +37,7 @@ or confident manners are not proxies for truth, guilt, or evidence strength.
 Implement `Backend` with a stable `backend_id` identifying the provider/account/store:
 
 - `create_session(identity, system_prompt, initial_packet, model_config=None) -> Session`
-- `send(session_id, request) -> {text, data, private_reasoning?, authoring_gap?}`
+- `send(session_id, request) -> {text, data, private_reasoning?, grounding?, authoring_gap?}`
 - `resume_session(session_id) -> Session`
 - `close_session(session_id)`
 - `healthcheck()` and `list_models()` for live backend discovery
@@ -52,14 +52,24 @@ and `relevant_activities`, plus committed memory limits, motives and manner, eve
 when no document contains those facts. These fields survive independent rebuilds
 and never enter another identity's initial packet.
 
-A witness may report missing material authoring with empty `text`, empty `data`,
+A witness may report missing authored knowledge with empty `text`, empty `data`,
 and a nonempty `authoring_gap` string, without private reasoning. It is not speech.
 The orchestrator records only a fixed player-facing engine gap notice, keeps the
 explanation in sealed identity history/audit, and pauses the case. It records no
 answer and will make no more role calls while paused, including after restart.
 Reported gaps cannot be mixed with testimony or used by a different role type.
-Authoring validation checks required fields and placeholders, not all possible
-semantic omissions; the host and role still must recognise unanticipated gaps.
+Readiness requires filled foundations plus the independent coverage rehearsal.
+Every witness gets five separate practice contexts: witness, informed examiner,
+blind examiner, grader A and grader B. Graders receive identical frozen answers and
+permitted sources, without peer assessments. The blind examiner sees only public
+setting and neutral role-template weights. Disputes use an optional sixth fresh
+session, grader C, with the identical frozen input and no peer assessments. Majority
+classification and hearing-plausibility stand. A three-way split returns a sealed
+patch target to a fresh pre-play author and requires a new rehearsal. No player ruling
+is requested. Human review is exceptional and requires `--reviewer-will-not-play`.
+The report preserves raw agreement rate, per-witness tiebreaker/split counts and
+per-family/probe-class counts.
+Its finite, fallible semantic checks do not cover every possible omission.
 Resume must return the same handle and identity. Report `SessionUnavailable` if safe
 resumption is impossible. Never attach a guessed, shared or different conversation.
 Adapters must declare independent persistent contexts and no ambient access. A backend
@@ -186,3 +196,60 @@ inferences or the truthfulness of speech. Corrections remain explicit. Fixed his
 entertainment pacing, either side, civil/criminal, bench/jury and US/NSW/custom styles
 remain intact. No filing queues, calendar simulation or jury-selection bureaucracy
 are introduced.
+
+## Grounding checks after speech
+
+The player may use `// ground` (latest heard witness answer) or `// ground T0123`.
+The corresponding CLI is `python3 tools/courtroom.py ground --target T0123 ...`.
+Private answers not heard by the player cannot be queried through this control.
+Sampling is independently drawn by the controller and persisted before recording
+the answer; an unfinished sampled check blocks further model answers and resumes
+after restart. Runtime `grounding.sample_rate` ranges from 0 to 1 (default 0.1).
+`grounding.model` optionally overrides the checker provider/model/reasoning;
+otherwise the bench default is used. Zero disables sampling, not the player control.
+
+Every check gets a fresh isolated technical context with only the witness's permitted
+sources at answer time, public rules, and the target question/answer. No global truth,
+other witness packet, later discovery or private player strategy is supplied. The
+checker returns supported, supported_uncertainty or missing_coverage plus source
+references. It cannot write replacement testimony. Authored uncertainty must cite
+an owned boundary. These references and the assessment request remain sealed.
+
+A failure appends a technical correction and pauses. The exact original answer stays
+in the journal; the answer and conservatively dependent intervening material are
+withdrawn from character packets. Affected sessions rebuild without their polluted
+private notes. Unaffected identities retain their sessions. Ballots/verdicts clear
+and decisions can be reopened after a grounded repair. Technical interruptions are
+not portrayed as hesitation, evasion or credibility evidence inside the scene.
+
+The checker is fallible. A pause or check result is a meta-signal the human cannot
+unlearn; this limitation is disclosed, not disguised. Checking supplements authoring
+depth and does not make it safe to improvise historical colour.
+
+## Amendment consistency exception
+
+The consistency checker previously saw only the target witness's packet. It now
+receives the precommitted `amendment_consistency[topic]` source selection for every
+witness, with irrelevant witnesses explicitly mapped to empty lists. References
+must exist in their named owner's initial packet, and the target's envelope anchors
+must all be included. Missing scope blocks commitment and amendment. The checker can
+therefore see another affected witness's committed account where the topic index
+includes it, without providing that account to the amended witness.
+
+This is a narrow exception to cross-identity secrecy for a fresh technical checker.
+It gets topic-scoped committed accounts, constraints and public rules; no global
+author-truth dump, unrelated facts, player side, live strategy, transcript or desired
+outcome. It produces pass/fail with reasons, never court speech or replacement facts,
+and is closed after each attempt. Its inputs and reasons are sealed. No other role
+or candidate author receives those extra excerpts.
+
+Each candidate has a separate fresh author session with identical blinded input.
+Failed sets retry with entirely fresh authors and a fresh checker, capped by runtime
+`amendments.max_attempts`. The sealed receipt records every completed attempt and
+the selection; exhausted attempts remain in sealed runtime state and leave play
+paused. Original commitments and discarded candidates remain preserved.
+
+Topic-index completeness is an authoring responsibility in this free-text format.
+The controller proves reference ownership and isolation, not semantic completeness
+or the checker's correctness. A future shared substrate may derive the scope from
+its projections; that substrate has not been implemented here.

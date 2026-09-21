@@ -13,7 +13,7 @@ from courtroom_backend import DeterministicBackend
 class DeltaTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
-        self.case=fixture();self.world=c.initialise(self.root,'delta',self.case)
+        self.case=fixture();self.world=c.initialise(self.root,'delta',self.case, allow_mock_rehearsal=True)
         self.backend=DeterministicBackend(self.root/'backend')
         self.runtime=s.Orchestrator.start(self.world,self.backend)
     def tearDown(self):self.tmp.cleanup()

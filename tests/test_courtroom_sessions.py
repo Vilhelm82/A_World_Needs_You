@@ -1,4 +1,5 @@
 """Exercise real isolated mock conversations, not just filtered packet values."""
+from coverage_fixture import certify
 import json
 from pathlib import Path
 import subprocess
@@ -18,7 +19,7 @@ class SessionTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name)
         self.case = fixture()
-        self.world = c.initialise(self.root, 'isolated', self.case)
+        self.world = c.initialise(self.root, 'isolated', self.case, allow_mock_rehearsal=True)
         self.backend = DeterministicBackend(self.root / 'backend')
     def tearDown(self):
         self.tmp.cleanup()
@@ -214,7 +215,7 @@ class SessionTests(unittest.TestCase):
 
     def test_jury_mixed_and_hung_outcomes_use_individual_ballots(self):
         case=fixture();case['counts']={'C1':{'label':'One','elements':['I1'],'bars':[]},'C2':{'label':'Two','elements':['I2'],'bars':[]}}
-        self.case=c.validate(case);self.world=c.initialise(self.root,'mixed',case)
+        self.case=c.validate(case);self.world=c.initialise(self.root,'mixed',certify(case), allow_mock_rehearsal=True)
         self.decision();r=self.start()
         for who in sorted(c.jurors(case)):self.queue(who,'Different views '+who,{'refs':[]})
         r.deliberate_round()
@@ -248,7 +249,7 @@ class SessionTests(unittest.TestCase):
             # Appearance/manner is a permitted identity attribute, not historical truth.
             role['manner']='VOICE_CANARY_'+who
             role['author_note']='HIDDEN_AUTHOR_METADATA_'+who
-        self.case=case;self.world=c.initialise(self.root,'canaries',case);r=self.start()
+        self.case=case;self.world=c.initialise(self.root,'canaries',certify(case), allow_mock_rehearsal=True);r=self.start()
         for who in r.state()['sessions']:
             history=self.history(who);own=s.role_for(who)
             self.assertIn('VOICE_CANARY_'+own,history)
@@ -327,7 +328,7 @@ class SessionTests(unittest.TestCase):
         self.assertEqual(c.verify(self.world)['status'],'PASS')
 
     def test_bench_decision_is_generated_only_by_merits_session(self):
-        self.case=fixture('civil','bench');self.world=c.initialise(self.root,'bench-runtime',self.case)
+        self.case=fixture('civil','bench');self.world=c.initialise(self.root,'bench-runtime',self.case, allow_mock_rehearsal=True)
         self.hearing();self.add(event('phase',to='closing'));self.add(event('phase',to='decision'))
         r=self.start();self.queue('judge_merits','Record-based judgment',{'findings':self.findings(),'outcomes':{'C1':'not_liable'}})
         r.turn('judge_merits','verdict',sorted(c.CORE))
@@ -370,7 +371,7 @@ class SessionTests(unittest.TestCase):
         self.start()
         script=self.root/'script.json';script.write_text(json.dumps({'W9':[{'text':'CLI_EXACT','data':{}}]}))
         # CLI mock storage uses this conventional per-world backend directory.
-        other=c.initialise(self.root,'cli-turn',self.case)
+        other=c.initialise(self.root,'cli-turn',self.case, allow_mock_rehearsal=True)
         for args in [['start'],['turn','--identity','W9','--kind','dialogue','--audience','W9','player','--script',str(script)]]:
             run=subprocess.run([sys.executable,str(Path(s.__file__)),*args,'--root',str(self.root),'--world','cli-turn','--backend','mock','--allow-mock'],capture_output=True,text=True)
             self.assertEqual(run.returncode,0,run.stderr)

@@ -155,7 +155,8 @@ that was not authored, it returned an authoring gap; the controller recorded onl
 an engine notice, paused, and produced no witness answer. This is one successful
 live regression exercise, not proof that every model will recognise every omission.
 
-The readiness gate checks required structure and obvious placeholders. Semantic
-coherence and adequate detail still require the pre-commitment authoring review.
+At that earlier checkpoint, readiness checked required structure and obvious
+placeholders only. The subsequent grounding build adds a mandatory independent
+coverage rehearsal; see the staged reports for its thresholds and limitations.
 Existing Last Light world and staging files were preserved byte-for-byte; no
 replacement hearing was created and no missing historical fact was backfilled.

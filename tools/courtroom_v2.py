@@ -40,8 +40,11 @@ FIELDS = {
     "directions": {"rule"}, "jury_question": {"refs"},
     "deliberation": {"refs"}, "ballot": {"findings"},
     "deadlock": {"counts"}, "verdict": {"outcomes", "findings", "awards"},
-    "erratum": {"target", "replacement"}, "gap": {"detail"},
-    "repair": set(), "checkpoint": {"scene"}, "cadence": {"mode"},
+    "erratum": {"target", "replacement", "grounding", "witness"}, "gap": {"detail", "witness", "delivered_sources"},
+    "amendment_choice": {"topic", "fault", "mode"},
+    "amendment": {"revision", "parent"},
+    "grounding_check": {"target", "result", "trigger"},
+    "repair": {"resolution"}, "checkpoint": {"scene"}, "cadence": {"mode"},
     "unseal": {"confirmed"},
 }
 
@@ -223,7 +226,7 @@ WITNESS_BACKGROUND_FIELDS = ('life_history', 'occupation', 'training_and_qualifi
 WITNESS_ACTIVITY_FIELDS = ('description', 'purpose', 'actions', 'tools_and_materials', 'authority', 'limits')
 
 
-def validate_readiness(case: dict) -> dict:
+def validate_foundation(case: dict) -> dict:
     """New-play gate; legacy structural validation remains available for saved records.
 
 Presence and placeholder checks cannot establish semantic completeness. Authors
@@ -250,11 +253,25 @@ must still review foundation questions against the witness's committed history.
             require(authored(role.get(key)), who + ': author ' + key + ' before play.')
         require(role['knowledge'] and all(authored(item) for item in role['knowledge']),
                 who + ': author personal knowledge before play.')
+        from courtroom_grounding import validate_uncertainty
+        validate_uncertainty(who, role)
+    from courtroom_amendments import envelope
+    require(isinstance(case.get('amendment_envelopes',{}),dict),'Invalid amendment envelopes.')
+    for topic in case.get('amendment_envelopes',{}): envelope(case,topic)
     return case
 
 
-def initialise(root: Path, name: str, case: dict) -> Path:
-    validate_readiness(case)
+def validate_readiness(case: dict, *, allow_mock=True) -> dict:
+    validate_foundation(case)
+    from courtroom_rehearsal import validate_report
+    validate_report(case, allow_mock=allow_mock)
+    from courtroom_amendments import validate_scopes
+    validate_scopes(case)
+    return case
+
+
+def initialise(root: Path, name: str, case: dict, *, allow_mock_rehearsal=False) -> Path:
+    validate_readiness(case, allow_mock=allow_mock_rehearsal)
     world = world_path(root, name)
     require(not world.exists(), "World already exists. Resume it; do not replace its case.")
     world.parent.mkdir(parents=True, exist_ok=True)
@@ -295,7 +312,7 @@ def read_events(world: Path) -> list[dict]:
 
 
 def initial_state(case: dict) -> dict:
-    return {"phase": "conference", "pending": None, "paused": False, "directions": False,
+    return {"history_mode":"strict", "amendments":[], "phase": "conference", "pending": None, "paused": False, "directions": False,
             "jury_present": False, "cadence": "flow" if case["config"]["pace"] == "drama" else "strict",
             "ballots": {}, "deadlocked": [], "verdict": None, "unsealed": False,
             "corrections": {}, "struck": [], "answers": {}, "published": [], "scene": {},
@@ -368,9 +385,9 @@ def apply(state: dict, e: dict, earlier: list[dict], case: dict) -> None:
     if kind in court:
         require(CORE <= heard, "Court events must reach both counsel and bench.")
     if state["paused"]:
-        require(kind in {"erratum", "gap", "repair", "checkpoint", "private"}, "Resolve the recorded simulation error before play continues.")
+        require(kind in {"erratum", "gap", "repair", "checkpoint", "private", "grounding_check", "amendment_choice", "amendment"}, "Resolve the recorded simulation error before play continues.")
     if state["phase"] == "closed":
-        require(kind in {"private", "dialogue", "checkpoint", "unseal", "erratum", "gap", "repair"}, "The case is closed.")
+        require(kind in {"private", "dialogue", "checkpoint", "unseal", "erratum", "gap", "repair", "grounding_check", "amendment_choice", "amendment"}, "The case is closed.")
     if actor in panel:
         require(kind in {"ballot", "deliberation"}, "Jurors only speak in sealed deliberation; use the foreperson in court.")
     if actor == "foreperson":
@@ -553,6 +570,26 @@ def apply(state: dict, e: dict, earlier: list[dict], case: dict) -> None:
                 require(amount == 0 or result[k] == "liable", "No damages without liability.")
         require(data.get("outcomes") == result, "Verdict must match findings and the committed agreement rule.")
         state["verdict"] = {"turn": e["id"], "outcomes": result, "text": e["text"], "awards": data.get("awards", {})}
+    elif kind == 'amendment_choice':
+        require(actor=='player' and heard=={'player'} and state['paused'] and data.get('mode')=='amended',
+                'Explicit player choice of amended continuation is required while paused.')
+        from courtroom_amendments import envelope
+        envelope(effective_case(case,earlier),data.get('topic'))
+        faults=[x for x in earlier if x['type'] in {'gap','erratum'}]
+        require(faults and faults[-1]['id']==data.get('fault'),'Choose the current paused fault.')
+        state['history_mode']='amended'
+    elif kind == 'amendment':
+        require(actor=='engine' and heard=={'player'},'Amendments are labelled technical events.')
+        from courtroom_amendments import validate_receipt
+        revision=validate_receipt(case,earlier,e,state)
+        state['amendments'].append(revision)
+        state['paused']=False;state['phase']='evidence';state['directions']=False;state['pending']=None
+        state['ballots']={};state['deadlocked']=[];state['verdict']=None
+    elif kind == 'grounding_check':
+        require(actor == 'engine' and heard <= {'player'} and data.get('result') in
+                {'supported','supported_uncertainty','missing_coverage'} and data.get('trigger') in {'player','sample'}
+                and any(x['id']==data.get('target') and x['actor'] in members(case,'witness') for x in earlier),
+                'Invalid technical grounding check.')
     elif kind in {"erratum", "gap"}:
         require(actor == "engine", "Simulation faults are recorded by the controller.")
         if kind == "erratum":
@@ -564,7 +601,7 @@ def apply(state: dict, e: dict, earlier: list[dict], case: dict) -> None:
                 if answer["turn"] == target["id"]:
                     state["corrections"][qid] = e["id"]
         else:
-            require(text(data.get("detail")), "Record the material authoring gap.")
+            require(text(data.get("detail")), "Record the grounding fault.")
         state["paused"] = True
         state["pending"] = None
         state["ballots"] = {}
@@ -572,6 +609,9 @@ def apply(state: dict, e: dict, earlier: list[dict], case: dict) -> None:
         state["verdict"] = None
     elif kind == "repair":
         require(actor == "engine" and state["paused"], "No recorded fault to repair.")
+        require(heard == {'player'}, 'Repair is a technical notice to the player only.')
+        from courtroom_grounding import validate_resolution
+        validate_resolution(case, earlier, data.get('resolution'))
         state["paused"] = False
         state["phase"] = "evidence"
         state["directions"] = False
@@ -594,9 +634,15 @@ def replay(case: dict, events: list[dict]) -> dict:
     return state
 
 
+def effective_case(case: dict, events: list[dict]) -> dict:
+    from courtroom_amendments import effective
+    return effective(case, events)
+
+
 def packet_from(case: dict, events: list[dict], role: str, merits: bool = False, state: dict | None = None) -> dict:
     require(role in case["roles"], "Unknown role.")
     state = replay(case, events) if state is None else state
+    case = effective_case(case, events)
     panel = jurors(case)
     factfinder = role == "bench" or role in panel
     merits = merits or role in panel
@@ -670,8 +716,8 @@ def projections(case: dict, events: list[dict]) -> dict[Path, bytes]:
     out = {
         AREA / "live.json": encode(state),
         Path(".world/state.md"): (f"# Courtroom v2\n\n{case['title']}\nPhase: {state['phase']}\nCadence: {state['cadence']}\n"
-             f"Pending: {json.dumps(state['pending'])}\nLast event: {events[-1]['id'] if events else 'none'}\nPaused: {state['paused']}\n"
-             f"Scene: {json.dumps(state['scene'], ensure_ascii=False)}\nLoad role packets before speech. Never invent a missing material fact.\n").encode(),
+             f"History mode: {state['history_mode']}\nPending: {json.dumps(state['pending'])}\nLast event: {events[-1]['id'] if events else 'none'}\nPaused: {state['paused']}\n"
+             f"Scene: {json.dumps(state['scene'], ensure_ascii=False)}\nLoad role packets before speech. Never invent missing historical knowledge.\n").encode(),
         PUBLIC / "transcript.md": transcript(public, "Exact court record; corrections remain explicit"),
         PUBLIC / "private-record.md": transcript(private, "Counsel's private record, not evidence"),
         PUBLIC / "brief.md": case["brief"].encode(),
@@ -780,7 +826,7 @@ def main() -> int:
             require(args.case is not None, "Supply a fully authored case with --case. No single-case hidden default.")
             case = validate_readiness(load(args.case))
             if args.command == "validate":
-                print("Case structure and witness foundation PASS; semantic authoring review remains required.")
+                print("Case foundation and coverage rehearsal PASS; semantic checks remain fallible.")
             else:
                 raise CourtError("Live startup requires an independent-session backend via tools/courtroom.py; init cannot start a shared-context court.")
         elif args.command == "packet":

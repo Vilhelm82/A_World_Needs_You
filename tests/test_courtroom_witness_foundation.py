@@ -9,6 +9,7 @@ import unittest
 from unittest.mock import patch
 
 from test_courtroom_v2 import fixture, event
+from coverage_fixture import certify
 import courtroom_v2 as c
 import courtroom_sessions as s
 import courtroom_cases as builder
@@ -26,20 +27,43 @@ class WitnessFoundationTests(unittest.TestCase):
         self.tmp.cleanup()
 
     def start(self):
-        self.world = c.initialise(self.root, 'court', self.case)
+        self.world = c.initialise(self.root, 'court', self.case, allow_mock_rehearsal=True)
         self.runtime = s.Orchestrator.start(self.world, self.backend)
         return self.runtime
+
+    def test_uncertainty_boundary_must_be_authored_and_owned_by_its_witness(self):
+        self.case['roles']['W9']['uncertainty'] = {
+            'sound': {'owner':'WitnessX', 'kind':'cannot_recall', 'scope':'incidental sounds',
+                      'account':'Does not recall them.'}}
+        with self.assertRaisesRegex(c.CourtError, 'uncertainty.*owner'):
+            c.validate_foundation(self.case)
+
+    def test_unrecorded_boundary_cannot_be_claimed_by_response(self):
+        r = self.start()
+        self.backend.queue('W9', {'text':'I cannot recall.', 'data':{},
+                                  'grounding':{'refs':[], 'boundaries':['missing']}})
+        with self.assertRaisesRegex(c.CourtError, 'boundary'):
+            r.turn('W9', 'dialogue', ['player','W9'])
+        self.assertEqual(c.read_events(self.world), [])
+
+    def test_authored_uncertainty_metadata_is_private_and_owned(self):
+        r = self.start()
+        self.backend.queue('W9', {'text':'I cannot recall the incidental sounds.', 'data':{},
+            'grounding':{'refs':['W9.memory'], 'boundaries':['sounds']}})
+        r.turn('W9','dialogue',['player','W9'])
+        self.assertNotIn('grounding', c.read_events(self.world)[0])
+        self.assertEqual(r.state()['audit'][-1]['response']['grounding']['boundaries'], ['sounds'])
 
     def test_missing_personal_background_cannot_create_world(self):
         del self.case['roles']['W9']['background']
         with self.assertRaisesRegex(c.CourtError, 'W9.*background'):
-            c.initialise(self.root, 'incomplete', self.case)
+            c.initialise(self.root, 'incomplete', self.case, allow_mock_rehearsal=True)
         self.assertFalse((self.root / 'worlds' / 'incomplete').exists())
 
     def test_legacy_underwritten_world_cannot_open_model_sessions(self):
         del self.case['roles']['W9']['background']
-        with patch.object(c, 'validate_readiness', side_effect=c.validate):
-            world = c.initialise(self.root, 'legacy', self.case)
+        with patch.object(c, 'validate_readiness', side_effect=lambda case, **kwargs: c.validate(case)):
+            world = c.initialise(self.root, 'legacy', self.case, allow_mock_rehearsal=True)
         with self.assertRaisesRegex(c.CourtError, 'background'):
             s.Orchestrator.start(world, self.backend)
         self.assertEqual(list(self.backend.directory.glob('*.json')), [])
@@ -83,6 +107,7 @@ class WitnessFoundationTests(unittest.TestCase):
     def test_personal_background_routes_only_to_its_witness_and_survives_rebuild(self):
         self.case['roles']['W9']['background']['life_history'] = 'W9_PRIVATE_BACKGROUND_581'
         self.case['roles']['WitnessX']['background']['life_history'] = 'WX_PRIVATE_BACKGROUND_274'
+        certify(self.case)
         r = self.start()
         for who, entry in r.state()['sessions'].items():
             history = json.dumps(self.backend.inspect(entry['session_id']))

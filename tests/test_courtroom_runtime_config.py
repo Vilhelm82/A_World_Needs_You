@@ -32,6 +32,33 @@ class RuntimeConfigTests(unittest.TestCase):
         self.path.write_text(json.dumps(data), encoding='utf-8')
         return RuntimeConfig.load(self.path)
 
+    def test_grounding_sampling_and_checker_assignment(self):
+        cfg=self.config(grounding={'sample_rate':0.25,'model':{'provider':'p','model':'checker','reasoning':'medium'}})
+        self.assertEqual(cfg.grounding_sample_rate,0.25)
+        self.assertEqual(cfg.grounding_assignments(self.case)['grounding_W9'],ModelConfig('p','checker','medium'))
+        for rate in (-0.1,1.1,True,'0.5',None):
+            with self.subTest(rate=rate),self.assertRaises(c.CourtError):self.config(grounding={'sample_rate':rate})
+
+    def test_coverage_grader_models_can_be_configured_independently(self):
+        from courtroom_rehearsal import assignments
+        cfg=self.config(coverage={'grader_a':{'provider':'first','model':'a','reasoning':'high'},
+                                  'grader_b':{'provider':'second','model':'b','reasoning':'medium'},
+                                  'grader_c':{'provider':'third','model':'c','reasoning':'high'}})
+        models=assignments(self.case,cfg)
+        self.assertEqual(models['coverage_grader_a_W9'],ModelConfig('first','a','high'))
+        self.assertEqual(models['coverage_grader_b_W9'],ModelConfig('second','b','medium'))
+        self.assertEqual(models['coverage_grader_c_W9'],ModelConfig('third','c','high'))
+        self.assertEqual(models['coverage_blind_examiner_W9'],cfg.defaults['bench'])
+        self.assertEqual(models['W9'],cfg.defaults['witness'])
+        for value in ([],{'grader':{'provider':'p','model':'m'}},{'grader_a':{'provider':'p','token':'DO_NOT_ECHO'}}):
+            with self.subTest(value=value),self.assertRaises(c.CourtError):self.config(coverage=value)
+
+    def test_amendment_attempt_limit_is_bounded_configuration(self):
+        self.assertEqual(self.config(amendments={'max_attempts':2}).amendment_max_attempts,2)
+        self.assertEqual(self.config().amendment_max_attempts,3)
+        for value in (0,-1,6,True,'2',2.5):
+            with self.subTest(value=value),self.assertRaises(c.CourtError):self.config(amendments={'max_attempts':value})
+
     def test_defaults_resolve_every_identity_without_mutating_case(self):
         before = deepcopy(self.case)
         cfg = self.config()

@@ -116,3 +116,14 @@ arrangement. Immutable case error means a disclosed restart, not editing a live 
 
 `unseal` requires closure, player-only audience and `confirmed:true`. The user must
 actually have confirmed after a spoiler warning. It exports only this case.
+
+### Grounding fault repair
+
+Bare `repair` is rejected. Its `data.resolution` names `kind`, `fault` (latest
+fault event), `witness` (owner of the sources), and nonempty permitted `refs`.
+`delivery_repair` additionally proves the sources were absent from the recorded
+original delivery. `supported_resolution` cites existing personal facts, legitimately
+received material or authored boundaries; it cannot supply new facts. The controller
+checks source existence/allocation; semantic entailment remains a reviewed claim.
+Repair notices reach the player only and reopen evidence/decision opportunities.
+Amendments use the explicit amendment workflow, never a made-up repair basis.

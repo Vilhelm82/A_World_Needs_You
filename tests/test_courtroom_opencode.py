@@ -11,6 +11,7 @@ from unittest.mock import patch
 
 from test_courtroom_v2 import fixture, event
 import courtroom_v2 as c
+import courtroom_rehearsal as rehearsal
 import courtroom_sessions as s
 from courtroom_backend import SessionUnavailable
 from courtroom_runtime_config import RuntimeConfig, ModelConfig
@@ -83,10 +84,10 @@ class OpenCodeTests(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
         cfgpath=self.root/'config.json'
-        cfgpath.write_text(json.dumps({'backend':'opencode','storage_root':str(self.root/'store'),
+        cfgpath.write_text(json.dumps({'backend':'opencode','grounding':{'sample_rate':0},'storage_root':str(self.root/'store'),
             'defaults':{kind:{'provider':'arbitrary','model':'arbitrary-model'}
                         for kind in ('witness','juror','counsel','bench','support')}}))
-        self.cfg=RuntimeConfig.load(cfgpath);self.case=fixture()
+        self.cfg=RuntimeConfig.load(cfgpath);self.case=fixture();self.case['coverage_rehearsal']['mock']=False;rehearsal.seal_report(self.case['coverage_rehearsal'])  # Fake transport assessment, not a live result.
         self.transport=FakeTransport()
         self.host={'nonce':'test','instance':'persistent-test','version':'1.18.31','base_url':self.cfg.base_url,'plugin_uri':'file:///test/bundled-guard.js'}
         self.hostpatch=patch.object(o,'verify_host',return_value=self.host);self.hostpatch.start()
@@ -98,7 +99,7 @@ class OpenCodeTests(unittest.TestCase):
         self.transport.config['plugin']=[self.host['plugin_uri']]
     def start(self):
         self.backend.preflight()
-        self.world=c.initialise(self.root,'court',self.case)
+        self.world=c.initialise(self.root,'court',self.case, allow_mock_rehearsal=True)
         self.runtime=s.Orchestrator.start(self.world,self.backend)
         return self.runtime
     def queue(self,text='Statement',data=None,private=''):
@@ -280,7 +281,7 @@ class OpenCodeTests(unittest.TestCase):
         self.assertNotIn('documents',packet)
 
     def test_jury_round_and_ballots_use_individual_provider_sessions(self):
-        self.world=c.initialise(self.root,'court',self.case)
+        self.world=c.initialise(self.root,'court',self.case, allow_mock_rehearsal=True)
         for e in [event('phase',to='opening'),event('phase',to='evidence'),
                   event('publish','bench',sorted(c.CORE|c.jurors(self.case)),document='E1'),
                   event('phase',to='closing'),event('directions','bench',sorted(c.CORE|c.jurors(self.case)),rule='R1'),

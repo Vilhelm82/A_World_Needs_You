@@ -61,12 +61,13 @@ unless you need to author/test them. Do not surface sealed material in tool narr
 
 Validate, review and commit the case before the first substantive player theory:
 
-    python3 tools/courtroom_v2.py validate --case .court-build/<name>/case.json
+    python3 tools/courtroom.py rehearse --case .court-build/<name>/case.json --out .court-build/<name>/rehearsed.json --config /private/runtime.json
+    python3 tools/courtroom_v2.py validate --case .court-build/<name>/rehearsed.json
     # Start through Orchestrator.start(world, a_conforming_backend).
     # The old init command cannot start play without an isolated-session backend.
 
-Validation checks structure, not historical plausibility, legal completeness or
-entertainment. Start the required runtime described in `docs/courtroom-sessions.md`.
+Readiness requires the independent witness coverage rehearsal as well as structural
+validation. It does not prove historical plausibility, legal completeness or entertainment. Start the required runtime described in `docs/courtroom-sessions.md`.
 If no conforming backend is available, stop clearly; do not act out the roles yourself.
 Route the neutral brief and player packet to the human. A support session opens a useful
 client conference, or directly at the requested hearing stage, with a concrete line
@@ -193,10 +194,11 @@ claim about all NSW or US trials.
 A witness can correct a genuine prewritten memory mistake or maintain a prewritten
 false account. A model continuity mistake is instead an `erratum`; preserve the
 original text, stop relying on it, explain the correction outside fiction and
-restore the affected opportunity. A missing material fact is a `gap`, not licence
+restore the affected opportunity. Missing authored knowledge is a `gap`, not licence
 to invent an answer tailored to the player's theory. Neither produces a player
-victory or penalty. Resolve only from committed material; otherwise openly suspend
-that part as unsuitable for assessment and agree a repair or separate practice run.
+victory or penalty. Strict fixed-case play resolves only from committed material. A player may explicitly
+choose a labelled amended continuation through the constrained amendment workflow;
+otherwise suspend or rebuild. A bare repair is rejected.
 
 The witness's `authoring_gap` response is an out-of-character fault signal, never
 dialogue. The runtime records a neutral engine notice and pauses before any answer.
@@ -206,6 +208,7 @@ that turn a system limitation into adverse evidence. State the fault plainly.
 An authored limitation or motive is different: genuine uncertainty and deliberate
 evasion may be played when grounded in that identity's committed packet.
 
+`// ground` or `// ground T0123`: check a recorded witness answer heard by the player.
 `// procedure`: explain supplied rules, not strategy. `// record`: retrieve exact
 received evidence/words. `// prepare`: private to the player. `// faster`/`// slower`:
 change narration; flow/strict switches are logged between exchanges. `// pause` and

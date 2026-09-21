@@ -238,3 +238,46 @@ Primary references: [headless server API](https://opencode.ai/docs/server/),
 [pinned request assembly and permission filtering](https://github.com/anomalyco/opencode/blob/v1.18.31/packages/opencode/src/session/llm/request.ts),
 [pinned agent permissions](https://github.com/anomalyco/opencode/blob/v1.18.31/packages/opencode/src/agent/agent.ts),
 and [pinned session prompt lifecycle](https://github.com/anomalyco/opencode/blob/v1.18.31/packages/opencode/src/session/prompt.ts).
+
+### Rehearse before starting a newly authored case
+
+```bash
+python3 tools/courtroom.py rehearse --case /private/draft.json --out /private/rehearsed.json --config "$HOME/.config/courtroom/runtime.json"
+python3 tools/courtroom.py backend-check --case /private/rehearsed.json --config "$HOME/.config/courtroom/runtime.json"
+python3 tools/courtroom.py start --world new-case --case /private/rehearsed.json --config "$HOME/.config/courtroom/runtime.json"
+```
+
+The first command makes real isolated model calls and may consume provider usage.
+It prints counts only; answers and private backgrounds stay in the sealed output.
+It uses the witness assignments, two examiners and two independent graders. By
+default, the examiners and grader A use the bench model and grader B uses the counsel
+model (falling back to the bench model if absent). A third grader is called only on
+disagreement, using the support default (otherwise bench). All have separate sessions, even
+when models match. Optional runtime `coverage` settings override `examiner`,
+`blind_examiner`, `grader_a`, `grader_b` and `grader_c`, each with the usual provider/model and
+optional reasoning fields. Configured models are checked against OpenCode's catalog.
+There is no provider-specific model policy. Different models can reduce some shared
+errors but do not make grading infallible.
+
+A failed rehearsal saves its report but exits unsuccessfully; its output cannot
+start play. Partial reports are checkpointed with owner-only file permissions.
+Disagreements normally use the third independent grader automatically. Three-way
+splits return sealed author patch targets and block commitment pending re-authoring
+and a complete new rehearsal. The player receives counts only. Exceptional human
+review is restricted to a reviewer who will not play the case, without backend calls:
+
+```bash
+python3 tools/courtroom.py coverage-rule --case /private/rehearsed.json \
+  --rulings /private/human-rulings.json --out /private/reviewed.json \
+  --confirm-human-review --reviewer-will-not-play
+```
+
+The ruling schema and unchanged 100% threshold are documented in
+[authoring](../modules/courtroom-v2/authoring.md#mandatory-coverage-rehearsal-before-commitment).
+This command must record actual nonplaying-human decisions.
+
+Amendments use three independent fresh authors per attempt and a fresh technical
+consistency checker. Runtime `amendments: {"max_attempts": 3}` caps rejected sets
+(allowed values 1–5). Candidate and checker models use the grounding-model override
+or bench default; no provider names are hardcoded. Rehearsal summaries report counts
+of author-declared and rehearsal-derived amendment envelopes separately.

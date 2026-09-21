@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 import courtroom_v2 as c
 import courtroom_cases as builder
+from coverage_fixture import certify
 
 
 def fixture(kind='criminal', forum='jury', side=None, style='us-drama', pace='drama', n=3, threshold=None):
@@ -30,6 +31,8 @@ def fixture(kind='criminal', forum='jury', side=None, style='us-drama', pace='dr
     for who, role in case['roles'].items():
         if role['kind'] != 'witness':
             continue
+        role['uncertainty'] = {'sounds': {'owner':who, 'kind':'cannot_recall',
+            'scope':'Incidental sounds during the stock count.', 'account':'Cannot recall incidental sounds; recalls counting.'}}
         role.update(background={
             'life_history': who + ' lives in the artificial fixture town and works at its archive.',
             'occupation': 'Archive attendant who checks public reading-room supplies.',
@@ -55,7 +58,7 @@ def fixture(kind='criminal', forum='jury', side=None, style='us-drama', pace='dr
     case['counts'] = {'C1':{'label':'Artificial charge/claim','elements':['I1','I2'],'bars':[]}}
     if kind == 'civil': case['counts']['C1']['remedy']={'currency':'test units','maximum':100}
     case = builder.configure(case,style,forum,side,pace,n,threshold)
-    return c.validate(case)
+    return certify(c.validate(case))
 
 
 def event(kind, actor='engine', audience=None, text='Artificial test event.', **data):
@@ -67,7 +70,7 @@ class CourtroomV2Tests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name)
         self.case = fixture()
-        self.world = c.initialise(self.root,'test-court',self.case)
+        self.world = c.initialise(self.root,'test-court',self.case, allow_mock_rehearsal=True)
     def tearDown(self): self.tmp.cleanup()
     def add(self, e): return c.record(self.world,e,_fixture=True)
     def state(self): return c.replay(c.read_case(self.world),c.read_events(self.world))
@@ -106,7 +109,7 @@ class CourtroomV2Tests(unittest.TestCase):
         outcomes=c.aggregate(self.case,self.state()['ballots'])
         return self.add(event('verdict','foreperson',self.audience(),outcomes=outcomes))
     def bench_world(self,kind='criminal'):
-        self.case=fixture(kind,'bench');self.world=c.initialise(self.root,'bench-case',self.case)
+        self.case=fixture(kind,'bench');self.world=c.initialise(self.root,'bench-case',self.case, allow_mock_rehearsal=True)
 
     def test_full_configuration_matrix(self):
         # 48 independent combinations; forum does not imply civil or local law.
@@ -118,7 +121,7 @@ class CourtroomV2Tests(unittest.TestCase):
                         for pace in ('drama','deliberate'):
                             with self.subTest(kind=kind,forum=forum,style=style,side=side,pace=pace):
                                 case=fixture(kind,forum,side,style,pace)
-                                w=c.initialise(self.root,f'matrix-{n}',case);n+=1
+                                w=c.initialise(self.root,f'matrix-{n}',case, allow_mock_rehearsal=True);n+=1
                                 self.assertEqual(c.verify(w)['status'],'PASS')
                                 self.assertEqual(c.read_case(w)['config']['player_side'],side)
         self.assertEqual(n,48)
@@ -177,10 +180,10 @@ class CourtroomV2Tests(unittest.TestCase):
         self.add(event('private','player',['player'],text='A forceful new theory'))
         self.assertEqual(before,(self.world/c.AREA/'case.json').read_bytes())
     def test_init_never_overwrites(self):
-        with self.assertRaises(c.CourtError):c.initialise(self.root,'test-court',self.case)
+        with self.assertRaises(c.CourtError):c.initialise(self.root,'test-court',self.case, allow_mock_rehearsal=True)
     def test_unrelated_world_not_overwritten(self):
         w=self.root/'worlds/unrelated';w.mkdir();(w/'keep').write_text('unchanged')
-        with self.assertRaises(c.CourtError):c.initialise(self.root,'unrelated',self.case)
+        with self.assertRaises(c.CourtError):c.initialise(self.root,'unrelated',self.case, allow_mock_rehearsal=True)
         self.assertEqual((w/'keep').read_text(),'unchanged')
     def test_path_traversal_and_symlink_rejected(self):
         for name in ('../oops','/tmp/foo','a/b','Upper',''):
@@ -355,13 +358,13 @@ class CourtroomV2Tests(unittest.TestCase):
         self.add(event('verdict','foreperson',self.audience(),outcomes={'C1':'hung'}))
         self.assertEqual(self.state()['verdict']['outcomes']['C1'],'hung')
     def test_threshold_not_necessarily_unanimity(self):
-        self.case=fixture(threshold=2);self.world=c.initialise(self.root,'threshold-case',self.case)
+        self.case=fixture(threshold=2);self.world=c.initialise(self.root,'threshold-case',self.case, allow_mock_rehearsal=True)
         self.publish();self.go('decision')
         for j in sorted(c.jurors(self.case)):self.ballot(j,j!='J01')
         self.add(event('verdict','foreperson',self.audience(),outcomes={'C1':'guilty'}))
     def test_split_outcomes_by_count(self):
         x=fixture();x['counts']={'C1':dict(label='First',elements=['I1'],bars=[]),'C2':dict(label='Second',elements=['I2'],bars=[])}
-        self.case=c.validate(x);self.world=c.initialise(self.root,'mixed',x);self.publish();self.go('decision')
+        self.case=c.validate(x);self.world=c.initialise(self.root,'mixed',certify(x), allow_mock_rehearsal=True);self.publish();self.go('decision')
         for j in sorted(c.jurors(x)):
             f=self.findings(True);f['I2']=self.findings(False)['I2'];self.add(event('ballot',j,[j],findings=f))
         self.add(event('verdict','foreperson',self.audience(),outcomes={'C1':'guilty','C2':'not_guilty'}))
@@ -415,7 +418,8 @@ class CourtroomV2Tests(unittest.TestCase):
     def test_repair_reopens_opportunities_and_clears_decision(self):
         self.verdict(False);t=self.state()['verdict']['turn']
         self.add(event('erratum','engine',self.audience(),target=t,replacement='Review required.'))
-        self.add(event('repair','engine',self.audience()))
+        self.add(event('repair','engine',['player'],resolution={'kind':'supported_resolution',
+            'fault':c.read_events(self.world)[-1]['id'], 'witness':'bench', 'refs':['document:E1']}))
         self.assertEqual(self.state()['phase'],'evidence');self.assertIsNone(self.state()['verdict'])
         self.assertFalse((self.world/c.AREA/'decision-record.json').exists())
     def test_stale_revision_and_boolean_rejected(self):
@@ -470,7 +474,7 @@ class CourtroomV2Tests(unittest.TestCase):
         c.validate(x);self.assertEqual(x['config']['style'],'us-drama')
     def test_partial_hung_and_resolved_counts(self):
         x=fixture();x['counts']={'C1':dict(label='First',elements=['I1'],bars=[]),'C2':dict(label='Second',elements=['I2'],bars=[])}
-        self.case=c.validate(x);self.world=c.initialise(self.root,'partial-hung',x);self.publish();self.go('decision')
+        self.case=c.validate(x);self.world=c.initialise(self.root,'partial-hung',certify(x), allow_mock_rehearsal=True);self.publish();self.go('decision')
         self.add(event('deliberation','J01',sorted(c.jurors(x)),refs=[]))
         for j in sorted(c.jurors(x)):
             f=self.findings(True)

@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT / 'tools'))
 
 import courtroom
 import courtroom_v2 as c
+import courtroom_rehearsal as rehearsal
 from courtroom_backend import DeterministicBackend
 from test_courtroom_v2 import fixture
 
@@ -25,6 +26,8 @@ class CourtroomCliTests(unittest.TestCase):
         self.root = Path(self.tmp.name)
         self.case = fixture()
         self.casefile = self.root / 'case.json'
+        self.case['coverage_rehearsal']['mock'] = False  # Simulated external transport, not a real live result.
+        rehearsal.seal_report(self.case['coverage_rehearsal'])
         self.casefile.write_bytes(c.encode(self.case))
         self.config = self.root / 'models.json'
         self.config.write_bytes(c.encode({'storage_root': str(self.root / 'external'), 'defaults': {
