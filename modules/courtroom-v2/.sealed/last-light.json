@@ -1,0 +1,392 @@
+{
+  "schema": 2,
+  "draft": false,
+  "case_id": "last-light",
+  "law_status": "simulation",
+  "title": "The Last Light",
+  "config": {
+    "case_type": "criminal",
+    "player_side": "defence",
+    "style": "us-drama",
+    "jurisdiction": "Fictional Bellwether, US-inspired",
+    "factfinder": "jury",
+    "pace": "drama",
+    "jury_size": 12,
+    "verdict_threshold": 12
+  },
+  "public_summary": "The State alleges that theatre operations manager Mara Quill intentionally caused a store-room fire and later falsified a maintenance record. She denies both charges. These are allegations, not findings.",
+  "brief": "# The Last Light: exchanged brief\n\nYou have an exchanged bundle E01-E08 and statements WS1-WS4. The defendant is Mara Quill, operations manager at the Calder Theatre. The fire at 20:26 on 14 May damaged the scenery store without bodily injury. The insurer has not yet paid. The State alleges she set it after a dispute about her suspension, and on 15 May substituted a maintenance sheet to mislead the fire inquiry. She denies criminal responsibility.\n\nThe two fictional counts are independent. C1 requires proof that Mara caused the fire, acted deliberately to damage the theatre's property, and lacked permission. C2 requires proof she replaced a materially false incident-related record, knew the replacement was materially false, and intended it to mislead the inquiry. For both counts the State carries every element beyond reasonable doubt. Motive and opportunity are not separate offences. The defendant need not testify or prove an alternative culprit. This is a supplied game offence definition, not a quotation of a statute.\n\nBoth parties agree the fire occurred, damaged someone else's property, and no one was authorised deliberately to burn it. This agreement is recorded in E01, admitted for truth. No agreement identifies its cause or the record replacement's intention. E02-E08 and all witness statements are exchanged but not automatically admitted. Discovery and ordinary filing are complete. Technical content is limited to the provided observations; do not infer an unrecorded laboratory result.\n\nInstructing lawyer Rowan Saye is available to identify the bundle and explain procedure, not to supply your argument. The hearing follows preparation when you are ready.",
+  "truth": "Fixed author account, not a merits decision: the scenery-store fire was accidental, starting in an old portable work light. No person deliberately set it. Its damaged condition prevents a conclusive later laboratory attribution. Mara entered for a legitimate check, left at about 20:19, and did not cause the ignition. A service-mode alarm interval had been authorised before her suspension notice. The export clock is ninety seconds slow; no source gives the exact departure of an identified person on camera. Her access credential also sat in a shared envelope that day, but no identified other user is established. On 15 May Mara replaced the loose maintenance sheet, using the originally planned end time rather than the observed end time. She knew this made it look as though she finished earlier. She intended that misleading impression to reach the inquiry and avoid blame for an extended service interval. She did not create the underlying authorisation email or change the digital controller export. Her private instructions and initial witness account are not a complete admission of the intent. She may maintain that the change was a clerical correction; fixed response boundaries are in W3. There is no hidden confession triggered by eloquence and no new witness to identify an arsonist. A lawful adjudication may fail to establish either or both counts regardless of this truth.",
+  "opening": "Rowan sets two slim folders on the table. 'Two counts. They want the jury to see one story. Mara is next door when you need her.'",
+  "procedure": "# Supplied court procedure\n\nState of Bellwether (fictional US-inspired court). This is a fictionalised roleplay profile, not actual state/federal/NSW procedure.\n\nAddress the judge as Your Honour or Your Honor. The criminal initiating advocate is called District Attorney; civil parties remain claimant and respondent. Prosecution must establish each offence element beyond reasonable doubt. Do not translate a burden into a made-up probability percentage.\n\nA panel of 12 jurors decides the facts; 12 agreeing votes are required for each charge/claim's outcome. This agreement arrangement is an explicit game stipulation, not a universal rule of any jurisdiction.\n\nStart with the client conference or go directly to opening when the player requests it. The bundle is exchanged; ordinary paperwork and empanelment happened offstage. Use opening, examination and cross-examination, contested rulings, closing, directions if a jury, and decision. Recesses compress waiting. Do not require formulaic passes or greetings. The player may ask to slow down.\n\n## R1\n\nSimulation: criminal offence elements are for the prosecution to prove beyond reasonable doubt. Silence, declining to testify and failure to prove innocence do not establish guilt. Civil claim elements are for the claimant on the balance of probabilities. A supplied affirmative defence states its own burden; never invent one.\n\n## R2\n\nSimulation: decide only the material elements of each charge/claim. Distinguish an observation from its proposed interpretation. Consider circumstantial evidence together without double-counting correlated observations. Neither a smoking gun nor a confession is required.\n\n## R3\n\nSimulation: relevance and a disclosed foundation are required. Witnesses may describe what they perceived, their genuine memory limits, and identified records. Counsel's questions, opening forecasts and submissions are not themselves evidence.\n\n## R4\n\nSimulation: leading questions are normally allowed in cross-examination. The judge may disallow compound, misleading, repetitious, abusive or unsupported-premise questions. Plain-English objections work. A witness may qualify an answer that would otherwise be misleading.\n\n## R5\n\nSimulation: documents may be admitted for truth or a stated limited purpose (notice, context, credibility). Marking, disclosure or publication alone cannot prove a proposition. Authentication not actually disputed may be compressed. Genuinely contested foundation is played.\n\n## R6\n\nSimulation: a prior inconsistent statement can challenge credibility once fairly put to its maker. Hearsay offered for truth needs a disclosed case-specific exception or agreement; otherwise limit its use. This deliberately short rulebook is not a complete real evidence code.\n\n## R7\n\nSimulation: openings forecast; closing addresses argue from the established record. Both sides may make concise submissions and reasonable replies at the judge's invitation. No new facts appear because a party needs a rescue.\n\n## R8\n\nSimulation: bench mode gives the judge the facts decision. Jury mode gives the judge law/admissibility and gives the jury the facts decision under written directions. The seated jury receives only evidence placed before it, not private strategy or sidebar material.\n\n## R9\n\nSimulation: the case's jury size and agreement threshold are fixed before hearing. Jurors deliberate separately from counsel, may ask questions through the judge, and may genuinely deadlock. Apply agreement separately to each charge/claim. A split first ballot is not automatically a completed deadlock.\n\n## R10\n\nSimulation: timely objection in flow mode may be made on the next player turn and is treated as made before the provisional answer. A sustained objection strikes that answer from decision packets. Strict mode pauses before the answer. Neither mechanism supplies the player's strategy.\n\n## R11\n\nSimulation: routine scheduling, filing, jury empanelment, uncontested foundation and waiting are offstage. Play a procedural question when it changes evidence, rights or the next strategic choice. No clerical tax for entertainment.\n\n## R12\n\nSimulation: an engine mistake is corrected openly, never turned into a witness lie. A material authoring gap pauses the affected issue. Do not invent decisive historical facts during play. Disclose any real-law research additions equally and before reliance.",
+  "authorities": "# Authority and design sources\n\nEvery operative R rule and every starter offence/claim in this case is a SIMULATION SIMPLIFICATION or CASE STIPULATION. No invented section number or case citation is asserted. Actual sources were checked 21 September 2026 for the comparative architecture, not as an assertion that these short rules implement real law.\n\n- U.S. District Court, Southern District of New York, The Eight Stages of Trial: https://nysd.uscourts.gov/jurors/the-eight-stages-of-trial\n- U.S. Courts, Differences Between Opening Statements and Closing Arguments: https://www.uscourts.gov/about-federal-courts/educational-resources/about-educational-outreach/activity-resources/differences-between-opening-statements-closing-arguments\n- NSW Courts and Tribunals, Criminal hearings and trials: https://courts.nsw.gov.au/resources/criminal-hearings-and-trials.html\n- Judicial Commission of NSW, The Jury: https://www.judcom.nsw.gov.au/publications/benchbks/criminal/the_jury.html\n\nThe choice of US-inspired presentation as the entertainment default is a design choice, not a finding that NSW lacks cross-examination, jury addresses, bench criminal trials or dramatic stakes. See docs/courtroom-reference-model.md.\n",
+  "rules": {
+    "R1": "Simulation: criminal offence elements are for the prosecution to prove beyond reasonable doubt. Silence, declining to testify and failure to prove innocence do not establish guilt. Civil claim elements are for the claimant on the balance of probabilities. A supplied affirmative defence states its own burden; never invent one.",
+    "R2": "Simulation: decide only the material elements of each charge/claim. Distinguish an observation from its proposed interpretation. Consider circumstantial evidence together without double-counting correlated observations. Neither a smoking gun nor a confession is required.",
+    "R3": "Simulation: relevance and a disclosed foundation are required. Witnesses may describe what they perceived, their genuine memory limits, and identified records. Counsel's questions, opening forecasts and submissions are not themselves evidence.",
+    "R4": "Simulation: leading questions are normally allowed in cross-examination. The judge may disallow compound, misleading, repetitious, abusive or unsupported-premise questions. Plain-English objections work. A witness may qualify an answer that would otherwise be misleading.",
+    "R5": "Simulation: documents may be admitted for truth or a stated limited purpose (notice, context, credibility). Marking, disclosure or publication alone cannot prove a proposition. Authentication not actually disputed may be compressed. Genuinely contested foundation is played.",
+    "R6": "Simulation: a prior inconsistent statement can challenge credibility once fairly put to its maker. Hearsay offered for truth needs a disclosed case-specific exception or agreement; otherwise limit its use. This deliberately short rulebook is not a complete real evidence code.",
+    "R7": "Simulation: openings forecast; closing addresses argue from the established record. Both sides may make concise submissions and reasonable replies at the judge's invitation. No new facts appear because a party needs a rescue.",
+    "R8": "Simulation: bench mode gives the judge the facts decision. Jury mode gives the judge law/admissibility and gives the jury the facts decision under written directions. The seated jury receives only evidence placed before it, not private strategy or sidebar material.",
+    "R9": "Simulation: the case's jury size and agreement threshold are fixed before hearing. Jurors deliberate separately from counsel, may ask questions through the judge, and may genuinely deadlock. Apply agreement separately to each charge/claim. A split first ballot is not automatically a completed deadlock.",
+    "R10": "Simulation: timely objection in flow mode may be made on the next player turn and is treated as made before the provisional answer. A sustained objection strikes that answer from decision packets. Strict mode pauses before the answer. Neither mechanism supplies the player's strategy.",
+    "R11": "Simulation: routine scheduling, filing, jury empanelment, uncontested foundation and waiting are offstage. Play a procedural question when it changes evidence, rights or the next strategic choice. No clerical tax for entertainment.",
+    "R12": "Simulation: an engine mistake is corrected openly, never turned into a witness lie. A material authoring gap pauses the affected issue. Do not invent decisive historical facts during play. Disclose any real-law research additions equally and before reliance."
+  },
+  "roles": {
+    "player": {
+      "name": "Will (counsel)",
+      "kind": "counsel",
+      "knowledge": [
+        "Client instructs: deny both charges. Mara accepts making the typed sheet and sending E08, says it consolidated the authorised plan rather than changing a measured result. She has not admitted an intention to mislead. She asks you not to call her until you discuss the risks. You may seek candid instructions; you may not manufacture her answer."
+      ],
+      "documents": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "E08",
+        "WS1",
+        "WS2",
+        "WS3",
+        "WS4"
+      ]
+    },
+    "opponent": {
+      "name": "Alex Vale (opposing counsel)",
+      "kind": "counsel",
+      "knowledge": [
+        "The State relies on access, conflict over suspension and the record replacement. It has no eyewitness to ignition and no conclusive ignition laboratory result. It may concede that the spare credential cannot identify a user. Do not invent new evidence to strengthen the case."
+      ],
+      "documents": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "E08",
+        "WS1",
+        "WS2",
+        "WS3",
+        "WS4"
+      ]
+    },
+    "bench": {
+      "name": "Judge Esten",
+      "kind": "bench",
+      "knowledge": [],
+      "documents": []
+    },
+    "solicitor": {
+      "name": "Rowan Saye",
+      "kind": "support",
+      "knowledge": [
+        "Explain the supplied process and retrieve disclosed records. Do not reveal hidden intentions or volunteer an integrated theory."
+      ],
+      "documents": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "E08",
+        "WS1",
+        "WS2",
+        "WS3",
+        "WS4"
+      ]
+    },
+    "W1": {
+      "name": "Ezra Lynn",
+      "kind": "witness",
+      "knowledge": [
+        "I was at the night desk. At about twenty past eight I saw a tan sleeve at the corridor exit. I did not see the person's face. Mara wore a tan coat earlier. I photographed the service sheet after the alarm. Next morning she gave me a replacement. I thought the old sheet was to be thrown away, but I kept the photograph.",
+        "The sleeve sighting was an estimate near twenty past, not a stopwatch event. You never saw a face or Mara light anything. You placed the spare envelope at the desk that morning, but did not track every user. Mara did not tell you to destroy the photo. You infer she wanted the old sheet replaced; do not convert that inference into a quotation."
+      ],
+      "documents": [
+        "E04",
+        "E06",
+        "E07",
+        "E08",
+        "WS1"
+      ],
+      "knowledge_basis": "Personal desk observations, original photo and received message; no technical ignition knowledge."
+    },
+    "W2": {
+      "name": "Ivo Sen",
+      "kind": "witness",
+      "knowledge": [
+        "I supervised the service remotely. I told Mara to perform the approved check. The service ended later than planned. I exported the controller log and measured its clock discrepancy next morning. I cannot identify who was in the corridor or what caused the fire.",
+        "The approved end was a target. You were on the radio intermittently and cannot account for every minute. Controller times are ninety seconds behind the morning desk clock; that correction is not proof of an identified individual's timing. You cannot establish who physically pressed a control or wrote MQ on E06."
+      ],
+      "documents": [
+        "E02",
+        "E03",
+        "WS2"
+      ],
+      "knowledge_basis": "Own authorisation and export procedure; no direct view of the corridor."
+    },
+    "W3": {
+      "name": "Mara Quill",
+      "kind": "witness",
+      "knowledge": [
+        "I carried out the approved check and left the corridor before the alarm. I replaced the loose sheet the next morning to make the incident file readable. I did not start a fire and did not intend to deceive anyone. I used the approved service times in the typed sheet.",
+        "You had a suspension dispute with the director earlier and were angry, but did not set the fire. You did replace the sheet, wrote your name on E07, and sent E08. You knew the actual service ended later than twenty past. Your expressed account is that E07 records the approved plan. Under clear questioning concede the old sheet recorded completion later and the typed sheet did not label 20:20 as merely planned. Do not confess to fire or invent anyone else lighting it. You may evade intent questions but cannot truthfully claim never to have seen the later time."
+      ],
+      "documents": [
+        "E02",
+        "E06",
+        "E07",
+        "E08",
+        "WS3"
+      ],
+      "knowledge_basis": "Own actions, message and memory; no knowledge of the actual accidental ignition mechanism."
+    },
+    "W4": {
+      "name": "Tamsin Orel",
+      "kind": "witness",
+      "knowledge": [
+        "I recorded the fire scene and collected the inquiry file. My source attribution is limited to my written report. I received the typed service sheet; I did not witness either sheet being written or replaced.",
+        "Your report does not establish arson, accident, a specific offender or a specific ignition mechanism. No further test exists in this case. You cannot translate the position of a damaged lamp into a definitive cause."
+      ],
+      "documents": [
+        "E05",
+        "E07",
+        "WS4"
+      ],
+      "knowledge_basis": "Own scene visit and receipt of file; conclusions limited to written observations."
+    },
+    "J01": {
+      "name": "Juror 1",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Separates what was seen from what was inferred; can revise when the record warrants it."
+    },
+    "J02": {
+      "name": "Juror 2",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Attends carefully to chronology; treats confident delivery as no substitute for a source."
+    },
+    "J03": {
+      "name": "Juror 3",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Asks which facts are common ground; considers cumulative evidence rather than isolated fragments."
+    },
+    "J04": {
+      "name": "Juror 4",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Checks whether an alternative explains the whole record, without inventing missing facts."
+    },
+    "J05": {
+      "name": "Juror 5",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Separates what was seen from what was inferred; can revise when the record warrants it."
+    },
+    "J06": {
+      "name": "Juror 6",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Attends carefully to chronology; treats confident delivery as no substitute for a source."
+    },
+    "J07": {
+      "name": "Juror 7",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Asks which facts are common ground; considers cumulative evidence rather than isolated fragments."
+    },
+    "J08": {
+      "name": "Juror 8",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Checks whether an alternative explains the whole record, without inventing missing facts."
+    },
+    "J09": {
+      "name": "Juror 9",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Separates what was seen from what was inferred; can revise when the record warrants it."
+    },
+    "J10": {
+      "name": "Juror 10",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Attends carefully to chronology; treats confident delivery as no substitute for a source."
+    },
+    "J11": {
+      "name": "Juror 11",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Asks which facts are common ground; considers cumulative evidence rather than isolated fragments."
+    },
+    "J12": {
+      "name": "Juror 12",
+      "kind": "juror",
+      "knowledge": [],
+      "documents": [],
+      "manner": "Checks whether an alternative explains the whole record, without inventing missing facts."
+    }
+  },
+  "documents": {
+    "E01": {
+      "title": "Agreed facts",
+      "text": "The parties agree: a fire at the Calder Theatre scenery store on 14 May caused property damage; no bodily injury occurred; no person had permission deliberately to burn the property. They do not agree on the fire's cause or any person's intent.",
+      "provenance": "Jointly signed by both parties before hearing.",
+      "status": "admitted",
+      "uses": [
+        "truth"
+      ]
+    },
+    "E02": {
+      "title": "Service authorisation email",
+      "text": "14 May, 16:42. From director Leto Moss to Mara Quill and technician Ivo Sen: \"Approved: service check, 20:10 to 20:20. Tell the desk when you are finished. Do not reopen the public foyer until Ivo clears it.\"",
+      "provenance": "Unaltered mailbox export; director and technician received it.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "E03": {
+      "title": "Alarm controller export",
+      "text": "14 May. SERVICE ON 20:08:30. SERVICE OFF 20:29:30. FIRE INPUT 20:24:30. Export note: controller clock was checked next morning and read ninety seconds behind the desk clock; drift during the preceding day was not measured.",
+      "provenance": "Ivo downloaded read-only controller events on 15 May. Times not automatically corrected.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "E04": {
+      "title": "Door access report",
+      "text": "14 May. MQ-17 credential accepted at store corridor 20:12:11; no egress sensor. A 10:03 desk note reads: \"MQ spare in white envelope for contractors until office closes.\" No signature identifies anyone who used the spare.",
+      "provenance": "Access-system event and contemporaneous desk note; the credential identifies a token, not a body.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "E05": {
+      "title": "Scene report",
+      "text": "15 May. The greatest local damage was beside a collapsed scenery rack. Remains of a portable work light were found there. Damage prevented a reliable determination of electrical condition before the fire. No reliable ignition-source attribution is offered. Absence of a recorded accelerant finding is not a completed exclusion analysis.",
+      "provenance": "Signed scene observer report. Neither witness supplements it with new testing.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "E06": {
+      "title": "Desk photograph of sheet",
+      "text": "Photograph taken 14 May at 20:34 by night porter. Loose sheet reads: \"Service: began 20:10; complete 20:31. MQ\". Desk clock appears behind it at 20:34. No photograph shows the sheet being written.",
+      "provenance": "Original desk-phone photograph disclosed with agreed capture timestamp; authorship remains disputed unless proved.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "E07": {
+      "title": "Sheet delivered to inquiry",
+      "text": "Delivered 15 May at 09:15. Typed heading: \"Service confirmation, 14 May\". Table: \"began 20:10; complete 20:20; MQ\". Footer: \"Corrected copy for incident file\". Signature reads Mara Quill.",
+      "provenance": "Collected from incident folder by scene observer; no claim this is an unchanged original.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "E08": {
+      "title": "Message to desk",
+      "text": "15 May 08:51. Mara to porter: \"Use the clean one. The old times make it look as though we ignored the window. Do not send both as separate service jobs.\"",
+      "provenance": "Unaltered message export from the porter's phone. Context and inference disputed.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "WS1": {
+      "title": "Ezra Lynn statement",
+      "text": "I was at the night desk. At about twenty past eight I saw a tan sleeve at the corridor exit. I did not see the person's face. Mara wore a tan coat earlier. I photographed the service sheet after the alarm. Next morning she gave me a replacement. I thought the old sheet was to be thrown away, but I kept the photograph.",
+      "provenance": "Signed exchanged witness statement; not automatically sworn evidence.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "WS2": {
+      "title": "Ivo Sen statement",
+      "text": "I supervised the service remotely. I told Mara to perform the approved check. The service ended later than planned. I exported the controller log and measured its clock discrepancy next morning. I cannot identify who was in the corridor or what caused the fire.",
+      "provenance": "Signed exchanged witness statement; not automatically sworn evidence.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "WS3": {
+      "title": "Mara Quill statement",
+      "text": "I carried out the approved check and left the corridor before the alarm. I replaced the loose sheet the next morning to make the incident file readable. I did not start a fire and did not intend to deceive anyone. I used the approved service times in the typed sheet.",
+      "provenance": "Signed exchanged witness statement; not automatically sworn evidence.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "WS4": {
+      "title": "Tamsin Orel statement",
+      "text": "I recorded the fire scene and collected the inquiry file. My source attribution is limited to my written report. I received the typed service sheet; I did not witness either sheet being written or replaced.",
+      "provenance": "Signed exchanged witness statement; not automatically sworn evidence.",
+      "status": "disclosed",
+      "uses": []
+    }
+  },
+  "issues": {
+    "I1": {
+      "text": "Mara caused the fire.",
+      "party": "prosecution",
+      "standard": "beyond_reasonable_doubt"
+    },
+    "I2": {
+      "text": "She deliberately acted to damage the theatre property by fire.",
+      "party": "prosecution",
+      "standard": "beyond_reasonable_doubt"
+    },
+    "I3": {
+      "text": "That deliberate damage lacked permission.",
+      "party": "prosecution",
+      "standard": "beyond_reasonable_doubt"
+    },
+    "I4": {
+      "text": "She replaced an incident-related record with a materially false record.",
+      "party": "prosecution",
+      "standard": "beyond_reasonable_doubt"
+    },
+    "I5": {
+      "text": "She knew the replacement was materially false.",
+      "party": "prosecution",
+      "standard": "beyond_reasonable_doubt"
+    },
+    "I6": {
+      "text": "She intended that replacement to mislead the inquiry.",
+      "party": "prosecution",
+      "standard": "beyond_reasonable_doubt"
+    }
+  },
+  "counts": {
+    "C1": {
+      "label": "Fictional offence: deliberate damage by fire",
+      "elements": [
+        "I1",
+        "I2",
+        "I3"
+      ],
+      "bars": []
+    },
+    "C2": {
+      "label": "Fictional offence: knowingly falsifying an incident record to mislead an inquiry",
+      "elements": [
+        "I4",
+        "I5",
+        "I6"
+      ],
+      "bars": []
+    }
+  }
+}

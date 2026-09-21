@@ -1,66 +1,69 @@
-# Worldkeeper: harness router and courtroom amendments
+# Worldkeeper: court routing and scoped amendments
 
-Read `modules/worldkeeper-base.md` as the base harness before running a world.
-That file is the original `draft/worldkeeper-v2-initial` harness, preserved byte
-for byte. Its relative paths refer to the REPOSITORY ROOT, not `modules/`.
-For a non-court world, apply that original harness unchanged.
+Read `modules/worldkeeper-base.md` as the original Worldkeeper harness. Its paths
+are relative to the repository root. Non-court worlds retain that harness unchanged.
+A request to develop or inspect this repository is outside play; do not start a scene.
 
-## Courtroom activation
+## Choose the engine before opening a scene
 
-When asked to begin a courtroom/court trial, use world `courtroom-trial` unless
-the person supplies another name. A named world's charter with module `courtroom`
-or `resolution: system:courtroom` also activates court mode. Do not accidentally
-resume a different recent world when a courtroom was explicitly requested.
-Read `modules/courtroom.md` completely before building, resuming or speaking.
-The module initialises the already-committed case; do not use the base world's
-random setting selection or construct a new mystery from the player's argument.
-A repository development request is not a request to start a scene.
+For a NEW courtroom request, read `modules/courtroom-v2.md` completely. The default
+is now the general courtroom, not the original NSW civil fixture. A new case can
+be civil or criminal, judge-decided or jury-decided, with either party playable.
+Style, jurisdiction, proof rules and pacing are separate settings. The module
+creates/validates a case before play; it does not always load the same mystery.
 
-## Explicit court-scoped amendments to the base harness
+For an explicitly named EXISTING world:
+- `.world/court-v2/commitment.json` selects v2; verify/resume with `tools/courtroom_v2.py`.
+- `.world/cases/case-001/base-manifest.json` selects the legacy v1 module at
+  `modules/courtroom.md` and legacy `tools/courtroom.py`. Preserve its exact case,
+  record and rules. Do not migrate it implicitly or reinterpret its old events.
+- A new charter selecting `courtroom-v2` or a new generic `courtroom` selects v2.
+- Other worlds use their existing Worldkeeper rules. Never browse their seals.
 
-These are root-level exceptions, not a module silently overriding the floor.
-They apply ONLY while the courtroom module is active. All other base commitments,
-including player ownership, truth-first, no flattery and local knowledge, remain.
+Explicit `legacy courtroom trial` selects the unchanged v1 example. An unqualified
+`Begin courtroom` selects v2, using `worlds/courtroom` unless named otherwise. If
+that world exists, resume it. A new scenario needs another world name, not a reset.
+An explicitly selected courtroom always wins over the most recently played world.
 
-1. **Reasoning within knowledge.** Replace 'They do not integrate' in floor 3
-   and the restriction on integrated NPC answers in world-behaviour rule 9 for
-   opposing counsel and the bench. They may develop complete competing arguments
-   from information legitimately available to them. Colleagues do not supply the
-   player's strategy without an explicit delegation of that substantive work.
-2. **Fixed past and finite cases.** The relevant history, material evidence,
-   initial witness knowledge and meaningful information gaps are committed before
-   play. Do not apply 'no bottom' by deepening a litigated fact after counsel has
-   understood it. A resolved point stays resolved. Future professional consequences
-   may develop; new decisive historical facts may not.
-3. **Discovery is not guaranteed proof.** Procedural doors stay available, but
-   three successful routes to every secret and at least one lying source are not
-   required. Some facts cannot be established. Do not add a liar, confession,
-   exoneration or clue because the base build rules would otherwise demand one.
-4. **Record-based adjudication.** Hidden truth constrains what happened and what
-   witnesses can know. The applicable rules, admitted evidence and valid inferences
-   determine the judgment. Hidden truth is not itself an input to the bench.
-5. **Honest error repair.** Do not explain an engine continuity error by making
-   a witness newly mistaken or dishonest. Record an explicit erratum, correct it
-   outside the world, and repair the affected opportunity. The erroneous statement
-   is not a cross-examination victory. Fixed case material is never rewritten.
-6. **Exact contested wording.** Compression can relay specified content, not
-   generate successful advocacy. 'I put WS1 paragraph 2 against E04' is an attempt
-   with identified material; 'I make her confess' supplies no admission. Preserve
-   exact questions, answers, concessions and rulings in the public transcript.
-7. **Court persistence protocol.** `tools/courtroom.py` owns the canonical court
-   event log and its live-state, card, ledger and transcript projections. Do not
-   also edit those files by hand using the base per-turn procedure. Persist before
-   telling. Keep sitting records under `records/` as usual, but do not copy hidden
-   truth into the public transcript. Save/checkpoint only this world's files;
-   do not stage unrelated changes or silently push private sessions to a remote.
-8. **Case-level seal.** A closed case may be unsealed after a spoiler warning and
-   explicit confirmation. This opens only that case. Later practice with that
-   knowledge is informed, not a blind assessment. A live case stays sealed under
-   the trial charter; the player can explicitly end it rather than treating a
-   hidden-state request as an in-world discovery.
+## Court-scoped exceptions to the original harness
 
-Order of application: this router's scoped amendments, then the courtroom module
-and charter, then the unchanged base harness wherever compatible. A charter can
-change presentation prospectively, not undo the committed case or lower a burden
-to reward an argument. Any requested change that would break a fair hearing is
-handled openly as a repair or a separate practice run, never as secret history.
+These are root-level changes, not a module pretending to outrank the floor. They
+apply to both court engines unless the specific version gives a narrower contract.
+
+1. **Local knowledge permits integration.** Opposing counsel, the judge and jurors
+   reason from their allocated information. They may develop complete interpretations,
+   concede, distinguish and change their minds. They do not borrow hidden history.
+2. **The litigated past is finite and fixed.** Build facts, documents, memories and
+   material unknowns before substantive player theory. Do not deepen a resolved
+   issue to keep play going. Future consequences can grow; the old event cannot.
+3. **No compulsory liar or discoverable answer.** Remove the base requirements for
+   three successful doors to each secret and at least one lying source. Procedure
+   remains accessible. Missing information need not be obtainable or favourable.
+4. **Verdicts are not author truth.** Apply the supplied elements, proof burdens,
+   authorised record and inference. In jury mode the bench decides law and admissibility,
+   not the jury's factual outcome. Do not reward eloquence with invented facts.
+5. **Errors are errors.** Correct continuity mistakes openly, append the correction,
+   and restore affected opportunities. Never retrofit a witness lie to disguise a
+   model mistake. The disputed erroneous words cannot support a decision.
+6. **The player owns substance.** Routine execution and administration can be
+   compressed. Do not convert `I make her confess` into an admission, or silently
+   author the player's case. Exact consequential words belong in the record.
+7. **The selected controller owns persistence.** Its events, state projections and
+   filtered packets replace the base direct-write ledger procedure for that world.
+   Persist before presenting speech. The state card is worldkeeper-only, not a role
+   packet. Keep records, facts and jury deliberations out of the visible response.
+8. **Entertainment without outcome manipulation.** V2 compresses filing, scheduling,
+   waiting and uncontested preliminaries. It does not compress away a strategic
+   choice, objection, real concession or inconvenient consequence. Characters need
+   lives and motives, not a duty to praise. V1 retains its original cadence.
+9. **Case-level seal and fair changes.** Only a closed case may be unsealed after a
+   warning and explicit confirmation. Presentation may change prospectively; live
+   facts, burden, jury membership and threshold may not. A changed setup is a new
+   case, not a covert alteration. No unsealing of other worlds.
+10. **Local Git discipline.** Any requested development commits and pushes must use
+    the user's selected checkout. Do not stage unrelated files or post private
+    session records. No automatic play-session push. No credentials in files or
+    URLs. Ordinary game persistence does not require a commit every turn.
+
+Precedence in court mode: this router, selected court module, compatible charter,
+then original harness. No file overrides the host's permissions or safety rules.

@@ -1,0 +1,274 @@
+{
+  "schema": 2,
+  "draft": false,
+  "case_id": "second-signature",
+  "law_status": "simulation",
+  "title": "The Second Signature",
+  "config": {
+    "case_type": "civil",
+    "player_side": "respondent",
+    "style": "us-drama",
+    "jurisdiction": "Fictional Bellwether, US-inspired",
+    "factfinder": "bench",
+    "pace": "drama",
+    "jury_size": 0,
+    "verdict_threshold": 0
+  },
+  "public_summary": "An equipment supplier claims payment for an emergency theatre lighting order. The theatre disputes authority for the full order and whether its later conduct accepted that order. These are competing allegations.",
+  "brief": "# The Second Signature: exchanged brief\n\nLumen House seeks 24,600 fictional dollars from the Calder Theatre for a replacement lighting order placed during a power-equipment failure. The theatre accepts that replacement equipment was delivered and used for one performance but disputes liability for the entire purchase. Its deputy signed an order form after the director left town.\n\nSupplied simplified contract rule: the supplier must establish, on the balance of probabilities, (I1) that the full purchase was authorised by the theatre through an actually authorised agent, a representation of authority attributable to the theatre on which the supplier reasonably relied, or subsequent informed acceptance of that purchase; (I2) that the agreed goods were delivered; and (I3) that the purchase price remains unpaid. All three establish the claim. There is no criminal accusation or requirement to prove fraudulent intent. Damages up to 24,600 may follow proved liability. Do not invent a statutory section for this rule.\n\nE01 is the parties' admitted agreement: the goods arrived, were used for one show, and the supplier has received no payment. That does not itself concede authorisation or informed acceptance of a purchase rather than a short-term loan. E02-E07 and WS1-WS4 are exchanged but not automatically admitted. Ordinary pleadings and discovery are complete. Your opponent need not defend every claim about dishonesty merely to obtain payment.",
+  "truth": "The director privately capped emergency spending at 9,000, but had earlier told this supplier that deputy Sera handled urgent show-night equipment. Sera accepted a form showing 24,600 thinking she could secure a later approval; she knew she lacked internal permission for that amount. Supplier representative Fenn believed the deputy could authorise the purchase because of the earlier director message, saw the full quote signed, and did not know the internal cap. Later the director knew the equipment was in use but had not read the attached full purchase figure before the performance. She instructed staff to keep it safe until the account was resolved. The theatre did not later clearly accept the full purchase. This fixes historical acts and knowledge, not the legal conclusion about represented authority or reliance.",
+  "opening": "Rowan taps the signature on the order. 'The supplier says authority. Our client keeps saying permission. The papers are here; she can explain her instructions when you are ready.'",
+  "procedure": "# Supplied court procedure\n\nState of Bellwether (fictional US-inspired court). This is a fictionalised roleplay profile, not actual state/federal/NSW procedure.\n\nAddress the judge as Your Honour or Your Honor. The criminal initiating advocate is called District Attorney; civil parties remain claimant and respondent. Claimant must establish each claim element on the balance of probabilities. Do not translate a burden into a made-up probability percentage.\n\nThe judge decides the facts and gives concise, record-grounded reasons. No jury is simulated.\n\nStart with the client conference or go directly to opening when the player requests it. The bundle is exchanged; ordinary paperwork and empanelment happened offstage. Use opening, examination and cross-examination, contested rulings, closing, directions if a jury, and decision. Recesses compress waiting. Do not require formulaic passes or greetings. The player may ask to slow down.\n\n## R1\n\nSimulation: criminal offence elements are for the prosecution to prove beyond reasonable doubt. Silence, declining to testify and failure to prove innocence do not establish guilt. Civil claim elements are for the claimant on the balance of probabilities. A supplied affirmative defence states its own burden; never invent one.\n\n## R2\n\nSimulation: decide only the material elements of each charge/claim. Distinguish an observation from its proposed interpretation. Consider circumstantial evidence together without double-counting correlated observations. Neither a smoking gun nor a confession is required.\n\n## R3\n\nSimulation: relevance and a disclosed foundation are required. Witnesses may describe what they perceived, their genuine memory limits, and identified records. Counsel's questions, opening forecasts and submissions are not themselves evidence.\n\n## R4\n\nSimulation: leading questions are normally allowed in cross-examination. The judge may disallow compound, misleading, repetitious, abusive or unsupported-premise questions. Plain-English objections work. A witness may qualify an answer that would otherwise be misleading.\n\n## R5\n\nSimulation: documents may be admitted for truth or a stated limited purpose (notice, context, credibility). Marking, disclosure or publication alone cannot prove a proposition. Authentication not actually disputed may be compressed. Genuinely contested foundation is played.\n\n## R6\n\nSimulation: a prior inconsistent statement can challenge credibility once fairly put to its maker. Hearsay offered for truth needs a disclosed case-specific exception or agreement; otherwise limit its use. This deliberately short rulebook is not a complete real evidence code.\n\n## R7\n\nSimulation: openings forecast; closing addresses argue from the established record. Both sides may make concise submissions and reasonable replies at the judge's invitation. No new facts appear because a party needs a rescue.\n\n## R8\n\nSimulation: bench mode gives the judge the facts decision. Jury mode gives the judge law/admissibility and gives the jury the facts decision under written directions. The seated jury receives only evidence placed before it, not private strategy or sidebar material.\n\n## R9\n\nSimulation: the case's jury size and agreement threshold are fixed before hearing. Jurors deliberate separately from counsel, may ask questions through the judge, and may genuinely deadlock. Apply agreement separately to each charge/claim. A split first ballot is not automatically a completed deadlock.\n\n## R10\n\nSimulation: timely objection in flow mode may be made on the next player turn and is treated as made before the provisional answer. A sustained objection strikes that answer from decision packets. Strict mode pauses before the answer. Neither mechanism supplies the player's strategy.\n\n## R11\n\nSimulation: routine scheduling, filing, jury empanelment, uncontested foundation and waiting are offstage. Play a procedural question when it changes evidence, rights or the next strategic choice. No clerical tax for entertainment.\n\n## R12\n\nSimulation: an engine mistake is corrected openly, never turned into a witness lie. A material authoring gap pauses the affected issue. Do not invent decisive historical facts during play. Disclose any real-law research additions equally and before reliance.",
+  "authorities": "# Authority and design sources\n\nEvery operative R rule and every starter offence/claim in this case is a SIMULATION SIMPLIFICATION or CASE STIPULATION. No invented section number or case citation is asserted. Actual sources were checked 21 September 2026 for the comparative architecture, not as an assertion that these short rules implement real law.\n\n- U.S. District Court, Southern District of New York, The Eight Stages of Trial: https://nysd.uscourts.gov/jurors/the-eight-stages-of-trial\n- U.S. Courts, Differences Between Opening Statements and Closing Arguments: https://www.uscourts.gov/about-federal-courts/educational-resources/about-educational-outreach/activity-resources/differences-between-opening-statements-closing-arguments\n- NSW Courts and Tribunals, Criminal hearings and trials: https://courts.nsw.gov.au/resources/criminal-hearings-and-trials.html\n- Judicial Commission of NSW, The Jury: https://www.judcom.nsw.gov.au/publications/benchbks/criminal/the_jury.html\n\nThe choice of US-inspired presentation as the entertainment default is a design choice, not a finding that NSW lacks cross-examination, jury addresses, bench criminal trials or dramatic stakes. See docs/courtroom-reference-model.md.\n",
+  "rules": {
+    "R1": "Simulation: criminal offence elements are for the prosecution to prove beyond reasonable doubt. Silence, declining to testify and failure to prove innocence do not establish guilt. Civil claim elements are for the claimant on the balance of probabilities. A supplied affirmative defence states its own burden; never invent one.",
+    "R2": "Simulation: decide only the material elements of each charge/claim. Distinguish an observation from its proposed interpretation. Consider circumstantial evidence together without double-counting correlated observations. Neither a smoking gun nor a confession is required.",
+    "R3": "Simulation: relevance and a disclosed foundation are required. Witnesses may describe what they perceived, their genuine memory limits, and identified records. Counsel's questions, opening forecasts and submissions are not themselves evidence.",
+    "R4": "Simulation: leading questions are normally allowed in cross-examination. The judge may disallow compound, misleading, repetitious, abusive or unsupported-premise questions. Plain-English objections work. A witness may qualify an answer that would otherwise be misleading.",
+    "R5": "Simulation: documents may be admitted for truth or a stated limited purpose (notice, context, credibility). Marking, disclosure or publication alone cannot prove a proposition. Authentication not actually disputed may be compressed. Genuinely contested foundation is played.",
+    "R6": "Simulation: a prior inconsistent statement can challenge credibility once fairly put to its maker. Hearsay offered for truth needs a disclosed case-specific exception or agreement; otherwise limit its use. This deliberately short rulebook is not a complete real evidence code.",
+    "R7": "Simulation: openings forecast; closing addresses argue from the established record. Both sides may make concise submissions and reasonable replies at the judge's invitation. No new facts appear because a party needs a rescue.",
+    "R8": "Simulation: bench mode gives the judge the facts decision. Jury mode gives the judge law/admissibility and gives the jury the facts decision under written directions. The seated jury receives only evidence placed before it, not private strategy or sidebar material.",
+    "R9": "Simulation: the case's jury size and agreement threshold are fixed before hearing. Jurors deliberate separately from counsel, may ask questions through the judge, and may genuinely deadlock. Apply agreement separately to each charge/claim. A split first ballot is not automatically a completed deadlock.",
+    "R10": "Simulation: timely objection in flow mode may be made on the next player turn and is treated as made before the provisional answer. A sustained objection strikes that answer from decision packets. Strict mode pauses before the answer. Neither mechanism supplies the player's strategy.",
+    "R11": "Simulation: routine scheduling, filing, jury empanelment, uncontested foundation and waiting are offstage. Play a procedural question when it changes evidence, rights or the next strategic choice. No clerical tax for entertainment.",
+    "R12": "Simulation: an engine mistake is corrected openly, never turned into a witness lie. A material authoring gap pauses the affected issue. Do not invent decisive historical facts during play. Disclose any real-law research additions equally and before reliance."
+  },
+  "roles": {
+    "player": {
+      "name": "Will (counsel)",
+      "kind": "counsel",
+      "knowledge": [
+        "Client instructs: contest the full debt. She acknowledges E02 is her email and Sera was genuinely deputy. She did not communicate the internal cap to the supplier. She asks for advice on the record, not a fabricated claim that the signature is forged."
+      ],
+      "documents": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "WS1",
+        "WS2",
+        "WS3",
+        "WS4"
+      ]
+    },
+    "opponent": {
+      "name": "Alex Vale (opposing counsel)",
+      "kind": "counsel",
+      "knowledge": [
+        "Claim payment on the signed order and the director's representation. Concede a private internal limit may have existed; do not assume supplier knew it. No desire to obtain a finding that every theatre employee lied."
+      ],
+      "documents": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "WS1",
+        "WS2",
+        "WS3",
+        "WS4"
+      ]
+    },
+    "bench": {
+      "name": "Judge Esten",
+      "kind": "bench",
+      "knowledge": [],
+      "documents": []
+    },
+    "solicitor": {
+      "name": "Rowan Saye",
+      "kind": "support",
+      "knowledge": [
+        "Explain process, identify the claim elements, retrieve records; no volunteered integrated strategy."
+      ],
+      "documents": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "WS1",
+        "WS2",
+        "WS3",
+        "WS4"
+      ]
+    },
+    "W1": {
+      "name": "Fenn Alder",
+      "kind": "witness",
+      "knowledge": [
+        "The director told us to work with Sera. I supplied the whole quote before she signed. I did not know about the internal cap. I treated the order as a sale."
+      ],
+      "documents": [
+        "E02",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "WS1"
+      ],
+      "knowledge_basis": "Own acts and received records only; no automatic knowledge of another person's private intention."
+    },
+    "W2": {
+      "name": "Sera Noll",
+      "kind": "witness",
+      "knowledge": [
+        "I signed the order. I knew the director wanted approval above nine thousand. I believed she would approve what we needed for that night. I did not tell Fenn there was a cap."
+      ],
+      "documents": [
+        "E03",
+        "E04",
+        "WS2"
+      ],
+      "knowledge_basis": "Own acts and received records only; no automatic knowledge of another person's private intention."
+    },
+    "W3": {
+      "name": "Anwen Reed",
+      "kind": "witness",
+      "knowledge": [
+        "I authorised emergency spending up to nine thousand privately. I did tell Fenn to work with Sera. I had not read the full attachment when I sent my show-night reply. I disputed the amount the next morning."
+      ],
+      "documents": [
+        "E02",
+        "E03",
+        "E06",
+        "E07",
+        "WS3"
+      ],
+      "knowledge_basis": "Own acts and received records only; no automatic knowledge of another person's private intention."
+    },
+    "W4": {
+      "name": "Pax Rell",
+      "kind": "witness",
+      "knowledge": [
+        "I received and used the kit for the show. I do not make purchase decisions. I signed the delivery note to confirm the goods arrived. No one discussed the full purchase price with me that night."
+      ],
+      "documents": [
+        "E05",
+        "WS4"
+      ],
+      "knowledge_basis": "Own acts and received records only; no automatic knowledge of another person's private intention."
+    }
+  },
+  "documents": {
+    "E01": {
+      "title": "Agreed delivery and payment facts",
+      "text": "The goods listed in the order were delivered, used for one performance, and have not been paid for. The parties do not agree that the full purchase was authorised or later accepted.",
+      "provenance": "Joint signed agreement.",
+      "status": "admitted",
+      "uses": [
+        "truth"
+      ]
+    },
+    "E02": {
+      "title": "Director introduction",
+      "text": "2 March. Director Anwen Reed to Fenn at Lumen House: \"Sera handles urgent show-night equipment for us. Work with her rather than trying my mobile while I am travelling.\"",
+      "provenance": "Unaltered email received by supplier.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "E03": {
+      "title": "Internal cap message",
+      "text": "7 March 16:05. Director to Sera only: \"Keep tonight's emergency spend within 9,000. Anything beyond that needs my approval.\"",
+      "provenance": "Private internal message produced on disclosure; no evidence it was sent to the supplier.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "E04": {
+      "title": "Signed order",
+      "text": "7 March 18:12. Calder Theatre. Replacement kit purchase: 24,600. Delivery tonight. Signed: Sera Noll, Deputy Manager. Under signature: \"For Calder Theatre\".",
+      "provenance": "Supplier retained signed form; authenticity agreed, legal effect contested.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "E05": {
+      "title": "Supplier delivery note",
+      "text": "7 March 19:03. Complete kit delivered. Desk note: \"Installed for tonight. Account to management.\" Signed by stage manager Pax Rell.",
+      "provenance": "Original supplier note countersigned on delivery.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "E06": {
+      "title": "Director reply",
+      "text": "7 March 19:44. Forwarded order attachment. Director reply from phone: \"I can see you have the show covered. Go ahead tonight; I will deal with the account in the morning.\" No read-receipt exists for the attached quote.",
+      "provenance": "Unaltered email chain; receipt is not stipulated reading of attachment.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "E07": {
+      "title": "Return discussion",
+      "text": "8 March 09:22. Director to supplier: \"I did not approve that purchase. Keep it here safely while we sort this out; nobody is using it again until agreed.\" Supplier reply: \"We delivered on your deputy's signed order. This was a sale, not a loan.\"",
+      "provenance": "Exchanged unaltered emails.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "WS1": {
+      "title": "Fenn Alder statement",
+      "text": "The director told us to work with Sera. I supplied the whole quote before she signed. I did not know about the internal cap. I treated the order as a sale.",
+      "provenance": "Signed exchanged statement; requires adoption or appropriate admission.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "WS2": {
+      "title": "Sera Noll statement",
+      "text": "I signed the order. I knew the director wanted approval above nine thousand. I believed she would approve what we needed for that night. I did not tell Fenn there was a cap.",
+      "provenance": "Signed exchanged statement; requires adoption or appropriate admission.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "WS3": {
+      "title": "Anwen Reed statement",
+      "text": "I authorised emergency spending up to nine thousand privately. I did tell Fenn to work with Sera. I had not read the full attachment when I sent my show-night reply. I disputed the amount the next morning.",
+      "provenance": "Signed exchanged statement; requires adoption or appropriate admission.",
+      "status": "disclosed",
+      "uses": []
+    },
+    "WS4": {
+      "title": "Pax Rell statement",
+      "text": "I received and used the kit for the show. I do not make purchase decisions. I signed the delivery note to confirm the goods arrived. No one discussed the full purchase price with me that night.",
+      "provenance": "Signed exchanged statement; requires adoption or appropriate admission.",
+      "status": "disclosed",
+      "uses": []
+    }
+  },
+  "issues": {
+    "I1": {
+      "text": "The full purchase was authorised or attributable to the theatre under the supplied actual/represented authority or informed acceptance rule.",
+      "party": "claimant",
+      "standard": "balance_of_probabilities"
+    },
+    "I2": {
+      "text": "The agreed goods were delivered.",
+      "party": "claimant",
+      "standard": "balance_of_probabilities"
+    },
+    "I3": {
+      "text": "The purchase price remains unpaid.",
+      "party": "claimant",
+      "standard": "balance_of_probabilities"
+    }
+  },
+  "counts": {
+    "C1": {
+      "label": "Unpaid equipment purchase",
+      "elements": [
+        "I1",
+        "I2",
+        "I3"
+      ],
+      "bars": [],
+      "remedy": {
+        "currency": "fictional dollars",
+        "maximum": 24600
+      }
+    }
+  }
+}
