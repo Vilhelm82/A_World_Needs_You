@@ -1,19 +1,32 @@
-// Audited with OpenCode 1.18.31. This module is the only external host plugin.
+// Audited with OpenCode 1.18.31. Optional provider plugins expose authentication only.
 import path from 'node:path';
 const SYSTEM = 'You are one isolated courtroom identity. Follow only the identity instructions and court packets supplied in this conversation. You have no tools or access to files, repositories, other sessions, or outside information. Return only the response format requested by the court packet.';
 
 const deny = () => { throw new Error('Courtroom host rejected an unsafe operation.'); };
 const empty = value => value === undefined || (Array.isArray(value) ? value.length === 0 : value && typeof value === 'object' && Object.keys(value).length === 0);
 
-export const CourtroomGuard = async () => {
+export const CourtroomGuard = async (input) => {
   const nonce = process.env.COURTROOM_OPENCODE_NONCE;
   const uri = process.env.COURTROOM_OPENCODE_GUARD_URI;
   if (!/^[a-f0-9]{64}$/.test(nonce ?? '') || !uri?.startsWith('file:')) deny();
+  const authUri = process.env.COURTROOM_OPENCODE_AUTH_PLUGIN;
+  let authentication = {};
+  if (authUri) {
+    if (!authUri.startsWith('file:')) deny();
+    const module = await import(authUri);
+    const factories = [...new Set(Object.values(module).filter(value => typeof value === 'function'))];
+    if (factories.length !== 1) deny();
+    const hooks = await factories[0](input);
+    if (!hooks || Object.keys(hooks).length !== 1 || !hooks.auth ||
+        typeof hooks.auth.provider !== 'string' || !Array.isArray(hooks.auth.methods)) deny();
+    authentication = {auth: hooks.auth};
+  }
   const message = value => {
     if (value.agent !== 'courtroom' || value.system !== SYSTEM ||
         JSON.stringify(value.tools) !== JSON.stringify({'*': false})) deny();
   };
   return {
+    ...authentication,
     config: async config => {
       if (JSON.stringify(config.plugin) !== JSON.stringify([uri]) ||
           JSON.stringify(config.permission) !== JSON.stringify({'*': 'deny'}) ||

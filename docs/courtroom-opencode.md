@@ -55,6 +55,37 @@ credentials in the URL or case file. Optional server authentication uses
 available to the launcher and client commands. `OPENCODE_SERVER_USERNAME` is also
 read from the environment if set; its default is `opencode`.
 
+## Optional Claude subscription login
+
+The external [Anthropic authentication plugin](https://github.com/ex-machina-co/opencode-anthropic-auth)
+adds the `Claude Pro/Max` login method. The audited installation is pinned:
+
+```sh
+npm install --global --ignore-scripts --legacy-peer-deps @ex-machina/opencode-anthropic-auth@1.8.4
+npm root --global
+```
+
+Under the printed directory, the entry file is
+`@ex-machina/opencode-anthropic-auth/dist/index.js`. Add its absolute `file:///...`
+URI to the `plugin` array in your normal `~/.config/opencode/opencode.jsonc`,
+preserving any existing settings. Add the same absolute filesystem path (without
+`file://`) as `auth_plugin` in the external courtroom runtime JSON. Then run:
+
+```sh
+opencode auth login --provider anthropic --method "Claude Pro/Max"
+```
+
+Complete the browser login yourself, then start or restart `backend-serve`.
+Use `list-models` to select an exposed `anthropic` model in the role assignments.
+No token belongs in the courtroom config or repository.
+
+`auth_plugin` is provider-neutral and optional. The guard accepts a module only
+when its single exported factory returns an authentication hook alone; extra
+tool, prompt or agent hooks fail startup. The selected module's adjacent source
+files are fingerprinted, so changing them requires a managed-host restart.
+This plugin is trusted host code, not sandboxed code: review replacements and
+upgrades, including their request transformations, before selecting them.
+
 ## Launch and check
 
 Run these commands from the repository. The first stays in the foreground; run the
@@ -93,7 +124,8 @@ host. The dedicated launcher uses private `host/config`, `host/data`, `host/cach
 instruction/skill home is redirected with `OPENCODE_TEST_HOME`; the process's
 ordinary `HOME` variable is not rewritten. The host does not
 inherit the repository's instructions, tools, MCP servers or plugins. Its only
-plugin is the supplied fixed prompt guard, all tool permissions are denied, and
+registered plugin is the supplied fixed prompt guard, which can load the explicitly
+selected external authentication hook described above. All tool permissions are denied, and
 auxiliary agents are blocked. The adapter verifies the launcher's instance marker
 before treating the server as an isolated backend. The supplied launcher accepts
 a loopback HTTP endpoint with no URL path prefix.

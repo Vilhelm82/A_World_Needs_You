@@ -89,6 +89,7 @@ class RuntimeConfig:
     roles: Mapping[str, ModelConfig]
     storage_root: Path
     allow_remote: bool = False
+    auth_plugin: Path | None = None
 
     @classmethod
     def load(cls, path):
@@ -99,7 +100,7 @@ class RuntimeConfig:
             raise c.CourtError('Cannot read runtime config as valid UTF-8 JSON.') from None
         c.require(isinstance(data, dict), 'Runtime config must be a JSON object.')
         _reject_credentials(data)
-        c.require(set(data) <= {'backend', 'base_url', 'defaults', 'roles', 'storage_root', 'allow_remote'},
+        c.require(set(data) <= {'backend', 'base_url', 'defaults', 'roles', 'storage_root', 'allow_remote', 'auth_plugin'},
                   'Unknown runtime config fields.')
         backend = data.get('backend', 'opencode')
         c.require(backend == 'opencode', 'Runtime config backend must be opencode.')
@@ -119,10 +120,18 @@ class RuntimeConfig:
         storage_root = storage_root.resolve()
         c.require(storage_root != REPOSITORY and REPOSITORY not in storage_root.parents,
                   'Runtime storage_root must be outside the repository.')
+        auth_plugin = data.get('auth_plugin')
+        if auth_plugin is not None:
+            c.require(isinstance(auth_plugin, str) and Path(auth_plugin).expanduser().is_absolute(),
+                      'auth_plugin must be an absolute external JavaScript entry file.')
+            auth_plugin = Path(auth_plugin).expanduser().resolve()
+            c.require(auth_plugin.suffix in {'.js', '.mjs'} and auth_plugin.is_file() and
+                      REPOSITORY not in auth_plugin.parents,
+                      'auth_plugin must be an existing external JavaScript entry file.')
         return cls(backend=backend, base_url=base_url,
                    defaults=MappingProxyType({kind: _model(value) for kind, value in defaults.items()}),
                    roles=MappingProxyType({identity: _model(value) for identity, value in roles.items()}),
-                   storage_root=storage_root, allow_remote=allow_remote)
+                   storage_root=storage_root, allow_remote=allow_remote, auth_plugin=auth_plugin)
 
     def resolve(self, case) -> dict[str, ModelConfig]:
         """Resolve every nonhuman identity, including separate judicial contexts."""

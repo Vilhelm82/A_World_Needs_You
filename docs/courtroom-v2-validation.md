@@ -79,8 +79,8 @@ adapter, not provider infrastructure or live-model reasoning quality.
 
 ## OpenCode integration verification
 
-The complete deterministic suite now passes **203 tests**: the 143 existing tests
-plus 60 configuration, CLI, delta-delivery, adapter and host tests. Tests cover
+The complete deterministic suite now passes **206 tests**: the 143 existing tests
+plus 63 configuration, CLI, delta-delivery, adapter and host tests. Tests cover
 provider-neutral selection, distinct persisted HTTP sessions, canary separation,
 private strategy/ballots, split judges, mediated deliberation, restart, altered
 history, empty external working directories, all-tool denial, missing capabilities,
@@ -95,3 +95,12 @@ or local model was configured. This is not a live-model integration pass; a full
 hearing or model reasoning-quality pass is not claimed. After external provider
 setup, rerun `tools/courtroom_opencode_smoke.py` as documented in
 `docs/courtroom-opencode.md`.
+
+With `@ex-machina/opencode-anthropic-auth@1.8.4` installed externally, the real
+managed server exposed the `Claude Pro/Max` OAuth method and again passed preflight
+for all 20 starter identities. A separate installed-plugin transport check used
+synthetic credentials and stubbed network calls: both role requests retained their
+own messages and courtroom guard, with no tools or cross-role canaries added.
+The three new deterministic tests cover external plugin configuration, source
+fingerprints and authentication-only hook enforcement. No Claude login or live
+Claude generation was performed; those remain pending the user's authentication.

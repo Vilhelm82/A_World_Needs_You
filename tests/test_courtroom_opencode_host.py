@@ -26,6 +26,7 @@ class HostTests(unittest.TestCase):
 
     def test_environment_replaces_ambient_settings_but_preserves_provider_auth(self):
         incoming = {'OPENCODE_CONFIG_CONTENT': 'unsafe', 'OPENCODE_PURE': '1',
+                    'COURTROOM_OPENCODE_AUTH_PLUGIN': 'file:///unselected-plugin.mjs',
                     'OPENCODE_DB': '/user/database', 'OPENCODE_CONFIG': '/user/config',
                     'NODE_OPTIONS': '--require untrusted', 'OPENAI_API_KEY': 'not-a-real-secret',
                     'OPENCODE_SERVER_PASSWORD': 'test-password', 'HOME': '/original/home'}
@@ -41,6 +42,19 @@ class HostTests(unittest.TestCase):
         self.assertEqual(env['OPENCODE_TEST_HOME'], str(self.root / 'home'))
         self.assertEqual(env['OPENCODE_DISABLE_PROJECT_CONFIG'], '1')
         self.assertEqual(env['OPENCODE_DISABLE_EXTERNAL_SKILLS'], '1')
+        self.assertEqual(env['COURTROOM_OPENCODE_AUTH_PLUGIN'], '')
+
+    def test_auth_plugin_fingerprint_covers_imported_sibling_source(self):
+        plugin = self.root/'auth/index.mjs';plugin.parent.mkdir()
+        plugin.write_text('export default () => {};')
+        sibling = plugin.parent/'transport.mjs';sibling.write_text('export const x = 1;')
+        self.config.auth_plugin = plugin
+        before = host._auth_plugin(self.config)
+        self.assertEqual(before['uri'], plugin.as_uri())
+        sibling.write_text('export const x = 2;')
+        self.assertNotEqual(before, host._auth_plugin(self.config))
+        env = host._environment(self.root, 'a'*64, self.root/'guard.mjs', None, before)
+        self.assertEqual(env['COURTROOM_OPENCODE_AUTH_PLUGIN'], plugin.as_uri())
 
     def test_provider_file_remains_external_and_cannot_load_plugins(self):
         path = self.root / 'provider.json'
@@ -142,6 +156,32 @@ await assert.rejects(hooks.config(config));
         result = subprocess.run(['node', '--input-type=module', '-e', script],
                                 env=env, capture_output=True, text=True, timeout=10)
         self.assertEqual(result.returncode, 0, result.stderr)
+
+    @unittest.skipUnless(shutil.which('node'), 'Node is required to test the actual guard module')
+    def test_guard_accepts_auth_only_and_rejects_added_agent_hooks(self):
+        valid = self.root/'valid.mjs'
+        valid.write_text("export default async () => ({auth:{provider:'custom',methods:[{type:'oauth',label:'Browser login'}]}});")
+        unsafe = self.root/'unsafe.mjs'
+        unsafe.write_text("export default async () => ({auth:{provider:'custom',methods:[]},tool:{}});")
+        script = r'''
+import assert from 'node:assert/strict';
+const {CourtroomGuard} = await import(process.env.TEST_GUARD_URI);
+process.env.COURTROOM_OPENCODE_AUTH_PLUGIN = process.env.TEST_VALID;
+const hooks = await CourtroomGuard({client:{}});
+assert.equal(hooks.auth.provider, 'custom');
+const output = {system:['UNALLOCATED_SECRET']};
+await hooks['experimental.chat.system.transform']({},output);
+assert.ok(!output.system.join('').includes('UNALLOCATED_SECRET'));
+await assert.rejects(hooks['tool.execute.before']({},{}));
+process.env.COURTROOM_OPENCODE_AUTH_PLUGIN = process.env.TEST_UNSAFE;
+await assert.rejects(CourtroomGuard({client:{}}));
+'''
+        env = dict(os.environ, COURTROOM_OPENCODE_NONCE='a'*64,
+                   COURTROOM_OPENCODE_GUARD_URI=host.GUARD.as_uri(), TEST_GUARD_URI=host.GUARD.as_uri(),
+                   TEST_VALID=valid.as_uri(), TEST_UNSAFE=unsafe.as_uri())
+        result = subprocess.run(['node','--input-type=module','-e',script], env=env,
+                                capture_output=True,text=True,timeout=10)
+        self.assertEqual(result.returncode,0,result.stderr)
 
 
 if __name__ == '__main__':

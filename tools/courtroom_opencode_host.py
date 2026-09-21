@@ -42,6 +42,23 @@ def _digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def _auth_plugin(config):
+    """Bind an explicitly selected external auth module and its local source files."""
+    entry = getattr(config, 'auth_plugin', None)
+    if entry is None:
+        return None
+    entry = Path(entry)
+    c.require(entry.is_absolute() and entry.is_file() and entry.suffix in {'.js', '.mjs'} and
+              REPOSITORY not in entry.resolve().parents, 'Invalid external authentication plugin.')
+    fingerprint = hashlib.sha256()
+    for file in sorted(entry.parent.rglob('*')):
+        c.require(not file.is_symlink(), 'Authentication plugin source cannot contain symbolic links.')
+        if file.is_file():
+            fingerprint.update(str(file.relative_to(entry.parent)).encode() + b'\0')
+            fingerprint.update(file.read_bytes())
+    return {'uri': entry.as_uri(), 'sha256': fingerprint.hexdigest()}
+
+
 def _private(path, directory=False):
     path = Path(path)
     c.require(not path.is_symlink(), 'Host paths cannot be symbolic links.')
@@ -123,6 +140,8 @@ def verify_host(config):
         settings = _private(root / 'config' / 'opencode.json')
         c.require(manifest.get('config_sha256') == _digest(settings),
                   'OpenCode host configuration has changed; restart the managed host.')
+        c.require(manifest.get('auth_plugin') == _auth_plugin(config),
+                  'Authentication plugin changed; restart the managed host.')
         provider_path = manifest.get('provider_config')
         if provider_path:
             c.require(manifest.get('provider_config_sha256') == _digest(provider_path),
@@ -193,7 +212,7 @@ def _auth_link(root):
         target.symlink_to(source)
 
 
-def _environment(root, nonce, plugin, provider):
+def _environment(root, nonce, plugin, provider, auth_plugin=None):
     # Preserve provider credential/proxy env vars; remove ambient OpenCode settings.
     env = {key: value for key, value in os.environ.items() if not key.startswith('OPENCODE_')}
     for key in ('NODE_OPTIONS', 'BUN_OPTIONS', 'BUN_INSPECT'):
@@ -209,7 +228,8 @@ def _environment(root, nonce, plugin, provider):
                 'OPENCODE_DISABLE_PRUNE': '1', 'OPENCODE_DISABLE_AUTOUPDATE': '1',
                 'OPENCODE_DISABLE_LSP_DOWNLOAD': '1', 'OPENCODE_DISABLE_EMBEDDED_WEB_UI': '1',
                 'OPENCODE_EXPERIMENTAL_DISABLE_FILEWATCHER': '1',
-                'COURTROOM_OPENCODE_NONCE': nonce, 'COURTROOM_OPENCODE_GUARD_URI': plugin.as_uri()})
+                'COURTROOM_OPENCODE_NONCE': nonce, 'COURTROOM_OPENCODE_GUARD_URI': plugin.as_uri(),
+                'COURTROOM_OPENCODE_AUTH_PLUGIN': auth_plugin['uri'] if auth_plugin else ''})
     if provider:
         env['OPENCODE_CONFIG'] = str(provider)
     return env
@@ -276,7 +296,8 @@ def _serve(config, executable):
     os.chmod(plugin, 0o600)
     settings = root / 'config' / 'opencode.json'
     _write(settings, _settings(plugin.as_uri()))
-    env = _environment(root, nonce, plugin, provider)
+    auth_plugin = _auth_plugin(config)
+    env = _environment(root, nonce, plugin, provider, auth_plugin)
     # Check the selected executable before starting a network service.
     version = subprocess.run([binary, '--version'], env=env, cwd=root / 'cwd',
                              capture_output=True, text=True, timeout=20)
@@ -298,6 +319,7 @@ def _serve(config, executable):
         manifest = {'protocol': PROTOCOL, 'version': VERSION, 'base_url': config.base_url,
                     'pid': process.pid, 'nonce': nonce, 'instance': instance, 'host_root': str(root),
                     'plugin_uri': plugin.as_uri(), 'plugin_sha256': _digest(plugin),
+                    'auth_plugin': auth_plugin,
                     'config_sha256': _digest(settings),
                     'provider_config': str(provider) if provider else None,
                     'provider_config_sha256': _digest(provider) if provider else None}

@@ -162,6 +162,14 @@ class RuntimeConfigTests(unittest.TestCase):
                 with self.assertRaises(c.CourtError):
                     RuntimeConfig.load(self.path)
 
+    def test_auth_plugin_is_an_external_module_not_credentials(self):
+        plugin = self.root / 'auth.mjs'
+        plugin.write_text('export default async () => ({auth:{}});')
+        self.assertEqual(self.config(auth_plugin=str(plugin)).auth_plugin, plugin)
+        for value in ('relative.js', 'https://example.test/plugin.js', str(ROOT/'tools/courtroom_opencode_guard.mjs'), {}):
+            with self.subTest(value=value), self.assertRaises(c.CourtError):
+                self.config(auth_plugin=value)
+
 
 if __name__ == '__main__':
     unittest.main()
