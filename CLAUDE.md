@@ -14,13 +14,10 @@ creates/validates a case before play; it does not always load the same mystery.
 
 For an explicitly named EXISTING world:
 - `.world/court-v2/commitment.json` selects v2; verify/resume with `tools/courtroom_v2.py`.
-- `.world/cases/case-001/base-manifest.json` selects the legacy v1 module at
-  `modules/courtroom.md` and legacy `tools/courtroom.py`. Preserve its exact case,
-  record and rules. Do not migrate it implicitly or reinterpret its old events.
 - A new charter selecting `courtroom-v2` or a new generic `courtroom` selects v2.
 - Other worlds use their existing Worldkeeper rules. Never browse their seals.
 
-Explicit `legacy courtroom trial` selects the unchanged v1 example. An unqualified
+An unqualified
 `Begin courtroom` selects v2, using `worlds/courtroom` unless named otherwise. If
 that world exists, resume it. A new scenario needs another world name, not a reset.
 An explicitly selected courtroom always wins over the most recently played world.
@@ -28,7 +25,7 @@ An explicitly selected courtroom always wins over the most recently played world
 ## Court-scoped exceptions to the original harness
 
 These are root-level changes, not a module pretending to outrank the floor. They
-apply to both court engines unless the specific version gives a narrower contract.
+apply to the courtroom v2 engine.
 
 1. **Local knowledge permits integration.** Opposing counsel, the judge and jurors
    reason from their allocated information. They may develop complete interpretations,
@@ -55,7 +52,7 @@ apply to both court engines unless the specific version gives a narrower contrac
 8. **Entertainment without outcome manipulation.** V2 compresses filing, scheduling,
    waiting and uncontested preliminaries. It does not compress away a strategic
    choice, objection, real concession or inconvenient consequence. Characters need
-   lives and motives, not a duty to praise. V1 retains its original cadence.
+   lives and motives, not a duty to praise.
 9. **Case-level seal and fair changes.** Only a closed case may be unsealed after a
    warning and explicit confirmation. Presentation may change prospectively; live
    facts, burden, jury membership and threshold may not. A changed setup is a new

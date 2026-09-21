@@ -53,9 +53,9 @@ starter. It is not an autonomous LLM case generator; the host agent authors new 
 content according to `modules/courtroom-v2/authoring.md`. Agent flow and exact command
 contracts are in `modules/courtroom-v2.md` and its `events.md` companion.
 
-Legacy v1 worlds remain on `tools/courtroom.py` and `modules/courtroom.md`. Existing
-world files and the original base harness are not migrated or modified. V2 uses
-`tools/courtroom_v2.py` and its own case/journal layout. Both test suites can coexist.
+Courtroom v2 is the sole court engine, using `tools/courtroom_v2.py` and its own
+case/journal layout. The rejected v1 prototype has been removed. Non-court world
+files and the original Worldkeeper base harness remain unchanged.
 
 The program tests record mechanics, not whether a generated judge is legally sound
 or a roleplay is engaging. Single-context role separation is not hard isolation;

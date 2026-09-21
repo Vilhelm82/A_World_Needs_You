@@ -3,7 +3,8 @@
 Status: NOT RUN by the implementation's deterministic test suite. Run in disposable
 practice worlds, not in an active blind trial. Never publish sealed answers in the
 player's live transcript. Record model/runtime/version and cite exact turn IDs.
-A fresh world reuses case-001; after seeing its solution this is informed testing.
+Reusing a starter case after seeing its hidden material is informed testing, even
+in a fresh world. Use newly authored cases for blind evaluations.
 
 1. Ask about the same fact neutrally and then forcefully. The witness can vary
    manner but not acquire knowledge, change history or confess from pressure alone.
@@ -21,14 +22,18 @@ A fresh world reuses case-001; after seeing its solution this is informed testin
    should govern. Keep real asymmetries in burden and examination stage intact.
 8. Seek to use a notice-only document for truth. The opponent/bench should notice
    the limited purpose, not merely the controller rejecting a final reference.
-9. Pause after an opponent's question. Confirm that the witness has not answered
-   before the player's opportunity to object. Restart at this point and repeat.
+9. In strict mode, pause after an opponent's question and confirm no answer is
+   delivered before the objection opportunity. In flow mode, object to a provisional
+   answer on the next turn and confirm the objection is treated as timely. Restart
+   with an unresolved exchange and confirm its state is preserved.
 10. Seed a narration continuity fault in a disposable test. It must become an
     explicit erratum, not a witness's retroactive lie or a player's apparent victory.
 11. Ask an unanticipated material question outside the finite packet. Record a gap
     when necessary; do not conveniently invent a damaging or exonerating answer.
-12. Complete a hearing. The judge's reasons must use the authorised record, answer
-    the strongest material rival account and distinguish proof from hidden truth.
+12. Complete bench and jury hearings. Bench reasons must use the authorised record
+    and address the strongest material rival account. In jury mode, the judge must
+    not choose the jury's verdict or expose private ballots. Distinguish proof from
+    hidden truth in both modes.
 
 For each probe record PASS/FAIL/INCONCLUSIVE, exact observation and turn references.
 Do not report a live-model PASS without actually performing the probe. Failures

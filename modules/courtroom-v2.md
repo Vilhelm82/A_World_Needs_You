@@ -31,7 +31,7 @@ state card, latest checkpoint and relevant role packets. Continue at the precise
 pending question or scene. The card contains worldkeeper state and must not be
 passed to witnesses, counsel, judge or jury as a packet.
 
-Legacy worlds select v1 exactly as the root router says. Never run v2 against one.
+Do not initialise a court case over an existing unrelated world.
 
 ## 2. Build any new case, not merely a fixture
 

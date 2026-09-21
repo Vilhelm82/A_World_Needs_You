@@ -38,11 +38,10 @@ no real remote push was performed in these installer tests.
 
 ## Not executed or claimed
 
-The original 47 v1 tests were not rerun in this isolated build: their executable
-resources are in the user's existing checkout, not mounted here. V1 controller,
-fixtures, tests, module and original Worldkeeper base harness are not changed by
-this update. The local installer runs the WHOLE checkout test suite, including
-v1, before committing; it records the actual output separately on that machine.
+The supplied archive was installed locally at commit 06bfee8. At that point all
+143 tests passed (96 v2 and 47 v1). The user confirmed that v1 had never been played
+and was a rejected prototype, so the v1 controller, fixtures, tests and routing
+have since been removed. The maintained suite now contains 96 v2 tests.
 
 No full live-model hearing, independent multi-agent trial, human legal review,
 calibrated jury simulation or entertainment user test has been completed. The
@@ -56,8 +55,7 @@ validation until authored. Real-world court-system fidelity is not asserted.
 
 ## Local-first delivery
 
-The requested host checkout is not mounted in the build runtime. The update is
-therefore packaged for application to that checkout, not falsely represented as
-already applied there. The installer refuses a dirty tree, wrong branch, changed
-base or conflicting files, runs the complete tests, commits locally and optionally
-pushes using existing local Git authentication. No pasted token is used.
+The archive was applied to the user's local checkout, committed there, and pushed
+using existing Git authentication. Subsequent changes follow the same workflow.
+`BUILD-MANIFEST.json` describes the current maintained payload; the original source
+archive retains the original build checksums. Non-court worlds are unchanged.

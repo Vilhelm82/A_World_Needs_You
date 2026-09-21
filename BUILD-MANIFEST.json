@@ -1,15 +1,15 @@
 {
-  "CLAUDE.md": "c8c4ae8e0551074427bcb2621ed74fce016707e2eded4adf3be25ed609db45bb",
-  "COURTROOM-V2.md": "05b969d92805e66d0ff998b13dbedd050358d541f9e92c13022bfe89468cf3e4",
+  "CLAUDE.md": "4d62962b4b4ead88bc69326ae25a91118d85fd833664b61429064002253795a0",
+  "COURTROOM-V2.md": "50f79569eb24613a860b0c0de8dd8b3be9834b7c879a8d399b42371052e0b2f2",
   "docs/courtroom-reference-model.md": "153edaa36d41aa7d2f36b43985cb454414820c6cfe44c6d87b239efe57b1d846",
-  "docs/courtroom-v2-validation.md": "fe0da33fb5fe3dcdb7b39978e3d7228a5b77504d3b7d0c53d7f92a24401eb1d3",
+  "docs/courtroom-v2-validation.md": "b8483098e0ade260fb5415f5c43e2bfe77a58ddb5cb35343221974e303aebf4b",
   "modules/courtroom-v2/.sealed/last-light.json": "c61bc1d47fb1c71deecbf2315eafd76ff6acc58e1d6890c6d517a52ba2728e1c",
   "modules/courtroom-v2/.sealed/second-signature.json": "8cf2d35fd103656e241df666123f06411a07a54def57b7814ddb438e50e38e9a",
   "modules/courtroom-v2/authoring.md": "ea762709360165079ddcadbfc666688ce5c6f477f6711ae075e17bb608508f5f",
   "modules/courtroom-v2/events.md": "998875be9b3af997262cbaf96fd6c7107141332cab8d06723fa76333447385f8",
-  "modules/courtroom-v2.md": "cbdff9d4346b2ce4cccb31cc5de7dff14ec8dd19af45d1aaafad8ef61b3f855c",
+  "modules/courtroom-v2.md": "145f6a4617e715e159e5c39a83c5335fa8914363d2cfa5fac255208d34c36865",
   "templates/courtroom-v2-charter.md": "3cb6710c5b04ecb342df973468655de6306ddec9d16f61e0daa4cd142e9aab71",
-  "tests/test_courtroom_v2.py": "dd6d3b75eecf633431914b2fe5ebd24ba58241c593870b744dba93ca189ed66a",
+  "tests/test_courtroom_v2.py": "833b79dc7b35452c0783e5d0a7bc9eaa1bf8dc7e0884e2a6ffc0d5306d3a8213",
   "tools/courtroom_cases.py": "9df6c0a3d14a0f86355b316e9bdabd3d0aa247711b4521e0d9d2ceacdc866c81",
   "tools/courtroom_v2.py": "5fbd7b5ac73b267825bf97bab555ab70a9f839e15d973621a2a73ac0579f8baa"
 }

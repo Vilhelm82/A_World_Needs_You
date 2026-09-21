@@ -10,12 +10,13 @@ Point a session at this folder and say anything. Something will start.
 - `worlds/<name>/chronicle/` is yours too: whatever the world has put in your character's hands. It may be wrong.
 - Do not open `.world/` or `records/`. That is the agreement. A world is only worth standing in if it could be other than you'd like.
 
-## Courtroom trial branch
+## Courtroom v2
 
-Say **Begin the courtroom trial. I am counsel for the defendant.** in a fresh
-file-backed agent session at the repository root. See [COURTROOM.md](COURTROOM.md)
-for startup, controls and validation limits. Python 3.10+ is required for this module.
+Say **Begin courtroom. Criminal jury trial, US-inspired. I am defence counsel.**
+in a fresh file-backed agent session at the repository root. See
+[COURTROOM-V2.md](COURTROOM-V2.md) for startup, controls and validation limits.
+Python 3.10+ is required. Civil and criminal cases, bench and jury trials, either
+side, and US-inspired or NSW-inspired styles are supported.
 
-The original harness is preserved in `modules/worldkeeper-base.md`; `CLAUDE.md`
-routes non-court worlds to it unchanged. The court has explicit scoped amendments,
-a committed first case and deterministic record checks. Existing worlds are untouched.
+Courtroom v2 is the sole court engine. The original Worldkeeper harness remains in
+`modules/worldkeeper-base.md`; `CLAUDE.md` routes non-court worlds to it unchanged.

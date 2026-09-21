@@ -159,9 +159,9 @@ class CourtroomV2Tests(unittest.TestCase):
         self.assertEqual(before,(self.world/c.AREA/'case.json').read_bytes())
     def test_init_never_overwrites(self):
         with self.assertRaises(c.CourtError):c.initialise(self.root,'test-court',self.case)
-    def test_legacy_world_not_overwritten(self):
-        w=self.root/'worlds/legacy';w.mkdir();(w/'keep').write_text('unchanged')
-        with self.assertRaises(c.CourtError):c.initialise(self.root,'legacy',self.case)
+    def test_unrelated_world_not_overwritten(self):
+        w=self.root/'worlds/unrelated';w.mkdir();(w/'keep').write_text('unchanged')
+        with self.assertRaises(c.CourtError):c.initialise(self.root,'unrelated',self.case)
         self.assertEqual((w/'keep').read_text(),'unchanged')
     def test_path_traversal_and_symlink_rejected(self):
         for name in ('../oops','/tmp/foo','a/b','Upper',''):
