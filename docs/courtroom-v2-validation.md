@@ -103,4 +103,14 @@ synthetic credentials and stubbed network calls: both role requests retained the
 own messages and courtroom guard, with no tools or cross-role canaries added.
 The three new deterministic tests cover external plugin configuration, source
 fingerprints and authentication-only hook enforcement. No Claude login or live
-Claude generation was performed; those remain pending the user's authentication.
+Claude generation was performed at that installation checkpoint.
+
+After the user configured provider authentication, live smoke tests passed for
+`anthropic/claude-sonnet-4-6`, `openai/gpt-5.6-sol`, and `xai/grok-4.3`.
+Each test created two distinct sessions, checked each model's recall of its own
+synthetic canary without the other canary, and resumed both sessions through a new
+backend instance. Claude initially wrapped valid JSON in Markdown; the shared
+system instruction now explicitly requires raw JSON without fences. All three
+providers passed after that change, and all 206 deterministic tests passed.
+These are connection/session checks, not complete hearings or a measurement of
+legal reasoning quality. Runtime role/model assignments remain operator choices.
