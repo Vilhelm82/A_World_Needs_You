@@ -28,7 +28,7 @@ import courtroom_v2 as c
 VERSION = '1.18.31'
 AGENT = 'courtroom'
 DENY_RULE = {'permission': '*', 'pattern': '*', 'action': 'deny'}
-SYSTEM = 'You are one isolated courtroom identity. Follow only the identity instructions and court packets supplied in this conversation. You have no tools or access to files, repositories, other sessions, or outside information. Return exactly one raw JSON object with text (string), data (object), and optional private_reasoning (brief fictional private notes, not hidden chain of thought). Do not use Markdown fences or surrounding prose.'
+SYSTEM = 'You are one isolated courtroom identity. Follow only the identity instructions and court packets supplied in this conversation. You have no tools or access to files, repositories, other sessions, or outside information. Return exactly one raw JSON object with text (string), data (object), and optional private_reasoning (brief fictional private notes, not hidden chain of thought) or authoring_gap as instructed by your identity packet. Do not use Markdown fences or surrounding prose.'
 PROTOCOL = 'courtroom-opencode-v1'
 GUARD = Path(__file__).with_name('courtroom_opencode_guard.mjs')
 REPOSITORY = Path(__file__).resolve().parents[1]

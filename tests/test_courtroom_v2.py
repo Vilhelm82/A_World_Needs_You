@@ -27,6 +27,25 @@ def fixture(kind='criminal', forum='jury', side=None, style='us-drama', pace='dr
         'S1': {'name':'Solicitor','kind':'support','knowledge':['CLIENT_SUPPORT_632'],'documents':['E1']},
         'W9': {'name':'Witness nine','kind':'witness','knowledge':['OWN_MEMORY_679'],'documents':['E1'], 'knowledge_basis':'Direct observation, limited to fixed fixture.'},
         'WitnessX': {'name':'Other witness','kind':'witness','knowledge':['OTHER_MEMORY_211'],'documents':[], 'knowledge_basis':'Separate fixed observation.'}}
+    for who, role in case['roles'].items():
+        if role['kind'] != 'witness':
+            continue
+        role.update(background={
+            'life_history': who + ' lives in the artificial fixture town and works at its archive.',
+            'occupation': 'Archive attendant who checks public reading-room supplies.',
+            'training_and_qualifications': 'In-house inventory training; no technical trade qualification.',
+            'relationships': 'Works with the archive staff; no personal relationship with the litigants.',
+            'personal_stakes': 'Wants the inventory record corrected without losing colleagues trust.'},
+            relevant_activities=[{'description': 'Morning supply inventory.',
+                'purpose': 'Check whether the reading room needs more paper.',
+                'actions': 'Counted sealed paper packs on the supply shelf and entered the count on a stock card.',
+                'tools_and_materials': 'Stock card and pencil; no electrical equipment or repair work.',
+                'authority': 'Ordinary assigned attendant duty, not a licensed trade activity.',
+                'limits': 'Did not inspect unopened packs or observe deliveries before arriving.'}],
+            memory='Remembers counting packs but not every incidental sound.',
+            perception_limits='Saw the shelf only while present in the reading room.',
+            motives='Wants an accurate account; no authored reason to evade these foundation questions.',
+            manner='Matter-of-fact; distinguishes remembered events from assumptions.')
     case['documents'] = {
         'E1': {'title':'Agreed item','text':'ADMITTED_CONTENT_761','provenance':'Fixture stipulation.','status':'admitted','uses':['truth']},
         'E2': {'title':'Contested item','text':'EXCLUDED_CONTENT_301','provenance':'Fixture proposed document.','status':'disclosed','uses':[]}}
@@ -103,7 +122,7 @@ class CourtroomV2Tests(unittest.TestCase):
                                 self.assertEqual(c.verify(w)['status'],'PASS')
                                 self.assertEqual(c.read_case(w)['config']['player_side'],side)
         self.assertEqual(n,48)
-    def test_both_complete_starters_in_both_forums_and_sides(self):
+    def test_legacy_example_structure_in_both_forums_and_sides(self):
         for file in (ROOT/'modules/courtroom-v2/.sealed').glob('*.json'):
             source=c.load(file);kind=source['config']['case_type']
             for forum in ('bench','jury'):

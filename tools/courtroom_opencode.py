@@ -302,7 +302,7 @@ class OpenCodeBackend(Backend):
         payload = {'identity': identity, 'system_prompt': system_prompt, 'initial_packet': deepcopy(initial_packet),
                    'delivery': 'Initial permitted context. Subsequent packets contain changes only. '
                    'Merge documents by key and events/public_orders by id; apply explicit removed entries. '
-                   'Return only JSON with text, data, optional private_reasoning for the requested action.'}
+                   'Return only JSON with text, data, optional private_reasoning, or authoring_gap as instructed for the requested action.'}
         self._post(meta, payload, initial=True)
         meta['initialised'] = True
         self._save(meta)
@@ -365,9 +365,10 @@ class OpenCodeBackend(Backend):
             response = json.loads(_texts(result))
         except (ValueError, TypeError):
             raise c.CourtError('OpenCode identity must return one JSON response; repair/restart this identity.') from None
-        c.require(isinstance(response, dict) and set(response) <= {'text', 'data', 'private_reasoning'} and
+        c.require(isinstance(response, dict) and set(response) <= {'text', 'data', 'private_reasoning', 'authoring_gap'} and
                   isinstance(response.get('text'), str) and isinstance(response.get('data'), dict) and
-                  isinstance(response.get('private_reasoning', ''), str), 'Invalid OpenCode identity response.')
+                  isinstance(response.get('private_reasoning', ''), str) and
+                  ('authoring_gap' not in response or c.text(response['authoring_gap'])), 'Invalid OpenCode identity response.')
         return response
 
     def close_session(self, session_id):

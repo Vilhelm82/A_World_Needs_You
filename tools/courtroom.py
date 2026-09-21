@@ -115,6 +115,7 @@ def main(argv=None):
 
         world = c.world_path(args.root, args.world)
         case = _case(args, world)
+        c.validate_readiness(case)
         if args.backend == 'opencode':
             backend = OpenCodeBackend(config, config.resolve(case))
             report = backend.preflight()

@@ -77,6 +77,15 @@ def system_prompt(identity, role):
         'Rulings name a supplied rule and effect: objection (result sustained/overruled), document '
         '(document,status,uses), strike (target), or procedure. Examination data has witness,question,answer:null. '
         'Do not return actor, audience, tool calls, state edits, or another identity\'s answer. '+
+        ('Your background, relevant_activities and knowledge are firsthand personal knowledge, not merely document summaries. '
+         'Answer questions about your life, qualifications and actions from that knowledge even when no document records them. '
+         'A document being silent does not mean you lack personal knowledge. Do not substitute what paperwork says for what you did. '
+         'Distinguish authored uncertainty, perception limits and deliberate evasiveness from facts the author never supplied. '
+         'Do not invent a missing material fact, a memory failure or a reason to evade. If a material personal fact needed to answer '
+         'was never authored, return {"text":"","data":{},"authoring_gap":"brief description of the missing fact"}. '
+         'This is an out-of-character authoring fault, not speech, evidence, a credibility cue or a confession. '
+         'Do not combine authoring_gap with testimony or private_reasoning. No brevity rule limits the substance of your answer. '
+         if role['kind']=='witness' else '')+
         ('Decide admissibility and procedure only; never merits findings.' if identity=='judge_admissibility' else
          'Use only admitted/limited evidence for findings; never infer missing excluded material.' if identity=='judge_merits' or role['kind']=='juror' else
          'Keep private strategy private; communicate to others only through your recorded speech.'))
@@ -113,6 +122,7 @@ def routed_packet(case, events, identity):
     packet=c.packet_from(case,events,role,merits)
     # Whitelist role fields: arbitrary author metadata can never enter the session.
     allowed=('name','kind','knowledge','knowledge_basis','documents','manner','motives','memory','perception_limits','personality')
+    if case['roles'][role]['kind']=='witness': allowed += ('background','relevant_activities')
     packet['role']={k:deepcopy(case['roles'][role][k]) for k in allowed if k in case['roles'][role]}
     if merits: packet['role']={k:v for k,v in packet['role'].items() if k not in {'knowledge','knowledge_basis','documents','motives','memory','perception_limits'}}
     packet['identity']=identity
@@ -178,7 +188,8 @@ class Orchestrator:
     def start(cls, world, backend):
         self=cls(world,backend)
         with runtime_lock(self.world):
-            case=c.read_case(self.world);events=c.read_events(self.world);c.replay(case,events)
+            case=c.read_case(self.world);c.validate_readiness(case)
+            events=c.read_events(self.world);c.replay(case,events)
             p=c.safe_path(self.world,RUNTIME)
             if p.exists():
                 state=c.load(p)
@@ -274,6 +285,7 @@ class Orchestrator:
 
     def _call(self,state,case,events,identity,kind,selectors=None):
         c.require(identity in identities(case),'No model session for this identity (the player is human).')
+        c.require(not c.replay(case,events)['paused'],'Case paused for an authoring or simulation fault; no model call made.')
         self._allowed(case,identity,kind)
         packet=self._ensure(state,case,events,identity,resume=True)
         entry=state['sessions'][identity]
@@ -281,9 +293,23 @@ class Orchestrator:
                  'packet':packet_delta(entry['delivery'],packet),'selectors':selectors or {}}
         state['inflight'].append(identity);self._save(state)
         response=self.backend.send(entry['session_id'],deepcopy(request))
-        c.require(isinstance(response,dict) and set(response)<={'text','data','private_reasoning'} and
+        c.require(isinstance(response,dict) and set(response)<={'text','data','private_reasoning','authoring_gap'} and
                   isinstance(response.get('text'),str) and isinstance(response.get('data'),dict) and
                   isinstance(response.get('private_reasoning',''),str),'Malformed or cross-identity model response.')
+        if 'authoring_gap' in response:
+            c.require(case['roles'][role_for(identity)]['kind']=='witness'
+                      and c.text(response['authoring_gap']) and response['text']=='' and response['data']=={}
+                      and 'private_reasoning' not in response,
+                      'An authoring gap must be a witness fault report, never mixed with testimony.')
+            call={'identity':identity,'session_id':entry['session_id'],'request':request,
+                  'response':deepcopy(response),'delivery':deepcopy(packet)}
+            # Keep the model's potentially private explanation in its sealed audit.
+            # Only this deterministic notice enters the player's record.
+            notice='Authoring gap: a material witness fact was not supplied. No answer was recorded. '
+            notice+='This is a simulation fault, not evidence or a credibility inference; play is paused.'
+            self._commit(state,case,events,[{'type':'gap','actor':'engine','audience':['player'],
+                         'text':notice,'data':{'detail':notice}}],[call])
+            raise c.CourtError('Witness authoring gap: no testimony generated; case paused for explicit review.')
         c.require(response['data'].keys()<=c.FIELDS[kind],'Model returned invalid event fields.')
         def check_references(value):
             if isinstance(value,dict):

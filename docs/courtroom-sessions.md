@@ -37,7 +37,7 @@ or confident manners are not proxies for truth, guilt, or evidence strength.
 Implement `Backend` with a stable `backend_id` identifying the provider/account/store:
 
 - `create_session(identity, system_prompt, initial_packet, model_config=None) -> Session`
-- `send(session_id, request) -> {text, data, private_reasoning?}`
+- `send(session_id, request) -> {text, data, private_reasoning?, authoring_gap?}`
 - `resume_session(session_id) -> Session`
 - `close_session(session_id)`
 - `healthcheck()` and `list_models()` for live backend discovery
@@ -45,6 +45,21 @@ Implement `Backend` with a stable `backend_id` identifying the provider/account/
 `Session` has stable `session_id`, underlying `context_id`, and owning `identity`.
 The context handle must represent the actual isolated conversation, not an invented
 alias for a shared conversation. Duplicate current or retired handles fail startup.
+
+New play additionally requires the witness foundations described in
+`modules/courtroom-v2/authoring.md`. Each witness receives their own `background`
+and `relevant_activities`, plus committed memory limits, motives and manner, even
+when no document contains those facts. These fields survive independent rebuilds
+and never enter another identity's initial packet.
+
+A witness may report missing material authoring with empty `text`, empty `data`,
+and a nonempty `authoring_gap` string, without private reasoning. It is not speech.
+The orchestrator records only a fixed player-facing engine gap notice, keeps the
+explanation in sealed identity history/audit, and pauses the case. It records no
+answer and will make no more role calls while paused, including after restart.
+Reported gaps cannot be mixed with testimony or used by a different role type.
+Authoring validation checks required fields and placeholders, not all possible
+semantic omissions; the host and role still must recognise unanticipated gaps.
 Resume must return the same handle and identity. Report `SessionUnavailable` if safe
 resumption is impossible. Never attach a guessed, shared or different conversation.
 Adapters must declare independent persistent contexts and no ambient access. A backend

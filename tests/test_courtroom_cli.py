@@ -92,6 +92,18 @@ class CourtroomCliTests(unittest.TestCase):
         self.assertFalse((self.root / 'worlds').exists())
         self.assertFalse(any(call[0] == 'create_session' for call in self.calls))
 
+    def test_missing_witness_foundation_fails_before_backend_construction(self):
+        case = fixture()
+        del case['roles']['W9']['background']
+        self.casefile.write_bytes(c.encode(case))
+        for command in ('start', 'backend-check'):
+            with self.subTest(command=command):
+                code, _, error = self.run_cli(command, '--case', str(self.casefile))
+                self.assertEqual(code, 2)
+                self.assertIn('background', error)
+                self.assertEqual(self.calls, [])
+                self.assertFalse((self.root / 'worlds').exists())
+
     def test_unavailable_model_cannot_create_a_world(self):
         self.available = {('wrong-provider', 'configured-model')}
         code, _, error = self.run_cli('start', '--case', str(self.casefile))

@@ -112,6 +112,14 @@ class OpenCodeTests(unittest.TestCase):
         self.backend.preflight()
         self.assertEqual(self.transport.sessions,{})
 
+    def test_opencode_gap_response_pauses_without_recording_speech(self):
+        r = self.start()
+        self.transport.responses.append({'text': '', 'data': {}, 'authoring_gap': 'PRIVATE_MISSING_FIELD_492'})
+        with self.assertRaisesRegex(c.CourtError, 'authoring gap'):
+            r.turn('W9', 'dialogue', ['player', 'W9'])
+        self.assertEqual([e['type'] for e in c.read_events(self.world)], ['gap'])
+        self.assertNotIn('PRIVATE_MISSING_FIELD_492', json.dumps(r.player_packet()))
+
     def test_reasoning_is_role_specific_and_persists_after_restart(self):
         self.transport.providers['providers'][0]['models']['arbitrary-model']['variants'] = {
             'medium': {'effort': 'medium'}, 'high': {'effort': 'high'}}

@@ -21,6 +21,54 @@ ordinary memory limits, any pre-existing mistaken or false account and its limit
 interests, distinctive voice and plausible scope of cooperation. Evasiveness is not a
 truth detector. A question can expose a discrepancy; it cannot create a new memory.
 
+## Witnesses are people, not document readers
+
+Before commitment, every witness must have a `background` object containing
+nonempty authored text for `life_history`, `occupation`, `training_and_qualifications`,
+`relationships`, and `personal_stakes`. Define concrete experience and abilities;
+explicitly state no qualifications or no relationship where appropriate. These are
+facts the person knows about themselves, whether or not any exhibit records them.
+
+Supply one or more `relevant_activities`, each with `description`, `purpose`,
+`actions`, `tools_and_materials`, `authority`, and `limits`. Describe what the person
+actually did or perceived, in usable detail. "Performed an authorised service check"
+does not specify any work. Identify the equipment or subsystem, the steps performed,
+the person's competence and authorisation, and what they did not inspect or know.
+For a bystander, describe their observation and its circumstances; do not invent a
+trade or require irrelevant technical credentials. A lack of equipment or special
+authority is a concrete answer, not an empty field.
+
+Also author `memory`, `perception_limits`, `motives`, and `manner`, alongside the
+existing `knowledge` and `knowledge_basis`. Preserve genuine uncertainty and any
+committed false account or evasive motive. These fields never encode global author
+truth or facts learned only by another identity. Private background belongs solely
+to its witness until communicated through a recorded event. No output-length limit
+may narrow the substance or scope of testimony.
+
+Rehearse ordinary foundation questions against each isolated packet before calling
+the case ready: what do you do; what training or licence do you hold; what exactly
+did you do here; with which tools or materials; why and under whose authority; how
+do you know; what can you not remember or perceive? Check likely follow-ups as well.
+Answers must follow from committed personal facts, not from the absence of words
+in an exhibit. Reconcile activities, qualifications, chronology and documents with
+the fixed past, without engineering a preferred verdict. Do this before seeing
+the player's theory. Do not count a completed form as a semantic review.
+
+`witness_scaffold()` supplies placeholders for these fields. Placeholders do not
+pass readiness. `validate`, case building, startup and backend-check enforce their
+presence; historical record verification still accepts the older structural schema.
+The original Last Light and Second Signature examples lack these foundations and
+are reference material only, not launch-ready scenarios. Never patch an existing
+world's committed case to make it pass the new gate.
+
+If an unanticipated material fact was not authored, the witness returns
+`{"text":"","data":{},"authoring_gap":"description of missing fact"}`. The
+controller pauses and records a neutral engine notice, never testimony. The
+description remains sealed; it must not reveal a private witness fact to the player.
+The host must not portray this as evasiveness, hesitation, deceit, lack of credentials
+or faulty memory. Resolve only from already committed material, or abandon/rebuild
+the case explicitly. Do not use a bare `repair` merely to bypass the missing fact.
+
 For documents settle: author, date, intended audience, provenance, any alteration,
 relationship to other sources, who has received it, and initial evidentiary status.
 Do not place truth annotations, hidden provenance conclusions or private instructions
@@ -89,7 +137,8 @@ Read the case from each side, not just the author truth. Ensure a loss can occur
 invented rescue and a strong question can succeed without artificial resistance.
 No target verdict field, hidden success condition or score threshold belongs in a case.
 
-`validate` checks schema only. After author review, the storage initialiser fixes the case bytes and
+`validate` checks structure and witness foundation fields, not factual coherence or
+semantic completeness. After author review, the storage initialiser fixes the case bytes and
 creates a clean world; the required isolated-session orchestrator then starts play. Keep the original commitment hash in a separate record/commit
 when practical; a same-disk checksum detects drift but is not tamper-proof security.
 Existing worlds, fixtures and sessions are never overwritten to produce a new scenario.

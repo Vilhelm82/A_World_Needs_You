@@ -47,6 +47,11 @@ are rejected as overrides. Unused kind defaults are permitted; every actual
 identity needs a resolved model. Every resolved provider/model pair is checked
 against the current server catalog before any new world or role session is created.
 
+Case readiness is checked first. Every witness needs the committed personal
+background and concrete activity profile in `modules/courtroom-v2/authoring.md`.
+The historical Last Light and Second Signature examples lack those foundations;
+they are no longer launch-ready. Author a new case before starting play.
+
 `reasoning` is optional and selects an exact OpenCode model variant. `list-models`
 reports each model's `reasoning_levels`; choose only a listed level. The examples
 above require models that expose `medium` and `high`. Names are provider-neutral:

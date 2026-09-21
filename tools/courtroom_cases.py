@@ -75,6 +75,16 @@ def configure(source: dict, style: str = "us-drama", forum: str = "jury", side: 
     return case
 
 
+def witness_scaffold(name: str) -> dict:
+    """Author-owned placeholders, never manufactured biography or case facts."""
+    return {'name': name, 'kind': 'witness', 'documents': [],
+            'knowledge': ['REPLACE: fixed personal observations and knowledge, independent of documents.'],
+            'knowledge_basis': 'REPLACE: sources of knowledge and their limits.',
+            'background': {key: 'REPLACE: ' + key for key in court.WITNESS_BACKGROUND_FIELDS},
+            'relevant_activities': [{key: 'REPLACE: ' + key for key in court.WITNESS_ACTIVITY_FIELDS}],
+            **{key: 'REPLACE: ' + key for key in ('memory', 'perception_limits', 'motives', 'manner')}}
+
+
 def skeleton(kind: str) -> dict:
     """Intentionally unplayable until a host authors the material; no false case generator."""
     case = {"schema": 2, "draft": True, "case_id": "new-case", "law_status": "simulation", "title": "AUTHOR A DISTINCT CASE",
@@ -86,7 +96,8 @@ def skeleton(kind: str) -> dict:
             "procedure": "Filled by profile.", "authorities": "Filled by profile.", "rules": deepcopy(RULES),
             "roles": {"player": {"name": "Will", "kind": "counsel", "knowledge": [], "documents": []},
                       "opponent": {"name": "Other counsel", "kind": "counsel", "knowledge": [], "documents": []},
-                      "bench": {"name": "Judge", "kind": "bench", "knowledge": [], "documents": []}},
+                      "bench": {"name": "Judge", "kind": "bench", "knowledge": [], "documents": []},
+                      "W1": witness_scaffold('AUTHOR WITNESS NAME')},
             "documents": {}, "issues": {}, "counts": {}}
     return case
 
@@ -112,7 +123,7 @@ def main() -> int:
             source = court.load(root / "modules/courtroom-v2/.sealed" / f"{args.scenario}.json")
         case = configure(source, args.style, args.factfinder, args.player_side, args.pace, args.jury_size, args.threshold)
         if not case.get("draft"):
-            court.validate(case)
+            court.validate_readiness(case)
         args.out.parent.mkdir(parents=True, exist_ok=True)
         with args.out.open("x", encoding="utf-8") as f:
             json.dump(case, f, ensure_ascii=False, indent=2)

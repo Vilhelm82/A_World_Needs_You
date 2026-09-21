@@ -1,7 +1,7 @@
 # Courtroom v2: start here
 
 A general court-roleplay module for Worldkeeper. Civil **and** criminal cases.
-Bench **and** jury trials. Either side. New original scenarios or two ready examples.
+Bench **and** jury trials. Either side. New original scenarios with committed witness backgrounds.
 Routine administration stays offstage; consequential advocacy stays yours.
 
 ## Start with a conforming isolated-session backend
@@ -21,9 +21,15 @@ forced to reuse the old civil scenario. More examples of accepted setup requests
 
 > A civil jury dispute about a disputed invention. I represent the claimant.
 
-> Use the Last Light starter case as a criminal jury trial. I am defence counsel.
+> Author a new criminal jury case. I am defence counsel.
 
-> Use the Second Signature starter as a civil bench case, NSW-inspired.
+> Author a new civil bench case, NSW-inspired.
+
+Last Light and Second Signature are now historical examples, not ready-to-play
+cases: their witness foundations are incomplete. New startup rejects them. A new
+case must include personal backgrounds, concrete relevant activities, qualifications,
+memory limits and motives before play. Missing material authoring pauses the
+simulation; it must never be presented as suspicious witness behaviour.
 
 Case type, factfinder, side, style and pace are independent. An existing named world
 resumes; a new case gets a new folder. Default is fictional US-inspired criminal
@@ -55,7 +61,7 @@ no API key, new service or model subscription is installed by the controller.
     python3 -m unittest discover -s tests -v
 
 The case builder can create a draft scaffold (`--scenario new`) or prepare a complete
-starter. It is not an autonomous LLM case generator; the host agent authors new case
+historical example. It is not an autonomous LLM case generator; the host agent authors new case
 content according to `modules/courtroom-v2/authoring.md`. Agent flow and exact command
 contracts are in `modules/courtroom-v2.md` and its `events.md` companion.
 

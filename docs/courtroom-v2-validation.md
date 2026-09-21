@@ -10,7 +10,7 @@ Python 3.13.5 on Linux; standard library only.
 
 `python3 -m unittest discover -s tests -v` in the isolated v2 build:
 **96 v2 test methods passed.** One method exercises 48 civil/criminal, bench/jury,
-style, party and pacing combinations. Another exercises both complete starters in
+style, party and pacing combinations. Another exercises both historical example structures in
 both forums, on either side, under both standard styles. Those are matrix checks,
 not 48 independent live-model trials or extra test methods added to the count.
 
@@ -55,8 +55,10 @@ The application cannot
 prevent an operator with full write access from altering files and all their hashes.
 
 New cases are authored by the host agent, not by an embedded network service. The
-two starters are complete examples; a new-case scaffold intentionally fails
-validation until authored. Real-world court-system fidelity is not asserted.
+two historical examples are no longer considered ready for play: witness background
+was insufficient despite structural validity. They now fail the readiness gate.
+A new-case scaffold intentionally fails validation until authored. Real-world
+court-system fidelity is not asserted.
 
 ## Local-first delivery
 
@@ -131,3 +133,29 @@ the selected variant; the guard checked its options before model calls. An
 additional `anthropic/claude-opus-5` / `high` smoke failed with a provider
 `ContentFilterError`; that model is not claimed as a live pass. No real case or
 testimony-length restriction was introduced by these synthetic checks.
+
+## Witness foundations and missing authoring
+
+The complete deterministic suite passes **230 tests**. Fifteen new tests cover
+required personal backgrounds and relevant activities, blank/placeholder rejection,
+validation and startup refusal before backend construction, historical example
+readability without readiness, witness-only background routing and independent
+rebuilds, genuine authored memory limits, and the `authoring_gap` response through
+both the orchestrator and OpenCode adapter. Gap tests cover conferences and
+examination, no fabricated testimony or private-detail disclosure, no further model
+calls while paused, wrong-role/mixed-response rejection, and interrupted journal
+commit recovery.
+
+A live synthetic Grok 4.3 witness at medium reasoning, with no documents in its
+packet, answered three foundation questions from its authored background and
+activities: occupation/work performed, tools used, and trade qualifications. It
+described counting paper packs with a stock card and pencil, and stated its in-house
+training and absence of a trade qualification. When asked for an exact entry time
+that was not authored, it returned an authoring gap; the controller recorded only
+an engine notice, paused, and produced no witness answer. This is one successful
+live regression exercise, not proof that every model will recognise every omission.
+
+The readiness gate checks required structure and obvious placeholders. Semantic
+coherence and adequate detail still require the pre-commitment authoring review.
+Existing Last Light world and staging files were preserved byte-for-byte; no
+replacement hearing was created and no missing historical fact was backfilled.

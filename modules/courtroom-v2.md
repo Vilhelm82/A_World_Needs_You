@@ -49,8 +49,11 @@ a desired outcome, or a personality diagnosis of the player. Finish all material
 fields and set `draft` to false. Unknowns are deliberately bounded, not universal amnesia.
 Review both sides from their allocated records; do not predetermine either victory.
 
-Alternatively, if the player requests a ready example, use `--scenario last-light`
-(criminal, two independent counts) or `--scenario second-signature` (civil). Either
+The historical `--scenario last-light` (criminal, two independent counts) and
+`--scenario second-signature` (civil) examples lack complete witness backgrounds
+and fail the new readiness gate. They are reference material, not ready examples.
+Do not retry them or silently add historical facts during play. Author a fresh case
+using `--scenario new` and the required witness profiles. The profile configuration
 accepts `--factfinder bench|jury`, `--style us-drama|nsw-drama|custom`, appropriate
 `--player-side`, and `--pace drama|deliberate`. An example has fixed historical facts;
 a replay with a new forum is not a new mystery. Do not read both example truths
@@ -80,7 +83,9 @@ A procedural issue is playable when its resolution changes what counsel can do.
 
 The fictional US-inspired default is a presentation choice, not permission for
 unlimited speeches, surprise evidence from nowhere, bullying or irrelevant theatrics.
-Use concise exchanges with distinct voices and physical detail. The bench can be
+Let answers have the scope and length warranted by the question and the witness's
+knowledge. Relay exact character contributions; do not invent physical tells or
+credibility commentary. The bench can be
 brisk or dry; opposing counsel can be strategic. No automatic confession or humiliation.
 Some points should land quickly. Do not force an opponent to resist what the record
 plainly establishes. Do not make the world sterile to avoid flattery.
@@ -192,6 +197,14 @@ restore the affected opportunity. A missing material fact is a `gap`, not licenc
 to invent an answer tailored to the player's theory. Neither produces a player
 victory or penalty. Resolve only from committed material; otherwise openly suspend
 that part as unsuitable for assessment and agree a repair or separate practice run.
+
+The witness's `authoring_gap` response is an out-of-character fault signal, never
+dialogue. The runtime records a neutral engine notice and pauses before any answer.
+Do not portray missing authored facts as the witness being evasive, rehearsed,
+unqualified or forgetful. Do not add sighs, glances, pauses or counsel reactions
+that turn a system limitation into adverse evidence. State the fault plainly.
+An authored limitation or motive is different: genuine uncertainty and deliberate
+evasion may be played when grounded in that identity's committed packet.
 
 `// procedure`: explain supplied rules, not strategy. `// record`: retrieve exact
 received evidence/words. `// prepare`: private to the player. `// faster`/`// slower`:

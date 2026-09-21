@@ -218,8 +218,43 @@ def locked(world: Path):
         path.unlink(missing_ok=True)
 
 
-def initialise(root: Path, name: str, case: dict) -> Path:
+WITNESS_BACKGROUND_FIELDS = ('life_history', 'occupation', 'training_and_qualifications',
+                             'relationships', 'personal_stakes')
+WITNESS_ACTIVITY_FIELDS = ('description', 'purpose', 'actions', 'tools_and_materials', 'authority', 'limits')
+
+
+def validate_readiness(case: dict) -> dict:
+    """New-play gate; legacy structural validation remains available for saved records.
+
+Presence and placeholder checks cannot establish semantic completeness. Authors
+must still review foundation questions against the witness's committed history.
+"""
     validate(case)
+    def authored(value):
+        return (text(value) and value.strip().lower() not in
+                {'todo', 'tbd', 'unknown', 'not specified', 'not provided', 'n/a', 'to be authored'}
+                and not value.strip().lower().startswith(('replace:', 'todo:')))
+    for who, role in case['roles'].items():
+        if role['kind'] != 'witness':
+            continue
+        background = role.get('background')
+        require(isinstance(background, dict) and set(background) == set(WITNESS_BACKGROUND_FIELDS)
+                and all(authored(background[k]) for k in WITNESS_BACKGROUND_FIELDS),
+                who + ': complete personal background before play (life, occupation, qualifications, relationships, stakes).')
+        activities = role.get('relevant_activities')
+        require(isinstance(activities, list) and activities and all(
+                isinstance(row, dict) and set(row) == set(WITNESS_ACTIVITY_FIELDS)
+                and all(authored(row[k]) for k in WITNESS_ACTIVITY_FIELDS) for row in activities),
+                who + ': author concrete relevant_activities, including actions, tools/materials, authority and limits.')
+        for key in ('knowledge_basis', 'memory', 'perception_limits', 'motives', 'manner'):
+            require(authored(role.get(key)), who + ': author ' + key + ' before play.')
+        require(role['knowledge'] and all(authored(item) for item in role['knowledge']),
+                who + ': author personal knowledge before play.')
+    return case
+
+
+def initialise(root: Path, name: str, case: dict) -> Path:
+    validate_readiness(case)
     world = world_path(root, name)
     require(not world.exists(), "World already exists. Resume it; do not replace its case.")
     world.parent.mkdir(parents=True, exist_ok=True)
@@ -743,9 +778,9 @@ def main() -> int:
         world = world_path(args.root, args.world)
         if args.command in {"validate", "init"}:
             require(args.case is not None, "Supply a fully authored case with --case. No single-case hidden default.")
-            case = validate(load(args.case))
+            case = validate_readiness(load(args.case))
             if args.command == "validate":
-                print("Case schema PASS; semantic case review remains the agent's responsibility.")
+                print("Case structure and witness foundation PASS; semantic authoring review remains required.")
             else:
                 raise CourtError("Live startup requires an independent-session backend via tools/courtroom.py; init cannot start a shared-context court.")
         elif args.command == "packet":
