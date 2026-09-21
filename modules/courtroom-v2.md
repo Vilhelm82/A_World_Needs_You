@@ -100,7 +100,8 @@ admissions are never buried in a long automated series. No repeated `pass` tax.
 ## 4. Information boundaries
 
 Every independent identity must have its own persistent backend conversation.
-Use `tools/courtroom_sessions.py` and the contract in `docs/courtroom-sessions.md`.
+Use `tools/courtroom.py` with the OpenCode setup in `docs/courtroom-opencode.md`
+and the orchestration contract in `docs/courtroom-sessions.md`.
 Startup fails without independent contexts, persistent sessions and no ambient access.
 The human is not an AI role. Each witness, opponent, juror and recurring support
 identity has its own session; the judge has separate admissibility and merits contexts.

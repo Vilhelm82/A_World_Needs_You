@@ -747,7 +747,7 @@ def main() -> int:
             if args.command == "validate":
                 print("Case schema PASS; semantic case review remains the agent's responsibility.")
             else:
-                raise CourtError("Live startup requires an independent-session backend via courtroom_sessions.py; init cannot start a shared-context court.")
+                raise CourtError("Live startup requires an independent-session backend via tools/courtroom.py; init cannot start a shared-context court.")
         elif args.command == "packet":
             value = encode(packet(world, args.role, args.merits))
             require(args.out is not None, "Use --out to avoid printing sealed role packets.")

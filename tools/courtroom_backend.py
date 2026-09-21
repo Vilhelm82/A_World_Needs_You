@@ -38,8 +38,14 @@ class Backend(ABC):
     backend_id: str
     mock = False
 
+    def healthcheck(self) -> dict:
+        raise c.CourtError('Backend does not expose a health check.')
+
+    def list_models(self) -> set[tuple[str, str]]:
+        raise c.CourtError('Backend does not expose a configured model catalog.')
+
     @abstractmethod
-    def create_session(self, identity: str, system_prompt: str, initial_packet: dict) -> Session: ...
+    def create_session(self, identity: str, system_prompt: str, initial_packet: dict, model_config=None) -> Session: ...
     @abstractmethod
     def send(self, session_id: str, request: dict) -> dict: ...
     @abstractmethod
@@ -69,7 +75,13 @@ history, model, network, retrieval, callable tools or access to the court's case
         c.require(isinstance(sid,str) and len(sid)==32 and all(x in '0123456789abcdef' for x in sid), 'Invalid session handle.')
         return c.safe_path(self.directory, Path(sid+'.json'))
 
-    def create_session(self, identity, system_prompt, initial_packet):
+    def healthcheck(self):
+        return {'healthy': True, 'mock': True}
+
+    def list_models(self):
+        return set()
+
+    def create_session(self, identity, system_prompt, initial_packet, model_config=None):
         sid=uuid.uuid4().hex
         handle=Session(sid,sid,identity)
         c.atomic(self._path(sid),c.encode({'handle':asdict(handle),'closed':False,

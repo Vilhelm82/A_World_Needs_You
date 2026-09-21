@@ -16,7 +16,8 @@ Say **Begin courtroom. Criminal jury trial, US-inspired. I am defence counsel.**
 in a fresh file-backed agent session at the repository root. See
 [COURTROOM-V2.md](COURTROOM-V2.md) for startup, controls and validation limits.
 Python 3.10+ and a backend providing separate persistent identity sessions are required.
-Only a deterministic test backend is bundled; live play needs a conforming adapter.
+The bundled [OpenCode backend](docs/courtroom-opencode.md) uses a dedicated hardened
+local server; a deterministic backend remains available for offline tests.
 See [session architecture](docs/courtroom-sessions.md). Civil and criminal cases, bench and jury trials, either
 side, and US-inspired or NSW-inspired styles are supported.
 

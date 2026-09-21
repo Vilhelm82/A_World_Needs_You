@@ -1,1 +1,9 @@
-# the world is committed on purpose; nothing is ignored
+# Authored worlds remain versioned. Runtime/provider credentials never belong here.
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+courtroom-runtime.local.json
+*.auth.json
+auth.json

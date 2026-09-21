@@ -24,7 +24,10 @@ result; it is not a model generating a collective jury mind.
 
 Each model call reconstructs a packet from the committed case and validated journal.
 Only allocated knowledge, disclosed documents, personally heard events, permitted
-orders and that identity's previous conversation are sent. The packet explicitly
+orders and that identity's previous conversation are eligible. The initial packet
+is delivered once; subsequent calls carry only changes, merging documents by key
+and events/orders by ID. Delivery cursors advance only with committed contributions.
+The packet explicitly
 whitelists identity fields; author metadata is excluded. Authoring must keep secrets
 out of shared summaries, procedure, rule text and personality descriptions. Nervous
 or confident manners are not proxies for truth, guilt, or evidence strength.
@@ -33,10 +36,11 @@ or confident manners are not proxies for truth, guilt, or evidence strength.
 
 Implement `Backend` with a stable `backend_id` identifying the provider/account/store:
 
-- `create_session(identity, system_prompt, initial_packet) -> Session`
+- `create_session(identity, system_prompt, initial_packet, model_config=None) -> Session`
 - `send(session_id, request) -> {text, data, private_reasoning?}`
 - `resume_session(session_id) -> Session`
 - `close_session(session_id)`
+- `healthcheck()` and `list_models()` for live backend discovery
 
 `Session` has stable `session_id`, underlying `context_id`, and owning `identity`.
 The context handle must represent the actual isolated conversation, not an invented
@@ -50,11 +54,18 @@ OpenAI, Anthropic, local models, or isolated Codex/Cline-compatible sessions, pr
 they satisfy the same contract and disable access to the host's sealed case/files.
 A different role prompt in the same conversation does not satisfy it.
 
-Only the durable `DeterministicBackend` is bundled. It stores independent session
+The durable `DeterministicBackend` stores independent session
 histories and consumes per-identity scripted responses for repeatable tests. It has
 no model, network or generated legal reasoning. Unscripted calls fail clearly.
-**Live roleplay is unavailable until a conforming production adapter is supplied.**
-There is no fallback to the authoring/coordinating agent.
+`OpenCodeBackend` supplies real persistent sessions through the headless HTTP API.
+Its preflight requires the version-pinned hardened host, wildcard tool denial,
+verified prompt guard, unique sessions, empty per-role working directories, and
+configured model availability. Follow [OpenCode setup](courtroom-opencode.md).
+Provider authentication stays external. There is no fallback to the authoring agent.
+
+A direct Claude Code adapter is intentionally not bundled: safely handling its
+ambient instructions, tools and persistence is a separate integration. It can
+implement this same interface without duplicating the court controller or routing.
 
 ## Startup and use
 
@@ -134,7 +145,10 @@ stable; unsafe resume and information withdrawal are explicit recorded exception
 
 `.world/court-v2/runtime.json` holds sealed identity/session mappings, per-identity
 committed conversation history, retired handles, provenance and pending operations.
-The mock backend holds separate restricted files per conversation. Atomic writes and
+The mock backend holds separate restricted files per conversation. The OpenCode
+adapter records session ownership, model assignment, working directory and message
+fingerprints in private external storage, and checks the provider's history before
+resumption. Altered or missing history causes an identity-only rebuild. Atomic writes and
 exclusive runtime/controller locks prevent conflicting turns. A crashed model send
 is not retried blindly in a possibly changed context: rebuild that identity only.
 A pending event commit is reconciled against the journal to avoid duplicate speech;
@@ -147,8 +161,9 @@ isolation. The trusted adapter must actually provide it: flags and opaque handle
 cannot prove what an external provider does internally. Provider infrastructure,
 model weights and transport may be shared outside this program's control. A malicious
 adapter or host operator can defeat application protections; neither is untrusted
-model output. Tests exercise real persisted mock conversations and orchestration,
-not a claim that any unimplemented production adapter has been validated.
+model output. Tests exercise persisted mock conversations, the real OpenCode adapter
+against a deterministic fake HTTP server, and the guard's hooks. Live provider
+integration is a separate opt-in smoke test, never inferred from those test results.
 
 Models can still make semantic mistakes or quote information they legitimately heard
 into an explicit event. The program validates routing/provenance, not all legal

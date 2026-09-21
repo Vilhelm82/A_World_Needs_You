@@ -9,9 +9,10 @@ Routine administration stays offstage; consequential advocacy stays yours.
 > Begin courtroom. Criminal jury trial, US-inspired. I am defence counsel. Keep the pace sharp.
 
 The host must configure a backend that supplies a separate persistent conversation
-for every independent identity. Only a deterministic test adapter is bundled; live
-roleplay requires a production adapter. Startup refuses a shared-context fallback.
-See `docs/courtroom-sessions.md` for the interface and explicit mock exercise.
+for every independent identity. The bundled OpenCode adapter uses a hardened local
+server and externally configured providers. Follow [OpenCode setup](docs/courtroom-opencode.md).
+Startup refuses a shared-context fallback. See `docs/courtroom-sessions.md` for the
+interface and explicit offline mock exercise.
 
 For a new case the author builds and commits the material before play. It is not
 forced to reuse the old civil scenario. More examples of accepted setup requests:

@@ -49,7 +49,8 @@ No full live-model hearing, independent multi-agent trial, human legal review,
 calibrated jury simulation or entertainment user test has been completed. The
 controller validates packet structure and references, not the semantic truth of a
 quotation or inference. Independent persistent contexts are now required, exercised
-with a durable deterministic backend. No external production adapter has been tested.
+with a durable deterministic backend. The OpenCode adapter is additionally tested
+against a fake HTTP server and the actual JavaScript guard, without external models.
 The application cannot
 prevent an operator with full write access from altering files and all their hashes.
 
@@ -66,7 +67,7 @@ archive retains the original build checksums. Non-court worlds are unchanged.
 
 ## Required multi-session architecture verification
 
-The complete discovery suite passed **143 tests** on Python 3.14.4:
+Before OpenCode integration, the complete discovery suite passed **143 tests** on Python 3.14.4:
 96 retained controller tests and 47 session-orchestration tests. Tests inspect actual
 persisted deterministic backend conversations, separate session/context handles,
 role-specific canaries, separate judicial contexts, journal-before-call ordering,
@@ -75,3 +76,22 @@ commits, round-robin restart, excluded/withdrawn evidence, immutable case storag
 private ballots/strategy, backend refusal and CLI execution. No external model calls
 were made. This verifies the implemented application boundary and deterministic
 adapter, not provider infrastructure or live-model reasoning quality.
+
+## OpenCode integration verification
+
+The complete deterministic suite now passes **203 tests**: the 143 existing tests
+plus 60 configuration, CLI, delta-delivery, adapter and host tests. Tests cover
+provider-neutral selection, distinct persisted HTTP sessions, canary separation,
+private strategy/ballots, split judges, mediated deliberation, restart, altered
+history, empty external working directories, all-tool denial, missing capabilities,
+failed preflight cleanup, writable runtime storage, credential nonpersistence and
+the real JavaScript prompt-guard hooks. The full diff was checked for obsolete
+single-context assumptions.
+
+OpenCode 1.18.31 was installed locally. The real hardened server started and
+`backend-check` passed for all 20 starter-case identities. The optional live model
+smoke **ran and failed**: the exposed provider returned HTTP 403. No provider login
+or local model was configured. This is not a live-model integration pass; a full
+hearing or model reasoning-quality pass is not claimed. After external provider
+setup, rerun `tools/courtroom_opencode_smoke.py` as documented in
+`docs/courtroom-opencode.md`.
