@@ -80,7 +80,7 @@ def system_prompt(identity, role):
         'Rulings name a supplied rule and effect: objection (result sustained/overruled), document '
         '(document,status,uses), strike (target), or procedure. Examination data has witness,question,answer:null. '
         'Do not return actor, audience, tool calls, state edits, or another identity\'s answer. '+
-        ('Your background, relevant_activities and knowledge are firsthand personal knowledge, not merely document summaries. '
+        ('Your committed personal sources are firsthand knowledge, not merely document summaries. '
          'Answer questions about your life, qualifications and actions from that knowledge even when no document records them. '
          'A document being silent does not mean you lack personal knowledge. Do not substitute what paperwork says for what you did. '
          'Distinguish authored uncertainty, perception limits and deliberate evasiveness from facts the author never supplied. '
@@ -94,6 +94,11 @@ def system_prompt(identity, role):
          'was never authored, return {"text":"","data":{},"authoring_gap":"brief description of the missing fact"}. '
          'This is an out-of-character authoring fault, not speech, evidence, a credibility cue or a confession. '
          'Do not combine authoring_gap with testimony or private_reasoning. No brevity rule limits the substance of your answer. '
+         'For Authoring V2, sources are computed views of your personal observations and receipts. '
+         'Every answer requires grounding:{refs:[exact permitted source IDs],boundaries:[owned boundary IDs, or empty]}. '
+         'Use routine sources for usual practice, never as proof that you performed that step in this episode. '
+         'Use authored deltas, limits and account divergences within their scope. Outside-envelope ignorance is no personal '
+         'basis for an event outside your experience; it cannot deny events or substitute for unauthored personal history. '
          if role['kind']=='witness' else '')+
         ('Decide admissibility and procedure only; never merits findings.' if identity=='judge_admissibility' else
          'Use only admitted/limited evidence for findings; never infer missing excluded material.' if identity=='judge_merits' or role['kind']=='juror' else
@@ -134,6 +139,8 @@ def routed_packet(case, events, identity):
     allowed=('name','kind','knowledge','knowledge_basis','documents','manner','motives','memory','perception_limits','personality')
     if case['roles'][role]['kind']=='witness': allowed += ('background','relevant_activities','uncertainty')
     packet['role']={k:deepcopy(active_case['roles'][role][k]) for k in allowed if k in active_case['roles'][role]}
+    from courtroom_authoring import enabled, project
+    if enabled(active_case):packet['role']=project(active_case,role)
     if merits: packet['role']={k:v for k,v in packet['role'].items() if k not in {'knowledge','knowledge_basis','documents','motives','memory','perception_limits'}}
     packet['identity']=identity
     packet['session_contract']='One isolated context; no shared tools, memory, or role impersonation.'
@@ -335,6 +342,13 @@ class Orchestrator:
         c.require(isinstance(response,dict) and set(response)<={'text','data','private_reasoning','authoring_gap','grounding'} and
                   isinstance(response.get('text'),str) and isinstance(response.get('data'),dict) and
                   isinstance(response.get('private_reasoning',''),str),'Malformed or cross-identity model response.')
+        rejected_response=None
+        if packet['role'].get('authoring_version')==2 and packet['role']['kind']=='witness' and 'authoring_gap' not in response:
+            from courtroom_grounding import check_grounding
+            try:check_grounding(packet,response.get('grounding'))
+            except c.CourtError as exc:
+                rejected_response=deepcopy(response)
+                response={'text':'','data':{},'authoring_gap':str(exc)}
         if 'authoring_gap' in response:
             c.require(case['roles'][role_for(identity)]['kind']=='witness'
                       and c.text(response['authoring_gap']) and response['text']=='' and response['data']=={}
@@ -342,6 +356,7 @@ class Orchestrator:
                       'An authoring gap must be a witness fault report, never mixed with testimony.')
             call={'identity':identity,'session_id':entry['session_id'],'request':request,
                   'response':deepcopy(response),'delivery':deepcopy(packet)}
+            if rejected_response is not None:call['rejected_response']=rejected_response
             # Keep the model's potentially private explanation in its sealed audit.
             # Only this deterministic notice enters the player's record.
             notice='The simulation could not ground an answer. No answer was recorded. '
@@ -560,7 +575,7 @@ class Orchestrator:
             checker.update(topic=scope['topic'],constraints=scope['constraints'])
             faults=[e for e in events if e['type'] in {'gap','erratum'}]
             fault=faults[-1]
-            c.require(matches_fault(scope,fault),'Amendment target does not match the recorded fault.')
+            c.require(matches_fault(scope,fault,active),'Amendment target does not match the recorded fault.')
             choice={'type':'amendment_choice','actor':'player','audience':['player'],
                     'text':'I choose an openly amended continuation, leaving strict fixed-case play.',
                     'data':{'topic':topic,'fault':fault['id'],'mode':'amended'}}
@@ -570,6 +585,7 @@ class Orchestrator:
             # transcript, player side, strategy, or outcome preference crosses this boundary.
             inputs={'target_layer':scope['target_layer'],'entry':scope['entry'],'topic':scope['topic'],
                     'constraints':scope['constraints'],'sources':excerpts}
+            if active.get('authoring_version')==2:inputs['authoring_version']=2
             c.require(type(self.amendment_max_attempts) is int and 1<=self.amendment_max_attempts<=5,
                       'Invalid configured amendment attempt limit.')
             run={'choice':choice_id,'topic':topic,'attempt_limit':self.amendment_max_attempts,
@@ -584,13 +600,25 @@ class Orchestrator:
                         attempt['authors'].append(deepcopy(state['technical_sessions'][-1]))
                         attempt['candidates'].append(candidate(response));self._save(state)
                     options=attempt['candidates']
-                    if len({value['addition'] for value in options})<3:
+                    if len({c.digest(c.encode(value['addition'])) for value in options})<3:
                         attempt.update(status='rejected',reason='Independent authors returned duplicate completions.')
                         self._save(state);continue
                     candidates({'text':'','data':{'candidates':options}})
+                    if active.get('authoring_version')==2:
+                        try:
+                            for option in options:extend(active,topic,option['addition'])
+                        except c.CourtError:
+                            # Check all candidates through the same technical checker; structural
+                            # defects force rejection regardless of a lenient model verdict.
+                            structural_failure=True
+                        else:structural_failure=False
+                    else:structural_failure=False
                     review=self._technical(state,session_identity('checker',scope),CHECKER_PROMPT,checker,{'candidates':options})
                     attempt['checker']=deepcopy(state['technical_sessions'][-1])
                     passed=check_consistency(review)
+                    if structural_failure:
+                        review['data']['checks']=[{'consistent':False,'reason':'Candidate set failed deterministic authoring validation.'} for _ in options]
+                        passed=False
                     attempt.update(checks=deepcopy(review['data']['checks']),status='accepted' if passed else 'rejected')
                     self._save(state)
                     if passed:break

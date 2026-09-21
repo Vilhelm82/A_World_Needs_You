@@ -46,11 +46,12 @@ Implement `Backend` with a stable `backend_id` identifying the provider/account/
 The context handle must represent the actual isolated conversation, not an invented
 alias for a shared conversation. Duplicate current or retired handles fail startup.
 
-New play additionally requires the witness foundations described in
-`modules/courtroom-v2/authoring.md`. Each witness receives their own `background`
-and `relevant_activities`, plus committed memory limits, motives and manner, even
-when no document contains those facts. These fields survive independent rebuilds
-and never enter another identity's initial packet.
+New live play requires Authoring V2 shared substrate projections. Each identity
+receives only owned observations, actual record receipts, routine, deltas and
+bounded accounts. Perception limits remove the raw facet from delivered knowledge.
+Every witness answer requires checked grounding citations. The substrate itself,
+sealed provenance and other identities' accounts never enter a character session.
+See `modules/courtroom-v2/authoring.md` for the exact contract.
 
 A witness may report missing authored knowledge with empty `text`, empty `data`,
 and a nonempty `authoring_gap` string, without private reasoning. It is not speech.
@@ -228,28 +229,18 @@ depth and does not make it safe to improvise historical colour.
 
 ## Amendment consistency exception
 
-The consistency checker previously saw only the target witness's packet. It now
-receives the precommitted `amendment_consistency[topic]` source selection for every
-witness, with irrelevant witnesses explicitly mapped to empty lists. References
-must exist in their named owner's initial packet, and the target's envelope anchors
-must all be included. Missing scope blocks commitment and amendment. The checker can
-therefore see another affected witness's committed account where the topic index
-includes it, without providing that account to the amended witness.
+The fresh consistency checker receives the targeted substrate entry, linked events
+and affected identities' committed views, limits and divergences. This scope is
+computed from shared entry references; V2 has no manual amendment_consistency map.
+It is a documented exception to the no-sealed-truth rule for a technical session
+that never speaks in court, returns pass/fail with reasons, and closes after each
+check. Unrelated truth, player strategy, side, desired outcome and live transcript
+are withheld. Authors receive only the precommitted blinded excerpts.
 
-This is a narrow exception to cross-identity secrecy for a fresh technical checker.
-It gets topic-scoped committed accounts, constraints and public rules; no global
-author-truth dump, unrelated facts, player side, live strategy, transcript or desired
-outcome. It produces pass/fail with reasons, never court speech or replacement facts,
-and is closed after each attempt. Its inputs and reasons are sealed. No other role
-or candidate author receives those extra excerpts.
-
-Each candidate has a separate fresh author session with identical blinded input.
-Failed sets retry with entirely fresh authors and a fresh checker, capped by runtime
-`amendments.max_attempts`. The sealed receipt records every completed attempt and
-the selection; exhausted attempts remain in sealed runtime state and leave play
-paused. Original commitments and discarded candidates remain preserved.
-
-Topic-index completeness is an authoring responsibility in this free-text format.
-The controller proves reference ownership and isolation, not semantic completeness
-or the checker's correctness. A future shared substrate may derive the scope from
-its projections; that substrate has not been implemented here.
+Each candidate has a separate fresh author session with identical inputs. Any
+failed candidate rejects the entire set; retries use fresh authors and checker,
+capped by amendments.max_attempts. Receipts retain attempts, selection and sealed
+alternatives. The original commitment survives. Changed projections rebuild each
+affected context independently and dependent decisions reopen. Semantic consistency
+and the candidate distribution remain fallible; deterministic reference checks do
+not establish exhaustive real-world truth.

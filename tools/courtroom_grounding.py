@@ -7,7 +7,8 @@ ROLE_SOURCES = ('knowledge', 'knowledge_basis', 'background', 'relevant_activiti
 
 
 def sources(packet):
-    result = {}
+    modern=packet['role'].get('authoring_version')==2
+    result = deepcopy(packet['role'].get('sources',{})) if modern else {}
     def walk(prefix, value):
         if isinstance(value, dict):
             for key, child in value.items():
@@ -18,13 +19,15 @@ def sources(packet):
         elif c.text(value):
             result[prefix] = value
     who = packet['role_id']
-    for key in ROLE_SOURCES:
+    for key in (() if modern else ROLE_SOURCES):
         if key in packet['role']:
             walk(who + '.' + key, packet['role'][key])
-    for key, boundary in packet['role'].get('uncertainty', {}).items():
+    for key, boundary in ({} if modern else packet['role'].get('uncertainty', {})).items():
         result['boundary:' + who + ':' + key] = c.encode(boundary).decode()
     for key, doc in packet['documents'].items():
-        result['document:' + key] = doc['text']
+        ref='records:'+key+':content' if modern else 'document:'+key
+        limited={ref for value in packet['role'].get('perception_limits',{}).values() for ref in value['refs']} if modern else set()
+        if ref not in limited:result[ref] = doc['text']
     for event in packet['events']:
         if event['type'] in {'dialogue', 'exchange', 'answer', 'provisional_answer', 'stipulation', 'directions'}:
             result['event:' + event['id']] = event['text']
@@ -59,6 +62,14 @@ def check_grounding(packet, value):
     c.require(set(value['boundaries']) <= owned.keys() and
               all(owned[key]['owner'] == packet['role_id'] for key in value['boundaries']),
               'Uncertainty boundary was not authored for this witness.')
+    if packet['role'].get('authoring_version')==2:
+        c.require(value['refs'],'Every witness answer requires an owned grounding citation.')
+        c.require(all('perception:'+packet['role_id']+':'+key in value['refs'] for key in value['boundaries']),
+                  'Each declared uncertainty boundary requires its perception citation.')
+
+
+def uncertainty_ref(ref, who):
+    return ref.startswith(('boundary:'+who+':','perception:'+who+':','routine:'+who+':'))
 
 
 def validate_resolution(case, earlier, resolution):
@@ -98,7 +109,10 @@ do not adjudicate credibility or materiality. Uncertainty needs an authored boun
 Return exactly {"text":"","data":{"result":"supported|supported_uncertainty|missing_coverage",
 "refs":["permitted source ID"]}}. No explanations, replacement facts, speech or strategy.
 Use missing_coverage if any historical assertion is unsupported. Supported uncertainty
-must cite a boundary:witness:id source. You are fallible; do not invent a source.'''
+must cite an owned perception or routine source (boundary sources in historical packets).
+A routine supports usual practice, not a claim the step happened in this episode.
+Outside-envelope ignorance means no personal basis, never a denial or invented lapse.
+You are fallible; do not invent a source.'''
 
 
 def validate_assessment(packet, response):
@@ -111,6 +125,6 @@ def validate_assessment(packet, response):
     c.require(set(data['refs']) <= sources(packet).keys(), 'Referee source is outside the permitted witness packet.')
     c.require(data['result'] == 'missing_coverage' or data['refs'], 'A supported assessment requires sources.')
     if data['result'] == 'supported_uncertainty':
-        c.require(any(ref.startswith('boundary:' + packet['role_id'] + ':') for ref in data['refs']),
+        c.require(any(uncertainty_ref(ref,packet['role_id']) for ref in data['refs']),
                   'Supported uncertainty requires an authored boundary.')
     return data

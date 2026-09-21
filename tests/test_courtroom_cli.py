@@ -18,13 +18,14 @@ import courtroom_v2 as c
 import courtroom_rehearsal as rehearsal
 from courtroom_backend import DeterministicBackend
 from test_courtroom_v2 import fixture
+from test_courtroom_authoring_v2 import certified_fixture
 
 
 class CourtroomCliTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name)
-        self.case = fixture()
+        self.case = certified_fixture()
         self.casefile = self.root / 'case.json'
         self.case['coverage_rehearsal']['mock'] = False  # Simulated external transport, not a real live result.
         rehearsal.seal_report(self.case['coverage_rehearsal'])
@@ -44,7 +45,8 @@ class CourtroomCliTests(unittest.TestCase):
                 self.config, self.assignments = config, assignments
                 self.reasoning_levels = {('configured-provider', 'configured-model'): ('medium', 'high')}
                 owner.calls.append(('construct', set(assignments)))
-                self.queue('W9', {'text': 'MODEL_SPEECH_PRIVATE_TO_AUDIENCE', 'data': {}})
+                self.queue('W9', {'text': 'MODEL_SPEECH_PRIVATE_TO_AUDIENCE', 'data': {},
+                                  'grounding':{'refs':['time:Bio_W9:past'],'boundaries':[]}})
 
             def preflight(self):
                 owner.calls.append(('preflight',))
@@ -177,7 +179,8 @@ class CourtroomCliTests(unittest.TestCase):
         self.assertEqual((code, error), (0, ''))
         self.assertIn('mock', output)
         script = self.root / 'script.json'
-        script.write_bytes(c.encode({'W9': [{'text': 'SCRIPTED_SPEECH', 'data': {}}]}))
+        script.write_bytes(c.encode({'W9': [{'text': 'SCRIPTED_SPEECH', 'data': {},
+            'grounding':{'refs':['time:Bio_W9:past'],'boundaries':[]}}]}))
         code, output, error = self.run_cli('turn', '--allow-mock', '--script', str(script),
                                          '--identity', 'W9', '--kind', 'dialogue',
                                          '--audience', 'player', 'W9', config=False, backend='mock')

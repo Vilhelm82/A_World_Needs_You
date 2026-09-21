@@ -48,7 +48,7 @@ identity needs a resolved model. Every resolved provider/model pair is checked
 against the current server catalog before any new world or role session is created.
 
 Case readiness is checked first. Every witness needs the committed personal
-background and concrete activity profile in `modules/courtroom-v2/authoring.md`.
+shared substrate projection and routine profile in `modules/courtroom-v2/authoring.md`.
 The historical Last Light and Second Signature examples lack those foundations;
 they are no longer launch-ready. Author a new case before starting play.
 
@@ -248,7 +248,7 @@ python3 tools/courtroom.py start --world new-case --case /private/rehearsed.json
 ```
 
 The first command makes real isolated model calls and may consume provider usage.
-It prints counts only; answers and private backgrounds stay in the sealed output.
+It prints counts only; answers and private projected sources stay in the sealed output.
 It uses the witness assignments, two examiners and two independent graders. By
 default, the examiners and grader A use the bench model and grader B uses the counsel
 model (falling back to the bench model if absent). A third grader is called only on

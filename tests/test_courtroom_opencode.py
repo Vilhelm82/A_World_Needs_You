@@ -10,6 +10,7 @@ import unittest
 from unittest.mock import patch
 
 from test_courtroom_v2 import fixture, event
+from test_courtroom_authoring_v2 import certified_fixture
 import courtroom_v2 as c
 import courtroom_rehearsal as rehearsal
 import courtroom_sessions as s
@@ -87,7 +88,7 @@ class OpenCodeTests(unittest.TestCase):
         cfgpath.write_text(json.dumps({'backend':'opencode','grounding':{'sample_rate':0},'storage_root':str(self.root/'store'),
             'defaults':{kind:{'provider':'arbitrary','model':'arbitrary-model'}
                         for kind in ('witness','juror','counsel','bench','support')}}))
-        self.cfg=RuntimeConfig.load(cfgpath);self.case=fixture();self.case['coverage_rehearsal']['mock']=False;rehearsal.seal_report(self.case['coverage_rehearsal'])  # Fake transport assessment, not a live result.
+        self.cfg=RuntimeConfig.load(cfgpath);self.case=certified_fixture();self.case['coverage_rehearsal']['mock']=False;rehearsal.seal_report(self.case['coverage_rehearsal'])  # Fake transport assessment, not a live result.
         self.transport=FakeTransport()
         self.host={'nonce':'test','instance':'persistent-test','version':'1.18.31','base_url':self.cfg.base_url,'plugin_uri':'file:///test/bundled-guard.js'}
         self.hostpatch=patch.object(o,'verify_host',return_value=self.host);self.hostpatch.start()
@@ -103,7 +104,9 @@ class OpenCodeTests(unittest.TestCase):
         self.runtime=s.Orchestrator.start(self.world,self.backend)
         return self.runtime
     def queue(self,text='Statement',data=None,private=''):
-        self.transport.responses.append({'text':text,'data':data or {},'private_reasoning':private})
+        value={'text':text,'data':data or {},'private_reasoning':private}
+        if not private and not data:value['grounding']={'refs':['time:Bio_W9:past'],'boundaries':[]}
+        self.transport.responses.append(value)
     def history(self,who):
         sid=self.runtime.state()['sessions'][who]['session_id']
         return json.dumps(self.transport.messages[sid])

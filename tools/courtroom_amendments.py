@@ -6,6 +6,7 @@ addition; live questions, player side/theory and desired outcomes are not inputs
 from copy import deepcopy
 import courtroom_v2 as c
 from courtroom_grounding import sources, review_packet
+import courtroom_authoring as authoring
 
 AUTHOR_PROMPT = '''You are a fresh case author, not any courtroom identity. You receive only a
 precommitted neutral topic, fixed constraints and permitted source excerpts. No live
@@ -13,8 +14,12 @@ question, party preference, desired outcome or strategy is available. Produce ex
 one completion of that topic, independently of other authors. It must be consistent
 with all fixed constraints and facts and add only the unauthored detail.
 Do not revise existing history, create new identities/documents, decide an outcome,
-or specify who should win. Add only firsthand knowledge for the named witness.
+or specify who should win. Respect the supplied layer and entry.
 Return {"text":"","data":{"candidate":{"addition":"new historical knowledge"}}}.
+For authoring_version 2, addition is instead {"fields":{entry fields to extend},"accounts":{}}.
+Extend existing fields additively; never replace committed scalar history. For witness targets only
+routine, pressure_points and manner are permitted. For substrate targets add only entry fields;
+optional accounts maps identity to account/divergences updates bound to that substrate entry.
 No other fields or speech.'''
 CHECKER_PROMPT = '''You are a fresh consistency checker, not an advocate or courtroom speaker.
 Using only the committed constraints and topic-scoped sources, independently check each
@@ -48,13 +53,13 @@ def envelope(case, topic):
     c.require(isinstance(value, dict) and set(value) == {'target_layer','entry','topic','constraints','refs'},
               'A precommitted amendment envelope is required; live theory cannot become an author prompt.')
     who = value['entry']
-    c.require(value['target_layer']=='witness', 'Unsupported amendment layer; no substrate projector is implemented.')
-    c.require(who in c.members(case,'witness') and c.text(value['topic']) and
+    c.require(authoring.enabled(case) or value['target_layer']=='witness', 'Unsupported amendment layer for a historical case; only witness entries exist.')
+    c.require((authoring.enabled(case) or who in c.members(case,'witness')) and c.text(value['topic']) and
               c.unique(value['constraints']) and value['constraints'] and
               all(c.text(x) for x in value['constraints']) and c.unique(value['refs']) and value['refs'],
               'Invalid amendment topic, constraints or knowledge allocation.')
     from courtroom_rehearsal import packet_for
-    allowed = sources(packet_for(case, who))
+    allowed = authoring.amendment_sources(case,value) if authoring.enabled(case) else sources(packet_for(case, who))
     c.require(set(value['refs']) <= allowed.keys(), 'Amendment source was not committed to this witness.')
     return deepcopy(value), {key:allowed[key] for key in value['refs']}
 
@@ -64,7 +69,7 @@ def candidate(response):
               isinstance(response['data'],dict) and set(response['data'])=={'candidate'},
               'Each fresh amendment author must return one candidate only.')
     value=response['data']['candidate']
-    c.require(isinstance(value,dict) and set(value)=={'addition'} and c.text(value['addition']),
+    c.require(isinstance(value,dict) and set(value)=={'addition'} and (c.text(value['addition']) or isinstance(value['addition'],dict) and value['addition']),
               'An amendment candidate requires a historical addition.')
     return deepcopy(value)
 
@@ -74,8 +79,9 @@ def candidates(response):
               isinstance(response['data'],dict) and set(response['data'])=={'candidates'},
               'Amendment author must return candidates only.')
     values=response['data']['candidates']
-    c.require(isinstance(values,list) and len(values)==3 and all(isinstance(x,dict) and set(x)=={'addition'} and
-              c.text(x['addition']) for x in values) and len({x['addition'] for x in values})==3,
+    c.require(isinstance(values,list) and len(values)==3,'Provide three constrained completions.')
+    for value in values:candidate({'text':'','data':{'candidate':value}})
+    c.require(len({c.digest(c.encode(x['addition'])) for x in values})==3,
               'Provide three distinct constrained completions, never a chosen answer.')
     return deepcopy(values)
 
@@ -91,8 +97,9 @@ def check_consistency(response):
 
 
 def apply_entry(case, target_layer, entry, patch):
-    """Layer boundary: future substrate projectors belong here, not in the pipeline."""
-    c.require(target_layer=='witness', 'Unsupported amendment layer; no substrate projector is implemented.')
+    """An entry patch reprojects all roles; immutable original bytes stay intact."""
+    if authoring.enabled(case):return authoring.amend_entry(case,target_layer,entry,patch)
+    c.require(target_layer=='witness', 'Unsupported amendment layer for a historical case; only witness entries exist.')
     c.require(entry in c.members(case,'witness') and isinstance(patch,dict) and
               set(patch)=={'addition'} and c.text(patch['addition']), 'Invalid witness-layer entry patch.')
     result=deepcopy(case)
@@ -102,6 +109,7 @@ def apply_entry(case, target_layer, entry, patch):
 
 
 def context(case, scope, topic):
+    if authoring.enabled(case):return authoring.consistency_context(case,scope)
     from courtroom_rehearsal import packet_for
     c.require(scope['target_layer']=='witness','Unsupported amendment layer; no substrate projector is implemented.')
     index=case.get('amendment_consistency',{}).get(topic)
@@ -123,8 +131,12 @@ def validate_scopes(case):
         context(case,scope,topic)
 
 
-def matches_fault(scope, fault):
-    c.require(scope['target_layer']=='witness','Unsupported amendment layer; no substrate projector is implemented.')
+def matches_fault(scope, fault, case=None):
+    if case is not None and authoring.enabled(case) and scope['target_layer']!='witness':
+        who=fault['data'].get('witness')
+        prefix=scope['target_layer']+':'+scope['entry']+':'
+        return who in c.members(case,'witness') and any(ref.startswith(prefix) for ref in authoring.envelope(case,who))
+    c.require(scope['target_layer']=='witness','A substrate fault match requires its committed case.')
     return fault['data'].get('witness')==scope['entry']
 
 
@@ -177,7 +189,7 @@ def validate_attempts(receipt, scope):
             handle(attempt['checker'],session_identity('checker',scope))
             passed=check_consistency({'text':'','data':{'checks':attempt.get('checks')}})
         else:
-            c.require(len({v['addition'] for v in options})<3 and c.text(attempt.get('reason')),
+            c.require(len({c.digest(c.encode(v['addition'])) for v in options})<3 and c.text(attempt.get('reason')),
                       'Only duplicate candidate sets can be rejected without a consistency check.')
             passed=False
         expected='accepted' if number==count else 'rejected'
@@ -208,7 +220,7 @@ def validate_receipt(case, earlier, event, state):
               'Every selected candidate must be consistent.')
     active=effective(case,earlier)
     scope,_=envelope(active,receipt['topic'])
-    c.require(matches_fault(scope,faults[-1]),'Amendment target does not resolve the recorded fault.')
+    c.require(matches_fault(scope,faults[-1],active),'Amendment target does not resolve the recorded fault.')
     c.require(receipt['target_layer']==scope['target_layer'] and receipt['entry']==scope['entry'],
               'Amendment layer/entry changed after authoring.')
     context(active,scope,receipt['topic']);validate_attempts(receipt,scope)

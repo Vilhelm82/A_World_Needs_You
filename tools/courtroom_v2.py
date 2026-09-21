@@ -109,7 +109,9 @@ def validate(case: dict) -> dict:
     require(cfg.get("player_side") in SIDES[kind], "Player side does not match the proceeding.")
     require(cfg.get("style") in STYLES and cfg.get("pace") in {"drama", "deliberate"}, "Unknown style or pace.")
     require(text(cfg.get("jurisdiction")), "Name the fictional or adapted jurisdiction explicitly.")
-    for key in ("title", "public_summary", "brief", "procedure", "authorities", "truth", "opening"):
+    from courtroom_authoring import enabled
+    modern=enabled(case)
+    for key in ("title", "public_summary", "brief", "procedure", "authorities", "opening") + (() if modern else ('truth',)):
         require(text(case.get(key)), f"Missing {key}.")
     rules = case.get("rules")
     require(isinstance(rules, dict) and rules and all(identifier(k) and text(v) for k, v in rules.items()),
@@ -121,13 +123,13 @@ def validate(case: dict) -> dict:
             "Supply documents, issues and counts/claims.")
     for r, p in roles.items():
         require(p.get("kind") in {"counsel", "bench", "witness", "juror", "support"}, "Unknown role kind.")
-        require(text(p.get("name")) and strings(p.get("knowledge")), "Each role needs a name and knowledge allocation.")
+        require(text(p.get("name")) and (modern or strings(p.get("knowledge"))), "Each role needs a name and knowledge allocation.")
         require(unique(p.get("documents")) and set(p["documents"]) <= docs.keys(), "Invalid role document allocation.")
         require(p.get("kind") != "bench" or r == "bench", "Only the bench role may act as judge.")
         require(p.get("kind") != "counsel" or r in {"player", "opponent"}, "Only the two allocated counsel roles litigate.")
         if r == "bench" or p["kind"] == "juror":
-            require(not p["knowledge"] and not p["documents"], "Factfinders start without historical knowledge or private documents.")
-        if p["kind"] == "witness":
+            require(not p.get("knowledge") and not p["documents"], "Factfinders start without historical knowledge or private documents.")
+        if p["kind"] == "witness" and not modern:
             require(text(p.get("knowledge_basis")), "Specify the witness's knowledge sources and limits.")
     require(roles["bench"]["kind"] == "bench" and all(roles[r]["kind"] == "counsel" for r in ("player", "opponent")),
             "Invalid core role types.")
@@ -233,6 +235,12 @@ Presence and placeholder checks cannot establish semantic completeness. Authors
 must still review foundation questions against the witness's committed history.
 """
     validate(case)
+    from courtroom_authoring import enabled, validate as validate_authoring
+    if enabled(case):
+        validate_authoring(case)
+        from courtroom_amendments import envelope
+        for topic in case.get('amendment_envelopes',{}):envelope(case,topic)
+        return case
     def authored(value):
         return (text(value) and value.strip().lower() not in
                 {'todo', 'tbd', 'unknown', 'not specified', 'not provided', 'n/a', 'to be authored'}
@@ -265,6 +273,9 @@ def validate_readiness(case: dict, *, allow_mock=True) -> dict:
     validate_foundation(case)
     from courtroom_rehearsal import validate_report
     validate_report(case, allow_mock=allow_mock)
+    if not allow_mock:
+        from courtroom_authoring import enabled
+        require(enabled(case),'New live play requires Authoring V2; historical cases stay blocked.')
     from courtroom_amendments import validate_scopes
     validate_scopes(case)
     return case
@@ -655,9 +666,16 @@ def packet_from(case: dict, events: list[dict], role: str, merits: bool = False,
             info["manner"] = case["roles"][role]["manner"]
     else:
         info = {k: deepcopy(v) for k, v in case["roles"][role].items() if k not in {"author_note", "truth"}}
+    from courtroom_authoring import enabled, project
+    if enabled(case):
+        info=project(case,role)
+        limited={ref for value in info['perception_limits'].values() for ref in value['refs']}
+        allowed={key for key in allowed if 'records:'+key+':content' not in limited}
+    issues={key:{k:deepcopy(v) for k,v in issue.items() if k not in {'substrate_refs','single_source'}}
+            for key,issue in case['issues'].items()}
     result = {"role_id": role, "role": info, "case_id": case["case_id"], "config": case["config"],
               "summary": case["public_summary"], "summary_is_evidence": False, "procedure": case["procedure"],
-              "rules": case["rules"], "issues": case["issues"], "counts": case["counts"], "phase": state["phase"],
+              "rules": case["rules"], "issues": issues, "counts": case["counts"], "phase": state["phase"],
               "documents": {k: {"title": case["documents"][k]["title"], "text": case["documents"][k]["text"],
                                 **state["documents"][k]} for k in sorted(allowed)}, "events": []}
     # A counsel brief is NOT the court's summary or evidence. Witnesses do not receive it either.

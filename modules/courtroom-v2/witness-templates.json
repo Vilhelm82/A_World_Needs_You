@@ -1,0 +1,511 @@
+{
+  "lay_eyewitness": {
+    "families": {
+      "occupation": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "qualifications": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "activity": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "tools": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "purpose_authority": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "knowledge_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "limits": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "perception": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "episode_sequence": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "fact_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "bias_motive": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "relationships": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "prior_statements": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "documents": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "off_topic": {
+        "mandatory": false,
+        "weight": 1
+      }
+    },
+    "routine_domains": [
+      "occupation",
+      "qualifications",
+      "observation",
+      "authority",
+      "reporting",
+      "relationships"
+    ]
+  },
+  "party": {
+    "families": {
+      "occupation": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "qualifications": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "activity": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "tools": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "purpose_authority": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "knowledge_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "limits": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "perception": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "episode_sequence": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "fact_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "bias_motive": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "relationships": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "prior_statements": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "documents": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "off_topic": {
+        "mandatory": false,
+        "weight": 1
+      }
+    },
+    "routine_domains": [
+      "occupation",
+      "qualifications",
+      "observation",
+      "authority",
+      "reporting",
+      "relationships"
+    ]
+  },
+  "expert": {
+    "families": {
+      "occupation": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "qualifications": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "activity": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "tools": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "purpose_authority": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "knowledge_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "limits": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "perception": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "episode_sequence": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "fact_basis": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "bias_motive": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "relationships": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "prior_statements": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "documents": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "off_topic": {
+        "mandatory": false,
+        "weight": 1
+      }
+    },
+    "routine_domains": [
+      "occupation",
+      "qualifications",
+      "observation",
+      "authority",
+      "reporting",
+      "relationships",
+      "analysis"
+    ]
+  },
+  "records_custodian": {
+    "families": {
+      "occupation": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "qualifications": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "activity": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "tools": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "purpose_authority": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "knowledge_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "limits": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "perception": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "episode_sequence": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "fact_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "bias_motive": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "relationships": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "prior_statements": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "documents": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "off_topic": {
+        "mandatory": false,
+        "weight": 1
+      }
+    },
+    "routine_domains": [
+      "occupation",
+      "qualifications",
+      "observation",
+      "authority",
+      "reporting",
+      "relationships",
+      "custody"
+    ]
+  },
+  "investigator": {
+    "families": {
+      "occupation": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "qualifications": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "activity": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "tools": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "purpose_authority": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "knowledge_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "limits": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "perception": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "episode_sequence": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "fact_basis": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "bias_motive": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "relationships": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "prior_statements": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "documents": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "off_topic": {
+        "mandatory": false,
+        "weight": 1
+      }
+    },
+    "routine_domains": [
+      "occupation",
+      "qualifications",
+      "observation",
+      "authority",
+      "reporting",
+      "relationships",
+      "analysis",
+      "custody"
+    ]
+  },
+  "institutional_representative": {
+    "families": {
+      "occupation": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "qualifications": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "activity": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "tools": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "purpose_authority": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "knowledge_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "limits": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "perception": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "episode_sequence": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "fact_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "bias_motive": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "relationships": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "prior_statements": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "documents": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "off_topic": {
+        "mandatory": false,
+        "weight": 1
+      }
+    },
+    "routine_domains": [
+      "occupation",
+      "qualifications",
+      "observation",
+      "authority",
+      "reporting",
+      "relationships",
+      "custody"
+    ]
+  },
+  "associate": {
+    "families": {
+      "occupation": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "qualifications": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "activity": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "tools": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "purpose_authority": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "knowledge_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "limits": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "perception": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "episode_sequence": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "fact_basis": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "bias_motive": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "relationships": {
+        "mandatory": true,
+        "weight": 2
+      },
+      "prior_statements": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "documents": {
+        "mandatory": true,
+        "weight": 1
+      },
+      "off_topic": {
+        "mandatory": false,
+        "weight": 1
+      }
+    },
+    "routine_domains": [
+      "occupation",
+      "qualifications",
+      "observation",
+      "authority",
+      "reporting",
+      "relationships"
+    ]
+  }
+}

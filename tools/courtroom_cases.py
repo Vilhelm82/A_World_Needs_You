@@ -124,6 +124,9 @@ def main() -> int:
             root = Path(__file__).resolve().parents[1]
             source = court.load(root / "modules/courtroom-v2/.sealed" / f"{args.scenario}.json")
         case = configure(source, args.style, args.factfinder, args.player_side, args.pace, args.jury_size, args.threshold)
+        if args.scenario == 'new':
+            from courtroom_authoring import scaffold
+            case=scaffold(case)
         if not case.get("draft"):
             court.validate_readiness(case)
         args.out.parent.mkdir(parents=True, exist_ok=True)

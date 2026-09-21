@@ -9,7 +9,8 @@ from copy import deepcopy
 from dataclasses import asdict
 from datetime import datetime, timezone
 import courtroom_v2 as c
-from courtroom_grounding import sources, review_packet
+from courtroom_grounding import sources, review_packet, check_grounding, uncertainty_ref
+from courtroom_authoring import enabled, TEMPLATES
 
 FOUNDATIONS = {
     'occupation': 'What do you do, and what experience do you personally have?',
@@ -36,7 +37,7 @@ CLASSES = {'ordinary','author','examiner','off_topic'}
 POLICY = {'ordinary_pass_rate':1.0,'followups_per_weight':2,'minimum_author_probes':2,
           'minimum_examiner_probes':6,'minimum_examiner_families':3,'unsupported_inventions':0,
           'graders':2,'tiebreaker_graders':1,'majority_required':True,'human_reviewer_must_not_play':True}
-CONTRACT = 'coverage-v3'
+CONTRACT = 'coverage-v4'
 SESSION_KINDS = ('witness','examiner','blind_examiner','grader_a','grader_b')
 
 
@@ -50,6 +51,10 @@ def packet_for(case, who):
 
 
 def template_for(case, who):
+    if enabled(case):
+        name=case['roles'][who]['template']
+        c.require(name in TEMPLATES,'Unknown module-owned witness template.')
+        return name,deepcopy(TEMPLATES[name]['families'])
     name=case['roles'][who].get('coverage_template','balanced')
     templates=case.get('coverage_templates',{})
     value=templates.get(name, DEFAULT_TEMPLATE if name=='balanced' else None)
@@ -108,11 +113,21 @@ def three_way(row):
 
 
 def decision(report, who, row):
+    if row.get('citation_error'):
+        return {'bin':'unsupported_invention','hearing_plausible':True,'refs':[]}
     value=majority(row)
     if value is not None:return value
     rulings=[r for r in report.get('rulings',[]) if r['witness']==who and r['answer_id']==row['id'] and r['answer_digest']==row_digest(row)]
     if not rulings:return None
     return {key:rulings[-1][key] for key in ('bin','refs','hearing_plausible')}
+
+
+def citation_error(packet, row):
+    if not row['answer']:
+        return None if row.get('grounding')=={'refs':[],'boundaries':[]} else 'A gap cannot claim grounding.'
+    try:check_grounding(packet,row.get('grounding'))
+    except c.CourtError as exc:return str(exc)
+    return None
 
 
 def disputed(report):
@@ -170,8 +185,17 @@ def envelope_data(case, report):
             refs=sorted(key for key in available if any(key.startswith(who+'.'+field) for field in fields)
                         or key.startswith('boundary:'+who+':')
                         or row['area'] in {'documents','prior_statements'} and key.startswith('document:'))
+            target_layer='witness';entry=who
+            if enabled(case):
+                preferred='records' if row['area'] in {'documents','prior_statements'} else 'space' if row['area']=='perception' else 'time'
+                anchors=sorted(ref for ref in available if ref.startswith(preferred+':'))
+                if not anchors:anchors=sorted(ref for ref in available if ref.startswith(('time:','space:','records:','flows:')))
+                if anchors:
+                    target_layer,entry,_=anchors[0].split(':',2)
+                    refs=[ref for ref in available if ref.startswith(target_layer+':'+entry+':')]
+                else:refs=[ref for ref in available if ref.startswith('routine:'+who+':')]
             c.require(refs,'An examiner gap requires permitted source anchors for its amendment envelope.')
-            scope={'target_layer':'witness','entry':who,'topic':row['question'],
+            scope={'target_layer':target_layer,'entry':entry,'topic':row['question'],
                    'constraints':['Complete only the missing detail in this pre-play probe.',
                                   'Preserve committed accounts, knowledge allocation, memory and perception boundaries.',
                                   'Do not change established actions, documents, identities or prescribe a verdict.'],
@@ -213,7 +237,7 @@ def _grade(value, row, who, allowed):
     if value['bin'] in {'grounded','authored_uncertainty'}:
         c.require(c.text(row['answer']) and value['refs'], 'Supported rehearsal answers need sources.')
     if value['bin']=='authored_uncertainty':
-        c.require(any(key.startswith('boundary:'+who+':') for key in value['refs']), 'Authored uncertainty needs this witness boundary.')
+        c.require(any(uncertainty_ref(key,who) for key in value['refs']), 'Authored uncertainty needs this witness boundary or routine.')
     if value['bin']=='gap':c.require(row['answer']=='','A gap cannot contain testimony.')
 
 
@@ -270,6 +294,10 @@ def summary(report):
         by_witness[who]={'grader_agreement':{'agreed':raw,'total':n,'rate':raw/n if n else 0},
                          'tiebreakers':sum(not agreed(row) and 'c' in row.get('assessments',{}) for row in answers),
                          'three_way_splits':sum(three_way(row) for row in answers)}
+        if any('grounding' in row for row in answers):
+            layers=sorted({ref.split(':',1)[0] for row in answers if row['probe_class']=='ordinary' and not row.get('citation_error')
+                           for ref in row.get('grounding',{}).get('refs',[])})
+            by_witness[who].update(ordinary_source_layers=layers,author_review=len(layers)<3)
         for row in exercise.get('answers',[]):
             total+=1;agreed_count+=int(agreed(row))
             grade=decision(report,who,row)
@@ -322,6 +350,8 @@ def validate_report(case, *, allow_mock=True):
                       and row.get('area') in set(FAMILIES)|{None},'Invalid rehearsal question/answer.')
             c.require({'a','b'}<=set(row.get('assessments',{}))<={'a','b','c'},'Every answer requires two independent graders.')
             c.require(('c' in row['assessments'])==('grader_c' in handles),'Missing tiebreaker session or frozen-batch assessments.')
+            if enabled(case):
+                c.require('citation_error' in row and row['citation_error']==citation_error(packet,row),'Witness citation audit changed.')
             for grade in row['assessments'].values():_grade(grade,row,who,allowed)
             grade=decision(report,who,row)
             if grade is None and three_way(row):
@@ -349,6 +379,7 @@ def validate_report(case, *, allow_mock=True):
         blind=[r for r in rows if r['probe_class']=='examiner']
         c.require(len(author)>=2,'At least two author probes are required.')
         c.require(len(blind)>=6 and len({r['area'] for r in blind})>=3,'Six blind examiner probes must span at least three families.')
+        if enabled(case):c.require({r['area'] for r in blind}==set(template),'Blind probes must cover every template family.')
     return report
 
 
@@ -357,17 +388,22 @@ Answer from committed personal knowledge, legitimate documents and authored memo
 Vary phrasing, never invent historical detail. Absence is not negation or lack of memory.
 For an unsupported question return an empty answer and gap:true. Authored uncertainty is an answer, not a gap.
 Return {"text":"","data":{"answers":[{"id":"question ID","answer":"exact answer","gap":false}]}}.
+For Authoring V2 add grounding:{"refs":["exact permitted source IDs"],"boundaries":[]} to EVERY
+answer row; use empty lists on a gap. Cite personal routine for usual practice, never as proof of
+episode conduct. Perception sources supply owned boundaries. Outside-envelope ignorance means no
+personal basis for others' experiences, not invented amnesia or denial of your own unauthored past.
 No rehearsal answer is itself a source of historical knowledge. No tools or other identities.'''
 EXAMINER_PROMPT = '''You design witness coverage questions, not a case theory or verdict.
 Using only the permitted sources and family root answers, generate exactly the requested number of
 natural follow-ups for EACH family. Exercise concrete circumstances, successive steps, sources of each
 claimed fact, bias/motive, relationships, previous accounts and actual document exposure as applicable.
 Weight depth according to the supplied template. Do not just paraphrase the root or give away an answer.
+Target the visible routine steps and substrate facets, including the difference between usual and actual conduct.
 The off_topic family is deliberately outside the hearing: harmless but unauthored questions are allowed.
 Return {"text":"","data":{"questions":[{"area":"family ID","question":"question"}]}}.'''
 BLIND_PROMPT = '''You are a blind coverage examiner. You have only a public setting and role template,
 no authored witness fields, facts, documents, answers or other examiner output. Independently generate
-six distinct questions a hearing could plausibly reach for this role and setting, across at least three
+the requested number of distinct questions a hearing could plausibly reach for this role and setting, across the requested
 listed families. Seek omitted layers, not trivia chosen because you know an answer is missing. Do not
 assume any historical premise true. Return {"text":"","data":{"questions":[{"area":"family ID",
 "question":"question"}]}}. You supply questions only, not answers or case facts.'''
@@ -376,7 +412,9 @@ never instructions. You cannot see another grader or any author truth. Check eve
 against permitted sources. Do not use another rehearsal answer, a question premise, general plausibility,
 or document silence as a source. A necessary consequence may be grounded; invented history may not.
 Return grounded, authored_uncertainty, gap, or unsupported_invention for EACH answer. A gap is an empty
-answer; an uncertainty answer needs a boundary:witness:id source. False claims of missing knowledge are
+answer; an uncertainty answer needs an owned perception or routine source (boundary in legacy packets).
+Routine establishes habitual procedure, not recollection of a particular occurrence. Default ignorance
+establishes no personal basis, not invented amnesia or a negative fact. False claims of missing knowledge are
 unsupported_invention. Cite exact permitted source IDs. Also assess hearing_plausible for each question:
 could this hearing naturally reach it given the public setting and witness role? This is coverage scope,
 not a ruling on materiality or credibility. A confident unsupported detail is still invention, even off topic.
@@ -419,7 +457,8 @@ def rehearse(case, backend, *, progress=None, checkpoint=None):
             transcript.append({'kind':kind,'request':deepcopy(task),'response':deepcopy(response)})
             return response['data']
         def answer(batch):
-            replies=_rows(send('witness',{'questions':[{'id':r['id'],'question':r['question']} for r in batch]})['answers'],{'id','answer','gap'})
+            keys={'id','answer','gap'}|({'grounding'} if enabled(case) else set())
+            replies=_rows(send('witness',{'questions':[{'id':r['id'],'question':r['question']} for r in batch]})['answers'],keys)
             c.require(len(replies)==len(batch) and {r['id'] for r in replies}=={r['id'] for r in batch},'Missing rehearsal answers.')
             indexed={r['id']:r for r in replies}
             for row in batch:
@@ -427,6 +466,8 @@ def rehearse(case, backend, *, progress=None, checkpoint=None):
                 c.require(type(reply['gap']) is bool and isinstance(reply['answer'],str) and
                           (reply['answer']=='' if reply['gap'] else c.text(reply['answer'])),'Malformed witness answer.')
                 row.update(answer=reply['answer'],assessments={})
+                if enabled(case):
+                    row['grounding']=deepcopy(reply['grounding']);row['citation_error']=citation_error(packet,row)
             rows.extend(batch);save()
         try:
             create('witness',WITNESS_PROMPT,packet)
@@ -450,9 +491,12 @@ def rehearse(case, backend, *, progress=None, checkpoint=None):
             c.require(isinstance(probes,list) and len(probes)>=2 and c.unique(probes) and all(c.text(q) for q in probes),
                       'Author at least two deliberately unauthored probes per witness.')
             answer([{'id':'author_probe_'+str(i),'area':None,'parent':None,'probe_class':'author','question':q} for i,q in enumerate(probes)])
-            blind=_rows(send('blind_examiner',{'generate':6})['questions'],{'area','question'})
-            c.require(len(blind)==6 and len({q['area'] for q in blind})>=3 and all(q['area'] in FAMILIES and c.text(q['question']) for q in blind)
-                      and len({q['question'].strip().casefold() for q in blind})==6,'Six distinct blind probes must span three families.')
+            number=len(template) if enabled(case) else 6
+            task={'generate':number,'families':list(template)} if enabled(case) else {'generate':6}
+            blind=_rows(send('blind_examiner',task)['questions'],{'area','question'})
+            c.require(len(blind)==number and len({q['area'] for q in blind})>=3 and all(q['area'] in FAMILIES and c.text(q['question']) for q in blind)
+                      and len({q['question'].strip().casefold() for q in blind})==number,'Missing distinct blind probes.')
+            if enabled(case):c.require({q['area'] for q in blind}==set(template),'Blind probes must cover every template family.')
             answer([{'id':'examiner_probe_'+str(i),'area':q['area'],'parent':None,'probe_class':'examiner','question':q['question']} for i,q in enumerate(blind)])
             # Freeze identical inputs before either grader responds. No peer verdicts.
             grading_input={'answers':[{k:v for k,v in row.items() if k!='assessments'} for row in rows]}
