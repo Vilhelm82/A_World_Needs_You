@@ -20,12 +20,13 @@ def main(argv=None):
     parser.add_argument('--config', type=Path, required=True)
     parser.add_argument('--provider', required=True)
     parser.add_argument('--model', required=True)
+    parser.add_argument('--reasoning', help='Supported OpenCode reasoning variant, such as medium or high.')
     args = parser.parse_args(argv)
     handles = []
     backend = None
     try:
         config = RuntimeConfig.load(args.config)
-        model = ModelConfig(args.provider, args.model)
+        model = ModelConfig(args.provider, args.model, args.reasoning)
         assignments = {'smoke_A': model, 'smoke_B': model}
         backend = OpenCodeBackend(config, assignments)
         backend.preflight()

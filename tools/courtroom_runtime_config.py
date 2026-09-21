@@ -29,6 +29,7 @@ _SECRET_FIELDS = frozenset({'credential', 'credentials', 'auth', 'authentication
 class ModelConfig:
     provider: str
     model: str
+    reasoning: str | None = None
 
 
 def _object(pairs):
@@ -52,11 +53,15 @@ def _reject_credentials(value):
 
 
 def _model(value):
-    c.require(isinstance(value, dict) and set(value) == {'provider', 'model'},
-              'Each model assignment requires exactly provider and model fields.')
+    c.require(isinstance(value, dict) and {'provider', 'model'} <= set(value) <= {'provider', 'model', 'reasoning'},
+              'Each model assignment requires provider and model, with optional reasoning.')
     c.require(all(isinstance(value[key], str) and value[key].strip() for key in ('provider', 'model')),
               'Provider and model IDs must be nonempty strings.')
-    return ModelConfig(value['provider'], value['model'])
+    if 'reasoning' in value:
+        c.require(isinstance(value['reasoning'], str) and bool(value['reasoning'].strip())
+                  and value['reasoning'] == value['reasoning'].strip(),
+                  'reasoning must be a nonempty OpenCode variant name.')
+    return ModelConfig(value['provider'], value['model'], value.get('reasoning'))
 
 
 def _base_url(value, allow_remote):

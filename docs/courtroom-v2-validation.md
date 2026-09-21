@@ -114,3 +114,20 @@ system instruction now explicitly requires raw JSON without fences. All three
 providers passed after that change, and all 206 deterministic tests passed.
 These are connection/session checks, not complete hearings or a measurement of
 legal reasoning quality. Runtime role/model assignments remain operator choices.
+
+## Per-role reasoning verification
+
+The complete suite now passes **215 deterministic tests**. Nine additional tests
+cover role-specific reasoning defaults/overrides, invalid settings, unavailable
+levels, persisted selections across restart, legacy session compatibility,
+changed-assignment refusal, dropped or altered server settings, and custom/disabled
+variants. Existing CLI and JavaScript guard tests now also check advertised levels
+and reject selected variants whose options were not applied.
+
+Explicit-effort live smoke tests passed for `openai/gpt-5.6-sol` at `high`,
+`xai/grok-4.3` at `medium`, `anthropic/claude-sonnet-4-6` at `high`, and
+`anthropic/claude-sonnet-5` at `medium`. OpenCode's persisted user messages recorded
+the selected variant; the guard checked its options before model calls. An
+additional `anthropic/claude-opus-5` / `high` smoke failed with a provider
+`ContentFilterError`; that model is not claimed as a live pass. No real case or
+testimony-length restriction was introduced by these synthetic checks.

@@ -91,7 +91,10 @@ def _signature(message):
             c.require(isinstance(part.get('text'), str), 'Malformed OpenCode text part.')
             c.require(not part.get('synthetic') and not part.get('ignored'), 'Unexpected injected OpenCode message.')
             parts.append({'type': part['type'], 'text': part['text']})
-    return {'id': info['id'], 'role': info['role'], 'digest': c.digest(c.encode(parts))}
+    signature = {'id': info['id'], 'role': info['role'], 'digest': c.digest(c.encode(parts))}
+    if info.get('model', {}).get('variant') is not None:
+        signature['variant'] = info['model']['variant']
+    return signature
 
 
 def _texts(message):
@@ -111,6 +114,7 @@ class OpenCodeBackend(Backend):
         self.directory = _private_directory(config.storage_root / 'sessions')
         self.workspaces = _private_directory(config.storage_root / 'roles')
         self._ready = False
+        self.reasoning_levels = {}
 
     def _request(self, method, path, body=None, directory=None):
         return self.transport.request(method, path, body, directory)
@@ -164,11 +168,19 @@ class OpenCodeBackend(Backend):
             c.require(isinstance(result, dict) and isinstance(result.get('providers'), list),
                       'OpenCode configured-provider catalog unavailable.')
             catalog = set()
+            levels = {}
             for provider in result['providers']:
                 c.require(isinstance(provider.get('id'), str) and isinstance(provider.get('models'), dict),
                           'Malformed OpenCode provider catalog.')
-                for model in provider['models']:
+                for model, details in provider['models'].items():
                     catalog.add((provider['id'], model))
+                    variants = details.get('variants', {})
+                    c.require(isinstance(variants, dict), 'Malformed OpenCode reasoning variants.')
+                    levels[(provider['id'], model)] = tuple(sorted(
+                        name for name, options in variants.items()
+                        if isinstance(name, str) and name.strip() and isinstance(options, dict)
+                        and options and not options.get('disabled')))
+            self.reasoning_levels = levels
             return catalog
         finally:
             directory.rmdir()
@@ -187,6 +199,8 @@ class OpenCodeBackend(Backend):
                   'OpenCode persistent session API capability is missing.')
         catalog = self.list_models()
         self.config.validate_models(self.assignments, catalog)
+        for identity, model in self.assignments.items():
+            self._validate_reasoning(identity, model)
         with tempfile.TemporaryFile(dir=self.directory) as probe:
             probe.write(b'courtroom runtime write probe'); probe.flush(); os.fsync(probe.fileno())
         # Exercise actual separate persisted histories without calling a model.
@@ -261,7 +275,14 @@ class OpenCodeBackend(Backend):
         model = model_config or self.assignments.get(identity)
         c.require(isinstance(model, ModelConfig), 'No runtime model assignment for this identity.')
         c.require(self.assignments.get(identity) == model, 'Model assignment must match preflight.')
+        self._validate_reasoning(identity, model)
         return self._create(identity, system_prompt, initial_packet, model)
+
+    def _validate_reasoning(self, identity, model):
+        available = self.reasoning_levels.get((model.provider, model.model), ())
+        c.require(model.reasoning is None or model.reasoning in available,
+                  'Unsupported reasoning for ' + identity + ' (' + model.provider + '/' + model.model +
+                  '); available levels: ' + (', '.join(available) or 'none advertised') + '.')
 
     def _create(self, identity, system_prompt, initial_packet, model):
         c.require(self._ready, 'OpenCode backend preflight must succeed before session creation.')
@@ -295,7 +316,7 @@ class OpenCodeBackend(Backend):
         identity = meta['handle']['identity']
         if not identity.startswith('__preflight_'):
             c.require(self.assignments.get(identity) == ModelConfig(**meta['model']),
-                      'An identity model assignment changed; close the runtime before changing models.')
+                      'An identity model/reasoning assignment changed; close the runtime before changing settings.')
         self._lockdown(meta['directory'])
         self._info(meta)
         messages = self._messages(meta)
@@ -307,6 +328,8 @@ class OpenCodeBackend(Backend):
         text = json.dumps(payload, ensure_ascii=False, sort_keys=True)
         body = {'agent': AGENT, 'model': {'providerID': meta['model']['provider'], 'modelID': meta['model']['model']},
                 'system': SYSTEM, 'tools': {'*': False}, 'parts': [{'type': 'text', 'text': text}]}
+        if meta['model'].get('reasoning') is not None:
+            body['variant'] = meta['model']['reasoning']
         if initial:
             body['noReply'] = True
         result = self._request('POST', '/session/' + quote(meta['handle']['session_id']) + '/message', body, meta['directory'])
@@ -317,6 +340,9 @@ class OpenCodeBackend(Backend):
                   'OpenCode context changed outside the orchestrator.')
         c.require(messages[before]['info']['role'] == 'user' and _texts(messages[before]) == text,
                   'OpenCode changed the supplied role packet.')
+        if meta['model'].get('reasoning') is not None:
+            c.require(messages[before]['info'].get('model', {}).get('variant') == meta['model']['reasoning'],
+                      'OpenCode did not preserve the requested reasoning setting.')
         c.require(_signature(result) == signatures[-1], 'OpenCode response/history mismatch.')
         if not initial:
             c.require(result['info']['role'] == 'assistant', 'OpenCode did not return an identity response.')

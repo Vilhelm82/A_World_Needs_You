@@ -4,6 +4,9 @@ const SYSTEM = 'You are one isolated courtroom identity. Follow only the identit
 
 const deny = () => { throw new Error('Courtroom host rejected an unsafe operation.'); };
 const empty = value => value === undefined || (Array.isArray(value) ? value.length === 0 : value && typeof value === 'object' && Object.keys(value).length === 0);
+const contains = (actual, expected) => expected && typeof expected === 'object' && !Array.isArray(expected)
+  ? actual && Object.entries(expected).every(([key, value]) => contains(actual[key], value))
+  : JSON.stringify(actual) === JSON.stringify(expected);
 
 export const CourtroomGuard = async (input) => {
   const nonce = process.env.COURTROOM_OPENCODE_NONCE;
@@ -59,6 +62,11 @@ export const CourtroomGuard = async (input) => {
       // Title/summary/compaction and any other auxiliary model call fail closed.
       if (input.agent !== 'courtroom') deny();
       message(input.message);
+      const variant = input.message.model?.variant;
+      if (variant !== undefined) {
+        const selected = input.model?.variants?.[variant];
+        if (!selected || empty(selected) || selected.disabled || !contains(output.options, selected)) deny();
+      }
       // OpenAI OAuth uses this field instead of system-role messages.
       output.options.instructions = SYSTEM;
     },

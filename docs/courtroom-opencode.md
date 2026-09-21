@@ -29,14 +29,14 @@ IDs returned by `list-models` after launching the server:
   "backend": "opencode",
   "base_url": "http://127.0.0.1:4096",
   "defaults": {
-    "witness": {"provider": "PROVIDER_ID", "model": "MODEL_ID"},
-    "juror": {"provider": "PROVIDER_ID", "model": "MODEL_ID"},
-    "counsel": {"provider": "PROVIDER_ID", "model": "MODEL_ID"},
-    "bench": {"provider": "PROVIDER_ID", "model": "MODEL_ID"},
+    "witness": {"provider": "PROVIDER_ID", "model": "MODEL_ID", "reasoning": "medium"},
+    "juror": {"provider": "PROVIDER_ID", "model": "MODEL_ID", "reasoning": "medium"},
+    "counsel": {"provider": "PROVIDER_ID", "model": "MODEL_ID", "reasoning": "high"},
+    "bench": {"provider": "PROVIDER_ID", "model": "MODEL_ID", "reasoning": "high"},
     "support": {"provider": "PROVIDER_ID", "model": "MODEL_ID"}
   },
   "roles": {
-    "judge_merits": {"provider": "PROVIDER_ID", "model": "MODEL_ID"}
+    "judge_merits": {"provider": "PROVIDER_ID", "model": "MODEL_ID", "reasoning": "high"}
   }
 }
 ```
@@ -46,6 +46,23 @@ juror IDs, or either judicial identity. `player`, `bench`, and unknown identitie
 are rejected as overrides. Unused kind defaults are permitted; every actual
 identity needs a resolved model. Every resolved provider/model pair is checked
 against the current server catalog before any new world or role session is created.
+
+`reasoning` is optional and selects an exact OpenCode model variant. `list-models`
+reports each model's `reasoning_levels`; choose only a listed level. The examples
+above require models that expose `medium` and `high`. Names are provider-neutral:
+the controller does not translate them into provider-specific effort or thinking
+budgets. OpenCode performs that translation. Omitting `reasoning` retains the
+provider/model defaults; `null`, blank values and unavailable levels are rejected.
+An identity override specifies its complete provider/model/reasoning assignment.
+
+Every initial delivery and subsequent call carries that identity's variant outside
+its dialogue packet. The adapter checks the saved message retained it, and the
+host guard checks the selected variant's options reached request assembly. Missing
+or unapplied levels fail instead of silently falling back. The setting persists
+with the session binding; changing it requires closing the runtime under its old
+configuration and rebuilding from permitted history under the new configuration.
+Existing configurations and sessions without a reasoning setting still work.
+These settings do not constrain testimony length, scope or character knowledge.
 
 An optional absolute `storage_root` selects private storage outside the repository.
 Its default is `~/.local/state/courtroom/opencode`. Credentials, authentication
@@ -194,12 +211,13 @@ synthetic canaries and checks independent session resume. It may consume usage:
 
 ```sh
 python3 tools/courtroom_opencode_smoke.py --config "$HOME/.config/courtroom/runtime.json" \
-  --provider PROVIDER_ID --model MODEL_ID
+  --provider PROVIDER_ID --model MODEL_ID --reasoning high
 ```
 
 Failure or an unavailable server is reported as failure, never a passing test.
 The deterministic suite does not run this command. No live OpenCode integration
 result is claimed when OpenCode is absent.
+Omit `--reasoning` to test provider defaults instead.
 
 ## Audited host contract
 

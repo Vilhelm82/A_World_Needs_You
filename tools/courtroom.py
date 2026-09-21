@@ -107,7 +107,9 @@ def main(argv=None):
             from courtroom_opencode import OpenCodeBackend
             if args.command == 'list-models':
                 backend = OpenCodeBackend(config, {})
-                models = [{'provider': provider, 'model': model} for provider, model in sorted(backend.list_models())]
+                models = [{'provider': provider, 'model': model,
+                           'reasoning_levels': list(backend.reasoning_levels[(provider, model)])}
+                          for provider, model in sorted(backend.list_models())]
                 print(json.dumps({'models': models}, ensure_ascii=False, indent=2))
                 return 0
 

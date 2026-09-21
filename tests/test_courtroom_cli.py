@@ -39,6 +39,7 @@ class CourtroomCliTests(unittest.TestCase):
             def __init__(self, config, assignments):
                 super().__init__(config.storage_root / 'fake-transport')
                 self.config, self.assignments = config, assignments
+                self.reasoning_levels = {('configured-provider', 'configured-model'): ('medium', 'high')}
                 owner.calls.append(('construct', set(assignments)))
                 self.queue('W9', {'text': 'MODEL_SPEECH_PRIVATE_TO_AUDIENCE', 'data': {}})
 
@@ -116,7 +117,7 @@ class CourtroomCliTests(unittest.TestCase):
         code, output, error = self.run_cli('list-models')
         self.assertEqual((code, error), (0, ''))
         self.assertEqual(json.loads(output), {'models': [
-            {'provider': 'configured-provider', 'model': 'configured-model'}]})
+            {'provider': 'configured-provider', 'model': 'configured-model', 'reasoning_levels': ['medium', 'high']}]})
         self.assertEqual(self.calls[0], ('construct', set()))
         self.assertFalse((self.root / 'worlds').exists())
 

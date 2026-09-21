@@ -64,6 +64,8 @@ class FakeTransport:
                 if method=='GET':return deepcopy(self.messages.get(sid,[]))
                 if method=='POST':
                     user={'info':{'id':'msg_'+str(len(self.messages[sid])),'role':'user'},'parts':deepcopy(body['parts'])}
+                    if 'variant' in body:
+                        user['info']['model'] = {**body['model'], 'variant': body['variant']}
                     self.messages[sid].append(user)
                     if body.get('noReply'):return deepcopy(user)
                     if self.bad_response is not None:
@@ -109,6 +111,84 @@ class OpenCodeTests(unittest.TestCase):
         self.assertEqual(self.backend.list_models(),{('arbitrary','arbitrary-model')})
         self.backend.preflight()
         self.assertEqual(self.transport.sessions,{})
+
+    def test_reasoning_is_role_specific_and_persists_after_restart(self):
+        self.transport.providers['providers'][0]['models']['arbitrary-model']['variants'] = {
+            'medium': {'effort': 'medium'}, 'high': {'effort': 'high'}}
+        self.backend.assignments['W9'] = ModelConfig('arbitrary', 'arbitrary-model', 'medium')
+        self.backend.assignments['WitnessX'] = ModelConfig('arbitrary', 'arbitrary-model', 'high')
+        self.backend.preflight()
+        handles = [self.backend.create_session(who, 'Identity instructions', {'identity': who})
+                   for who in ('W9', 'WitnessX')]
+        resumed = o.OpenCodeBackend(self.cfg, self.backend.assignments, transport=self.transport)
+        resumed.preflight()
+        for handle, level in zip(handles, ('medium', 'high')):
+            self.assertEqual(resumed.resume_session(handle.session_id), handle)
+            resumed.send(handle.session_id, {'identity': handle.identity, 'action': 'dialogue'})
+            calls = [call['body'] for call in self.transport.calls
+                     if call['method'] == 'POST' and call['path'] == '/session/' + handle.session_id + '/message']
+            self.assertEqual([body['variant'] for body in calls], [level, level])
+            self.assertTrue(all('reasoning' not in json.loads(body['parts'][0]['text']) for body in calls))
+        self.assertNotEqual(handles[0].session_id, handles[1].session_id)
+
+    def test_unsupported_reasoning_fails_before_session_creation(self):
+        self.backend.assignments['W9'] = ModelConfig('arbitrary', 'arbitrary-model', 'unsupported')
+        with self.assertRaisesRegex(c.CourtError, 'reasoning'):
+            self.backend.preflight()
+        self.assertFalse(any(call['path'] == '/session' and call['method'] == 'POST'
+                             for call in self.transport.calls))
+
+    def test_server_cannot_silently_drop_requested_reasoning(self):
+        self.transport.providers['providers'][0]['models']['arbitrary-model']['variants'] = {'high': {'effort': 'high'}}
+        self.backend.assignments['W9'] = ModelConfig('arbitrary', 'arbitrary-model', 'high')
+        self.backend.preflight()
+        original = self.transport.request
+        def drop_variant(method, path, body=None, directory=None):
+            if body and 'variant' in body:
+                body = {key: value for key, value in body.items() if key != 'variant'}
+            return original(method, path, body, directory)
+        self.transport.request = drop_variant
+        with self.assertRaisesRegex(c.CourtError, 'reasoning'):
+            self.backend.create_session('W9', 'Witness', {})
+
+    def test_saved_reasoning_cannot_be_altered_behind_controller(self):
+        self.transport.providers['providers'][0]['models']['arbitrary-model']['variants'] = {'high': {'effort': 'high'}}
+        self.backend.assignments['W9'] = ModelConfig('arbitrary', 'arbitrary-model', 'high')
+        self.backend.preflight()
+        handle = self.backend.create_session('W9', 'Witness', {})
+        self.transport.messages[handle.session_id][0]['info']['model']['variant'] = 'low'
+        with self.assertRaises(SessionUnavailable):
+            self.backend.resume_session(handle.session_id)
+
+    def test_empty_and_disabled_variants_are_not_usable_levels(self):
+        self.transport.providers['providers'][0]['models']['arbitrary-model']['variants'] = {
+            'empty': {}, 'disabled': {'effort': 'high', 'disabled': True}, 'custom-depth': {'effort': 'medium'}}
+        self.backend.list_models()
+        self.assertEqual(self.backend.reasoning_levels[('arbitrary', 'arbitrary-model')], ('custom-depth',))
+        self.backend.assignments['W9'] = ModelConfig('arbitrary', 'arbitrary-model', 'custom-depth')
+        self.backend.preflight()
+
+    def test_reasoning_change_refuses_existing_session(self):
+        self.transport.providers['providers'][0]['models']['arbitrary-model']['variants'] = {
+            'medium': {'effort': 'medium'}, 'high': {'effort': 'high'}}
+        self.backend.assignments['W9'] = ModelConfig('arbitrary', 'arbitrary-model', 'medium')
+        self.backend.preflight()
+        handle = self.backend.create_session('W9', 'Witness', {})
+        self.backend.assignments['W9'] = ModelConfig('arbitrary', 'arbitrary-model', 'high')
+        with self.assertRaisesRegex(c.CourtError, 'assignment changed'):
+            self.backend.resume_session(handle.session_id)
+
+    def test_legacy_session_without_reasoning_remains_resumable(self):
+        self.backend.preflight()
+        handle = self.backend.create_session('W9', 'Witness', {})
+        meta = self.backend._load(handle.session_id)
+        meta['model'].pop('reasoning', None)
+        self.backend._save(meta)
+        self.assertEqual(self.backend.resume_session(handle.session_id), handle)
+        self.backend.send(handle.session_id, {'identity': 'W9', 'action': 'dialogue'})
+        calls = [call for call in self.transport.calls if call['method'] == 'POST'
+                 and call['path'] == '/session/' + handle.session_id + '/message']
+        self.assertTrue(all('variant' not in call['body'] for call in calls))
 
     def test_failed_preflight_cleanup_cannot_leave_backend_callable(self):
         original=self.transport.request

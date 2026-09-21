@@ -46,6 +46,23 @@ class RuntimeConfigTests(unittest.TestCase):
         self.assertEqual(cfg.base_url, 'http://127.0.0.1:4096')
         self.assertEqual(cfg.storage_root, Path.home() / '.local/state/courtroom/opencode')
 
+    def test_reasoning_defaults_and_identity_overrides(self):
+        model = {'provider': 'p', 'model': 'm', 'reasoning': 'medium'}
+        cfg = self.config(defaults={kind: model for kind in ('witness', 'juror', 'counsel', 'bench', 'support')},
+                          roles={'judge_merits': {**model, 'reasoning': 'high'}})
+        assignments = cfg.resolve(self.case)
+        self.assertEqual(assignments['W9'].reasoning, 'medium')
+        self.assertEqual(assignments['judge_admissibility'].reasoning, 'medium')
+        self.assertEqual(assignments['judge_merits'].reasoning, 'high')
+        self.assertIsNone(ModelConfig('p', 'm').reasoning)
+
+    def test_reasoning_rejects_empty_nonstring_and_unknown_fields(self):
+        for value in ('', ' ', None, True, 10, {}, []):
+            with self.subTest(value=value), self.assertRaises(c.CourtError):
+                self.config(roles={'W9': {'provider': 'p', 'model': 'm', 'reasoning': value}})
+        with self.assertRaises(c.CourtError):
+            self.config(roles={'W9': {'provider': 'p', 'model': 'm', 'reasoning': 'high', 'options': {}}})
+
     def test_identity_and_judicial_overrides_are_independent(self):
         roles = {'W9': {'provider': 'local/experimental', 'model': 'weights v2:Q4'},
                  'judge_merits': {'provider': 'arbitrary-provider', 'model': 'different-model'}}

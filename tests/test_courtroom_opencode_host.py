@@ -138,6 +138,11 @@ await assert.rejects(hooks['chat.message']({}, {message,parts:[{type:'file',url:
 const params = {options:{instructions:'ambient provider system'}};
 await hooks['chat.params']({agent:'courtroom',message}, params);
 assert.equal(params.options.instructions, system);
+const selected = {...message, model:{variant:'high'}};
+const model = {variants:{high:{reasoningEffort:'high'}}};
+await hooks['chat.params']({agent:'courtroom',message:selected,model}, {options:{reasoningEffort:'high'}});
+await assert.rejects(hooks['chat.params']({agent:'courtroom',message:selected,model}, {options:{reasoningEffort:'low'}}));
+await assert.rejects(hooks['chat.params']({agent:'courtroom',message:selected,model:{variants:{}}}, {options:{}}));
 await assert.rejects(hooks['chat.params']({agent:'title',message},params));
 await assert.rejects(hooks['tool.execute.before']({},{}));
 await assert.rejects(hooks['command.execute.before']({},{}));
