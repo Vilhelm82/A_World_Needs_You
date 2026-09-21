@@ -41,12 +41,16 @@ no real remote push was performed in these installer tests.
 The supplied archive was installed locally at commit 06bfee8. At that point all
 143 tests passed (96 v2 and 47 v1). The user confirmed that v1 had never been played
 and was a rejected prototype, so the v1 controller, fixtures, tests and routing
-have since been removed. The maintained suite now contains 96 v2 tests.
+have since been removed. Those 96 state-machine tests are retained, with the CLI startup test migrated to
+the required session runtime. Additional session-isolation tests are maintained in
+`tests/test_courtroom_sessions.py`; run discovery for the current total.
 
 No full live-model hearing, independent multi-agent trial, human legal review,
 calibrated jury simulation or entertainment user test has been completed. The
 controller validates packet structure and references, not the semantic truth of a
-quotation or inference. A shared context is not hard access separation. It cannot
+quotation or inference. Independent persistent contexts are now required, exercised
+with a durable deterministic backend. No external production adapter has been tested.
+The application cannot
 prevent an operator with full write access from altering files and all their hashes.
 
 New cases are authored by the host agent, not by an embedded network service. The
@@ -59,3 +63,15 @@ The archive was applied to the user's local checkout, committed there, and pushe
 using existing Git authentication. Subsequent changes follow the same workflow.
 `BUILD-MANIFEST.json` describes the current maintained payload; the original source
 archive retains the original build checksums. Non-court worlds are unchanged.
+
+## Required multi-session architecture verification
+
+The complete discovery suite passed **143 tests** on Python 3.14.4:
+96 retained controller tests and 47 session-orchestration tests. Tests inspect actual
+persisted deterministic backend conversations, separate session/context handles,
+role-specific canaries, separate judicial contexts, journal-before-call ordering,
+flow/strict examinations, repeated safe rebuilds, interrupted sends and journal
+commits, round-robin restart, excluded/withdrawn evidence, immutable case storage,
+private ballots/strategy, backend refusal and CLI execution. No external model calls
+were made. This verifies the implemented application boundary and deterministic
+adapter, not provider infrastructure or live-model reasoning quality.

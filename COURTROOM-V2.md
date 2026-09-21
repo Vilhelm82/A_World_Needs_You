@@ -4,11 +4,16 @@ A general court-roleplay module for Worldkeeper. Civil **and** criminal cases.
 Bench **and** jury trials. Either side. New original scenarios or two ready examples.
 Routine administration stays offstage; consequential advocacy stays yours.
 
-## Start in a fresh file-backed agent session at this repository root
+## Start with a conforming isolated-session backend
 
 > Begin courtroom. Criminal jury trial, US-inspired. I am defence counsel. Keep the pace sharp.
 
-For a new case the agent builds and commits the material before play. It is not
+The host must configure a backend that supplies a separate persistent conversation
+for every independent identity. Only a deterministic test adapter is bundled; live
+roleplay requires a production adapter. Startup refuses a shared-context fallback.
+See `docs/courtroom-sessions.md` for the interface and explicit mock exercise.
+
+For a new case the author builds and commits the material before play. It is not
 forced to reuse the old civil scenario. More examples of accepted setup requests:
 
 > New criminal bench case. I am the prosecutor. NSW-inspired, without procedural busywork.
@@ -43,7 +48,7 @@ requires a spoiler warning and confirmation. Later replay is then informed pract
 
 ## Tools and limits
 
-Python 3.10+ and a file/shell-capable agent are required. Standard library only;
+Python 3.10+ and a conforming isolated-session backend are required. Standard library only;
 no API key, new service or model subscription is installed by the controller.
 
     python3 -m unittest discover -s tests -v
@@ -58,8 +63,9 @@ case/journal layout. The rejected v1 prototype has been removed. Non-court world
 files and the original Worldkeeper base harness remain unchanged.
 
 The program tests record mechanics, not whether a generated judge is legally sound
-or a roleplay is engaging. Single-context role separation is not hard isolation;
-separate-context helpers are used only where your agent actually supplies them.
+or a roleplay is engaging. Packet filtering plus genuinely separate model sessions
+provides application-level isolation; provider infrastructure may remain shared.
+The coordinator never generates character speech or reasoning.
 There is no predetermined verdict, hidden talent score or guarantee of dramatic reversal.
 Detailed jury damages, sentencing, jury selection and appeals are not separate v2
 engines; they are optional abbreviated aftermath unless independently specified.

@@ -2,7 +2,7 @@
 """General Worldkeeper courtroom controller, Python 3.10+, standard library only.
 
 Continues the paused v2 draft (Git blob 2149253cee3714e386dd958a66059a8f6f4507fc).
-The host agent authors cases and supplies dialogue. This module controls records,
+An isolated session per identity supplies dialogue. This module controls records,
 information allocations and decision structure, not the truth of legal inference.
 """
 from __future__ import annotations
@@ -32,7 +32,7 @@ PHASES = {"conference", "preparation", "opening", "evidence", "closing", "decisi
 FIELDS = {
     "dialogue": set(), "private": set(), "submission": {"refs"},
     "phase": {"to"}, "exchange": {"witness", "question", "answer"},
-    "answer": set(), "accept": set(), "objection": {"rule"},
+    "answer": set(), "provisional_answer": set(), "accept": set(), "objection": {"rule"},
     "reply": {"rule"},
     "ruling": {"rule", "effect", "result", "document", "status", "uses", "target"},
     "disclose": {"document", "to"}, "publish": {"document"},
@@ -285,7 +285,7 @@ def refcheck(refs: list, state: dict, events: list[dict], case: dict, role: str)
                 require(k in state["published"], f"Exhibit {k} has not been placed before the jury.")
         else:
             e = indexed.get(k)
-            require(e and e["type"] in {"exchange", "stipulation"} and role in e["audience"],
+            require(e and e.get("purpose") != "admissibility" and e["type"] in {"exchange", "stipulation"} and role in e["audience"],
                     "Not evidence heard by this decision-maker.")
             require(not evidence_invalid(k, state), "Struck, corrected or provisional testimony cannot support a finding.")
             if e["type"] == "exchange":
@@ -327,7 +327,9 @@ def apply(state: dict, e: dict, earlier: list[dict], case: dict) -> None:
     require(isinstance(e["text"], str) and isinstance(data, dict) and data.keys() <= FIELDS[kind], "Invalid text/event data fields.")
     require(unique(audience) and set(audience) <= roles.keys(), "Invalid or repeated audience.")
     heard = set(audience)
-    court = {"exchange", "answer", "objection", "reply", "ruling", "stipulation", "submission", "publish", "directions", "jury_question", "verdict", "deadlock", "jury_presence"}
+    require(e.get("purpose", "merits") in {"merits", "admissibility"}, "Unknown event purpose.")
+    require(e.get("purpose") != "admissibility" or not heard & panel, "Admissibility-only material cannot reach jurors.")
+    court = {"exchange", "answer", "provisional_answer", "objection", "reply", "ruling", "stipulation", "submission", "publish", "directions", "jury_question", "verdict", "deadlock", "jury_presence"}
     if kind in court:
         require(CORE <= heard, "Court events must reach both counsel and bench.")
     if state["paused"]:
@@ -378,6 +380,14 @@ def apply(state: dict, e: dict, earlier: list[dict], case: dict) -> None:
             require(panel <= heard, "The seated jury must hear the evidence exchange.")
         state["pending"] = {"id": e["id"], "witness": witness, "question": data["question"], "answer": answer,
                             "waiting": sorted({"player", "opponent"} - {actor}), "objected": False, "audience": audience}
+    elif kind == "provisional_answer":
+        p = state["pending"]
+        require(state["cadence"] == "flow" and p and p["waiting"] and not p["objected"]
+                and p["answer"] is None, "No flow-mode provisional answer opportunity.")
+        require(actor == p["witness"] and heard == set(p["audience"]),
+                "Only the questioned witness may answer to the same recipients.")
+        p["answer"] = e["text"]
+        state["answers"][p["id"]] = {"answer": e["text"], "turn": e["id"]}
     elif kind == "answer":
         p = state["pending"]
         require(p and not p["waiting"] and not p["objected"] and p["answer"] is None, "Question is not cleared for answer.")
@@ -575,6 +585,8 @@ def packet_from(case: dict, events: list[dict], role: str, merits: bool = False,
     for e in events:
         if role not in e["audience"]:
             continue
+        if merits and e.get("purpose") == "admissibility":
+            continue
         invalid = evidence_invalid(e["id"], state)
         if merits and (invalid or e["type"] not in {"exchange", "stipulation", "submission", "directions", "jury_question", "deliberation"}):
             continue
@@ -677,8 +689,13 @@ def verify(world: Path, caches: bool = True) -> dict:
             "factfinder": case["config"]["factfinder"], "phase": state["phase"], "events": len(events)}
 
 
-def record(world: Path, inputs: dict | list[dict], expected: int | None = None) -> list[str]:
+def record(world: Path, inputs: dict | list[dict], expected: int | None = None, *, _ticket=None, _fixture=False) -> list[str]:
     with locked(world):
+        if safe_path(world, AREA / 'runtime.json').exists():
+            from courtroom_sessions import consume_ticket
+            consume_ticket(world, inputs, expected, _ticket)
+        else:
+            require(_fixture is True, "Start an isolated-session backend before recording live contributions.")
         case, events = read_case(world), read_events(world)
         require(expected is None or (type(expected) is int and expected == len(events)), "Stale or invalid expected event count.")
         state = replay(case, events)
@@ -687,7 +704,7 @@ def record(world: Path, inputs: dict | list[dict], expected: int | None = None) 
         ids = []
         for raw in batch:
             require(isinstance(raw, dict) and {"type", "actor", "text", "audience"} <= raw.keys()
-                    and raw.keys() <= {"type", "actor", "text", "audience", "data", "private_note"}, "Invalid event fields.")
+                    and raw.keys() <= {"type", "actor", "text", "audience", "data", "private_note", "purpose"}, "Invalid event fields.")
             e = deepcopy(raw)
             e.setdefault("data", {})
             e["id"] = f"T{len(events)+1:04d}"
@@ -730,7 +747,7 @@ def main() -> int:
             if args.command == "validate":
                 print("Case schema PASS; semantic case review remains the agent's responsibility.")
             else:
-                print(f"Ready: {initialise(args.root, args.world, case)}")
+                raise CourtError("Live startup requires an independent-session backend via courtroom_sessions.py; init cannot start a shared-context court.")
         elif args.command == "packet":
             value = encode(packet(world, args.role, args.merits))
             require(args.out is not None, "Use --out to avoid printing sealed role packets.")

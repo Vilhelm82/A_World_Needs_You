@@ -8,9 +8,9 @@ participants and more than one defensible reading of some evidence. There need n
 be a conspiracy, a liar, a confession, an innocent client, or a hidden exonerating clue.
 Do not imitate the animation argument from the development conversation.
 
-Use fresh-context authoring when genuinely available. Otherwise build before reading
-player strategy, make a separate consistency pass, and acknowledge the shared-context
-limitation in the sealed build note. Never claim an independent audit you did not run.
+The case-authoring context must never become a courtroom identity context. Author
+before reading player strategy. Start all independent identities in separate persistent
+backend sessions after commitment. Never claim an independent audit you did not run.
 
 A focused case often needs 3-6 material witnesses and 6-12 useful documents, but these
 are authoring suggestions, not code limits. Avoid multiplying exhibits that repeat one
@@ -49,7 +49,8 @@ can pair a style with a separately described fictional jurisdiction/rule packet.
 `public_summary`: neutral allegations and issues. Every role sees it; never secret
 fact or author judgment. `brief`: counsel's shared procedural brief. Confidential
 instructions belong only to that counsel role. `truth`: author-only complete material
-past. `opening`: first character line/situation, not an explanation from the author.
+past. `opening`: setup situation for the coordinator, not live character speech. The first
+spoken line must come from the appropriate independent identity session.
 
 `procedure`: plain-English governing game procedure. `authorities`: source provenance
 and explicit simplifications. `rules`: actual rule text keyed by IDs. No nonexistent
@@ -88,7 +89,7 @@ Read the case from each side, not just the author truth. Ensure a loss can occur
 invented rescue and a strong question can succeed without artificial resistance.
 No target verdict field, hidden success condition or score threshold belongs in a case.
 
-`validate` checks schema only. After author review, `init` fixes the case bytes and
-creates a clean world. Keep the original commitment hash in a separate record/commit
+`validate` checks schema only. After author review, the storage initialiser fixes the case bytes and
+creates a clean world; the required isolated-session orchestrator then starts play. Keep the original commitment hash in a separate record/commit
 when practical; a same-disk checksum detects drift but is not tamper-proof security.
 Existing worlds, fixtures and sessions are never overwritten to produce a new scenario.

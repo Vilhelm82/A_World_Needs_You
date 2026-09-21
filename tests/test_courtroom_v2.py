@@ -50,7 +50,7 @@ class CourtroomV2Tests(unittest.TestCase):
         self.case = fixture()
         self.world = c.initialise(self.root,'test-court',self.case)
     def tearDown(self): self.tmp.cleanup()
-    def add(self, e): return c.record(self.world,e)
+    def add(self, e): return c.record(self.world,e,_fixture=True)
     def state(self): return c.replay(c.read_case(self.world),c.read_events(self.world))
     def audience(self, witness=None, jury=True):
         a = set(c.CORE)
@@ -401,7 +401,7 @@ class CourtroomV2Tests(unittest.TestCase):
         self.assertFalse((self.world/c.AREA/'decision-record.json').exists())
     def test_stale_revision_and_boolean_rejected(self):
         for n in (-1,1,True):
-            with self.assertRaises(c.CourtError):c.record(self.world,event('private','player',['player']),expected=n)
+            with self.assertRaises(c.CourtError):c.record(self.world,event('private','player',['player']),expected=n,_fixture=True)
     def test_existing_lock_not_broken(self):
         p=self.world/c.AREA/'writer.lock';p.write_text('test')
         with self.assertRaises(c.CourtError):self.add(event('private','player',['player']))
@@ -466,9 +466,12 @@ class CourtroomV2Tests(unittest.TestCase):
         self.assertEqual(source['roles']['player']['knowledge'],changed['roles']['opponent']['knowledge'])
     def test_cli_smoke_validate_init_verify_resume(self):
         source=self.root/'fixture.json';source.write_bytes(c.encode(self.case))
-        commands=[['validate','--case',str(source)],['init','--case',str(source)],['verify'],['resume']]
-        for args in commands:
-            r=subprocess.run([sys.executable,str(ROOT/'tools/courtroom_v2.py'),*args,'--root',str(self.root),'--world','cli-case'],capture_output=True,text=True)
+        commands=[('courtroom_v2.py',['validate','--case',str(source)]),
+                  ('courtroom_sessions.py',['start','--case',str(source),'--backend','mock','--allow-mock']),
+                  ('courtroom_v2.py',['verify']),('courtroom_v2.py',['resume']),
+                  ('courtroom_sessions.py',['resume','--backend','mock','--allow-mock'])]
+        for tool,args in commands:
+            r=subprocess.run([sys.executable,str(ROOT/'tools'/tool),*args,'--root',str(self.root),'--world','cli-case'],capture_output=True,text=True)
             self.assertEqual(r.returncode,0,r.stderr)
     def test_cli_packet_needs_private_output(self):
         args=[sys.executable,str(ROOT/'tools/courtroom_v2.py'),'packet','--root',str(self.root),'--world','test-court','--role','J01']

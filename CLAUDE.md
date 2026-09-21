@@ -6,7 +6,10 @@ A request to develop or inspect this repository is outside play; do not start a 
 
 ## Choose the engine before opening a scene
 
-For a NEW courtroom request, read `modules/courtroom-v2.md` completely. The default
+For a NEW courtroom request, read `modules/courtroom-v2.md` completely.
+Separate persistent sessions are mandatory; read `docs/courtroom-sessions.md`.
+Do not generate any identity's substantive speech or reasoning in the coordinator
+context. Fail startup if no conforming isolated-session backend is configured. The default
 is now the general courtroom, not the original NSW civil fixture. A new case can
 be civil or criminal, judge-decided or jury-decided, with either party playable.
 Style, jurisdiction, proof rules and pacing are separate settings. The module
@@ -47,6 +50,7 @@ apply to the courtroom v2 engine.
    author the player's case. Exact consequential words belong in the record.
 7. **The selected controller owns persistence.** Its events, state projections and
    filtered packets replace the base direct-write ledger procedure for that world.
+   Only isolated identity sessions generate speech; the coordinator validates it.
    Persist before presenting speech. The state card is worldkeeper-only, not a role
    packet. Keep records, facts and jury deliberations out of the visible response.
 8. **Entertainment without outcome manipulation.** V2 compresses filing, scheduling,

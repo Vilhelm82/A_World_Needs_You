@@ -3,7 +3,8 @@
 The player wants entertaining adversarial roleplay with real resistance. Run people
 in a consequential situation. No menus, aptitude scores, unsolicited coaching or
 narration of how impressed the room is. Read the root court amendments first.
-The Python controller is plumbing; YOU supply the case, characters and reasoning.
+The host authors the fixed case; isolated character sessions supply all reasoning and speech.
+The coordinator must not impersonate any courtroom identity.
 No hosted model service or account is installed by this module.
 
 ## 1. Start or resume
@@ -58,10 +59,13 @@ unless you need to author/test them. Do not surface sealed material in tool narr
 Validate, review and commit the case before the first substantive player theory:
 
     python3 tools/courtroom_v2.py validate --case .court-build/<name>/case.json
-    python3 tools/courtroom_v2.py init --world <name> --case .court-build/<name>/case.json
+    # Start through Orchestrator.start(world, a_conforming_backend).
+    # The old init command cannot start play without an isolated-session backend.
 
 Validation checks structure, not historical plausibility, legal completeness or
-entertainment. Read the neutral brief and the player's packet. Open in a useful
+entertainment. Start the required runtime described in `docs/courtroom-sessions.md`.
+If no conforming backend is available, stop clearly; do not act out the roles yourself.
+Route the neutral brief and player packet to the human. A support session opens a useful
 client conference, or directly at the requested hearing stage, with a concrete line
 from someone who needs the player. All necessary rules are in the disclosed procedure
 and charge sheet. Never start with a rulebook lecture or explain the puzzle's solution.
@@ -95,36 +99,32 @@ admissions are never buried in a long automated series. No repeated `pass` tax.
 
 ## 4. Information boundaries
 
-Before a role speaks, export its packet to a sealed path:
+Every independent identity must have its own persistent backend conversation.
+Use `tools/courtroom_sessions.py` and the contract in `docs/courtroom-sessions.md`.
+Startup fails without independent contexts, persistent sessions and no ambient access.
+The human is not an AI role. Each witness, opponent, juror and recurring support
+identity has its own session; the judge has separate admissibility and merits contexts.
 
-    python3 tools/courtroom_v2.py packet --world <name> --role W1 --out worlds/<name>/.world/packets/W1.json
+Before every call, the orchestrator rebuilds the identity's permitted packet from
+committed knowledge and the authoritative event log. Never paste role packets into
+the coordinator conversation and then generate character speech there. Never pass
+sealed truth, global state cards, private counsel strategy or private juror ballots
+to another identity. Only explicit recorded communication changes what another role
+can know. Personalities guide presentation, never encode truth or predetermine votes.
 
-IDs come from that case; do not assume W1-W4 or a fixed witness count. The player and
-opponent get only their initial allocation plus actual disclosure. Witnesses have
-local memories and heard testimony, not the author's whole truth. The neutral
-`public_summary` is an allegation, never evidence; confidential facts belong in
-role knowledge, not in that summary or the shared brief.
-
-Use `--role bench --merits` for a bench decision. The ordinary bench packet may
-contain offered material solely for admissibility. Juror packets are always merits-
-filtered. They contain only admitted exhibits actually published to the panel,
-permitted uses, testimony heard, accepted submissions (labelled not evidence),
-directions and sealed deliberation. Marking, disclosure and admission are distinct
-from publication. Sidebar testimony is not available to absent jurors. Struck or
-corrected material is removed from merits exports; the exact original court record
-remains for audit. Reference checks do not prove semantic support, so check quotations.
-
-Use separate-context role helpers when the runtime actually supports them. Never
-claim that twelve names in one context are twelve independent agents. In a shared
-context, these rules and filtered exports are an imperfect behavioural barrier;
-record that limitation at stand down. Do not publish alleged thought processes.
-The stored reasons are brief fictional findings, not hidden model deliberation.
+The admissibility judge may see contested material; merits gets structured rulings
+and admitted/limited evidence only. Mark admissibility testimony accordingly. Jurors
+receive evidence only when present and exhibits only when legitimately published.
+Private jury-room speech reaches other jurors after it is actually spoken; private
+ballots never do. Withdrawal of previously received evidence rebuilds affected merits
+contexts from permitted history; models are not told to magically forget.
 
 ## 5. Record before presentation
 
-Save an event or small ordered batch under the selected world's `.world/`, then:
-
-    python3 tools/courtroom_v2.py record --world <name> --event <event-file.json> --expected <current-event-count>
+Use the orchestrator's `human`, `turn`, `examine`, and `control` operations. Model
+responses are bound to the generating identity and validated before recording. Raw
+controller writes cannot impersonate roles in an active runtime. Examiner and witness
+speech come from separate sessions even when displayed together in flow mode.
 
 Each event contains `type`, `actor`, exact `text`, `audience` and event-specific
 `data`. An optional `private_note` is controller-only and is never exported. Consult
@@ -163,10 +163,12 @@ not advertised as fully implemented adjudication engines.
 Bench: the judge returns findings on every supplied issue, references evidence for
 proved findings, gives reasons and derives the outcome. No innate-talent score.
 
-Jury: deliver concise directions, then retire the panel. Each juror reasons from
+Jury: deliver concise directions, then retire the panel. Each juror reasons in its own persistent session from
 its packet and records a provisional/final ballot privately. Distinct manners are
 not predetermined votes. Let material disagreement produce a bounded discussion,
-possible revised ballots and genuine questions through the foreperson. Do not
+possible revised ballots and genuine questions through the foreperson. Use
+`deliberate_round()` for sequential committed contributions and `collect_ballots()`
+for private votes. Never generate deliberation with one collective jury model. Do not
 manufacture a split for suspense or unanimity for closure. Retain disagreement when
 nothing resolves it. New directions invalidate prior ballots. Further evidence needs
 an openly justified reopening, not a quiet insertion during deliberation.
@@ -199,5 +201,5 @@ After closure, `// debrief` discusses specific decisions using the public record
 what was established, what remained an inference, what was conceded, when to stop.
 Separate available case strength, outcome and conduct. Do not rate intelligence or
 promise legal-career success. `// unseal` warns once; after confirmation and closure,
-run the controller with `unseal --confirm-spoilers`. Only that case opens. Do not
+record an explicitly confirmed `unseal` through the orchestrator control operation. Only that case opens. Do not
 claim a later replay is blind practice. Do not reveal future cases or other worlds.

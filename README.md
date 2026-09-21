@@ -15,7 +15,9 @@ Point a session at this folder and say anything. Something will start.
 Say **Begin courtroom. Criminal jury trial, US-inspired. I am defence counsel.**
 in a fresh file-backed agent session at the repository root. See
 [COURTROOM-V2.md](COURTROOM-V2.md) for startup, controls and validation limits.
-Python 3.10+ is required. Civil and criminal cases, bench and jury trials, either
+Python 3.10+ and a backend providing separate persistent identity sessions are required.
+Only a deterministic test backend is bundled; live play needs a conforming adapter.
+See [session architecture](docs/courtroom-sessions.md). Civil and criminal cases, bench and jury trials, either
 side, and US-inspired or NSW-inspired styles are supported.
 
 Courtroom v2 is the sole court engine. The original Worldkeeper harness remains in

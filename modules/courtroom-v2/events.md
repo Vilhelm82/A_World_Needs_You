@@ -10,11 +10,19 @@ repo root. Event audiences contain role IDs from `case.roles`, not character nam
      "audience":["player","opponent","bench","W1","J01","J02"],
      "data":{"witness":"W1","question":"Did you sign it?","answer":"Yes."}}
 
+This is a controller storage shape, not permission for one model to supply both
+question and answer. In live play `examine` collects them from separate sessions.
+All live contributions pass through the required orchestrator.
+
 Use the complete real jury, not just J01/J02 from this example. Exact question and
 answer are authoritative. An omitted/null answer opens pre-answer mode. The helper
 assigns T0001-style IDs and digest links; never invent or alter IDs. `--expected N`
 rejects stale writers before a batch is committed. A rejected batch appends nothing.
 Only `private_note` may contain a sealed controller annotation; do not put one in data.
+
+`purpose:admissibility` marks testimony heard solely to decide admissibility; it
+cannot reach jurors or the merits judge, or support merits findings. Omitted purpose
+means merits. Structured rulings cross judicial contexts without quoted reasons.
 
 ## Ordinary play
 
@@ -32,6 +40,9 @@ Only `private_note` may contain a sealed controller annotation; do not put one i
 - `objection`: side with live opportunity, `rule`: supplied rule ID. Answer held or
   provisional. `reply`: counsel's short response, with rule. No magical incantations.
 - `answer`: strict mode's questioned witness only; exact text, same original audience.
+- `provisional_answer`: flow mode's questioned witness only, after the separate question
+  event has been committed. Retains the objection opportunity; jurors/merits do not
+  receive the provisional answer until it is accepted or an objection is overruled.
 - `submission`: counsel, `refs`: list of {id,use}. Always argument, not evidence.
   Opening forecasts have no evidentiary references. A closing quote must refer to
   evidence available to its audience, including jury publication where applicable.
