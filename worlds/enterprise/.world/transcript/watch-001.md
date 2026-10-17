@@ -401,3 +401,13 @@ He looks at you a moment longer.
 "And Number One. Be careful how much of this ship's attention we give him. That may be precisely what he wants."
 
 The ready room doors close behind him.
+
+## turn 32
+
+The bridge is quieter than the lounge: La Forge at conn, Data back at ops, a lieutenant you don't know yet holding tactical. Troi's seat is empty.
+
+La Forge hears you out and swivels all the way round.
+
+"The captain asked for that?" He seems to need a second with it. "Huh. Okay." He glances at the chrono. "I'm on till sixteen hundred, then I'm in a Jefferies tube with Commander MacDougal's tools."
+
+"I could take the account now, at ops," Data says, turning, "if the first officer permits the conn to be relieved for a few minutes. It would require approximately four." He pauses. "I would record it as spoken. Including the word *huh*, if that is what he says."

@@ -201,3 +201,6 @@
 {"watch": 1, "turn": 31, "type": "TOLD", "to": ["picard"], "fact": "F-044"}
 {"watch": 1, "turn": 31, "type": "DID", "decision": "No heat gradient, sir... Geordi said it looked like someone had painted a man to look warm. It's one recollection from one instrument, a day old.", "changed": "Picard orders La Forge's account into Data's file in his own words; warns against giving Q too much of the ship's attention", "distance": {"J-003": [4, 5]}}
 {"watch": 1, "turn": 31, "type": "DECIDED", "by": "picard", "what": "La Forge's VISOR account goes into Data's Q file in his own words", "without_player": false}
+{"watch": 1, "turn": 32, "type": "TURN", "stardate": 41175.405, "present": ["player", "laforge", "data", "crowd:relief-tactical-lieutenant"], "speakers": ["laforge", "data"], "addressed": {"player": 2}, "initiated": ["data"], "transcript": "watch-001.md#turn-32"}
+{"watch": 1, "turn": 32, "type": "TOLD", "to": ["laforge", "data"], "fact": "F-063"}
+{"watch": 1, "turn": 32, "type": "DID", "decision": "Exit onto the bridge and report the captain's request to La Forge.", "changed": "La Forge knows the captain asked for his account; Data offers to take it now if conn is relieved", "distance": {"J-003": [5, 5]}}

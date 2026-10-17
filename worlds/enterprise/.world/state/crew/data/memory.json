@@ -14,7 +14,8 @@
   "F-058",
   "F-059",
   "F-060",
-  "F-061"
+  "F-061",
+  "F-063"
  ],
  "beliefs": [
   {
@@ -40,6 +41,7 @@
   "Q's clothes read the same temperature as his skin, to the VISOR",
   "thermal pickups would be needed for the filter; La Forge offered to fit them",
   "Hesker IV, warp 8; pulled the colony's registry entry",
-  "1300 briefing: Crusher's summary of the Hesker IV reports"
+  "1300 briefing: Crusher's summary of the Hesker IV reports",
+  "offered to take La Forge's account at ops now"
  ]
 }

@@ -516,6 +516,19 @@
    "surfaced_at": 41175.4,
    "source": "Picard",
    "created_at": 41175.4
+  },
+  {
+   "id": "F-063",
+   "statement": "Picard has ordered La Forge's VISOR account of Q put into Data's Q file, all of it, in La Forge's own words.",
+   "known_by": [
+    "picard",
+    "player",
+    "laforge",
+    "data"
+   ],
+   "surfaced_at": 41175.403,
+   "source": "Picard, via Lloyd",
+   "created_at": 41175.405
   }
  ]
 }
