@@ -22,6 +22,14 @@ This file is the constitution. The detail lives in `canon/cards.jsonl`: short, c
   - Turning down command of the Drake, which went to Paul Rice.
   - His father, Starfleet's own Kyle (here a Lloyd), and the estrangement since he was fifteen.
 - **What is Lloyd's own:** any detail that makes no material difference to canon's continuity. He was born and raised in Australia, not Alaska. Every other variation he states goes in `worlds/enterprise/sheet.md`; whatever he hasn't stated follows canon.
+
+## Establishing Lloyd in play
+
+Will's rulings.
+
+- **The sheet fills in as he plays.** Whatever Will establishes about Lloyd, in character or outside (his past, family, habits, skills, tastes), becomes true and is written to `sheet.md`, with the watch and turn, before the world moves on (ledger `SHEET`). From then on it binds like any fact. The build never invents what he hasn't stated; it uses only what canon's history gives him.
+- **A claim that would hand him something for free is an attempt** (`SHEET` with `refused` and the reason): it must fit the invariants above and canon. Colour passes; leverage is tested.
+- **Soft check.** Before his message touches the world, it's checked against his sheet and invariants, canon Lloyd would know as a 2364 officer, and what Lloyd can know (nothing of canon's future, nothing his light cone doesn't hold). On a conflict the world doesn't move: one `//` line names it and asks whether to keep or change it. Nothing has been written or told, so changing costs nothing. "Keep" means he meant it: a contradiction is Lloyd lying or misremembering, and knowledge he can't have is a deed with traces. Ledger `CHECK`. It flags facts only; choices, tone and behaviour are never flagged.
 - [assumed] The Farpoint mission itself happened as the show had it, with Lloyd in Riker's place: the Hood ferried him to Deneb IV, he made the manual saucer docking, he led the away teams that found the station's secret, and Q took an interest in him. How he did it is Lloyd's to state. Play opens as the Enterprise leaves Farpoint. *(Will may overrule this and play Farpoint itself.)*
 - After the branch, **no canon episode is scheduled.** Canon survives only as *forces* (`forces.md`): who wants what, what they can do, and their next step if nobody stops them. Where the Enterprise is decides whether a force meets her.
 

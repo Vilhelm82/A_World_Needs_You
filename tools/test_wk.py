@@ -381,6 +381,26 @@ def main():
         ok, out = commit(repo, "calc and roll")
         check("a correct CALC and ROLL commit", ok, out)
 
+        # the sheet fills in as the person plays; the soft check flags slips before they land
+        before = lp.read_text()
+        append(w, {"watch": 1, "turn": 5, "type": "SHEET", "text": "Has a sister in Hobart.",
+                   "outcome": "taken", "reason": "colour; no canon conflict"})
+        ok, out = commit(repo, "sheet entry not written")
+        check("a taken SHEET entry must be on sheet.md", not ok and "not on sheet.md" in out, out)
+        (w / "sheet.md").write_text("# Sheet\n\n- (watch 1, turn 5) Has a sister in Hobart.\n")
+        ok, out = commit(repo, "sheet entry")
+        check("a taken SHEET entry on sheet.md commits", ok, out)
+        before = lp.read_text()
+        append(w, {"watch": 1, "turn": 6, "type": "CHECK", "claim": "Lloyd names Lore to Data",
+                   "kind": "vibes", "conflicts_with": "Lloyd can't know of Lore", "answer": "changed"})
+        ok, out = commit(repo, "bad check")
+        check("a CHECK with an unknown kind is refused", not ok and "CHECK kind" in out, out)
+        lp.write_text(before)
+        append(w, {"watch": 1, "turn": 6, "type": "CHECK", "claim": "Lloyd names Lore to Data",
+                   "kind": "knowledge", "conflicts_with": "Lloyd can't know of Lore", "answer": "changed"})
+        ok, out = commit(repo, "check")
+        check("a valid CHECK commits", ok, out)
+
         # unknowns hold observations only
         un = w / ".world/state/unknowns.json"
         un.write_text(json.dumps({"unknowns": [{"id": "q", "subject": "Q", "canon_record": ["K-001"],

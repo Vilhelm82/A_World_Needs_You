@@ -20,6 +20,7 @@ evaluation: modules/eval
 - I can make friends or enemies; how I act and communicate with people decides how and why.
 - Strict: everything holds the right risks and logical in-world consequences. Nothing works because I want it to if it would be realistically impossible in-universe.
 - The crew are an ensemble, not an audience: they have their own lives, and the captain does not turn to me on everything.
+- My character sheet fills in dynamically as I provide context in character when it's relevant.
 - hardness: fair *(assumed)*
 - lethality: earned *(assumed)*
 
@@ -31,6 +32,7 @@ evaluation: modules/eval
 
 ## Table
 - resolution: causal *(assumed)*. One exception, ruled by me: when an experiment probes a canon unknown and canon's record, physics and precedent don't settle the result, the GM writes the possible outcomes first and then rolls real dice. That's the only randomness in the world.
+- soft check: anything I say that's inconsistent with established lore is flagged, and I get an opportunity to correct it, so an accidental slip doesn't land as out of character. Choices, tone and behaviour are never flagged.
 - authority: character *(assumed)*
 - rewind: telling *(assumed)*
 - seal: closed *(assumed)*

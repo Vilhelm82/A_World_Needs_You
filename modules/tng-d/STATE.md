@@ -111,6 +111,8 @@ One JSON object per line, always with `watch`, `turn` and `type`.
 | `WORLDTURN` | `steps` (list of what moved) |
 | `NOTE` | `text`, Will's `// note`, for the evaluation only |
 | `ROLL` | for undetermined outcomes: `outcomes` (written first), `roll` (1-based, from the shell), `result` (must be `outcomes[roll-1]`). The result is recorded as a scoped observation fact, never a precedent (`physics.md`) |
+| `SHEET` | `text`, `outcome` (`taken` / `refused`), `reason`. Something Will established about his character (`law.md`). A taken entry's text must be on the world's `sheet.md` in the same commit |
+| `CHECK` | `claim`, `kind` (`sheet` / `canon` / `knowledge`), `conflicts_with`, `answer` (`changed` / `kept`). The soft check fired on Will's message; written with his answer |
 | `LAW` `REWOUND` `SAVE` `FORK` `RETURN` `HOLODECK` | as they happen |
 
 Every `lore_touch` item on a `TURN` needs a `LORECHECK` with the same watch and turn in the same commit. The validator counts them.

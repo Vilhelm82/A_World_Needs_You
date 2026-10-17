@@ -61,6 +61,9 @@ ACCESS_KEYS = ("areas", "systems", "codes", "skills")
 ROLE_SET = {"security", "captain", "ops", "medical", "engineering"}
 POSTULATES = {"P1", "P2", "P3", "P4", "P5"}
 HYP_STATUS = {"open", "surviving", "falsified"}
+SHEET_OUTCOMES = {"taken", "refused"}
+CHECK_KINDS = {"sheet", "canon", "knowledge"}
+CHECK_ANSWERS = {"changed", "kept"}
 TEST_RESULTS = {"supported", "falsified", "inconclusive"}
 
 LEDGER_FIELDS = {
@@ -81,6 +84,8 @@ LEDGER_FIELDS = {
     "WORLDTURN": ["steps"],
     "NOTE": ["text"],
     "RATE": ["scores"],
+    "SHEET": ["text", "outcome", "reason"],
+    "CHECK": ["claim", "kind", "conflicts_with", "answer"],
     "LAW": [], "ROLL": [], "REWOUND": [], "SAVE": [], "FORK": [], "RETURN": [], "HOLODECK": [],
     "WATCH": [],
 }
@@ -732,6 +737,11 @@ def validate_world(w):
                     rep.err(where, f"{by} cites {e['fact']}, which the crowd can't know")
                 elif by in crew and by not in kb and "all" not in kb:
                     rep.err(where, f"{by} cites {e['fact']}, which isn't in their knowledge (known_by)")
+            elif t == "SHEET" and e.get("outcome") not in SHEET_OUTCOMES:
+                rep.err(where, f"SHEET outcome must be one of {sorted(SHEET_OUTCOMES)}")
+            elif t == "CHECK" and (e.get("kind") not in CHECK_KINDS or e.get("answer") not in CHECK_ANSWERS):
+                rep.err(where, f"CHECK kind must be one of {sorted(CHECK_KINDS)} and answer one of "
+                               f"{sorted(CHECK_ANSWERS)}")
             elif t == "ATTEMPT" and e.get("outcome") not in OUTCOMES:
                 rep.err(where, f"outcome must be one of {sorted(OUTCOMES)}")
             elif t == "TOLD" and fact_ids and e.get("fact") not in fact_ids:
@@ -835,6 +845,12 @@ def validate_world(w):
                 rep.err("hypotheses.json", f"hypothesis {hid} was removed")
 
     # entries added in this commit: TOLD updates knowledge; lore touches are checked
+    # what the person establishes about their character is on the sheet before the world moves on
+    sheet = w.path / "sheet.md"
+    sheet_text = sheet.read_text() if sheet.exists() else ""
+    for e in added:
+        if e.get("type") == "SHEET" and e.get("outcome") == "taken" and str(e.get("text", "")) not in sheet_text:
+            rep.err("ledger.jsonl", f"SHEET entry taken but not on sheet.md: {e.get('text')!r}")
     for e in added:
         if e.get("type") == "TOLD" and e.get("fact") in fact_known:
             kb = fact_known[e["fact"]]
@@ -1281,6 +1297,10 @@ def compute_metrics(w, watch=None):
 
     # player input
     m["notes"] = [e.get("text") for e in entries if e.get("type") == "NOTE"]
+    checks = [e for e in entries if e.get("type") == "CHECK"]
+    m["checks"] = len(checks)
+    m["checks_kept"] = sum(e.get("answer") == "kept" for e in checks)
+    m["sheet_entries"] = sum(e.get("type") == "SHEET" and e.get("outcome") == "taken" for e in entries)
     rates = [e.get("scores") for e in entries if e.get("type") == "RATE"]
     m["player_rating"] = rates[-1] if rates else None
     return m

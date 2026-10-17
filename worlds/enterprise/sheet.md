@@ -6,5 +6,5 @@ Riker's history before Farpoint, as `modules/tng-d/law.md` lists it. Anything no
 ## Variations
 - Born and raised in Australia, not Alaska.
 
-## Who he is
-Personality, style, what he's good at and what he isn't, off-duty life. In your words; the world uses whatever is here.
+## Established in play
+Filled in as you play: whatever you establish about Lloyd, in character or outside, is written here with the watch and turn, and binds from then on. You can also add to it by hand between sittings.
