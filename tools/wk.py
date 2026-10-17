@@ -59,7 +59,7 @@ PROJECT_STATUS = {"active", "paused", "done", "abandoned"}
 LAYERS = {"rules", "history-pre", "history-post"}
 ACCESS_KEYS = ("areas", "systems", "codes", "skills")
 ROLE_SET = {"security", "captain", "ops", "medical", "engineering"}
-POSTULATES = {"P1", "P2", "P3", "P4"}
+POSTULATES = {"P1", "P2", "P3", "P4", "P5"}
 HYP_STATUS = {"open", "surviving", "falsified"}
 TEST_RESULTS = {"supported", "falsified", "inconclusive"}
 

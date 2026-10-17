@@ -42,7 +42,7 @@ JSON only:
 
 When the claim is technical, also judge it against `modules/tng-d/physics.md` and the mechanism cards in `canon/mechanisms.jsonl`:
 
-- Does it derive from real physics plus the closed postulates (P1–P4) and the relevant mechanism card? If it needs anything more, it's `contradicts`; name the extra assumption.
+- Does it derive from real physics plus the closed postulates (P1–P5) and the relevant mechanism card? If it needs anything more, it's `contradicts`; name the extra assumption.
 - Run any number it depends on with `python3 tools/wk.py calc "<expression>"` and report the result. Never estimate.
 - If it explains a canon unknown (Q, the Traveler, anything canon presents as beyond Starfleet), it's `contradicts`, however good the physics.
 - A player's hypothesis about an unknown is judged differently: it's `consistent` if it fits real physics, the postulates and every observation on record. Being consistent never makes it true.

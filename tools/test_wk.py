@@ -336,7 +336,7 @@ def main():
         mech = repo / "modules/tng-d/canon/mechanisms.jsonl"
         card = {"id": "M-001", "tech": "transporter", "canon_capabilities": ["beams people"],
                 "canon_limits": ["not through raised shields"],
-                "physics_basis": "quantum state transfer", "postulates": ["P2", "P5"],
+                "physics_basis": "quantum state transfer", "postulates": ["P2", "P6"],
                 "engineering_gap": "state capture at scale",
                 "budgets": [{"quantity": "rest energy, 70 kg", "value": "6.29e18 J", "basis": "CALC: 70 * c**2"}],
                 "failure_modes": ["lock loss"], "sources": ["https://x"], "verified_at": "2026-10-18",
