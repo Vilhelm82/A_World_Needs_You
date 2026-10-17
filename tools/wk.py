@@ -23,6 +23,9 @@ Spec: modules/tng-d/STATE.md. Goals and targets: modules/eval/GOALS.md.
 """
 
 import argparse
+import ast
+import math
+import operator
 import datetime as dt
 import json
 import os
@@ -840,6 +843,49 @@ def cmd_next_id(a):
     print(f"{prefix}-{(max(nums) + 1 if nums else 1):03d}")
 
 
+# ---------------------------------------------------------------- calc
+
+CONSTANTS = {
+    "c": 299792458.0, "G": 6.67430e-11, "h": 6.62607015e-34, "hbar": 1.054571817e-34,
+    "kB": 1.380649e-23, "e": 1.602176634e-19, "me": 9.1093837015e-31, "mp": 1.67262192369e-27,
+    "NA": 6.02214076e23, "ly": 9.4607304725808e15, "au": 1.495978707e11, "pc": 3.0856775814913673e16,
+    "year": 31557600.0, "day": 86400.0, "hour": 3600.0, "pi": math.pi, "tau": math.tau,
+    "euler": math.e,
+}
+_OPS = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul, ast.Div: operator.truediv,
+        ast.Pow: operator.pow, ast.Mod: operator.mod, ast.FloorDiv: operator.floordiv,
+        ast.USub: operator.neg, ast.UAdd: operator.pos}
+_FUNCS = {n: getattr(math, n) for n in ("sqrt", "exp", "log", "log10", "log2", "sin", "cos", "tan",
+                                         "asin", "acos", "atan", "atan2", "sinh", "cosh", "tanh",
+                                         "hypot", "radians", "degrees", "floor", "ceil")}
+_FUNCS.update({"abs": abs, "min": min, "max": max, "round": round})
+
+
+def safe_eval(expr):
+    """Arithmetic, physical constants and math functions only."""
+    def ev(n):
+        if isinstance(n, ast.Expression):
+            return ev(n.body)
+        if isinstance(n, ast.Constant) and isinstance(n.value, (int, float)):
+            return n.value
+        if isinstance(n, ast.Name) and n.id in CONSTANTS:
+            return CONSTANTS[n.id]
+        if isinstance(n, ast.BinOp) and type(n.op) in _OPS:
+            return _OPS[type(n.op)](ev(n.left), ev(n.right))
+        if isinstance(n, ast.UnaryOp) and type(n.op) in _OPS:
+            return _OPS[type(n.op)](ev(n.operand))
+        if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id in _FUNCS \
+                and not n.keywords:
+            return _FUNCS[n.func.id](*[ev(a) for a in n.args])
+        raise ValueError(f"not allowed in a calculation: {ast.dump(n)[:60]}")
+    return ev(ast.parse(expr, mode="eval"))
+
+
+def cmd_calc(a):
+    v = safe_eval(a.expression)
+    print(json.dumps({"expression": a.expression, "result": v, "result_text": f"{v:.6g}"}))
+
+
 # ---------------------------------------------------------------- suspects
 
 def cmd_suspects(a):
@@ -1321,6 +1367,8 @@ def main():
 
     p = sub.add_parser("next-id"); p.add_argument("world"); p.add_argument("kind", choices=ID_PREFIX)
     p.set_defaults(fn=cmd_next_id)
+
+    p = sub.add_parser("calc"); p.add_argument("expression"); p.set_defaults(fn=cmd_calc)
 
     p = sub.add_parser("suspects"); p.add_argument("world"); p.add_argument("--act", required=True)
     p.add_argument("--as", dest="reasoner", required=True); p.set_defaults(fn=cmd_suspects)
