@@ -47,7 +47,7 @@ worlds/<world>/
 
 **forces.json**: `{"forces": [...]}`, each `{id, state, wants, capabilities, trajectory}`. `trajectory` is a list of `{step, preconditions, status, cause}`, with `status` one of `on_track` / `delayed` / `averted` / `altered` / `done`, and `cause` a ledger reference whenever status isn't `on_track`.
 
-**evidence.json**: `{"traces": [...], "cases": [...]}`, as in `covert.md`. Trace `who_can_read` holds ids or roles (`security`, `captain`, `ops`, `anyone`). Case `investigator` must exist. Case `known` lists trace ids that must exist.
+**evidence.json**: `{"traces": [...], "cases": [...]}`, as in `covert.md`. Trace `who_can_read` holds ids or roles (`security`, `captain`, `ops`, `anyone`). Case `investigator` must exist. Case `known` lists trace ids that must exist. Case `runs` records each investigator turn: `{watch, turn, isolated, cited}`, where `isolated` is true when it ran as a separate agent and `cited` lists the traces it relied on (each must be in `known`).
 
 **episodes/&lt;id&gt;.json**: `{id, status, arrival, premise, lands_on, b_plot, forces, truth}`, with `status` one of `pending` / `open` / `closed`. `lands_on` ids must exist.
 

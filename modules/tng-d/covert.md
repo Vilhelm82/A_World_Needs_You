@@ -42,7 +42,7 @@ While a case is open, the investigator's reasoning runs as a **separate agent wi
 
 1. The GM assembles the investigator's **light cone**: their own soul folder, the case, the traces whose `who_can_read` includes them (or that they have now queried), and statements actually given to them. Nothing else. No truth file, no ledger, no transcript.
 2. The agent returns, as JSON: what it concludes, how confident it is, what it does next, and anything it would report to the captain.
-3. The GM validates that every trace it cites exists in its light cone, writes the result to the case, and lets the investigator act in the world.
+3. The GM writes the result to the case as a run (`{watch, turn, isolated: true, cited: [...]}`) and lets the investigator act in the world. The validator rejects any run that cites a trace outside the case's `known` list.
 
 This is how knowledge stays local in a way that can't leak: the investigator *cannot* use what it was never given. The audit checks every conclusion against the light cone it was given.
 
