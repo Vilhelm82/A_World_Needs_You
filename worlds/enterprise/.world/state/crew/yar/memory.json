@@ -12,7 +12,8 @@
   "F-055",
   "F-057",
   "F-058",
-  "F-059"
+  "F-059",
+  "F-060"
  ],
  "beliefs": [
   {
@@ -44,6 +45,12 @@
    "belief": "Gave my people away across the table without asking me. Right call, wrong order. Told him so.",
    "from": "witnessed",
    "at": 41175.385
+  },
+  {
+   "about": "player",
+   "belief": "Took the correction without arguing. Said I'd be asked first. We'll see.",
+   "from": "witnessed",
+   "at": 41175.39
   }
  ],
  "recent": [

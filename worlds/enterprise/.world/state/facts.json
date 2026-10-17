@@ -469,6 +469,22 @@
    "surfaced_at": 41175.385,
    "source": "the briefing",
    "created_at": 41175.385
+  },
+  {
+   "id": "F-060",
+   "statement": "Away team plan at the briefing: first wave on arrival: Lloyd, Crusher and two of her staff, Vantongeren, Mbatha, Troi, and Yar's quarantine team (Yar, two security, her one medic). Crusher's group to the Javri infirmary; Mbatha's group, with Troi, Yar's team and MacDougal's purifiers, to the Ninth. Full decon on every return; crew with symptoms to isolation in sickbay. Crusher wants the nine critical patients brought up for cardiac support; Picard rules that no patient comes aboard until Crusher has seen the virus under a microscope, and then he will decide.",
+   "known_by": [
+    "picard",
+    "crusher",
+    "data",
+    "yar",
+    "troi",
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.39,
+   "source": "the briefing",
+   "created_at": 41175.39
   }
  ]
 }

@@ -333,3 +333,17 @@ Troi glances at you, and for a moment the link carries something dry and amused:
 "Same precautions as everyone," Crusher says to her. "Gloves. Nothing local in your mouth. Decon on the way up."
 
 Picard folds his hands on the table. "Then the away team, Number One. Who goes down first, and when?"
+
+## turn 26
+
+Yar nods once at that and lets it go.
+
+"Two groups, two places." She's looking at the map on the wall. "The infirmary's in town. The Ninth's a valley away, and the people there are the ones with the most to lose. My team goes with Mbatha and the Counselor." She looks back at you. "And you, sir? Which one are you with?"
+
+Crusher speaks before you can. "Captain, the colony asked for cardiac support. I can stabilise those nine children down there, but I can't support a failing heart in a twelve-bed infirmary with a field kit. If I'm on the ground with two of my people, sickbay is one nurse. I'd rather bring the critical patients up here, into isolation, and treat them where I have the equipment."
+
+"An unidentified pathogen," Picard says, "brought aboard a ship with a thousand people on it, a good many of them children." It isn't a refusal yet. "Doctor, when you have seen this virus under a microscope, and not before, you will tell me what it is and what isolation will hold it. Then I will decide."
+
+Crusher's mouth tightens, but she nods. "Understood."
+
+Across the table, Yar is still waiting for her answer.
