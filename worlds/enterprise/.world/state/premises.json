@@ -1,0 +1,23 @@
+{
+ "premises": [
+  {
+   "id": "R-001",
+   "candidates": [
+    "astrobiology: a drill at a gas-giant moon's ocean station breaks through to water warmer than any model allows",
+    "family law: three parties claim custody of a nine-year-old orphan of a colonist and a non-aligned trader, and the Enterprise is the nearest Federation authority",
+    "astrophysics: a recurrent nova is due in a binary whose outer planet holds a poor colony that lost the records of its own shelters",
+    "linguistics: a delegation's language marks evidentiality, and the translator has been rendering every hearsay statement in their grievance as eyewitness testimony",
+    "economics: a strike at a dilithium refinery that supplies three starbases",
+    "epidemiology: a disease jumping from a colony's herds to its people, with the colony's own doctor set on destroying a native species she blames"
+   ],
+   "roll": 6,
+   "chosen": "epidemiology, made particular: the Ealat herding colony on Hesker IV; an Earth enterovirus brought with the founders' live herds has turned cardiotropic in selenium-deficient animals on the newest pasture, and the colony's doctor blames a native insect",
+   "canon_distance": {
+    "Symbiosis": "two sentient species and a plague that is really drug dependency, kept by one side's deception; here one human colony, a real virus, and a misdiagnosis nobody intends; the deception is a speaker protecting a pasture decision",
+    "Code of Honor": "a vaccine as a MacGuffin held by a foreign culture; here nobody holds the answer: it has to be worked out from soil, records and herders",
+    "Home Soil": "terraformers unknowingly destroy a native intelligence; here the native species is only an insect and a scapegoat, and the cause is the colonists' own animals and their own decision",
+    "Unnatural Selection": "an engineered pathogen at a research station; here an ordinary Earth virus changed by a mineral deficiency, the science real and known on Earth since the twentieth century"
+   }
+  }
+ ]
+}

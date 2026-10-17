@@ -1,0 +1,98 @@
+{
+ "id": "obrien",
+ "name": "Miles O'Brien",
+ "rank": "lieutenant (junior grade)",
+ "post": "relief bridge officer",
+ "tier": "canon",
+ "persona": {
+  "values": [
+   "doing the job properly",
+   "his mates",
+   "no fuss"
+  ],
+  "traits": [
+   "practical",
+   "wry",
+   "plainspoken",
+   "quietly proud of good work"
+  ],
+  "tired_of": "officers who want a war story out of Setlik III",
+  "wrong_about": "that every Cardassian is the kind he met at Setlik",
+  "cares_about": "the cello, which he plays badly and practises anyway"
+ },
+ "regard": {
+  "gives_freely": [
+   "warmth",
+   "candour"
+  ],
+  "gives_rarely": [
+   "praise",
+   "trust"
+  ],
+  "toward": {
+   "player": "Flew the battle bridge conn at Farpoint while the first officer had the saucer. No opinion yet.",
+   "laforge": "A good lad at conn."
+  }
+ },
+ "routing": {
+  "technical": [
+   "macdougal"
+  ],
+  "operations": [
+   "data"
+  ],
+  "personal": []
+ },
+ "agenda": [
+  {
+   "goal": "Get onto the transporter roster",
+   "next_step": "ask for training slots in transporter room three",
+   "horizon": "career"
+  }
+ ],
+ "relationships": {
+  "laforge": "Fellow junior bridge officer.",
+  "data": "Ops chief; odd but fair.",
+  "player": "First officer.",
+  "macdougal": "Chief engineer; borrows his hands when she's short."
+ },
+ "schedule": {
+  "alpha": "relief stations",
+  "beta": "battle bridge watch",
+  "gamma": "sleeps"
+ },
+ "location": "battle-bridge",
+ "access": {
+  "areas": [
+   "bridge",
+   "battle-bridge",
+   "transporter-rooms",
+   "main-engineering",
+   "jefferies-tubes",
+   "crew-quarters",
+   "ten-forward",
+   "cargo-bays"
+  ],
+  "systems": [
+   "conn",
+   "ops-console",
+   "transporter",
+   "communications"
+  ],
+  "codes": [
+   "officer-standard"
+  ],
+  "skills": [
+   "piloting",
+   "transporter-ops",
+   "engineering"
+  ]
+ },
+ "roles": [],
+ "competence": {
+  "deduction": "medium",
+  "instruments": "a veteran's eye; knows how ships and people break"
+ },
+ "voice": "voice.md",
+ "created_at": 41174.8
+}

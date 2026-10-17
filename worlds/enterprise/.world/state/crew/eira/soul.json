@@ -1,0 +1,76 @@
+{
+ "id": "eira",
+ "name": "Biret Eira",
+ "rank": "civilian",
+ "post": "herder; head of the Eira siida, which grazes the Ninth",
+ "tier": "recurring",
+ "persona": {
+  "values": [
+   "her son",
+   "her herd",
+   "the siida's right to its own say"
+  ],
+  "traits": [
+   "blunt",
+   "watchful",
+   "few words with outsiders",
+   "practical to the bone"
+  ],
+  "tired_of": "being told by the council what her own animals have",
+  "wrong_about": "that Federation doctors will order every animal on the Ninth killed the moment they land",
+  "cares_about": "the knives she makes, horn-handled, the way her father taught her"
+ },
+ "regard": {
+  "gives_freely": [
+   "candour",
+   "anger"
+  ],
+  "gives_rarely": [
+   "trust",
+   "praise",
+   "warmth"
+  ],
+  "toward": {
+   "sara": "Lied to the council about the calves; she can't prove it.",
+   "juuso": "Saving her son, maybe. Wrong about the flies, she thinks, but can't say why."
+  }
+ },
+ "routing": {
+  "herd": [],
+  "son": [
+   "juuso"
+  ]
+ },
+ "agenda": [
+  {
+   "goal": "Keep her son alive and her herd whole",
+   "next_step": "stay by Jovnna's bed; if anyone says cull, send her brother to take the herd down the east valley early",
+   "horizon": "week"
+  }
+ ],
+ "relationships": {
+  "sara": "Opponent.",
+  "juuso": "Her son's doctor."
+ },
+ "schedule": {
+  "now": "at the infirmary, bed four"
+ },
+ "location": "Hesker IV, Javri infirmary",
+ "access": {
+  "areas": [],
+  "systems": [],
+  "codes": [],
+  "skills": [
+   "herding",
+   "animal-husbandry",
+   "knifemaking"
+  ]
+ },
+ "roles": [],
+ "competence": {
+  "deduction": "medium",
+  "instruments": "knows every animal she owns; knows what the calves did on the slopes in spring"
+ },
+ "voice": "voice.md",
+ "created_at": 41174.8
+}

@@ -1,0 +1,57 @@
+{
+ "name": "Will Lloyd",
+ "rank": "commander",
+ "post": "first officer",
+ "location": "main-engineering",
+ "access": {
+  "areas": [
+   "bridge",
+   "ready-room",
+   "observation-lounge",
+   "xo-office",
+   "main-engineering",
+   "engineering-core",
+   "battle-bridge",
+   "sickbay",
+   "armoury",
+   "brig",
+   "security-office",
+   "transporter-rooms",
+   "computer-core",
+   "shuttlebays",
+   "cargo-bays",
+   "holodecks",
+   "ten-forward",
+   "crew-quarters",
+   "jefferies-tubes",
+   "science-labs",
+   "school"
+  ],
+  "systems": [
+   "ops-console",
+   "conn",
+   "tactical",
+   "warp-systems",
+   "transporter",
+   "internal-sensors",
+   "computer-records",
+   "replicators",
+   "environmental",
+   "saucer-separation",
+   "shields",
+   "weapons",
+   "communications"
+  ],
+  "codes": [
+   "command-xo",
+   "senior-officer"
+  ],
+  "skills": [
+   "command",
+   "piloting",
+   "tactical",
+   "away-team",
+   "hand-to-hand"
+  ]
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "pins": [
+  {
+   "when": {
+    "path": "clock.episode_open",
+    "op": "==",
+    "value": "E-001"
+   },
+   "attach": "worlds/enterprise/.world/state/episodes/E-001.json"
+  },
+  {
+   "when": {
+    "path": "clock.alert",
+    "op": "in",
+    "value": [
+     "yellow",
+     "red"
+    ]
+   },
+   "attach": "modules/tng-d/justice.md"
+  }
+ ]
+}

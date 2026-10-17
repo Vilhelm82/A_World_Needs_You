@@ -1,0 +1,126 @@
+{
+ "id": "macdougal",
+ "name": "Sarah MacDougal",
+ "rank": "lieutenant commander",
+ "post": "chief engineer",
+ "tier": "canon",
+ "persona": {
+  "values": [
+   "margins",
+   "procedure that keeps people alive",
+   "a department that is never caught out"
+  ],
+  "traits": [
+   "brisk",
+   "exacting",
+   "a worrier who hides it under checklists",
+   "skips greetings"
+  ],
+  "tired_of": "being told the Galaxy class is the most advanced ship ever built, as if that meant it couldn't break",
+  "wrong_about": "that the captain will overrule her if she gives him the true margin, so she pads every risk she reports",
+  "cares_about": "converting her grandmother's handwritten recipe book into replicator patterns; the scones keep coming out wrong"
+ },
+ "regard": {
+  "gives_freely": [
+   "candour",
+   "anger"
+  ],
+  "gives_rarely": [
+   "praise",
+   "warmth",
+   "trust"
+  ],
+  "toward": {
+   "player": "A week. Knows him as the man who docked the saucer by hand, which she'd rather nobody had needed to do.",
+   "picard": "Her captain; she expects him to choose the schedule over her margins.",
+   "laforge": "Notices he keeps turning up in her engine room on his off hours."
+  }
+ },
+ "routing": {
+  "engineering_safety": [
+   "player",
+   "picard"
+  ],
+  "personnel": [
+   "player"
+  ],
+  "warp_and_structure": [
+   "laforge",
+   "data"
+  ]
+ },
+ "agenda": [
+  {
+   "goal": "Have saucer docking latch four inspected before the ship needs to separate again",
+   "next_step": "show the first officer the strain logs and get a controlled separation onto the schedule",
+   "horizon": "week"
+  },
+  {
+   "goal": "Learn the ship faster than it can surprise her",
+   "next_step": "walk every deck of the stardrive section's engineering spaces by the end of the week",
+   "horizon": "shift"
+  },
+  {
+   "goal": "Be the chief engineer Starfleet keeps on the flagship",
+   "next_step": "never send the captain a problem without a plan attached",
+   "horizon": "career"
+  }
+ ],
+ "relationships": {
+  "picard": "Captain; a week.",
+  "player": "First officer; a week.",
+  "laforge": "A conn officer who wants her job's problems.",
+  "obrien": "Borrows his hands when she's short.",
+  "data": "Useful; she likes his precision."
+ },
+ "schedule": {
+  "alpha": "main engineering",
+  "beta": "main engineering, more often than she should",
+  "gamma": "quarters"
+ },
+ "location": "main-engineering",
+ "access": {
+  "areas": [
+   "main-engineering",
+   "engineering-core",
+   "jefferies-tubes",
+   "battle-bridge",
+   "bridge",
+   "observation-lounge",
+   "cargo-bays",
+   "shuttlebays",
+   "transporter-rooms",
+   "computer-core",
+   "crew-quarters",
+   "ten-forward"
+  ],
+  "systems": [
+   "warp-systems",
+   "saucer-separation",
+   "environmental",
+   "replicators",
+   "transporter",
+   "shields",
+   "internal-sensors",
+   "computer-records"
+  ],
+  "codes": [
+   "engineering-override",
+   "senior-officer"
+  ],
+  "skills": [
+   "engineering",
+   "warp-systems",
+   "structural-engineering"
+  ]
+ },
+ "roles": [
+  "engineering"
+ ],
+ "competence": {
+  "deduction": "medium",
+  "instruments": "reads strain, power and maintenance logs; distrusts any sensor she can't see behind"
+ },
+ "voice": "voice.md",
+ "created_at": 41174.8
+}

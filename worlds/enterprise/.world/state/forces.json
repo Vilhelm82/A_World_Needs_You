@@ -1,0 +1,211 @@
+{
+ "forces": [
+  {
+   "id": "q",
+   "state": "Has put humanity on trial and let the Farpoint test stand. His interest has settled on the ship's first officer.",
+   "wants": "to keep watching humanity, and to provoke it",
+   "capabilities": "omnipotent within rules of his own",
+   "trajectory": [
+    {
+     "step": "returns and offers the first officer the power of the Q, to see what a human does with it",
+     "preconditions": "the ship somewhere quiet enough to be interesting; no sooner than some months after Farpoint (canon ~41590)",
+     "status": "on_track"
+    },
+    {
+     "step": "forces contact with something humanity isn't ready for",
+     "preconditions": "his patience with the crew runs out",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "ferengi",
+   "state": "No Federation contact on record. Expanding, opportunistic.",
+   "wants": "profit; Federation technology",
+   "capabilities": "fast ships, energy-draining weapons, no scruples",
+   "trajectory": [
+    {
+     "step": "a Ferengi crew steals Federation property and a Starfleet ship gives chase: first contact",
+     "preconditions": "a Ferengi theft within reach of a Starfleet ship (canon: a T-9 converter, Gamma Tauri IV, ~41386)",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "bok",
+   "state": "DaiMon Bok's son died at Maxia when the Stargazer destroyed the attacking ship. Nobody aboard knows his name.",
+   "wants": "revenge on Picard",
+   "capabilities": "a DaiMon's ship; the salvaged Stargazer; a mind-affecting device",
+   "trajectory": [
+    {
+     "step": "lures Picard with the salvaged Stargazer and a device that alters his mind",
+     "preconditions": "Ferengi first contact has happened (canon ~41723)",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "romulans",
+   "state": "No direct Federation contact since 2311.",
+   "wants": "security; to know what happens along the Neutral Zone",
+   "capabilities": "a great power; cloaked ships",
+   "trajectory": [
+    {
+     "step": "end the silence to find out who destroyed their outposts",
+     "preconditions": "outposts along the Zone destroyed (see borg; canon ~41986)",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "borg",
+   "state": "Starfleet has no record of them.",
+   "wants": "assimilation",
+   "capabilities": "beyond Starfleet's",
+   "trajectory": [
+    {
+     "step": "destroy outposts along the Neutral Zone, Federation and Romulan, unseen",
+     "preconditions": "late 2364",
+     "status": "on_track"
+    },
+    {
+     "step": "first face-to-face contact",
+     "preconditions": "much later, unless something brings it forward",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "quinn",
+   "state": "Admiral Gregory Quinn, not yet infected, suspects something is undermining Starfleet from within.",
+   "wants": "to find out who in Starfleet can be trusted",
+   "capabilities": "an admiral's reach; the Inspector General's office",
+   "trajectory": [
+    {
+     "step": "sends Lt. Cmdr. Dexter Remmick to investigate the Enterprise and test Picard; offers Picard the Academy",
+     "preconditions": "the Enterprise near enough to a starbase for a visit (canon ~41416)",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "infiltration",
+   "state": "Parasitic beings spreading through Starfleet Command. [assumed] Captain Walker Keel has begun to notice.",
+   "wants": "control of Starfleet",
+   "capabilities": "take hosts from the inside",
+   "trajectory": [
+    {
+     "step": "take Quinn and Remmick",
+     "preconditions": "Remmick's inquiry concluded",
+     "status": "on_track"
+    },
+    {
+     "step": "Keel calls Picard to a secret meeting at Dytallix B; the Horatio is destroyed",
+     "preconditions": "Keel's suspicion ripens",
+     "status": "on_track"
+    },
+    {
+     "step": "open confrontation at Starfleet Headquarters",
+     "preconditions": "if nobody stops it first (canon ~41775)",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "lore",
+   "state": "Data's disassembled older brother, in Soong's laboratory on Omicron Theta. Nobody knows he exists.",
+   "wants": "whatever he wants when he wakes",
+   "capabilities": "an android's; can talk to the Crystalline Entity",
+   "trajectory": [
+    {
+     "step": "found and reassembled",
+     "preconditions": "the Enterprise surveys Omicron Theta (canon 41242)",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "crystalline-entity",
+   "state": "Moves between systems consuming life.",
+   "wants": "to feed",
+   "capabilities": "strips worlds of life",
+   "trajectory": [
+    {
+     "step": "answers Lore's call",
+     "preconditions": "Lore reassembled",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "traveler",
+   "state": "A being who uses warp experiments as a vehicle; drawn to minds like Wesley Crusher's.",
+   "wants": "to study; to find someone like himself",
+   "capabilities": "a canon unknown",
+   "trajectory": [
+    {
+     "step": "arrives with propulsion specialist Kosinski's warp 'improvements'",
+     "preconditions": "the Enterprise tests experimental drive changes (canon 41263)",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "armus",
+   "state": "Cast off on Vagra II.",
+   "wants": "to leave Vagra II; to make others suffer",
+   "capabilities": "a canon unknown; kills for amusement",
+   "trajectory": [
+    {
+     "step": "torments and bargains with whoever lands, for passage off-world",
+     "preconditions": "anyone lands on Vagra II (canon 41601)",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "lwaxana",
+   "state": "Deanna's mother; Betazoid nobility. Deanna was bonded as a child to Wyatt Miller.",
+   "wants": "her daughter married, properly and soon",
+   "capabilities": "a telepath's, and a Daughter of the Fifth House's",
+   "trajectory": [
+    {
+     "step": "arrives with the Millers to arrange the wedding",
+     "preconditions": "whenever she can reach the ship (canon 41294)",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "starfleet-command",
+   "state": "Far away; replies late. [assumed] Politically split over the flagship.",
+   "wants": "results, reports, and no embarrassment",
+   "capabilities": "orders, reassignments, inspections",
+   "trajectory": [
+    {
+     "step": "routes Hesker IV's medical request to the Enterprise via Starfleet Medical",
+     "preconditions": "the request reaches the nearest ship (41175.3)",
+     "status": "on_track"
+    },
+    {
+     "step": "asks for the Farpoint report and the Q findings",
+     "preconditions": "next relay contact",
+     "status": "on_track"
+    }
+   ]
+  },
+  {
+   "id": "klingon-empire",
+   "state": "An ally. Some Klingons reject the alliance.",
+   "wants": "honour; a stable border",
+   "capabilities": "a great power",
+   "trajectory": [
+    {
+     "step": "renegades who reject the alliance are rescued by a Federation ship and hunted by the Empire, testing Worf",
+     "preconditions": "a Federation ship finds them (canon ~41503)",
+     "status": "on_track"
+    }
+   ]
+  }
+ ]
+}

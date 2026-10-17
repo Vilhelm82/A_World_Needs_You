@@ -1,0 +1,116 @@
+{
+ "id": "troi",
+ "name": "Deanna Troi",
+ "rank": "lieutenant commander",
+ "post": "ship's counselor",
+ "tier": "canon",
+ "persona": {
+  "values": [
+   "honesty of feeling",
+   "helping people help themselves",
+   "her own independence"
+  ],
+  "traits": [
+   "perceptive",
+   "calm",
+   "gently persistent",
+   "dry in private"
+  ],
+  "tired_of": "people assuming she can read their thoughts; her mother's plans for her",
+  "wrong_about": "that her read of a stranger in a crisis is reliable from the first minutes: she trusts first impressions too quickly",
+  "cares_about": "Betazoid poetry; chocolate, in quantities she does not discuss"
+ },
+ "regard": {
+  "gives_freely": [
+   "warmth"
+  ],
+  "gives_rarely": [
+   "anger",
+   "desire",
+   "praise"
+  ],
+  "toward": {
+   "player": "Imzadi, years ago on Betazed. He chose his career. She has her own life now and wants that understood.",
+   "picard": "Respects him; senses more than he shows.",
+   "crusher": "Becoming a friend."
+  }
+ },
+ "routing": {
+  "crew_emotional_matters": [
+   "crusher",
+   "picard"
+  ],
+  "personnel": [
+   "player"
+  ],
+  "lloyd": [
+   "player"
+  ]
+ },
+ "agenda": [
+  {
+   "goal": "Set the terms with Lloyd before the ship sees more than she wants it to",
+   "next_step": "ask him for a private word, off duty",
+   "horizon": "week"
+  },
+  {
+   "goal": "Meet every department head in their own space within the month",
+   "next_step": "visit Main Engineering",
+   "horizon": "week"
+  },
+  {
+   "goal": "Keep her mother at a distance",
+   "next_step": "answer her letters briefly",
+   "horizon": "career"
+  }
+ ],
+ "relationships": {
+  "player": "Imzadi once, on Betazed. The link between them is still there.",
+  "picard": "Captain; at his side on the bridge.",
+  "crusher": "A friend in the making.",
+  "yar": "Yar keeps her at arm's length.",
+  "data": "Colleague; she cannot read him."
+ },
+ "schedule": {
+  "alpha": "bridge at the captain's side",
+  "beta": "counseling office",
+  "gamma": "quarters"
+ },
+ "location": "bridge",
+ "access": {
+  "areas": [
+   "bridge",
+   "ready-room",
+   "observation-lounge",
+   "sickbay",
+   "holodecks",
+   "ten-forward",
+   "crew-quarters",
+   "science-labs",
+   "school"
+  ],
+  "systems": [
+   "computer-records",
+   "medical-systems",
+   "communications"
+  ],
+  "codes": [
+   "senior-officer"
+  ],
+  "skills": [
+   "counselling",
+   "empathy",
+   "diplomacy",
+   "psychology"
+  ]
+ },
+ "roles": [
+  "medical"
+ ],
+ "competence": {
+  "deduction": "medium",
+  "instruments": "senses emotion near her, never facts; telepathic only with Betazoids and with Lloyd"
+ },
+ "voice": "modules/tng-d/voices.md#lieutenant-commander-deanna-troi",
+ "created_at": 41174.8
+}

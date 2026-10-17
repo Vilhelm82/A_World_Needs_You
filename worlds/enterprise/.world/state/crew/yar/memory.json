@@ -1,0 +1,19 @@
+{
+ "learned": [
+  "F-001",
+  "F-002",
+  "F-010"
+ ],
+ "beliefs": [
+  {
+   "about": "player",
+   "belief": "Didn't hesitate in the tunnels. Doesn't mean he listens.",
+   "from": "witnessed",
+   "at": 41174.2
+  }
+ ],
+ "recent": [
+  "Q on the bridge",
+  "the drill she wants"
+ ]
+}

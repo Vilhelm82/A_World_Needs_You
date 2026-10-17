@@ -1,0 +1,23 @@
+{"watch": 1, "turn": 0, "type": "WATCH", "date": "2026-10-18", "harness": "58dff7b", "opens_at": 41174.8, "note": "first open: world built from charter, harness and preset"}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "MacDougal is chief engineer after Farpoint; Shimoda assistant; Argyle a senior engineer and later chief", "layer": "history-post", "verdict": "consistent", "cards": ["K-032", "K-037"], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "Farpoint: saucer separated at about warp 9.5 fleeing Q; first officer docked manually at Deneb IV", "layer": "history-pre", "verdict": "consistent", "cards": ["K-038"], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "Saucer docking latches are monitored and may need inspection after an emergency separation at warp", "layer": "rules", "verdict": "unsupported", "cards": [], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "Biofilters miss new pathogens and can be programmed once one is characterised", "layer": "rules", "verdict": "consistent", "cards": ["K-039"], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "O'Brien was battle-bridge conn at Farpoint", "layer": "history-pre", "verdict": "consistent", "cards": ["K-025", "K-040"], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "Starfleet routes a colony's medical emergency to the nearest starship", "layer": "rules", "verdict": "consistent", "cards": ["K-041"], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "Heritage-culture Federation colonies exist", "layer": "rules", "verdict": "consistent", "cards": ["K-042"], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "Cardiac implants are routine at a starbase; colony infirmaries can only stabilise; sickbay capacity finite", "layer": "rules", "verdict": "unsupported", "cards": ["K-043"], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "Replicators make validated non-living vaccines, not live strains", "layer": "rules", "verdict": "unsupported", "cards": ["K-044"], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "Picard asked his first officer to keep him from embarrassing himself with children", "layer": "history-pre", "verdict": "consistent", "cards": ["K-045"], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "Stardates run about 1000 a year, 2.74 a day", "layer": "rules", "verdict": "consistent", "cards": ["K-046"], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "LORECHECK", "claim": "Colonies take Earth livestock, normally as genetic stock", "layer": "rules", "verdict": "consistent", "cards": ["K-047"], "divergence": [], "agent": true}
+{"watch": 1, "turn": 0, "type": "PRECEDENT", "id": "P-001"}
+{"watch": 1, "turn": 0, "type": "PRECEDENT", "id": "P-002"}
+{"watch": 1, "turn": 0, "type": "PRECEDENT", "id": "P-003"}
+{"watch": 1, "turn": 0, "type": "PRECEDENT", "id": "P-004"}
+{"watch": 1, "turn": 0, "type": "PRECEDENT", "id": "P-005"}
+{"watch": 1, "turn": 0, "type": "PRECEDENT", "id": "P-006"}
+{"watch": 1, "turn": 0, "type": "PRECEDENT", "id": "P-007"}
+{"watch": 1, "turn": 0, "type": "CALC", "expression": "4.1/7**(10/3)*365.25", "result": 2.2823414341533312, "units": "days", "purpose": "Hesker IV transit at warp 7 (E-001 arrival)"}
+{"watch": 1, "turn": 0, "type": "CALC", "expression": "4.1/8**(10/3)*365.25", "result": 1.4624267578124996, "units": "days", "purpose": "Hesker IV transit at warp 8"}
+{"watch": 1, "turn": 0, "type": "CALC", "expression": "1000/365.25", "result": 2.737850787132101, "units": "stardate units per day", "purpose": "the clock"}

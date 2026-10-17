@@ -1,0 +1,60 @@
+{
+ "precedents": [
+  {
+   "id": "P-001",
+   "ruling": "[assumed] From Farpoint on, the chief engineer is Lt. Cmdr. Sarah MacDougal, who came aboard at Deneb IV. Jim Shimoda is assistant chief engineer. Lt. Cmdr. Argyle is aboard as a senior engineer who holds the chief's watch on other shifts; the billet can change hands, as canon's season one shows.",
+   "kind": "person",
+   "reason": "law.md leaves the chief engineer to the build. Canon shows MacDougal in the billet first after Farpoint (41209.2), with Shimoda as her assistant, and Argyle called one of the chief engineers soon after (card K-037).",
+   "source": "build; LORECHECK L:1:0",
+   "created_at": 41174.8
+  },
+  {
+   "id": "P-002",
+   "ruling": "[assumed] The saucer and stardrive are held by twelve docking clamps ('docking latches' in engineering usage); engineering monitors whether each is seated. After any separation a structural survey of the latches and the interface is standard; after an emergency separation at warp past the red line and a manual dock, real stress is plausible and the survey costs engineering time. The interface can be reached by a ventral crawlway from inside the ship.",
+   "kind": "tech",
+   "reason": "Canon shows clamps locking the joint and calls separation at warp a no-margin manoeuvre (K-038). Tidal shear at a field wall is already a failure mode of M-001; mechanism card M-017.",
+   "source": "lore agent, build",
+   "created_at": 41174.8
+  },
+  {
+   "id": "P-003",
+   "ruling": "A parthenogenetic cardiac implant is fitted at a starbase or a well-equipped medical centre. The Enterprise's sickbay can stabilise a patient and, with notice, perform the surgery; a remote colony infirmary can only stabilise and evacuate. Sickbay has an intensive-care ward of a few biobeds plus ward space and private rooms; a mass-casualty load overflows into other spaces and takes staff from other duties.",
+   "kind": "lore",
+   "reason": "Picard's 2327 case shows distance from a facility can be fatal; his 2365 choice of a starbase shows where the surgery is ordinarily done (K-043). No on-screen bed count.",
+   "source": "lore agent, build",
+   "created_at": 41174.8
+  },
+  {
+   "id": "P-004",
+   "ruling": "A defined-molecule or subunit vaccine, or a non-infectious inactivated preparation, can be replicated in quantity once its pattern is validated; each new product is tested for stability first, since some fail as the Ligonian vaccine did. Infectious agents, live attenuated strains included, are not replicated: they are grown in culture in the medical or biology labs, which takes time, space and staff.",
+   "kind": "tech",
+   "reason": "M-005 works at molecular resolution and canon bars living things; Code of Honor shows stability is checked product by product (K-044).",
+   "source": "lore agent, build",
+   "created_at": 41174.8
+  },
+  {
+   "id": "P-005",
+   "ruling": "[assumed] Crew drills are the first officer's to schedule. Anything that takes the ship off her course or schedule, or separates her, needs the captain's approval.",
+   "kind": "procedure",
+   "reason": "The first officer runs the ship day to day (law.md, Starfleet); the captain decides what changes her course.",
+   "source": "build",
+   "created_at": 41174.8
+  },
+  {
+   "id": "P-006",
+   "ruling": "[assumed] A Federation colony governs itself. In a declared outbreak, the attending Starfleet chief medical officer may impose a medical quarantine on people and traffic, which the colony may protest to the Federation but must obey. Killing a colony's animals or destroying habitat needs the colony's own authority, or the Federation Council's.",
+   "kind": "lore",
+   "reason": "Canon shows Starfleet medical officers declaring quarantines (Unnatural Selection) and colonies governing themselves; destroying property is not a medical power.",
+   "source": "build",
+   "created_at": 41174.8
+  },
+  {
+   "id": "P-007",
+   "ruling": "[assumed] A colony's charter on a world with native life binds it to preserve native ecosystems outside the zones it was allotted. Destroying habitat beyond them breaches the charter and is the Colonial Office's to judge, after the fact.",
+   "kind": "lore",
+   "reason": "Consistent with the Federation's caution about native life (Home Soil's terraforming ethics) without importing that episode's situation.",
+   "source": "build",
+   "created_at": 41174.8
+  }
+ ]
+}

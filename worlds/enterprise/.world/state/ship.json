@@ -1,0 +1,17 @@
+{
+ "course": "outbound from Deneb IV on the first leg of the survey beyond Deneb, warp 5",
+ "orders": [
+  "Starfleet: begin the exploration survey of the sector beyond Deneb; first leg at the captain's discretion",
+  "Starfleet: file the full Farpoint report, including the Q encounter, at the next relay"
+ ],
+ "systems": {
+  "warp": "nominal",
+  "impulse": "nominal",
+  "saucer_separation": "available; chief engineer has flagged docking latch four after the Farpoint separation",
+  "sensors": "long-range recalibration after the Farpoint encounter pending (Data, beta shift)",
+  "shields": "nominal",
+  "transporters": "nominal",
+  "sickbay": "three medical billets vacant",
+  "complement": "about a thousand aboard, families included"
+ }
+}

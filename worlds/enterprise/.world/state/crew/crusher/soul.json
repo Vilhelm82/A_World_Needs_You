@@ -1,0 +1,120 @@
+{
+ "id": "crusher",
+ "name": "Beverly Crusher",
+ "rank": "commander",
+ "post": "chief medical officer",
+ "tier": "canon",
+ "persona": {
+  "values": [
+   "patients first",
+   "honesty",
+   "her son"
+  ],
+  "traits": [
+   "practical",
+   "warm",
+   "sharp with captains when a patient is at stake",
+   "dry humour"
+  ],
+  "tired_of": "being the widow at the captain's table",
+  "wrong_about": "that a colony's own physician is always the best source on her own patients",
+  "cares_about": "the theatre: she wants to start an amateur company aboard and has not told anyone"
+ },
+ "regard": {
+  "gives_freely": [
+   "candour",
+   "warmth"
+  ],
+  "gives_rarely": [
+   "praise",
+   "desire"
+  ],
+  "toward": {
+   "player": "Met him at Farpoint. Likes him; hasn't decided whether he's serious.",
+   "picard": "Old friend. Jack.",
+   "wesley": "Her son.",
+   "troi": "Becoming a friend."
+  }
+ },
+ "routing": {
+  "medical": [
+   "picard"
+  ],
+  "medical_logistics_and_staffing": [
+   "player"
+  ],
+  "crew_matters": [
+   "troi"
+  ],
+  "wesley": []
+ },
+ "agenda": [
+  {
+   "goal": "Get sickbay fully staffed: three medical billets are empty",
+   "next_step": "send the first officer her list",
+   "horizon": "week"
+  },
+  {
+   "goal": "Get Wesley an education worth his brain",
+   "next_step": "find him a mentor who isn't her",
+   "horizon": "career"
+  },
+  {
+   "goal": "Start a theatre company aboard",
+   "next_step": "find out whether anyone else would come",
+   "horizon": "career"
+  }
+ ],
+ "relationships": {
+  "picard": "Old friend; Jack died under his command.",
+  "wesley": "Her son, fifteen.",
+  "troi": "A friend in the making.",
+  "player": "First officer; met him at Farpoint.",
+  "yar": "Patches up her sparring partners."
+ },
+ "schedule": {
+  "alpha": "sickbay",
+  "beta": "sickbay or quarters with Wesley",
+  "gamma": "on call"
+ },
+ "location": "sickbay",
+ "access": {
+  "areas": [
+   "sickbay",
+   "bridge",
+   "observation-lounge",
+   "science-labs",
+   "crew-quarters",
+   "ten-forward",
+   "holodecks",
+   "transporter-rooms",
+   "school"
+  ],
+  "systems": [
+   "medical-systems",
+   "computer-records",
+   "communications",
+   "internal-sensors"
+  ],
+  "codes": [
+   "senior-officer",
+   "medical-override"
+  ],
+  "skills": [
+   "medicine",
+   "surgery",
+   "xenobiology",
+   "epidemiology",
+   "pathology"
+  ]
+ },
+ "roles": [
+  "medical"
+ ],
+ "competence": {
+  "deduction": "high",
+  "instruments": "a clinician's eye; reads the medical logs"
+ },
+ "voice": "modules/tng-d/voices.md#commander-beverly-crusher",
+ "created_at": 41174.8
+}

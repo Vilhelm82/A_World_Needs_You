@@ -1,0 +1,25 @@
+{
+ "learned": [
+  "F-001",
+  "F-002",
+  "F-003"
+ ],
+ "beliefs": [
+  {
+   "about": "F-003",
+   "belief": "Latch four's housing is cracked; I'd bet on it.",
+   "from": "inferred",
+   "at": 41174.7
+  },
+  {
+   "about": "player",
+   "belief": "Docked by hand. Good flying. I'd still rather check.",
+   "from": "heard",
+   "at": 41174.2
+  }
+ ],
+ "recent": [
+  "a week aboard, since Deneb IV",
+  "latch four"
+ ]
+}

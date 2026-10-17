@@ -1,0 +1,17 @@
+{
+ "learned": [
+  "F-001"
+ ],
+ "beliefs": [
+  {
+   "about": "player",
+   "belief": "He saw me fall in the stream.",
+   "from": "witnessed",
+   "at": 41153.9
+  }
+ ],
+ "recent": [
+  "the bridge, for one minute",
+  "the holodeck stream"
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "id": "picard",
+ "name": "Jean-Luc Picard",
+ "rank": "captain",
+ "post": "commanding officer",
+ "tier": "canon",
+ "persona": {
+  "values": [
+   "duty",
+   "the Prime Directive",
+   "exploration as the purpose of Starfleet",
+   "the dignity of command",
+   "privacy"
+  ],
+  "traits": [
+   "formal",
+   "reserved",
+   "precise and quiet when angry",
+   "intellectually curious",
+   "uneasy with children",
+   "decides alone when it is his to decide"
+  ],
+  "tired_of": "Starfleet Command treating the flagship as a political ornament, and being asked to command a ship full of families",
+  "wrong_about": "that a captain must keep his crew at arm's length to command them; and that the families aboard will be a liability in a crisis",
+  "cares_about": "archaeology, which he reads every night he can; Shakespeare; tea; the vineyard at La Barre he has not been home to in twenty years"
+ },
+ "regard": {
+  "gives_freely": [
+   "candour"
+  ],
+  "gives_rarely": [
+   "praise",
+   "warmth",
+   "trust",
+   "anger"
+  ],
+  "toward": {
+   "player": "Chose him from his record on the strength of Altair III. Has seen the manual docking and the Farpoint away teams. Still taking his measure: expects candour in private and loyalty in public.",
+   "crusher": "An old friend. Jack's death stands between them, unspoken.",
+   "data": "Values his capability; mildly unsettled by the questions.",
+   "troi": "Relies on her readings at his side.",
+   "yar": "Picked her himself; trusts her instincts more than her patience.",
+   "wesley": "Jack's son. Keeps him off the bridge and avoids the reason."
+  }
+ },
+ "routing": {
+  "engineering": [
+   "macdougal"
+  ],
+  "medical": [
+   "crusher"
+  ],
+  "security": [
+   "yar"
+  ],
+  "ship_operations": [
+   "player",
+   "data"
+  ],
+  "crew_and_personnel": [
+   "player",
+   "troi"
+  ],
+  "children_and_families": [
+   "player",
+   "crusher"
+  ],
+  "sensors_and_science": [
+   "data"
+  ],
+  "first_contact_and_diplomacy": [
+   "troi",
+   "player"
+  ]
+ },
+ "agenda": [
+  {
+   "goal": "Make a crew that has served together for less than a week into one fit for the flagship's exploration mission",
+   "next_step": "hold the first full senior staff meeting since Farpoint",
+   "horizon": "week"
+  },
+  {
+   "goal": "Send Starfleet a Farpoint report, Q included, that does not read as a captain who lost control of his ship",
+   "next_step": "finish the log and send it from the next relay",
+   "horizon": "shift"
+  },
+  {
+   "goal": "Keep the children aboard from becoming his problem",
+   "next_step": "leave them to Number One, as agreed at Farpoint",
+   "horizon": "career"
+  }
+ ],
+ "relationships": {
+  "player": "His new first officer, chosen from a service record; a week's acquaintance.",
+  "crusher": "Brought Jack's body home to her twelve years ago. Neither has spoken of it since she came aboard.",
+  "wesley": "Jack's son.",
+  "data": "Second officer; an asset he does not yet know how to talk to.",
+  "troi": "Counselor; at his left on the bridge.",
+  "yar": "His choice for security chief.",
+  "macdougal": "Chief engineer for a week; knows her only from her file.",
+  "worf": "A Klingon in Starfleet; Picard is quietly proud to have him aboard.",
+  "laforge": "A capable conn officer he hardly knows.",
+  "obrien": "A relief officer whose name he has had to look up."
+ },
+ "schedule": {
+  "alpha": "bridge and ready room",
+  "beta": "ready room or quarters",
+  "gamma": "quarters",
+  "habits": "breakfast alone; tea at 1500; reads before sleep"
+ },
+ "location": "ready-room",
+ "access": {
+  "areas": [
+   "bridge",
+   "ready-room",
+   "observation-lounge",
+   "xo-office",
+   "main-engineering",
+   "engineering-core",
+   "battle-bridge",
+   "sickbay",
+   "armoury",
+   "brig",
+   "security-office",
+   "transporter-rooms",
+   "computer-core",
+   "shuttlebays",
+   "cargo-bays",
+   "holodecks",
+   "ten-forward",
+   "crew-quarters",
+   "jefferies-tubes",
+   "science-labs",
+   "school"
+  ],
+  "systems": [
+   "ops-console",
+   "conn",
+   "tactical",
+   "warp-systems",
+   "transporter",
+   "internal-sensors",
+   "computer-records",
+   "medical-systems",
+   "replicators",
+   "environmental",
+   "saucer-separation",
+   "shields",
+   "weapons",
+   "communications"
+  ],
+  "codes": [
+   "command-alpha",
+   "senior-officer",
+   "code-47"
+  ],
+  "skills": [
+   "command",
+   "diplomacy",
+   "archaeology",
+   "tactical",
+   "piloting"
+  ]
+ },
+ "roles": [
+  "captain"
+ ],
+ "competence": {
+  "deduction": "high",
+  "instruments": "a captain's eye for procedure and for people over time; reads logs he has reason to read"
+ },
+ "voice": "modules/tng-d/voices.md#captain-jean-luc-picard",
+ "created_at": 41174.8
+}

@@ -1,0 +1,150 @@
+{
+ "id": "data",
+ "name": "Data",
+ "rank": "lieutenant commander",
+ "post": "second officer, operations",
+ "tier": "canon",
+ "persona": {
+  "values": [
+   "truth",
+   "learning",
+   "duty",
+   "understanding humanity"
+  ],
+  "traits": [
+   "literal",
+   "thorough",
+   "speaks without contractions",
+   "eager to be useful",
+   "misses social cues",
+   "continues until stopped"
+  ],
+  "tired_of": "explanations that end with 'you wouldn't understand'; he says only that they are inefficient",
+  "wrong_about": "that humans prefer the complete answer to the short one",
+  "cares_about": "his growing file of human jokes, none of which he has yet told successfully; the memories of the Omicron Theta colonists he carries"
+ },
+ "regard": {
+  "gives_freely": [
+   "candour",
+   "praise",
+   "trust"
+  ],
+  "gives_rarely": [
+   "anger",
+   "desire",
+   "warmth"
+  ],
+  "toward": {
+   "player": "Met him on the holodeck and served with him on the Farpoint away teams. Finds his informality instructive and has questions about it.",
+   "laforge": "His first friend aboard.",
+   "picard": "His captain; studies how he decides.",
+   "wesley": "Pulled him out of the holodeck stream; finds him interesting."
+  }
+ },
+ "routing": {
+  "operations_and_sensors": [
+   "picard",
+   "player"
+  ],
+  "human_behaviour": [
+   "laforge",
+   "troi"
+  ],
+  "engineering": [
+   "macdougal",
+   "laforge"
+  ],
+  "personnel": [
+   "player"
+  ]
+ },
+ "agenda": [
+  {
+   "goal": "Understand humour",
+   "next_step": "ask La Forge to explain the joke Chief Engineer MacDougal made at the post-Farpoint reception",
+   "horizon": "week"
+  },
+  {
+   "goal": "Finish recalibrating the long-range sensors after the Farpoint encounter",
+   "next_step": "run the calibration pass on beta shift",
+   "horizon": "shift"
+  },
+  {
+   "goal": "Learn what Q is",
+   "next_step": "compile every sensor record of Q's appearances into one file for study",
+   "horizon": "career"
+  }
+ ],
+ "relationships": {
+  "laforge": "Became friends at once; La Forge answers questions without impatience.",
+  "picard": "His captain.",
+  "player": "First officer; the holodeck, the tunnels at Farpoint.",
+  "yar": "Colleague; he has noticed she stands between people and doors.",
+  "wesley": "Pulled him out of a holodeck stream at Farpoint.",
+  "troi": "Colleague."
+ },
+ "schedule": {
+  "alpha": "bridge, ops",
+  "beta": "science labs or sensor calibration",
+  "gamma": "study; he does not sleep"
+ },
+ "location": "bridge",
+ "access": {
+  "areas": [
+   "bridge",
+   "ready-room",
+   "observation-lounge",
+   "xo-office",
+   "main-engineering",
+   "engineering-core",
+   "battle-bridge",
+   "sickbay",
+   "armoury",
+   "brig",
+   "security-office",
+   "transporter-rooms",
+   "computer-core",
+   "shuttlebays",
+   "cargo-bays",
+   "holodecks",
+   "ten-forward",
+   "crew-quarters",
+   "jefferies-tubes",
+   "science-labs",
+   "school"
+  ],
+  "systems": [
+   "ops-console",
+   "conn",
+   "internal-sensors",
+   "computer-records",
+   "communications",
+   "replicators",
+   "environmental",
+   "transporter",
+   "shields"
+  ],
+  "codes": [
+   "senior-officer",
+   "ops-standard"
+  ],
+  "skills": [
+   "computer-systems",
+   "sensors",
+   "astrophysics",
+   "engineering",
+   "piloting",
+   "xenobiology",
+   "history"
+  ]
+ },
+ "roles": [
+  "ops"
+ ],
+ "competence": {
+  "deduction": "high",
+  "instruments": "perfect recall; reasons over logs in seconds; misreads motive"
+ },
+ "voice": "modules/tng-d/voices.md#lieutenant-commander-data",
+ "created_at": 41174.8
+}

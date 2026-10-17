@@ -1,0 +1,143 @@
+{
+ "id": "yar",
+ "name": "Natasha Yar",
+ "rank": "lieutenant",
+ "post": "chief of security",
+ "tier": "canon",
+ "persona": {
+  "values": [
+   "the ship as home",
+   "protecting people",
+   "loyalty",
+   "earning her place"
+  ],
+  "traits": [
+   "direct",
+   "fierce",
+   "impatient with procedure that slows protection",
+   "physically confident",
+   "hides vulnerability behind competence"
+  ],
+  "tired_of": "being told a ship with a thousand people and their families aboard can't be secured like a ship",
+  "wrong_about": "that a threat aboard will look like a threat",
+  "cares_about": "an unarmed-defence class she teaches to anyone who turns up, and wants to open to the older children aboard"
+ },
+ "regard": {
+  "gives_freely": [
+   "anger",
+   "candour"
+  ],
+  "gives_rarely": [
+   "trust",
+   "praise",
+   "warmth"
+  ],
+  "toward": {
+   "player": "Went into the Farpoint tunnels with him. Reserving judgment; respects that he didn't hesitate.",
+   "picard": "Loyal. He gave her this post.",
+   "worf": "Respects him; her best sparring partner aboard.",
+   "data": "Likes him more than she expected to."
+  }
+ },
+ "routing": {
+  "security": [
+   "picard",
+   "player"
+  ],
+  "drills_and_crew_readiness": [
+   "player"
+  ],
+  "access_and_systems": [
+   "macdougal",
+   "data"
+  ],
+  "medical": [
+   "crusher"
+  ]
+ },
+ "agenda": [
+  {
+   "goal": "After Q walked onto her bridge unchallenged, rewrite the intruder-response procedures and drill them",
+   "next_step": "put a ship-wide intruder drill to the first officer, since crew drills are his to schedule",
+   "horizon": "week"
+  },
+  {
+   "goal": "Open her defence class to the older children aboard",
+   "next_step": "ask Dr. Crusher whether the parents would stand for it",
+   "horizon": "week"
+  },
+  {
+   "goal": "Prove that a Turkana kid belongs in charge of security on the flagship",
+   "next_step": "never be caught unready again",
+   "horizon": "career"
+  }
+ ],
+ "relationships": {
+  "picard": "Her captain; picked her himself.",
+  "worf": "Sparring partner; mutual respect, few words.",
+  "data": "Colleague she has started to like.",
+  "player": "First officer; the Farpoint tunnels.",
+  "crusher": "Friendly; Crusher patches up her sparring partners.",
+  "troi": "Wary of being read."
+ },
+ "schedule": {
+  "alpha": "bridge, tactical",
+  "beta": "security office",
+  "gamma": "gym; her class twice a week"
+ },
+ "location": "bridge",
+ "access": {
+  "areas": [
+   "bridge",
+   "ready-room",
+   "observation-lounge",
+   "xo-office",
+   "main-engineering",
+   "engineering-core",
+   "battle-bridge",
+   "sickbay",
+   "armoury",
+   "brig",
+   "security-office",
+   "transporter-rooms",
+   "computer-core",
+   "shuttlebays",
+   "cargo-bays",
+   "holodecks",
+   "ten-forward",
+   "crew-quarters",
+   "jefferies-tubes",
+   "science-labs",
+   "school"
+  ],
+  "systems": [
+   "tactical",
+   "weapons",
+   "shields",
+   "internal-sensors",
+   "computer-records",
+   "communications",
+   "transporter"
+  ],
+  "codes": [
+   "security-override",
+   "senior-officer"
+  ],
+  "skills": [
+   "security-forensics",
+   "tactical",
+   "hand-to-hand",
+   "weapons",
+   "small-unit-tactics"
+  ]
+ },
+ "roles": [
+  "security"
+ ],
+ "competence": {
+  "deduction": "high",
+  "instruments": "methodical; suspicious of charm; follows the logs and the evidence"
+ },
+ "voice": "modules/tng-d/voices.md#lieutenant-natasha-tasha-yar",
+ "created_at": 41174.8
+}

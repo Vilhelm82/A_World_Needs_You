@@ -1,0 +1,205 @@
+{
+ "facts": [
+  {
+   "id": "F-001",
+   "statement": "The Farpoint mission closed at 41174.2: Farpoint Station was a captive spaceborne being, which was freed and left Deneb IV with its mate; Q let his trial of humanity stand and withdrew.",
+   "known_by": [
+    "all"
+   ],
+   "surfaced_at": 41174.2,
+   "source": "canon (Encounter at Farpoint)",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-002",
+   "statement": "During the Farpoint mission the saucer was separated at about warp 9.5, past the red line, while fleeing Q; at Deneb IV the first officer docked the saucer manually from the battle bridge on the captain's order.",
+   "known_by": [
+    "all"
+   ],
+   "surfaced_at": 41174.2,
+   "source": "canon (Encounter at Farpoint); card K-038",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-003",
+   "statement": "Engineering strain logs record that saucer docking latch four carried about half again its rated load for 0.4 seconds during the Farpoint separation; the other eleven latches stayed within rating; at the Deneb IV docking all twelve recorded seated and nominal.",
+   "known_by": [
+    "macdougal"
+   ],
+   "surfaced_at": null,
+   "source": "engineering strain logs",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-004",
+   "statement": "Latch four's actuator housing has a fatigue crack about 11 mm long. The latch's internal sensors cannot detect it. About 3 mm of it reaches the housing's outer face, inside the ventral interface crawlway at frame 31, where it shows as a stress line to a structural scan at close range, or to La Forge's VISOR.",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "truth",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-005",
+   "statement": "With the crack unrepaired, latch four releases normally in a controlled separation at sublight, and the crack grows a little each time. In an emergency separation at warp it jams; the separation completes only by tearing the latch from its housing, which breaches the ventral interface seal. The breach is contained by pressure doors and needs a starbase to repair.",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "truth",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-006",
+   "statement": "A deep reading of latch four's Farpoint strain trace shows a ringing after the spike whose decay is consistent with a loss of stiffness in the housing; nobody has analysed the trace that way.",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "truth",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-010",
+   "statement": "Starfleet's orders after Farpoint: begin the exploration survey of the sector beyond Deneb, the first leg at the captain's discretion, and file the full Farpoint report at the next relay.",
+   "known_by": [
+    "picard",
+    "data",
+    "yar",
+    "troi",
+    "player"
+   ],
+   "surfaced_at": 41174.6,
+   "source": "Starfleet orders, read at the Farpoint briefing",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-020",
+   "statement": "In the Ealat colony on Hesker IV, 31 people have fallen ill in 23 days with a fever followed by inflammation of the heart muscle; six have died, four of them children; nine are critical in the Javri infirmary, which has twelve beds.",
+   "known_by": [
+    "juuso",
+    "sara",
+    "eira"
+   ],
+   "surfaced_at": null,
+   "source": "Juuso's infirmary records",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-021",
+   "statement": "Dr. Juuso's field lab found an RNA virus in patients' blood and stool that matches nothing in her human-pathogen database.",
+   "known_by": [
+    "juuso"
+   ],
+   "surfaced_at": null,
+   "source": "Juuso's lab",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-022",
+   "statement": "Juuso's case map: 27 of the 31 cases are in households of the four siidas grazing the Ninth, the colony's newest pasture, or at its summer camp.",
+   "known_by": [
+    "juuso"
+   ],
+   "surfaced_at": null,
+   "source": "Juuso's case map",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-023",
+   "statement": "The 2362 expansion report on the Ninth, written by Sara's council committee, says the soil survey found no deficiencies. Every sample was from the valley floor; the upland slopes where the herds graze were never sampled.",
+   "known_by": [
+    "sara"
+   ],
+   "surfaced_at": null,
+   "source": "council archive",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-024",
+   "statement": "This spring, calves on the Ninth's upland slopes went stiff and could not stand, and about 400 died. Biret Eira reported it to the council; Sara told the council it was slope cramp from the steep ground.",
+   "known_by": [
+    "sara",
+    "eira"
+   ],
+   "surfaced_at": null,
+   "source": "council minutes; the herders",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-025",
+   "statement": "The colony's founding survey of 2345, by the Federation Colonial Office, flagged the northern uplands as selenium-poor and recommended mineral supplements before any grazing there. Copies are in the council archive and in the Colonial Office's records.",
+   "known_by": [
+    "sara"
+   ],
+   "surfaced_at": null,
+   "source": "Colonial Office survey, 2345",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-026",
+   "statement": "Eira's herd is on the Ninth's eastern slopes with her brother Ante.",
+   "known_by": [
+    "eira"
+   ],
+   "surfaced_at": null,
+   "source": "Eira",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-027",
+   "statement": "The pathogen is an Earth enterovirus that came with the colony's founding herds, which were shipped live from Earth by the founders' choice, not as genetic stock. It was harmless for nineteen years. In selenium-deficient animals on the Ninth's upland it mutated into a strain that inflames heart muscle, in calves and in people.",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "truth",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-028",
+   "statement": "The herding cooperative's veterinary records, in its office at Javri, characterised the parent enterovirus in 2351 as a harmless gut virus of the herds. Nobody has compared them with Juuso's findings; the cooperative has had no vet since 2360.",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "truth",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-029",
+   "statement": "The mutated strain stays virulent in animals and people whose selenium is normal. Supplementation prevents fresh mutation and eases the disease, but does not remove the strain.",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "truth (real science: selenium-deficient hosts and viral virulence)",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-030",
+   "statement": "It spreads mainly by the faecal-oral route, through water, milk and handling. Reedflies carry it mechanically between herds on their mouthparts, a minor route.",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "truth",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-031",
+   "statement": "Starfleet Medical relays the Ealat colony's request: an unidentified, possibly native pathogen causing fever and myocarditis on Hesker IV, 31 cases and 6 dead; the colony asks for medical assistance and cardiac support. Hesker IV is 4.1 light years from the Enterprise's position.",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "Starfleet Medical relay, due 41175.3",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-032",
+   "statement": "The Ninth's herds come down to the winter grounds when the first lasting snow closes the upland, and gather at the Javri corrals for the autumn separation, where all the colony's herds mix and the slaughter season begins.",
+   "known_by": [
+    "sara",
+    "eira",
+    "juuso"
+   ],
+   "surfaced_at": null,
+   "source": "colony custom",
+   "created_at": 41174.8
+  },
+  {
+   "id": "F-033",
+   "statement": "The people of the Ninth's siidas eat meat and milk from the deficient herds and are low in selenium themselves, which worsens the disease in them.",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "truth",
+   "created_at": 41174.8
+  }
+ ]
+}

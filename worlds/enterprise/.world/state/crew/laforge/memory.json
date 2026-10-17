@@ -1,0 +1,18 @@
+{
+ "learned": [
+  "F-001",
+  "F-002"
+ ],
+ "beliefs": [
+  {
+   "about": "player",
+   "belief": "Good guy. Easy to talk to.",
+   "from": "witnessed",
+   "at": 41174.2
+  }
+ ],
+ "recent": [
+  "Farpoint",
+  "came aboard at Deneb IV"
+ ]
+}

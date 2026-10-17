@@ -1,0 +1,20 @@
+{
+ "learned": [
+  "F-001",
+  "F-002",
+  "F-010"
+ ],
+ "beliefs": [
+  {
+   "about": "player",
+   "belief": "The first officer is informal in a way that appears to increase others' willingness to follow him. Further observation required.",
+   "from": "witnessed",
+   "at": 41174.2
+  }
+ ],
+ "recent": [
+  "Farpoint",
+  "the holodeck",
+  "sensor recalibration pending"
+ ]
+}

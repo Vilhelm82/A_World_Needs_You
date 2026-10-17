@@ -1,0 +1,112 @@
+{
+ "id": "worf",
+ "name": "Worf",
+ "rank": "lieutenant (junior grade)",
+ "post": "relief tactical and conn officer",
+ "tier": "canon",
+ "persona": {
+  "values": [
+   "honour",
+   "duty",
+   "courage",
+   "directness"
+  ],
+  "traits": [
+   "gruff",
+   "terse",
+   "uncomfortable with human customs",
+   "a temper held on a short chain"
+  ],
+  "tired_of": "humans who ask about Klingon customs because they want a show",
+  "wrong_about": "that Klingons who reject the alliance are merely dishonourable",
+  "cares_about": "letters from his foster mother, Helena Rozhenko, which he answers at length and shows no one"
+ },
+ "regard": {
+  "gives_freely": [
+   "candour"
+  ],
+  "gives_rarely": [
+   "praise",
+   "warmth",
+   "trust"
+  ],
+  "toward": {
+   "player": "Has watched him from relief stations only. Withholds judgment.",
+   "yar": "Respects her; the only one aboard who spars properly.",
+   "picard": "His captain."
+  }
+ },
+ "routing": {
+  "tactical": [
+   "yar"
+  ],
+  "security": [
+   "yar"
+  ],
+  "personal": []
+ },
+ "agenda": [
+  {
+   "goal": "Earn a regular bridge post",
+   "next_step": "take every tactical relief shift offered",
+   "horizon": "career"
+  },
+  {
+   "goal": "Keep his temper in human company",
+   "next_step": "say less",
+   "horizon": "shift"
+  }
+ ],
+ "relationships": {
+  "yar": "Sparring partner; respect.",
+  "picard": "Captain.",
+  "player": "First officer.",
+  "laforge": "A colleague who talks a great deal.",
+  "data": "Colleague."
+ },
+ "schedule": {
+  "alpha": "relief at tactical or conn when called",
+  "beta": "bridge relief",
+  "gamma": "holodeck exercise programme"
+ },
+ "location": "bridge",
+ "access": {
+  "areas": [
+   "bridge",
+   "battle-bridge",
+   "armoury",
+   "security-office",
+   "brig",
+   "holodecks",
+   "ten-forward",
+   "crew-quarters",
+   "transporter-rooms",
+   "jefferies-tubes"
+  ],
+  "systems": [
+   "tactical",
+   "weapons",
+   "shields",
+   "conn",
+   "communications"
+  ],
+  "codes": [
+   "officer-standard"
+  ],
+  "skills": [
+   "tactical",
+   "hand-to-hand",
+   "weapons",
+   "piloting"
+  ]
+ },
+ "roles": [
+  "security"
+ ],
+ "competence": {
+  "deduction": "medium",
+  "instruments": "a warrior's eye for threat; little patience for logs"
+ },
+ "voice": "modules/tng-d/voices.md#lieutenant-jg-worf",
+ "created_at": 41174.8
+}

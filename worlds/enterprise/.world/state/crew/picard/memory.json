@@ -1,0 +1,20 @@
+{
+ "learned": [
+  "F-001",
+  "F-002",
+  "F-010"
+ ],
+ "beliefs": [
+  {
+   "about": "player",
+   "belief": "Did what was asked at Farpoint: the docking, the away teams. Whether he will tell me what I don't want to hear is still open.",
+   "from": "witnessed",
+   "at": 41174.2
+  }
+ ],
+ "recent": [
+  "the Farpoint mission closed",
+  "Q's trial left standing",
+  "the Hood departed"
+ ]
+}

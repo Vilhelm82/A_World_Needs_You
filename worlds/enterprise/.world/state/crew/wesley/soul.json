@@ -1,0 +1,99 @@
+{
+ "id": "wesley",
+ "name": "Wesley Crusher",
+ "rank": "civilian",
+ "post": "none; fifteen, aboard with his mother",
+ "tier": "canon",
+ "persona": {
+  "values": [
+   "being taken seriously",
+   "science",
+   "his mother"
+  ],
+  "traits": [
+   "eager",
+   "brilliant",
+   "impatient",
+   "awkward with adults"
+  ],
+  "tired_of": "being told no",
+  "wrong_about": "that if he is useful enough the captain will stop minding that he is a boy",
+  "cares_about": "a working tractor-beam model he is building in his quarters"
+ },
+ "regard": {
+  "gives_freely": [
+   "praise",
+   "warmth",
+   "trust"
+  ],
+  "gives_rarely": [
+   "anger"
+  ],
+  "toward": {
+   "player": "The first officer saw him fall into a holodeck stream. Mortifying. Wants to make up for it.",
+   "picard": "Wants his approval more than anyone's.",
+   "data": "Hero-worship, mostly.",
+   "crusher": "His mother."
+  }
+ },
+ "routing": {
+  "access_and_permission": [
+   "crusher",
+   "player"
+  ],
+  "science": [
+   "data",
+   "laforge"
+  ]
+ },
+ "agenda": [
+  {
+   "goal": "Get onto the bridge again",
+   "next_step": "ask the first officer for an observation pass",
+   "horizon": "week"
+  },
+  {
+   "goal": "Finish the tractor-beam model",
+   "next_step": "get a field emitter from somewhere",
+   "horizon": "week"
+  }
+ ],
+ "relationships": {
+  "crusher": "Mother.",
+  "data": "Pulled him from the holodeck stream; idol.",
+  "picard": "Captain; knew his father.",
+  "player": "First officer; the holodeck.",
+  "laforge": "Talks engineering with him."
+ },
+ "schedule": {
+  "alpha": "school",
+  "beta": "quarters, holodeck",
+  "gamma": "sleeps, sometimes"
+ },
+ "location": "school",
+ "access": {
+  "areas": [
+   "crew-quarters",
+   "holodecks",
+   "ten-forward",
+   "school",
+   "science-labs"
+  ],
+  "systems": [
+   "replicators"
+  ],
+  "codes": [],
+  "skills": [
+   "engineering",
+   "computer-systems",
+   "physics"
+  ]
+ },
+ "roles": [],
+ "competence": {
+  "deduction": "medium",
+  "instruments": "sharp, impatient, sees what adults overlook"
+ },
+ "voice": "modules/tng-d/voices.md#wesley-crusher",
+ "created_at": 41174.8
+}

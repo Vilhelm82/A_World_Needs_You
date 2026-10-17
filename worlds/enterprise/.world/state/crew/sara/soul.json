@@ -1,0 +1,79 @@
+{
+ "id": "sara",
+ "name": "Niillas Sara",
+ "rank": "civilian",
+ "post": "speaker of the Ealat colony council, Hesker IV",
+ "tier": "recurring",
+ "persona": {
+  "values": [
+   "the colony's self-reliance",
+   "the herding life",
+   "keeping the Federation's hands off what the colony built"
+  ],
+  "traits": [
+   "genial",
+   "persuasive",
+   "stubborn",
+   "remembers every slight to the colony"
+  ],
+  "tired_of": "Colonial Office inspectors who treat a herding colony as a museum",
+  "wrong_about": "that the calves' stiff sickness on the Ninth is from the steep ground and has nothing to do with the children",
+  "cares_about": "the colony choir, which he leads; he has the best voice in Javri and knows it"
+ },
+ "regard": {
+  "gives_freely": [
+   "warmth",
+   "praise"
+  ],
+  "gives_rarely": [
+   "candour",
+   "trust"
+  ],
+  "toward": {
+   "juuso": "Useful while she blames the flies.",
+   "eira": "She spoke against him at council; he hasn't forgotten."
+  }
+ },
+ "routing": {
+  "colony_affairs": [],
+  "medical": [
+   "juuso"
+  ]
+ },
+ "agenda": [
+  {
+   "goal": "Keep any cull, and the Federation, off the herds",
+   "next_step": "receive the Enterprise warmly and steer them to Dr. Juuso's reedfly plan",
+   "horizon": "week"
+  },
+  {
+   "goal": "Keep the Ninth open: the old pastures are grazed bare",
+   "next_step": "say nothing about the calves",
+   "horizon": "career"
+  }
+ ],
+ "relationships": {
+  "juuso": "Allies of necessity.",
+  "eira": "Opponent at council; her siida grazes the Ninth."
+ },
+ "schedule": {
+  "all": "council house at Javri"
+ },
+ "location": "Hesker IV, Javri council house",
+ "access": {
+  "areas": [],
+  "systems": [],
+  "codes": [],
+  "skills": [
+   "politics",
+   "herding"
+  ]
+ },
+ "roles": [],
+ "competence": {
+  "deduction": "medium",
+  "instruments": "knows everyone in the colony"
+ },
+ "voice": "voice.md",
+ "created_at": 41174.8
+}

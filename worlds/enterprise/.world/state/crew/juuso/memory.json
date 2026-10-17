@@ -1,0 +1,20 @@
+{
+ "learned": [
+  "F-020",
+  "F-021",
+  "F-022"
+ ],
+ "beliefs": [
+  {
+   "about": "the sickness",
+   "belief": "Native pathogen, carried by reedflies from the Ninth's marshes.",
+   "from": "inferred",
+   "at": 41170.0
+  }
+ ],
+ "recent": [
+  "six dead",
+  "nine critical",
+  "no match in her database"
+ ]
+}

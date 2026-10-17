@@ -1,0 +1,151 @@
+{
+ "projects": [
+  {
+   "id": "J-001",
+   "title": "Latch four",
+   "owner": "macdougal",
+   "collaborators": [],
+   "kind": "duty",
+   "goal": "find out whether saucer docking latch four was damaged in the Farpoint separation, and fix it if so",
+   "stages": [
+    {
+     "name": "review the strain logs",
+     "status": "done",
+     "needs": "logs",
+     "cost": "an evening"
+    },
+    {
+     "name": "first officer's schedule and captain's approval",
+     "status": "todo",
+     "needs": "the XO; the captain",
+     "cost": "a stop of some hours"
+    },
+    {
+     "name": "inspect the housing",
+     "status": "todo",
+     "needs": "a controlled separation, or another way to see the housing",
+     "cost": "hours; crew on the hull or in the crawlway"
+    },
+    {
+     "name": "repair",
+     "status": "todo",
+     "needs": "a starbase, if it is cracked",
+     "cost": "a starbase visit"
+    }
+   ],
+   "status": "active",
+   "precedents": [
+    "P-002"
+   ],
+   "started_at": 41174.7
+  },
+  {
+   "id": "J-002",
+   "title": "Intruder response",
+   "owner": "yar",
+   "collaborators": [],
+   "kind": "duty",
+   "goal": "rewrite the intruder-response procedures after Q and drill the ship on them",
+   "stages": [
+    {
+     "name": "draft the procedures",
+     "status": "doing",
+     "needs": "time",
+     "cost": "her off-duty hours"
+    },
+    {
+     "name": "first officer schedules a drill",
+     "status": "todo",
+     "needs": "the XO",
+     "cost": "a shift's disruption"
+    },
+    {
+     "name": "drill",
+     "status": "todo",
+     "needs": "the crew",
+     "cost": "complaints from the family decks"
+    }
+   ],
+   "status": "active",
+   "precedents": [
+    "P-005"
+   ],
+   "started_at": 41174.3
+  },
+  {
+   "id": "J-003",
+   "title": "Q file",
+   "owner": "data",
+   "collaborators": [],
+   "kind": "experiment",
+   "goal": "compile every sensor record of Q's appearances for study",
+   "stages": [
+    {
+     "name": "gather the records",
+     "status": "doing",
+     "needs": "sensor logs",
+     "cost": "Data's off hours"
+    },
+    {
+     "name": "analyse",
+     "status": "todo",
+     "needs": "the file",
+     "cost": "unknown"
+    }
+   ],
+   "status": "active",
+   "precedents": [],
+   "started_at": 41174.3
+  },
+  {
+   "id": "J-004",
+   "title": "Tractor-beam model",
+   "owner": "wesley",
+   "collaborators": [],
+   "kind": "personal",
+   "goal": "a working tractor-beam model",
+   "stages": [
+    {
+     "name": "frame and power",
+     "status": "done",
+     "needs": "replicator",
+     "cost": "evenings"
+    },
+    {
+     "name": "field emitter",
+     "status": "todo",
+     "needs": "an emitter he has no authority to requisition",
+     "cost": "a favour, or a rule broken"
+    }
+   ],
+   "status": "active",
+   "precedents": [],
+   "started_at": 41160.0
+  },
+  {
+   "id": "J-005",
+   "title": "Sickbay staffing",
+   "owner": "crusher",
+   "collaborators": [],
+   "kind": "duty",
+   "goal": "fill the three empty medical billets",
+   "stages": [
+    {
+     "name": "list to the first officer",
+     "status": "todo",
+     "needs": "the XO",
+     "cost": "none"
+    },
+    {
+     "name": "transfers from the next starbase",
+     "status": "todo",
+     "needs": "Starfleet",
+     "cost": "weeks"
+    }
+   ],
+   "status": "active",
+   "precedents": [],
+   "started_at": 41174.5
+  }
+ ]
+}

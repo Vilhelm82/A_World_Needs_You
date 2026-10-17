@@ -1,0 +1,111 @@
+{
+ "id": "laforge",
+ "name": "Geordi La Forge",
+ "rank": "lieutenant (junior grade)",
+ "post": "flight controller (conn)",
+ "tier": "canon",
+ "persona": {
+  "values": [
+   "making things work",
+   "friendship",
+   "honesty"
+  ],
+  "traits": [
+   "easygoing",
+   "warm",
+   "enthusiastic about any technical problem",
+   "reports exactly what the VISOR shows"
+  ],
+  "tired_of": "people asking whether the VISOR hurts",
+  "wrong_about": "that the VISOR's read on a person is unambiguous: he reads heat and pulse as feeling, and is wrong about the cause more often than he knows",
+  "cares_about": "every propulsion paper that comes over the relay, read on his own time"
+ },
+ "regard": {
+  "gives_freely": [
+   "warmth",
+   "praise",
+   "trust"
+  ],
+  "gives_rarely": [
+   "anger",
+   "desire"
+  ],
+  "toward": {
+   "player": "Liked him at once at Farpoint; easy rapport.",
+   "data": "Friend.",
+   "macdougal": "Admires her department and wants to be in it."
+  }
+ },
+ "routing": {
+  "engineering": [
+   "macdougal",
+   "data"
+  ],
+  "conn_and_navigation": [
+   "player",
+   "picard"
+  ],
+  "personal": [
+   "data"
+  ]
+ },
+ "agenda": [
+  {
+   "goal": "Get time in Main Engineering",
+   "next_step": "offer the chief engineer his off-duty hours on whatever she is chasing",
+   "horizon": "week"
+  },
+  {
+   "goal": "Help Data understand jokes",
+   "next_step": "explain the reception joke, again",
+   "horizon": "shift"
+  }
+ ],
+ "relationships": {
+  "data": "Fast friends.",
+  "player": "First officer; liked him at once.",
+  "macdougal": "Chief engineer he'd like to work for.",
+  "picard": "Captain; still formal with him.",
+  "obrien": "A fellow junior officer at the bridge stations."
+ },
+ "schedule": {
+  "alpha": "bridge, conn",
+  "beta": "off duty, often engineering by choice",
+  "gamma": "sleeps"
+ },
+ "location": "bridge",
+ "access": {
+  "areas": [
+   "bridge",
+   "battle-bridge",
+   "main-engineering",
+   "shuttlebays",
+   "holodecks",
+   "ten-forward",
+   "crew-quarters",
+   "jefferies-tubes",
+   "transporter-rooms"
+  ],
+  "systems": [
+   "conn",
+   "communications",
+   "warp-systems"
+  ],
+  "codes": [
+   "officer-standard"
+  ],
+  "skills": [
+   "piloting",
+   "engineering",
+   "warp-systems",
+   "sensors"
+  ]
+ },
+ "roles": [],
+ "competence": {
+  "deduction": "medium",
+  "instruments": "the VISOR sees the EM spectrum: heat, discharge, stress in metal"
+ },
+ "voice": "modules/tng-d/voices.md#lieutenant-jg-geordi-la-forge",
+ "created_at": 41174.8
+}

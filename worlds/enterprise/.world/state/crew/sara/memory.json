@@ -1,0 +1,19 @@
+{
+ "learned": [
+  "F-020",
+  "F-023",
+  "F-024",
+  "F-025"
+ ],
+ "beliefs": [
+  {
+   "about": "the calves",
+   "belief": "Slope cramp, from the steep ground. Unrelated.",
+   "from": "inferred",
+   "at": 41150.0
+  }
+ ],
+ "recent": [
+  "the Enterprise is coming"
+ ]
+}

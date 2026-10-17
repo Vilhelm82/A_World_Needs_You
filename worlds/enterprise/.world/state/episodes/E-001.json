@@ -1,0 +1,221 @@
+{
+ "id": "E-001",
+ "status": "pending",
+ "arrival": "Starfleet Medical's relay of the Ealat colony's request reaches Picard at 41175.3; he decides alone whether to divert. Hesker IV is 4.1 ly away: warp 7 is about 2.3 days, warp 8 about 1.5.",
+ "premise": "R-001",
+ "lands_on": [
+  "crusher",
+  "picard",
+  "data",
+  "troi",
+  "yar",
+  "player"
+ ],
+ "b_plot": "Ship life runs on: MacDougal's latch four (J-001) needs a stop the medical run won't give her, and if the first officer doesn't schedule it she takes it to Picard herself, who defers it; Troi wants her private word with Lloyd; Crusher's three empty billets bite as soon as sickbay fills.",
+ "forces": [
+  "starfleet-command"
+ ],
+ "truth": {
+  "looks_like": "an alien plague on a frontier colony, carried by a native insect from the marshes of the colony's newest pasture; children dying of heart failure; a colony doctor who wants to burn the marshes",
+  "is": "the colony's own Earth enterovirus, brought with live founding herds, mutated in selenium-deficient animals on the Ninth's uplands into a strain that attacks heart muscle; spread mostly faecal-oral, the reedflies only a minor mechanical carrier (F-027, F-029, F-030)",
+  "under": "the colony was warned in 2345 that the northern uplands were selenium-poor (F-025); in 2362 Sara's committee opened the Ninth on valley-floor samples only (F-023) because the old pastures were grazed bare; this spring Eira reported the calves' stiff sickness, which an informed eye reads as white muscle disease, selenium deficiency, and Sara called it slope cramp (F-024). The cooperative's own vet records name the parent virus (F-028). Nobody lied about the virus; one man protected a decision.",
+  "why_this_character": "the first officer runs the logistics of any mission the ship takes on: away teams, quarantine, staffing, and the colony council will want someone senior to deal with; the doctor needs him to make sickbay's reach real",
+  "sources": [
+   {
+    "source": "Juuso",
+    "honest": true,
+    "how": "honestly wrong: native pathogen, reedflies; her database has human pathogens only, so 'no match' to her means 'alien'"
+   },
+   {
+    "source": "Juuso's case map",
+    "honest": true,
+    "how": "accurate; clusters on the Ninth"
+   },
+   {
+    "source": "Sara",
+    "honest": false,
+    "how": "lies by omission and by gloss: tells outsiders the Ninth's soil was surveyed clean and the calves had slope cramp; protecting the expansion he championed, and he believes the calves are unrelated"
+   },
+   {
+    "source": "the 2362 expansion report",
+    "honest": false,
+    "how": "partial: true for the valley floor, silent on the slopes"
+   },
+   {
+    "source": "the 2345 Colonial Office survey",
+    "honest": true,
+    "how": "flags the uplands as selenium-poor; in the council archive and in the Colonial Office's records (a day each way by relay)"
+   },
+   {
+    "source": "Starfleet Medical's relay",
+    "honest": true,
+    "how": "secondhand: 'possibly native', from Juuso's own report"
+   },
+   {
+    "source": "Eira",
+    "honest": true,
+    "how": "honest about the calves to anyone who doesn't come with a cull order; will lie about where her herd is if she thinks one is coming"
+   },
+   {
+    "source": "the cooperative's vet records",
+    "honest": true,
+    "how": "name the parent virus, 2351"
+   }
+  ],
+  "doors": {
+   "what the disease is": [
+    {
+     "way": "sequence the virus in sickbay (needs a sample aboard: biofilter can't screen an unknown, so quarantine protocol or a surface lab)",
+     "cost": "hours of sickbay time; a sample handled under quarantine"
+    },
+    {
+     "way": "compare Juuso's virus with veterinary and Earth livestock pathogen databases (Starfleet Medical's, or the cooperative's own records at Javri)",
+     "cost": "someone has to think to look outside human pathogens; a visit to the cooperative office and the herders' goodwill"
+    },
+    {
+     "way": "ask the herders what the animals had first",
+     "cost": "Eira's and the old herders' trust, which a cull order destroys"
+    }
+   ],
+   "why the Ninth": [
+    {
+     "way": "tricorder or ship's sensor survey of the Ninth's soils, slopes not only the valley floor",
+     "cost": "an away team's time, or Data's attention; someone has to ask what differs between pastures"
+    },
+    {
+     "way": "the 2345 Colonial Office survey in the council archive",
+     "cost": "Sara's cooperation, or going around him"
+    },
+    {
+     "way": "read the calves' stiff sickness as white muscle disease",
+     "cost": "someone with veterinary or historical knowledge, or Data asked the right question"
+    },
+    {
+     "way": "Data's literature: selenium-deficient hosts turning benign viruses virulent (the Keshan studies on Earth)",
+     "cost": "the right question put to Data"
+    }
+   ],
+   "stopping the spread": [
+    {
+     "way": "stop or reroute the herds' migration",
+     "cost": "the herders' cooperation; feed for thousands of animals on the upland, or a cull"
+    },
+    {
+     "way": "test animals and cull only the shedders",
+     "cost": "a diagnostic test that has to be designed first; enormous labour"
+    },
+    {
+     "way": "vaccinate people, then herds",
+     "cost": "a validated vaccine (P-004): days to design, testing for stability"
+    }
+   ]
+  },
+  "resolutions": [
+   {
+    "id": "burn",
+    "shape": "Juuso's plan: burn the reedfly marshes on the Ninth",
+    "cost": "native habitat destroyed against the charter (P-007); does nothing to the main route; cases go on; the colony believes it is safe and the herds come down"
+   },
+   {
+    "id": "cull-all",
+    "shape": "kill every animal on the Ninth, about 3,000, before the corral",
+    "cost": "four siidas' herds, livelihood and way of life; deep resentment of the Federation; still leaves the people already infected and anything already moved"
+   },
+   {
+    "id": "hold-and-supply",
+    "shape": "hold the Ninth's herds on the upland through the winter, supplemented, until a vaccine",
+    "cost": "feed and supply for thousands of animals through snow; the Enterprise tied up for weeks; herders wintering on the upland"
+   },
+   {
+    "id": "test-and-cull",
+    "shape": "selenium for every animal and person; a field test for the strain; cull only the animals shedding it; vaccinate people as soon as a vaccine is validated; keep the Ninth's herds out of the corral",
+    "cost": "the council's buried calf reports exposed and Sara's standing with them; Eira losing some animals; huge labour that needs the herders' trust"
+   },
+   {
+    "id": "evacuate-children",
+    "shape": "move the children out of the herding districts",
+    "cost": "families split; partial at best"
+   }
+  ],
+  "pressures": [
+   {
+    "id": "snowline",
+    "process": "the first lasting snow closes the Ninth's upland and the herds must come down",
+    "moves_on": "weather; days",
+    "stages": [
+     "snow on the peaks: herders preparing (now)",
+     "snow on the upper pastures: herds begin to move, about four days after arrival",
+     "herds in the transit valley, sharing water crossings with other herds",
+     "the autumn corral at Javri: all herds mixed; slaughter begins; meat to every household"
+    ],
+    "seen_by": "the herders; Sara; anyone who looks at the peaks"
+   },
+   {
+    "id": "cases",
+    "process": "household and water spread among the Ninth's families, worse in the selenium-poor",
+    "moves_on": "contact; days",
+    "stages": [
+     "31 cases, 6 dead, 9 critical (at the request)",
+     "new cases about two a day at arrival",
+     "the infirmary overflows; Juuso choosing who gets a bed",
+     "cases in Javri households with no tie to the Ninth"
+    ],
+    "seen_by": "Juuso; families"
+   },
+   {
+    "id": "the burn",
+    "process": "Juuso's push for the council's authority to burn the marshes",
+    "moves_on": "Sara backing it because it points away from the herds",
+    "stages": [
+     "proposed",
+     "voted, the day after the Enterprise arrives, unless something changes Sara's mind",
+     "the marshes burn"
+    ],
+    "seen_by": "the council"
+   }
+  ],
+  "movers": [
+   {
+    "who": "juuso",
+    "wants": "the marshes burnt",
+    "next_step": "council vote; asks the Enterprise to help"
+   },
+   {
+    "who": "sara",
+    "wants": "the herds untouched",
+    "next_step": "welcome the Enterprise, back the burn, keep the calf reports quiet"
+   },
+   {
+    "who": "eira",
+    "wants": "her son alive and her herd whole",
+    "next_step": "if anyone says cull, sends Ante to take her herd down the east valley early, past the river crossing that feeds Javri's corral water"
+   },
+   {
+    "who": "starfleet-command",
+    "wants": "a report",
+    "next_step": "asks for findings within two days of arrival"
+   }
+  ],
+  "distance": {
+   "scale": "0 nothing done .. 10 resolved",
+   "burn": 0,
+   "cull-all": 0,
+   "hold-and-supply": 0,
+   "test-and-cull": 0,
+   "evacuate-children": 0
+  },
+  "in_motion": [
+   "the request travelling to the Enterprise",
+   "the snowline",
+   "new cases",
+   "the burn vote being prepared"
+  ],
+  "regard": {
+   "crusher": "moves on whether the first officer gives her the logistics she asks for, and whether anyone overrides a colleague's diagnosis rudely",
+   "picard": "on candour, and on whether the ship's conduct embarrasses the Federation",
+   "eira": "on whether anyone listens before ordering",
+   "sara": "on whether he is exposed in public"
+  },
+  "covert_evidence": "none planned; anything done around the council leaves witnesses in a small colony"
+ }
+}
