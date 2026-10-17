@@ -71,6 +71,14 @@
    "reason": "Canon shows him beamed back before the first appearance and on the bridge at the end, and is silent on where he stood in between; a conn officer returning to the bridge in a crisis is the plausible reading. Checked by a fresh agent against the TNG 101 transcript.",
    "source": "turn 8 (L:1:8)",
    "created_at": 41174.88
+  },
+  {
+   "id": "P-010",
+   "ruling": "[assumed] The bridge's environmental sensors map temperature across the room only coarsely, and its optical pickups work in the visible and near infrared. Thermal imaging fine enough to tell a face from a collar needs dedicated long-wave infrared pickups; physics asks little of them (about a centimetre of aperture resolves a centimetre at ten metres at body-heat wavelengths), so fitting them is a small engineering job, a few hours for engineering's people.",
+   "kind": "tech",
+   "reason": "M-010: the near channel is real imaging, bound by diffraction and wavelength. Body heat peaks near 9.3 micrometres (Wien), which ordinary visible-band pickups don't image. CALC at L:1:11.",
+   "source": "turn 11 (L:1:11)",
+   "created_at": 41174.895
   }
  ]
 }

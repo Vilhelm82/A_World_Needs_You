@@ -125,3 +125,15 @@ Data has turned from ops. "Then whatever presented itself as clothing was not lo
 "Or the VISOR saw what he wanted it to see," Yar says, still writing.
 
 Nobody answers that.
+
+## turn 11
+
+"Yes, Commander. With a qualification." Data brings up a schematic of the bridge on his console: the overhead pickups, the environmental sensors in the ceiling ring. "The optical pickups see in the visible and the near infrared. Body heat is radiated much further out, around nine micrometres. The environmental system does map temperature across the bridge, but in patches a metre across. It would tell you the room was warm, not that a collar was the same temperature as a face."
+
+"So we need real thermal pickups," La Forge says.
+
+"Dedicated long-wave pickups, yes. The optics are not demanding. An aperture of about a centimetre resolves a centimetre at ten metres at those wavelengths." Data glances at La Forge. "It is an installation. Engineering's."
+
+"I'm off at sixteen hundred." La Forge doesn't quite look round. "If the chief'll have me."
+
+Data turns back to you. "I should note the basis. If a thermal image would have shown him, it is because Lieutenant La Forge remembers him as warm. That is one recollection, by one instrument, a day after the event. It is worth fitting the pickups. It is not yet evidence that they would work."

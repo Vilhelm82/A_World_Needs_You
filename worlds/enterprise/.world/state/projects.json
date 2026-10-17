@@ -47,7 +47,8 @@
    "owner": "yar",
    "collaborators": [
     "player",
-    "data"
+    "data",
+    "laforge"
    ],
    "kind": "duty",
    "goal": "an automatic intruder alert for the bridge: a silent alert to the security watch at once; ship-wide yellow after thirty seconds unless the bridge acknowledges; one word from the bridge stands it down; then drill it; the trigger becomes a constant spectral model of the bridge compared against every accounted presence (life signs, combadges, Data), flagging any mismatch either way; counted: bodies of any species, not clutter (Lloyd); Data notes Q sat motionless in the captain's chair, so 'moving under its own power' alone would miss him",
@@ -63,6 +64,12 @@
      "status": "todo",
      "needs": "Data, after the beta calibration; a second trigger on the optical record, since internal sensors did not register Q (F-042)",
      "cost": "more of Data's time than a life-sign filter; tuning out false flags"
+    },
+    {
+     "name": "fit long-wave infrared pickups on the bridge",
+     "status": "todo",
+     "needs": "engineering's people; La Forge has offered his off-duty hours",
+     "cost": "a few hours; MacDougal's say"
     },
     {
      "name": "captain's signature (it can set the alert condition)",
@@ -86,7 +93,8 @@
    "status": "active",
    "precedents": [
     "P-005",
-    "P-008"
+    "P-008",
+    "P-010"
    ],
    "started_at": 41174.3
   },
