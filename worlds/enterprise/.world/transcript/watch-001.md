@@ -37,3 +37,15 @@ She doesn't pretend not to understand you.
 "Four." She draws it on the display with a finger as she goes. Separation and stand-off, half an hour. Two suited teams of three on the twelve housings, twenty minutes a housing: two hours. Your approach from five hundred metres at half a metre a second, seventeen minutes and whatever the alignment costs you. An hour re-mating the interface and running the checks. "If I looked at number four and nothing else, two and a half. I won't look at number four and nothing else. If it took the load sideways, its neighbours felt it."
 
 "Seven on the hull. Two teams and me." A glance at the ensign, back to you. "The other two hours are for when the imager tells me something I don't like and I want to look again. They're real. They're just not required."
+
+## turn 4
+
+"Forty." MacDougal weighs that. "She had big hands."
+
+But she's writing on the padd the ensign has brought her, and from where you stand you can read the line going in under step nine: HOLD POINT - CHIEF ENGINEER'S CALL.
+
+"Then the extension goes in as a hold point, not a request. If I stop, the clock stops, and nobody on the battle bridge asks me why on an open channel." She doesn't look up. "The recipe's in her handwriting. I'll copy it out for you. The book stays in my quarters."
+
+You're halfway to the doors when your combadge chirps.
+
+"Yar to Commander Lloyd." Brisk; tactical noise behind her. "When you've got ten minutes, I need them. Intruder response. Q walked onto the bridge, and half my people found out from the viewscreen."

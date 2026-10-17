@@ -19,7 +19,7 @@
     {
      "name": "first officer's schedule and captain's approval",
      "status": "doing",
-     "needs": "MacDougal's procedure (promised by 1100); the XO's window; the captain, approached by both together",
+     "needs": "procedure by 1100 with six hours and a chief engineer's hold point; the XO's window; the captain, with Lloyd's backing stated before he signs",
      "cost": "a stop of some hours"
     },
     {
@@ -57,7 +57,7 @@
     },
     {
      "name": "first officer schedules a drill",
-     "status": "todo",
+     "status": "doing",
      "needs": "the XO",
      "cost": "a shift's disruption"
     },
