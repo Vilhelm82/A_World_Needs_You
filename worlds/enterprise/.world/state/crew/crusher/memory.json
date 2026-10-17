@@ -1,7 +1,8 @@
 {
  "learned": [
   "F-001",
-  "F-002"
+  "F-002",
+  "F-047"
  ],
  "beliefs": [
   {
@@ -13,6 +14,7 @@
  ],
  "recent": [
   "came aboard at Deneb IV",
-  "three billets empty"
+  "three billets empty",
+  "sent the first officer her staffing list"
  ]
 }

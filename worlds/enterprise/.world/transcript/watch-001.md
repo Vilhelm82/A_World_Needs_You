@@ -157,3 +157,19 @@ A pause long enough to hear her finish a sentence to someone else. *"MacDougal."
 *"MacDougal out."*
 
 La Forge looks back at you, delighted, and doesn't say anything at all.
+
+## turn 13
+
+The chair takes your weight, and the arm terminal wakes under your hand.
+
+The captain's yeoman answers inside four minutes: *Fourteen hundred, ready room, twenty minutes. The captain asks that items be sent ahead.*
+
+The mission schedule is short so far. The survey's first stop is a red dwarf, a number on the charts, 0.94 light years out from Deneb IV. At warp five the Enterprise reaches it about twenty-one hundred tomorrow, and the plan holds her there at sublight for nine hours of stellar and planetary survey. Nothing else is scheduled before it.
+
+The personnel files take the rest of the morning. Most of what's in them is what you'd expect. The duty roster has Lieutenant Torres back on it: cleared by sickbay for light duty, conn relief on beta shift from tomorrow.
+
+Two messages come in while you work. One is from Dr. Crusher, her staffing list: three billets, a physician, an ICU nurse, a lab technician, in that order, and a line at the bottom about Torres. One is from Wesley Crusher, asking for a bridge observation pass at any convenient time. He has read the bridge operations manual twice. He apologises about the holodeck.
+
+Around you the bridge goes on: Data's calibration figures scrolling at ops, Yar handing tactical to a lieutenant you don't know yet, La Forge humming something very quietly until he notices.
+
+At eleven hundred exactly, MacDougal's procedure arrives. Twelve steps. Six hours, four required. Step nine reads **HOLD POINT: CHIEF ENGINEER'S CALL**. At the foot is a line for the captain's signature, blank.

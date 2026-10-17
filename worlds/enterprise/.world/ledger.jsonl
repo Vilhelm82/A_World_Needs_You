@@ -96,3 +96,18 @@
 {"watch": 1, "turn": 12, "type": "DID", "decision": "Body-shaped and unlogged fires it; heat confirms it. Q's the scenario to beat, but this is the default. Sixteen hundred. Clear it with Commander MacDougal first.", "changed": "the protocol is framed as the default against any intruder; La Forge cleared 1600 with MacDougal, latch four first", "distance": {"J-002": [7, 7]}}
 {"watch": 1, "turn": 12, "type": "SAID", "by": "macdougal", "claim": "La Forge at 1600, own tools, sign for stores; latch four's procedure comes first", "truth": "true"}
 {"watch": 1, "turn": 12, "type": "DECIDED", "by": "macdougal", "what": "allowed La Forge into her department for the bridge pickups, subordinate to latch four", "without_player": true}
+{"watch": 1, "turn": 13, "type": "TURN", "stardate": 41175.14, "present": ["player", "data", "laforge", "yar", "troi"], "speakers": ["crowd:captains-yeoman", "crusher", "wesley", "macdougal"], "addressed": {"player": 4}, "initiated": ["crusher", "wesley", "macdougal"], "transcript": "watch-001.md#turn-13", "lore_touch": [{"what": "a captain's yeoman keeping appointments", "layer": "rules"}]}
+{"watch": 1, "turn": 13, "type": "LORECHECK", "claim": "the captain has a yeoman who books his appointments", "layer": "rules", "verdict": "unsupported", "cards": [], "divergence": [], "agent": false, "precedent": "P-011"}
+{"watch": 1, "turn": 13, "type": "PRECEDENT", "id": "P-011"}
+{"watch": 1, "turn": 13, "type": "CALC", "expression": "0.94/5**(10/3)*365.25", "result": 1.6062682082389024, "units": "days", "purpose": "transit to the first survey stop at warp 5"}
+{"watch": 1, "turn": 13, "type": "DID", "decision": "Request a slot with the captain for two items; find a sublight window for the separation in the mission schedule; work through personnel files and the duty roster until the procedure arrives.", "changed": "1400 booked with Picard; window found at the red dwarf survey stop from about 2100 tomorrow, nine hours at sublight; Lloyd has read the senior staff files and the roster", "distance": {"J-001": [3, 5]}}
+{"watch": 1, "turn": 13, "type": "SAID", "by": "crowd:captains-yeoman", "claim": "1400, ready room, twenty minutes; send items ahead", "truth": "true"}
+{"watch": 1, "turn": 13, "type": "SAID", "by": "crusher", "claim": "three billets: physician, ICU nurse, lab technician; Torres cleared for light duty", "truth": "true", "fact": "F-047"}
+{"watch": 1, "turn": 13, "type": "SAID", "by": "wesley", "claim": "requests a bridge observation pass; has read the manual twice; apologises about the holodeck", "truth": "true"}
+{"watch": 1, "turn": 13, "type": "HAS", "item": "latch-four procedure (chronicle 002)", "change": "+"}
+{"watch": 1, "turn": 13, "type": "HAS", "item": "Crusher's staffing list (chronicle 003)", "change": "+"}
+{"watch": 1, "turn": 13, "type": "HAS", "item": "Wesley's request (chronicle 004)", "change": "+"}
+{"watch": 1, "turn": 13, "type": "MOVED", "by": "crusher", "what": "sent the first officer her staffing list (J-005)", "cause": "npc:crusher"}
+{"watch": 1, "turn": 13, "type": "MOVED", "by": "wesley", "what": "asked the first officer for a bridge observation pass", "cause": "npc:wesley"}
+{"watch": 1, "turn": 13, "type": "MOVED", "by": "yar", "what": "handed tactical to a relief lieutenant and went to write the protocol", "cause": "npc:yar"}
+{"watch": 1, "turn": 13, "type": "MOVED", "by": "picard", "what": "finished the Farpoint log in the ready room; booked Number One at 1400", "cause": "npc:picard"}

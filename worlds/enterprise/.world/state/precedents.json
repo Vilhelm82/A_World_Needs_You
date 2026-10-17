@@ -79,6 +79,14 @@
    "reason": "M-010: the near channel is real imaging, bound by diffraction and wavelength. Body heat peaks near 9.3 micrometres (Wien), which ordinary visible-band pickups don't image. CALC at L:1:11.",
    "source": "turn 11 (L:1:11)",
    "created_at": 41174.895
+  },
+  {
+   "id": "P-011",
+   "ruling": "[assumed] The captain has a yeoman, a crewman on the bridge support staff, who keeps his appointments and routes requests for his time.",
+   "kind": "procedure",
+   "reason": "Canon shows yeomen as a Starfleet billet (TOS) and is silent on Picard's appointments; the most plausible reading of how a flagship captain's time is booked.",
+   "source": "turn 13 (L:1:13)",
+   "created_at": 41175.14
   }
  ]
 }

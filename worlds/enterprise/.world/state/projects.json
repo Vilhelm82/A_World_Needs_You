@@ -19,7 +19,7 @@
     {
      "name": "first officer's schedule and captain's approval",
      "status": "doing",
-     "needs": "procedure by 1100 with six hours and a chief engineer's hold point; the XO's window; the captain, with Lloyd's backing stated before he signs",
+     "needs": "procedure (arrived 1100); window: the red dwarf survey stop, nine hours at sublight from about 2100 tomorrow (F-045); the captain at 1400 (F-046)",
      "cost": "a stop of some hours"
     },
     {
@@ -155,13 +155,15 @@
    "id": "J-005",
    "title": "Sickbay staffing",
    "owner": "crusher",
-   "collaborators": [],
+   "collaborators": [
+    "player"
+   ],
    "kind": "duty",
    "goal": "fill the three empty medical billets",
    "stages": [
     {
      "name": "list to the first officer",
-     "status": "todo",
+     "status": "done",
      "needs": "the XO",
      "cost": "none"
     },

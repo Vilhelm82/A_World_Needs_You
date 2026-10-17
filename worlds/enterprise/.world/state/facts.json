@@ -265,6 +265,40 @@
    "surfaced_at": 41174.89,
    "source": "observation (ROLL L:1:10); La Forge",
    "created_at": 41174.89
+  },
+  {
+   "id": "F-045",
+   "statement": "The survey plan's first stop is a red dwarf survey point 0.94 ly out from Deneb IV; at warp 5 the ship arrives about 2100 on day 2, with nine hours scheduled at sublight.",
+   "known_by": [
+    "picard",
+    "data",
+    "player"
+   ],
+   "surfaced_at": 41175.14,
+   "source": "mission schedule",
+   "created_at": 41175.14
+  },
+  {
+   "id": "F-046",
+   "statement": "The captain's yeoman booked the first officer fourteen hundred today in the ready room, twenty minutes, for two items.",
+   "known_by": [
+    "picard",
+    "player"
+   ],
+   "surfaced_at": 41175.14,
+   "source": "captain's yeoman",
+   "created_at": 41175.14
+  },
+  {
+   "id": "F-047",
+   "statement": "Lt. Torres, frozen by Q at the barrier, is cleared by sickbay for light duty and is on the roster at conn relief on beta shift from tomorrow.",
+   "known_by": [
+    "crusher",
+    "player"
+   ],
+   "surfaced_at": 41175.14,
+   "source": "duty roster; sickbay clearance",
+   "created_at": 41175.14
   }
  ]
 }
