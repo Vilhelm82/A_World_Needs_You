@@ -187,3 +187,23 @@ A breath on the channel. *"That's the risk. The next separation. Worst case, we 
 *"How long can we fly on it?"* She considers. *"I'd not leave it more than a fortnight. Or the next starbase, if there's one sooner. Drydock does it in a quarter of the time with nobody outside."*
 
 *"And you're right about the star. I'd want seven people in suits on an open interface next to a flare star about as much as I'd want them on the outside of a warp nacelle. If that's our only window, I'd want its flare record first. I'd rather not have it be our only window."*
+
+## turn 16
+
+*"Restriction in ten minutes."* A pause. *"Thank you for reading the whole thing, sir. MacDougal out."*
+
+It arrives in eight: three numbered lines and a note that docked, the latch carries nothing it wasn't built for.
+
+The afternoon has barely started to look like an afternoon when the ready room doors open at twelve thirty.
+
+Picard comes out with a padd in his hand and doesn't sit. "Number One. Starfleet Medical has relayed a request from the Ealat colony on Hesker IV. An outbreak of something they cannot identify, possibly native. Fever, then inflammation of the heart. Thirty-one cases in three weeks. Six dead." He glances at the padd. "Four of them children. They ask for medical assistance and cardiac support. We are the nearest ship."
+
+"Hesker IV," Data says, already at it. "A Federation colony, founded in 2345 by a herding cooperative from northern Earth. Population approximately six thousand two hundred. The main settlement is Javri. Four point one light years from our position."
+
+"Mr. La Forge. Lay in a course. Warp eight."
+
+"Course laid in, sir. Warp eight, Hesker IV. A day and a half, about."
+
+"Engage." The stars on the viewscreen lengthen and settle. Picard turns. "Senior staff in the observation lounge at thirteen hundred. I have asked Dr. Crusher to read the colony's reports before then." To you, more quietly: "Your fourteen hundred will have to wait, I'm afraid. Bring it to me after the briefing if it can't."
+
+Troi has gone very still in her chair. She is looking at nothing in particular.

@@ -177,8 +177,15 @@
   {
    "id": "F-031",
    "statement": "Starfleet Medical relays the Ealat colony's request: an unidentified, possibly native pathogen causing fever and myocarditis on Hesker IV, 31 cases and 6 dead; the colony asks for medical assistance and cardiac support. Hesker IV is 4.1 light years from the Enterprise's position.",
-   "known_by": [],
-   "surfaced_at": null,
+   "known_by": [
+    "picard",
+    "data",
+    "laforge",
+    "troi",
+    "crusher",
+    "player"
+   ],
+   "surfaced_at": 41175.31,
    "source": "Starfleet Medical relay, due 41175.3",
    "created_at": 41174.8
   },
@@ -322,6 +329,31 @@
    "surfaced_at": 41175.145,
    "source": "MacDougal",
    "created_at": 41175.145
+  },
+  {
+   "id": "F-050",
+   "statement": "MacDougal's interim restriction on latch four, in writing: no planned separation until inspected; any emergency separation at sublight wherever there is a choice; inspection within about two weeks or at the next starbase.",
+   "known_by": [
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.17,
+   "source": "MacDougal (chronicle 005)",
+   "created_at": 41175.17
+  },
+  {
+   "id": "F-051",
+   "statement": "Data's records summary: Hesker IV, the Ealat colony, a Federation colony founded in 2345 by a herding cooperative from northern Earth; population about six thousand two hundred; main settlement Javri.",
+   "known_by": [
+    "data",
+    "picard",
+    "laforge",
+    "troi",
+    "player"
+   ],
+   "surfaced_at": 41175.31,
+   "source": "Federation colonial registry",
+   "created_at": 41175.31
   }
  ]
 }

@@ -5,7 +5,9 @@
   "F-010",
   "F-042",
   "F-043",
-  "F-044"
+  "F-044",
+  "F-031",
+  "F-051"
  ],
  "beliefs": [
   {
@@ -21,6 +23,7 @@
   "heard Data report the internal sensors never logged Q",
   "La Forge saw Q through the VISOR: even heat, no pulse",
   "asked Lloyd, through the link, for a word off duty tonight",
-  "Q's clothes read the same temperature as his skin, to the VISOR"
+  "Q's clothes read the same temperature as his skin, to the VISOR",
+  "Hesker IV: children among the dead"
  ]
 }

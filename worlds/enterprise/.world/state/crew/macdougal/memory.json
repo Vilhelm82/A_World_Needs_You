@@ -4,7 +4,8 @@
   "F-002",
   "F-003",
   "F-040",
-  "F-049"
+  "F-049",
+  "F-050"
  ],
  "beliefs": [
   {
@@ -48,6 +49,7 @@
   "the XO says the forty grams are on him",
   "agreed La Forge at 1600 for the bridge thermal pickups; latch four first",
   "sent the latch-four procedure to the XO at 1100",
-  "told the XO docked is fine, the next separation is the risk; no planned separation, sublight if any choice; two weeks or the next starbase"
+  "told the XO docked is fine, the next separation is the risk; no planned separation, sublight if any choice; two weeks or the next starbase",
+  "sent the interim restriction to the XO"
  ]
 }

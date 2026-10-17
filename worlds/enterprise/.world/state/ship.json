@@ -1,6 +1,7 @@
 {
- "course": "outbound from Deneb IV on the first leg of the survey beyond Deneb, warp 5",
+ "course": "Hesker IV, warp 8; arrival about 1130 on day 3 (41179.3)",
  "orders": [
+  "Starfleet Medical via Starfleet Command: answer the Ealat colony's request for medical assistance on Hesker IV",
   "Starfleet: begin the exploration survey of the sector beyond Deneb; first leg at the captain's discretion",
   "Starfleet: file the full Farpoint report, including the Q encounter, at the next relay"
  ],
@@ -14,5 +15,5 @@
   "sickbay": "three medical billets vacant",
   "complement": "about a thousand aboard, families included"
  },
- "survey_plan": "first stop: an unnamed red dwarf catalogued as a survey point, 0.94 ly from Deneb IV; arrival at warp 5 about 2100 tomorrow (day 2); nine hours at sublight for stellar and planetary survey"
+ "survey_plan": "suspended: the red dwarf survey stop is off the schedule while the ship answers Hesker IV"
 }

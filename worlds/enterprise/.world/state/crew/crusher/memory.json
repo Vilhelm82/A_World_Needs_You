@@ -2,7 +2,8 @@
  "learned": [
   "F-001",
   "F-002",
-  "F-047"
+  "F-047",
+  "F-031"
  ],
  "beliefs": [
   {
@@ -15,6 +16,7 @@
  "recent": [
   "came aboard at Deneb IV",
   "three billets empty",
-  "sent the first officer her staffing list"
+  "sent the first officer her staffing list",
+  "ordered to read the colony's medical reports before 1300"
  ]
 }

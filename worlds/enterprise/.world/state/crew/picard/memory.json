@@ -3,7 +3,9 @@
   "F-001",
   "F-002",
   "F-010",
-  "F-046"
+  "F-046",
+  "F-031",
+  "F-051"
  ],
  "beliefs": [
   {
@@ -17,6 +19,7 @@
   "the Farpoint mission closed",
   "Q's trial left standing",
   "the Hood departed",
-  "Number One asked for twenty minutes at 1400, two items"
+  "Number One asked for twenty minutes at 1400, two items",
+  "received Starfleet Medical's relay; diverted to Hesker IV at warp 8; called senior staff for 1300"
  ]
 }

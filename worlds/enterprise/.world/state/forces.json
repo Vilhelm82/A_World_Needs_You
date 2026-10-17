@@ -185,7 +185,8 @@
     {
      "step": "routes Hesker IV's medical request to the Enterprise via Starfleet Medical",
      "preconditions": "the request reaches the nearest ship (41175.3)",
-     "status": "on_track"
+     "status": "done",
+     "cause": "L:1:16"
     },
     {
      "step": "asks for the Farpoint report and the Q findings",

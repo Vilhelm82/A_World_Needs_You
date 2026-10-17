@@ -5,7 +5,9 @@
   "F-010",
   "F-042",
   "F-043",
-  "F-044"
+  "F-044",
+  "F-031",
+  "F-051"
  ],
  "beliefs": [
   {
@@ -29,6 +31,7 @@
   "compared Q's optical record with internal sensors at the XO's order: no life sign logged at his position",
   "the XO wants a spectral model of the bridge; La Forge's VISOR saw Q evenly warm, no pulse",
   "Q's clothes read the same temperature as his skin, to the VISOR",
-  "thermal pickups would be needed for the filter; La Forge offered to fit them"
+  "thermal pickups would be needed for the filter; La Forge offered to fit them",
+  "Hesker IV, warp 8; pulled the colony's registry entry"
  ]
 }

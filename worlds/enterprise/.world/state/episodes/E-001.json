@@ -1,6 +1,6 @@
 {
  "id": "E-001",
- "status": "pending",
+ "status": "open",
  "arrival": "Starfleet Medical's relay of the Ealat colony's request reaches Picard at 41175.3; he decides alone whether to divert. Hesker IV is 4.1 ly away: warp 7 is about 2.3 days, warp 8 about 1.5.",
  "premise": "R-001",
  "lands_on": [
@@ -217,5 +217,6 @@
    "sara": "on whether he is exposed in public"
   },
   "covert_evidence": "none planned; anything done around the council leaves witnesses in a small colony"
- }
+ },
+ "opened_at": 41175.31
 }

@@ -1,9 +1,9 @@
 {
- "stardate": 41175.145,
- "ship_time": "11:03",
+ "stardate": 41175.31,
+ "ship_time": "12:32",
  "day": 1,
  "alert": "normal",
- "location": "outbound from Deneb IV, beyond the Deneb frontier",
- "episode_open": null,
+ "location": "en route to Hesker IV at warp 8",
+ "episode_open": "E-001",
  "timeline": "main"
 }
