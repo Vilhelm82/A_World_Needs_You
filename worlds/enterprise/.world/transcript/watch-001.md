@@ -231,3 +231,9 @@ A pause, and then, more like herself:
 *Six dead, Will, and four of them children. There will be parents down there who've been waiting three weeks for someone to come. I want to be on the away team. They'll need someone who isn't a doctor.*
 
 On the viewscreen the stars stream past at warp eight. Troi turns a page on the padd in her lap that she hasn't been reading.
+
+## turn 19
+
+The smallest nod, to nobody.
+
+*That's fair. I'll raise it.* Then, with something that is nearly a smile and is gone before it reaches her face: *Thank you for not deciding it for me.*

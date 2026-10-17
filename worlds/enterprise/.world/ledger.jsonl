@@ -137,3 +137,5 @@
 {"watch": 1, "turn": 18, "type": "DID", "decision": "Deanna? What is it? (telepathically)", "changed": "Troi keeps what she felt to herself; asks to be on the away team for the families", "distance": {}}
 {"watch": 1, "turn": 18, "type": "SAID", "by": "troi", "claim": "she felt something on the bridge that isn't hers to tell", "truth": "true", "fact": "F-052"}
 {"watch": 1, "turn": 18, "type": "MOVED", "by": "troi", "what": "asked the first officer for a place on the Hesker IV away team", "cause": "npc:troi"}
+{"watch": 1, "turn": 19, "type": "TURN", "stardate": 41175.318, "present": ["player", "data", "laforge", "troi"], "speakers": ["troi"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-19"}
+{"watch": 1, "turn": 19, "type": "DID", "decision": "You're on it. Once Beverly knows how it spreads, you go down. Raise it at the briefing and I'll back you.", "changed": "Troi will raise her place on the away team herself at 1300; Lloyd's backing is conditional on Crusher knowing the route of spread; Troi's regard warms a little", "distance": {}}
