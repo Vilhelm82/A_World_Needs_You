@@ -285,3 +285,23 @@ Picard has listened to all of it standing. "Then nobody destroys a habitat on a 
 Yar doesn't need the prompt explained. "Away team drinks nothing down there, eats nothing, touches nothing with bare hands. Gloves, sealed water, decon on the way back." A glance at Crusher. "And the biofilter won't know what it's looking for, will it."
 
 "No," Crusher says. "Not until I've had it under a microscope."
+
+## turn 23
+
+Nobody answers at once, which is an answer.
+
+"The colony records do not say," Data offers. "The Ninth was opened in 2362. The registry entry predates it."
+
+"Her report doesn't say either." Crusher is already writing. "I'll ask her. Where they draw water, where the herds are in relation to it, latrines." She pauses over the next line. "And you're right about the children, but it's both. They're more exposed, and viruses like this are harder on young hearts. I'll put both in."
+
+"Boiling water first," Troi says quietly. "But give the families a reason they can see. Three weeks of being frightened makes people stop listening to instructions they don't understand."
+
+At the far end of the table MacDougal stirs. "If they're on a stream, I can have portable purifiers replicated before we get there. Forty, maybe. Power cells are the limit, not the replicators."
+
+"Do it," Picard says. Then, to Crusher: "Can we speak to Dr. Juuso directly?"
+
+Data answers. "Not at this range, Captain. The colony's transmitter is not powerful enough for a live link. A message will take approximately forty minutes each way. That will shorten as we close."
+
+"Then send it now, Doctor. The questions and the advisory both."
+
+"Sending." Crusher touches the padd. It's ten past one. The earliest anything can come back is a little before three.

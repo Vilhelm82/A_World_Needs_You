@@ -409,6 +409,34 @@
    "surfaced_at": 41175.37,
    "source": "the briefing",
    "created_at": 41175.37
+  },
+  {
+   "id": "F-056",
+   "statement": "The Ninth's summer camp draws its water from a stream below the slopes where the herds graze and cross; the herds wade it upstream of where the families fill their water.",
+   "known_by": [
+    "eira",
+    "juuso",
+    "sara"
+   ],
+   "surfaced_at": null,
+   "source": "truth (decided at turn 23; consistent with F-030)",
+   "created_at": 41175.375
+  },
+  {
+   "id": "F-057",
+   "statement": "At the briefing: nobody aboard knows what the Ninth's families drink; the colony records don't say. Crusher's message to Juuso asks about water sources and advises boiling all water on the Ninth; the reply takes about forty minutes each way. MacDougal can have portable water purifiers replicated before arrival, about forty, limited by power cells. Crusher: children are both more exposed and, with viruses of this kind, more vulnerable.",
+   "known_by": [
+    "picard",
+    "crusher",
+    "data",
+    "yar",
+    "troi",
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.375,
+   "source": "the briefing",
+   "created_at": 41175.375
   }
  ]
 }

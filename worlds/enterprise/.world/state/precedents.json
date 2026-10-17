@@ -87,6 +87,14 @@
    "reason": "Canon shows yeomen as a Starfleet billet (TOS) and is silent on Picard's appointments; the most plausible reading of how a flagship captain's time is booked.",
    "source": "turn 13 (L:1:13)",
    "created_at": 41175.14
+  },
+  {
+   "id": "P-012",
+   "ruling": "[assumed] Hesker IV's colony transmitter is too weak for a live call at the Enterprise's present range; messages each way take about forty minutes now and grow quicker as the ship closes.",
+   "kind": "tech",
+   "reason": "M-013: FTL signalling speed rises with transmitter power and relays; a lone ship's floor (~52,000 c, CALC) gives about 41 minutes for 4.1 ly; a small colony's transmitter adds nothing to that.",
+   "source": "turn 23 (L:1:23)",
+   "created_at": 41175.375
   }
  ]
 }

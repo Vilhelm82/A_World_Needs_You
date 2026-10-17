@@ -183,6 +183,33 @@
    "status": "active",
    "precedents": [],
    "started_at": 41174.5
+  },
+  {
+   "id": "J-006",
+   "title": "Purifiers for the Ninth",
+   "owner": "macdougal",
+   "collaborators": [
+    "player"
+   ],
+   "kind": "duty",
+   "goal": "about forty portable water purifiers replicated before arrival at Hesker IV",
+   "stages": [
+    {
+     "name": "replicate",
+     "status": "doing",
+     "needs": "replicator time; power cells",
+     "cost": "power cells are the limit"
+    },
+    {
+     "name": "deliver to the Ninth",
+     "status": "todo",
+     "needs": "the away team; the herders' willingness",
+     "cost": "a trip up the valley"
+    }
+   ],
+   "status": "active",
+   "precedents": [],
+   "started_at": 41175.375
   }
  ]
 }
