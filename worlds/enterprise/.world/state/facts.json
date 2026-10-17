@@ -365,6 +365,16 @@
    "surfaced_at": null,
    "source": "Troi's empathic sense (a feeling, no facts)",
    "created_at": 41175.317
+  },
+  {
+   "id": "F-053",
+   "statement": "Crew manifest search, qualifications outside sickbay: life sciences lab (under the second officer): Lt. (j.g.) Ilse Vantongeren, microbiologist, virus culture and sequencing; Ensign Kesi Mbatha, xenobiologist, Academy specialisation in comparative (animal) pathology; two biology lab technicians. Security: four field-medic certified, Ensign Abara among them. Civilians: one, Tomas Reyhan, a former emergency paramedic, now teaching at the ship's school; volunteers only. No physician and no qualified ICU nurse outside sickbay.",
+   "known_by": [
+    "player"
+   ],
+   "surfaced_at": 41175.35,
+   "source": "crew manifest",
+   "created_at": 41175.35
   }
  ]
 }

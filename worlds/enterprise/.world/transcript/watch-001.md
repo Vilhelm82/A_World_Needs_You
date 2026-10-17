@@ -237,3 +237,19 @@ On the viewscreen the stars stream past at warp eight. Troi turns a page on the 
 The smallest nod, to nobody.
 
 *That's fair. I'll raise it.* Then, with something that is nearly a smile and is gone before it reaches her face: *Thank you for not deciding it for me.*
+
+## turn 20
+
+The manifest takes a query the way Data takes a question: all at once, and more than you asked.
+
+Sickbay aside, it gives you:
+
+**Life sciences**, under the second officer: Lieutenant (j.g.) Ilse Vantongeren, microbiologist, whose record lists virus culture and sequencing; Ensign Kesi Mbatha, xenobiologist, Academy specialisation in comparative pathology, animals rather than people; two biology lab technicians.
+
+**Security**: four certified field medics. One of the names is Abara, from the second page of Yar's log.
+
+**Civilians**: one. Tomas Reyhan, formerly an emergency paramedic, now teaching at the ship's school. A civilian; he'd have to volunteer.
+
+There is no physician outside sickbay. No qualified intensive-care nurse either. The two things Crusher put at the top of her list are the two things the ship doesn't have.
+
+It is twelve fifty-five. Down the corridor the observation lounge lights are already up.
