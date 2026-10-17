@@ -26,7 +26,7 @@ When anyone does something notable (the player or a crew member), the GM writes 
 
 | Trace type | What leaves it | Who can read it |
 |---|---|---|
-| `location` | [canon] Combadge location; "Computer, locate…" answers anyone, live. A trace records `subject`, `where` and `window`. | Live: anyone. History: security, by query. |
+| `location` | [canon] "Computer, locate…" answers anyone, live. [assumed] By combadge; history by security query. A trace records `subject`, `where` and `window`. | Live: anyone. History: security, by query. |
 | `computer_access` | [assumed] Queries, file access and commands, with the authorisation used | Security and the captain, by query. |
 | `authorisation` | [assumed] Command codes, overrides, lockouts | Logged permanently. An override of a log is itself logged. |
 | `transporter` | [assumed] Every transport: source, destination, operator | Transporter chief, security, the captain. |
@@ -36,9 +36,11 @@ When anyone does something notable (the player or a crew member), the GM writes 
 | `witness` | Anyone who saw, heard or noticed | That person, and whoever they tell. |
 | `physical` | Objects, residue, damage, a missing component, a repaired one | Whoever looks in the right place. |
 | `behavioural` | Absences, changes in routine, a story with holes in it | Anyone who knows the person well enough. |
-| `empathic` | [canon] Strong concealed emotion near Counselor Troi | Troi only: a feeling with no facts attached. |
+| `empathic` | [canon] Strong concealed emotion near Counselor Troi. She can't read some species (the Ferengi), and is fully telepathic only with Betazoids and Riker. | Troi only: a feeling with no facts attached. |
 
 The [assumed] rows are the most lore-plausible reading of what a Galaxy-class computer records. A `// lore objection` can move any of them, and the ruling becomes a precedent.
+
+[canon] One exception: a Code 47 message, the captain's-eyes-only emergency channel, leaves no computer record of the transmission. Only a captain can use it, and the sender and receiver are still witnesses.
 
 Covering tracks is an act with its own traces, often more telling than the original: an `authorisation` trace on a log deletion is evidence of intent.
 

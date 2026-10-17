@@ -6,7 +6,8 @@ Starfleet is not a navy, but it has rules, a chain of command and courts. Every 
 
 - **Any officer** can report a superior to the captain, or a captain to Starfleet. Reporting is a decision with a cost; people weigh it.
 - **Security** (Lt. Yar) can detain anyone aboard who is an immediate danger, including a senior officer, and reports at once to the captain.
-- **The chief medical officer** can relieve any officer, including the captain, as medically unfit. She has to defend it afterwards.
+- **The chief medical officer** can relieve any officer, including the captain, as medically unfit. [canon] To relieve the captain she needs a medical log citing clear evidence of incapacity.
+- **The first officer** [canon] can relieve the captain only with the agreement of all the command officers.
 - **The captain** can reprimand, put a note on a service record, confine to quarters, relieve of duty, confine to the brig, and recommend a court-martial. He can also choose not to. Which he chooses depends on what he witnessed, what he was told and by whom, and his regard.
 - **Starfleet** convenes courts-martial and boards of inquiry through the Judge Advocate General, at a starbase, weeks away. A report from the Enterprise reaches them hours to days later.
 
@@ -25,7 +26,7 @@ The world picks the rung by what the act was, what evidence exists, who knows, a
 ## Fixed points
 
 - [canon] Phasers have a stun setting. A crewman stunned is assault. A crewman killed is murder, and nobody on the ship will treat it as anything else.
-- [canon] Romulan ale is contraband in the Federation. Having it aboard is a disciplinary matter; how it got aboard is a security matter.
+- [canon] Romulan ale is illegal in the Federation. [assumed] Having it aboard is a disciplinary matter, and how it got aboard is a security matter. Canon shows senior officers holding it unpunished, so how hard anyone pushes depends on who and how openly.
 - [assumed] Mutiny, and conspiring to hand a Starfleet vessel to a foreign power, are the gravest charges there are. Conspiring is an offence before anything is done.
 - [assumed] Command codes are personal. Using someone else's is an offence and leaves a record (`deeds.md`).
 
