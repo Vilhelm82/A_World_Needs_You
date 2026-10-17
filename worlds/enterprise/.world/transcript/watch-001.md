@@ -367,3 +367,19 @@ Picard doesn't turn from the window at once. When he does, there is something at
 "The traditions on this ship are a week old, Number One. You may find you're founding a few." He comes back to the table, though he doesn't sit. "It was a fair point, and you gave it to her in front of the senior staff. That will cost you nothing with them. Rather the reverse."
 
 He sets his padd down. "Your two items. Briefly."
+
+## turn 29
+
+Picard hears the first item out without interrupting.
+
+"Agreed. Drydock, if a starbase can be had within her fortnight. Clear space if not." A small pause. "Find out which starbase, Number One, and how far. I'll put it to Starfleet with the Hesker report."
+
+The second item takes him longer. At *never registered him as a life sign*, his eyes come up from the table and stay on you.
+
+"Never."
+
+He lets the word stand. Then, precisely: "I doubt an alarm will detain him. But I take the point that the crew should not learn of an intruder on my bridge from a display." He picks up his padd. "When Lieutenant Yar's protocol is written, I shall read it. I don't sign what I haven't read." A beat. "And I should like to see Mr. Data's file on him. Whatever it contains."
+
+"Mr. La Forge is a conn officer," he adds, as though checking a fact.
+
+He is already moving towards the door to the ready room. "Thank you, Number One."

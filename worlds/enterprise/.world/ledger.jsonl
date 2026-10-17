@@ -188,3 +188,9 @@
 {"watch": 1, "turn": 27, "type": "DECIDED", "by": "picard", "what": "permits the isolation ward to be prepared", "without_player": false}
 {"watch": 1, "turn": 28, "type": "TURN", "stardate": 41175.397, "present": ["player", "picard"], "speakers": ["picard"], "addressed": {"player": 3}, "initiated": ["picard"], "transcript": "watch-001.md#turn-28"}
 {"watch": 1, "turn": 28, "type": "SAID", "by": "picard", "claim": "giving Yar the point in front of the senior staff will cost him nothing with them", "truth": "true"}
+{"watch": 1, "turn": 29, "type": "TURN", "stardate": 41175.4, "present": ["player", "picard"], "speakers": ["picard"], "addressed": {"player": 5}, "initiated": ["picard"], "transcript": "watch-001.md#turn-29"}
+{"watch": 1, "turn": 29, "type": "TOLD", "to": ["picard"], "fact": "F-042"}
+{"watch": 1, "turn": 29, "type": "TOLD", "to": ["picard"], "fact": "F-040"}
+{"watch": 1, "turn": 29, "type": "DID", "decision": "Latch four: drydock at the nearest starbase after Hesker IV, or six hours at sublight in clear space. Second: Yar's intruder protocol, silent alert, thirty seconds, automatic yellow; La Forge fitting thermal pickups; it's yours to sign.", "changed": "Picard agrees the latch-four plan and wants the starbase and distance found; he will read the protocol before signing and asks for Data's Q file", "distance": {"J-001": [7, 8], "J-002": [7, 7]}}
+{"watch": 1, "turn": 29, "type": "DECIDED", "by": "picard", "what": "latch four: drydock within the fortnight if a starbase can be had, clear space if not; Lloyd to find the starbase", "without_player": false}
+{"watch": 1, "turn": 29, "type": "SAID", "by": "picard", "claim": "agreed; find the starbase; he'll read the protocol before signing; wants Data's Q file", "truth": "true", "fact": "F-062"}

@@ -18,8 +18,8 @@
     },
     {
      "name": "first officer's schedule and captain's approval",
-     "status": "doing",
-     "needs": "restriction now a standing order; the procedure and the choice of window still to come before the captain after the briefing",
+     "status": "done",
+     "needs": "captain agrees: drydock at the nearest starbase after Hesker IV, or six hours at sublight in clear space; Lloyd to find which starbase and how far",
      "cost": "a stop of some hours"
     },
     {
@@ -74,7 +74,7 @@
     {
      "name": "captain's signature (it can set the alert condition)",
      "status": "todo",
-     "needs": "Picard",
+     "needs": "Picard reads the written protocol first",
      "cost": "none, if he agrees"
     },
     {
@@ -118,7 +118,7 @@
     {
      "name": "analyse",
      "status": "doing",
-     "needs": "the file",
+     "needs": "the file; the captain wants to see it",
      "cost": "unknown"
     }
    ],

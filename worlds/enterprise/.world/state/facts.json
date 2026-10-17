@@ -216,6 +216,7 @@
    "statement": "MacDougal's required time for the latch inspection is about four hours: separation and stand-off half an hour; two suited teams of three inspecting the twelve housings at twenty minutes each, two hours; the redock approach from 500 m at 0.5 m/s, about seventeen minutes plus alignment; re-mating the interface and checks, an hour. Latch four alone would be about two and a half. Seven people on the hull, MacDougal included. The extra two hours in her six are for re-inspection if the imager shows something.",
    "known_by": [
     "macdougal",
+    "picard",
     "player"
    ],
    "surfaced_at": 41174.83,
@@ -238,10 +239,11 @@
    "statement": "Data's comparison of the bridge optical record with the internal life-sign sensor logs, at standard settings and resolution, for Q's three in-person appearances on the bridge during the Farpoint mission: the optical record shows Q throughout; the internal sensors logged no life sign at his position in any interval, while every crew member present was logged normally. Scope: one ship's internal sensors at their routine settings; it does not establish that Q is undetectable by other means or settings.",
    "known_by": [
     "data",
-    "yar",
-    "troi",
     "laforge",
-    "player"
+    "picard",
+    "player",
+    "troi",
+    "yar"
    ],
    "surfaced_at": 41174.87,
    "source": "observation (ROLL L:1:7); Data's log comparison",
@@ -501,6 +503,17 @@
    "surfaced_at": 41175.395,
    "source": "the briefing",
    "created_at": 41175.395
+  },
+  {
+   "id": "F-062",
+   "statement": "Picard on Lloyd's two items: he agrees to drydock at the nearest starbase after Hesker IV, or six hours at sublight in clear space, and wants Lloyd to find out which starbase and how far, to go to Starfleet with the Hesker report. He will read Yar's protocol before he signs anything, and wants to see Data's file on Q.",
+   "known_by": [
+    "picard",
+    "player"
+   ],
+   "surfaced_at": 41175.4,
+   "source": "Picard",
+   "created_at": 41175.4
   }
  ]
 }

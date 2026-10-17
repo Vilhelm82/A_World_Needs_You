@@ -13,7 +13,10 @@
   "F-058",
   "F-059",
   "F-060",
-  "F-061"
+  "F-061",
+  "F-042",
+  "F-040",
+  "F-062"
  ],
  "beliefs": [
   {
@@ -45,6 +48,7 @@
   "1300 briefing: Crusher's summary of the Hesker IV reports",
   "ruled: no habitat destroyed on a hypothesis",
   "ruled no patients aboard until Crusher has the virus under a microscope; briefing still open; Number One's two items still to hear",
-  "Number One stayed after the briefing; took Yar's correction with good grace"
+  "Number One stayed after the briefing; took Yar's correction with good grace",
+  "Number One's two items: latch four (drydock after Hesker, or clear space), Yar's intruder protocol (to read before signing); internal sensors never logged Q"
  ]
 }
