@@ -29,3 +29,11 @@ She's already back at the display. "Ensign, pull the full separation checklist f
 "Aye, Commander."
 
 To you: "I'll want the battle bridge crewed for it, and somebody on the saucer who knows what a docking feels like from the inside. If you're flying her back, that's you." A pause. "I'll put six hours in the procedure. I'd rather you didn't let him talk me down to four."
+
+## turn 3
+
+She doesn't pretend not to understand you.
+
+"Four." She draws it on the display with a finger as she goes. Separation and stand-off, half an hour. Two suited teams of three on the twelve housings, twenty minutes a housing: two hours. Your approach from five hundred metres at half a metre a second, seventeen minutes and whatever the alignment costs you. An hour re-mating the interface and running the checks. "If I looked at number four and nothing else, two and a half. I won't look at number four and nothing else. If it took the load sideways, its neighbours felt it."
+
+"Seven on the hull. Two teams and me." A glance at the ensign, back to you. "The other two hours are for when the imager tells me something I don't like and I want to look again. They're real. They're just not required."

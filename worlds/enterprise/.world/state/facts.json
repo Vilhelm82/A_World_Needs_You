@@ -201,6 +201,17 @@
    "surfaced_at": null,
    "source": "truth",
    "created_at": 41174.8
+  },
+  {
+   "id": "F-040",
+   "statement": "MacDougal's required time for the latch inspection is about four hours: separation and stand-off half an hour; two suited teams of three inspecting the twelve housings at twenty minutes each, two hours; the redock approach from 500 m at 0.5 m/s, about seventeen minutes plus alignment; re-mating the interface and checks, an hour. Latch four alone would be about two and a half. Seven people on the hull, MacDougal included. The extra two hours in her six are for re-inspection if the imager shows something.",
+   "known_by": [
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41174.83,
+   "source": "MacDougal",
+   "created_at": 41174.83
   }
  ]
 }
