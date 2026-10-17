@@ -419,6 +419,36 @@ def main():
         check("a falsified hypothesis can't be revived", not ok and "stays falsified" in out, out)
         sh("git", "reset", "-q", "--hard", cwd=repo)
 
+        # later evidence reinterprets an observation; it never rewrites it
+        base = sh("git", "rev-parse", "HEAD", cwd=repo).stdout.strip()
+        fp = w / ".world/state/facts.json"
+        fdata = json.loads(fp.read_text())
+        f3 = {"id": "F-003", "statement": "The spike was the sensor pallet's own resonance.",
+              "known_by": ["data"], "surfaced_at": None, "source": "test", "created_at": "41180",
+              "reinterprets": "F-999"}
+        fp.write_text(json.dumps({"facts": fdata["facts"] + [f3]}, indent=2))
+        ok, out = commit(repo, "reinterpret nothing")
+        check("reinterpreting an unknown fact is refused", not ok and "reinterprets unknown fact" in out, out)
+        h2 = {"id": "H-002", "subject": "q", "statement": "Q manifests through subspace, and the "
+              "contrary reading was a sensor artifact.", "proposed_by": "player", "held_by": ["player"],
+              "physics_basis": "P1", "predictions": [{"id": "p1", "if": "Q appears", "then": "a spike"}],
+              "tests": [], "status": "open", "created_at": 41180,
+              "revives": {"hypothesis": "H-001", "via": "F-001"}}
+        f3["reinterprets"] = "F-002"
+        fp.write_text(json.dumps({"facts": fdata["facts"] + [f3]}, indent=2))
+        hp.write_text(json.dumps({"hypotheses": [hyp_falsified := json.loads(
+            sh("git", "show", "HEAD:worlds/test/.world/state/hypotheses.json", cwd=repo).stdout
+        )["hypotheses"][0], h2]}, indent=2))
+        ok, out = commit(repo, "revive without cause")
+        check("reviving without a reinterpreting fact is refused",
+              not ok and "only via a fact that reinterprets" in out, out)
+        h2["revives"]["via"] = "F-003"
+        hp.write_text(json.dumps({"hypotheses": [hyp_falsified, h2]}, indent=2))
+        ok, out = commit(repo, "revive")
+        check("a hypothesis revives a falsified one through a reinterpreting fact", ok, out)
+        check("the falsified hypothesis stays falsified", hyp_falsified["status"] == "falsified")
+        sh("git", "reset", "-q", "--hard", base, cwd=repo)
+
         # metrics: 12 turns where the player is addressed heavily and yar is neglected
         tdir = w / ".world/transcript"; tdir.mkdir(exist_ok=True)
         entries, text = [], "## turn 5\n...\n"

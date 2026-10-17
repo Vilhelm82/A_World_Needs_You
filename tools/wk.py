@@ -438,6 +438,13 @@ def validate_world(w):
             for k in f["known_by"]:
                 if not valid_ref(k, crew, {"player", "all"}):
                     rep.err(where, f"known_by names unknown '{k}'")
+        # a later fact may reinterpret an earlier one (an instrument artifact, other conditions);
+        # the earlier fact itself never changes
+        all_fact_ids = {f.get("id") for f in facts["facts"] if isinstance(f, dict)}
+        for i, f in enumerate(facts["facts"]):
+            r = f.get("reinterprets") if isinstance(f, dict) else None
+            if r is not None and (r == f.get("id") or r not in all_fact_ids):
+                rep.err(f"facts.json[{i}]", f"reinterprets unknown fact '{r}'")
         old = head_json(f"{w.rel}/.world/state/facts.json") or {}
         cur = {f.get("id"): f for f in facts["facts"] if isinstance(f, dict)}
         for of in old.get("facts", []):
@@ -447,7 +454,7 @@ def validate_world(w):
             if nf is None:
                 rep.err("facts.json", f"surfaced fact {of['id']} was removed")
                 continue
-            for k in ("statement", "surfaced_at", "source", "created_at"):
+            for k in ("statement", "surfaced_at", "source", "created_at", "reinterprets"):
                 if nf.get(k) != of.get(k):
                     rep.err("facts.json", f"surfaced fact {of['id']} changed field '{k}'")
             if not set(of.get("known_by", [])) <= set(nf.get("known_by", [])):
@@ -455,6 +462,8 @@ def validate_world(w):
 
     fact_known = {f.get("id"): set(f.get("known_by", [])) for f in (facts or {}).get("facts", [])
                   if isinstance(f, dict)}
+    fact_reinterprets = {f.get("id"): f.get("reinterprets") for f in (facts or {}).get("facts", [])
+                         if isinstance(f, dict)}
 
     # precedents
     prec = load(s / "precedents.json", rep)
@@ -765,6 +774,7 @@ def validate_world(w):
         old_h = {h.get("id"): h for h in
                  (head_json(f"{w.rel}/.world/state/hypotheses.json") or {}).get("hypotheses", [])}
         cur_ids = set()
+        by_id = {h.get("id"): h for h in hy["hypotheses"] if isinstance(h, dict)}
         for i, h in enumerate(hy["hypotheses"]):
             where = f"hypotheses.json[{i}]"
             if not need(h, ["id", "subject", "statement", "proposed_by", "held_by", "physics_basis",
@@ -794,6 +804,22 @@ def validate_world(w):
                 rep.err(where, "'surviving' needs at least one supported test")
             if h["status"] == "falsified" and "falsified" not in results:
                 rep.err(where, "'falsified' needs a falsifying test")
+            # a new hypothesis may revive a falsified one, but only through a fact that
+            # reinterprets an observation that falsified it
+            rv = h.get("revives")
+            if rv is not None:
+                old_one = by_id.get(rv.get("hypothesis")) if isinstance(rv, dict) else None
+                if old_one is None or old_one.get("id") == h["id"]:
+                    rep.err(where, "revives must name another hypothesis by id")
+                elif old_one.get("status") != "falsified":
+                    rep.err(where, f"revives {old_one['id']}, which isn't falsified")
+                else:
+                    killers = {te.get("observation") for te in old_one.get("tests", [])
+                               if isinstance(te, dict) and te.get("result") == "falsified"}
+                    via = rv.get("via")
+                    if via not in fact_known or fact_reinterprets.get(via) not in killers:
+                        rep.err(where, f"revives {old_one['id']} only via a fact that reinterprets "
+                                       f"an observation that falsified it")
             oh = old_h.get(h["id"])
             if oh:
                 if oh.get("status") == "falsified" and h["status"] != "falsified":
@@ -802,6 +828,8 @@ def validate_world(w):
                     rep.err(where, "tests are append-only")
                 if oh.get("statement") != h["statement"]:
                     rep.err(where, "a hypothesis's statement never changes; propose a refined one instead")
+                if oh.get("revives") != h.get("revives"):
+                    rep.err(where, "what a hypothesis revives never changes")
         for hid in old_h:
             if hid not in cur_ids:
                 rep.err("hypotheses.json", f"hypothesis {hid} was removed")
