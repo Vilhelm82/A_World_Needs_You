@@ -355,6 +355,16 @@
    "surfaced_at": 41175.31,
    "source": "Federation colonial registry",
    "created_at": 41175.31
+  },
+  {
+   "id": "F-052",
+   "statement": "When Picard read out 'four of them children', Troi sensed from him a sharp grief, held down hard, out of proportion to the news; she will not say whose it was.",
+   "known_by": [
+    "troi"
+   ],
+   "surfaced_at": null,
+   "source": "Troi's empathic sense (a feeling, no facts)",
+   "created_at": 41175.317
   }
  ]
 }

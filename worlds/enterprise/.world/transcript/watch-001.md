@@ -219,3 +219,15 @@ Picard takes the three lines on his padd as they arrive and reads them standing.
 "Thank you, Number One." He is already turning back to the ready room. "Thirteen hundred."
 
 The doors close behind him. At conn, La Forge lets out a breath he has probably been holding since the word *children*, and goes back to his board.
+
+## turn 18
+
+She doesn't turn her head. The answer comes the way the question went, quiet and close.
+
+*Something I felt on the bridge just now. It isn't mine to tell you.*
+
+A pause, and then, more like herself:
+
+*Six dead, Will, and four of them children. There will be parents down there who've been waiting three weeks for someone to come. I want to be on the away team. They'll need someone who isn't a doctor.*
+
+On the viewscreen the stars stream past at warp eight. Troi turns a page on the padd in her lap that she hasn't been reading.
