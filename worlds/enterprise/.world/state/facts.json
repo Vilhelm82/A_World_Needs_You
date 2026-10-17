@@ -251,6 +251,20 @@
    "surfaced_at": 41174.88,
    "source": "observation (ROLL L:1:8); La Forge",
    "created_at": 41174.88
+  },
+  {
+   "id": "F-044",
+   "statement": "La Forge's recollection, on being asked: through his VISOR, Q's clothes, the judge's robes in the first Deneb IV appearance and the uniform in the second, read at the same even temperature as his face and hands. Scope: as F-043, one observer's unrecorded memory, recalled only when asked.",
+   "known_by": [
+    "laforge",
+    "data",
+    "yar",
+    "troi",
+    "player"
+   ],
+   "surfaced_at": 41174.89,
+   "source": "observation (ROLL L:1:10); La Forge",
+   "created_at": 41174.89
   }
  ]
 }

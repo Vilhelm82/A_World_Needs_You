@@ -4,7 +4,8 @@
   "F-002",
   "F-010",
   "F-042",
-  "F-043"
+  "F-043",
+  "F-044"
  ],
  "beliefs": [
   {
@@ -19,6 +20,7 @@
   "the link between them, felt on the bridge",
   "heard Data report the internal sensors never logged Q",
   "La Forge saw Q through the VISOR: even heat, no pulse",
-  "asked Lloyd, through the link, for a word off duty tonight"
+  "asked Lloyd, through the link, for a word off duty tonight",
+  "Q's clothes read the same temperature as his skin, to the VISOR"
  ]
 }

@@ -113,3 +113,15 @@ And then, without a sound, close as a hand on your arm and nowhere near your ear
 *Will. Later, off duty. We should talk.*
 
 Troi hasn't moved. She's looking at the viewscreen, and the stars streaming past it at warp five.
+
+## turn 10
+
+La Forge opens his mouth to answer and stops. Behind the VISOR, nothing of his eyes shows, but his head goes very slightly to one side.
+
+"Huh." He turns the chair back round. "Yeah. Same. The robes and the uniform. I didn't think about it." He's working it through as he goes. "That's wrong. The outside of anything you're wearing's always cooler than you are. Air's taking heat off it. You can see where a collar sits, where a sleeve ends. On him there wasn't any edge to see. Face, cloth, hands, one temperature."
+
+Data has turned from ops. "Then whatever presented itself as clothing was not losing heat to the room as fabric would." He pauses. "Or it was, and was being kept at the same temperature as the rest of him."
+
+"Or the VISOR saw what he wanted it to see," Yar says, still writing.
+
+Nobody answers that.
