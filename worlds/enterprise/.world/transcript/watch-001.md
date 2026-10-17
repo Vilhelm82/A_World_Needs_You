@@ -101,3 +101,15 @@ La Forge has turned his chair all the way round now. "Both times, yeah. I'd just
 "Why did you not mention it?" Data asks.
 
 "Who was I going to mention it to? It was Q." La Forge spreads his hands. "And I'd been aboard about an hour. I figured maybe it was me."
+
+## turn 9
+
+"Bodies." Data inclines his head. "Understood." Then, because he is Data: "One refinement, Commander. During the second appearance near Deneb IV he sat in the captain's chair for some time without moving. A body, still, would also need to be counted."
+
+La Forge is grinning back at you, which on him takes up most of his face. "Every time, aye, sir." He swings back to conn. "You might regret that. I see a lot."
+
+And then, without a sound, close as a hand on your arm and nowhere near your ears:
+
+*Will. Later, off duty. We should talk.*
+
+Troi hasn't moved. She's looking at the viewscreen, and the stars streaming past it at warp five.

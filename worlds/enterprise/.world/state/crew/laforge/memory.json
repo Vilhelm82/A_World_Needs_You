@@ -11,12 +11,19 @@
    "belief": "Good guy. Easy to talk to.",
    "from": "witnessed",
    "at": 41174.2
+  },
+  {
+   "about": "player",
+   "belief": "Wants to hear it when I see something nobody else does. Every time. Nobody's said that to me before.",
+   "from": "witnessed",
+   "at": 41174.885
   }
  ],
  "recent": [
   "Farpoint",
   "came aboard at Deneb IV",
   "heard Data report the internal sensors never logged Q",
-  "told the XO what Q looked like through the VISOR; hadn't told anyone before"
+  "told the XO what Q looked like through the VISOR; hadn't told anyone before",
+  "standing order from the XO: report anything the VISOR shows that nobody else can see"
  ]
 }
