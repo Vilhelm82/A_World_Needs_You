@@ -30,7 +30,7 @@ evaluation: modules/eval
 - options: off *(assumed)*
 
 ## Table
-- resolution: causal *(assumed)*
+- resolution: causal *(assumed)*. One exception, ruled by me: when an experiment probes a canon unknown and canon's record, physics and precedent don't settle the result, the GM writes the possible outcomes first and then rolls real dice. That's the only randomness in the world.
 - authority: character *(assumed)*
 - rewind: telling *(assumed)*
 - seal: closed *(assumed)*

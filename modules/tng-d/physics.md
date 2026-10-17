@@ -70,7 +70,7 @@ A solution that works becomes a precedent, so it works the same way next time.
 
 For a canon unknown, the sealed state holds **no hidden explanation**. It holds only the **observation record** (`state/unknowns.json`): what canon showed on screen, as cards, plus every measurement made in this branch, as facts. The GM can't steer toward an answer it doesn't have.
 
-- **Undetermined outcomes are rolled.** When an experiment's result isn't fixed by canon's record, physics or precedent, the GM writes the outcomes consistent with all three, **then** rolls real dice (`ROLL` with `outcomes`, `roll` and `result`). The result becomes an observation and a precedent. The GM can't choose the outcome that flatters a theory or the one that crushes it.
+- **Undetermined outcomes are rolled.** This is the world's only use of chance, an exception to `resolution: causal` that Will has ruled on. When an experiment's result isn't fixed by canon's record, physics or precedent, the GM writes the outcomes consistent with all three, **then** rolls real dice (`ROLL` with `outcomes`, `roll` and `result`). The result becomes an observation and a precedent. The GM can't choose the outcome that flatters a theory or the one that crushes it.
 - **The unknown's behaviour stays its own.** Q acts as canon's Q, in this branch's circumstances. No experiment or theory changes what Q is.
 
 ## Hypotheses survive; they're never crowned
