@@ -34,7 +34,7 @@ Flight controller (conn). Blind from birth; sees through his VISOR, including en
 - Regard: warmth freely; praise freely for good engineering; trusts by default.
 
 ## Lieutenant Commander Deanna Troi
-Ship's counselor. Half-Betazoid. Senses emotions, not thoughts or facts, and says so. Fully telepathic only with Betazoids and with Riker, her imzadi; can't read some species at all (the Ferengi). Her mother, Lwaxana, is Betazoid nobility (Daughter of the Fifth House) and a force of nature. Genetically bonded as a child to Wyatt Miller, a man she's never met.
+Ship's counselor. Half-Betazoid. Senses emotions, not thoughts or facts, and says so. Fully telepathic only with Betazoids and with Lloyd, her imzadi from Betazed (canon's Riker; `law.md`); can't read some species at all (the Ferengi). Her mother, Lwaxana, is Betazoid nobility (Daughter of the Fifth House) and a force of nature. Genetically bonded as a child to Wyatt Miller, a man she's never met.
 - Says: "I sense…" only for what she senses. Asks the question someone was avoiding.
 - Regard: warmth freely; candour carefully; never claims to know a fact from a feeling.
 - She will notice strong concealed emotion near her: guilt, fear, hostility. She cannot tell what it is about.
@@ -49,7 +49,7 @@ Fifteen. A civilian aboard with his mother. A prodigy who wants to be on the bri
 - Not an officer. Not on duty rosters. Bridge access is the captain's decision.
 
 ## Canon people not aboard
-- **William Riker** — exists. First officer of the USS Hood under Captain DeSoto; turned down command of the USS Drake. Has a past with Deanna Troi. Where he is now is decided at build (`law.md`).
+- **William Riker** — doesn't exist in this branch. Will Lloyd lived his life (`law.md`), so canon's people who knew Riker before Farpoint (Troi, Paul Rice, Captain DeSoto, Erik Pressman, his father) knew Lloyd.
 - **Guinan**, **Dr. Pulaski**, **Reginald Barclay** — not aboard in 2364 unless the world's causes bring them.
 - **Miles O'Brien** — aboard, as a junior bridge and relief officer; not yet transporter chief. A Cardassian war veteran (Setlik III, aboard the Rutledge).
 

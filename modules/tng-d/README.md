@@ -1,6 +1,6 @@
 # TNG-D — a living Enterprise (evaluation prototype)
 
-Star Trek: The Next Generation as a ship you live on. The Enterprise-D in 2364, the season-one crew, and you in the first officer's billet canon gave to Riker. The timeline branches at Farpoint and is yours from there: canon survives as forces with intentions, never as scheduled episodes.
+Star Trek: The Next Generation as a ship you live on. The Enterprise-D in 2364, the season-one crew, and you in Riker's shoes: his history, with your own variations wherever they make no difference to canon. The timeline branches at Farpoint and is yours from there: canon survives as forces with intentions, never as scheduled episodes.
 
 Two layers run on one clock:
 - **Ship life**: duty, off-duty, your own projects, covert or not. The ship goes on whether you're in the chair or in your quarters.

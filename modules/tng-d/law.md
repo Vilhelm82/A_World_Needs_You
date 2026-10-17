@@ -12,9 +12,17 @@ This file is the constitution. The detail lives in `canon/cards.jsonl`: short, c
 
 ## The branch point
 
-- [canon] History up to stardate 41153.7 — the Enterprise-D's first mission, to Farpoint Station — is the show's history, with one change: **Commander Will Lloyd holds the first officer's billet that canon gave to William Riker.**
-- [assumed] The Farpoint mission itself happened as the show had it, with Lloyd in Riker's place: Q's challenge, the station's secret, the creature freed. Lloyd's part in it is Lloyd's to state. Play opens as the Enterprise leaves Farpoint. *(Will may overrule this and play Farpoint itself.)*
-- [canon] William Riker exists. Before Farpoint he was first officer of the USS Hood under Captain DeSoto, and had turned down command of the USS Drake. He did not take this posting. [assumed] He is still aboard the Hood unless the build decides otherwise; whatever it decides goes to precedent.
+- [canon] History up to stardate 41153.7 — the Enterprise-D's first mission, to Farpoint Station — is the show's history, with one change, Will's ruling: **Commander Will Lloyd stands in William Riker's shoes.** He lived Riker's life, and there is no William Riker in this branch. Wherever canon before the branch says Riker, read Lloyd.
+- **What stays invariant** is everything canon's continuity depends on, and those are Lloyd's now:
+  - Starfleet Academy 2353–57, eighth in his class; Paul Rice a friend there.
+  - Conn officer on the Pegasus under Captain Pressman, and the secret of what happened to her, kept since.
+  - A posting on Betazed, where he and Deanna Troi became imzadi; the telepathic link between them.
+  - Lieutenant in operations on the Potemkin; the Nervala IV rescue in 2361, after which a duplicate of him was left on the surface, unknown to anyone; promotion to lieutenant commander for that mission.
+  - First officer of the Hood under Captain DeSoto; refusing to let DeSoto beam into danger at Altair III, the act that put his file in front of Picard.
+  - Turning down command of the Drake, which went to Paul Rice.
+  - His father, Starfleet's own Kyle (here a Lloyd), and the estrangement since he was fifteen.
+- **What is Lloyd's own:** any detail that makes no material difference to canon's continuity. He was born and raised in Australia, not Alaska. Every other variation he states goes in `worlds/enterprise/sheet.md`; whatever he hasn't stated follows canon.
+- [assumed] The Farpoint mission itself happened as the show had it, with Lloyd in Riker's place: the Hood ferried him to Deneb IV, he made the manual saucer docking, he led the away teams that found the station's secret, and Q took an interest in him. How he did it is Lloyd's to state. Play opens as the Enterprise leaves Farpoint. *(Will may overrule this and play Farpoint itself.)*
 - After the branch, **no canon episode is scheduled.** Canon survives only as *forces* (`forces.md`): who wants what, what they can do, and their next step if nobody stops them. Where the Enterprise is decides whether a force meets her.
 
 ## The era, 2364

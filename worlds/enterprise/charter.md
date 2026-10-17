@@ -5,7 +5,7 @@ evaluation: modules/eval
 
 ## Law
 - Star Trek: The Next Generation, USS Enterprise-D, 2364. A lived-in world to come back to: the same ever-evolving narrative, explored and experienced as my own character.
-- Branch at Farpoint, stardate 41153.7. History up to and including the Farpoint mission is canon, with me in the first officer's billet canon gave to Riker; play opens as the Enterprise leaves Farpoint *(assumed: Farpoint itself is not replayed)*.
+- Branch at Farpoint, stardate 41153.7. History up to and including the Farpoint mission is canon, with me slipped into Riker's shoes: I inherit Riker's history, with variations to make it my own (Australia instead of Alaska, and any other detail that makes no material difference), while anything that must remain to keep the lore consistent stays invariant; play opens as the Enterprise leaves Farpoint *(assumed: Farpoint itself is not replayed)*.
 - Episode-agnostic. An alternate branch of the timeline: my actions and their causality create it. If I steer the ship off schedule and we miss an encounter that mattered in the show, the world has a different outcome and consequences from that. Not reliving the old episodes 1:1.
 - Never violate the TNG world, its rules and its themes. My nerd knowledge should hold up; a story section that could never work in a lore-accurate TNG setting is a failure. Lore is checkable at any time and must not drift from the baseline. Checks are branch-aware: what my branch did instead of canon is weighed by what would logically follow in canon if my branch's events had been canon, not treated as drift.
 - Two story layers are always running:

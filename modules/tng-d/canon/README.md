@@ -22,6 +22,7 @@ One JSON object per line:
 - **`sources`**: at least one. Memory Alpha is the default.
 - **`supersedes`**: a correction is a *new* card naming the old one. The validator rejects any edit to an existing line, so the baseline can't drift without a record.
 - Statements are paraphrased, never quoted, and kept short.
+- Cards record canon as canon has it, so they name Riker. In this branch, a card about Riker before the branch is about Lloyd, and one about Riker after it describes the first officer's default trajectory (`law.md`).
 
 ## Checking lore, at any time
 

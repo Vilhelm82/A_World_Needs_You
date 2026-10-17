@@ -36,7 +36,7 @@ When anyone does something notable (the player or a crew member), the GM writes 
 | `witness` | Anyone who saw, heard or noticed | That person, and whoever they tell. |
 | `physical` | Objects, residue, damage, a missing component, a repaired one | Whoever looks in the right place. |
 | `behavioural` | Absences, changes in routine, a story with holes in it | Anyone who knows the person well enough. |
-| `empathic` | [canon] Strong concealed emotion near Counselor Troi. She can't read some species (the Ferengi), and is fully telepathic only with Betazoids and Riker. | Troi only: a feeling with no facts attached. |
+| `empathic` | [canon] Strong concealed emotion near Counselor Troi. She can't read some species (the Ferengi), and is fully telepathic only with Betazoids and Lloyd (canon's Riker). | Troi only: a feeling with no facts attached. |
 
 The [assumed] rows are the most lore-plausible reading of what a Galaxy-class computer records. A `// lore objection` can move any of them, and the ruling becomes a precedent.
 
