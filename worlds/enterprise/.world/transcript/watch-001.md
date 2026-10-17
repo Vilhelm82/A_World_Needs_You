@@ -173,3 +173,7 @@ Two messages come in while you work. One is from Dr. Crusher, her staffing list:
 Around you the bridge goes on: Data's calibration figures scrolling at ops, Yar handing tactical to a lieutenant you don't know yet, La Forge humming something very quietly until he notices.
 
 At eleven hundred exactly, MacDougal's procedure arrives. Twelve steps. Six hours, four required. Step nine reads **HOLD POINT: CHIEF ENGINEER'S CALL**. At the foot is a line for the captain's signature, blank.
+
+## turn 14
+
+*"MacDougal."* Something metallic sets down hard on her end. *"You've got it, then."*

@@ -111,3 +111,4 @@
 {"watch": 1, "turn": 13, "type": "MOVED", "by": "wesley", "what": "asked the first officer for a bridge observation pass", "cause": "npc:wesley"}
 {"watch": 1, "turn": 13, "type": "MOVED", "by": "yar", "what": "handed tactical to a relief lieutenant and went to write the protocol", "cause": "npc:yar"}
 {"watch": 1, "turn": 13, "type": "MOVED", "by": "picard", "what": "finished the Farpoint log in the ready room; booked Number One at 1400", "cause": "npc:picard"}
+{"watch": 1, "turn": 14, "type": "TURN", "stardate": 41175.142, "present": ["player", "data", "laforge", "troi", "macdougal"], "speakers": ["macdougal"], "addressed": {"player": 1}, "initiated": [], "transcript": "watch-001.md#turn-14"}
