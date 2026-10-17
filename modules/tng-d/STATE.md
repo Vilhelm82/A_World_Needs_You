@@ -130,4 +130,6 @@ The main timeline is permanent. Forks are where anything goes.
 | `// holodeck` | "That was a holodeck run": everything since the last save moves onto a new fork branch, and main resets to that save. Nothing is lost. |
 | `// return` | Back to main. |
 
-After any of the four, the GM tells Will to **end the session and open a fresh one**: the conversation still remembers what the files no longer contain, and that bleeds. On the next open the GM reads only the files.
+After any of the four, the GM tells Will to **end the session and open a fresh one** in the same clone: the conversation still remembers what the files no longer contain, and that bleeds. On the next open the GM reads only the files.
+
+**Where it runs.** The world runs from Will's own disk, in a local Claude session opened at the repo root. GitHub (`origin`) is its remote copy, never the place it's played from. The post-commit hook pushes every commit; `save`, `fork` and `holodeck` push their tags and branches; and because the copy mirrors the disk, `holodeck` also moves the remote's main back to the save (`--force-with-lease`). A failed push never stops play: the next commit tries again.

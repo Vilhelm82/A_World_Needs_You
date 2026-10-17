@@ -26,9 +26,9 @@ This preset is an **evaluation prototype**. Every watch is scored against the en
 
 ## Starting
 
-The Enterprise world's charter is already at `worlds/enterprise/charter.md`. Open a Claude Code session at the repo root and say "Enterprise". The first open builds the world (clean hands), then play begins.
+The world runs from your own disk; GitHub is its remote copy. The Enterprise world's charter is already at `worlds/enterprise/charter.md`, and your character sheet at `worlds/enterprise/sheet.md`. Open a local Claude session at the root of your clone and say "Enterprise". The first open builds the world (clean hands), then play begins.
 
-Run once per clone so validation runs on every commit:
+Run once per clone so every commit is validated and then pushed to GitHub:
 
 ```
 python3 tools/wk.py install-hooks

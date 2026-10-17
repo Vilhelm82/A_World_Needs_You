@@ -490,17 +490,35 @@ def main():
         check("trend written", (w / "evals/TREND.md").exists())
         ok, out = commit(repo, "eval")
 
+        # the world runs from disk; origin (GitHub) is the remote copy and gets every commit
+        remote = tmp / "remote.git"
+        sh("git", "init", "-q", "--bare", str(remote), cwd=tmp)
+        sh("git", "remote", "add", "origin", str(remote), cwd=repo)
+        sh("git", "push", "-q", "origin", "main", cwd=repo)
+
+        def remote_sha(ref):
+            out = sh("git", "ls-remote", "origin", ref, cwd=repo).stdout.split()
+            return out[0] if out else None
+
+        def local_sha(ref):
+            return sh("git", "rev-parse", ref, cwd=repo).stdout.strip()
+
         # timelines
         sh(*wk, "save", "worlds/test", "start", cwd=repo)
         check("save tags", "save/test/start" in sh("git", "tag", cwd=repo).stdout)
+        check("save pushes its tag", remote_sha("refs/tags/save/test/start") == local_sha("save/test/start"))
+        check("save pushes main", remote_sha("refs/heads/main") == local_sha("main"))
         sh(*wk, "fork", "worlds/test", "ale", cwd=repo)
         check("fork switches branch", sh("git", "branch", "--show-current", cwd=repo).stdout.strip()
               == "fork/test/ale")
+        check("fork pushes its branch", remote_sha("refs/heads/fork/test/ale") == local_sha("HEAD"))
         fd = json.loads(f.read_text())
         fd["facts"].append({"id": "F-003", "statement": "Lloyd shot a security officer.",
                             "known_by": ["all"], "surfaced_at": "41160.0", "source": "fork",
                             "created_at": "41160.0"})
         f.write_text(json.dumps(fd, indent=2)); commit(repo, "fork play")
+        check("every commit is pushed (post-commit hook)",
+              remote_sha("refs/heads/fork/test/ale") == local_sha("HEAD"))
         sh(*wk, "return", "worlds/test", cwd=repo)
         check("return goes to main", sh("git", "branch", "--show-current", cwd=repo).stdout.strip() == "main")
         check("main untouched by fork", "shot a security officer" not in f.read_text())
@@ -523,6 +541,9 @@ def main():
         forks = sh("git", "branch", "--list", "fork/test/holodeck-*", cwd=repo).stdout
         check("holodeck keeps the run on a fork", "holodeck-" in forks, forks)
         check("ledger records the holodeck run", '"HOLODECK"' in lp.read_text())
+        check("holodeck resets the remote copy's main too", remote_sha("refs/heads/main") == local_sha("main"))
+        hb = forks.split()[-1]
+        check("holodeck pushes the run's fork", remote_sha(f"refs/heads/{hb}") is not None, hb)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
     print(f"\n{'ALL PASSED' if not FAILS else f'{len(FAILS)} FAILED'}")

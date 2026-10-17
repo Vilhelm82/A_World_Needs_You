@@ -1445,10 +1445,25 @@ def require_clean():
 
 
 def commit(msg):
+    """Commit without the post-commit push; timeline commands push their own refs."""
     git("add", "-A")
-    r = subprocess.run(["git", "commit", "-q", "-m", msg], capture_output=True, text=True)
+    r = subprocess.run(["git", "commit", "-q", "-m", msg], capture_output=True, text=True,
+                       env=dict(os.environ, WK_NO_PUSH="1"))
     if r.returncode != 0:
         raise SystemExit(f"commit failed:\n{r.stdout}{r.stderr}")
+
+
+def push(*args):
+    """Push to origin, the remote copy on GitHub. Never fatal: a failed push is reported and
+    play goes on. With no origin at all there is nothing to do."""
+    if subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True).returncode != 0:
+        return True
+    r = subprocess.run(["git", "push", "-q", *args], capture_output=True, text=True)
+    if r.returncode != 0:
+        print(f"wk: push to origin failed ({' '.join(args)}); play goes on.\n{r.stderr.strip()}",
+              file=sys.stderr)
+        return False
+    return True
 
 
 BLEED = ("\nEnd this session and open a fresh one. The conversation still remembers what the "
@@ -1472,6 +1487,7 @@ def cmd_save(a):
     append_ledger(w, {"watch": wa, "turn": tu, "type": "SAVE", "name": a.name})
     commit(f"{w.name}: save {a.name}")
     git("tag", tag)
+    push("origin", "HEAD", f"refs/tags/{tag}")
     print(f"saved: {tag}")
 
 
@@ -1484,6 +1500,7 @@ def cmd_fork(a):
     wa, tu = last_position(w)
     append_ledger(w, {"watch": wa, "turn": tu, "type": "FORK", "name": a.name})
     commit(f"{w.name}: fork {a.name}")
+    push("-u", "origin", br)
     print(f"on fork {br}; main is untouched." + BLEED)
 
 
@@ -1500,10 +1517,13 @@ def cmd_holodeck(a):
     stamp_ = dt.datetime.now().strftime("%Y%m%d-%H%M%S")
     br = f"fork/{w.name}/holodeck-{stamp_}"
     git("branch", br)
+    push("origin", br)
     git("reset", "-q", "--hard", tags[0])
     wa, tu = last_position(w)
     append_ledger(w, {"watch": wa, "turn": tu, "type": "HOLODECK", "fork": br, "from_save": tags[0]})
     commit(f"{w.name}: holodeck run moved to {br}")
+    # the remote copy mirrors the disk, so its main goes back to the save too
+    push("--force-with-lease", "origin", main)
     print(f"main reset to {tags[0]}; the run is kept on {br}." + BLEED)
 
 
@@ -1521,7 +1541,17 @@ def cmd_return(a):
 
 HOOK = """#!/bin/sh
 # Installed by tools/wk.py install-hooks. Validates every structured world before a commit.
-exec python3 "$(git rev-parse --show-toplevel)/tools/wk.py" validate --all --hook
+python3 -c "" 2>/dev/null && PY=python3 || PY=python
+exec "$PY" "$(git rev-parse --show-toplevel)/tools/wk.py" validate --all --hook
+"""
+
+POST_HOOK = """#!/bin/sh
+# Installed by tools/wk.py install-hooks. The world runs from this disk; GitHub (origin) is
+# its remote copy, so every commit is pushed. A failed push never stops play.
+[ -n "$WK_NO_PUSH" ] && exit 0
+git remote get-url origin >/dev/null 2>&1 || exit 0
+git push -q origin HEAD >/dev/null 2>&1 || echo "wk: push to origin failed; play goes on, and the next commit retries." >&2
+exit 0
 """
 
 
@@ -1529,10 +1559,11 @@ def cmd_install_hooks(a):
     d = Path(git("rev-parse", "--git-dir").strip())
     d = (d if d.is_absolute() else repo_root() / d) / "hooks"
     d.mkdir(parents=True, exist_ok=True)
-    p = d / "pre-commit"
-    p.write_text(HOOK)
-    os.chmod(p, 0o755)
-    print(f"installed {p}")
+    for name, text in (("pre-commit", HOOK), ("post-commit", POST_HOOK)):
+        p = d / name
+        p.write_text(text, newline="\n")
+        os.chmod(p, 0o755)
+        print(f"installed {p}")
 
 
 # ---------------------------------------------------------------- main
