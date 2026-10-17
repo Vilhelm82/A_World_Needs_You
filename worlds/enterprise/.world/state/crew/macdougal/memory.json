@@ -16,11 +16,18 @@
    "belief": "Docked by hand. Good flying. I'd still rather check.",
    "from": "heard",
    "at": 41174.2
+  },
+  {
+   "about": "player",
+   "belief": "Backed latch four without making me argue for it, and means to fly the redock himself. Either he's good or he didn't read the margins.",
+   "from": "witnessed",
+   "at": 41174.82
   }
  ],
  "recent": [
   "a week aboard, since Deneb IV",
   "latch four",
-  "showed the first officer latch four's traces; asked for a controlled separation on the schedule"
+  "showed the first officer latch four's traces; asked for a controlled separation on the schedule",
+  "XO agreed: procedure from me, window from him, the captain together; he flies the redock"
  ]
 }

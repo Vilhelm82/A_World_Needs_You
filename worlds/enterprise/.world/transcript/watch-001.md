@@ -17,3 +17,15 @@ Over her shoulder: "Ensign, run four again from the top." The ensign does. The s
 "I can't see that housing with the saucer on. I want a controlled separation at sublight. Six hours, my people out on the ventral hull with a structural imager, and then you put her back the way you did at Deneb." A breath. "I'd like it on the schedule before the captain reads my report. So it lands as a plan, not a complaint."
 
 At her elbow, on a napkin on the console, a replicated scone with one bite out of it.
+
+## turn 2
+
+MacDougal looks at you a moment longer than the order needs. Then at the scone.
+
+"Procedure by eleven hundred." She picks it up, turns it over like a part that failed inspection, and takes a bite. Chews. "My grandmother's. The recipe says a good handful of butter. The replicator wants a number, and every number I give it is wrong." She puts it down. "Order obeyed, sir."
+
+She's already back at the display. "Ensign, pull the full separation checklist from the shakedown and put it on my padd. All of it, not the summary."
+
+"Aye, Commander."
+
+To you: "I'll want the battle bridge crewed for it, and somebody on the saucer who knows what a docking feels like from the inside. If you're flying her back, that's you." A pause. "I'll put six hours in the procedure. I'd rather you didn't let him talk me down to four."

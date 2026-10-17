@@ -4,7 +4,9 @@
    "id": "J-001",
    "title": "Latch four",
    "owner": "macdougal",
-   "collaborators": [],
+   "collaborators": [
+    "player"
+   ],
    "kind": "duty",
    "goal": "find out whether saucer docking latch four was damaged in the Farpoint separation, and fix it if so",
    "stages": [
@@ -16,8 +18,8 @@
     },
     {
      "name": "first officer's schedule and captain's approval",
-     "status": "todo",
-     "needs": "the XO; the captain",
+     "status": "doing",
+     "needs": "MacDougal's procedure (promised by 1100); the XO's window; the captain, approached by both together",
      "cost": "a stop of some hours"
     },
     {
