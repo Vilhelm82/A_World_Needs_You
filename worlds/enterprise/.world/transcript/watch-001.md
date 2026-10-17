@@ -383,3 +383,9 @@ He lets the word stand. Then, precisely: "I doubt an alarm will detain him. But 
 "Mr. La Forge is a conn officer," he adds, as though checking a fact.
 
 He is already moving towards the door to the ready room. "Thank you, Number One."
+
+## turn 30
+
+Picard stops with the door already open on the ready room.
+
+"I was confirming that it is off duty, Number One, not objecting to it." He turns half back. "Noticed something was wrong. What, precisely?"
