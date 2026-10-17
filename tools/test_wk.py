@@ -28,8 +28,10 @@ def check(name, cond, detail=""):
         FAILS.append(name)
 
 
-def soul(cid, tier="canon", routing=None):
+def soul(cid, tier="canon", routing=None, codes=(), roles=(), deduction="medium"):
     return {"id": cid, "name": cid.title(), "rank": "Lt", "post": "ops", "tier": tier,
+            "access": {"areas": [], "systems": [], "codes": list(codes), "skills": []},
+            "roles": list(roles), "competence": {"deduction": deduction},
             "created_at": "41153.7",
             "persona": {"values": ["duty"], "traits": ["precise"], "tired_of": "x",
                         "wrong_about": "y", "cares_about": "z"},
@@ -47,13 +49,26 @@ def write(p, obj):
 def build(repo):
     w = repo / "worlds" / "test"
     s = w / ".world" / "state"
-    write(w / "charter.md", "# Charter — test\n")
+    write(w / "charter.md", "# Charter — test\n\npreset: modules/tng-d\n")
+    write(repo / "modules/tng-d/law.md", "# Law\n\n- [canon] Phasers have a stun setting.\n")
+    write(repo / "modules/tng-d/canon/cards.jsonl", json.dumps(
+        {"id": "K-001", "layer": "rules", "topic": "transporters and shields",
+         "statement": "A transporter cannot beam through raised deflector shields.",
+         "sources": ["https://memory-alpha.fandom.com/wiki/Transporter"],
+         "verified_at": "2026-10-18", "supersedes": None}) + "\n")
     write(w / ".world" / "timeline.json", {"main": "main"})
     write(s / "clock.json", {"stardate": 41153.7, "ship_time": "08:00", "day": 1, "alert": "normal",
                              "location": "Farpoint", "episode_open": None, "timeline": "main"})
     write(s / "ship.json", {"course": "none", "orders": [], "systems": {}})
+    write(s / "player.json", {"name": "Will Lloyd", "rank": "Commander", "post": "first officer",
+                              "access": {"areas": [], "systems": [], "skills": [],
+                                         "codes": ["xo", "engineering-override"]},
+                              "location": "bridge"})
+    profiles = {"picard": dict(codes=["captain", "engineering-override"], roles=["captain"]),
+                "data": dict(codes=[], roles=["ops"], deduction="high"),
+                "yar": dict(codes=["security"], roles=["security"], deduction="high")}
     for cid in ("picard", "data", "yar"):
-        write(s / "crew" / cid / "soul.json", soul(cid))
+        write(s / "crew" / cid / "soul.json", soul(cid, **profiles[cid]))
         write(s / "crew" / cid / "memory.json", {"learned": [], "beliefs": [], "recent": []})
     write(s / "facts.json", {"facts": [
         {"id": "F-001", "statement": "The Enterprise left Farpoint.", "known_by": ["all"],
@@ -67,7 +82,9 @@ def build(repo):
                                           "capabilities": "all", "trajectory": [
                                               {"step": "return", "preconditions": "quiet",
                                                "status": "on_track"}]}]})
-    write(s / "evidence.json", {"traces": [], "cases": []})
+    write(s / "deeds.json", {"acts": [], "traces": [], "cases": []})
+    write(s / "divergence.json", {"divergences": []})
+    write(s / "projects.json", {"projects": []})
     write(s / "premises.json", {"premises": []})
     write(s / "pins.json", {"pins": []})
     write(w / ".world" / "ledger.jsonl", json.dumps({"watch": 1, "turn": 0, "type": "WATCH"}) + "\n")
@@ -163,34 +180,166 @@ def main():
         check("the clock going backwards is refused", not ok and "backwards" in out, out)
         sh("git", "reset", "-q", "--hard", cwd=repo)
 
-        # investigator citing a trace outside its light cone -> refused
-        ep = w / ".world/state/evidence.json"
-        ep.write_text(json.dumps({"traces": [
-            {"id": "T-001", "type": "replicator", "where": "deck 8", "who_can_read": ["security"],
-             "lasts": "permanent", "created_at": "41153.8"},
-            {"id": "T-002", "type": "witness", "where": "crowd:ensign", "who_can_read": ["anyone"],
-             "lasts": "memory", "created_at": "41153.8"}],
-            "cases": [{"case_id": "C-001", "investigator": "yar", "trigger": "x", "known": ["T-001"],
-                       "next_step": "query", "status": "open",
-                       "runs": [{"watch": 1, "turn": 2, "isolated": True, "cited": ["T-002"]}]}]}))
+        # deeds and deduction: only the XO's codes and the captain's could do it; the captain has an alibi
+        ep = w / ".world/state/deeds.json"
+        deeds = {"acts": [{"id": "A-001", "actor": "player", "what": "rerouted the plasma conduit",
+                           "at": 41160.1, "where": "deck 31", "visibility": "unwitnessed",
+                           "valence": "credit",
+                           "constraints": {"means": {"codes": ["engineering-override"]},
+                                           "opportunity": {"where": "deck 31",
+                                                           "window": [41160.0, 41160.2]}},
+                           "traces": ["T-001", "T-002", "T-003"]}],
+                 "traces": [
+                     {"id": "T-001", "type": "authorisation", "where": "computer core", "act": "A-001",
+                      "who_can_read": ["security"], "lasts": "permanent", "created_at": "41160.1"},
+                     {"id": "T-002", "type": "location", "where": "bridge", "subject": "picard",
+                      "window": [41159.9, 41160.3], "act": "A-001", "who_can_read": ["security"],
+                      "lasts": "permanent", "created_at": "41160.1"},
+                     {"id": "T-003", "type": "witness", "where": "crowd:ensign", "act": "A-001",
+                      "who_can_read": ["anyone"], "lasts": "memory", "created_at": "41160.1"}],
+                 "cases": []}
+        ep.write_text(json.dumps(deeds, indent=2))
+        ok, out = commit(repo, "a deed")
+        check("an act with traces and constraints commits", ok, out)
+        r = json.loads(sh(*wk, "suspects", "worlds/test", "--act", "A-001", "--as", "yar", cwd=repo).stdout)
+        check("deduction: exclusive access makes the XO the only suspect", r["pool"] == ["player"], r)
+        check("deduction: an alibi from a readable location trace clears the captain",
+              "placed elsewhere by T-002" in r["reasons"].get("picard", ""), r["reasons"])
+        r = json.loads(sh(*wk, "suspects", "worlds/test", "--act", "A-001", "--as", "data", cwd=repo).stdout)
+        check("deduction: Data sees the witness trace but not the security log",
+              r["pool"] == ["picard", "player"], r)
+
+        # a run that cites outside its light cone, then one with the wrong pool, then a correct one
+        deeds["cases"] = [{"case_id": "C-001", "investigator": "yar", "trigger": "override alarm",
+                           "known": ["T-001"], "next_step": "query", "status": "open",
+                           "runs": [{"watch": 1, "turn": 2, "act": "A-001", "isolated": True,
+                                     "cited": ["T-003"], "pool": ["player"], "suspects": ["player"]}]}]
+        ep.write_text(json.dumps(deeds, indent=2))
         ok, out = commit(repo, "leaky investigator")
         check("an investigator citing outside its light cone is refused",
               not ok and "outside the investigator's light cone" in out, out)
-        d = json.loads(ep.read_text()); d["cases"][0]["runs"][0]["cited"] = ["T-001"]
-        ep.write_text(json.dumps(d, indent=2))
+        deeds["cases"][0]["runs"][0].update(cited=["T-001"], pool=["picard", "player"])
+        ep.write_text(json.dumps(deeds, indent=2))
+        ok, out = commit(repo, "wrong pool")
+        check("a run whose pool doesn't match the computed pool is refused",
+              not ok and "does not match the computed pool" in out, out)
+        deeds["cases"][0]["runs"][0].update(pool=["player"], suspects=[])
+        ep.write_text(json.dumps(deeds, indent=2))
         ok, out = commit(repo, "evidence")
-        check("an investigator citing its own light cone commits", ok, out)
+        check("a run with the computed pool commits", ok, out)
+
+        # knowledge locality for everyone
+        before = lp.read_text()
+        append(w, {"watch": 1, "turn": 3, "type": "SAID", "by": "data", "claim": "x", "truth": "true",
+                   "fact": "F-002"})
+        ok, out = commit(repo, "data knows too much")
+        check("a crew member citing a fact they don't know is refused",
+              not ok and "isn't in their knowledge" in out, out)
+        lp.write_text(before)
+        append(w, {"watch": 1, "turn": 3, "type": "SAID", "by": "crowd:ensign", "claim": "x",
+                   "truth": "true", "fact": "F-002"})
+        ok, out = commit(repo, "the crowd knows too much")
+        check("the crowd citing a non-public fact is refused", not ok and "crowd can't know" in out, out)
+        lp.write_text(before)
+        append(w, {"watch": 1, "turn": 3, "type": "TOLD", "to": ["data"], "fact": "F-002"})
+        ok, out = commit(repo, "told without update")
+        check("telling someone a fact without updating known_by is refused",
+              not ok and "isn't added to its known_by" in out, out)
+        fd = json.loads(f.read_text()); fd["facts"][1]["known_by"].append("data")
+        f.write_text(json.dumps(fd, indent=2))
+        append(w, {"watch": 1, "turn": 4, "type": "SAID", "by": "data", "claim": "x", "truth": "true",
+                   "fact": "F-002"})
+        ok, out = commit(repo, "told properly")
+        check("once told, they can cite it", ok, out)
+
+        # lore touches need lore checks
+        before = lp.read_text()
+        t5 = turn(5, ["data"], ["data"], {"player": 1})
+        t5["lore_touch"] = [{"what": "beaming through shields", "layer": "rules"}]
+        append(w, t5)
+        tdir = w / ".world/transcript"; tdir.mkdir(exist_ok=True)
+        ok, out = commit(repo, "unchecked lore")
+        check("a lore touch without a LORECHECK is refused", not ok and "touched lore" in out, out)
+        append(w, {"watch": 1, "turn": 5, "type": "LORECHECK", "claim": "beaming through shields",
+                   "layer": "rules", "verdict": "consistent", "cards": ["K-001"], "divergence": [],
+                   "agent": False})
+        ok, out = commit(repo, "checked lore")
+        check("a lore touch with its LORECHECK commits", ok, out)
+        res = json.loads(sh(*wk, "lore", "worlds/test", "can a transporter beam through shields",
+                            cwd=repo).stdout)
+        check("lore search finds the card", res["coverage"] == "covered"
+              and res["cards"] and res["cards"][0]["id"] == "K-001", res)
+        res = json.loads(sh(*wk, "lore", "worlds/test", "Ferengi trade bylaws", cwd=repo).stdout)
+        check("lore search reports no coverage", res["coverage"] == "none", res)
+
+        # canon cards are append-only and cited
+        cards = repo / "modules/tng-d/canon/cards.jsonl"
+        cbefore = cards.read_text()
+        cards.write_text(cbefore.replace("cannot", "can"))
+        ok, out = commit(repo, "edit a card")
+        check("editing a verified card is refused", not ok and "append-only" in out, out)
+        cards.write_text(cbefore + json.dumps({"id": "K-002", "layer": "rules", "topic": "t",
+                                               "statement": "s", "sources": [],
+                                               "verified_at": "2026-10-18", "supersedes": None}) + "\n")
+        ok, out = commit(repo, "uncited card")
+        check("a card without a source is refused", not ok and "at least one source" in out, out)
+        cards.write_text(cbefore + json.dumps({"id": "K-002", "layer": "rules", "topic": "t",
+                                               "statement": "s2", "sources": ["https://x"],
+                                               "verified_at": "2026-10-18", "supersedes": "K-001"}) + "\n")
+        ok, out = commit(repo, "superseding card")
+        check("a superseding card commits", ok, out)
+
+        # divergence chains must end in something somebody did
+        dv = w / ".world/state/divergence.json"
+        dv.write_text(json.dumps({"divergences": [
+            {"id": "D-001", "canon": "c", "branch": "b", "parents": ["D-002"], "at": 41161},
+            {"id": "D-002", "canon": "c", "branch": "b", "parents": ["D-001"], "at": 41161}]}))
+        ok, out = commit(repo, "cycle")
+        check("a divergence cycle is refused", not ok and "cycle" in out, out)
+        dv.write_text(json.dumps({"divergences": [
+            {"id": "D-001", "canon": "c", "branch": "b", "parents": ["L:9:9"], "at": 41161}]}))
+        ok, out = commit(repo, "no cause")
+        check("a divergence citing no real ledger entry is refused", not ok and "matches no ledger" in out, out)
+        dv.write_text(json.dumps({"divergences": [
+            {"id": "D-001", "canon": "the warp test happened", "branch": "it never ran",
+             "parents": ["L:1:5"], "at": 41161},
+            {"id": "D-002", "canon": "Wesley made acting ensign", "branch": "still a civilian",
+             "parents": ["D-001"], "at": 41162}]}, indent=2))
+        fo = w / ".world/state/forces.json"
+        fod = json.loads(fo.read_text()); fod["forces"][0]["trajectory"][0].update(status="averted", cause="x")
+        fo.write_text(json.dumps(fod))
+        ok, out = commit(repo, "bad force cause")
+        check("a force change whose cause is neither a divergence nor a ledger ref is refused",
+              not ok and "neither a divergence" in out, out)
+        fod["forces"][0]["trajectory"][0]["cause"] = "D-002"
+        fo.write_text(json.dumps(fod, indent=2))
+        ok, out = commit(repo, "divergence chain")
+        check("a valid divergence chain and force cause commit", ok, out)
+
+        # projects
+        pj = w / ".world/state/projects.json"
+        proj = {"id": "J-001", "title": "Warp field resonance", "owner": "player",
+                "collaborators": ["laforge"], "kind": "experiment", "goal": "g",
+                "stages": [{"name": "model", "status": "doing", "needs": "time", "cost": "a shift"}],
+                "status": "active", "precedents": ["P-001"], "started_at": 41161}
+        pj.write_text(json.dumps({"projects": [proj]}))
+        ok, out = commit(repo, "unknown collaborator")
+        check("a project naming an unknown person is refused", not ok and "unknown 'laforge'" in out, out)
+        proj["collaborators"] = ["data"]
+        pj.write_text(json.dumps({"projects": [proj]}, indent=2))
+        ok, out = commit(repo, "project")
+        check("a valid project commits", ok, out)
 
         # metrics: 12 turns where the player is addressed heavily and yar is neglected
         tdir = w / ".world/transcript"; tdir.mkdir(exist_ok=True)
-        entries, text = [], ""
-        for n in range(2, 14):
+        entries, text = [], "## turn 5\n...\n"
+        for n in range(6, 18):
             entries.append(turn(n, ["picard", "data", "yar"], ["picard", "data"],
                                 {"player": 3, "data": 1}, initiated=["data"] if n % 2 else []))
             text += f"## turn {n}\n...\n"
-        entries += [{"watch": 1, "turn": 13, "type": "MOVED", "by": "q", "what": "x", "cause": "force:q"},
-                    {"watch": 1, "turn": 13, "type": "MOVED", "by": "player", "what": "y", "cause": "player"},
-                    {"watch": 1, "turn": 13, "type": "DECIDED", "by": "picard", "what": "z",
+        entries += [{"watch": 1, "turn": 17, "type": "MOVED", "by": "q", "what": "x", "cause": "force:q"},
+                    {"watch": 1, "turn": 17, "type": "MOVED", "by": "player", "what": "y", "cause": "player"},
+                    {"watch": 1, "turn": 17, "type": "DECIDED", "by": "picard", "what": "z",
                      "without_player": True}]
         append(w, *entries)
         (tdir / "watch-001.md").write_text(text)
@@ -198,10 +347,13 @@ def main():
         check("a turn of play commits", ok, out)
         m = json.loads(sh(*wk, "metrics", "worlds/test", "--watch", "1", "--write", cwd=repo).stdout)
         check("address share computed", m["player_address_share"] == 0.75, m["player_address_share"])
-        check("neglected officer detected", m["neglected_ids"] == ["yar"] and m["neglected_windows"] == 3,
+        check("neglected officer detected", m["neglected_ids"] == ["yar"] and m["neglected_windows"] == 4,
               (m["neglected_ids"], m["neglected_windows"]))
         check("autonomy computed", m["autonomy"] == 0.5, m["autonomy"])
         check("investigator isolation computed", m["cases_isolated"] == 1.0, m["cases_isolated"])
+        check("pool_ignored flags the protected suspect", m["pool_ignored"] == 1, m["pool_ignored"])
+        check("lore checked rate computed", m["lore_checked_rate"] == 1.0, m["lore_checked_rate"])
+        check("divergences counted", m["divergences"] == 2, m["divergences"])
         check("parity computed", m["parity"] == 1.0, m["parity"])
 
         # report with an audit containing a spoiler finding

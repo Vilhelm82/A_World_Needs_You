@@ -13,7 +13,8 @@ After the record and the commit, outside the world's voices:
    - `worlds/<world>/evals/watch-NNN.md`: the public scorecard. Scores, metrics against targets, finding counts by severity, and the text of non-spoiler findings. Spoiler findings appear as a count only.
    - `worlds/<world>/evals/TREND.md`: one row per watch with the harness version, so a change's effect shows up as a step in the row after it.
 5. **Proposals.** Append the auditor's proposals to `worlds/<world>/evals/PROPOSALS.md` as `P-NNN`, status `pending`, each with its target goal and metric, the change, and the baseline value it should move from. Proposals with spoiler findings keep their reasoning in `.world/evals/` and show only the change itself.
-6. Commit: `<world>: watch NNN evaluation`. Tell Will one line: the record and the scorecard are written, and how many proposals are pending.
+6. **Lore re-audit, when due.** If the metrics say `reaudit_due` (five watches since the last re-audit, or ten new precedents), spawn a fresh agent with `modules/eval/LORE_AGENT.md` in re-audit mode over the preset's law and `canon/` cards and the world's precedents and divergences. Its corrections become proposals (superseding cards and refining precedents included). Log `REAUDIT` in the ledger.
+7. Commit: `<world>: watch NNN evaluation`. Tell Will one line: the record and the scorecard are written, and how many proposals are pending.
 
 ## Between watches
 

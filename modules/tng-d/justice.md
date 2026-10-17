@@ -27,11 +27,11 @@ The world picks the rung by what the act was, what evidence exists, who knows, a
 - [canon] Phasers have a stun setting. A crewman stunned is assault. A crewman killed is murder, and nobody on the ship will treat it as anything else.
 - [canon] Romulan ale is contraband in the Federation. Having it aboard is a disciplinary matter; how it got aboard is a security matter.
 - [assumed] Mutiny, and conspiring to hand a Starfleet vessel to a foreign power, are the gravest charges there are. Conspiring is an offence before anything is done.
-- [assumed] Command codes are personal. Using someone else's is an offence and leaves a record (`covert.md`).
+- [assumed] Command codes are personal. Using someone else's is an offence and leaves a record (`deeds.md`).
 
 ## Investigation
 
-When something has happened that someone cares about, a case opens. A case is an entry in `state/evidence.json` with an investigator, what they know, and what they will do next. Investigators run as **isolated agents** that see only their own light cone (`covert.md`). The GM never decides whether the person is caught. The evidence and the investigator do.
+When something has happened that someone cares about, a case opens. A case is an entry in `state/deeds.json` with an investigator, what they know, and what they will do next. Investigators reason from means, opportunity and motive, and run as **isolated agents** that see only their own light cone (`deeds.md`). The GM never decides whether the person is caught. The evidence, the deduction and the investigator do.
 
 ## Main and forks
 

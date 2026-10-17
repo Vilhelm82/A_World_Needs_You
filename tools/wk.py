@@ -7,6 +7,8 @@ manages timelines (save, fork, holodeck, return). Standard library only.
   python3 tools/wk.py validate worlds/enterprise
   python3 tools/wk.py validate --all              (what the pre-commit hook runs)
   python3 tools/wk.py next-id worlds/enterprise fact
+  python3 tools/wk.py suspects worlds/enterprise --act A-012 --as yar
+  python3 tools/wk.py lore worlds/enterprise "transporters can't beam through shields"
   python3 tools/wk.py metrics worlds/enterprise --watch 3 --write
   python3 tools/wk.py report worlds/enterprise --watch 3
   python3 tools/wk.py stamp
@@ -43,8 +45,17 @@ ROLES = {"security", "captain", "ops", "medical", "engineering", "anyone"}
 CASE_STATUS = {"open", "closed", "cold"}
 EPISODE_STATUS = {"pending", "open", "closed"}
 PIN_OPS = {"==", "!=", "in"}
-VERDICTS = {"consistent", "unsupported", "contradicts"}
+VERDICTS = {"consistent", "diverged", "unsupported", "contradicts"}
 OUTCOMES = {"done", "denied", "cost"}
+VISIBILITY = {"open", "unwitnessed", "concealed"}
+VALENCE = {"credit", "blame", "neutral"}
+COMPETENCE = {"high", "medium", "low"}
+PROJECT_KINDS = {"duty", "experiment", "personal", "covert", "other"}
+STAGE_STATUS = {"todo", "doing", "done", "failed"}
+PROJECT_STATUS = {"active", "paused", "done", "abandoned"}
+LAYERS = {"rules", "history-pre", "history-post"}
+ACCESS_KEYS = ("areas", "systems", "codes", "skills")
+ROLE_SET = {"security", "captain", "ops", "medical", "engineering"}
 
 LEDGER_FIELDS = {
     "TURN": ["stardate", "present", "speakers", "addressed", "initiated", "transcript"],
@@ -58,6 +69,8 @@ LEDGER_FIELDS = {
     "CHANGED": ["who", "field", "cause"],
     "PRECEDENT": ["id"],
     "OBJECTION": ["claim", "verdict", "ruling"],
+    "LORECHECK": ["claim", "layer", "verdict", "cards", "divergence", "agent"],
+    "REAUDIT": ["scope", "findings"],
     "WORLDTURN": ["steps"],
     "NOTE": ["text"],
     "RATE": ["scores"],
@@ -65,17 +78,20 @@ LEDGER_FIELDS = {
     "WATCH": [],
 }
 
-ID_PREFIX = {"fact": "F", "precedent": "P", "trace": "T", "case": "C", "episode": "E", "premise": "R"}
+ID_PREFIX = {"fact": "F", "precedent": "P", "trace": "T", "case": "C", "episode": "E", "premise": "R",
+             "act": "A", "divergence": "D", "project": "J", "card": "K"}
 
 # Targets from modules/eval/GOALS.md. (metric, goal, op, value)
 TARGETS = [
     ("objections_upheld", "G1", "<=", 0),
+    ("lore_checked_rate", "G1", ">=", 1.0),
     ("player_address_share", "G4", "<=", 0.35),
     ("neglected_windows", "G4", "<=", 0),
     ("autonomy", "G5", ">=", 0.5),
     ("npc_initiative", "G5", ">=", 0.3),
     ("decided_without_player", "G5", ">=", 1),
     ("cases_isolated", "G7", ">=", 1.0),
+    ("pool_ignored", "G7", "<=", 0),
     ("canon_distance_checked", "G8", ">=", 1.0),
     ("parity", "G10", ">=", 1.0),
     ("dirty_at_eval", "G10", "<=", 0),
@@ -211,6 +227,86 @@ def valid_ref(x, crew, extra=()):
     return x in crew or x in extra or (isinstance(x, str) and x.startswith("crowd:"))
 
 
+def check_access(obj, where, rep):
+    acc = obj.get("access")
+    if need(acc, list(ACCESS_KEYS), where + " access", rep):
+        for k in ACCESS_KEYS:
+            if not isinstance(acc[k], list):
+                rep.err(where, f"access.{k} must be a list")
+
+
+def ledger_refs(entries):
+    return {f"L:{e.get('watch')}:{e.get('turn')}" for e in entries}
+
+
+def load_quiet(path, default=None):
+    try:
+        return json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return default
+
+
+def compute_pool(w, act_id, reasoner):
+    """Suspect pool for an act, from what the reasoner can know. Returns (pool, reasons) or
+    (None, why) when the reasoner has no readable trace of the act."""
+    s = w.state
+    deeds = load_quiet(s / "deeds.json", {}) or {}
+    acts = {a.get("id"): a for a in deeds.get("acts", [])}
+    act = acts.get(act_id)
+    if act is None:
+        return None, f"no act {act_id}"
+    soul = load_quiet(s / "crew" / reasoner / "soul.json")
+    if soul is None:
+        return None, f"no soul for reasoner {reasoner}"
+    roles = set(soul.get("roles", []))
+    queried = set()
+    for c in deeds.get("cases", []):
+        if c.get("investigator") == reasoner:
+            queried |= set(c.get("known", []))
+
+    def readable(tr):
+        who = set(tr.get("who_can_read", []))
+        return tr.get("id") in queried or "anyone" in who or reasoner in who or bool(roles & who)
+
+    traces = deeds.get("traces", [])
+    if not any(tr.get("act") == act_id and readable(tr) for tr in traces):
+        return None, f"{reasoner} has no readable trace of {act_id}"
+
+    people = {}
+    for cid in w.crew_ids():
+        sl = load_quiet(s / "crew" / cid / "soul.json", {}) or {}
+        people[cid] = sl.get("access", {})
+    pl = load_quiet(s / "player.json", {}) or {}
+    people["player"] = pl.get("access", {})
+
+    cons = act.get("constraints", {})
+    means = cons.get("means", {})
+    opp = cons.get("opportunity", {})
+    win = opp.get("window")
+    pool, reasons = [], {}
+    for pid, acc in sorted(people.items()):
+        if pid == reasoner:
+            continue
+        lacking = [f"{k}:{x}" for k in ACCESS_KEYS for x in means.get(k, []) if x not in acc.get(k, [])]
+        if lacking:
+            reasons[pid] = "lacks " + ", ".join(lacking)
+            continue
+        alibi = None
+        if win:
+            for tr in traces:
+                tw = tr.get("window")
+                if tr.get("type") == "location" and tr.get("subject") == pid and tw and readable(tr) \
+                        and tr.get("where") != opp.get("where") and tw[0] <= win[0] and tw[1] >= win[1]:
+                    alibi = tr.get("id")
+                    break
+        if alibi:
+            reasons[pid] = f"placed elsewhere by {alibi}"
+            continue
+        pool.append(pid)
+        reasons[pid] = "could have"
+    return pool, reasons
+
+
 def new_ledger_entries(w):
     """Ledger entries appended since HEAD."""
     old = head_text(f"{w.rel}/.world/ledger.jsonl") or ""
@@ -255,6 +351,12 @@ def validate_world(w):
             rep.err("clock.json", f"stardate went backwards ({old['stardate']} -> {clock['stardate']})")
 
     load(s / "ship.json", rep)
+    player = load(s / "player.json", rep)
+    if player is not None and need(player, ["name", "rank", "post", "access", "location"],
+                                   "player.json", rep):
+        check_access(player, "player.json", rep)
+    all_entries = w.ledger()
+    lrefs = ledger_refs(all_entries)
 
     # crew
     changed = {(e.get("who"), str(e.get("field", "")).split(".")[0]) for e in added
@@ -265,8 +367,15 @@ def validate_world(w):
         if soul is None:
             continue
         if not need(soul, ["id", "name", "rank", "post", "tier", "created_at", "persona", "regard",
-                           "routing", "agenda", "relationships", "schedule", "location"], where, rep):
+                           "routing", "agenda", "relationships", "schedule", "location", "access",
+                           "roles", "competence"], where, rep):
             continue
+        check_access(soul, where, rep)
+        for r in soul["roles"]:
+            if r not in ROLE_SET:
+                rep.err(where, f"role '{r}' not in {sorted(ROLE_SET)}")
+        if (soul["competence"] or {}).get("deduction") not in COMPETENCE:
+            rep.err(where, f"competence.deduction must be one of {sorted(COMPETENCE)}")
         if soul["id"] != cid:
             rep.err(where, f"id '{soul['id']}' does not match folder '{cid}'")
         if soul["tier"] not in TIERS:
@@ -336,6 +445,9 @@ def validate_world(w):
             if not set(of.get("known_by", [])) <= set(nf.get("known_by", [])):
                 rep.err("facts.json", f"surfaced fact {of['id']} lost a knower (known_by only grows)")
 
+    fact_known = {f.get("id"): set(f.get("known_by", [])) for f in (facts or {}).get("facts", [])
+                  if isinstance(f, dict)}
+
     # precedents
     prec = load(s / "precedents.json", rep)
     if prec is not None and need(prec, ["precedents"], "precedents.json", rep):
@@ -355,6 +467,57 @@ def validate_world(w):
                 rep.err("precedents.json", f"precedent {op.get('id')} was edited or removed "
                                            "(precedents are append-only; refine with a new one)")
 
+    # divergence: every difference from canon traces back to something somebody did
+    div = load(s / "divergence.json", rep)
+    div_ids = set()
+    if div is not None and need(div, ["divergences"], "divergence.json", rep):
+        graph = {}
+        for i, d in enumerate(div["divergences"]):
+            where = f"divergence.json[{i}]"
+            if not need(d, ["id", "canon", "branch", "parents", "at"], where, rep):
+                continue
+            if d["id"] in div_ids:
+                rep.err(where, f"duplicate id {d['id']}")
+            div_ids.add(d["id"])
+            graph[d["id"]] = d["parents"]
+        for did, parents in graph.items():
+            if not parents:
+                rep.err("divergence.json", f"{did} has no parents: every divergence needs a cause")
+            for par in parents:
+                if par.startswith("L:"):
+                    if par not in lrefs:
+                        rep.err("divergence.json", f"{did} cites {par}, which matches no ledger entry")
+                elif par not in graph:
+                    rep.err("divergence.json", f"{did} cites unknown parent {par}")
+
+        def reaches_ledger(node, seen):
+            if node in seen:
+                return None  # cycle
+            seen = seen | {node}
+            ok = False
+            for par in graph.get(node, []):
+                if par.startswith("L:"):
+                    ok = ok or par in lrefs
+                elif par in graph:
+                    r = reaches_ledger(par, seen)
+                    if r is None:
+                        return None
+                    ok = ok or r
+            return ok
+
+        for did in graph:
+            r = reaches_ledger(did, set())
+            if r is None:
+                rep.err("divergence.json", f"{did} is part of a cycle")
+            elif not r:
+                rep.err("divergence.json", f"{did} never reaches a ledger entry")
+        old = head_text(f"{w.rel}/.world/state/divergence.json")
+        if old:
+            cur = {d.get("id"): d for d in div["divergences"] if isinstance(d, dict)}
+            for od in json.loads(old).get("divergences", []):
+                if cur.get(od.get("id")) != od:
+                    rep.err("divergence.json", f"{od.get('id')} was edited or removed (append-only)")
+
     # forces
     forces = load(s / "forces.json", rep)
     if forces is not None and need(forces, ["forces"], "forces.json", rep):
@@ -366,25 +529,61 @@ def validate_world(w):
                 if need(st, ["step", "preconditions", "status"], f"{where} trajectory[{j}]", rep):
                     if st["status"] not in FORCE_STATUS:
                         rep.err(where, f"trajectory[{j}] status must be one of {sorted(FORCE_STATUS)}")
-                    elif st["status"] != "on_track" and not st.get("cause"):
-                        rep.err(where, f"trajectory[{j}] is '{st['status']}' with no cause")
+                    elif st["status"] != "on_track":
+                        c = st.get("cause")
+                        if not c:
+                            rep.err(where, f"trajectory[{j}] is '{st['status']}' with no cause")
+                        elif not (c in div_ids or c in lrefs):
+                            rep.err(where, f"trajectory[{j}] cause '{c}' is neither a divergence "
+                                           "nor a ledger reference (L:watch:turn)")
 
-    # evidence
-    ev = load(s / "evidence.json", rep)
-    trace_ids = set()
-    if ev is not None and need(ev, ["traces", "cases"], "evidence.json", rep):
-        for i, t in enumerate(ev["traces"]):
-            where = f"evidence.json traces[{i}]"
-            if not need(t, ["id", "type", "where", "who_can_read", "lasts", "created_at"], where, rep):
+    # deeds: acts, traces, cases
+    dd = load(s / "deeds.json", rep)
+    trace_ids, act_ids = set(), set()
+    if dd is not None and need(dd, ["acts", "traces", "cases"], "deeds.json", rep):
+        for i, a in enumerate(dd["acts"]):
+            where = f"deeds.json acts[{i}]"
+            if not need(a, ["id", "actor", "what", "at", "where", "visibility", "valence",
+                            "constraints", "traces"], where, rep):
                 continue
-            trace_ids.add(t["id"])
-            if t["type"] not in TRACE_TYPES:
+            act_ids.add(a["id"])
+            if not valid_ref(a["actor"], crew, {"player"}):
+                rep.err(where, f"actor '{a['actor']}' unknown")
+            if a["visibility"] not in VISIBILITY:
+                rep.err(where, f"visibility must be one of {sorted(VISIBILITY)}")
+            if a["valence"] not in VALENCE:
+                rep.err(where, f"valence must be one of {sorted(VALENCE)}")
+            cons = a["constraints"] or {}
+            for k in (cons.get("means") or {}):
+                if k not in ACCESS_KEYS:
+                    rep.err(where, f"constraints.means key '{k}' not in {list(ACCESS_KEYS)}")
+            win = (cons.get("opportunity") or {}).get("window")
+            if win is not None and not (isinstance(win, list) and len(win) == 2):
+                rep.err(where, "constraints.opportunity.window must be [from, to]")
+        for i, tr in enumerate(dd["traces"]):
+            where = f"deeds.json traces[{i}]"
+            if not need(tr, ["id", "type", "where", "who_can_read", "lasts", "created_at"], where, rep):
+                continue
+            trace_ids.add(tr["id"])
+            if tr["type"] not in TRACE_TYPES:
                 rep.err(where, f"type must be one of {sorted(TRACE_TYPES)}")
-            for x in t["who_can_read"]:
+            for x in tr["who_can_read"]:
                 if not valid_ref(x, crew, ROLES):
                     rep.err(where, f"who_can_read names unknown '{x}'")
-        for i, c in enumerate(ev["cases"]):
-            where = f"evidence.json cases[{i}]"
+            if tr["type"] == "location" and "subject" in tr \
+                    and not valid_ref(tr["subject"], crew, {"player"}):
+                rep.err(where, f"location subject '{tr['subject']}' unknown")
+        for i, a in enumerate(dd["acts"]):
+            for k in (a.get("traces") or []) if isinstance(a, dict) else []:
+                if k not in trace_ids:
+                    rep.err(f"deeds.json acts[{i}]", f"trace '{k}' does not exist")
+        for tr in dd["traces"]:
+            if isinstance(tr, dict) and tr.get("act") and tr["act"] not in act_ids:
+                rep.err("deeds.json", f"trace {tr.get('id')} names unknown act {tr['act']}")
+        old_cases = {c.get("case_id"): c for c in
+                     (head_json(f"{w.rel}/.world/state/deeds.json") or {}).get("cases", [])}
+        for i, c in enumerate(dd["cases"]):
+            where = f"deeds.json cases[{i}]"
             if not need(c, ["case_id", "investigator", "trigger", "known", "next_step", "status"],
                         where, rep):
                 continue
@@ -395,11 +594,48 @@ def validate_world(w):
             for k in c["known"]:
                 if k not in trace_ids:
                     rep.err(where, f"known trace '{k}' does not exist")
-            for r in c.get("runs", []):
+            runs = c.get("runs", [])
+            n_old = len((old_cases.get(c["case_id"]) or {}).get("runs", []))
+            for j, r in enumerate(runs):
                 for k in r.get("cited", []):
                     if k not in c["known"]:
                         rep.err(where, f"run at turn {r.get('turn')} cites '{k}', outside the "
                                        "investigator's light cone")
+                if j < n_old:
+                    continue
+                if not need(r, ["watch", "turn", "act", "isolated", "cited", "pool", "suspects"],
+                            f"{where} runs[{j}]", rep):
+                    continue
+                pool, why = compute_pool(w, r["act"], c["investigator"])
+                if pool is None:
+                    rep.err(where, f"runs[{j}]: {why}")
+                elif sorted(pool) != sorted(r["pool"]):
+                    rep.err(where, f"runs[{j}] pool {sorted(r['pool'])} does not match the computed "
+                                   f"pool {sorted(pool)} (python3 tools/wk.py suspects)")
+
+    # projects
+    pj = load(s / "projects.json", rep)
+    if pj is not None and need(pj, ["projects"], "projects.json", rep):
+        prec_ids = {x.get("id") for x in (prec or {}).get("precedents", [])} if prec else set()
+        for i, pr in enumerate(pj["projects"]):
+            where = f"projects.json[{i}]"
+            if not need(pr, ["id", "title", "owner", "collaborators", "kind", "goal", "stages",
+                             "status", "precedents", "started_at"], where, rep):
+                continue
+            for x in [pr["owner"]] + list(pr["collaborators"]):
+                if not valid_ref(x, crew, {"player"}):
+                    rep.err(where, f"names unknown '{x}'")
+            if pr["kind"] not in PROJECT_KINDS:
+                rep.err(where, f"kind must be one of {sorted(PROJECT_KINDS)}")
+            if pr["status"] not in PROJECT_STATUS:
+                rep.err(where, f"status must be one of {sorted(PROJECT_STATUS)}")
+            for j, st in enumerate(pr["stages"]):
+                if need(st, ["name", "status", "needs", "cost"], f"{where} stages[{j}]", rep) \
+                        and st["status"] not in STAGE_STATUS:
+                    rep.err(where, f"stages[{j}] status must be one of {sorted(STAGE_STATUS)}")
+            for x in pr["precedents"]:
+                if x not in prec_ids:
+                    rep.err(where, f"precedent '{x}' does not exist")
 
     # episodes
     epd = s / "episodes"
@@ -468,14 +704,44 @@ def validate_world(w):
                 for x in (e.get("addressed") or {}):
                     if not valid_ref(x, crew, {"player"}):
                         rep.err(where, f"TURN addressed names unknown '{x}'")
-            elif t == "OBJECTION" and e.get("verdict") not in VERDICTS:
+            elif t in ("OBJECTION", "LORECHECK") and e.get("verdict") not in VERDICTS:
                 rep.err(where, f"verdict must be one of {sorted(VERDICTS)}")
+            elif t == "SAID" and e.get("fact"):
+                kb = fact_known.get(e["fact"])
+                by = e.get("by")
+                if kb is None:
+                    rep.err(where, f"SAID cites unknown fact '{e['fact']}'")
+                elif isinstance(by, str) and by.startswith("crowd:") and "all" not in kb:
+                    rep.err(where, f"{by} cites {e['fact']}, which the crowd can't know")
+                elif by in crew and by not in kb and "all" not in kb:
+                    rep.err(where, f"{by} cites {e['fact']}, which isn't in their knowledge (known_by)")
             elif t == "ATTEMPT" and e.get("outcome") not in OUTCOMES:
                 rep.err(where, f"outcome must be one of {sorted(OUTCOMES)}")
             elif t == "TOLD" and fact_ids and e.get("fact") not in fact_ids:
                 rep.err(where, f"TOLD fact '{e.get('fact')}' does not exist")
+            if t == "LORECHECK" and e.get("layer") not in LAYERS:
+                rep.err(where, f"layer must be one of {sorted(LAYERS)}")
             elif t == "PRECEDENT" and prec and e.get("id") not in {p.get("id") for p in prec.get("precedents", [])}:
                 rep.err(where, f"PRECEDENT '{e.get('id')}' does not exist")
+
+    # entries added in this commit: TOLD updates knowledge; lore touches are checked
+    for e in added:
+        if e.get("type") == "TOLD" and e.get("fact") in fact_known:
+            kb = fact_known[e["fact"]]
+            for x in e.get("to", []):
+                if x in crew and x not in kb and "all" not in kb:
+                    rep.err("ledger.jsonl", f"TOLD {e['fact']} to {x}, but {x} isn't added to its known_by")
+    touches, checks = {}, {}
+    for e in added:
+        key = (e.get("watch"), e.get("turn"))
+        if e.get("type") == "TURN":
+            touches[key] = touches.get(key, 0) + len(e.get("lore_touch") or [])
+        elif e.get("type") == "LORECHECK":
+            checks[key] = checks.get(key, 0) + 1
+    for key, n in touches.items():
+        if checks.get(key, 0) < n:
+            rep.err("ledger.jsonl", f"turn {key[1]} touched lore {n} time(s) but has "
+                                    f"{checks.get(key, 0)} LORECHECK entr(ies)")
 
     # transcripts: append-only
     tdir = w.dot / "transcript"
@@ -492,9 +758,47 @@ def validate_world(w):
     return rep
 
 
+def validate_canon(root):
+    """modules/*/canon/cards.jsonl: cited, layered, append-only."""
+    rep = Report()
+    for cp in sorted(root.glob("modules/*/canon/cards.jsonl")):
+        rel = cp.relative_to(root).as_posix()
+        cur = cp.read_text()
+        old = head_text(rel)
+        if old is not None and not cur.startswith(old):
+            rep.err(rel, "is append-only: verified cards are never edited; supersede them instead")
+        ids = set()
+        for n, line in enumerate(cur.splitlines(), 1):
+            if not line.strip():
+                continue
+            try:
+                c = json.loads(line)
+            except json.JSONDecodeError:
+                rep.err(rel, f"line {n} is not valid JSON")
+                continue
+            where = f"{rel} line {n}"
+            if not need(c, ["id", "layer", "topic", "statement", "sources", "verified_at", "supersedes"],
+                        where, rep):
+                continue
+            if c["id"] in ids:
+                rep.err(where, f"duplicate id {c['id']}")
+            ids.add(c["id"])
+            if c["layer"] not in LAYERS:
+                rep.err(where, f"layer must be one of {sorted(LAYERS)}")
+            if not c["sources"]:
+                rep.err(where, "a card needs at least one source")
+            if c["supersedes"] and c["supersedes"] not in ids:
+                rep.err(where, f"supersedes unknown or later card {c['supersedes']}")
+    return rep
+
+
 def cmd_validate(a):
     worlds = all_structured_worlds() if a.all else [World(a.world)]
     bad = 0
+    crep = validate_canon(repo_root())
+    for m in crep.errors:
+        print(f"ERROR    canon: {m}")
+    bad += bool(crep.errors)
     for w in worlds:
         if not w.is_structured():
             print(f"{w.rel}: not a structured world (no .world/state/); nothing to validate")
@@ -534,6 +838,93 @@ def cmd_next_id(a):
         text += p.read_text()
     nums = [int(m) for m in re.findall(rf'"{prefix}-(\d+)"', text)]
     print(f"{prefix}-{(max(nums) + 1 if nums else 1):03d}")
+
+
+# ---------------------------------------------------------------- suspects
+
+def cmd_suspects(a):
+    w = World(a.world)
+    pool, reasons = compute_pool(w, a.act, a.reasoner)
+    if pool is None:
+        print(json.dumps({"act": a.act, "as": a.reasoner, "pool": None, "why": reasons}, indent=2))
+        return
+    print(json.dumps({"act": a.act, "as": a.reasoner, "pool": pool, "reasons": reasons}, indent=2))
+
+
+# ---------------------------------------------------------------- lore
+
+STOP = set("""the a an and or of to in on at for with by from is are was were be been it its this that
+these those as not no can can't cannot could would should will may might than then there their they
+them who what when where which while into onto over under about does do did has have had any all
+some such only also very more most other""".split())
+
+
+def tokens(text):
+    return {x for x in re.findall(r"[a-z][a-z'-]{2,}", str(text).lower()) if x not in STOP}
+
+
+def preset_dir(w):
+    ch = (w.path / "charter.md")
+    if ch.exists():
+        m = re.search(r"^preset:\s*(\S+)", ch.read_text(), flags=re.M)
+        if m:
+            return w.root / m.group(1)
+    return None
+
+
+def lore_search(w, claim, top=5):
+    q = tokens(claim)
+    found = {"cards": [], "law": [], "precedents": [], "divergences": []}
+    pd = preset_dir(w)
+    if pd:
+        cp = pd / "canon" / "cards.jsonl"
+        if cp.exists():
+            cards = [json.loads(l) for l in cp.read_text().splitlines() if l.strip()]
+            superseded = {c.get("supersedes") for c in cards if c.get("supersedes")}
+            for c in cards:
+                if c.get("id") in superseded:
+                    continue
+                sc = len(q & tokens(c.get("topic", "") + " " + c.get("statement", "")))
+                if sc:
+                    found["cards"].append((sc, {k: c.get(k) for k in
+                                                ("id", "layer", "topic", "statement", "sources")}))
+        lp = pd / "law.md"
+        if lp.exists():
+            for n, line in enumerate(lp.read_text().splitlines(), 1):
+                if line.strip().startswith("-"):
+                    sc = len(q & tokens(line))
+                    if sc:
+                        found["law"].append((sc, {"line": n, "text": line.strip()}))
+    for x in (load_quiet(w.state / "precedents.json", {}) or {}).get("precedents", []):
+        sc = len(q & tokens(x.get("ruling", "") + " " + x.get("reason", "")))
+        if sc:
+            found["precedents"].append((sc, x))
+    for x in (load_quiet(w.state / "divergence.json", {}) or {}).get("divergences", []):
+        sc = len(q & tokens(x.get("canon", "") + " " + x.get("branch", "")))
+        if sc:
+            found["divergences"].append((sc, x))
+    out = {}
+    for k, v in found.items():
+        v.sort(key=lambda p: -p[0])
+        out[k] = [dict(score=s, **item) for s, item in v[:top]]
+    best = max([r["score"] for k in ("cards", "law", "precedents") for r in out[k]] or [0])
+    out["coverage"] = "covered" if best >= 2 else ("thin" if best == 1 else "none")
+    return out
+
+
+def cmd_lore(a):
+    w = World(a.world)
+    res = lore_search(w, a.claim)
+    res["claim"] = a.claim
+    if res["coverage"] != "covered":
+        res["next"] = ("No solid coverage. Spawn a fresh lore agent with modules/eval/LORE_AGENT.md, "
+                       "passing this claim, this output and the world path. Record its verdict as a "
+                       "LORECHECK with agent: true, and add any verified card it returns.")
+    else:
+        res["next"] = ("Read the matches. Rules layer: does the claim obey them? History after the "
+                       "branch: does it follow from this branch's state and divergences? Record a "
+                       "LORECHECK.")
+    print(json.dumps(res, indent=2))
 
 
 # ---------------------------------------------------------------- metrics
@@ -600,15 +991,32 @@ def compute_metrics(w, watch=None):
     m["precedents_added"] = sum(e.get("type") == "PRECEDENT" for e in entries)
 
     # G7
-    runs = total = 0
-    ev = w.state / "evidence.json"
-    if ev.exists():
-        for c in json.loads(ev.read_text()).get("cases", []):
-            for r in c.get("runs", []):
-                if watch is None or r.get("watch") == watch:
-                    total += 1
-                    runs += bool(r.get("isolated"))
+    runs = total = ignored = 0
+    dd = load_quiet(w.state / "deeds.json", {}) or {}
+    for c in dd.get("cases", []):
+        comp = ((load_quiet(w.state / "crew" / c.get("investigator", "") / "soul.json", {}) or {})
+                .get("competence") or {}).get("deduction")
+        for r in c.get("runs", []):
+            if watch is None or r.get("watch") == watch:
+                total += 1
+                runs += bool(r.get("isolated"))
+                pool = r.get("pool") or []
+                if comp in ("high", "medium") and len(pool) == 1 and pool[0] not in r.get("suspects", []):
+                    ignored += 1
     m["cases_isolated"] = ratio(runs, total)
+    m["pool_ignored"] = ignored if total else None
+
+    # G1: lore checks and divergence
+    touches = sum(len(t.get("lore_touch") or []) for t in turns)
+    checks = [e for e in entries if e.get("type") == "LORECHECK"]
+    m["lore_checked_rate"] = ratio(min(len(checks), touches), touches)
+    m["lore_checks"] = {k: sum(e.get("verdict") == k for e in checks) for k in sorted(VERDICTS)}
+    m["lore_agent_calls"] = sum(bool(e.get("agent")) for e in checks)
+    m["divergences"] = len((load_quiet(w.state / "divergence.json", {}) or {}).get("divergences", []))
+    last_re = max([e.get("watch", 0) for e in led if e.get("type") == "REAUDIT"] or [0])
+    prec_since = sum(1 for e in led if e.get("type") == "PRECEDENT" and e.get("watch", 0) > last_re)
+    cur_watch = max([e.get("watch", 0) for e in led] or [0])
+    m["reaudit_due"] = (cur_watch - last_re >= 5) or prec_since >= 10
 
     # G8
     eps = list((w.state / "episodes").glob("*.json")) if (w.state / "episodes").is_dir() else []
@@ -913,6 +1321,12 @@ def main():
 
     p = sub.add_parser("next-id"); p.add_argument("world"); p.add_argument("kind", choices=ID_PREFIX)
     p.set_defaults(fn=cmd_next_id)
+
+    p = sub.add_parser("suspects"); p.add_argument("world"); p.add_argument("--act", required=True)
+    p.add_argument("--as", dest="reasoner", required=True); p.set_defaults(fn=cmd_suspects)
+
+    p = sub.add_parser("lore"); p.add_argument("world"); p.add_argument("claim")
+    p.set_defaults(fn=cmd_lore)
 
     p = sub.add_parser("metrics"); p.add_argument("world"); p.add_argument("--watch", type=int)
     p.add_argument("--write", action="store_true"); p.set_defaults(fn=cmd_metrics)

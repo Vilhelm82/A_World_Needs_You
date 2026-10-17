@@ -6,6 +6,10 @@ Every line here is one of two kinds:
 - **[canon]** — established on screen by this date. Not negotiable.
 - **[assumed]** — not shown on screen, chosen because it is the most lore-plausible reading. Binding until a `// lore objection` overrules it; the ruling then goes to precedent.
 
+## The lore base
+
+This file is the constitution. The detail lives in `canon/cards.jsonl`: short, cited, layered reference cards that grow from verified checks and can't be edited, only superseded (`canon/README.md`). The GM checks lore against them at any time with `python3 tools/wk.py lore`, before relying on anything canon governs.
+
 ## The branch point
 
 - [canon] History up to stardate 41153.7 — the Enterprise-D's first mission, to Farpoint Station — is the show's history, with one change: **Commander Will Lloyd holds the first officer's billet that canon gave to William Riker.**
@@ -31,7 +35,7 @@ Every line here is one of two kinds:
 - [canon] Internal sensors read life signs aboard and can be tuned to look for something specific; the operator says what they can and cannot resolve.
 - [assumed] No Ten Forward and no Guinan yet; off-duty crew use lounges and their quarters.
 - [assumed] Season one shows several officers in the chief engineer's billet; the world fixes one at build. Geordi La Forge is a flight controller, not chief engineer.
-- [assumed] What the computer logs and who can read it is in `covert.md`. That list is the boundary of what an investigator can find.
+- [assumed] What the computer logs and who can read it is in `deeds.md`. That list is the boundary of what anyone can find in the records.
 
 ## What works and what it costs
 

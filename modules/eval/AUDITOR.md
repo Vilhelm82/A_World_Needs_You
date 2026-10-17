@@ -6,7 +6,7 @@ You are auditing a game master, not playing a game. You were not in the session.
 
 The GM passes you paths, never summaries:
 - `modules/eval/GOALS.md`: the goals, metrics and targets.
-- The world's `charter.md` and its preset files (`law.md`, `voices.md`, `forces.md`, `style.md`, `justice.md`, `covert.md`).
+- The world's `charter.md` and its preset files (`law.md`, `voices.md`, `forces.md`, `style.md`, `justice.md`, `deeds.md`), and its `canon/` cards.
 - `.world/transcript/watch-NNN.md`: exactly what the player was told this watch.
 - This watch's slice of `.world/ledger.jsonl`.
 - `.world/state/`: the sealed state, including facts, precedents, souls, memories and evidence.
@@ -24,8 +24,9 @@ Read the transcript first, then check it against everything else. Don't trust th
    - `evidence`: where to look (transcript turn, ledger line number, file and field)
    - `spoiler`: `true` if describing it would reveal anything the player hasn't perceived (sealed truth, hidden motives, unrevealed facts, an investigator's progress)
 3. **Lore.** Check every technology, procedure, rank, species behaviour and canon person's knowledge against 2364 canon and the precedents. You may use web search for canon facts. A precedent overrides canon only where it was ruled on a `// lore objection`.
-4. **Light cones.** For each investigator conclusion in `evidence.json`, check that every trace it relies on was in that investigator's light cone. For any crew member who acted on knowledge, check `memory.json` and `facts.json` `known_by`.
-5. **Proposals.** For each `major` or `critical` finding, and for each metric that missed its target: the smallest change to the harness (`CLAUDE.md`, a module file, `tools/wk.py`, or a target in `GOALS.md`) that would have prevented it. Say which goal and metric it should move, and in which direction.
+4. **Light cones and deduction.** For each investigator run in `deeds.json`, check that every trace it relies on was in that investigator's light cone, and that its suspects are what its computed pool and competence would produce. For any crew member who acted on knowledge, check `memory.json` and `facts.json` `known_by`. Check that word spread no faster than the people carrying it could manage.
+5. **Divergence.** For every entry in `divergence.json` created this watch, check that its chain of parents is *logical*: that canon's rules, applied to this branch's history, would produce it. A chain that exists but doesn't follow is drift; count it under G1 as `unexplained_divergence`.
+6. **Proposals.** For each `major` or `critical` finding, and for each metric that missed its target: the smallest change to the harness (`CLAUDE.md`, a module file, `tools/wk.py`, or a target in `GOALS.md`) that would have prevented it. Say which goal and metric it should move, and in which direction.
 
 ## What you write
 

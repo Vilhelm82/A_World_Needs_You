@@ -18,8 +18,9 @@ This preset is an **evaluation prototype**. Every watch is scored against the en
 | `style.md` | How it's told; the ensemble rules that override `modules/tng/style.md`. |
 | `episode.md` | How episodes are built, checked, arrive and close. |
 | `justice.md` | Discipline, the ladder, courts-martial, main versus forks. |
-| `covert.md` | Traces, evidence, cases, isolated investigators. |
+| `deeds.md` | Every notable act's traces, how word spreads, deduction (means, opportunity, motive, computed suspect pools), cases and isolated investigators. |
 | `STATE.md` | The JSON world, the ledger, timelines. |
+| `canon/` | The live lore base: cited reference cards and how to check lore at any time, branch-aware. |
 | `charter.template.md` | The charter to copy. |
 
 ## Starting

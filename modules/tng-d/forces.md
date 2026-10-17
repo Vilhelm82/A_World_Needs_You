@@ -2,7 +2,7 @@
 
 After the branch, canon does not schedule anything. What survives is the forces: who wants what, what they can do, and what they would do next if nobody stopped them. **Intentions are conserved; intersections are not.** A force meets the Enterprise only if her course, her orders and the world's causes put them in the same place.
 
-This file is the seed. At build, each force becomes an entry in `state/forces.json` with a `default_trajectory` (canon's next steps, each with its preconditions) and a `divergence` status per step: `on_track`, `delayed`, `averted`, `altered` — every change citing the ledger entry that caused it. The world's own turn moves each force one step when its preconditions hold, whether or not the Enterprise is anywhere near.
+This file is the seed. At build, each force becomes an entry in `state/forces.json` with a `default_trajectory` (canon's next steps, each with its preconditions) and a status per step: `on_track`, `delayed`, `averted`, `altered` or `done`. Every change cites its cause: a divergence in `state/divergence.json`, whose chain of parents ends in something somebody actually did. The world's own turn moves each force one step when its preconditions hold, whether or not the Enterprise is anywhere near.
 
 Your foreknowledge of the show is a map of the *undisturbed* trajectory. After the first divergence it starts to lie. Acting on it is allowed; in the world it is acting on a reason nobody else can see, and people notice unexplained reasons.
 

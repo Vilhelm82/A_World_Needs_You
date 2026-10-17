@@ -19,8 +19,9 @@ worlds/<world>/
     transcript/watch-NNN.md      append-only; exactly what the player was told
     evals/                       sealed audit detail
     state/
-      clock.json  ship.json  facts.json  precedents.json  forces.json
-      evidence.json  premises.json  pins.json
+      clock.json  ship.json  player.json  facts.json  precedents.json
+      forces.json  divergence.json  deeds.json  projects.json
+      premises.json  pins.json
       crew/<id>/soul.json        one folder per person (tiers below)
       crew/<id>/memory.json
       episodes/<id>.json
@@ -32,11 +33,16 @@ worlds/<world>/
 
 **ship.json**: `course`, `orders` (list), `systems` (object of system → status string). Free otherwise.
 
-**crew/&lt;id&gt;/soul.json**: one per person. Required: `id`, `name`, `rank`, `post`, `tier` (`canon` / `recurring`), `created_at`, `persona`, `regard`, `routing`, `agenda`, `relationships`, `schedule`, `location`.
+**player.json**: the player's character as the world sees them: `name`, `rank`, `post`, `access` (as below), `location`. Their inner life is never here; it's theirs.
+
+**crew/&lt;id&gt;/soul.json**: one per person. Required: `id`, `name`, `rank`, `post`, `tier` (`canon` / `recurring`), `created_at`, `persona`, `regard`, `routing`, `agenda`, `relationships`, `schedule`, `location`, `access`, `roles`, `competence`.
 - `persona`: `values`, `traits`, `tired_of`, `wrong_about`, `cares_about`. **Immutable**: it can change only in a commit whose ledger appends a `CHANGED` entry naming this person and the cause.
 - `regard`: `gives_freely` and `gives_rarely` (lists from praise, trust, candour, warmth, anger, desire), plus `toward` (object of id → short current stance).
 - `routing`: object of topic → ordered list of ids they take it to first. Ids must exist, or be `player`.
 - `agenda`: list of `{goal, next_step, horizon}`, with `horizon` one of `shift` / `week` / `career`.
+- `access`: `areas`, `systems`, `codes`, `skills` (lists of short tokens, e.g. `armoury`, `transporter`, `engineering-override`, `warp-systems`). Mostly decided by rank and billet. Used for deduction (`deeds.md`).
+- `roles`: which records they can read by role, from `security`, `captain`, `ops`, `medical`, `engineering`.
+- `competence`: `deduction` (`high` / `medium` / `low`), plus anything else worth stating (`instruments`, free text).
 - `voice` (optional): a path to a voice card. Canon crew point at `modules/tng-d/voices.md`.
 
 **crew/&lt;id&gt;/memory.json**: `learned` (fact ids they know), `beliefs` (list of `{about, belief, from, at}`), `recent` (short list). Writable each turn. A person's memory is their light cone: what they witnessed, were told or read.
@@ -45,9 +51,18 @@ worlds/<world>/
 
 **precedents.json**: `{"precedents": [...]}`, each `{id, ruling, kind, reason, source, created_at}`, with `kind` one of `lore` / `procedure` / `tech` / `person`. Append-only and immutable: a later precedent may *refine* an earlier one by citing its id, but never edits it.
 
-**forces.json**: `{"forces": [...]}`, each `{id, state, wants, capabilities, trajectory}`. `trajectory` is a list of `{step, preconditions, status, cause}`, with `status` one of `on_track` / `delayed` / `averted` / `altered` / `done`, and `cause` a ledger reference whenever status isn't `on_track`.
+**forces.json**: `{"forces": [...]}`, each `{id, state, wants, capabilities, trajectory}`. `trajectory` is a list of `{step, preconditions, status, cause}`, with `status` one of `on_track` / `delayed` / `averted` / `altered` / `done`, and `cause` whenever status isn't `on_track`: a divergence id (`D-…`) or a ledger reference.
 
-**evidence.json**: `{"traces": [...], "cases": [...]}`, as in `covert.md`. Trace `who_can_read` holds ids or roles (`security`, `captain`, `ops`, `anyone`). Case `investigator` must exist. Case `known` lists trace ids that must exist. Case `runs` records each investigator turn: `{watch, turn, isolated, cited}`, where `isolated` is true when it ran as a separate agent and `cited` lists the traces it relied on (each must be in `known`).
+**Ledger references** are written `L:<watch>:<turn>` and must match at least one ledger entry.
+
+**divergence.json**: `{"divergences": [...]}`, each `{id, canon, branch, parents, at}`. `canon` is what canon's history had; `branch` is what happened here instead; `parents` lists the earlier divergences (`D-…`) or ledger references (`L:w:t`) that caused it. The validator requires every parent to exist, no cycles, and every chain to end in a real ledger entry: every difference from canon traces back to something somebody actually did. Append-only.
+
+**deeds.json**: `{"acts": [...], "traces": [...], "cases": [...]}`, as in `deeds.md`.
+- Act: `{id, actor, what, at, where, visibility, valence, constraints, traces}`. `actor` is an id or `player`. `constraints` holds `means` (`areas`, `systems`, `codes`, `skills`) and `opportunity` (`where`, `window` [from, to] stardates).
+- Trace: `{id, type, where, who_can_read, lasts, created_at}`, plus `act` (which act left it) and, for `location` traces, `subject` and `window`. `who_can_read` holds ids or roles (`security`, `captain`, `ops`, `medical`, `engineering`, `anyone`).
+- Case: `{case_id, investigator, trigger, known, next_step, status}`, `status` one of `open` / `closed` / `cold`. `known` lists trace ids. `runs` records each investigator turn: `{watch, turn, act, isolated, cited, pool, suspects}`. The validator rejects a run that cites a trace outside `known`, and recomputes `pool` for every new run (`wk suspects`), rejecting a mismatch.
+
+**projects.json**: `{"projects": [...]}`, each `{id, title, owner, collaborators, kind, goal, stages, status, precedents, started_at}`. `kind` is `duty` / `experiment` / `personal` / `covert` / `other`. `stages` is a list of `{name, status, needs, cost}`, with stage `status` one of `todo` / `doing` / `done` / `failed`. Project `status` is `active` / `paused` / `done` / `abandoned`. Owner and collaborators must exist (or be `player`); precedents must exist. A project is how a ship-life thread stays consistent across watches: an experiment with La Forge, an XO initiative, a personal pursuit.
 
 **episodes/&lt;id&gt;.json**: `{id, status, arrival, premise, lands_on, b_plot, forces, truth}`, with `status` one of `pending` / `open` / `closed`. `lands_on` ids must exist.
 
@@ -75,7 +90,9 @@ One JSON object per line, always with `watch`, `turn` and `type`.
 
 | type | fields |
 |---|---|
-| `TURN` | `stardate`, `present` (ids), `speakers` (ids, in order), `addressed` (object of id or `player` → count of lines addressed to them), `initiated` (ids who acted on their own agenda this turn), `transcript` (`watch-NNN.md#turn-N`) |
+| `TURN` | `stardate`, `present` (ids), `speakers` (ids, in order), `addressed` (object of id or `player` → count of lines addressed to them), `initiated` (ids who acted on their own agenda this turn), `transcript` (`watch-NNN.md#turn-N`); optional `lore_touch` (list of `{what, layer}` for anything the turn introduced that canon governs: a technology, species, procedure or canon fact) |
+| `LORECHECK` | `claim`, `layer` (`rules` / `history-pre` / `history-post`), `verdict` (`consistent` / `diverged` / `unsupported` / `contradicts`), `cards` (ids), `divergence` (ids), `agent` (bool: a fresh lore agent was used) |
+| `REAUDIT` | `scope`, `findings` (count) |
 | `DID` | `decision` (the person's words), `changed`, `distance` (object of resolution → [before, after]) |
 | `SAID` | `by`, `claim`, `truth` (`true` / `false` / `partial`), `fact` |
 | `TOLD` | `to`, `fact` |
@@ -85,10 +102,14 @@ One JSON object per line, always with `watch`, `turn` and `type`.
 | `ATTEMPT` | `what`, `outcome` (`done` / `denied` / `cost`), `reason` |
 | `CHANGED` | `who`, `field`, `cause` |
 | `PRECEDENT` | `id` |
-| `OBJECTION` | `claim`, `verdict` (`consistent` / `unsupported` / `contradicts`), `ruling` |
+| `OBJECTION` | `claim`, `verdict` (`consistent` / `diverged` / `unsupported` / `contradicts`), `ruling` |
 | `WORLDTURN` | `steps` (list of what moved) |
 | `NOTE` | `text`, Will's `// note`, for the evaluation only |
 | `LAW` `ROLL` `REWOUND` `SAVE` `FORK` `RETURN` `HOLODECK` | as they happen |
+
+Every `lore_touch` item on a `TURN` needs a `LORECHECK` with the same watch and turn in the same commit. The validator counts them.
+
+`SAID` with a `fact`: if `by` is a crew id, the fact's `known_by` must include them (or `all`); a crowd speaker can only cite facts known by `all`. `TOLD` with a `fact`: everyone in `to` must be in the fact's `known_by` by the end of that commit.
 
 The ledger is append-only. The validator rejects any commit whose ledger doesn't begin with the previous commit's ledger, byte for byte. Transcripts work the same way.
 

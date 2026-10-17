@@ -15,7 +15,7 @@ No captain's scorecard on the character. *(Overrides "Evaluate the officers and 
 
 ## Two layers
 
-- **Ship life:** duty shifts, off-duty time, the character's own pursuits — an experiment with La Forge, a poker game, a covert project. Ordinary days are told briefly; cut across them unless something is happening.
+- **Ship life:** duty shifts, off-duty time, friendships and rivalries, the character's own pursuits and everyone else's. Anything that runs across watches (an experiment with La Forge, an XO initiative, a crewman's side project, a secret) is a **project** in `projects.json`, so its stages, costs and collaborators stay consistent. Ordinary days are told briefly; cut across them unless something is happening.
 - **Episodes:** situations that arrive on the same clock. When one arrives, ship life doesn't stop; it gets interrupted.
 
 ## Episode grammar
