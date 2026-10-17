@@ -2,7 +2,8 @@
  "learned": [
   "F-001",
   "F-002",
-  "F-042"
+  "F-042",
+  "F-043"
  ],
  "beliefs": [
   {
@@ -15,6 +16,7 @@
  "recent": [
   "Farpoint",
   "came aboard at Deneb IV",
-  "heard Data report the internal sensors never logged Q"
+  "heard Data report the internal sensors never logged Q",
+  "told the XO what Q looked like through the VISOR; hadn't told anyone before"
  ]
 }

@@ -4,7 +4,8 @@
   "F-002",
   "F-010",
   "F-041",
-  "F-042"
+  "F-042",
+  "F-043"
  ],
  "beliefs": [
   {
@@ -32,6 +33,7 @@
   "called the XO for ten minutes on intruder response",
   "gave the XO her incident log and the eleven names",
   "the XO's design: silent alert, thirty seconds, then yellow; one word stands it down",
-  "the XO and she carry the alert protocol in together, hers; internal sensors never logged Q"
+  "the XO and she carry the alert protocol in together, hers; internal sensors never logged Q",
+  "La Forge saw Q through the VISOR: even heat, no pulse"
  ]
 }

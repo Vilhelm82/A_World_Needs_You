@@ -3,7 +3,8 @@
   "F-001",
   "F-002",
   "F-010",
-  "F-042"
+  "F-042",
+  "F-043"
  ],
  "beliefs": [
   {
@@ -24,6 +25,7 @@
   "the holodeck",
   "sensor recalibration pending",
   "offered a bridge life-sign filter for Yar's alert after the beta calibration; noted no one has examined the internal sensor logs of Q's appearances",
-  "compared Q's optical record with internal sensors at the XO's order: no life sign logged at his position"
+  "compared Q's optical record with internal sensors at the XO's order: no life sign logged at his position",
+  "the XO wants a spectral model of the bridge; La Forge's VISOR saw Q evenly warm, no pulse"
  ]
 }

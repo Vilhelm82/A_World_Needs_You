@@ -63,6 +63,14 @@
    "reason": "law.md: internal sensors read life signs and can be tuned to look for something specific; the lore agent's reading of TNG 101 found a collision alert sounding automatically at the barrier. Alert condition is the captain's.",
    "source": "turn 6 (L:1:6)",
    "created_at": 41174.86
+  },
+  {
+   "id": "P-009",
+   "ruling": "[assumed] La Forge beamed back from the Farpoint tunnels with Yar and Troi and was on the bridge, at the aft stations, for both of Q's in-person appearances near Deneb IV; Worf had the helm. He was not aboard at the barrier.",
+   "kind": "lore",
+   "reason": "Canon shows him beamed back before the first appearance and on the bridge at the end, and is silent on where he stood in between; a conn officer returning to the bridge in a crisis is the plausible reading. Checked by a fresh agent against the TNG 101 transcript.",
+   "source": "turn 8 (L:1:8)",
+   "created_at": 41174.88
   }
  ]
 }

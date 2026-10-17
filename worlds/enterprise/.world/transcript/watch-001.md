@@ -89,3 +89,15 @@ Thirty seconds, perhaps.
 He looks at Yar. "A second trigger, then. The optical record: an unidentified figure on the bridge feed."
 
 At conn, La Forge has stopped pretending not to listen. "So he was standing right there and the ship said nobody was."
+
+## turn 8
+
+Data considers it for exactly as long as it takes him. "A constant spectral model of the bridge, reconciled against every accounted presence. Feasible. It will flag a great deal at first. Lighting changes, a padd left on a console." A small pause. "And it must count me as accounted for. I do not register as a life sign either."
+
+Yar, writing: "Put that in the first paragraph."
+
+La Forge has turned his chair all the way round now. "Both times, yeah. I'd just beamed back with Lieutenant Yar and the Counselor. Worf had the helm, so I was at the aft stations." He taps the VISOR's edge, absently. "Here's the thing. People through this are busy. Your face is warmer than your hands, your pulse is going in your throat, there's a sort of flicker all over, nerves, I guess. Never stops." He shakes his head. "Him? Same temperature everywhere. Face, hands, all of it. No pulse I could see. No flicker. Like somebody'd painted a man to look warm."
+
+"Why did you not mention it?" Data asks.
+
+"Who was I going to mention it to? It was Q." La Forge spreads his hands. "And I'd been aboard about an hour. I figured maybe it was me."

@@ -3,7 +3,8 @@
   "F-001",
   "F-002",
   "F-010",
-  "F-042"
+  "F-042",
+  "F-043"
  ],
  "beliefs": [
   {
@@ -16,6 +17,7 @@
  "recent": [
   "Lloyd aboard",
   "the link between them, felt on the bridge",
-  "heard Data report the internal sensors never logged Q"
+  "heard Data report the internal sensors never logged Q",
+  "La Forge saw Q through the VISOR: even heat, no pulse"
  ]
 }

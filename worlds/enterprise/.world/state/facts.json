@@ -237,6 +237,20 @@
    "surfaced_at": 41174.87,
    "source": "observation (ROLL L:1:7); Data's log comparison",
    "created_at": 41174.87
+  },
+  {
+   "id": "F-043",
+   "statement": "La Forge's recollection, a day after, of Q as seen through his VISOR from the bridge's aft stations during the two in-person appearances near Deneb IV: a humanoid figure at an even temperature all over, face the same as hands, with no visible pulse and none of the small electrical flicker the VISOR usually shows in a living body. Scope: one observer's unrecorded memory of one instrument at a few metres; the VISOR does not record.",
+   "known_by": [
+    "laforge",
+    "data",
+    "yar",
+    "troi",
+    "player"
+   ],
+   "surfaced_at": 41174.88,
+   "source": "observation (ROLL L:1:8); La Forge",
+   "created_at": 41174.88
   }
  ]
 }

@@ -50,7 +50,7 @@
     "data"
    ],
    "kind": "duty",
-   "goal": "an automatic intruder alert for the bridge: a silent alert to the security watch at once; ship-wide yellow after thirty seconds unless the bridge acknowledges; one word from the bridge stands it down; then drill it",
+   "goal": "an automatic intruder alert for the bridge: a silent alert to the security watch at once; ship-wide yellow after thirty seconds unless the bridge acknowledges; one word from the bridge stands it down; then drill it; the trigger becomes a constant spectral model of the bridge compared against every accounted presence (life signs, combadges, Data), flagging any mismatch either way",
    "stages": [
     {
      "name": "draft the procedures",
@@ -59,10 +59,10 @@
      "cost": "her evening"
     },
     {
-     "name": "sensor filter for unaccounted life signs on the bridge",
+     "name": "spectral model of the bridge compared against accounted presences",
      "status": "todo",
      "needs": "Data, after the beta calibration; a second trigger on the optical record, since internal sensors did not register Q (F-042)",
-     "cost": "a shift of Data's time"
+     "cost": "more of Data's time than a life-sign filter; tuning out false flags"
     },
     {
      "name": "captain's signature (it can set the alert condition)",
@@ -95,7 +95,8 @@
    "title": "Q file",
    "owner": "data",
    "collaborators": [
-    "player"
+    "player",
+    "laforge"
    ],
    "kind": "experiment",
    "goal": "compile every sensor record of Q's appearances for study",
