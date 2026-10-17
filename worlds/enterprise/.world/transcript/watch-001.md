@@ -137,3 +137,23 @@ Nobody answers that.
 "I'm off at sixteen hundred." La Forge doesn't quite look round. "If the chief'll have me."
 
 Data turns back to you. "I should note the basis. If a thermal image would have shown him, it is because Lieutenant La Forge remembers him as warm. That is one recollection, by one instrument, a day after the event. It is worth fitting the pickups. It is not yet evidence that they would work."
+
+## turn 12
+
+"Default." Yar says it the way she'd sign something. "Good. That goes in the first line, ahead of him." She strikes something out on the padd and writes over it.
+
+"A cloaked boarder, a transporter intrusion, a shapeshifter," Data says. "Each would present to at least one of the two triggers. The thermal pickups improve the protocol against all of them." He returns to his calibration.
+
+La Forge taps his combadge. "La Forge to Commander MacDougal."
+
+A pause long enough to hear her finish a sentence to someone else. *"MacDougal."*
+
+"Ma'am, the first officer's got me fitting thermal pickups on the bridge, my off-duty hours, starting sixteen hundred. He said clear it with you first."
+
+*"Did he."* Another pause. *"Sixteen hundred. Bring your own tools, sign for anything you take out of stores, and if the latch-four procedure needs hands, it comes first."*
+
+"Yes, ma'am."
+
+*"MacDougal out."*
+
+La Forge looks back at you, delighted, and doesn't say anything at all.

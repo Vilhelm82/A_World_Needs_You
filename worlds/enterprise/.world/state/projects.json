@@ -51,7 +51,7 @@
     "laforge"
    ],
    "kind": "duty",
-   "goal": "an automatic intruder alert for the bridge: a silent alert to the security watch at once; ship-wide yellow after thirty seconds unless the bridge acknowledges; one word from the bridge stands it down; then drill it; the trigger becomes a constant spectral model of the bridge compared against every accounted presence (life signs, combadges, Data), flagging any mismatch either way; counted: bodies of any species, not clutter (Lloyd); Data notes Q sat motionless in the captain's chair, so 'moving under its own power' alone would miss him",
+   "goal": "an automatic intruder alert for the bridge: a silent alert to the security watch at once; ship-wide yellow after thirty seconds unless the bridge acknowledges; one word from the bridge stands it down; then drill it; the trigger becomes a constant spectral model of the bridge compared against every accounted presence (life signs, combadges, Data), flagging any mismatch either way; counted: bodies of any species, not clutter (Lloyd); Data notes Q sat motionless in the captain's chair, so 'moving under its own power' alone would miss him; rule: body-shaped and unlogged fires it, heat confirms it; it is the default for any intruder, Q the case to beat",
    "stages": [
     {
      "name": "draft the procedures",
@@ -67,8 +67,8 @@
     },
     {
      "name": "fit long-wave infrared pickups on the bridge",
-     "status": "todo",
-     "needs": "engineering's people; La Forge has offered his off-duty hours",
+     "status": "doing",
+     "needs": "La Forge at 1600; MacDougal agreed, latch four's procedure comes first",
      "cost": "a few hours; MacDougal's say"
     },
     {
