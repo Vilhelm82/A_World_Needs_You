@@ -49,3 +49,17 @@ But she's writing on the padd the ensign has brought her, and from where you sta
 You're halfway to the doors when your combadge chirps.
 
 "Yar to Commander Lloyd." Brisk; tactical noise behind her. "When you've got ten minutes, I need them. Intruder response. Q walked onto the bridge, and half my people found out from the viewscreen."
+
+## turn 5
+
+Behind you, MacDougal, not looking up from the padd: "She'd have liked you, sir. She'd also have argued."
+
+The doors close on the warp core.
+
+The turbolift lets you out onto the bridge. La Forge, at conn, half turns: "Morning, Commander." Data doesn't look up from ops; his hands are moving through a calibration sequence at a speed nobody else on the bridge bothers to watch any more. Troi, in her seat beside the captain's empty chair, glances at you and back at the viewscreen.
+
+Yar is waiting at tactical with a padd already held out.
+
+"Incident log. Every time Q was aboard." You take it. Three entries for the bridge: the barrier, where he froze Lieutenant Torres with his phaser still in his hand, and twice more near Deneb IV. One for the courtroom. Under each, the same line in her terse hand: *No intruder alert sounded. No security team dispatched.*
+
+"The names are on the second page. Eleven of my twenty-three on watch. They found out we had an intruder on the bridge when they saw him on the feed at their posts." She keeps her voice down; the bridge is small. "I'm not asking to shoot at him. The captain made the call not to, and he was right. I'm asking that when somebody nobody can account for walks onto this bridge, my people hear it from me and not from a display."

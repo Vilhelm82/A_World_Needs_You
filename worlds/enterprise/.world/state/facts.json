@@ -212,6 +212,17 @@
    "surfaced_at": 41174.83,
    "source": "MacDougal",
    "created_at": 41174.83
+  },
+  {
+   "id": "F-041",
+   "statement": "Yar's incident log: Q was aboard in person three times (on the bridge at the barrier, where he froze Lt. Torres; twice on the bridge near Deneb IV) and took the bridge crew to his courtroom. No intruder alert was sounded on any occasion, and no security team was dispatched. Eleven of the twenty-three security staff on watch learned an intruder was aboard only from the bridge feed on their posts' displays.",
+   "known_by": [
+    "yar",
+    "player"
+   ],
+   "surfaced_at": 41174.85,
+   "source": "Yar's incident log",
+   "created_at": 41174.85
   }
  ]
 }
