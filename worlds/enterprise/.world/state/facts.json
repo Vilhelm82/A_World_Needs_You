@@ -178,12 +178,14 @@
    "id": "F-031",
    "statement": "Starfleet Medical relays the Ealat colony's request: an unidentified, possibly native pathogen causing fever and myocarditis on Hesker IV, 31 cases and 6 dead; the colony asks for medical assistance and cardiac support. Hesker IV is 4.1 light years from the Enterprise's position.",
    "known_by": [
-    "picard",
+    "crusher",
     "data",
     "laforge",
+    "macdougal",
+    "picard",
+    "player",
     "troi",
-    "crusher",
-    "player"
+    "yar"
    ],
    "surfaced_at": 41175.31,
    "source": "Starfleet Medical relay, due 41175.3",
@@ -375,6 +377,22 @@
    "surfaced_at": 41175.35,
    "source": "crew manifest",
    "created_at": 41175.35
+  },
+  {
+   "id": "F-054",
+   "statement": "The Ealat colony's medical reports, as relayed by Starfleet Medical: 31 cases in 23 days; fever, then myocarditis; worst in children; six dead, four of them children; nine critical in a twelve-bed infirmary at Javri, with no cardiac support beyond drugs. In blood and stool, a small non-enveloped RNA virus about thirty nanometres across, matching nothing in the colony's medical database; no sequence data sent. Case map: 27 of 31 in households of the four herding groups on the colony's newest pasture, the Ninth. Dr. Juuso's assessment: a native pathogen, probably carried by a biting insect native to the Ninth's marshes, which the colonists call reedflies; the council is considering destroying their breeding grounds.",
+   "known_by": [
+    "picard",
+    "crusher",
+    "data",
+    "yar",
+    "troi",
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.365,
+   "source": "Juuso's reports via Starfleet Medical",
+   "created_at": 41175.365
   }
  ]
 }

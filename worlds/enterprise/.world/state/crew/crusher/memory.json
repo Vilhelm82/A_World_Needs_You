@@ -3,7 +3,8 @@
   "F-001",
   "F-002",
   "F-047",
-  "F-031"
+  "F-031",
+  "F-054"
  ],
  "beliefs": [
   {
@@ -11,12 +12,19 @@
    "belief": "Charming. Possibly serious.",
    "from": "witnessed",
    "at": 41174.2
+  },
+  {
+   "about": "the Hesker IV virus",
+   "belief": "On Earth I'd call it a coxsackie-type virus. But Juuso has eleven years on that world and says no match and an insect vector; she knows her patients.",
+   "from": "inferred",
+   "at": 41175.365
   }
  ],
  "recent": [
   "came aboard at Deneb IV",
   "three billets empty",
   "sent the first officer her staffing list",
-  "ordered to read the colony's medical reports before 1300"
+  "ordered to read the colony's medical reports before 1300",
+  "1300 briefing: Crusher's summary of the Hesker IV reports"
  ]
 }

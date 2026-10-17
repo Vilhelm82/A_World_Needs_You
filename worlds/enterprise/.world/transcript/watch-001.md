@@ -253,3 +253,19 @@ Sickbay aside, it gives you:
 There is no physician outside sickbay. No qualified intensive-care nurse either. The two things Crusher put at the top of her list are the two things the ship doesn't have.
 
 It is twelve fifty-five. Down the corridor the observation lounge lights are already up.
+
+## turn 21
+
+Crusher is there before you, three padds fanned out in front of her and a fourth in her hand. She looks up. "Will. You got my list?" She doesn't wait for the answer; she's already back in the reports.
+
+Yar comes in behind you and takes the chair nearest the door. MacDougal arrives at the stroke of thirteen hundred with grease on one cuff and sits at the far end. Data is already seated. Troi takes the place at the captain's left.
+
+Picard enters, and the room settles. He doesn't sit at once.
+
+"Doctor."
+
+Crusher stands. "Thirty-one cases in twenty-three days. It starts as a fever. In most of them, within a few days, the heart muscle becomes inflamed: myocarditis. It's worst in children. Six dead, four of them children. Nine critical, in an infirmary with twelve beds and nothing for a failing heart but drugs." She sets one padd down. "Dr. Juuso's lab found a virus in blood and stool. Small, non-enveloped, RNA, about thirty nanometres. It matches nothing in the colony's medical database, and she didn't send sequence data, so I can't run it myself until I have a sample."
+
+"On Earth," she adds, "I'd say that description sounds like a coxsackie-type virus. They inflame the heart, in children particularly." A small shake of the head. "But this isn't Earth, and Dr. Juuso has eleven years on that world."
+
+She touches the last padd and a map comes up on the wall screen: a valley system, the case households in red. Nearly all the red sits in one place. "Twenty-seven of the thirty-one cases are in families from the four herding groups on the colony's newest pasture. They call it the Ninth. Dr. Juuso believes the pathogen is native, carried by a biting insect from the Ninth's marshes. The colonists call them reedflies." She looks up at Picard. "The council is considering destroying their breeding grounds."
