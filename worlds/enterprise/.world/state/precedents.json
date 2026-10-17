@@ -55,6 +55,14 @@
    "reason": "Consistent with the Federation's caution about native life (Home Soil's terraforming ethics) without importing that episode's situation.",
    "source": "build",
    "created_at": 41174.8
+  },
+  {
+   "id": "P-008",
+   "ruling": "[assumed] Internal sensors can be set to flag, in a given space, any life sign that matches no crew record or authorised visitor, and the computer can raise an alert from sensors on its own (as it raised a collision alert at the Farpoint barrier). A standing automatic intruder alert is a security procedure; because it can set the ship's alert condition, it needs the captain's signature. Whether such a filter registers a canon unknown like Q is not known to anyone aboard and is settled only by observation.",
+   "kind": "tech",
+   "reason": "law.md: internal sensors read life signs and can be tuned to look for something specific; the lore agent's reading of TNG 101 found a collision alert sounding automatically at the barrier. Alert condition is the captain's.",
+   "source": "turn 6 (L:1:6)",
+   "created_at": 41174.86
   }
  ]
 }

@@ -45,19 +45,34 @@
    "id": "J-002",
    "title": "Intruder response",
    "owner": "yar",
-   "collaborators": [],
+   "collaborators": [
+    "player",
+    "data"
+   ],
    "kind": "duty",
-   "goal": "rewrite the intruder-response procedures after Q and drill the ship on them",
+   "goal": "an automatic intruder alert for the bridge: a silent alert to the security watch at once; ship-wide yellow after thirty seconds unless the bridge acknowledges; one word from the bridge stands it down; then drill it",
    "stages": [
     {
      "name": "draft the procedures",
      "status": "doing",
-     "needs": "time",
-     "cost": "her off-duty hours"
+     "needs": "Lloyd's design written up by Yar",
+     "cost": "her evening"
+    },
+    {
+     "name": "sensor filter for unaccounted life signs on the bridge",
+     "status": "todo",
+     "needs": "Data, after the beta-shift calibration",
+     "cost": "a shift of Data's time"
+    },
+    {
+     "name": "captain's signature (it can set the alert condition)",
+     "status": "todo",
+     "needs": "Picard",
+     "cost": "none, if he agrees"
     },
     {
      "name": "first officer schedules a drill",
-     "status": "doing",
+     "status": "todo",
      "needs": "the XO",
      "cost": "a shift's disruption"
     },
@@ -70,7 +85,8 @@
    ],
    "status": "active",
    "precedents": [
-    "P-005"
+    "P-005",
+    "P-008"
    ],
    "started_at": 41174.3
   },

@@ -11,12 +11,19 @@
    "belief": "Didn't hesitate in the tunnels. Doesn't mean he listens.",
    "from": "witnessed",
    "at": 41174.2
+  },
+  {
+   "about": "player",
+   "belief": "He listened. Then he asked the right question first. That's twice he hasn't hesitated.",
+   "from": "witnessed",
+   "at": 41174.86
   }
  ],
  "recent": [
   "Q on the bridge",
   "the drill she wants",
   "called the XO for ten minutes on intruder response",
-  "gave the XO her incident log and the eleven names"
+  "gave the XO her incident log and the eleven names",
+  "the XO's design: silent alert, thirty seconds, then yellow; one word stands it down"
  ]
 }

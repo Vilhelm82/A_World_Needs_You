@@ -63,3 +63,15 @@ Yar is waiting at tactical with a padd already held out.
 "Incident log. Every time Q was aboard." You take it. Three entries for the bridge: the barrier, where he froze Lieutenant Torres with his phaser still in his hand, and twice more near Deneb IV. One for the courtroom. Under each, the same line in her terse hand: *No intruder alert sounded. No security team dispatched.*
 
 "The names are on the second page. Eleven of my twenty-three on watch. They found out we had an intruder on the bridge when they saw him on the feed at their posts." She keeps her voice down; the bridge is small. "I'm not asking to shoot at him. The captain made the call not to, and he was right. I'm asking that when somebody nobody can account for walks onto this bridge, my people hear it from me and not from a display."
+
+## turn 6
+
+"Then I'd want somebody to notice." Yar says it flatly, but she's already pulling the padd back from you and writing. "Silent to my watch. Thirty seconds. Yellow on its own if nobody answers." She stops. "If he freezes the whole bridge, nobody answers, and it goes. Good. If he's polite and says the word himself?"
+
+From ops, without turning round: "The stand-down could require a voice-print match against the bridge officers on duty, Lieutenant." Data swivels. "Forgive me. The bridge is acoustically small. Internal sensors can be set to flag any life sign on this deck that matches no crew record or authorised visitor. I could write that filter after the calibration on beta shift." A slight pause. "I should say that no one has examined what the internal sensors recorded during Q's appearances. I do not know whether such a filter would register him."
+
+Yar looks at him a moment, then at you. "It'll fire every time somebody brings a guest up here."
+
+"Then someone acknowledges it," Data says.
+
+"Then someone acknowledges it." She finishes the line and turns the padd so you can read it. "It changes the ship's alert condition on its own, so it's the captain's to sign. I'll have it written up tonight. You want to carry it in, or do I?"
