@@ -24,9 +24,10 @@
    "id": "F-003",
    "statement": "Engineering strain logs record that saucer docking latch four carried about half again its rated load for 0.4 seconds during the Farpoint separation; the other eleven latches stayed within rating; at the Deneb IV docking all twelve recorded seated and nominal.",
    "known_by": [
-    "macdougal"
+    "macdougal",
+    "player"
    ],
-   "surfaced_at": null,
+   "surfaced_at": 41174.8,
    "source": "engineering strain logs",
    "created_at": 41174.8
   },
