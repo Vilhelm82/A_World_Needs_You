@@ -16,7 +16,9 @@
   "F-061",
   "F-042",
   "F-040",
-  "F-062"
+  "F-062",
+  "F-043",
+  "F-044"
  ],
  "beliefs": [
   {
@@ -50,6 +52,7 @@
   "ruled no patients aboard until Crusher has the virus under a microscope; briefing still open; Number One's two items still to hear",
   "Number One stayed after the briefing; took Yar's correction with good grace",
   "Number One's two items: latch four (drydock after Hesker, or clear space), Yar's intruder protocol (to read before signing); internal sensors never logged Q",
-  "Number One vouched for La Forge: saw Q through the VISOR, noticed something wrong, cleared by MacDougal"
+  "Number One vouched for La Forge: saw Q through the VISOR, noticed something wrong, cleared by MacDougal",
+  "La Forge's VISOR account of Q, via Number One; ordered it into Data's file in La Forge's own words"
  ]
 }

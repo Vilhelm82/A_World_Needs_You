@@ -389,3 +389,15 @@ He is already moving towards the door to the ready room. "Thank you, Number One.
 Picard stops with the door already open on the ready room.
 
 "I was confirming that it is off duty, Number One, not objecting to it." He turns half back. "Noticed something was wrong. What, precisely?"
+
+## turn 31
+
+Picard listens to the whole of it without moving.
+
+"Painted a man to look warm." He repeats it quietly, as if testing the weight of it. Then, crisply: "Have Mr. La Forge put it in Mr. Data's file. All of it, in his own words, before he forgets how he would have said it."
+
+He looks at you a moment longer.
+
+"And Number One. Be careful how much of this ship's attention we give him. That may be precisely what he wants."
+
+The ready room doors close behind him.

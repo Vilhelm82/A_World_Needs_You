@@ -196,3 +196,8 @@
 {"watch": 1, "turn": 29, "type": "SAID", "by": "picard", "claim": "agreed; find the starbase; he'll read the protocol before signing; wants Data's Q file", "truth": "true", "fact": "F-062"}
 {"watch": 1, "turn": 30, "type": "TURN", "stardate": 41175.401, "present": ["player", "picard"], "speakers": ["picard"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-30"}
 {"watch": 1, "turn": 30, "type": "DID", "decision": "He's the only person aboard who saw Q through a VISOR. He's the one who noticed something was wrong. And he's good with his hands. Commander MacDougal cleared him.", "changed": "Picard clarifies he wasn't objecting, and asks what La Forge saw", "distance": {}}
+{"watch": 1, "turn": 31, "type": "TURN", "stardate": 41175.403, "present": ["player", "picard"], "speakers": ["picard"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-31"}
+{"watch": 1, "turn": 31, "type": "TOLD", "to": ["picard"], "fact": "F-043"}
+{"watch": 1, "turn": 31, "type": "TOLD", "to": ["picard"], "fact": "F-044"}
+{"watch": 1, "turn": 31, "type": "DID", "decision": "No heat gradient, sir... Geordi said it looked like someone had painted a man to look warm. It's one recollection from one instrument, a day old.", "changed": "Picard orders La Forge's account into Data's file in his own words; warns against giving Q too much of the ship's attention", "distance": {"J-003": [4, 5]}}
+{"watch": 1, "turn": 31, "type": "DECIDED", "by": "picard", "what": "La Forge's VISOR account goes into Data's Q file in his own words", "without_player": false}
