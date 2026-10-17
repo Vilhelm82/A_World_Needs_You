@@ -29,6 +29,12 @@
    "belief": "The first officer anticipated a discrepancy between the optical and sensor records before it was found. I would like to know on what basis.",
    "from": "witnessed",
    "at": 41174.87
+  },
+  {
+   "about": "player",
+   "belief": "The first officer entered the conn chair over its back rather than from the side. I have added it to my observations of human informality.",
+   "from": "witnessed",
+   "at": 41175.41
   }
  ],
  "recent": [
@@ -42,6 +48,7 @@
   "thermal pickups would be needed for the filter; La Forge offered to fit them",
   "Hesker IV, warp 8; pulled the colony's registry entry",
   "1300 briefing: Crusher's summary of the Hesker IV reports",
-  "offered to take La Forge's account at ops now"
+  "offered to take La Forge's account at ops now",
+  "recording La Forge's VISOR account of Q for the file, every 'huh'"
  ]
 }

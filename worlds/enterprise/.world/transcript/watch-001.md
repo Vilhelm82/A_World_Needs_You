@@ -411,3 +411,21 @@ La Forge hears you out and swivels all the way round.
 "The captain asked for that?" He seems to need a second with it. "Huh. Okay." He glances at the chrono. "I'm on till sixteen hundred, then I'm in a Jefferies tube with Commander MacDougal's tools."
 
 "I could take the account now, at ops," Data says, turning, "if the first officer permits the conn to be relieved for a few minutes. It would require approximately four." He pauses. "I would record it as spoken. Including the word *huh*, if that is what he says."
+
+## turn 33
+
+La Forge is barely out of the chair when you go over the back of it.
+
+He stops halfway to ops. The VISOR's band of light tilts a few degrees. "Okay," he says, to nobody. "Okay."
+
+Data has watched the whole of it with polite attention. "Commander. Is that a customary way of sitting down?"
+
+At tactical, the relief lieutenant finds something urgent on her board.
+
+"Never mind," Data says, when nothing more is offered. "I will note it." He turns to La Forge. "Begin whenever you wish, Geordi. From the first appearance."
+
+"Right." La Forge leans on the edge of the ops console. "So. I'd just beamed back from the tunnels with Lieutenant Yar and the Counselor, and Worf had the helm, so I went to the aft stations, and then he was just..." His hand makes a shape in the air. "There. And the first thing I thought was, huh."
+
+"Huh," Data repeats, and records it.
+
+Under your hands the conn board is warm and steady: warp eight, course for Hesker IV, everything green.
