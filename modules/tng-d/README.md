@@ -15,7 +15,7 @@ This preset is an **evaluation prototype**. Every watch is scored against the en
 | `law.md` | The constitution: era, ship, branch point, Starfleet. Every line marked [canon] or [assumed]. |
 | `forces.md` | Canon as intentions: Q, the Romulans, the Borg, the infiltration, Lore, and the rest. |
 | `voices.md` | The season-one crew's voices. |
-| `style.md` | How it's told; the ensemble rules that override `modules/tng/style.md`. |
+| `style.md` | How it's told: register, telling, the ensemble, the table, the two layers. |
 | `episode.md` | How episodes are built, checked, arrive and close. |
 | `justice.md` | Discipline, the ladder, courts-martial, main versus forks. |
 | `deeds.md` | Every notable act's traces, how word spreads, deduction (means, opportunity, motive, computed suspect pools), cases and isolated investigators. |
