@@ -47,7 +47,7 @@ worlds/<world>/
 
 **crew/&lt;id&gt;/memory.json**: `learned` (fact ids they know), `beliefs` (list of `{about, belief, from, at}`), `recent` (short list). Writable each turn. A person's memory is their light cone: what they witnessed, were told or read.
 
-**facts.json**: `{"facts": [...]}`, each `{id, statement, known_by, surfaced_at, source, created_at}`. `known_by` lists ids, `player` or `all`. `surfaced_at` is null until the player has perceived it. **A fact with `surfaced_at` set is immutable and can never be removed.** New truth goes in as new facts beneath it.
+**facts.json**: `{"facts": [...]}`, each `{id, statement, known_by, surfaced_at, source, created_at}`. `known_by` lists ids, `player` or `all`. `surfaced_at` is null until the player has perceived it. **A fact with `surfaced_at` set is immutable and can never be removed.** New truth goes in as new facts beneath it. Optional `reinterprets`: the id of an earlier fact this one explains (an instrument artifact, different conditions, a limit of resolution); the earlier fact stays as it was.
 
 **precedents.json**: `{"precedents": [...]}`, each `{id, ruling, kind, reason, source, created_at}`, with `kind` one of `lore` / `procedure` / `tech` / `person`. Append-only and immutable: a later precedent may *refine* an earlier one by citing its id, but never edits it.
 
@@ -68,7 +68,7 @@ worlds/<world>/
 
 **unknowns.json**: `{"unknowns": [...]}`, each `{id, subject, canon_record, observations}`: a canon unknown as a black box (`physics.md`). `canon_record` lists canon card ids (what the show established); `observations` lists fact ids (what this branch has measured). **No explanation field, ever**; the validator rejects one.
 
-**hypotheses.json**: `{"hypotheses": [...]}`, each `{id, subject, statement, proposed_by, held_by, physics_basis, predictions, tests, status, created_at}`. `predictions` is a list of `{id, if, then}`; `tests` a list of `{prediction, via, observation, result}` where `observation` is a fact id and `result` is `supported` / `falsified` / `inconclusive`. `status` is `open` / `surviving` / `falsified`. The validator enforces: any falsifying test makes it `falsified`; `surviving` needs a supported test; falsified is permanent; statements never change and tests are append-only (refine into a new hypothesis instead).
+**hypotheses.json**: `{"hypotheses": [...]}`, each `{id, subject, statement, proposed_by, held_by, physics_basis, predictions, tests, status, created_at}`. `predictions` is a list of `{id, if, then}`; `tests` a list of `{prediction, via, observation, result}` where `observation` is a fact id and `result` is `supported` / `falsified` / `inconclusive`. `status` is `open` / `surviving` / `falsified`. The validator enforces: any falsifying test makes it `falsified`; `surviving` needs a supported test; falsified is permanent; statements never change and tests are append-only (refine into a new hypothesis instead). Optional `revives: {hypothesis, via}`: a new hypothesis may take up a falsified one, but only `via` a fact that reinterprets an observation that falsified it. The old one stays falsified.
 
 **premises.json**: `{"premises": [...]}`, each `{id, candidates, roll, chosen, canon_distance}`.
 
@@ -110,7 +110,7 @@ One JSON object per line, always with `watch`, `turn` and `type`.
 | `OBJECTION` | `claim`, `verdict` (`consistent` / `diverged` / `unsupported` / `contradicts`), `ruling` |
 | `WORLDTURN` | `steps` (list of what moved) |
 | `NOTE` | `text`, Will's `// note`, for the evaluation only |
-| `ROLL` | for undetermined outcomes: `outcomes` (written first), `roll` (1-based, from the shell), `result` (must be `outcomes[roll-1]`) |
+| `ROLL` | for undetermined outcomes: `outcomes` (written first), `roll` (1-based, from the shell), `result` (must be `outcomes[roll-1]`). The result is recorded as a scoped observation fact, never a precedent (`physics.md`) |
 | `LAW` `REWOUND` `SAVE` `FORK` `RETURN` `HOLODECK` | as they happen |
 
 Every `lore_touch` item on a `TURN` needs a `LORECHECK` with the same watch and turn in the same commit. The validator counts them.
