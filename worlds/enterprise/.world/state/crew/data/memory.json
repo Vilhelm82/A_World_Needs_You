@@ -2,7 +2,8 @@
  "learned": [
   "F-001",
   "F-002",
-  "F-010"
+  "F-010",
+  "F-042"
  ],
  "beliefs": [
   {
@@ -10,12 +11,19 @@
    "belief": "The first officer is informal in a way that appears to increase others' willingness to follow him. Further observation required.",
    "from": "witnessed",
    "at": 41174.2
+  },
+  {
+   "about": "player",
+   "belief": "The first officer anticipated a discrepancy between the optical and sensor records before it was found. I would like to know on what basis.",
+   "from": "witnessed",
+   "at": 41174.87
   }
  ],
  "recent": [
   "Farpoint",
   "the holodeck",
   "sensor recalibration pending",
-  "offered a bridge life-sign filter for Yar's alert after the beta calibration; noted no one has examined the internal sensor logs of Q's appearances"
+  "offered a bridge life-sign filter for Yar's alert after the beta calibration; noted no one has examined the internal sensor logs of Q's appearances",
+  "compared Q's optical record with internal sensors at the XO's order: no life sign logged at his position"
  ]
 }

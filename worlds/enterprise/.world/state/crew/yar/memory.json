@@ -3,7 +3,8 @@
   "F-001",
   "F-002",
   "F-010",
-  "F-041"
+  "F-041",
+  "F-042"
  ],
  "beliefs": [
   {
@@ -17,6 +18,12 @@
    "belief": "He listened. Then he asked the right question first. That's twice he hasn't hesitated.",
    "from": "witnessed",
    "at": 41174.86
+  },
+  {
+   "about": "player",
+   "belief": "Said it was my protocol and he'd stand behind it. Most officers say that and then present it.",
+   "from": "witnessed",
+   "at": 41174.87
   }
  ],
  "recent": [
@@ -24,6 +31,7 @@
   "the drill she wants",
   "called the XO for ten minutes on intruder response",
   "gave the XO her incident log and the eleven names",
-  "the XO's design: silent alert, thirty seconds, then yellow; one word stands it down"
+  "the XO's design: silent alert, thirty seconds, then yellow; one word stands it down",
+  "the XO and she carry the alert protocol in together, hers; internal sensors never logged Q"
  ]
 }

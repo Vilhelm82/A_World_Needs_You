@@ -75,3 +75,17 @@ Yar looks at him a moment, then at you. "It'll fire every time somebody brings a
 "Then someone acknowledges it," Data says.
 
 "Then someone acknowledges it." She finishes the line and turns the padd so you can read it. "It changes the ship's alert condition on its own, so it's the captain's to sign. I'll have it written up tonight. You want to carry it in, or do I?"
+
+## turn 7
+
+"Logged before they set foot. Understood." Yar takes the padd back. "Mine, then. Tonight."
+
+Data has already turned to his console. "Aligning the optical record with the internal sensor logs at matching timestamps." Readouts slide across ops, too fast to follow: the bridge from the forward camera, Q in his robes beside the conn, and beneath it the life-sign plot for the same deck, the same seconds. Troi has turned in her seat to watch.
+
+Thirty seconds, perhaps.
+
+"Commander." Data sounds, if anything, interested. "Three appearances on the bridge. In each, the optical record shows him for the whole interval. The internal sensors logged a life sign for every crew member present, and none at his position. Not a weak reading. None." He tilts his head. "That is what these sensors recorded at their routine settings. It does not establish that he cannot be detected by other means. But a filter that relies on life signs alone would not have fired."
+
+He looks at Yar. "A second trigger, then. The optical record: an unidentified figure on the bridge feed."
+
+At conn, La Forge has stopped pretending not to listen. "So he was standing right there and the ship said nobody was."

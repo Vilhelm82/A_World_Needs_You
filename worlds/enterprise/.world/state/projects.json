@@ -61,7 +61,7 @@
     {
      "name": "sensor filter for unaccounted life signs on the bridge",
      "status": "todo",
-     "needs": "Data, after the beta-shift calibration",
+     "needs": "Data, after the beta calibration; a second trigger on the optical record, since internal sensors did not register Q (F-042)",
      "cost": "a shift of Data's time"
     },
     {
@@ -94,19 +94,21 @@
    "id": "J-003",
    "title": "Q file",
    "owner": "data",
-   "collaborators": [],
+   "collaborators": [
+    "player"
+   ],
    "kind": "experiment",
    "goal": "compile every sensor record of Q's appearances for study",
    "stages": [
     {
      "name": "gather the records",
-     "status": "doing",
+     "status": "done",
      "needs": "sensor logs",
      "cost": "Data's off hours"
     },
     {
      "name": "analyse",
-     "status": "todo",
+     "status": "doing",
      "needs": "the file",
      "cost": "unknown"
     }

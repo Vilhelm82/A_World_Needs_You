@@ -223,6 +223,20 @@
    "surfaced_at": 41174.85,
    "source": "Yar's incident log",
    "created_at": 41174.85
+  },
+  {
+   "id": "F-042",
+   "statement": "Data's comparison of the bridge optical record with the internal life-sign sensor logs, at standard settings and resolution, for Q's three in-person appearances on the bridge during the Farpoint mission: the optical record shows Q throughout; the internal sensors logged no life sign at his position in any interval, while every crew member present was logged normally. Scope: one ship's internal sensors at their routine settings; it does not establish that Q is undetectable by other means or settings.",
+   "known_by": [
+    "data",
+    "yar",
+    "troi",
+    "laforge",
+    "player"
+   ],
+   "surfaced_at": 41174.87,
+   "source": "observation (ROLL L:1:7); Data's log comparison",
+   "created_at": 41174.87
   }
  ]
 }
