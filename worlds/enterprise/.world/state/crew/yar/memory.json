@@ -11,7 +11,8 @@
   "F-031",
   "F-055",
   "F-057",
-  "F-058"
+  "F-058",
+  "F-059"
  ],
  "beliefs": [
   {
@@ -37,6 +38,12 @@
    "belief": "He wants it as the default for anyone, not just Q. Right answer.",
    "from": "witnessed",
    "at": 41174.9
+  },
+  {
+   "about": "player",
+   "belief": "Gave my people away across the table without asking me. Right call, wrong order. Told him so.",
+   "from": "witnessed",
+   "at": 41175.385
   }
  ],
  "recent": [

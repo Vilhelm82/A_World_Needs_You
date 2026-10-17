@@ -12,7 +12,8 @@
   "F-054",
   "F-055",
   "F-057",
-  "F-058"
+  "F-058",
+  "F-059"
  ],
  "beliefs": [
   {
@@ -26,6 +27,12 @@
    "belief": "He said yes with a condition that was right, and let me ask for it myself. He's learned something since Betazed.",
    "from": "witnessed",
    "at": 41175.318
+  },
+  {
+   "about": "player",
+   "belief": "Said he'd let me raise it and then asked for me himself. Still, he asked for the right reason.",
+   "from": "witnessed",
+   "at": 41175.385
   }
  ],
  "recent": [
@@ -38,6 +45,7 @@
   "Hesker IV: children among the dead",
   "Lloyd asked through the link what was wrong; she told him only that she felt something on the bridge, not hers to tell; asked to go down to Hesker IV for the families",
   "Lloyd: she's on the away team once Crusher knows how it spreads; raise it at the briefing and he'll back her",
-  "1300 briefing: Crusher's summary of the Hesker IV reports"
+  "1300 briefing: Crusher's summary of the Hesker IV reports",
+  "Lloyd asked for her on the ground with the herders; she had meant to ask herself"
  ]
 }

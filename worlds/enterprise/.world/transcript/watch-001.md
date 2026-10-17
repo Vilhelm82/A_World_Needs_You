@@ -317,3 +317,19 @@ Data answers. "Not at this range, Captain. The colony's transmitter is not power
 Troi has been turning her padd slowly on the table. "Be careful how she's seen doing it." She looks at Crusher, then at you. "These are herders. Their animals are their living, and probably more than that. Strangers arriving in the middle of a sickness and taking samples from the herds will look like the first step to killing them, whatever we say it's for."
 
 Crusher nods slowly, then looks across at you. "That's two of my three gaps half-filled, from a list I sent you this morning. What else did you find?"
+
+## turn 25
+
+"Three," Yar says.
+
+Heads turn. She doesn't look away from you. "Three of the four. I'm putting people on the ground at a quarantine, Commander, and I'll want a medic with them. You can have three." A beat. "Next time, ask me before you offer my people across a table."
+
+Picard lets that sit exactly as long as it needs to, and no longer. "Draft the request to Starfleet Medical, Number One. I'll sign it." He considers it. "Wherever they find a physician and a nurse, they'll be days behind us at best."
+
+"I'll take the field medics for triage and whatever Mr. Reyhan can give me," Crusher says. "If he says yes."
+
+Troi glances at you, and for a moment the link carries something dry and amused: *You were going to let me ask.* Aloud she only says, "Yes. I'll go down with Ensign Mbatha."
+
+"Same precautions as everyone," Crusher says to her. "Gloves. Nothing local in your mouth. Decon on the way up."
+
+Picard folds his hands on the table. "Then the away team, Number One. Who goes down first, and when?"

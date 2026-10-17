@@ -453,6 +453,22 @@
    "surfaced_at": 41175.38,
    "source": "the briefing",
    "created_at": 41175.38
+  },
+  {
+   "id": "F-059",
+   "statement": "At the briefing: Yar gives the medical effort three of her four field medics, not four, and wants to be asked first next time; Lloyd will ask Tomas Reyhan to volunteer; Picard will sign a request, drafted by Lloyd, for Starfleet Medical to send a physician and an ICU nurse after the ship, who will be days behind at best; Mbatha works with the herders, with their permission and their hands on their animals; Troi goes down for that.",
+   "known_by": [
+    "picard",
+    "crusher",
+    "data",
+    "yar",
+    "troi",
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.385,
+   "source": "the briefing",
+   "created_at": 41175.385
   }
  ]
 }
