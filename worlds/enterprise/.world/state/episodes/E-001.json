@@ -201,7 +201,7 @@
    "burn": 0,
    "cull-all": 0,
    "hold-and-supply": 0,
-   "test-and-cull": 0,
+   "test-and-cull": 2,
    "evacuate-children": 0
   },
   "in_motion": [

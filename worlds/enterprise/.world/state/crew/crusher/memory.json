@@ -4,7 +4,8 @@
   "F-002",
   "F-047",
   "F-031",
-  "F-054"
+  "F-054",
+  "F-055"
  ],
  "beliefs": [
   {
@@ -18,6 +19,18 @@
    "belief": "On Earth I'd call it a coxsackie-type virus. But Juuso has eleven years on that world and says no match and an insect vector; she knows her patients.",
    "from": "inferred",
    "at": 41175.365
+  },
+  {
+   "about": "the Hesker IV virus",
+   "belief": "Gut virus; water and hands first. If the reedflies are in it at all, they're passengers. I deferred to Juuso too quickly.",
+   "from": "inferred",
+   "at": 41175.37
+  },
+  {
+   "about": "player",
+   "belief": "Asked the right question about the stool before I did. He's serious.",
+   "from": "witnessed",
+   "at": 41175.37
   }
  ],
  "recent": [

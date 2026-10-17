@@ -393,6 +393,22 @@
    "surfaced_at": 41175.365,
    "source": "Juuso's reports via Starfleet Medical",
    "created_at": 41175.365
+  },
+  {
+   "id": "F-055",
+   "statement": "At the 1300 briefing: Crusher says viruses of that description spread on Earth mainly faecal-oral, through water, food and hands; insects can carry them only mechanically, on their bodies; so even if Juuso is right about the reedflies, destroying their breeding grounds would not stop it. Data adds that in the twentieth century poliovirus was recovered from houseflies, which were never shown to be the main route. Picard: no habitat destroyed on a hypothesis. Yar: the away team drinks and eats nothing local and touches nothing bare-handed.",
+   "known_by": [
+    "picard",
+    "crusher",
+    "data",
+    "yar",
+    "troi",
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.37,
+   "source": "the briefing",
+   "created_at": 41175.37
   }
  ]
 }

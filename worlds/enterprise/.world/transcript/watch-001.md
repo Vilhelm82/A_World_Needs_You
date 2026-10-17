@@ -269,3 +269,19 @@ Crusher stands. "Thirty-one cases in twenty-three days. It starts as a fever. In
 "On Earth," she adds, "I'd say that description sounds like a coxsackie-type virus. They inflame the heart, in children particularly." A small shake of the head. "But this isn't Earth, and Dr. Juuso has eleven years on that world."
 
 She touches the last padd and a map comes up on the wall screen: a valley system, the case households in red. Nearly all the red sits in one place. "Twenty-seven of the thirty-one cases are in families from the four herding groups on the colony's newest pasture. They call it the Ninth. Dr. Juuso believes the pathogen is native, carried by a biting insect from the Ninth's marshes. The colonists call them reedflies." She looks up at Picard. "The council is considering destroying their breeding grounds."
+
+## turn 22
+
+Crusher stops with her hand still on the padd.
+
+"They do." She says it slowly, as though she's listening to herself. "Faecal-oral. Water, food, hands, nappies. That's how they move." She looks at the map. "An insect can carry a virus like that, but only on its body, mechanically. It walks through something and then walks through something else."
+
+"Poliovirus was recovered from houseflies in the twentieth century," Data says. "They were never shown to be a principal route of transmission."
+
+"Which means," Crusher says, "that even if Dr. Juuso is right about the reedflies, burning their marshes won't stop it. It would take away the least important way it spreads." She sits down. "I took her word for the insects because she's been there eleven years and I haven't been there at all. That's not a reason."
+
+Picard has listened to all of it standing. "Then nobody destroys a habitat on a hypothesis. Not with our help." He finally sits. "Lieutenant."
+
+Yar doesn't need the prompt explained. "Away team drinks nothing down there, eats nothing, touches nothing with bare hands. Gloves, sealed water, decon on the way back." A glance at Crusher. "And the biofilter won't know what it's looking for, will it."
+
+"No," Crusher says. "Not until I've had it under a microscope."
