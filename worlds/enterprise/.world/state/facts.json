@@ -485,6 +485,22 @@
    "surfaced_at": 41175.39,
    "source": "the briefing",
    "created_at": 41175.39
+  },
+  {
+   "id": "F-061",
+   "statement": "End of the briefing: Lloyd goes to Javri, where the council meets; Yar's team covers the Ninth and she sends one security officer with Lloyd. Picard allows a cargo bay to be prepared as an isolation ward on its own environmental circuit, in case he decides to bring patients aboard; Crusher wants it at negative pressure with its own filtered air. Picard reminds Lloyd that in the council chamber he is a guest of the colony's government.",
+   "known_by": [
+    "picard",
+    "crusher",
+    "data",
+    "yar",
+    "troi",
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.395,
+   "source": "the briefing",
+   "created_at": 41175.395
   }
  ]
 }

@@ -95,6 +95,14 @@
    "reason": "M-013: FTL signalling speed rises with transmitter power and relays; a lone ship's floor (~52,000 c, CALC) gives about 41 minutes for 4.1 ly; a small colony's transmitter adds nothing to that.",
    "source": "turn 23 (L:1:23)",
    "created_at": 41175.375
+  },
+  {
+   "id": "P-013",
+   "ruling": "[assumed] A cargo bay can be isolated on its own environmental circuit and run at negative pressure with filtered exhaust, making a contained ward; doing it takes engineering a shift or so and competes with other replicator and power work.",
+   "kind": "tech",
+   "reason": "Cargo bays have their own environmental controls; negative-pressure isolation is ordinary hospital engineering; canon uses cargo bays for overflow and refugees.",
+   "source": "turn 27 (L:1:27)",
+   "created_at": 41175.395
   }
  ]
 }

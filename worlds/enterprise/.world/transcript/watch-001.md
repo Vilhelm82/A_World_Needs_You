@@ -347,3 +347,15 @@ Crusher speaks before you can. "Captain, the colony asked for cardiac support. I
 Crusher's mouth tightens, but she nods. "Understood."
 
 Across the table, Yar is still waiting for her answer.
+
+## turn 27
+
+"Javri." Yar marks it. "Then my team covers the Ninth, and you get one of mine with you anyway. Council chambers have doors."
+
+"Permission granted," Picard says. "Prepare it. I may never use it." He looks at you a moment longer. "And Number One. In that council chamber you will be a guest of the colony's government. They will decide what is done to their world. We may advise."
+
+"If you do it," Crusher says, already standing with her padds, "I need it at negative pressure, with its own filtered air going out, not shared with the ship. Otherwise it isn't isolation, it's a room."
+
+Picard nods to the table. "Thank you. Dismissed."
+
+Chairs scrape. Yar is out first; MacDougal is already on her combadge about power cells as she goes. Troi goes with Crusher, the two of them talking low about the families. Data waits a polite moment, then follows. Picard has gone to the window, the stars streaming past behind him, and hasn't left.

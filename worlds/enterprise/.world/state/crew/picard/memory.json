@@ -12,7 +12,8 @@
   "F-057",
   "F-058",
   "F-059",
-  "F-060"
+  "F-060",
+  "F-061"
  ],
  "beliefs": [
   {
@@ -26,6 +27,12 @@
    "belief": "Brought me the one item that could not wait and held the rest. Called it a suspicion, not a finding. Good.",
    "from": "witnessed",
    "at": 41175.315
+  },
+  {
+   "about": "player",
+   "belief": "Prepares for my decision without presuming it. And wants to be in the council chamber; he must remember he is a guest there.",
+   "from": "witnessed",
+   "at": 41175.395
   }
  ],
  "recent": [

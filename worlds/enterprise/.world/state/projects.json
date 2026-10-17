@@ -210,6 +210,42 @@
    "status": "active",
    "precedents": [],
    "started_at": 41175.375
+  },
+  {
+   "id": "J-007",
+   "title": "Isolation ward",
+   "owner": "player",
+   "collaborators": [
+    "macdougal",
+    "crusher"
+   ],
+   "kind": "duty",
+   "goal": "a cargo bay sealed on its own environmental circuit at negative pressure, ready if Picard decides to bring patients aboard",
+   "stages": [
+    {
+     "name": "ask MacDougal",
+     "status": "todo",
+     "needs": "the chief engineer, already making purifiers",
+     "cost": "engineering time and power against J-006"
+    },
+    {
+     "name": "seal and fit the bay",
+     "status": "todo",
+     "needs": "engineering, about a shift",
+     "cost": "a cargo bay out of use"
+    },
+    {
+     "name": "fit beds and equipment",
+     "status": "todo",
+     "needs": "sickbay",
+     "cost": "Crusher's thin staff"
+    }
+   ],
+   "status": "active",
+   "precedents": [
+    "P-013"
+   ],
+   "started_at": 41175.395
   }
  ]
 }
