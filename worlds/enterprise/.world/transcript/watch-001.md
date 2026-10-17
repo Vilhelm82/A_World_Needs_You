@@ -359,3 +359,11 @@ Across the table, Yar is still waiting for her answer.
 Picard nods to the table. "Thank you. Dismissed."
 
 Chairs scrape. Yar is out first; MacDougal is already on her combadge about power cells as she goes. Troi goes with Crusher, the two of them talking low about the families. Data waits a polite moment, then follows. Picard has gone to the window, the stars streaming past behind him, and hasn't left.
+
+## turn 28
+
+Picard doesn't turn from the window at once. When he does, there is something at the corner of his mouth that might, on another man, be the start of a smile.
+
+"The traditions on this ship are a week old, Number One. You may find you're founding a few." He comes back to the table, though he doesn't sit. "It was a fair point, and you gave it to her in front of the senior staff. That will cost you nothing with them. Rather the reverse."
+
+He sets his padd down. "Your two items. Briefly."
