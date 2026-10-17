@@ -437,6 +437,22 @@
    "surfaced_at": 41175.375,
    "source": "the briefing",
    "created_at": 41175.375
+  },
+  {
+   "id": "F-058",
+   "statement": "At the briefing, Lt. (j.g.) Vantongeren (sequencing human samples) and Ens. Mbatha (sampling herds, water and wildlife on the Ninth) are reassigned to Dr. Crusher for Hesker IV, with Data's release (their stellar survey is suspended) and Picard's approval. Troi warns that strangers sampling the herds in the middle of this will look to herders like the first step to killing them.",
+   "known_by": [
+    "picard",
+    "crusher",
+    "data",
+    "yar",
+    "troi",
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.38,
+   "source": "the briefing",
+   "created_at": 41175.38
   }
  ]
 }

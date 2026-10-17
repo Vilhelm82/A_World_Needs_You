@@ -201,7 +201,7 @@
    "burn": 0,
    "cull-all": 0,
    "hold-and-supply": 0,
-   "test-and-cull": 2,
+   "test-and-cull": 4,
    "evacuate-children": 0
   },
   "in_motion": [
@@ -211,7 +211,8 @@
    "the burn vote being prepared",
    "Crusher half-recognises the virus's family from Juuso's description (small, non-enveloped, RNA, ~30 nm, in stool: on Earth, picornavirus) and defers to Juuso",
    "Crusher's message (sent 1310) reaches Juuso about 1350: questions on water and a boil-water advisory for the Ninth; Juuso will issue it; families comply unevenly; it cuts the water route but not milk or handling",
-   "MacDougal replicating about forty portable water purifiers before arrival"
+   "MacDougal replicating about forty portable water purifiers before arrival",
+   "Mbatha will sample herds, water and wildlife on the Ninth; to the herders, sampling looks like the first step to a cull (Eira's trigger)"
   ],
   "regard": {
    "crusher": "moves on whether the first officer gives her the logistics she asks for, and whether anyone overrides a colleague's diagnosis rudely",

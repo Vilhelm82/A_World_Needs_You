@@ -305,3 +305,15 @@ Data answers. "Not at this range, Captain. The colony's transmitter is not power
 "Then send it now, Doctor. The questions and the advisory both."
 
 "Sending." Crusher touches the padd. It's ten past one. The earliest anything can come back is a little before three.
+
+## turn 24
+
+"Yes." Crusher doesn't take a breath over it. "God, yes. Both of them." She's writing names down. "If it's in the animals, the animals are where it is when nobody's sick yet."
+
+"Lieutenant Vantongeren and Ensign Mbatha are assigned to the stellar survey," Data says, "which is suspended. They are available, with my agreement."
+
+"Make it so," says Picard.
+
+Troi has been turning her padd slowly on the table. "Be careful how she's seen doing it." She looks at Crusher, then at you. "These are herders. Their animals are their living, and probably more than that. Strangers arriving in the middle of a sickness and taking samples from the herds will look like the first step to killing them, whatever we say it's for."
+
+Crusher nods slowly, then looks across at you. "That's two of my three gaps half-filled, from a list I sent you this morning. What else did you find?"
