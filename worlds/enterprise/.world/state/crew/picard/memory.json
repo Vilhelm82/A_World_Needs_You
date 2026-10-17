@@ -5,7 +5,8 @@
   "F-010",
   "F-046",
   "F-031",
-  "F-051"
+  "F-051",
+  "F-050"
  ],
  "beliefs": [
   {
@@ -13,6 +14,12 @@
    "belief": "Did what was asked at Farpoint: the docking, the away teams. Whether he will tell me what I don't want to hear is still open.",
    "from": "witnessed",
    "at": 41174.2
+  },
+  {
+   "about": "player",
+   "belief": "Brought me the one item that could not wait and held the rest. Called it a suspicion, not a finding. Good.",
+   "from": "witnessed",
+   "at": 41175.315
   }
  ],
  "recent": [
@@ -20,6 +27,7 @@
   "Q's trial left standing",
   "the Hood departed",
   "Number One asked for twenty minutes at 1400, two items",
-  "received Starfleet Medical's relay; diverted to Hesker IV at warp 8; called senior staff for 1300"
+  "received Starfleet Medical's relay; diverted to Hesker IV at warp 8; called senior staff for 1300",
+  "Number One brought the latch-four restriction to him at once and held the rest; made it a standing order"
  ]
 }

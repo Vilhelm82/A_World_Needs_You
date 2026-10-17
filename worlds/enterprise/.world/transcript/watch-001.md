@@ -207,3 +207,15 @@ Picard comes out with a padd in his hand and doesn't sit. "Number One. Starfleet
 "Engage." The stars on the viewscreen lengthen and settle. Picard turns. "Senior staff in the observation lounge at thirteen hundred. I have asked Dr. Crusher to read the colony's reports before then." To you, more quietly: "Your fourteen hundred will have to wait, I'm afraid. Bring it to me after the briefing if it can't."
 
 Troi has gone very still in her chair. She is looking at nothing in particular.
+
+## turn 17
+
+Picard takes the three lines on his padd as they arrive and reads them standing. It takes him rather longer than three lines should.
+
+"A suspicion, then. Not yet a finding." He looks up. "Very well. Until she has looked, the chief engineer's restriction stands as my order. Mr. Data, note it in the log."
+
+"Noted, Captain."
+
+"Thank you, Number One." He is already turning back to the ready room. "Thirteen hundred."
+
+The doors close behind him. At conn, La Forge lets out a breath he has probably been holding since the word *children*, and goes back to his board.

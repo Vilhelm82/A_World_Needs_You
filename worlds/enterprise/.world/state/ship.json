@@ -3,12 +3,13 @@
  "orders": [
   "Starfleet Medical via Starfleet Command: answer the Ealat colony's request for medical assistance on Hesker IV",
   "Starfleet: begin the exploration survey of the sector beyond Deneb; first leg at the captain's discretion",
-  "Starfleet: file the full Farpoint report, including the Q encounter, at the next relay"
+  "Starfleet: file the full Farpoint report, including the Q encounter, at the next relay",
+  "Captain's standing order (41175.3): saucer separation restricted per the chief engineer's interim restriction on latch four until she has inspected it"
  ],
  "systems": {
   "warp": "nominal",
   "impulse": "nominal",
-  "saucer_separation": "available; chief engineer has flagged docking latch four after the Farpoint separation",
+  "saucer_separation": "restricted by standing order: no planned separation; emergency separation at sublight wherever there is a choice",
   "sensors": "long-range recalibration after the Farpoint encounter pending (Data, beta shift)",
   "shields": "nominal",
   "transporters": "nominal",
