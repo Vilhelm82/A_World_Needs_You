@@ -43,7 +43,7 @@ This file is the constitution. The detail lives in `canon/cards.jsonl`: short, c
 - [canon] Code 47: a captain's-eyes-only emergency channel that leaves no computer record of the transmission.
 - [canon] Phasers have stun. A phaser drawn aboard ship is a decision someone will ask about.
 - [canon] Sickbay heals most injuries. [assumed] (house rule) Death is rare and is the signed cost of a decision.
-- [assumed] (house rule) Technobabble is texture, never a key. No polarity is reversed to close a situation. An engineering fix costs time, parts or the schedule, and the engineer offers it as one option among worse ones.
+- [assumed] (house rule) Hard science as far as it reaches (`physics.md`): every technology keeps canon's capabilities and limits, explained by real physics plus four closed postulates, with only an engineering gap between it and us. A technical solution must derive from that, be set up beforehand, cost something, and come from the people, never from the GM. Canon unknowns (Q, the Traveler) stay unexplained.
 - [assumed] (house rule) The universal translator works from samples and gets new languages wrong confidently at first.
 
 ## Starfleet

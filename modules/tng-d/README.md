@@ -19,8 +19,9 @@ This preset is an **evaluation prototype**. Every watch is scored against the en
 | `episode.md` | How episodes are built, checked, arrive and close. |
 | `justice.md` | Discipline, the ladder, courts-martial, main versus forks. |
 | `deeds.md` | Every notable act's traces, how word spreads, deduction (means, opportunity, motive, computed suspect pools), cases and isolated investigators. |
+| `physics.md` | Hard science: real physics plus four closed postulates; mechanism cards; computed numbers; canon unknowns as black boxes; hypotheses that survive but are never crowned. |
 | `STATE.md` | The JSON world, the ledger, timelines. |
-| `canon/` | The live lore base: cited reference cards and how to check lore at any time, branch-aware. |
+| `canon/` | The live lore base: cited lore cards and hard-science mechanism cards, and how to check lore at any time, branch-aware. |
 | `charter.template.md` | The charter to copy. |
 
 ## Starting

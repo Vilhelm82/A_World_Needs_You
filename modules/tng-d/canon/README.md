@@ -1,5 +1,7 @@
 # Canon — the live lore base
 
+`mechanisms.jsonl` holds the hard-science mechanism cards for each technology (`physics.md`), validated the same way: cited, append-only, postulates from the closed list, budgets computed.
+
 `cards.jsonl` is the lore baseline: short reference cards in our own words, each citing where it was verified. It grows from verified lore checks and never changes silently.
 
 ## A card

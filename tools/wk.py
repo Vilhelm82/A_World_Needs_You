@@ -59,6 +59,9 @@ PROJECT_STATUS = {"active", "paused", "done", "abandoned"}
 LAYERS = {"rules", "history-pre", "history-post"}
 ACCESS_KEYS = ("areas", "systems", "codes", "skills")
 ROLE_SET = {"security", "captain", "ops", "medical", "engineering"}
+POSTULATES = {"P1", "P2", "P3", "P4"}
+HYP_STATUS = {"open", "surviving", "falsified"}
+TEST_RESULTS = {"supported", "falsified", "inconclusive"}
 
 LEDGER_FIELDS = {
     "TURN": ["stardate", "present", "speakers", "addressed", "initiated", "transcript"],
@@ -74,6 +77,7 @@ LEDGER_FIELDS = {
     "OBJECTION": ["claim", "verdict", "ruling"],
     "LORECHECK": ["claim", "layer", "verdict", "cards", "divergence", "agent"],
     "REAUDIT": ["scope", "findings"],
+    "CALC": ["expression", "result", "units", "purpose"],
     "WORLDTURN": ["steps"],
     "NOTE": ["text"],
     "RATE": ["scores"],
@@ -82,7 +86,8 @@ LEDGER_FIELDS = {
 }
 
 ID_PREFIX = {"fact": "F", "precedent": "P", "trace": "T", "case": "C", "episode": "E", "premise": "R",
-             "act": "A", "divergence": "D", "project": "J", "card": "K"}
+             "act": "A", "divergence": "D", "project": "J", "card": "K", "mechanism": "M",
+             "hypothesis": "H"}
 
 # Targets from modules/eval/GOALS.md. (metric, goal, op, value)
 TARGETS = [
@@ -727,6 +732,80 @@ def validate_world(w):
             elif t == "PRECEDENT" and prec and e.get("id") not in {p.get("id") for p in prec.get("precedents", [])}:
                 rep.err(where, f"PRECEDENT '{e.get('id')}' does not exist")
 
+    # unknowns: black boxes with an observation record
+    pd = preset_dir(w)
+    card_ids = set()
+    if pd and (pd / "canon" / "cards.jsonl").exists():
+        for l in (pd / "canon" / "cards.jsonl").read_text().splitlines():
+            if l.strip():
+                try:
+                    card_ids.add(json.loads(l).get("id"))
+                except json.JSONDecodeError:
+                    pass
+    un = load(s / "unknowns.json", rep)
+    unknown_ids = set()
+    if un is not None and need(un, ["unknowns"], "unknowns.json", rep):
+        for i, u in enumerate(un["unknowns"]):
+            where = f"unknowns.json[{i}]"
+            if not need(u, ["id", "subject", "canon_record", "observations"], where, rep):
+                continue
+            unknown_ids.add(u["id"])
+            for k in u["canon_record"]:
+                if k not in card_ids:
+                    rep.err(where, f"canon_record card '{k}' does not exist")
+            for f_ in u["observations"]:
+                if f_ not in fact_known:
+                    rep.err(where, f"observation fact '{f_}' does not exist")
+            if any(k in u for k in ("explanation", "truth", "mechanism")):
+                rep.err(where, "an unknown holds observations only, never an explanation")
+
+    # hypotheses: survive, never crowned; falsified is permanent
+    hy = load(s / "hypotheses.json", rep)
+    if hy is not None and need(hy, ["hypotheses"], "hypotheses.json", rep):
+        old_h = {h.get("id"): h for h in
+                 (head_json(f"{w.rel}/.world/state/hypotheses.json") or {}).get("hypotheses", [])}
+        cur_ids = set()
+        for i, h in enumerate(hy["hypotheses"]):
+            where = f"hypotheses.json[{i}]"
+            if not need(h, ["id", "subject", "statement", "proposed_by", "held_by", "physics_basis",
+                            "predictions", "tests", "status", "created_at"], where, rep):
+                continue
+            cur_ids.add(h["id"])
+            for x in [h["proposed_by"]] + list(h["held_by"]):
+                if not valid_ref(x, crew, {"player"}):
+                    rep.err(where, f"names unknown '{x}'")
+            if h["status"] not in HYP_STATUS:
+                rep.err(where, f"status must be one of {sorted(HYP_STATUS)}")
+            preds = {pr.get("id") for pr in h["predictions"] if isinstance(pr, dict)}
+            results = []
+            for j, te in enumerate(h["tests"]):
+                if not need(te, ["prediction", "via", "observation", "result"], f"{where} tests[{j}]", rep):
+                    continue
+                if te["prediction"] not in preds:
+                    rep.err(where, f"tests[{j}] names unknown prediction '{te['prediction']}'")
+                if te["observation"] not in fact_known:
+                    rep.err(where, f"tests[{j}] cites observation '{te['observation']}', which isn't a fact")
+                if te["result"] not in TEST_RESULTS:
+                    rep.err(where, f"tests[{j}] result must be one of {sorted(TEST_RESULTS)}")
+                results.append(te["result"])
+            if "falsified" in results and h["status"] != "falsified":
+                rep.err(where, "a test falsified it, so its status must be 'falsified'")
+            if h["status"] == "surviving" and "supported" not in results:
+                rep.err(where, "'surviving' needs at least one supported test")
+            if h["status"] == "falsified" and "falsified" not in results:
+                rep.err(where, "'falsified' needs a falsifying test")
+            oh = old_h.get(h["id"])
+            if oh:
+                if oh.get("status") == "falsified" and h["status"] != "falsified":
+                    rep.err(where, "a falsified hypothesis stays falsified; propose a new one instead")
+                if h["tests"][:len(oh.get("tests", []))] != oh.get("tests", []):
+                    rep.err(where, "tests are append-only")
+                if oh.get("statement") != h["statement"]:
+                    rep.err(where, "a hypothesis's statement never changes; propose a refined one instead")
+        for hid in old_h:
+            if hid not in cur_ids:
+                rep.err("hypotheses.json", f"hypothesis {hid} was removed")
+
     # entries added in this commit: TOLD updates knowledge; lore touches are checked
     for e in added:
         if e.get("type") == "TOLD" and e.get("fact") in fact_known:
@@ -734,6 +813,22 @@ def validate_world(w):
             for x in e.get("to", []):
                 if x in crew and x not in kb and "all" not in kb:
                     rep.err("ledger.jsonl", f"TOLD {e['fact']} to {x}, but {x} isn't added to its known_by")
+    for e in added:
+        if e.get("type") == "CALC":
+            try:
+                v = safe_eval(str(e.get("expression")))
+                r = float(e.get("result"))
+                if abs(v - r) > 1e-6 * max(1.0, abs(v)):
+                    rep.err("ledger.jsonl", f"CALC {e.get('expression')} = {v:.6g}, not {r:.6g}")
+            except Exception as ex:  # noqa: BLE001
+                rep.err("ledger.jsonl", f"CALC {e.get('expression')!r} can't be checked: {ex}")
+        if e.get("type") == "ROLL" and "outcomes" in e:
+            oc, roll = e.get("outcomes") or [], e.get("roll")
+            if not isinstance(roll, int) or not 1 <= roll <= len(oc):
+                rep.err("ledger.jsonl", f"ROLL {roll} is outside its {len(oc)} written outcomes")
+            elif e.get("result") != oc[roll - 1]:
+                rep.err("ledger.jsonl", f"ROLL {roll} names outcome {oc[roll - 1]!r} but records "
+                                        f"{e.get('result')!r}")
     touches, checks = {}, {}
     for e in added:
         key = (e.get("watch"), e.get("turn"))
@@ -792,6 +887,45 @@ def validate_canon(root):
                 rep.err(where, "a card needs at least one source")
             if c["supersedes"] and c["supersedes"] not in ids:
                 rep.err(where, f"supersedes unknown or later card {c['supersedes']}")
+    for mp in sorted(root.glob("modules/*/canon/mechanisms.jsonl")):
+        rel = mp.relative_to(root).as_posix()
+        cur = mp.read_text()
+        old = head_text(rel)
+        if old is not None and not cur.startswith(old):
+            rep.err(rel, "is append-only: verified mechanism cards are never edited; supersede them")
+        ids = set()
+        for n, line in enumerate(cur.splitlines(), 1):
+            if not line.strip():
+                continue
+            try:
+                m = json.loads(line)
+            except json.JSONDecodeError:
+                rep.err(rel, f"line {n} is not valid JSON")
+                continue
+            where = f"{rel} line {n}"
+            if not need(m, ["id", "tech", "canon_capabilities", "canon_limits", "physics_basis",
+                            "postulates", "engineering_gap", "budgets", "failure_modes", "sources",
+                            "verified_at", "supersedes"], where, rep):
+                continue
+            if m["id"] in ids:
+                rep.err(where, f"duplicate id {m['id']}")
+            ids.add(m["id"])
+            bad = set(m["postulates"]) - POSTULATES
+            if bad:
+                rep.err(where, f"postulates {sorted(bad)} are not in the closed list {sorted(POSTULATES)}")
+            if not m["sources"]:
+                rep.err(where, "a mechanism card needs at least one source")
+            for b in m["budgets"]:
+                basis = str(b.get("basis", ""))
+                if not basis.startswith("CALC:"):
+                    rep.err(where, f"budget '{b.get('quantity')}' isn't computed (basis must be 'CALC: <expr>')")
+                    continue
+                try:
+                    safe_eval(basis[5:].strip())
+                except Exception as ex:  # noqa: BLE001
+                    rep.err(where, f"budget '{b.get('quantity')}' expression doesn't evaluate: {ex}")
+            if m["supersedes"] and m["supersedes"] not in ids:
+                rep.err(where, f"supersedes unknown or later card {m['supersedes']}")
     return rep
 
 
@@ -920,7 +1054,7 @@ def preset_dir(w):
 
 def lore_search(w, claim, top=5):
     q = tokens(claim)
-    found = {"cards": [], "law": [], "precedents": [], "divergences": []}
+    found = {"cards": [], "mechanisms": [], "law": [], "precedents": [], "divergences": []}
     pd = preset_dir(w)
     if pd:
         cp = pd / "canon" / "cards.jsonl"
@@ -934,6 +1068,21 @@ def lore_search(w, claim, top=5):
                 if sc:
                     found["cards"].append((sc, {k: c.get(k) for k in
                                                 ("id", "layer", "topic", "statement", "sources")}))
+        mp = pd / "canon" / "mechanisms.jsonl"
+        if mp.exists():
+            mechs = [json.loads(l) for l in mp.read_text().splitlines() if l.strip()]
+            sup = {m.get("supersedes") for m in mechs if m.get("supersedes")}
+            for m in mechs:
+                if m.get("id") in sup:
+                    continue
+                text = " ".join([m.get("tech", ""), " ".join(m.get("canon_capabilities", [])),
+                                 " ".join(m.get("canon_limits", [])), m.get("physics_basis", ""),
+                                 " ".join(m.get("failure_modes", []))])
+                sc = len(q & tokens(text)) + 2 * len(q & tokens(m.get("tech", "")))
+                if sc:
+                    found["mechanisms"].append((sc, {k: m.get(k) for k in
+                                                     ("id", "tech", "postulates", "canon_limits",
+                                                      "physics_basis", "sources")}))
         lp = pd / "law.md"
         if lp.exists():
             for n, line in enumerate(lp.read_text().splitlines(), 1):
@@ -953,7 +1102,7 @@ def lore_search(w, claim, top=5):
     for k, v in found.items():
         v.sort(key=lambda p: -p[0])
         out[k] = [dict(score=s, **item) for s, item in v[:top]]
-    best = max([r["score"] for k in ("cards", "law", "precedents") for r in out[k]] or [0])
+    best = max([r["score"] for k in ("cards", "mechanisms", "law", "precedents") for r in out[k]] or [0])
     out["coverage"] = "covered" if best >= 2 else ("thin" if best == 1 else "none")
     return out
 
@@ -1063,6 +1212,10 @@ def compute_metrics(w, watch=None):
     prec_since = sum(1 for e in led if e.get("type") == "PRECEDENT" and e.get("watch", 0) > last_re)
     cur_watch = max([e.get("watch", 0) for e in led] or [0])
     m["reaudit_due"] = (cur_watch - last_re >= 5) or prec_since >= 10
+    m["calcs"] = sum(e.get("type") == "CALC" for e in entries)
+    m["rolls"] = sum(e.get("type") == "ROLL" for e in entries)
+    hyps = (load_quiet(w.state / "hypotheses.json", {}) or {}).get("hypotheses", [])
+    m["hypotheses"] = {k: sum(h.get("status") == k for h in hyps) for k in sorted(HYP_STATUS)}
 
     # G8
     eps = list((w.state / "episodes").glob("*.json")) if (w.state / "episodes").is_dir() else []

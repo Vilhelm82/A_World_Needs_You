@@ -85,6 +85,8 @@ def build(repo):
     write(s / "deeds.json", {"acts": [], "traces": [], "cases": []})
     write(s / "divergence.json", {"divergences": []})
     write(s / "projects.json", {"projects": []})
+    write(s / "unknowns.json", {"unknowns": []})
+    write(s / "hypotheses.json", {"hypotheses": []})
     write(s / "premises.json", {"premises": []})
     write(s / "pins.json", {"pins": []})
     write(w / ".world" / "ledger.jsonl", json.dumps({"watch": 1, "turn": 0, "type": "WATCH"}) + "\n")
@@ -329,6 +331,93 @@ def main():
         pj.write_text(json.dumps({"projects": [proj]}, indent=2))
         ok, out = commit(repo, "project")
         check("a valid project commits", ok, out)
+
+        # physics: mechanism cards
+        mech = repo / "modules/tng-d/canon/mechanisms.jsonl"
+        card = {"id": "M-001", "tech": "transporter", "canon_capabilities": ["beams people"],
+                "canon_limits": ["not through raised shields"],
+                "physics_basis": "quantum state transfer", "postulates": ["P2", "P5"],
+                "engineering_gap": "state capture at scale",
+                "budgets": [{"quantity": "rest energy, 70 kg", "value": "6.29e18 J", "basis": "CALC: 70 * c**2"}],
+                "failure_modes": ["lock loss"], "sources": ["https://x"], "verified_at": "2026-10-18",
+                "supersedes": None}
+        mech.write_text(json.dumps(card) + "\n")
+        ok, out = commit(repo, "extra postulate")
+        check("a mechanism card using a postulate outside the closed list is refused",
+              not ok and "closed list" in out, out)
+        card["postulates"] = ["P2", "P4"]; card["budgets"][0]["basis"] = "about six exajoules"
+        mech.write_text(json.dumps(card) + "\n")
+        ok, out = commit(repo, "narrated number")
+        check("a narrated (uncomputed) budget is refused", not ok and "isn't computed" in out, out)
+        card["budgets"][0]["basis"] = "CALC: 70 * c**2"
+        mech.write_text(json.dumps(card) + "\n")
+        ok, out = commit(repo, "mechanism")
+        check("a valid mechanism card commits", ok, out)
+        res = json.loads(sh(*wk, "lore", "worlds/test", "how does the transporter work", cwd=repo).stdout)
+        check("lore search finds the mechanism", res["mechanisms"] and res["mechanisms"][0]["id"] == "M-001", res)
+        mech.write_text(json.dumps(dict(card, physics_basis="magic")) + "\n")
+        ok, out = commit(repo, "edit mechanism")
+        check("editing a mechanism card is refused", not ok and "append-only" in out, out)
+        sh("git", "reset", "-q", "--hard", cwd=repo)
+
+        # CALC and ROLL entries are checked
+        before = lp.read_text()
+        append(w, {"watch": 1, "turn": 5, "type": "CALC", "expression": "70 * c**2", "result": 5e18,
+                   "units": "J", "purpose": "a narrated guess"})
+        ok, out = commit(repo, "bad calc")
+        check("a CALC with the wrong result is refused", not ok and "CALC 70 * c**2" in out, out)
+        lp.write_text(before)
+        append(w, {"watch": 1, "turn": 5, "type": "CALC", "expression": "70 * c**2",
+                   "result": 6.291286251157723e18, "units": "J", "purpose": "transporter budget"},
+                  {"watch": 1, "turn": 5, "type": "ROLL", "outcomes": ["a", "b", "c"], "roll": 2,
+                   "result": "c"})
+        ok, out = commit(repo, "bad roll")
+        check("a ROLL recording the wrong outcome is refused", not ok and "names outcome" in out, out)
+        lp.write_text(before)
+        append(w, {"watch": 1, "turn": 5, "type": "CALC", "expression": "70 * c**2",
+                   "result": 6.291286251157723e18, "units": "J", "purpose": "transporter budget"},
+                  {"watch": 1, "turn": 5, "type": "ROLL", "outcomes": ["a", "b", "c"], "roll": 2,
+                   "result": "b"})
+        ok, out = commit(repo, "calc and roll")
+        check("a correct CALC and ROLL commit", ok, out)
+
+        # unknowns hold observations only
+        un = w / ".world/state/unknowns.json"
+        un.write_text(json.dumps({"unknowns": [{"id": "q", "subject": "Q", "canon_record": ["K-001"],
+                                               "observations": ["F-001"], "explanation": "a subspace being"}]}))
+        ok, out = commit(repo, "explained Q")
+        check("an unknown with an explanation is refused", not ok and "never an explanation" in out, out)
+        un.write_text(json.dumps({"unknowns": [{"id": "q", "subject": "Q", "canon_record": ["K-001"],
+                                               "observations": ["F-001"]}]}, indent=2))
+        ok, out = commit(repo, "unknown")
+        check("an unknown with observations only commits", ok, out)
+
+        # hypotheses: survive, never crowned; falsified is permanent
+        hp = w / ".world/state/hypotheses.json"
+        hyp = {"id": "H-001", "subject": "q", "statement": "Q manifests through subspace distortions.",
+               "proposed_by": "player", "held_by": ["player", "data"], "physics_basis": "P1",
+               "predictions": [{"id": "p1", "if": "Q appears", "then": "subspace sensors register a spike"}],
+               "tests": [], "status": "surviving", "created_at": 41170}
+        hp.write_text(json.dumps({"hypotheses": [hyp]}))
+        ok, out = commit(repo, "crowned")
+        check("'surviving' with no supported test is refused", not ok and "needs at least one supported" in out, out)
+        hyp["tests"] = [{"prediction": "p1", "via": "A-001", "observation": "F-001", "result": "supported"}]
+        hp.write_text(json.dumps({"hypotheses": [hyp]}, indent=2))
+        ok, out = commit(repo, "supported")
+        check("a supported hypothesis can be surviving", ok, out)
+        hyp["tests"].append({"prediction": "p1", "via": "A-001", "observation": "F-002", "result": "falsified"})
+        hp.write_text(json.dumps({"hypotheses": [hyp]}, indent=2))
+        ok, out = commit(repo, "ignore falsification")
+        check("a falsified test forces status falsified", not ok and "must be 'falsified'" in out, out)
+        hyp["status"] = "falsified"
+        hp.write_text(json.dumps({"hypotheses": [hyp]}, indent=2))
+        ok, out = commit(repo, "falsified")
+        check("a falsified hypothesis commits", ok, out)
+        hyp["status"] = "surviving"; hyp["tests"] = hyp["tests"][:1]
+        hp.write_text(json.dumps({"hypotheses": [hyp]}, indent=2))
+        ok, out = commit(repo, "revive")
+        check("a falsified hypothesis can't be revived", not ok and "stays falsified" in out, out)
+        sh("git", "reset", "-q", "--hard", cwd=repo)
 
         # metrics: 12 turns where the player is addressed heavily and yar is neglected
         tdir = w / ".world/transcript"; tdir.mkdir(exist_ok=True)

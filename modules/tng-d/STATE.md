@@ -21,7 +21,7 @@ worlds/<world>/
     state/
       clock.json  ship.json  player.json  facts.json  precedents.json
       forces.json  divergence.json  deeds.json  projects.json
-      premises.json  pins.json
+      unknowns.json  hypotheses.json  premises.json  pins.json
       crew/<id>/soul.json        one folder per person (tiers below)
       crew/<id>/memory.json
       episodes/<id>.json
@@ -66,6 +66,10 @@ worlds/<world>/
 
 **episodes/&lt;id&gt;.json**: `{id, status, arrival, premise, lands_on, b_plot, forces, truth}`, with `status` one of `pending` / `open` / `closed`. `lands_on` ids must exist.
 
+**unknowns.json**: `{"unknowns": [...]}`, each `{id, subject, canon_record, observations}`: a canon unknown as a black box (`physics.md`). `canon_record` lists canon card ids (what the show established); `observations` lists fact ids (what this branch has measured). **No explanation field, ever**; the validator rejects one.
+
+**hypotheses.json**: `{"hypotheses": [...]}`, each `{id, subject, statement, proposed_by, held_by, physics_basis, predictions, tests, status, created_at}`. `predictions` is a list of `{id, if, then}`; `tests` a list of `{prediction, via, observation, result}` where `observation` is a fact id and `result` is `supported` / `falsified` / `inconclusive`. `status` is `open` / `surviving` / `falsified`. The validator enforces: any falsifying test makes it `falsified`; `surviving` needs a supported test; falsified is permanent; statements never change and tests are append-only (refine into a new hypothesis instead).
+
 **premises.json**: `{"premises": [...]}`, each `{id, candidates, roll, chosen, canon_distance}`.
 
 **pins.json**: `{"pins": [...]}`, each `{when: {path, op, value}, attach}`. A deterministic pin: when `path` in state (e.g. `clock.alert`) meets `op` (`==`, `!=`, `in`) `value`, the file at `attach` is read before the turn. Attach paths must exist.
@@ -93,6 +97,7 @@ One JSON object per line, always with `watch`, `turn` and `type`.
 | `TURN` | `stardate`, `present` (ids), `speakers` (ids, in order), `addressed` (object of id or `player` → count of lines addressed to them), `initiated` (ids who acted on their own agenda this turn), `transcript` (`watch-NNN.md#turn-N`); optional `lore_touch` (list of `{what, layer}` for anything the turn introduced that canon governs: a technology, species, procedure or canon fact) |
 | `LORECHECK` | `claim`, `layer` (`rules` / `history-pre` / `history-post`), `verdict` (`consistent` / `diverged` / `unsupported` / `contradicts`), `cards` (ids), `divergence` (ids), `agent` (bool: a fresh lore agent was used) |
 | `REAUDIT` | `scope`, `findings` (count) |
+| `CALC` | `expression`, `result`, `units`, `purpose`. Re-evaluated by the validator; a wrong result is refused (`python3 tools/wk.py calc`) |
 | `DID` | `decision` (the person's words), `changed`, `distance` (object of resolution → [before, after]) |
 | `SAID` | `by`, `claim`, `truth` (`true` / `false` / `partial`), `fact` |
 | `TOLD` | `to`, `fact` |
@@ -105,7 +110,8 @@ One JSON object per line, always with `watch`, `turn` and `type`.
 | `OBJECTION` | `claim`, `verdict` (`consistent` / `diverged` / `unsupported` / `contradicts`), `ruling` |
 | `WORLDTURN` | `steps` (list of what moved) |
 | `NOTE` | `text`, Will's `// note`, for the evaluation only |
-| `LAW` `ROLL` `REWOUND` `SAVE` `FORK` `RETURN` `HOLODECK` | as they happen |
+| `ROLL` | for undetermined outcomes: `outcomes` (written first), `roll` (1-based, from the shell), `result` (must be `outcomes[roll-1]`) |
+| `LAW` `REWOUND` `SAVE` `FORK` `RETURN` `HOLODECK` | as they happen |
 
 Every `lore_touch` item on a `TURN` needs a `LORECHECK` with the same watch and turn in the same commit. The validator counts them.
 

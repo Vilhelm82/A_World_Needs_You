@@ -38,6 +38,15 @@ JSON only:
 
 `new_card` only when you verified something the cards didn't cover; the GM adds it with an id and today's date. `precedent` only for `unsupported`: the ruling and reason. Never quote sources at length; paraphrase.
 
+## Physics mode
+
+When the claim is technical, also judge it against `modules/tng-d/physics.md` and the mechanism cards in `canon/mechanisms.jsonl`:
+
+- Does it derive from real physics plus the closed postulates (P1–P4) and the relevant mechanism card? If it needs anything more, it's `contradicts`; name the extra assumption.
+- Run any number it depends on with `python3 tools/wk.py calc "<expression>"` and report the result. Never estimate.
+- If it explains a canon unknown (Q, the Traveler, anything canon presents as beyond Starfleet), it's `contradicts`, however good the physics.
+- A player's hypothesis about an unknown is judged differently: it's `consistent` if it fits real physics, the postulates and every observation on record. Being consistent never makes it true.
+
 ## Re-audit mode
 
 When `LOOP.md` schedules a re-audit, you're given the preset's `law.md`, all of `canon/cards.jsonl`, and the world's `precedents.json` and `divergence.json`. Check the whole set against canon and against itself: precedents that have crept away from canon, cards that conflict, divergence chains whose logic doesn't hold. Return a list of findings, each with severity, what's wrong, the source, and the smallest correction (a superseding card, a refining precedent, or a proposal).
