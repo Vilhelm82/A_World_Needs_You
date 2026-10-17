@@ -214,6 +214,24 @@ A line beginning `//` (or wrapped in `(( ))`) is the person stepping outside. An
 
 The record exists for audit and continuity: someone can read the ledger against the truth and check that the world did what it said it would, and the next sitting picks up exactly where the world's own logic left it.
 
+## Structured worlds
+
+A world whose preset says it is structured keeps its state as JSON under `.world/state/`, specified in the preset's `STATE.md` and enforced by `tools/wk.py`. In such a world, the rules below replace the matching ones above. Everything else above still holds.
+
+- **The truth is `.world/state/`**: crew souls, facts, precedents, forces, evidence, episodes. "Written before it is told" means *committed* before it is told. A surfaced fact never changes; new truth goes in as new facts beneath it.
+- **The turn, step 4 (Write)** becomes: write the state changes and the ledger lines to `.world/ledger.jsonl`, including exactly one `TURN` entry. Append the exact text you are about to send to `.world/transcript/watch-NNN.md` under `## turn N`. Then `git add -A && git commit -m "<world>: turn N"`. The pre-commit hook validates. If it refuses, fix the state and commit again. Only then tell. If `.git/hooks/pre-commit` is missing at an open, run `python3 tools/wk.py install-hooks` first.
+- **Watches** begin with a `WATCH` ledger entry. Recovery looks for the last `WATCH` with no `records/NNN.md`.
+- **The world's own turn** also advances each soul's agenda and each force whose preconditions hold. Log it as `WORLDTURN`, with `MOVED` and `DECIDED` entries that name their causes.
+- **The turn, step 6 (Check)** adds: did each person route by their routing table? Has anyone present gone unheard (the preset's turn balance)? Did anyone use knowledge they don't have?
+- **Ids** come from `python3 tools/wk.py next-id worlds/<world> <fact|precedent|trace|case|episode|premise>`.
+- **People:** one soul folder each. Read a speaker's `soul.json`, `memory.json` and voice card before they speak. Before anyone acts on knowledge, check their memory and the fact's `known_by`. The crowd is `crowd:<label>` and carries no hidden knowledge.
+- **Investigators** with an open case run as separate fresh-context agents, given only their light cone (the preset's `covert.md`). You never decide whether the character is caught.
+- **Precedent:** when you decide how the world works on something the law doesn't settle, write a precedent first. From then on it binds.
+- **`// lore objection <claim>`**: answer outside. Check the claim against canon for the era, the preset's law and the precedents. Verdict `consistent` (it stands; give the reason), `unsupported` (it stands as an [assumed] precedent with its reasoning, and the person may overrule it), or `contradicts` (correct it; rewind the telling if it misled; write the ruling as a precedent). Ledger `OBJECTION`.
+- **`// note <anything>`** adds a `NOTE` to the ledger. **`// rate G1 3 G4 2 …`** adds a `RATE`. Neither changes anything in the world. Nobody ever asks for either.
+- **Timelines:** `// save <name>`, `// fork <name>`, `// holodeck` and `// return` run the matching `wk` command at a neutral point (checkpoint first). After any of them, tell the person in one `//` line to end this session and open a fresh one, because this conversation remembers what the files no longer contain. Say nothing in the world.
+- **Evaluation:** if the charter names `evaluation: modules/eval`, run that module's `LOOP.md` after the stand-down commit. Between watches, `// proposals`, `// approve P-NNN` and `// reject P-NNN` work as `LOOP.md` says. Never change harness files during a watch.
+
 ## Files
 
 ```
@@ -230,6 +248,11 @@ worlds/<name>/
     truth.json       what is actually so
     state.md         the card, then the carry
     ledger.md        append-only: decided, said, told, carried, moved
+
+Structured worlds (preset STATE.md) differ: .world/state/ replaces truth.json,
+.world/ledger.jsonl replaces ledger.md, .world/transcript/ keeps what was told,
+worlds/<name>/evals/ holds public scorecards and .world/evals/ the sealed audit.
+tools/wk.py           validate, metrics, report, timelines (tools/test_wk.py tests it)
 ```
 
 ## What you must never do
