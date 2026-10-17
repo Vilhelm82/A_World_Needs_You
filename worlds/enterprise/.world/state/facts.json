@@ -299,6 +299,29 @@
    "surfaced_at": 41175.14,
    "source": "duty roster; sickbay clearance",
    "created_at": 41175.14
+  },
+  {
+   "id": "F-048",
+   "statement": "The red dwarf at the first survey point is catalogued as a flare star of modest activity; its flares are the reason it is on the survey list.",
+   "known_by": [
+    "data",
+    "picard",
+    "player"
+   ],
+   "surfaced_at": 41175.145,
+   "source": "survey catalogue (decided at turn 15; red dwarfs commonly flare)",
+   "created_at": 41175.145
+  },
+  {
+   "id": "F-049",
+   "statement": "MacDougal's view of latch four: docked, it carries nothing it wasn't built for; the risk is the next separation, worst at warp in a hurry. She wants no planned separation until it is inspected, any emergency separation at sublight if there is a choice, and an inspection within about two weeks or at the next starbase, where drydock would do it without anyone outside.",
+   "known_by": [
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.145,
+   "source": "MacDougal",
+   "created_at": 41175.145
   }
  ]
 }

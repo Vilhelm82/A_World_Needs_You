@@ -177,3 +177,13 @@ At eleven hundred exactly, MacDougal's procedure arrives. Twelve steps. Six hour
 ## turn 14
 
 *"MacDougal."* Something metallic sets down hard on her end. *"You've got it, then."*
+
+## turn 15
+
+*"Docked, it's fine."* No hesitation on that. *"The latch is carrying nothing it wasn't built for. Whatever's wrong with it, if anything is, it doesn't matter until somebody asks it to let go."*
+
+A breath on the channel. *"That's the risk. The next separation. Worst case, we have to split the ship in a hurry, at warp, and number four won't release when the other eleven do. So: no planned separation until I've looked. If we have to separate in an emergency and there's any choice about it, sublight. I'll put that in writing for the captain."*
+
+*"How long can we fly on it?"* She considers. *"I'd not leave it more than a fortnight. Or the next starbase, if there's one sooner. Drydock does it in a quarter of the time with nobody outside."*
+
+*"And you're right about the star. I'd want seven people in suits on an open interface next to a flare star about as much as I'd want them on the outside of a warp nacelle. If that's our only window, I'd want its flare record first. I'd rather not have it be our only window."*

@@ -3,7 +3,8 @@
   "F-001",
   "F-002",
   "F-003",
-  "F-040"
+  "F-040",
+  "F-049"
  ],
  "beliefs": [
   {
@@ -29,6 +30,12 @@
    "belief": "Put my six in and gave me the call on the extension. He meant it about telling the captain. We'll see if he does.",
    "from": "witnessed",
    "at": 41174.84
+  },
+  {
+   "about": "player",
+   "belief": "Asked how urgent before he asked for the window. Doesn't want to cram it. Good.",
+   "from": "witnessed",
+   "at": 41175.145
   }
  ],
  "recent": [
@@ -40,6 +47,7 @@
   "the extension is a hold point, her call; the XO wants the recipe",
   "the XO says the forty grams are on him",
   "agreed La Forge at 1600 for the bridge thermal pickups; latch four first",
-  "sent the latch-four procedure to the XO at 1100"
+  "sent the latch-four procedure to the XO at 1100",
+  "told the XO docked is fine, the next separation is the risk; no planned separation, sublight if any choice; two weeks or the next starbase"
  ]
 }
