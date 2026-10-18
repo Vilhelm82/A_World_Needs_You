@@ -241,3 +241,5 @@
 {"watch": 1, "turn": 42, "type": "TURN", "stardate": 41175.452, "present": ["player", "laforge", "data", "crowd:relief-tactical-lieutenant", "picard"], "speakers": ["picard"], "addressed": {"player": 1}, "initiated": [], "transcript": "watch-001.md#turn-42"}
 {"watch": 1, "turn": 42, "type": "DID", "decision": "Recommend a brief ship-wide note on the Hesker IV mission before rumour gets there first. Happy to draft it.", "changed": "Picard agrees: Lloyd drafts, Troi reads it first for the family decks, then Picard (J-009)", "distance": {}}
 {"watch": 1, "turn": 42, "type": "DECIDED", "by": "picard", "what": "a ship-wide note on Hesker IV, drafted by Lloyd, read by Troi, then by him", "without_player": false}
+{"watch": 1, "turn": 43, "type": "TURN", "stardate": 41175.453, "present": ["player", "laforge", "data", "crowd:relief-tactical-lieutenant"], "speakers": ["data"], "addressed": {}, "initiated": ["data"], "transcript": "watch-001.md#turn-43"}
+{"watch": 1, "turn": 43, "type": "MOVED", "by": "data", "what": "the cargo move under way: first personal effects in bay two", "cause": "world"}

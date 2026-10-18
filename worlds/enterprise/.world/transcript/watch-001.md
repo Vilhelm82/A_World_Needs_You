@@ -497,3 +497,7 @@ The reply comes back inside a minute.
 The reply from the ready room is three lines.
 
 *Agreed. Draft it. Counselor Troi should read it before I do; it will be read on the family decks, and she will know how. Then send it to me. — Picard*
+
+## turn 43
+
+The ready room doors stay shut. At ops, Data's fingers pause over a readout. "The first crate of personal effects has arrived in cargo bay two," he reports, to no one in particular.
