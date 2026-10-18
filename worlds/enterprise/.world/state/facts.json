@@ -541,6 +541,28 @@
    "surfaced_at": 41175.415,
    "source": "La Forge and Data",
    "created_at": 41175.415
+  },
+  {
+   "id": "F-065",
+   "statement": "MacDougal on the isolation ward: it can be done before Hesker IV. She estimates eighteen hours with her own people, twelve if the first officer lends her O'Brien and two from damage control for a shift; the bay has to be emptied first, which is ops' and the XO's business; she wants the bay nearest sickbay with its own environmental trunk; the purifiers come first for power cells, the ward first for people.",
+   "known_by": [
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.44,
+   "source": "MacDougal",
+   "created_at": 41175.44
+  },
+  {
+   "id": "F-066",
+   "statement": "The request to Starfleet Medical for a physician and an ICU nurse to follow the Enterprise to Hesker IV, drafted by Lloyd, was signed by Picard and transmitted at 1347.",
+   "known_by": [
+    "picard",
+    "player"
+   ],
+   "surfaced_at": 41175.44,
+   "source": "communications log",
+   "created_at": 41175.44
   }
  ]
 }

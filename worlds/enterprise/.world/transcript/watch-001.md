@@ -455,3 +455,13 @@ La Forge comes back to conn and waits, very politely, beside the chair you're in
 "Warm and steady, aye." La Forge slides into the conn the ordinary way, from the side, and checks the board as if it might have changed in eleven minutes. It hasn't.
 
 The first officer's chair is where you left it. On its arm terminal your list is waiting: the Starfleet Medical request, the cargo bay, Mr. Reyhan, the nearest starbase.
+
+## turn 37
+
+The draft goes to the ready room. It comes back signed in under three minutes, and goes out to Starfleet Medical at thirteen forty-seven.
+
+*"MacDougal."* She listens to all of it without interrupting, which you're beginning to understand is how she says she's taking something seriously.
+
+*"One too many? That's three today, sir. I'll tell you when it's too many."* A pause, and the sound of a padd being picked up. *"Yes, it can be done before we arrive. I want the bay nearest sickbay with its own environmental trunk, so I'm not cutting a new one. Seal it, reverse the flow, put a filter train on the exhaust and dump it outboard, not into the ship. Eighteen hours with my own people."*
+
+*"Twelve, if you lend me O'Brien and two from damage control for a shift. And the bay has to be empty before anyone starts, and that's not my department, that's ops and you."* Another pause. *"The purifiers come first for power cells. This comes first for people. If those two start fighting each other, I'll tell you."*

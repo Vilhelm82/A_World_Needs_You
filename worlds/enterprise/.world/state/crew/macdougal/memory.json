@@ -13,7 +13,8 @@
   "F-058",
   "F-059",
   "F-060",
-  "F-061"
+  "F-061",
+  "F-065"
  ],
  "beliefs": [
   {
@@ -59,6 +60,7 @@
   "sent the latch-four procedure to the XO at 1100",
   "told the XO docked is fine, the next separation is the risk; no planned separation, sublight if any choice; two weeks or the next starbase",
   "sent the interim restriction to the XO",
-  "1300 briefing: Crusher's summary of the Hesker IV reports"
+  "1300 briefing: Crusher's summary of the Hesker IV reports",
+  "asked for an isolation ward in a cargo bay; said yes; wants O'Brien and two from damage control"
  ]
 }

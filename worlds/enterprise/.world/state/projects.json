@@ -174,6 +174,12 @@
      "cost": "lab staff off other work; field medics off security; still no second physician or ICU nurse"
     },
     {
+     "name": "physician and ICU nurse requested from Starfleet Medical",
+     "status": "doing",
+     "needs": "Starfleet Medical",
+     "cost": "days behind the ship"
+    },
+    {
      "name": "transfers from the next starbase",
      "status": "todo",
      "needs": "Starfleet",
@@ -224,14 +230,14 @@
    "stages": [
     {
      "name": "ask MacDougal",
-     "status": "todo",
+     "status": "done",
      "needs": "the chief engineer, already making purifiers",
      "cost": "engineering time and power against J-006"
     },
     {
      "name": "seal and fit the bay",
      "status": "todo",
-     "needs": "engineering, about a shift",
+     "needs": "the bay nearest sickbay with its own environmental trunk, emptied first (ops/XO); 18 hours with engineering alone, 12 with O'Brien and two from damage control",
      "cost": "a cargo bay out of use"
     },
     {
