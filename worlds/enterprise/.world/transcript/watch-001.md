@@ -819,3 +819,15 @@ Her console is where it was this morning. The napkin is gone. You leave the box 
 Ten Forward at ten to eighteen hundred is half full and getting fuller: alpha shift come off duty. The long windows are all streaming stars. Someone has put music on low. There's a crowd at the bar around a padd, and you catch *Hesker* and *cargo bay* as you pass. At a table near the door, two crewmen look up at the first officer carrying a dozen scones, a bowl of whipped cream and a jar of jam, and look down again.
 
 The table by the window that Troi meant is empty. It's seventy minutes early.
+
+## turn 82
+
+The window table takes the scones and the cream and the jam, and looks immediately like somebody's birthday.
+
+At the bar, the steward, a sandy-haired crewman with a towel over one shoulder, pulls you a lager into a glass that's been in the cold. "Sir."
+
+The knot of people round the padd has gone quieter since you came over. One of them, a lieutenant in operations gold with her hair pinned up for duty and now coming down, turns on her stool to face you.
+
+"Commander. Sorry. Lieutenant Imra Vasquez, stellar cartography." She holds up the padd. Your note is on it. "My son's in the school. Eight. It says the school's not affected." She doesn't quite make it a question. "Is that a promise, sir, or a hope?"
+
+The others at the bar don't look away, which is its own kind of looking.

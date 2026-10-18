@@ -380,3 +380,6 @@
 {"watch": 1, "turn": 81, "type": "DID", "decision": "Leave the scones in Engineering where the commander will find them quickly, then go to Ten Forward.", "changed": "the box is at MacDougal's console (she is in cargo bay four); Lloyd is in Ten Forward 70 minutes early, where the crew are talking about Hesker and the cargo bay", "distance": {}}
 {"watch": 1, "turn": 81, "type": "HAS", "item": "a dozen scones for engineering", "change": "-"}
 {"watch": 1, "turn": 81, "type": "MOVED", "by": "crowd:ten-forward", "what": "off-duty crew discussing the ship-wide note in Ten Forward", "cause": "player"}
+{"watch": 1, "turn": 82, "type": "TURN", "stardate": 41175.772, "present": ["player", "crowd:ten-forward-steward", "crowd:lt-vasquez", "crowd:ten-forward"], "speakers": ["crowd:ten-forward-steward", "crowd:lt-vasquez"], "addressed": {"player": 2}, "initiated": ["crowd:lt-vasquez"], "transcript": "watch-001.md#turn-82"}
+{"watch": 1, "turn": 82, "type": "DID", "decision": "Claim the window table, leave the cream and scones, go to the bar: glass of lager, cold.", "changed": "the table is set; a parent at the bar asks whether the note's line about the school is a promise or a hope", "distance": {}}
+{"watch": 1, "turn": 82, "type": "MOVED", "by": "crowd:lt-vasquez", "what": "asked the first officer whether the school line is a promise", "cause": "player"}
