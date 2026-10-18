@@ -50,6 +50,12 @@
    "belief": "He sees the ship's mood before it reaches me. Useful. The families are precisely what I'd rather not manage.",
    "from": "witnessed",
    "at": 41175.452
+  },
+  {
+   "about": "player",
+   "belief": "Day one: the first officer brings what cannot wait and holds what can; his question at the briefing turned the medical approach. Whether he will tell me what I do not want to hear is still untested.",
+   "from": "witnessed",
+   "at": 41175.92
   }
  ],
  "recent": [

@@ -802,6 +802,14 @@
    "surfaced_at": null,
    "source": "ship's layout (decided at turn 83)",
    "created_at": 41175.775
+  },
+  {
+   "id": "F-088",
+   "statement": "Ensign T. Haskell, one of the eleven who came aboard at Deneb IV, is not Lt. (j.g.) Haskell of the security office on Yar's list; they are cousins, both posted to the Enterprise.",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "truth: accounts for two Haskells told at turns 5 and 40",
+   "created_at": 41175.92
   }
  ]
 }
