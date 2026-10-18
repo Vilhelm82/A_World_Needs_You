@@ -300,3 +300,8 @@
 {"watch": 1, "turn": 59, "type": "CALC", "expression": "(12 + 11/24 + 25/1440) - 16.0/8**(10/3)*365.25", "result": 6.7686631944444455, "units": "days", "purpose": "same at warp 8"}
 {"watch": 1, "turn": 59, "type": "DID", "decision": "Send that to the captain: Starbase 49 out of reach within the fortnight except at warp eight, and only if we leave Hesker IV quickly. My recommendation stands: six hours at sublight in clear space, after the mission.", "changed": "Data holds the note to correct the figure: warp 7 also works within 3.5 days at Hesker", "distance": {}}
 {"watch": 1, "turn": 59, "type": "SAID", "by": "data", "claim": "warp 7 within ~3.5 days at Hesker, warp 8 within ~6.75", "truth": "true", "fact": "F-077"}
+{"watch": 1, "turn": 60, "type": "TURN", "stardate": 41175.5, "present": ["player", "data", "laforge", "crowd:relief-tactical-lieutenant", "picard"], "speakers": ["data", "picard"], "addressed": {"player": 2, "data": 1}, "initiated": [], "transcript": "watch-001.md#turn-60"}
+{"watch": 1, "turn": 60, "type": "TOLD", "to": ["picard"], "fact": "F-076"}
+{"watch": 1, "turn": 60, "type": "TOLD", "to": ["picard"], "fact": "F-077"}
+{"watch": 1, "turn": 60, "type": "DID", "decision": "With the correction. Add: Starbase 49 in time means a detour of six to nine days at high warp; not worth it for a six-hour inspection. Recommendation: sublight in clear space after Hesker IV.", "changed": "Picard agrees: clear space after Hesker IV with MacDougal's procedure; Lloyd tells MacDougal", "distance": {"J-001": [8, 9]}}
+{"watch": 1, "turn": 60, "type": "DECIDED", "by": "picard", "what": "latch four inspected in clear space after Hesker IV; no Starbase 49 detour", "without_player": false}

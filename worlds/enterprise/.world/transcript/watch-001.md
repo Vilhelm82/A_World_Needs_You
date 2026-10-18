@@ -647,3 +647,11 @@ Data has it before you finish the sentence. "Starbase 49. It is the nearest with
 "Lucky," La Forge agrees.
 
 Data's hands pause over the console. "Before I send it, Commander. One correction to the figures. Counting Commander MacDougal's fortnight from eleven hundred hours today, and our arrival at Hesker IV shortly before midnight tomorrow, warp seven would also reach Starbase 49 in time, if we left Hesker IV within approximately three and a half days. Warp eight, within approximately six and three-quarters." He waits. "Shall I send the note as you gave it, or with the correction?"
+
+## turn 60
+
+"Sent, with the correction and your addition."
+
+The reply comes from the ready room in under two minutes, and Data reads it aloud, since it is addressed to you both.
+
+"*Agreed. After Hesker IV: clear space, sublight, Commander MacDougal's procedure. No detour. Number One will inform the chief engineer. — Picard.*"

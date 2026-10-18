@@ -25,13 +25,13 @@
     {
      "name": "inspect the housing",
      "status": "todo",
-     "needs": "a controlled separation away from a flare star, or a starbase drydock (no EVA); MacDougal wants it within about two weeks",
+     "needs": "after Hesker IV: controlled separation at sublight in clear space, MacDougal's procedure (captain's decision F-078)",
      "cost": "about four hours stopped (six with re-inspection); seven suited on the hull"
     },
     {
      "name": "repair",
      "status": "todo",
-     "needs": "Starbase 49 drydock, 16.0 ly from Hesker IV: 14.9 days at warp 6, 8.9 at warp 7, 5.7 at warp 8 (F-076); or six hours at sublight in clear space",
+     "needs": "a starbase only if the inspection finds a crack",
      "cost": "a starbase visit"
     }
    ],

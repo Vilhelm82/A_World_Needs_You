@@ -666,8 +666,9 @@
    "statement": "Data: the nearest drydock that can take a Galaxy-class ship is at Starbase 49, 16.0 light years from Hesker IV: 14.9 days at warp 6 (standard cruise), 8.9 at warp 7, 5.7 at warp 8. At standard cruise the fortnight is spent before arrival even if the ship leaves Hesker IV the day she arrives.",
    "known_by": [
     "data",
-    "player",
-    "laforge"
+    "laforge",
+    "picard",
+    "player"
    ],
    "surfaced_at": 41175.495,
    "source": "Data, navigational records",
@@ -678,12 +679,25 @@
    "statement": "Data, before sending Lloyd's note: counting MacDougal's fortnight from 1103 today and arrival at Hesker IV about 2340 tomorrow, warp 7 would still reach Starbase 49 in time if the ship left Hesker IV within about three and a half days; warp 8 within about six and three-quarter days.",
    "known_by": [
     "data",
-    "player",
-    "laforge"
+    "laforge",
+    "picard",
+    "player"
    ],
    "surfaced_at": 41175.497,
    "source": "Data",
    "created_at": 41175.497
+  },
+  {
+   "id": "F-078",
+   "statement": "Picard's decision on latch four: after Hesker IV, a controlled separation at sublight in clear space with MacDougal's procedure; no detour to Starbase 49. Lloyd to inform MacDougal.",
+   "known_by": [
+    "picard",
+    "player",
+    "data"
+   ],
+   "surfaced_at": 41175.5,
+   "source": "Picard",
+   "created_at": 41175.5
   }
  ]
 }
