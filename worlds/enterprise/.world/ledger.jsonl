@@ -360,3 +360,7 @@
 {"watch": 1, "turn": 75, "type": "DID", "decision": "Replicate the raw ingredients from Gran's recipe and make the scones by hand, no kneading; a double batch, half for engineering, half for Ten Forward with butter and jam.", "changed": "two dozen scones, risen and gold; half boxed for engineering, half for Ten Forward", "distance": {}}
 {"watch": 1, "turn": 75, "type": "ATTEMPT", "what": "bake Gran's scones by hand", "outcome": "done", "reason": "within Lloyd's skill (sheet: cooks); the recipe followed, no kneading"}
 {"watch": 1, "turn": 75, "type": "HAS", "item": "a dozen scones boxed for engineering; a dozen for Ten Forward, with butter and jam", "change": "+"}
+{"watch": 1, "turn": 76, "type": "TURN", "stardate": 41175.745, "present": ["player"], "speakers": ["crusher"], "addressed": {"player": 1}, "initiated": ["crusher"], "transcript": "watch-001.md#turn-76"}
+{"watch": 1, "turn": 76, "type": "DID", "decision": "Amendment: jam and whipped cream.", "changed": "the Ten Forward dozen goes with jam and whipped cream", "distance": {}}
+{"watch": 1, "turn": 76, "type": "HAS", "item": "whipped cream (for the Ten Forward scones)", "change": "+"}
+{"watch": 1, "turn": 76, "type": "MOVED", "by": "crusher", "what": "forwarded Juuso's second reply to Lloyd", "cause": "npc:crusher"}

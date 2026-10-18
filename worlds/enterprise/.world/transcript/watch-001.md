@@ -771,3 +771,9 @@ They come out risen and gold, tall at the edges, a little lopsided where the ove
 Two dozen, cooling on a rack. Half in a box for engineering. Half for Ten Forward, with a dish of butter and a jar of jam.
 
 It is seventeen twenty.
+
+## turn 76
+
+The butter goes back in the cold. Cream from the replicator, whipped by hand in a bowl until it holds a peak and no longer: a bowl of it, and the jar of jam, beside the Ten Forward dozen.
+
+On the terminal by the door, a message from sickbay has been waiting since sixteen thirty-four. *Juuso, second reply. Forwarded. — B.C.*
