@@ -328,6 +328,33 @@
    "status": "done",
    "precedents": [],
    "started_at": 41175.452
+  },
+  {
+   "id": "J-010",
+   "title": "The Ninth's valley records",
+   "owner": "wesley",
+   "collaborators": [
+    "player"
+   ],
+   "kind": "duty",
+   "goal": "every survey record aboard on the Ninth's valley: streams, marshes, terrain, grazing; to the XO's office at 1600 tomorrow",
+   "stages": [
+    {
+     "name": "search the library",
+     "status": "doing",
+     "needs": "Wesley's evening",
+     "cost": "homework"
+    },
+    {
+     "name": "report to the XO",
+     "status": "todo",
+     "needs": "1600 tomorrow",
+     "cost": "none"
+    }
+   ],
+   "status": "active",
+   "precedents": [],
+   "started_at": 41175.49
   }
  ]
 }

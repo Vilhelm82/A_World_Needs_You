@@ -607,3 +607,13 @@ Behind him, a child's voice rises: "*He's* drowning his!"
 A breath on the channel that might be a laugh. *"Worth the wait. Careful, Will. He'll read every word four times."*
 
 Then, more carefully: *"Just remember the bridge is Jean-Luc's to give, not yours or mine. If you promise him that, make sure it's a promise you can keep. Crusher out."*
+
+## turn 55
+
+The message goes. The reply is back before the turbolift doors have opened on the bridge.
+
+*Yes sir! I'll have it by sixteen hundred. I'll have it before that. Thank you, sir. — W. Crusher*
+
+And, thirty seconds later, a second one:
+
+*I'll stay clear of streams.*

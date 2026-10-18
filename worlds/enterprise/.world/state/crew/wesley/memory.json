@@ -1,6 +1,7 @@
 {
  "learned": [
-  "F-001"
+  "F-001",
+  "F-074"
  ],
  "beliefs": [
   {
@@ -8,12 +9,19 @@
    "belief": "He saw me fall in the stream.",
    "from": "witnessed",
    "at": 41153.9
+  },
+  {
+   "about": "player",
+   "belief": "He didn't forget. And he gave me something that matters.",
+   "from": "witnessed",
+   "at": 41175.49
   }
  ],
  "recent": [
   "the bridge, for one minute",
   "the holodeck stream",
   "sent the first officer a request for a bridge observation pass",
-  "checking his messages for the first officer's answer about the bridge pass"
+  "checking his messages for the first officer's answer about the bridge pass",
+  "the first officer answered: no promise on the bridge, but he'll ask the captain; gave him a real job on the Ninth's survey records"
  ]
 }

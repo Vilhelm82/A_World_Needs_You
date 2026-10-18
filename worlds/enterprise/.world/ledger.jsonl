@@ -278,3 +278,7 @@
 {"watch": 1, "turn": 54, "type": "LORECHECK", "claim": "Wesley's bridge access is Picard's decision", "layer": "history-pre", "verdict": "consistent", "cards": [], "divergence": [], "agent": false, "precedent": "P-015", "note": "voices.md; Farpoint: Picard ordered Wesley off the bridge himself"}
 {"watch": 1, "turn": 54, "type": "PRECEDENT", "id": "P-015"}
 {"watch": 1, "turn": 54, "type": "DID", "decision": "I'll send him a message that will make that wait feel worth it.", "changed": "Crusher warns that the bridge is Picard's to give", "distance": {}}
+{"watch": 1, "turn": 55, "type": "TURN", "stardate": 41175.49, "present": ["player", "wesley"], "speakers": ["wesley", "wesley"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-55"}
+{"watch": 1, "turn": 55, "type": "DID", "decision": "Message Wesley: no promise on the bridge pass, but I'll put it to the captain; pull every survey record on the Ninth's valley, my office 1600 tomorrow.", "changed": "Wesley takes the job at once (J-010); his regard warms", "distance": {"test-and-cull": [4, 4]}}
+{"watch": 1, "turn": 55, "type": "HAS", "item": "message to Wesley (chronicle 007)", "change": "+"}
+{"watch": 1, "turn": 55, "type": "MOVED", "by": "wesley", "what": "began searching the library for the Ninth's valley", "cause": "player"}

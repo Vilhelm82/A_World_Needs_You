@@ -641,6 +641,25 @@
    "surfaced_at": 41175.483,
    "source": "Reyhan",
    "created_at": 41175.483
+  },
+  {
+   "id": "F-074",
+   "statement": "Lloyd's message to Wesley: no promise of a bridge pass, but he will put it to the captain after Hesker IV; a job: pull every survey record aboard on the Ninth's valley (streams, marshes, terrain, grazing) and bring it to the XO's office at 1600 tomorrow.",
+   "known_by": [
+    "wesley",
+    "player"
+   ],
+   "surfaced_at": 41175.49,
+   "source": "Lloyd",
+   "created_at": 41175.49
+  },
+  {
+   "id": "F-075",
+   "statement": "What the ship's library holds on the Ninth's valley: the 2345 Colonial Office orbital survey's topographic maps of the northern uplands, showing the streams and marshes, with no camp or pasture marked (the Ninth was opened later); and the survey's index, which lists an Annex D, 'Soils and trace minerals, northern uplands', that is not held aboard and must be requested from the Colonial Office (about a day each way).",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "truth: the library, decided before Wesley searches",
+   "created_at": 41175.49
   }
  ]
 }

@@ -30,7 +30,7 @@
    "anger"
   ],
   "toward": {
-   "player": "The first officer saw him fall into a holodeck stream. Mortifying. Wants to make up for it.",
+   "player": "He saw the holodeck stream. He also answered, honestly, and gave him a job that matters.",
    "picard": "Wants his approval more than anyone's.",
    "data": "Hero-worship, mostly.",
    "crusher": "His mother."
@@ -47,6 +47,11 @@
   ]
  },
  "agenda": [
+  {
+   "goal": "Find everything the ship holds on the Ninth's valley for the first officer",
+   "next_step": "search the library tonight; office at 1600 tomorrow",
+   "horizon": "shift"
+  },
   {
    "goal": "Get onto the bridge again",
    "next_step": "ask the first officer for an observation pass",
