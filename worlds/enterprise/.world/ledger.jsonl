@@ -250,3 +250,6 @@
 {"watch": 1, "turn": 46, "type": "TURN", "stardate": 41175.46, "present": ["player", "troi"], "speakers": ["troi"], "addressed": {"player": 4}, "initiated": ["troi"], "transcript": "watch-001.md#turn-46"}
 {"watch": 1, "turn": 46, "type": "DID", "decision": "On my way (to Troi's office with the draft).", "changed": "Troi reads the note: honest; wants a line on what parents will fear, and her door open", "distance": {}}
 {"watch": 1, "turn": 46, "type": "SAID", "by": "troi", "claim": "add: patients if any kept apart from the ship's air and people; school and family quarters unaffected; her door open", "truth": "true", "fact": "F-069"}
+{"watch": 1, "turn": 47, "type": "TURN", "stardate": 41175.462, "present": ["player", "troi"], "speakers": ["troi"], "addressed": {"player": 3}, "initiated": ["troi"], "transcript": "watch-001.md#turn-47"}
+{"watch": 1, "turn": 47, "type": "DID", "decision": "Of course Counselor, I'll add that in. (revised note with her line)", "changed": "the note is ready for Picard (F-071); Troi asks for the off-duty word after his shift, place his to choose", "distance": {}}
+{"watch": 1, "turn": 47, "type": "MOVED", "by": "troi", "what": "set the off-duty word for after his shift", "cause": "npc:troi"}

@@ -525,3 +525,13 @@ Troi takes the padd and reads the note through once, then again more slowly, her
 She taps the place where she'd put it. "One line. That if the captain decides to bring anyone aboard, they'll be kept entirely apart from the ship's air and its people, and that the school and the family quarters aren't affected." A pause. "And that my door is open. Some of them will want to say it out loud to someone before they can stop worrying about it."
 
 She hands it back. "Otherwise, send it to him. It's good, Will."
+
+## turn 47
+
+Troi reads the new line where it sits, and nods once.
+
+"That's it." She gives the padd back. "Send it to him."
+
+You're at the door when she speaks again, in the same even voice, though she's looking at the names on her screen and not at you.
+
+"Will. After your shift." A small pause. "Somewhere that isn't an office."

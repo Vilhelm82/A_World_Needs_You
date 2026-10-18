@@ -16,7 +16,8 @@
   "F-059",
   "F-060",
   "F-061",
-  "F-069"
+  "F-069",
+  "F-071"
  ],
  "beliefs": [
   {
@@ -36,6 +37,12 @@
    "belief": "Said he'd let me raise it and then asked for me himself. Still, he asked for the right reason.",
    "from": "witnessed",
    "at": 41175.385
+  },
+  {
+   "about": "player",
+   "belief": "He took the line as I gave it. He used to argue with every word I offered.",
+   "from": "witnessed",
+   "at": 41175.462
   }
  ],
  "recent": [
@@ -51,6 +58,7 @@
   "1300 briefing: Crusher's summary of the Hesker IV reports",
   "Lloyd asked for her on the ground with the herders; she had meant to ask herself",
   "in her office reading the names of the Hesker IV dead from the colony's reports; Lloyd bringing the ship-wide note",
-  "read Lloyd's ship-wide note; asked for a line on what parents will fear, and her office open"
+  "read Lloyd's ship-wide note; asked for a line on what parents will fear, and her office open",
+  "approved the revised note; asked Lloyd for the off-duty word after his shift, somewhere that isn't an office"
  ]
 }
