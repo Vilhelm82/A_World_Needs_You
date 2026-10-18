@@ -729,3 +729,7 @@ A pause, and her voice changes a little. *"Will. Wesley's been in the library si
 ## turn 70
 
 Fifteen twenty-eight. Stardate 41175.56. Warp eight, Hesker IV a little over thirty-two hours out.
+
+## turn 71
+
+"It is, Commander." Data turns from ops. "I sent the complete file to the captain at thirteen forty-two, when Geordi's account was finished. It contains the optical and sensor comparison, Geordi's account in his own words, and the observation about the clothing." A small pause. "I have not added anything since. There has been nothing to add."
