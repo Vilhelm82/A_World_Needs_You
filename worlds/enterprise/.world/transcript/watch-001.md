@@ -477,3 +477,11 @@ The draft goes to the ready room. It comes back signed in under three minutes, a
 Data doesn't need to look. "Cargo bay four. It is the nearest to sickbay with an independent environmental trunk." Then he looks anyway, and reads: "Its present contents are components for the survey probes, now not required while the survey is suspended; general stores; and the personal effects of eleven crew members who came aboard at Deneb IV and have not yet claimed them."
 
 "Cargo bay two has the capacity. A cargo detail with antigravs would require approximately five hours. The cargo transporters, under two, with an operator." A slight pause. "In either case, eleven people should probably be told where their belongings have gone."
+
+## turn 40
+
+The message goes out to eleven names.
+
+"Transporter technician Okonjo is free on beta rotation and will begin now," Data says. "I have asked that the personal effects be moved first, by hand, and the stores by transporter after. Cargo bay four should be empty by approximately fifteen forty-five." He sends a line to engineering as he speaks. "I have informed Commander MacDougal of the time."
+
+Your terminal chimes twice before he's finished. The first reply reads: *Thank you, sir. — Ens. T. Haskell.* The second: *Did someone say medical isolation ward? Is this ship sick? — Lt. (j.g.) R. Petrakis.*

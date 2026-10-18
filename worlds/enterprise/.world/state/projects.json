@@ -236,8 +236,8 @@
     },
     {
      "name": "clear the bay",
-     "status": "todo",
-     "needs": "cargo bay four to bay two: a cargo detail with antigravs (~5 h) or cargo transporters (<2 h, an operator); owners of unclaimed personal effects told",
+     "status": "doing",
+     "needs": "cargo transporters, an operator assigned by Data; done about 1545; the eleven owners told by Lloyd",
      "cost": "cargo moved elsewhere"
     },
     {
