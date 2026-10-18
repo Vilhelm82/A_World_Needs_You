@@ -337,3 +337,6 @@
 {"watch": 1, "turn": 67, "type": "DID", "decision": "Four problems today, and you turned every one into a plan before I'd finished asking. That doesn't go unnoticed.", "changed": "MacDougal answers with her grandmother's recipe, no note", "distance": {}}
 {"watch": 1, "turn": 67, "type": "HAS", "item": "MacDougal's grandmother's scone recipe (chronicle 009)", "change": "+"}
 {"watch": 1, "turn": 67, "type": "MOVED", "by": "macdougal", "what": "sent the first officer her grandmother's recipe", "cause": "npc:macdougal"}
+{"watch": 1, "turn": 68, "type": "TURN", "stardate": 41175.562, "present": ["player", "data", "laforge", "crowd:relief-tactical-lieutenant", "crusher"], "speakers": ["crusher"], "addressed": {"player": 2}, "initiated": ["crusher"], "transcript": "watch-001.md#turn-68"}
+{"watch": 1, "turn": 68, "type": "TOLD", "to": ["crusher"], "fact": "F-084"}
+{"watch": 1, "turn": 68, "type": "DID", "decision": "Doctor, six cardiac units by oh-six-hundred, possibly oh-four. They're yours to test.", "changed": "Crusher will test from 0400 with Vantongeren on a second bench; she thanks him for Wesley", "distance": {}}

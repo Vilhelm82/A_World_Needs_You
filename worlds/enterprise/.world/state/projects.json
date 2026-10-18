@@ -378,7 +378,7 @@
     {
      "name": "stability check each unit",
      "status": "todo",
-     "needs": "sickbay",
+     "needs": "Crusher with Vantongeren, about forty minutes a unit, from whenever they arrive",
      "cost": "hours; some may fail (P-004 by analogy)"
     }
    ],

@@ -763,6 +763,7 @@
    "id": "F-084",
    "statement": "MacDougal: one camp on one stream needs six large purifiers, eight with spares, and she already has eleven cells, so the purifiers are covered. Six cardiac support units go on engineering's industrial replicators next, ready about 0600 tomorrow (she says), for Crusher to test; the emergency cells stay in stores.",
    "known_by": [
+    "crusher",
     "macdougal",
     "player"
    ],
