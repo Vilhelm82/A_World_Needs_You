@@ -18,7 +18,8 @@
   "F-063",
   "F-064",
   "F-067",
-  "F-076"
+  "F-076",
+  "F-077"
  ],
  "beliefs": [
   {
@@ -58,6 +59,7 @@
   "identified cargo bay four for the ward; bay two has room",
   "assigned a transporter technician to move cargo bay four to bay two; personal effects first, by hand",
   "has the bridge while the first officer is away",
-  "returned the bridge to the first officer; cargo move 40 percent; nothing from Hesker IV"
+  "returned the bridge to the first officer; cargo move 40 percent; nothing from Hesker IV",
+  "corrected the first officer's figure before sending: warp 7 also makes the fortnight if they leave Hesker within 3.5 days"
  ]
 }

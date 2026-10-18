@@ -641,3 +641,9 @@ Data has it before you finish the sentence. "Starbase 49. It is the nearest with
 "At warp six, standard cruise, fourteen point nine days. Warp seven, eight point nine. Warp eight, five point seven." He turns his head. "At standard cruise, Commander MacDougal's fortnight would be spent before we arrived, even if we left Hesker IV the day we reached it."
 
 "Space is bigger out here," La Forge says, to the conn board.
+
+## turn 59
+
+"Lucky," La Forge agrees.
+
+Data's hands pause over the console. "Before I send it, Commander. One correction to the figures. Counting Commander MacDougal's fortnight from eleven hundred hours today, and our arrival at Hesker IV shortly before midnight tomorrow, warp seven would also reach Starbase 49 in time, if we left Hesker IV within approximately three and a half days. Warp eight, within approximately six and three-quarters." He waits. "Shall I send the note as you gave it, or with the correction?"

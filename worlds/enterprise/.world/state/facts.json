@@ -672,6 +672,18 @@
    "surfaced_at": 41175.495,
    "source": "Data, navigational records",
    "created_at": 41175.495
+  },
+  {
+   "id": "F-077",
+   "statement": "Data, before sending Lloyd's note: counting MacDougal's fortnight from 1103 today and arrival at Hesker IV about 2340 tomorrow, warp 7 would still reach Starbase 49 in time if the ship left Hesker IV within about three and a half days; warp 8 within about six and three-quarter days.",
+   "known_by": [
+    "data",
+    "player",
+    "laforge"
+   ],
+   "surfaced_at": 41175.497,
+   "source": "Data",
+   "created_at": 41175.497
   }
  ]
 }
