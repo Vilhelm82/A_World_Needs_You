@@ -287,3 +287,11 @@
 {"watch": 1, "turn": 56, "type": "MOVED", "by": "data", "what": "cargo bay four 40 percent cleared", "cause": "world"}
 {"watch": 1, "turn": 57, "type": "TURN", "stardate": 41175.493, "present": ["player", "data", "laforge", "crowd:relief-tactical-lieutenant"], "speakers": ["laforge", "data", "laforge", "data"], "addressed": {"player": 1, "data": 1, "laforge": 1}, "initiated": [], "transcript": "watch-001.md#turn-57"}
 {"watch": 1, "turn": 57, "type": "DID", "decision": "Mr. La Forge, are you seeing something I don't?", "changed": "nothing on the VISOR; La Forge was laughing at Data's dry line", "distance": {}}
+{"watch": 1, "turn": 58, "type": "TURN", "stardate": 41175.495, "present": ["player", "data", "laforge", "crowd:relief-tactical-lieutenant"], "speakers": ["data", "data", "laforge"], "addressed": {"player": 2}, "initiated": ["laforge"], "transcript": "watch-001.md#turn-58", "lore_touch": [{"what": "the nearest Galaxy-capable drydock and warp transit times", "layer": "rules"}]}
+{"watch": 1, "turn": 58, "type": "LORECHECK", "claim": "Starbase 49 is the nearest Galaxy-capable drydock, 16.0 ly from Hesker IV; warp 6 standard cruise", "layer": "rules", "verdict": "unsupported", "cards": [], "divergence": [], "agent": false, "precedent": "P-016"}
+{"watch": 1, "turn": 58, "type": "PRECEDENT", "id": "P-016"}
+{"watch": 1, "turn": 58, "type": "CALC", "expression": "16.0/6**(10/3)*365.25", "result": 14.889246020478543, "units": "days", "purpose": "Hesker IV to Starbase 49 at warp 6"}
+{"watch": 1, "turn": 58, "type": "CALC", "expression": "16.0/7**(10/3)*365.25", "result": 8.906698279622757, "units": "days", "purpose": "at warp 7"}
+{"watch": 1, "turn": 58, "type": "CALC", "expression": "16.0/8**(10/3)*365.25", "result": 5.707031249999999, "units": "days", "purpose": "at warp 8"}
+{"watch": 1, "turn": 58, "type": "DID", "decision": "Mr. Data, the nearest starbase with a drydock that can take a Galaxy-class ship. Distance and travel time from Hesker IV at standard cruise.", "changed": "Starbase 49, 16.0 ly: standard cruise misses the fortnight; warp 7 or 8 would make it", "distance": {"J-001": [8, 8]}}
+{"watch": 1, "turn": 58, "type": "SAID", "by": "data", "claim": "Starbase 49, 16.0 ly; 14.9 / 8.9 / 5.7 days at warp 6/7/8", "truth": "true", "fact": "F-076"}

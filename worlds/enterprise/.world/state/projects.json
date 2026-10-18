@@ -31,13 +31,14 @@
     {
      "name": "repair",
      "status": "todo",
-     "needs": "a starbase, if it is cracked",
+     "needs": "Starbase 49 drydock, 16.0 ly from Hesker IV: 14.9 days at warp 6, 8.9 at warp 7, 5.7 at warp 8 (F-076); or six hours at sublight in clear space",
      "cost": "a starbase visit"
     }
    ],
    "status": "active",
    "precedents": [
-    "P-002"
+    "P-002",
+    "P-016"
    ],
    "started_at": 41174.7
   },

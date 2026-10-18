@@ -633,3 +633,11 @@ Data considers this. "Am I?"
 "Little bit."
 
 Data appears to file it. "Thank you, Geordi." He returns to his board.
+
+## turn 58
+
+Data has it before you finish the sentence. "Starbase 49. It is the nearest with a drydock that can take a Galaxy-class ship. Sixteen point zero light years from Hesker IV."
+
+"At warp six, standard cruise, fourteen point nine days. Warp seven, eight point nine. Warp eight, five point seven." He turns his head. "At standard cruise, Commander MacDougal's fortnight would be spent before we arrived, even if we left Hesker IV the day we reached it."
+
+"Space is bigger out here," La Forge says, to the conn board.

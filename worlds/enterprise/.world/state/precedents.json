@@ -119,6 +119,14 @@
    "reason": "voices.md: Wesley's bridge access is the captain's decision; canon season one shows Picard deciding it himself.",
    "source": "turn 54 (L:1:54)",
    "created_at": 41175.488
+  },
+  {
+   "id": "P-016",
+   "ruling": "[assumed] The nearest starbase with a drydock able to take a Galaxy-class ship is Starbase 49, 16.0 light years from Hesker IV. Standard cruise is warp 6.",
+   "kind": "lore",
+   "reason": "Canon places Farpoint at the frontier beyond Deneb and gives no starbase nearby; a frontier region would have few large drydocks. Warp 6 as standard cruise follows the TNG writers' convention.",
+   "source": "turn 58 (L:1:58)",
+   "created_at": 41175.495
   }
  ]
 }

@@ -660,6 +660,18 @@
    "surfaced_at": null,
    "source": "truth: the library, decided before Wesley searches",
    "created_at": 41175.49
+  },
+  {
+   "id": "F-076",
+   "statement": "Data: the nearest drydock that can take a Galaxy-class ship is at Starbase 49, 16.0 light years from Hesker IV: 14.9 days at warp 6 (standard cruise), 8.9 at warp 7, 5.7 at warp 8. At standard cruise the fortnight is spent before arrival even if the ship leaves Hesker IV the day she arrives.",
+   "known_by": [
+    "data",
+    "player",
+    "laforge"
+   ],
+   "surfaced_at": 41175.495,
+   "source": "Data, navigational records",
+   "created_at": 41175.495
   }
  ]
 }
