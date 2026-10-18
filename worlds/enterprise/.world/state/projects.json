@@ -204,7 +204,7 @@
     {
      "name": "replicate",
      "status": "doing",
-     "needs": "31 cells by arrival from the replicators; 9 more from emergency stores on the XO's code (F-079)",
+     "needs": "31 cells by arrival; nine from emergency stores if Juuso's reply points to the water (Lloyd's condition), replicators then refill the stores first",
      "cost": "power cells are the limit"
     },
     {

@@ -667,3 +667,9 @@ The reply comes from the ready room in under two minutes, and Data reads it alou
 The replicator whine dips and climbs again.
 
 *"And since you offer. Purifiers. The replicators are turning out power cells as fast as they'll go, and I'll have thirty-one by the time we arrive. You asked for forty."* A pause. *"There are cells in the emergency stores. Nine would do it. They need a command code to come out, and mine isn't one."*
+
+## turn 63
+
+*"Fair."* A beat while she does the arithmetic in her head. *"Thirty-one purifiers is thirty-one camps or wells. That's a start. Refill the stores first, aye; I'll put it in the replicator queue now so nobody forgets it later."*
+
+*"MacDougal out."*
