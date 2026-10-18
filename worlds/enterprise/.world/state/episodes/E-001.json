@@ -172,6 +172,17 @@
      "the marshes burn"
     ],
     "seen_by": "the council"
+   },
+   {
+    "id": "market",
+    "process": "the Javri market every seventh day sells the Ninth's cheese and milk to the town",
+    "moves_on": "the calendar and the trader's cart",
+    "stages": [
+     "next market day 3, the day after the Enterprise arrives, the same day as the burn vote",
+     "unpasteurised milk and fresh cheese from the Ninth to Javri households",
+     "cases in Javri with no tie to the Ninth"
+    ],
+    "seen_by": "the trader; Juuso, who reads it as reedflies in carts"
    }
   ],
   "movers": [

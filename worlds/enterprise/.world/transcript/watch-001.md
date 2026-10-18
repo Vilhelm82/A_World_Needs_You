@@ -777,3 +777,21 @@ It is seventeen twenty.
 The butter goes back in the cold. Cream from the replicator, whipped by hand in a bowl until it holds a peak and no longer: a bowl of it, and the jar of jam, beside the Ten Forward dozen.
 
 On the terminal by the door, a message from sickbay has been waiting since sixteen thirty-four. *Juuso, second reply. Forwarded. — B.C.*
+
+## turn 77
+
+It breaks clean and steams. Light inside, and the sultanas soft. The bottom is a shade too dark where the oven runs hot at the back, and the rest is exactly what a scone should be.
+
+Juuso's reply is shorter than the first.
+
+Two of the four outside the Ninth live in Javri households with family up there. Both had visited the summer camp the week before they fell ill.
+
+One is a trader, Aslak Nango. He buys cheese and milk from the Ninth's siidas every week and sells them at the Javri market. He goes up to the camp with his cart.
+
+One is a girl of six in Javri, Elle Somby. Her family has nobody on the Ninth. Nobody in the house has been up there. *They buy at the market like everyone else.*
+
+Juuso's reading follows: the trader's cart goes up and down the valley through the marshes, and reedflies ride in carts. *Anyone who has driven one knows it.*
+
+The market is held every seventh day. The next is the day after tomorrow.
+
+*Still thirty-three. Still ten.*

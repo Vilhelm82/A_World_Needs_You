@@ -741,9 +741,11 @@
    "id": "F-082",
    "statement": "The four cases outside the Ninth: two in Javri households with relatives on the Ninth who visited the summer camp; one a Javri trader who buys cheese and milk from the Ninth's siidas for the town market; one a Javri child of six with no tie to the Ninth that anyone has found, whose family buys at that market.",
    "known_by": [
-    "juuso"
+    "crusher",
+    "juuso",
+    "player"
    ],
-   "surfaced_at": null,
+   "surfaced_at": 41175.75,
    "source": "truth: Juuso's case notes",
    "created_at": 41175.525
   },
@@ -770,6 +772,18 @@
    "surfaced_at": 41175.527,
    "source": "MacDougal",
    "created_at": 41175.527
+  },
+  {
+   "id": "F-085",
+   "statement": "Juuso's second reply: the four outside cases are two relatives who visited the camp, the trader Aslak Nango who buys the Ninth's cheese and milk for the Javri market, and Elle Somby, six, of a Javri family with no tie to the Ninth, who buy at the market. Juuso believes reedflies ride the trader's cart. The market is held every seventh day; the next is the day after tomorrow (day 3). Still 33 cases, 10 critical.",
+   "known_by": [
+    "juuso",
+    "crusher",
+    "player"
+   ],
+   "surfaced_at": 41175.75,
+   "source": "Juuso (chronicle 010)",
+   "created_at": 41175.75
   }
  ]
 }

@@ -364,3 +364,7 @@
 {"watch": 1, "turn": 76, "type": "DID", "decision": "Amendment: jam and whipped cream.", "changed": "the Ten Forward dozen goes with jam and whipped cream", "distance": {}}
 {"watch": 1, "turn": 76, "type": "HAS", "item": "whipped cream (for the Ten Forward scones)", "change": "+"}
 {"watch": 1, "turn": 76, "type": "MOVED", "by": "crusher", "what": "forwarded Juuso's second reply to Lloyd", "cause": "npc:crusher"}
+{"watch": 1, "turn": 77, "type": "TURN", "stardate": 41175.75, "present": ["player"], "speakers": ["juuso"], "addressed": {"player": 1}, "initiated": [], "transcript": "watch-001.md#turn-77"}
+{"watch": 1, "turn": 77, "type": "DID", "decision": "Break one open and taste it, then read Juuso's reply.", "changed": "the scones are good; Lloyd knows the outside cases: a cheese and milk trader and a Javri child whose family buys at the market; the next market is day 3", "distance": {"test-and-cull": [5, 6]}}
+{"watch": 1, "turn": 77, "type": "SAID", "by": "juuso", "claim": "two relatives who visited the camp; trader Aslak Nango with the Ninth's cheese and milk; Elle Somby, six, no tie but the market; reedflies in carts; market every seventh day, next the day after tomorrow", "truth": "partial", "fact": "F-085", "note": "cases true (F-082); reedflies-in-carts wrong: milk and cheese (F-030)"}
+{"watch": 1, "turn": 77, "type": "HAS", "item": "Juuso's second reply (chronicle 010)", "change": "+"}
