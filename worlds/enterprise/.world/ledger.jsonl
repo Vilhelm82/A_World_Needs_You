@@ -421,3 +421,4 @@
 {"watch": 1, "turn": 91, "type": "NOTE", "text": "Strength: consequences without catering (Yar's public rebuke, Reyhan seeing through the sideways ask, Juuso's prickliness)."}
 {"watch": 1, "turn": 91, "type": "NOTE", "text": "Strength: a world that moves without me (Data, Yar, Geordi, MacDougal refining ideas on their own)."}
 {"watch": 1, "turn": 91, "type": "NOTE", "text": "Strength: lore texture (MacDougal and Torres from canon, Sami herders with siidas, the holodeck stream callback)."}
+{"watch": 1, "turn": 91, "type": "REAUDIT", "scope": "law.md, cards K-001..K-050, mechanisms M-001..M-017, precedents P-001..P-019, divergences (none)", "findings": 8}

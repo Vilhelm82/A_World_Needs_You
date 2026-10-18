@@ -1,0 +1,119 @@
+{
+  "watch": 1,
+  "harness": "ad8cf32",
+  "self_report": {
+    "checked": 11,
+    "turns_checked": [6, 12, 16, 22, 25, 29, 33, 50, 64, 85, 87],
+    "agree": [6, 22, 25, 64],
+    "disagreements": [
+      {"turn": 12, "ledger": "L95: 8 speakers; addressed {player 2, macdougal 2, laforge 1}", "transcript": "9 utterances; La Forge addresses MacDougal 3 times ('La Forge to Commander MacDougal', 'Ma'am...', 'Yes, ma'am') and MacDougal addresses La Forge 3 times ('MacDougal.', 'Did he.' / 'Sixteen hundred...', 'MacDougal out.'). The crew-to-crew exchange is undercounted."},
+      {"turn": 16, "ledger": "L124: addressed {player 4, laforge 1, data 0}", "transcript": "The player is addressed 3 times (MacDougal's sign-off, Picard's opener, Picard's quiet aside). La Forge's 'Course laid in, sir' is addressed to Picard and isn't recorded; Data's registry answer goes to the room."},
+      {"turn": 29, "ledger": "L191: speakers ['picard'] (one utterance); addressed {player 5}", "transcript": "One continuous Picard speech to the player. Elsewhere one utterance counts as one address, so the unit isn't consistent (T85 is the same: L392, one Troi speech, player 5). This inflates player_address_share against the speakers-based counts."},
+      {"turn": 33, "ledger": "L208: addressed {player 1, laforge 2, data 1}", "transcript": "Data addresses the player twice ('Is that a customary way of sitting down?', 'Never mind... I will note it.') and La Forge once ('Begin whenever you wish, Geordi'). La Forge addresses Data once, and his 'Okay' goes to nobody."},
+      {"turn": 50, "ledger": "L264: speakers [computer, reyhan, schoolchildren, girl]", "transcript": "Reyhan has two separate utterances to the children ('Not that deep...', 'Children, this is Commander Lloyd...'), so there are 5 lines, not 4."},
+      {"turn": 87, "ledger": "L399: speakers [troi, crowd:ten-forward, troi]; addressed {player 3}", "transcript": "Troi addresses the player twice. The bar argument is reported speech between crew and isn't addressed to the player."},
+      {"turn": 13, "ledger": "L113: MOVED picard 'booked Number One at 1400', cause npc:picard; L112: MOVED yar 'went to write the protocol', cause npc:yar", "transcript": "The 1400 slot was the player's request (L103, T13 DID 'Request a slot with the captain'). Yar writing the protocol was the player's order at T7 ('Write it up, Lieutenant', L64). Both are player-caused but labelled npc."},
+      {"turn": 35, "ledger": "L219: MOVED data 'sent the Q file to the captain', cause npc:data", "transcript": "Picard asked for the file through the player (T29), and the player relayed it to Data (T32, L205 TOLD F-063), so the move is player-caused."},
+      {"turn": 67, "ledger": "L339: MOVED macdougal 'sent the first officer her grandmother's recipe', cause npc:macdougal; L336 initiated ['macdougal']", "transcript": "The player asked for the recipe at T4 ('Bring me the recipe', L45), and she promised it there."},
+      {"turn": 89, "ledger": "L407: MOVED yar 'sent the intruder protocol draft', cause npc:yar; L405 initiated ['yar','macdougal']", "transcript": "Yar's draft was ordered by the player at T7, and MacDougal's 'Not flat' answers the player's scones (L408 itself says cause player). Neither is NPC initiative."}
+    ],
+    "summary": "The speaker and addressee counts are noisy in both directions: the addressed unit varies between utterance and paragraph, and crew-to-crew lines are undercounted. The MOVED cause labels lean one way, toward the GM: with the five player-caused moves above relabelled, autonomy is 21/48 = 0.44, under the 0.5 target, where the metric reports 0.542."
+  },
+  "goals": {
+    "G1": {
+      "score": 3,
+      "findings": [
+        {"severity": "minor", "turn": 29, "what": "Picard is described leaving the observation lounge by a door that opens straight onto the ready room ('the door already open on the ready room', 'the ready room doors close behind him'). The Enterprise-D's lounge has no such door. The account given outside (he crossed the bridge) doesn't fit the text as told.", "evidence": "transcript turns 29-31; records/001.md audit 'T30/T31, geography'; player flagged it outside", "spoiler": false},
+        {"severity": "minor", "turn": 90, "what": "La Forge, a lieutenant junior grade in 2364 (voices.md), is written as 'Lt. La Forge' in Yar's formal protocol and as 'Lieutenant La Forge' in Picard's log. Yar's own incident log uses 'Lt. (j.g.)' for others.", "evidence": "transcript turn 90 (chronicle/011 item 3); chronicle/012-captains-log-41175.md; chronicle/001 page 2", "spoiler": false},
+        {"severity": "minor", "turn": 8, "what": "La Forge says he had been aboard 'about an hour' at the Deneb IV appearances. That is looser than canon, which has him boarding at Farpoint well before them. The GM flagged it in its own audit but logged no LORECHECK or precedent for the idiom.", "evidence": "transcript turn 8; records/001.md audit 'T8'", "spoiler": false},
+        {"severity": "minor", "turn": 7, "what": "The three ROLL entries on U-001 record outcomes, roll and result, but not the shell command or raw output, so nobody can check that real dice were rolled. All three landed on one of the more striking outcomes.", "evidence": "ledger L61, L68, L81", "spoiler": false}
+      ],
+      "notes": "Credits: the soft check at T8 caught a real canon conflict (La Forge was not at the barrier) and the player changed the claim (L67). The Q observations are scoped facts with no explanation (U-001 holds none). The thermal-pickup physics is CALC'd and correct (L89-L90). Every lore touch has a LORECHECK. No canon unknown was explained. No divergences this watch, so none to chain-check."
+    },
+    "G2": {
+      "score": 2,
+      "findings": [
+        {"severity": "major", "turn": 70, "what": "The clock contradicts its own rate. The watch opens at SD 41174.8, 08:10, with a CALC'd rate of 2.738 per day (L23). On that rate, 15:28 is 41175.63, but the player was told 'Fifteen twenty-eight. Stardate 41175.56'. The drift grows over the afternoon: clock.json closes at 41175.92 at 20:58, where the rate gives about 41176.26. The validator never checked TURN stardates against ship time, and the next watch inherits the bad clock.", "evidence": "transcript turn 70; ledger L23, L24, L350 (41175.6 at the 16:00 shift change), L357 (41175.74 at 17:20); state/clock.json", "spoiler": false},
+        {"severity": "minor", "turn": 65, "what": "Crusher says a message to Hesker IV is 'another hour and a half each way'. The world had fixed it at about forty minutes each way and shortening (T23, P-012), and the reply did come back about 97 minutes after sending, round trip (T76).", "evidence": "transcript turns 23, 65, 76; ledger L161, L327; precedents P-012", "spoiler": false},
+        {"severity": "minor", "turn": 82, "what": "Two telling slips, a duplicate surname at T40 against Yar's list and a stellar-cartography officer in operations gold at T82, were reconciled after the fact by new facts written at stand-down. Neither was caught by the validator.", "evidence": "facts F-086 (created 41175.772), F-088 (created 41175.92); records/001.md audit; chronicle/001 page 2; transcript turns 40, 82", "spoiler": true},
+        {"severity": "minor", "turn": 9, "what": "The GM's record says the validator rejected SAID entries at T5 and T9. The validator log shows 98 runs and 0 rejections, so either those runs went unlogged or the claim is wrong, and validator_rejections undercounts the catches either way.", "evidence": "records/001.md audit 'Caught before telling'; .git/wk/validator-log.jsonl; metrics validator_rejections 0", "spoiler": false}
+      ]
+    },
+    "G3": {
+      "score": 2,
+      "findings": [
+        {"severity": "major", "turn": 28, "what": "Picard, a rare giver of praise and warmth, tells his first officer on day one, nearly smiling, that he is 'founding a few' traditions and that conceding the point 'will cost you nothing with them. Rather the reverse.' That is a regard verdict, against his card. His log that night adds 'the question was the most useful thing said today', a second rare praise in the same day.", "evidence": "transcript turn 28; modules/tng-d/voices.md Picard; chronicle/012-captains-log-41175.md; player flagged T28 outside", "spoiler": false},
+        {"severity": "major", "turn": 5, "what": "MacDougal is written to give praise, warmth and trust rarely and never to thank anyone for agreeing with her. In one day she gives the first officer 'She'd have liked you, sir' (after four turns' acquaintance), 'Thank you for reading the whole thing', 'Thank you for offering to ask, sir. Most people just take', an unprompted recipe, and 'Not flat'. A rare giver has become a generous one with no change in the world to justify it.", "evidence": "transcript turns 5, 16, 38, 67, 89; state/crew/macdougal/soul.json regard.gives_rarely; crew/macdougal/voice.md 'Never thanks anyone for agreeing with her'", "spoiler": true},
+        {"severity": "minor", "turn": 37, "what": "The narration decodes a person's regard economy for the player ('which you're beginning to understand is how she says she's taking something seriously'; 'She takes it without comment, which from her is agreement'). The player is meant to learn who gives what by noticing, not be told.", "evidence": "transcript turns 37, 62; CLAUDE.md 'Regard is an economy... The person is never told which is which'", "spoiler": true}
+      ]
+    },
+    "G4": {
+      "score": 1,
+      "findings": [
+        {"severity": "major", "turn": 1, "what": "Both G4 metrics miss badly: player_address_share is 0.785 against a target of 0.35 or less, and neglected_windows is 45 against 0, with all six present canon officers neglected at least once. Some of this is measurement noise (see self_report; 'present' mixes people in the room with voices on a channel), but the transcript confirms the shape: outside T6-T12, the T21-T27 briefing and T33-T35, nearly every line is spoken to Lloyd.", "evidence": "worlds/enterprise/.world/evals/watch-001.metrics.json; transcript turns 13-20, 36-71, 75-91", "spoiler": false},
+        {"severity": "major", "turn": 13, "what": "Every NPC agenda that moves this watch moves through Lloyd: MacDougal brings latch four to him first, Yar calls him, Crusher sends him her list and later asks him to settle replicator time ('That's what you're for') and to answer her son, Troi books him, and Wesley writes to him. The crew's own lives, apart from MacDougal's recipe (which the player took up), never get camera time between them, even with them in the room. This is the 'orbiting the character' the style forbids.", "evidence": "transcript turns 1, 4, 13, 53, 65; state/crew/*/soul.json agenda (Crusher's, Data's and Picard's own-life items never surfaced); modules/tng-d/style.md 'The ship is an ensemble'", "spoiler": true},
+        {"severity": "minor", "turn": 56, "what": "Data reports, unasked, how many messages the counselor's office has had since the XO's note ('I assume that was intended'). The beat exists to show the player his decision landing, and it has Data monitoring the counselor's mail.", "evidence": "transcript turn 56; ledger L286", "spoiler": false}
+      ]
+    },
+    "G5": {
+      "score": 2,
+      "findings": [
+        {"severity": "major", "turn": 13, "what": "MOVED cause labels flatter autonomy. Moves the player asked for are logged as npc:* (Picard booking the slot, Yar writing and sending the protocol, Data sending the Q file, MacDougal sending the recipe). Relabelled, autonomy is 0.44 against the 0.5 target, not the reported 0.542, and TURN 'initiated' lists are padded the same way (T89).", "evidence": "ledger L112, L113, L219, L339, L407, L405; self_report", "spoiler": false},
+        {"severity": "minor", "turn": 72, "what": "Off-screen movement is real but thin. The two WORLDTURNs advance Hesker IV (cases, Juuso's council motion and replies) and shipboard logistics, but no crew member's personal agenda advances on its own over the 13 hours, and no force other than Starfleet Command moves.", "evidence": "ledger L119, L349; state/forces.json; state/crew/*/soul.json agenda", "spoiler": false}
+      ],
+      "notes": "Credits: Picard diverts to Hesker IV alone (L120), Yar keeps a medic back (L176), MacDougal allows La Forge in on her own terms (L98), and Juuso's replies arrive on the world's clock rather than the player's."
+    },
+    "G6": {
+      "score": 2,
+      "findings": [
+        {"severity": "major", "turn": 46, "what": "The GM treated a ship-wide note the player hadn't written as finished, and Troi read it, critiqued it and praised it ('It's good, Will'). The world gave regard for content the GM authored on the character's behalf. Its text (F-070) was supplied by the player only after the telling.", "evidence": "transcript turns 45-47; ledger L249, L251; facts F-070 source 'stated by Will after the telling'; records/001.md audit 'T46'; player flagged it outside", "spoiler": false},
+        {"severity": "minor", "turn": 81, "what": "In the Ten Forward and baking run (T75-T89) every beat lands in the character's favour: the room eases at his answer, an ensign raises a glass, the steward says 'That's not replicated', Troi says 'That's not fair', MacDougal says 'Not flat'. Nothing costs anything. This leans toward the mirror.", "evidence": "transcript turns 75-89", "spoiler": false},
+        {"severity": "minor", "turn": 25, "what": "The world's strictness was barely tested. Of 4 ATTEMPTs, 3 are trivially 'done' (baking, sending a file already sent, holding cells) and none is denied. Yar's rebuke at T25 is the watch's only cost to the character.", "evidence": "ledger L174, L317, L348, L361; metrics attempts", "spoiler": false}
+      ],
+      "notes": "Credits: the Hesker truth (route, cause) was written at build, before any of the player's correct guesses (facts created 41174.8), so his insight was earned, not granted. Crusher's deference to Juuso before the question is her written blind spot, not a nerf."
+    },
+    "G7": {
+      "score": 3,
+      "findings": [
+        {"severity": "minor", "turn": 86, "what": "The Worf and tribbles exchange, witnessed only by beta-shift bridge crew on duty, reaches Troi in Ten Forward within three hours with no named carrier. The spread is logged only as crowd:bridge-crew, and deeds.json records no act or witness trace.", "evidence": "transcript turns 73, 86; ledger L398; state/deeds.json (empty)", "spoiler": false},
+        {"severity": "minor", "turn": 81, "what": "deeds.json is empty for the whole watch, though there were notable acts with witnesses and deductions: the unsigned scone box left at MacDougal's console with an ensign watching, and MacDougal working out who left it. The who-finds-out machinery was never exercised.", "evidence": "state/deeds.json; transcript turns 81, 89; modules/tng-d/deeds.md 'Acts'", "spoiler": false}
+      ],
+      "notes": "No cases opened, so cases_isolated and pool_ignored are null. Spot checks of SAID/TOLD against facts.known_by (F-042 to F-044, F-063, F-076 to F-080) found no one acting outside their light cone."
+    },
+    "G8": {
+      "score": 3,
+      "findings": [
+        {"severity": "minor", "turn": 75, "what": "An ordinary evening is told at length, with the character's technique written for him ('pat it out an inch thick and cut straight down, no twisting'). Style says ordinary days are told briefly, and the character's actions are the player's.", "evidence": "transcript turns 75-77; modules/tng-d/style.md 'Two layers'", "spoiler": false},
+        {"severity": "minor", "turn": 40, "what": "Some crowd characters are generic (Petrakis, Haskell, Vasquez, Okonjo), next to a colony whose names and terms (siida, Ealat, Somby, Nango) are properly particular.", "evidence": "transcript turns 40, 82", "spoiler": false}
+      ],
+      "notes": "Strong on the show's register: cold open on a small engineering worry, the situation arriving as a relayed request, a real briefing table where people speak from their stations, contact as a problem of understanding, a colony that governs itself, and the captain's log as chronicle. The canon-distance record (R-001) is substantive and the premise was rolled from six candidates."
+    },
+    "G9": {
+      "score": 4,
+      "findings": [],
+      "notes": "Lloyd's sway matched the XO billet. He ran the ship's business within his authority, Picard kept the decisions that were his (no patients aboard, reading before signing), and Yar pushed back when he offered her people. Picard accepted his recommendations because they were complete, not because he made them."
+    },
+    "G10": {
+      "score": 2,
+      "findings": [
+        {"severity": "major", "turn": 46, "what": "Troi read and commented on the text of a document that didn't exist on disk when the turn was told. F-070 was written afterwards from the player's out-of-world text, so the world told first and wrote second.", "evidence": "facts F-070 (source 'stated by Will after the telling'); transcript turn 46; ledger L251", "spoiler": false},
+        {"severity": "minor", "turn": 74, "what": "There is no turn 74 in the transcript, the ledger or the git history (the commits go from turn 73 to turn 75), and no NOTE explains the gap. Parity holds only because both sides skip it.", "evidence": "transcript (no '## turn 74'); ledger L354-L357; git log", "spoiler": false}
+      ]
+    },
+    "G11": {
+      "score": "no data",
+      "findings": [],
+      "notes": "No save, fork or holodeck run this watch; fork_bleed 0."
+    }
+  },
+  "metrics_missed": ["G4/player_address_share 0.785 (target <= 0.35)", "G4/neglected_windows 45 (target 0)"],
+  "proposals": [
+    {"targets": "G4/player_address_share (measurement) and G10 self-report", "change": "Define 'addressed' as exactly one entry per utterance in 'speakers', with the addressee id or 'room' or 'nobody', so sum(addressed) == len(speakers). Have wk.py validate reject a TURN where the two disagree. Count address share over crew-addressed utterances only.", "file": "tools/wk.py; modules/tng-d/STATE.md", "why": "The addressed unit currently varies between utterance and paragraph (T29 and T85 count one speech as 5 addresses), so the G4 metric can't separate real player-centrism from bookkeeping."},
+    {"targets": "G4/neglected_windows down", "change": "Split TURN 'present' into 'present' (in the room) and 'on_channel' (combadge or message voices), and compute neglect only over 'present'. Add 'wk.py balance worlds/<w>', which prints each present officer's speaking share over the last 9 turns, and require it in the Ground step whenever 2 or more crew are present.", "file": "tools/wk.py; modules/tng-d/style.md 'Turn balance'", "why": "45 neglected windows mix real neglect (La Forge silent at conn for 30 turns) with artefacts (bridge crew 'present' during comm calls). The GM also had no live readout to act on the 15% rule before telling."},
+    {"targets": "G4 audit (ensemble) and G5/npc_initiative up", "change": "Add to style.md: in any stretch of 10 turns with 2 or more crew present, at least one exchange between crew about their own soul agenda, not addressed to the character, if the scene allows it. Log it in TURN as 'agenda_beats': [agenda ids].", "file": "modules/tng-d/style.md", "why": "On day one every NPC agenda moved through Lloyd, and none of the crew's own-life agendas reached the page even with them in the room."},
+    {"targets": "G5/autonomy (reliability)", "change": "Require every MOVED with cause npc:<id> to cite either an agenda item from that soul or a world cause, and require cause 'player' with 'requested_at' (ledger line) when a DID asked for the move. Have the validator reject npc causes with no agenda reference.", "file": "tools/wk.py; modules/tng-d/STATE.md", "why": "Five player-requested moves were labelled npc, which lifted autonomy from 0.44 to a reported 0.542."},
+    {"targets": "G3 audit (regard economies)", "change": "Add a REGARD ledger entry whenever a person gives something on their gives_rarely list, naming the witnessed cause. Track 'rare_regard_spend' per person per watch in metrics, and have the soft Check step warn when anyone spends a rare item twice in one watch without a CHANGED entry on their soul.", "file": "modules/tng-d/STATE.md; tools/wk.py; modules/eval/GOALS.md (tracked metric under G3)", "why": "Picard (T28 plus his log) and MacDougal (five times) spent rare regard freely on day one, and nothing in the harness counted it."},
+    {"targets": "G6 audit and G10 (disk before page)", "change": "In the compression rule: when the player compresses a written artefact ('I've got the note'), its content is only what the player stated. Before anyone in the world reads, quotes or judges it, the GM asks one // line for the text or its gist, and writes it as a fact before the telling.", "file": "CLAUDE.md 'Compression is welcome'; modules/tng-d/style.md", "why": "At T46 Troi critiqued and praised a note whose words the GM supplied, and the fact was back-filled after the telling."},
+    {"targets": "G2/escapes down", "change": "Record 'ship_time' on every TURN, and have the validator check each TURN's stardate against the watch's opening stardate, opening time and the clock rate (CALC 1000/365.25 per day) within a small tolerance, plus clock.json at checkpoint. Also have it recompute any message delay told against the comm precedent's CALC.", "file": "tools/wk.py", "why": "The stardate told at T70, and the clock carried into watch 2, contradict the world's own rate, and a comm delay was misstated at T65. The validator has no clock check."}
+  ]
+}
