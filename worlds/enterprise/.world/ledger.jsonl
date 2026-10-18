@@ -389,3 +389,6 @@
 {"watch": 1, "turn": 84, "type": "TURN", "stardate": 41175.85, "present": ["player", "troi", "crowd:ten-forward-steward", "crowd:ten-forward"], "speakers": ["troi"], "addressed": {"player": 2}, "initiated": ["troi"], "transcript": "watch-001.md#turn-84"}
 {"watch": 1, "turn": 84, "type": "DID", "decision": "They're spoken for. Anyone who tries one answers to the counselor, and then to me. Sit at the window table facing the room and nurse the lager.", "changed": "the scones survive an hour; Troi arrives at 1859", "distance": {}}
 {"watch": 1, "turn": 84, "type": "MOVED", "by": "troi", "what": "arrived for the off-duty word", "cause": "npc:troi"}
+{"watch": 1, "turn": 85, "type": "TURN", "stardate": 41175.852, "present": ["player", "troi", "crowd:ten-forward"], "speakers": ["troi"], "addressed": {"player": 5}, "initiated": ["troi"], "transcript": "watch-001.md#turn-85"}
+{"watch": 1, "turn": 85, "type": "DID", "decision": "It's Commander MacDougal's gran's recipe. (pulls out her chair) The cream was for you.", "changed": "Troi sits, eats, and sets her terms: Betazed acknowledged, not resumed; colleagues and friends in the ship's eyes", "distance": {}}
+{"watch": 1, "turn": 85, "type": "MOVED", "by": "troi", "what": "set the terms with Lloyd: she won't pretend Betazed didn't happen and won't take it up again where he left it", "cause": "npc:troi"}

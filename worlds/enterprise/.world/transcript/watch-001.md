@@ -853,3 +853,17 @@ At eighteen fifty-nine, by the chrono over the bar, the doors open and Troi come
 When she reaches you she doesn't sit straight away. She looks at the scones, and the cream, and the jam, and then at you.
 
 "You baked." It isn't quite a question. "Will. You *baked*."
+
+## turn 85
+
+She sits. "Then I'll thank Commander MacDougal's grandmother." She takes one, breaks it, and puts a great deal more cream on it than a scone strictly needs. She eats a corner of it. For a moment she simply closes her eyes.
+
+"That's not fair," she says.
+
+Then she sets it down, and folds her hands on the table, and looks at you directly. Her voice stays low and even, pitched for the table and no further.
+
+"I asked for somewhere that wasn't an office because I didn't want this to be a session. And I asked for here," a small movement of her head at the room, "because I want this ship to see us as what we are now. Two officers who work together, and like each other, and have a drink after a long day."
+
+"We're going to be at the captain's side every day, Will. I want to be able to do that well. That means I won't pretend Betazed didn't happen." Her eyes don't leave yours. "And I won't pick it up again where you put it down. Not here. Not as something the crew watches."
+
+A beat. Then, a little more gently, with the ghost of the dry humour you remember: "The cream was very nearly an argument against me."
