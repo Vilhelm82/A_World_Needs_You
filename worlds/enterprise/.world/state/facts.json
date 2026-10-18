@@ -792,6 +792,16 @@
    "surfaced_at": null,
    "source": "truth: accounts for the uniform colour as told at turn 82",
    "created_at": 41175.772
+  },
+  {
+   "id": "F-087",
+   "statement": "The school is on a different deck section from cargo bay four and sickbay, not adjacent to either.",
+   "known_by": [
+    "all"
+   ],
+   "surfaced_at": null,
+   "source": "ship's layout (decided at turn 83)",
+   "created_at": 41175.775
   }
  ]
 }

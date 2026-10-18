@@ -831,3 +831,13 @@ The knot of people round the padd has gone quieter since you came over. One of t
 "Commander. Sorry. Lieutenant Imra Vasquez, stellar cartography." She holds up the padd. Your note is on it. "My son's in the school. Eight. It says the school's not affected." She doesn't quite make it a question. "Is that a promise, sir, or a hope?"
 
 The others at the bar don't look away, which is its own kind of looking.
+
+## turn 83
+
+Vasquez listens to all of it with the padd still in her hand. When you get to *better control over how it ends*, she nods slowly, as if she's filing it to repeat word for word.
+
+"Your son's day doesn't change." She says it back to you. "That I can tell him." She puts the padd face down on the bar. "Thank you, sir. I'd sooner have the part that's a hope labelled."
+
+Down the bar, someone lets out a breath. A big ensign with a beard raises his glass an inch in your direction and goes back to his conversation, which is suddenly about something else.
+
+The steward slides a bowl of nuts nearer your glass without being asked. "Those yours at the window, sir? Somebody's going to try one if you leave them."
