@@ -402,3 +402,8 @@
 {"watch": 1, "turn": 88, "type": "TURN", "stardate": 41175.892, "present": ["player", "crowd:ten-forward-steward", "crowd:ten-forward"], "speakers": ["crowd:ten-forward-steward"], "addressed": {"player": 2}, "initiated": ["crowd:ten-forward-steward"], "transcript": "watch-001.md#turn-88"}
 {"watch": 1, "turn": 88, "type": "DID", "decision": "The scones to the bar: one for the steward, one for Vasquez's eight-year-old.", "changed": "Vasquez had gone home at 1830; the steward will deliver hers; the rest go to the bar", "distance": {}}
 {"watch": 1, "turn": 88, "type": "HAS", "item": "the Ten Forward scones and cream", "change": "-"}
+{"watch": 1, "turn": 89, "type": "TURN", "stardate": 41175.91, "present": ["player"], "speakers": ["yar", "macdougal"], "addressed": {"player": 2}, "initiated": ["yar", "macdougal"], "transcript": "watch-001.md#turn-89"}
+{"watch": 1, "turn": 89, "type": "DID", "decision": "Finish the lager and call it a night.", "changed": "Lloyd in his quarters; Yar's protocol draft and MacDougal's 'Not flat' waiting", "distance": {}}
+{"watch": 1, "turn": 89, "type": "MOVED", "by": "yar", "what": "sent the intruder protocol draft", "cause": "npc:yar"}
+{"watch": 1, "turn": 89, "type": "MOVED", "by": "macdougal", "what": "found the scones and sent two words", "cause": "player"}
+{"watch": 1, "turn": 89, "type": "HAS", "item": "Yar's protocol draft", "change": "+"}

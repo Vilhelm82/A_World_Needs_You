@@ -56,8 +56,8 @@
    "stages": [
     {
      "name": "draft the procedures",
-     "status": "doing",
-     "needs": "Lloyd's design written up by Yar",
+     "status": "done",
+     "needs": "draft sent to Lloyd at 2035",
      "cost": "her evening"
     },
     {

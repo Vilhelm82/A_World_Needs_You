@@ -901,3 +901,17 @@ Vasquez's stool is empty. The steward follows your look. "She went home to her b
 He bites into his, and his eyebrows go up. "That's not replicated."
 
 The remaining two scones and the cream last on the bar about as long as it takes the bearded ensign to notice them.
+
+## turn 89
+
+The last of the lager, and the long window, and then the corridor.
+
+Your quarters still smell of baking. The rack is empty, the counter wiped, the oven cooling with a faint tick.
+
+The terminal by the door shows two messages that arrived while you were walking.
+
+*Security protocol, bridge intruder response. Draft for the captain. — Lt. N. Yar*, sent at twenty thirty-five.
+
+And from engineering, three minutes before that, with no subject line and no signature, two words:
+
+*Not flat.*
