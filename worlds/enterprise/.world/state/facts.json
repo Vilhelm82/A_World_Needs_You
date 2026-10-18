@@ -574,6 +574,16 @@
    "surfaced_at": 41175.444,
    "source": "Data, ops records",
    "created_at": 41175.444
+  },
+  {
+   "id": "F-068",
+   "statement": "Lloyd told Lt. (j.g.) Petrakis that the ship is healthy and the cargo bay ward is a precaution in case colony patients are brought aboard; Petrakis will mention it to others, and by evening the family decks will be asking whether sick colonists are coming aboard.",
+   "known_by": [
+    "player"
+   ],
+   "surfaced_at": null,
+   "source": "truth: word spreading",
+   "created_at": 41175.449
   }
  ]
 }

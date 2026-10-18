@@ -485,3 +485,9 @@ The message goes out to eleven names.
 "Transporter technician Okonjo is free on beta rotation and will begin now," Data says. "I have asked that the personal effects be moved first, by hand, and the stores by transporter after. Cargo bay four should be empty by approximately fifteen forty-five." He sends a line to engineering as he speaks. "I have informed Commander MacDougal of the time."
 
 Your terminal chimes twice before he's finished. The first reply reads: *Thank you, sir. — Ens. T. Haskell.* The second: *Did someone say medical isolation ward? Is this ship sick? — Lt. (j.g.) R. Petrakis.*
+
+## turn 41
+
+The reply comes back inside a minute.
+
+*Understood, sir. Thanks for the straight answer. Patients aboard, though. Good to know. — R. Petrakis*

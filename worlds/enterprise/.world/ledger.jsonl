@@ -235,3 +235,6 @@
 {"watch": 1, "turn": 40, "type": "TOLD", "to": ["crowd:eleven-new-arrivals"], "fact": "F-067"}
 {"watch": 1, "turn": 40, "type": "MOVED", "by": "data", "what": "assigned the cargo move and told MacDougal the time", "cause": "player"}
 {"watch": 1, "turn": 40, "type": "MOVED", "by": "crowd:lt-petrakis", "what": "asked whether the ship is sick: word of an isolation ward is out among the crew", "cause": "player"}
+{"watch": 1, "turn": 41, "type": "TURN", "stardate": 41175.449, "present": ["player", "laforge", "data", "crowd:relief-tactical-lieutenant"], "speakers": ["crowd:lt-petrakis"], "addressed": {"player": 1}, "initiated": [], "transcript": "watch-001.md#turn-41"}
+{"watch": 1, "turn": 41, "type": "DID", "decision": "No, Lieutenant. The ship is healthy... the ward is an isolation precaution in case patients are brought aboard. Nobody aboard is sick.", "changed": "Petrakis reassured; the possibility of patients aboard is now in circulation among the crew", "distance": {}}
+{"watch": 1, "turn": 41, "type": "MOVED", "by": "crowd:lt-petrakis", "what": "will pass on that colony patients may be brought aboard", "cause": "player"}
