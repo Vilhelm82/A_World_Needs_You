@@ -757,3 +757,17 @@ You're in the turbolift before he answers, and when you turn, he is still standi
 "There are no tribbles," Worf says, with great dignity, "in this sector."
 
 The doors meet.
+
+## turn 75
+
+The replicator gives you flour, sugar, an egg, milk, sultanas, and a block of butter so cold the wrapper sweats. The galley in your quarters is small, but it has an oven and a counter, which is all a scone has ever needed.
+
+Butter into flour with your fingertips, quickly, before your hands can warm it, until the bowl is breadcrumbs. Sugar. Sultanas. The egg beaten into milk, poured in a little at a time until the dough comes together and no further. You don't knead it. You pat it out an inch thick and cut straight down, no twisting, and put them close on the tray.
+
+Twelve minutes. The quarters fill with the smell of it.
+
+They come out risen and gold, tall at the edges, a little lopsided where the oven runs hot at the back. The second batch is better than the first.
+
+Two dozen, cooling on a rack. Half in a box for engineering. Half for Ten Forward, with a dish of butter and a jar of jam.
+
+It is seventeen twenty.

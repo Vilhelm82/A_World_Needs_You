@@ -143,6 +143,14 @@
    "reason": "A convenience for reading colony messages; nothing in the episode depends on the offset.",
    "source": "turn 64 (L:1:64)",
    "created_at": 41175.52
+  },
+  {
+   "id": "P-019",
+   "ruling": "[assumed] The first officer's quarters have a small galley, a cooktop and a compact oven, enough to cook and bake by hand from replicated raw ingredients.",
+   "kind": "lore",
+   "reason": "Canon shows Riker cooking in his own quarters (Time Squared, 2365); Lloyd lived Riker's life and keeps the habit (sheet).",
+   "source": "turn 75 (L:1:75)",
+   "created_at": 41175.74
   }
  ]
 }
