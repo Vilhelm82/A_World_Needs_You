@@ -374,3 +374,5 @@
 {"watch": 1, "turn": 79, "type": "TURN", "stardate": 41175.755, "present": ["player", "crusher"], "speakers": ["crusher"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-79"}
 {"watch": 1, "turn": 79, "type": "DID", "decision": "Most of the sick are the herders' own families. Boiling milk protects their children first. Put it that way and it's a parent's precaution, not an accusation.", "changed": "Crusher sends it as a follow-up line for Juuso to use", "distance": {}}
 {"watch": 1, "turn": 79, "type": "MOVED", "by": "crusher", "what": "sent Lloyd's framing to Juuso", "cause": "player"}
+{"watch": 1, "turn": 80, "type": "TURN", "stardate": 41175.756, "present": ["player", "crusher"], "speakers": ["crusher"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-80"}
+{"watch": 1, "turn": 80, "type": "DID", "decision": "She will read it as us acknowledging the difficulty of her position.", "changed": "Crusher is less sure: Juuso is proud; she writes to the half that will use it", "distance": {}}

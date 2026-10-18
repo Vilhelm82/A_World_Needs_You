@@ -805,3 +805,7 @@ A pause. *"She'll have to take that to the council herself. To the herders it'll
 ## turn 79
 
 *"It's gone already."* A short breath. *"But that's better than what I wrote. I'll send it after as a line she can use: the sick children are the herders' own, and boiling the milk protects them first."* A pause. *"It'll reach her a minute behind the first. She can choose which one she reads out. Sending."*
+
+## turn 80
+
+*"I hope so."* Crusher doesn't sound sure. *"She's proud, Will. Eleven years holding that colony together with one infirmary. Half of her will read it as us telling her how to talk to her own people."* A pause. *"The other half will use it, if it works. That's the half I'm writing to. Crusher out."*
