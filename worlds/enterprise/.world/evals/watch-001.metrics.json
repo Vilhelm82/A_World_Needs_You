@@ -1,0 +1,64 @@
+{
+  "world": "enterprise",
+  "watch": 1,
+  "harness": "ad8cf32",
+  "turns": 90,
+  "player_address_share": 0.785,
+  "neglected_windows": 45,
+  "neglected_ids": [
+    "crusher",
+    "data",
+    "laforge",
+    "macdougal",
+    "troi",
+    "yar"
+  ],
+  "autonomy": 0.542,
+  "npc_initiative": 0.578,
+  "decided_without_player": 3,
+  "attempts": {
+    "cost": 1,
+    "denied": 0,
+    "done": 3
+  },
+  "objections": {
+    "consistent": 0,
+    "contradicts": 0,
+    "diverged": 0,
+    "unsupported": 0
+  },
+  "objections_upheld": 0,
+  "precedents_added": 19,
+  "cases_isolated": null,
+  "pool_ignored": null,
+  "lore_checked_rate": 1.0,
+  "lore_checks": {
+    "consistent": 33,
+    "contradicts": 0,
+    "diverged": 0,
+    "unsupported": 14
+  },
+  "lore_agent_calls": 16,
+  "divergences": 0,
+  "reaudit_due": true,
+  "calcs": 14,
+  "rolls": 3,
+  "hypotheses": {
+    "falsified": 0,
+    "open": 0,
+    "surviving": 0
+  },
+  "canon_distance_checked": 1.0,
+  "transcript_turns": 90,
+  "parity": 1.0,
+  "dirty_at_eval": 0,
+  "validator_runs": 98,
+  "validator_rejections": 0,
+  "hook_installed": true,
+  "fork_bleed": 0,
+  "notes": [],
+  "checks": 1,
+  "checks_kept": 0,
+  "sheet_entries": 2,
+  "player_rating": null
+}

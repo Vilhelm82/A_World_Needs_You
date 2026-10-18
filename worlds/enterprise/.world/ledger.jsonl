@@ -412,3 +412,12 @@
 {"watch": 1, "turn": 91, "type": "TURN", "stardate": 41175.92, "present": ["player"], "speakers": ["picard", "yar"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-91"}
 {"watch": 1, "turn": 91, "type": "DID", "decision": "Message the captain: Yar's draft intruder protocol; I endorse it; brief it together at your convenience. Copy Yar.", "changed": "Picard will read tonight and see both at 0730; Yar thanks him", "distance": {"J-002": [7, 8]}}
 {"watch": 1, "turn": 91, "type": "DECIDED", "by": "picard", "what": "ready room at 0730 with Yar and Lloyd on the protocol", "without_player": false}
+{"watch": 1, "turn": 91, "type": "NOTE", "text": "Slip: acting for my character, handing Troi a note I hadn't written (and possibly walking me places unasked). The serious one."}
+{"watch": 1, "turn": 91, "type": "NOTE", "text": "Slip: geography, the observation lounge to ready room door."}
+{"watch": 1, "turn": 91, "type": "NOTE", "text": "Slip: Picard drift, mentoring warmth closer to season 3 than season 1."}
+{"watch": 1, "turn": 91, "type": "NOTE", "text": "Slip: underselling tech, Data worrying a 24th-century computer can't tell a padd from a person."}
+{"watch": 1, "turn": 91, "type": "NOTE", "text": "Slip: attribution, MacDougal's 'you asked for forty' purifiers, when she offered forty and Picard approved."}
+{"watch": 1, "turn": 91, "type": "NOTE", "text": "Strength: hard numbers held all day (warp times, Starbase 49 windows, thermal optics); Data corrected my arithmetic."}
+{"watch": 1, "turn": 91, "type": "NOTE", "text": "Strength: consequences without catering (Yar's public rebuke, Reyhan seeing through the sideways ask, Juuso's prickliness)."}
+{"watch": 1, "turn": 91, "type": "NOTE", "text": "Strength: a world that moves without me (Data, Yar, Geordi, MacDougal refining ideas on their own)."}
+{"watch": 1, "turn": 91, "type": "NOTE", "text": "Strength: lore texture (MacDougal and Torres from canon, Sami herders with siidas, the holodeck stream callback)."}
