@@ -809,3 +809,13 @@ A pause. *"She'll have to take that to the council herself. To the herders it'll
 ## turn 80
 
 *"I hope so."* Crusher doesn't sound sure. *"She's proud, Will. Eleven years holding that colony together with one infirmary. Half of her will read it as us telling her how to talk to her own people."* A pause. *"The other half will use it, if it works. That's the half I'm writing to. Crusher out."*
+
+## turn 81
+
+Main Engineering is on its beta rhythm, quieter and with fewer people. MacDougal isn't at the master systems display. The ensign at the far console says, before you can ask, that the chief is in cargo bay four with the environmental team and has been since sixteen hundred.
+
+Her console is where it was this morning. The napkin is gone. You leave the box where the scone sat, with nothing written on it, and the ensign watches you do it and then very carefully looks at something else.
+
+Ten Forward at ten to eighteen hundred is half full and getting fuller: alpha shift come off duty. The long windows are all streaming stars. Someone has put music on low. There's a crowd at the bar around a padd, and you catch *Hesker* and *cargo bay* as you pass. At a table near the door, two crewmen look up at the first officer carrying a dozen scones, a bowl of whipped cream and a jar of jam, and look down again.
+
+The table by the window that Troi meant is empty. It's seventy minutes early.

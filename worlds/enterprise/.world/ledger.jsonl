@@ -376,3 +376,7 @@
 {"watch": 1, "turn": 79, "type": "MOVED", "by": "crusher", "what": "sent Lloyd's framing to Juuso", "cause": "player"}
 {"watch": 1, "turn": 80, "type": "TURN", "stardate": 41175.756, "present": ["player", "crusher"], "speakers": ["crusher"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-80"}
 {"watch": 1, "turn": 80, "type": "DID", "decision": "She will read it as us acknowledging the difficulty of her position.", "changed": "Crusher is less sure: Juuso is proud; she writes to the half that will use it", "distance": {}}
+{"watch": 1, "turn": 81, "type": "TURN", "stardate": 41175.77, "present": ["player", "crowd:engineering-ensign", "crowd:ten-forward"], "speakers": ["crowd:engineering-ensign"], "addressed": {"player": 1}, "initiated": [], "transcript": "watch-001.md#turn-81"}
+{"watch": 1, "turn": 81, "type": "DID", "decision": "Leave the scones in Engineering where the commander will find them quickly, then go to Ten Forward.", "changed": "the box is at MacDougal's console (she is in cargo bay four); Lloyd is in Ten Forward 70 minutes early, where the crew are talking about Hesker and the cargo bay", "distance": {}}
+{"watch": 1, "turn": 81, "type": "HAS", "item": "a dozen scones for engineering", "change": "-"}
+{"watch": 1, "turn": 81, "type": "MOVED", "by": "crowd:ten-forward", "what": "off-duty crew discussing the ship-wide note in Ten Forward", "cause": "player"}
