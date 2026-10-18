@@ -340,3 +340,5 @@
 {"watch": 1, "turn": 68, "type": "TURN", "stardate": 41175.562, "present": ["player", "data", "laforge", "crowd:relief-tactical-lieutenant", "crusher"], "speakers": ["crusher"], "addressed": {"player": 2}, "initiated": ["crusher"], "transcript": "watch-001.md#turn-68"}
 {"watch": 1, "turn": 68, "type": "TOLD", "to": ["crusher"], "fact": "F-084"}
 {"watch": 1, "turn": 68, "type": "DID", "decision": "Doctor, six cardiac units by oh-six-hundred, possibly oh-four. They're yours to test.", "changed": "Crusher will test from 0400 with Vantongeren on a second bench; she thanks him for Wesley", "distance": {}}
+{"watch": 1, "turn": 69, "type": "TURN", "stardate": 41175.563, "present": ["player", "data", "laforge", "crowd:relief-tactical-lieutenant", "crusher"], "speakers": ["crusher"], "addressed": {"player": 1}, "initiated": [], "transcript": "watch-001.md#turn-69"}
+{"watch": 1, "turn": 69, "type": "DID", "decision": "He's looking for a stream for me. If he finds it, the away team will owe him one. Get some sleep before four.", "changed": "Crusher will sleep at 2200", "distance": {}}

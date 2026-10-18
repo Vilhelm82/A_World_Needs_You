@@ -721,3 +721,7 @@ At the bottom, also in brackets: *[The replicator keeps making them flat. I thin
 *"Then I'll be here at four."* No hesitation. *"About forty minutes a unit to test properly. Vantongeren can run the second bench; that gets all six done before breakfast, if they come at four."*
 
 A pause, and her voice changes a little. *"Will. Wesley's been in the library since half past two, and he hasn't checked his messages once. Whatever you said to him, thank you."*
+
+## turn 69
+
+*"Prescribing now, Commander?"* It's very nearly a laugh. *"I'll sleep at twenty-two hundred, which is more than I'd have managed this morning. Crusher out."*
