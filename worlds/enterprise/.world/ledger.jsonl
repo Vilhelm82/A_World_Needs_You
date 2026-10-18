@@ -399,3 +399,6 @@
 {"watch": 1, "turn": 87, "type": "TURN", "stardate": 41175.89, "present": ["player", "troi", "crowd:ten-forward"], "speakers": ["troi", "crowd:ten-forward", "troi"], "addressed": {"player": 3}, "initiated": ["troi"], "transcript": "watch-001.md#turn-87"}
 {"watch": 1, "turn": 87, "type": "DID", "decision": "She'll know the moment we're in range. Is it too late to request a transfer?", "changed": "Troi laughs; the evening runs on; she leaves at 2015 for three parents who asked to see her after the note", "distance": {}}
 {"watch": 1, "turn": 87, "type": "MOVED", "by": "troi", "what": "went to see three parents who asked for her after the ship-wide note", "cause": "player"}
+{"watch": 1, "turn": 88, "type": "TURN", "stardate": 41175.892, "present": ["player", "crowd:ten-forward-steward", "crowd:ten-forward"], "speakers": ["crowd:ten-forward-steward"], "addressed": {"player": 2}, "initiated": ["crowd:ten-forward-steward"], "transcript": "watch-001.md#turn-88"}
+{"watch": 1, "turn": 88, "type": "DID", "decision": "The scones to the bar: one for the steward, one for Vasquez's eight-year-old.", "changed": "Vasquez had gone home at 1830; the steward will deliver hers; the rest go to the bar", "distance": {}}
+{"watch": 1, "turn": 88, "type": "HAS", "item": "the Ten Forward scones and cream", "change": "-"}

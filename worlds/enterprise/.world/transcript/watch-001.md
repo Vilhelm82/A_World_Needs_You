@@ -893,3 +893,11 @@ At a quarter past twenty hundred, Troi looks at the chrono over the bar and sets
 She goes out through the room, stopping once at a table to say something to a crewman that makes him nod, and then she's gone.
 
 The window table holds four scones, most of the cream, and your glass.
+
+## turn 88
+
+Vasquez's stool is empty. The steward follows your look. "She went home to her boy about half six, sir." He takes the one you offered and wraps a second in a napkin with some care. "Stellar cartography's on my way off shift. I'll see it gets to her intact."
+
+He bites into his, and his eyebrows go up. "That's not replicated."
+
+The remaining two scones and the cream last on the bar about as long as it takes the bearded ensign to notice them.
