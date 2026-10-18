@@ -237,7 +237,7 @@
     {
      "name": "clear the bay",
      "status": "todo",
-     "needs": "Lloyd, with ops",
+     "needs": "cargo bay four to bay two: a cargo detail with antigravs (~5 h) or cargo transporters (<2 h, an operator); owners of unclaimed personal effects told",
      "cost": "cargo moved elsewhere"
     },
     {

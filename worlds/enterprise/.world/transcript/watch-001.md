@@ -471,3 +471,9 @@ The draft goes to the ready room. It comes back signed in under three minutes, a
 *"Own people, then."* If she's surprised he took the long number, she doesn't say so. *"Eighteen hours from the minute the bay's empty, not from now. Tell me which bay and when, and I'll have the filter train on the replicators tonight."*
 
 *"I won't need O'Brien."* A beat. *"Thank you for offering to ask, sir. Most people just take. MacDougal out."*
+
+## turn 39
+
+Data doesn't need to look. "Cargo bay four. It is the nearest to sickbay with an independent environmental trunk." Then he looks anyway, and reads: "Its present contents are components for the survey probes, now not required while the survey is suspended; general stores; and the personal effects of eleven crew members who came aboard at Deneb IV and have not yet claimed them."
+
+"Cargo bay two has the capacity. A cargo detail with antigravs would require approximately five hours. The cargo transporters, under two, with an operator." A slight pause. "In either case, eleven people should probably be told where their belongings have gone."

@@ -563,6 +563,17 @@
    "surfaced_at": 41175.44,
    "source": "communications log",
    "created_at": 41175.44
+  },
+  {
+   "id": "F-067",
+   "statement": "Data: cargo bay four is the nearest bay to sickbay with an independent environmental trunk. It holds survey probe components for the suspended survey, general stores, and the personal effects of crew who came aboard at Deneb IV and have not yet claimed them. Cargo bay two has room. A cargo detail with antigravs would take about five hours; the cargo transporters, under two hours, with a transporter operator and the owners of the personal effects told where their things have gone.",
+   "known_by": [
+    "data",
+    "player"
+   ],
+   "surfaced_at": 41175.444,
+   "source": "Data, ops records",
+   "created_at": 41175.444
   }
  ]
 }
