@@ -867,3 +867,15 @@ Then she sets it down, and folds her hands on the table, and looks at you direct
 "We're going to be at the captain's side every day, Will. I want to be able to do that well. That means I won't pretend Betazed didn't happen." Her eyes don't leave yours. "And I won't pick it up again where you put it down. Not here. Not as something the crew watches."
 
 A beat. Then, a little more gently, with the ghost of the dry humour you remember: "The cream was very nearly an argument against me."
+
+## turn 86
+
+Something goes out of her shoulders that she must have carried in with her.
+
+"Thank you." She lifts her glass, which the steward has brought without her asking, and touches it to yours. "For saying that part yourself."
+
+Then she looks at the cream, and back at you, and the corner of her mouth goes. "Keep it in your arsenal. I'll know when it's coming." She takes a second scone. "I always did."
+
+For a while it's only that: the room, the stars behind the glass, the scones going down. She asks about MacDougal, and about the latch, and laughs once, properly, at Worf and the tribbles, which has already reached her from somewhere.
+
+"I should warn you," she says at last, turning her glass. "I haven't told my mother you're aboard." A pause. "She'll know anyway. She always does."

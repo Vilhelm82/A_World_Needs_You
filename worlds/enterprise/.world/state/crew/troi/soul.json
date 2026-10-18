@@ -30,7 +30,7 @@
    "praise"
   ],
   "toward": {
-   "player": "Imzadi, years ago on Betazed. He chose his career. She has her own life now and wants that understood.",
+   "player": "Imzadi once, on Betazed. Now, agreed and said aloud: two officers who like each other. He said he put it down and won't ask her to pick it up.",
    "picard": "Respects him; senses more than he shows.",
    "crusher": "Becoming a friend."
   }
@@ -51,11 +51,6 @@
   {
    "goal": "Be with the bereaved families on Hesker IV",
    "next_step": "go down with Mbatha to the herders on the Ninth",
-   "horizon": "week"
-  },
-  {
-   "goal": "Set the terms with Lloyd before the ship sees more than she wants it to",
-   "next_step": "Ten Forward, 1900, a table by the window: seen by the ship as two colleagues talking",
    "horizon": "week"
   },
   {
