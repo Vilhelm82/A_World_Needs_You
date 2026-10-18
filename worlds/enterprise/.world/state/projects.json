@@ -199,13 +199,13 @@
     "player"
    ],
    "kind": "duty",
-   "goal": "about forty portable water purifiers replicated before arrival at Hesker IV",
+   "goal": "eight portable water purifiers for the Ninth's single stream-fed camp",
    "stages": [
     {
      "name": "replicate",
-     "status": "doing",
-     "needs": "31 cells by arrival; nine from emergency stores if Juuso's reply points to the water (Lloyd's condition), replicators then refill the stores first",
-     "cost": "power cells are the limit"
+     "status": "done",
+     "needs": "eleven cells already made",
+     "cost": "none further"
     },
     {
      "name": "deliver to the Ninth",
@@ -371,8 +371,8 @@
    "stages": [
     {
      "name": "replicator time",
-     "status": "todo",
-     "needs": "Lloyd: replicators are busy with purifier power cells (J-006)",
+     "status": "doing",
+     "needs": "engineering's industrial replicators, MacDougal; ready about 0600 day 2 (she says)",
      "cost": "competes with the cells"
     },
     {

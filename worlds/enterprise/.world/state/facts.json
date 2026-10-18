@@ -718,8 +718,9 @@
    "statement": "Juuso's reply (received 1454): the Ninth's four siidas summer at one camp below the grazing slopes, drawing from the Ruovdejohka stream, with the herds watering and crossing upstream; no wells; pit latrines downhill; Javri's water piped from the lake and treated. Boil-water order issued for the Ninth. 33 cases, 10 critical in 12 beds, no further deaths. She accepts the virus is in stool but insists it is not the colony's own and blames the reedflies; the council votes on burning the breeding grounds the day after the Enterprise arrives; she asks for Starfleet's support and for cardiac support.",
    "known_by": [
     "crusher",
-    "player",
-    "juuso"
+    "juuso",
+    "macdougal",
+    "player"
    ],
    "surfaced_at": 41175.52,
    "source": "Juuso (chronicle 008)",
@@ -751,11 +752,23 @@
    "statement": "Crusher's needs for the ten critical patients: replicator time for six portable cardiac support units (sickbay has two), each needing a stability check before use; the captain's decision on bringing patients aboard, which waits on a sample under her microscope on arrival; and the isolation ward. She will ask Juuso about the cases outside the Ninth.",
    "known_by": [
     "crusher",
+    "macdougal",
     "player"
    ],
    "surfaced_at": 41175.525,
    "source": "Crusher",
    "created_at": 41175.525
+  },
+  {
+   "id": "F-084",
+   "statement": "MacDougal: one camp on one stream needs six large purifiers, eight with spares, and she already has eleven cells, so the purifiers are covered. Six cardiac support units go on engineering's industrial replicators next, ready about 0600 tomorrow (she says), for Crusher to test; the emergency cells stay in stores.",
+   "known_by": [
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.527,
+   "source": "MacDougal",
+   "created_at": 41175.527
   }
  ]
 }

@@ -697,3 +697,13 @@ And at the end: *I do not dispute that the virus is found in stool. I dispute th
 *"I'll ask her about the four outside the Ninth. That's another hour and a half each way, near enough."* A pause, and the sound of her moving across sickbay. *"Hearts. All right. Sickbay has two portable cardiac support units. I want six more replicated before we arrive, and every one checked before it goes near a child, because I'm not trusting a replicated device on a four-year-old's heart without testing it."*
 
 *"Which means replicator time. And Commander MacDougal has the replicators making power cells."* She lets that sit. *"I'm not going to fight her for them. That's what you're for."*
+
+## turn 66
+
+*"One camp, one stream."* You can hear her revising in her head. *"Then it's six big units, eight with spares, and I've got eleven cells already. Purifiers are done; I'll stop the cell run."*
+
+The replicator whine on her end cuts off.
+
+*"Cardiac support units on the industrial replicators, then. Medical patterns from sickbay. Six by oh-six-hundred tomorrow."* A pause. *"Oh-four, if nothing argues with me. Dr. Crusher tests them; I don't put my name on anything that goes on a child's heart."*
+
+*"Emergency cells stay where they are. Good. MacDougal out."*

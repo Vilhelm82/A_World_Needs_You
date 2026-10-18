@@ -16,7 +16,10 @@
   "F-061",
   "F-065",
   "F-078",
-  "F-079"
+  "F-079",
+  "F-080",
+  "F-083",
+  "F-084"
  ],
  "beliefs": [
   {
@@ -73,6 +76,7 @@
   "ward with her own people; XO clears the bay; he'll ask department heads if she wants margin",
   "Data: cargo bay four empty about 1545; her eighteen hours start then",
   "latch four after Hesker, clear space; asked for the captain's signature on paper and nine cells from emergency stores",
-  "XO: captain's signature today; nine cells released if Juuso confirms it's the water, stores refilled first"
+  "XO: captain's signature today; nine cells released if Juuso confirms it's the water, stores refilled first",
+  "priority changed: cardiac units first, purifiers for one camp (eight), emergency cells stay"
  ]
 }
