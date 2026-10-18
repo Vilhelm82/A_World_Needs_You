@@ -655,3 +655,7 @@ Data's hands pause over the console. "Before I send it, Commander. One correctio
 The reply comes from the ready room in under two minutes, and Data reads it aloud, since it is addressed to you both.
 
 "*Agreed. After Hesker IV: clear space, sublight, Commander MacDougal's procedure. No detour. Number One will inform the chief engineer. — Picard.*"
+
+## turn 61
+
+*"MacDougal."* There's a high whine on her end, a replicator running hard, and someone counting power cells under their breath. *"Go ahead, sir."*

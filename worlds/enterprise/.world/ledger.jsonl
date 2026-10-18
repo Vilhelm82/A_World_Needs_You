@@ -305,3 +305,4 @@
 {"watch": 1, "turn": 60, "type": "TOLD", "to": ["picard"], "fact": "F-077"}
 {"watch": 1, "turn": 60, "type": "DID", "decision": "With the correction. Add: Starbase 49 in time means a detour of six to nine days at high warp; not worth it for a six-hour inspection. Recommendation: sublight in clear space after Hesker IV.", "changed": "Picard agrees: clear space after Hesker IV with MacDougal's procedure; Lloyd tells MacDougal", "distance": {"J-001": [8, 9]}}
 {"watch": 1, "turn": 60, "type": "DECIDED", "by": "picard", "what": "latch four inspected in clear space after Hesker IV; no Starbase 49 detour", "without_player": false}
+{"watch": 1, "turn": 61, "type": "TURN", "stardate": 41175.501, "present": ["player", "macdougal", "data", "laforge"], "speakers": ["macdougal"], "addressed": {"player": 1}, "initiated": [], "transcript": "watch-001.md#turn-61"}
