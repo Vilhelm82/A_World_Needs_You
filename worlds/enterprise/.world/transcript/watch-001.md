@@ -879,3 +879,17 @@ Then she looks at the cream, and back at you, and the corner of her mouth goes. 
 For a while it's only that: the room, the stars behind the glass, the scones going down. She asks about MacDougal, and about the latch, and laughs once, properly, at Worf and the tribbles, which has already reached her from somewhere.
 
 "I should warn you," she says at last, turning her glass. "I haven't told my mother you're aboard." A pause. "She'll know anyway. She always does."
+
+## turn 87
+
+Troi laughs, properly, a second time. "To where? She found me at the Academy. She found me on Betazed in a valley with no comm relay." She shakes her head. "She'd find you on the far side of the Neutral Zone and ask why you weren't married yet."
+
+The evening goes on. The second scone becomes a third. Somebody at the bar starts an argument about whether the Hesker colonists are going to let anyone near their herds, and somebody else tells him to wait and see.
+
+At a quarter past twenty hundred, Troi looks at the chrono over the bar and sets down her glass.
+
+"Three parents asked to see me tonight, after your note." She stands. "Four if you count the one who only wanted to say thank you for the line about the school." She takes her last scone in a napkin, without apology. "Good night, Will."
+
+She goes out through the room, stopping once at a table to say something to a crewman that makes him nod, and then she's gone.
+
+The window table holds four scones, most of the cream, and your glass.
