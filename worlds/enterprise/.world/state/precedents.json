@@ -135,6 +135,14 @@
    "reason": "Emergency reserves exist so they are there in an emergency; releasing them is a command decision with a record (deeds.md authorisation trace).",
    "source": "turn 62 (L:1:62)",
    "created_at": 41175.503
+  },
+  {
+   "id": "P-018",
+   "ruling": "[assumed] Hesker IV's local day runs nearly in step with ship's time at this season; colony times quoted in messages are close enough to ship's time to read as such.",
+   "kind": "procedure",
+   "reason": "A convenience for reading colony messages; nothing in the episode depends on the offset.",
+   "source": "turn 64 (L:1:64)",
+   "created_at": 41175.52
   }
  ]
 }

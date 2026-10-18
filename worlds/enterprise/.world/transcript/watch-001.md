@@ -673,3 +673,19 @@ The replicator whine dips and climbs again.
 *"Fair."* A beat while she does the arithmetic in her head. *"Thirty-one purifiers is thirty-one camps or wells. That's a start. Refill the stores first, aye; I'll put it in the replicator queue now so nobody forgets it later."*
 
 *"MacDougal out."*
+
+## turn 64
+
+The procedure goes to the ready room. It comes back at fourteen forty-nine with the line at the foot filled in, and nothing else changed. Six hours. Step nine as written.
+
+At fourteen fifty-four, ops chimes. "Incoming from Hesker IV," Data says. "Addressed to Dr. Crusher."
+
+Your combadge goes before he has finished. *"Crusher to Lloyd. Juuso's answered. I'm sending it to your chair."*
+
+It's on the arm terminal a moment later, in a hand that doesn't waste words. *I asked for cardiac support, not questions, but here are your answers.* One camp for all four herding families on the Ninth, below the grazing slopes. They drink from the stream there. The herds water and cross upstream of the camp. No wells. Pit latrines, downhill. A boil-water order issued at fourteen hundred their time. *They will boil it. Some of them.*
+
+Thirty-three cases now. Ten critical, in twelve beds. No more deaths.
+
+And at the end: *I do not dispute that the virus is found in stool. I dispute that it is ours. Nothing we brought does this.* The council meets the day after you arrive, to vote on burning the reedflies' breeding grounds. *I would welcome Starfleet's support. What I need from you is hearts.*
+
+*"Upstream,"* Crusher says over the channel. *"The herds are upstream of the camp."*

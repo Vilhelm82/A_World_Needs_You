@@ -418,11 +418,13 @@
    "id": "F-056",
    "statement": "The Ninth's summer camp draws its water from a stream below the slopes where the herds graze and cross; the herds wade it upstream of where the families fill their water.",
    "known_by": [
+    "crusher",
     "eira",
     "juuso",
+    "player",
     "sara"
    ],
-   "surfaced_at": null,
+   "surfaced_at": 41175.52,
    "source": "truth (decided at turn 23; consistent with F-030)",
    "created_at": 41175.375
   },
@@ -710,6 +712,29 @@
    "surfaced_at": 41175.503,
    "source": "MacDougal",
    "created_at": 41175.503
+  },
+  {
+   "id": "F-080",
+   "statement": "Juuso's reply (received 1454): the Ninth's four siidas summer at one camp below the grazing slopes, drawing from the Ruovdejohka stream, with the herds watering and crossing upstream; no wells; pit latrines downhill; Javri's water piped from the lake and treated. Boil-water order issued for the Ninth. 33 cases, 10 critical in 12 beds, no further deaths. She accepts the virus is in stool but insists it is not the colony's own and blames the reedflies; the council votes on burning the breeding grounds the day after the Enterprise arrives; she asks for Starfleet's support and for cardiac support.",
+   "known_by": [
+    "crusher",
+    "player",
+    "juuso"
+   ],
+   "surfaced_at": 41175.52,
+   "source": "Juuso (chronicle 008)",
+   "created_at": 41175.52
+  },
+  {
+   "id": "F-081",
+   "statement": "Picard signed MacDougal's latch-four procedure at 1449, unaltered.",
+   "known_by": [
+    "picard",
+    "player"
+   ],
+   "surfaced_at": 41175.52,
+   "source": "Picard",
+   "created_at": 41175.52
   }
  ]
 }

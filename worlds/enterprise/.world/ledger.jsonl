@@ -315,3 +315,10 @@
 {"watch": 1, "turn": 63, "type": "TURN", "stardate": 41175.505, "present": ["player", "macdougal", "data", "laforge"], "speakers": ["macdougal"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-63"}
 {"watch": 1, "turn": 63, "type": "DID", "decision": "I'll get the captain's signature today. On the cells: wait for Dr. Juuso's reply; if it's the water, I'll release the nine, and the replicators refill emergency stores before anything else.", "changed": "nine cells conditional on Juuso's reply; restocking queued first", "distance": {}}
 {"watch": 1, "turn": 63, "type": "ATTEMPT", "what": "hold the emergency cells until the water route is confirmed", "outcome": "done", "reason": "within the XO's authority (P-017)"}
+{"watch": 1, "turn": 64, "type": "TURN", "stardate": 41175.52, "present": ["player", "data", "laforge", "crowd:relief-tactical-lieutenant", "crusher"], "speakers": ["data", "crusher", "juuso", "crusher"], "addressed": {"player": 3, "crusher": 1}, "initiated": ["crusher", "juuso"], "transcript": "watch-001.md#turn-64"}
+{"watch": 1, "turn": 64, "type": "PRECEDENT", "id": "P-018"}
+{"watch": 1, "turn": 64, "type": "DID", "decision": "Send the latch-four procedure to the captain for signature.", "changed": "signed unaltered (F-081)", "distance": {"J-001": [9, 9]}}
+{"watch": 1, "turn": 64, "type": "SAID", "by": "juuso", "claim": "camp below the slopes, stream water, herds upstream, no wells, pit latrines; boil-water order; 33 cases, 10 critical; it isn't ours; burn vote the day after arrival", "truth": "partial", "fact": "F-080", "note": "water facts true (F-056); 'not ours' false (F-027)"}
+{"watch": 1, "turn": 64, "type": "MOVED", "by": "juuso", "what": "issued a boil-water order for the Ninth and answered the Enterprise", "cause": "player"}
+{"watch": 1, "turn": 64, "type": "MOVED", "by": "crusher", "what": "forwarded Juuso's reply to the first officer", "cause": "npc:crusher"}
+{"watch": 1, "turn": 64, "type": "HAS", "item": "Juuso's reply (chronicle 008)", "change": "+"}
