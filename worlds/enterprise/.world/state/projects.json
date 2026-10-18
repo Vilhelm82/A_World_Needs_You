@@ -235,9 +235,15 @@
      "cost": "engineering time and power against J-006"
     },
     {
+     "name": "clear the bay",
+     "status": "todo",
+     "needs": "Lloyd, with ops",
+     "cost": "cargo moved elsewhere"
+    },
+    {
      "name": "seal and fit the bay",
      "status": "todo",
-     "needs": "the bay nearest sickbay with its own environmental trunk, emptied first (ops/XO); 18 hours with engineering alone, 12 with O'Brien and two from damage control",
+     "needs": "MacDougal's own people, eighteen hours from when the bay is empty; Lloyd clears the bay",
      "cost": "a cargo bay out of use"
     },
     {

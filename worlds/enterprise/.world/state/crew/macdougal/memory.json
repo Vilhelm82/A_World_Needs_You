@@ -46,6 +46,12 @@
    "belief": "Asked how urgent before he asked for the window. Doesn't want to cram it. Good.",
    "from": "witnessed",
    "at": 41175.145
+  },
+  {
+   "about": "player",
+   "belief": "Took my long number without arguing it down, and offered to ask other departments for me rather than just take their people. He listens.",
+   "from": "witnessed",
+   "at": 41175.442
   }
  ],
  "recent": [
@@ -61,6 +67,7 @@
   "told the XO docked is fine, the next separation is the risk; no planned separation, sublight if any choice; two weeks or the next starbase",
   "sent the interim restriction to the XO",
   "1300 briefing: Crusher's summary of the Hesker IV reports",
-  "asked for an isolation ward in a cargo bay; said yes; wants O'Brien and two from damage control"
+  "asked for an isolation ward in a cargo bay; said yes; wants O'Brien and two from damage control",
+  "ward with her own people; XO clears the bay; he'll ask department heads if she wants margin"
  ]
 }

@@ -465,3 +465,9 @@ The draft goes to the ready room. It comes back signed in under three minutes, a
 *"One too many? That's three today, sir. I'll tell you when it's too many."* A pause, and the sound of a padd being picked up. *"Yes, it can be done before we arrive. I want the bay nearest sickbay with its own environmental trunk, so I'm not cutting a new one. Seal it, reverse the flow, put a filter train on the exhaust and dump it outboard, not into the ship. Eighteen hours with my own people."*
 
 *"Twelve, if you lend me O'Brien and two from damage control for a shift. And the bay has to be empty before anyone starts, and that's not my department, that's ops and you."* Another pause. *"The purifiers come first for power cells. This comes first for people. If those two start fighting each other, I'll tell you."*
+
+## turn 38
+
+*"Own people, then."* If she's surprised he took the long number, she doesn't say so. *"Eighteen hours from the minute the bay's empty, not from now. Tell me which bay and when, and I'll have the filter train on the replicators tonight."*
+
+*"I won't need O'Brien."* A beat. *"Thank you for offering to ask, sir. Most people just take. MacDougal out."*
