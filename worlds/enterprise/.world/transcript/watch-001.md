@@ -441,3 +441,11 @@ La Forge turns from the ops console. "No. Not even a buffer. It all goes straigh
 La Forge grins. "After the pickups. And I'm not unplugging anything I can't put back. I kind of need it."
 
 Data turns back to his console. "Shall we continue? You were at the aft stations. You said *huh*."
+
+## turn 35
+
+It takes eleven minutes, not four. La Forge tells it the way he'd describe a fault in a coupling: what he saw, where he was standing, what he thought it was, what he thought it wasn't. Data asks two questions, both about the clothes.
+
+"Recorded," Data says at last. "Eleven minutes and twenty seconds. The word *huh* occurs four times." He touches a control. "The file has been sent to the captain."
+
+La Forge comes back to conn and waits, very politely, beside the chair you're in.

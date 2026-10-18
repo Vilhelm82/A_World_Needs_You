@@ -2,7 +2,7 @@
  "name": "Will Lloyd",
  "rank": "commander",
  "post": "first officer",
- "location": "bridge, conn",
+ "location": "bridge",
  "access": {
   "areas": [
    "bridge",
