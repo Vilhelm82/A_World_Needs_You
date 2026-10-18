@@ -52,6 +52,12 @@
    "belief": "Took the correction without arguing. Said I'd be asked first. We'll see.",
    "from": "witnessed",
    "at": 41175.39
+  },
+  {
+   "about": "player",
+   "belief": "He sent it as mine and put his name under it, and told me he had. He said he'd ask first next time; this is the same thing.",
+   "from": "witnessed",
+   "at": 41175.92
   }
  ],
  "recent": [
@@ -65,6 +71,7 @@
   "Q's clothes read the same temperature as his skin, to the VISOR",
   "thermal pickups added to the plan",
   "1300 briefing: Crusher's summary of the Hesker IV reports",
-  "sent the intruder protocol draft to the first officer at 2035"
+  "sent the intruder protocol draft to the first officer at 2035",
+  "XO endorsed her protocol to the captain, copied her; ready room 0730"
  ]
 }

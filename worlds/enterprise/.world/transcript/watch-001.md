@@ -936,3 +936,15 @@ She writes the way she talks.
 > Note: on the record, internal life-sign sensors did not register the Farpoint intruder at all (Data). Trigger A does not depend on them.
 >
 > N. Yar
+
+## turn 91
+
+The reply from the captain comes eleven minutes later.
+
+*Received. I shall read it tonight. My ready room, oh-seven-thirty, the two of you. — P.*
+
+Yar's comes a minute after that, to you alone.
+
+*Thank you, sir.*
+
+Nothing more. Outside the port the stars go by at warp eight. Hesker IV is a little over twenty-six hours ahead, and the ship around you has gone quiet in the way of a ship at night: the hum under the deck, a turbolift somewhere far off, nothing that needs you before morning.
