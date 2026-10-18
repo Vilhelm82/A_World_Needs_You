@@ -2,9 +2,17 @@
  "learned": [
   "F-072"
  ],
- "beliefs": [],
+ "beliefs": [
+  {
+   "about": "player",
+   "belief": "Waited for the planting. Got down to Nadia's height without making a show of it. That's not nothing.",
+   "from": "witnessed",
+   "at": 41175.48
+  }
+ ],
  "recent": [
   "read the first officer's ship-wide note",
-  "teaching the eight-year-olds about seeds"
+  "teaching the eight-year-olds about seeds",
+  "the first officer crouched to Nadia's height and answered her about the saucer; waited for the planting"
  ]
 }

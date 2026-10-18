@@ -567,3 +567,17 @@ Twelve heads turn the way his did.
 "*Good afternoon, Commander Lloyd*," says the room, nearly together.
 
 A girl at the front table, soil to her wrists, looks at you with great seriousness. "Are you the one who parks the saucer?"
+
+## turn 51
+
+The girl weighs that against her seed tray. "Mine are going to be faster than the saucer," she decides, and goes back to pushing soil about with a single finger.
+
+"Nadia," Reyhan says mildly. "Gently."
+
+"I *am*."
+
+It takes him six more minutes to see the last seed covered and the trays watered. Then he puts a boy in charge of the watering can, says, "Nobody drowns anything," and comes out into the corridor, wiping his hands on a cloth.
+
+He leaves the door open so he can see in.
+
+"That's my daughter. The fast one." He folds the cloth. "You're here about the note, Commander. Or about my file. I'd guess both."
