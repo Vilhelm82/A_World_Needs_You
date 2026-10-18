@@ -246,6 +246,42 @@
     "P-013"
    ],
    "started_at": 41175.395
+  },
+  {
+   "id": "J-008",
+   "title": "VISOR tap",
+   "owner": "laforge",
+   "collaborators": [
+    "data",
+    "player"
+   ],
+   "kind": "experiment",
+   "goal": "a device on the VISOR that sends what La Forge sees to the ship, to be recorded, so the next sighting is a file and not a memory",
+   "stages": [
+    {
+     "name": "pick the signal off before the implants",
+     "status": "todo",
+     "needs": "La Forge's knowledge of the VISOR; Data",
+     "cost": "off-duty hours; risk to the VISOR he can't see without"
+    },
+    {
+     "name": "encode and transmit it stably",
+     "status": "todo",
+     "needs": "Data",
+     "cost": "the hard part; unstable at first"
+    },
+    {
+     "name": "make the raw image readable to others",
+     "status": "todo",
+     "needs": "La Forge interpreting; processing",
+     "cost": "weeks"
+    }
+   ],
+   "status": "active",
+   "precedents": [
+    "P-014"
+   ],
+   "started_at": 41175.415
   }
  ]
 }

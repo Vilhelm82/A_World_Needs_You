@@ -429,3 +429,15 @@ At tactical, the relief lieutenant finds something urgent on her board.
 "Huh," Data repeats, and records it.
 
 Under your hands the conn board is warm and steady: warp eight, course for Hesker IV, everything green.
+
+## turn 34
+
+La Forge turns from the ops console. "No. Not even a buffer. It all goes straight in." He touches his temple, just behind the VISOR's edge. "Signal off the sensors, processed, into the implants, and that's it. If I don't remember it, it's gone."
+
+"Could it?" He doesn't answer at once, which for him is unusual. "Maybe. You'd want something clipped on the side, picking the signal off before it goes in, sending it to the ship. Getting it out's the easy part." He makes a face. "Making it mean anything to anybody but me, that's the hard part. What comes off this thing isn't a picture. I've had twenty-odd years learning what to look at."
+
+"I would be interested in assisting," Data says. "Encoding a signal of that complexity stably would be a considerable problem." By his tone, this is a recommendation.
+
+La Forge grins. "After the pickups. And I'm not unplugging anything I can't put back. I kind of need it."
+
+Data turns back to his console. "Shall we continue? You were at the aft stations. You said *huh*."

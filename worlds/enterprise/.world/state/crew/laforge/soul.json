@@ -51,6 +51,11 @@
  },
  "agenda": [
   {
+   "goal": "Build a tap that records what the VISOR sees",
+   "next_step": "sketch it with Data after the thermal pickups",
+   "horizon": "week"
+  },
+  {
    "goal": "Get time in Main Engineering",
    "next_step": "offer the chief engineer his off-duty hours on whatever she is chasing",
    "horizon": "week"

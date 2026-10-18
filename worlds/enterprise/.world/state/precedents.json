@@ -103,6 +103,14 @@
    "reason": "Cargo bays have their own environmental controls; negative-pressure isolation is ordinary hospital engineering; canon uses cargo bays for overflow and refugees.",
    "source": "turn 27 (L:1:27)",
    "created_at": 41175.395
+  },
+  {
+   "id": "P-014",
+   "ruling": "The VISOR keeps no record; its signal runs live to La Forge's implants. A tap on the VISOR can carry its output to the ship to be displayed and recorded, but building one is a project: the signal is hard to encode and unstable, and the raw image means little to anyone but La Forge without his reading of it. In this branch La Forge and Data begin it at 41175.4, prompted by the first officer.",
+   "kind": "tech",
+   "reason": "Card K-050: canon's visual acuity transmitter, a La Forge and Data project of 2364, in field use by 41503.7; canon doesn't say when it was begun.",
+   "source": "turn 34 (L:1:34); lore agent",
+   "created_at": 41175.415
   }
  ]
 }

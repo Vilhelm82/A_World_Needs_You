@@ -529,6 +529,18 @@
    "surfaced_at": 41175.403,
    "source": "Picard, via Lloyd",
    "created_at": 41175.405
+  },
+  {
+   "id": "F-064",
+   "statement": "La Forge: the VISOR keeps no record, not even a buffer; it is all live to his implants. A tap on the side of it could pick the signal off and send it to the ship to be recorded. Getting the signal out is the easy part; making the raw image mean anything to anyone but him is the hard part. Data wants to help build it.",
+   "known_by": [
+    "laforge",
+    "data",
+    "player"
+   ],
+   "surfaced_at": 41175.415,
+   "source": "La Forge and Data",
+   "created_at": 41175.415
   }
  ]
 }
