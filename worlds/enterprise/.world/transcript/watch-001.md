@@ -841,3 +841,15 @@ Vasquez listens to all of it with the padd still in her hand. When you get to *b
 Down the bar, someone lets out a breath. A big ensign with a beard raises his glass an inch in your direction and goes back to his conversation, which is suddenly about something else.
 
 The steward slides a bowl of nuts nearer your glass without being asked. "Those yours at the window, sir? Somebody's going to try one if you leave them."
+
+## turn 84
+
+The steward grins and lets them be.
+
+From the window table the room is all there in front of you: the bar, the door, the long curve of glass behind your shoulder with the stars going by. The lager stays cold a long time in a glass like that. Ten Forward fills, and talks, and once or twice someone glances over at the scones, does the arithmetic about the counselor, and doesn't.
+
+At eighteen fifty-nine, by the chrono over the bar, the doors open and Troi comes in out of uniform, in something plain and dark, her hair down. She sees you, and then the table, and stops for a moment halfway across the room.
+
+When she reaches you she doesn't sit straight away. She looks at the scones, and the cream, and the jam, and then at you.
+
+"You baked." It isn't quite a question. "Will. You *baked*."
