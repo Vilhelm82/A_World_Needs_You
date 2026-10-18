@@ -1,28 +1,28 @@
 # Card
 
-- **When/where:** SD 41175.31, 12:32, day 1, alert normal. Enterprise at warp 8 for Hesker IV, arrival about 1130 day 3 (41179.3). Lloyd on the bridge.
-- **Present:** Picard (just diverted the ship; senior staff at 1300), Data (ops), La Forge (conn), Troi (still), relief tactical (crowd).
-- **Episode E-001 open:** Hesker IV. Read `state/episodes/E-001.json` (pinned). Truth: the colony's own Earth enterovirus, mutated in selenium-poor herds on the Ninth; Juuso blames reedflies; Sara hides the calf reports; Eira's herd on the east slopes. Pressures: snowline, cases (~2/day), the burn vote.
-- **Ship life live:** J-001 latch four (procedure + restriction in hand; Lloyd recommends starbase > clear space > red dwarf; Picard's 1400 postponed to after the briefing). J-002 Yar's protocol tonight; thermal pickups La Forge 1600. J-003 Q file (F-042..F-044). J-005 Crusher's list. Wesley's pass request unanswered. Troi's word, off duty.
-- **Lloyd carries:** Yar's log, procedure, restriction, Crusher's list, Wesley's request (chronicle 001-005).
-- **Telling:** second person, present, only what Lloyd perceives. Steady pace. No options, no question to the person.
+- **When/where:** SD 41175.92, 20:58, day 1, alert normal. Warp 8 for Hesker IV, arrival about 2338 day 2 (~26.7 h). Lloyd in his quarters, night.
+- **Present:** nobody.
+- **Next that needs Lloyd:** 0730 ready room with Picard and Yar (protocol). Reyhan's answer in the morning. Wesley at the XO's office 1600 (valley records; truth F-075). Cardiac units ~0400 (MacDougal said 0600), Crusher testing with Vantongeren. Ward in cargo bay four ready ~0948 (18 h from 1548). Juuso's third reply (Somby family bought Nango's cheese) reached Crusher ~1900; she will forward in the morning.
+- **Episode E-001 (open):** truth in episodes/E-001.json. Known to Lloyd: stream below the herds (F-080), the outside cases and the market (F-085), next market day 3 = the burn vote day. Not known: the selenium, the calves (F-024), the 2345 annex (F-075), the cooperative vet records (F-028).
+- **Ship life:** J-001 latch four settled (clear space after Hesker, signed). J-002 protocol with Picard. J-003 Q file sent. J-005 staffing (Reyhan pending; Starfleet Medical request sent). J-006 purifiers done (8). J-007 ward building. J-008 VISOR tap (after the pickups). J-010 Wesley. J-011 cardiac units.
+- **Telling:** second person, present, only what Lloyd perceives. Steady. No options, no question to the person. Season-one Picard: stiff, approval shown by what he allows.
 
 # Carry
 
-## The ship
-A week since Farpoint began; a crew that has served together about a week. Orders now: Hesker IV first; the survey beyond Deneb suspended. Sickbay three billets short, which bites at Hesker IV. Latch four restricted: no planned separation; emergency separation at sublight if any choice.
-
-## People
-- Picard: decided the diversion alone; will hear Lloyd's two items after the briefing.
-- Crusher: reading the colony's reports for 1300; trusts colony physicians too readily (persona).
-- Yar: writing the alert protocol tonight; will want quarantine and away-team security at Hesker.
-- Data: Q file; calibration on beta; Hesker records.
-- La Forge: thermal pickups at 1600, MacDougal's leave.
-- MacDougal: latch four, restriction sent; La Forge allowed in at 1600.
-- Troi: wants her word off duty; went still at "four of them children".
-- Wesley: waiting on his pass.
-- Hesker IV (not yet met): Juuso, Sara, Eira.
+## People and where they stand (end of day 1)
+- Picard: Number One brings what can't wait, holds what can; protocol to read. Slip noted: he was too warm at turn 28; hold him stiffer.
+- Yar: trust growing; was rebuked over the medics and took it; protocol endorsed as hers.
+- MacDougal: backed, thanked by name; sent Gran's recipe and "Not flat."
+- Troi: terms agreed at Ten Forward (two officers who like each other); seeing parents tonight; Lwaxana will know.
+- Crusher: has decided he's serious; tests units at 0400.
+- Data: Q file; calibration on beta; noted the chair.
+- La Forge: standing order to report VISOR sightings; thermal pickups tonight; VISOR tap next.
+- Worf: had the bridge on beta; tribbles.
+- Wesley: has a job; regard warm.
+- Reyhan: deciding with his wife Amira tonight; aboard only.
+- Hesker IV: Juuso (proud, reedflies), Sara (hides the calves), Eira (cull trigger).
 
 ## In motion
-- Hesker IV: snowline descending; ~2 new cases a day; Juuso's burn proposal before Sara's council, vote due the day after the Enterprise arrives unless something changes.
-- Q's interest in the first officer (force q, preconditions not met).
+- The note eased the family decks; Vasquez's son gets a scone.
+- Hesker IV: boil-water order on the Ninth (partial), dairy advisory reaching the council; burn vote and market both on day 3; snowline descending.
+- Q's interest in the first officer (preconditions not met).
