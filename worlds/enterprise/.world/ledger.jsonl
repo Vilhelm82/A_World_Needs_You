@@ -257,3 +257,7 @@
 {"watch": 1, "turn": 48, "type": "LORECHECK", "claim": "Ten Forward exists aboard in 2364, with no Guinan yet", "layer": "history-pre", "verdict": "consistent", "cards": ["K-002", "K-003"], "divergence": [], "agent": false}
 {"watch": 1, "turn": 48, "type": "DID", "decision": "Ten Forward nineteen hundred? Or if you'd prefer something more private.", "changed": "Troi chooses Ten Forward at 1900, deliberately public", "distance": {}}
 {"watch": 1, "turn": 48, "type": "DECIDED", "by": "troi", "what": "Ten Forward, 1900, a window table, because it is public", "without_player": false}
+{"watch": 1, "turn": 49, "type": "TURN", "stardate": 41175.466, "present": ["player", "picard"], "speakers": ["picard"], "addressed": {"player": 1}, "initiated": [], "transcript": "watch-001.md#turn-49"}
+{"watch": 1, "turn": 49, "type": "TOLD", "to": ["picard"], "fact": "F-071"}
+{"watch": 1, "turn": 49, "type": "DID", "decision": "Nineteen hundred. By the window. Send the note to Picard.", "changed": "Picard approves the note; it's Lloyd's to send", "distance": {}}
+{"watch": 1, "turn": 49, "type": "DECIDED", "by": "picard", "what": "approved the ship-wide note", "without_player": false}

@@ -320,8 +320,8 @@
     },
     {
      "name": "Picard reads and approves",
-     "status": "todo",
-     "needs": "Picard",
+     "status": "done",
+     "needs": "approved by Picard 1411; Lloyd to send",
      "cost": "minutes"
     }
    ],

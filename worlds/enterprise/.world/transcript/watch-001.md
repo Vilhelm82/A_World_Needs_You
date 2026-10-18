@@ -541,3 +541,9 @@ You're at the door when she speaks again, in the same even voice, though she's l
 She considers it, which takes a moment longer than it should.
 
 "Ten Forward." She looks up at last. "Nineteen hundred, a table by the window. Half the ship will see the first officer and the counselor having a drink and talking." Something in her face says she has thought this through. "That's rather the point."
+
+## turn 49
+
+The turbolift is still two sections away when your padd chimes.
+
+*Approved. The counselor's line is well judged. Send it. — P.*
