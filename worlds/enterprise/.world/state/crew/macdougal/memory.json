@@ -57,6 +57,12 @@
    "belief": "Took my long number without arguing it down, and offered to ask other departments for me rather than just take their people. He listens.",
    "from": "witnessed",
    "at": 41175.442
+  },
+  {
+   "about": "player",
+   "belief": "Said he noticed. Named what. Hadn't expected that.",
+   "from": "witnessed",
+   "at": 41175.56
   }
  ],
  "recent": [
@@ -77,6 +83,7 @@
   "Data: cargo bay four empty about 1545; her eighteen hours start then",
   "latch four after Hesker, clear space; asked for the captain's signature on paper and nine cells from emergency stores",
   "XO: captain's signature today; nine cells released if Juuso confirms it's the water, stores refilled first",
-  "priority changed: cardiac units first, purifiers for one camp (eight), emergency cells stay"
+  "priority changed: cardiac units first, purifiers for one camp (eight), emergency cells stay",
+  "the XO said four problems turned into plans doesn't go unnoticed; she sent him Gran's recipe"
  ]
 }

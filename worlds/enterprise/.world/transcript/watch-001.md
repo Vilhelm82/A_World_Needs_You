@@ -707,3 +707,11 @@ The replicator whine on her end cuts off.
 *"Cardiac support units on the industrial replicators, then. Medical patterns from sickbay. Six by oh-six-hundred tomorrow."* A pause. *"Oh-four, if nothing argues with me. Dr. Crusher tests them; I don't put my name on anything that goes on a child's heart."*
 
 *"Emergency cells stay where they are. Good. MacDougal out."*
+
+## turn 67
+
+The channel doesn't open again.
+
+Twenty minutes later, a file arrives at your chair from engineering, without a covering note. It's a recipe, copied out line by line, under the heading *Scones (Gran's)*. Beside *a good handful of butter, cold*, in square brackets: *[the first officer says forty grams]*.
+
+At the bottom, also in brackets: *[The replicator keeps making them flat. I think it's the "don't knead it". It doesn't know what that means.]*
