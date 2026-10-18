@@ -725,3 +725,7 @@ A pause, and her voice changes a little. *"Will. Wesley's been in the library si
 ## turn 69
 
 *"Prescribing now, Commander?"* It's very nearly a laugh. *"I'll sleep at twenty-two hundred, which is more than I'd have managed this morning. Crusher out."*
+
+## turn 70
+
+Fifteen twenty-eight. Stardate 41175.56. Warp eight, Hesker IV a little over thirty-two hours out.
