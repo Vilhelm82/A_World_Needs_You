@@ -601,3 +601,9 @@ Behind him, a child's voice rises: "*He's* drowning his!"
 *"Crusher."* You can hear sickbay behind her: a console chirping, someone asking for a hypospray. *"Shipboard is exactly where I'd want him. Someone who's done triage, minding the ward while I'm down there. Thank you, Will."*
 
 *"Nothing from Dr. Juuso yet."* A pause. *"And while I have you. Wesley has checked his messages roughly every five minutes since this morning. I'm not asking you to say yes. I'm asking you to say something, before he wears out the terminal."*
+
+## turn 54
+
+A breath on the channel that might be a laugh. *"Worth the wait. Careful, Will. He'll read every word four times."*
+
+Then, more carefully: *"Just remember the bridge is Jean-Luc's to give, not yours or mine. If you promise him that, make sure it's a promise you can keep. Crusher out."*

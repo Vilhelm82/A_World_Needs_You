@@ -274,3 +274,7 @@
 {"watch": 1, "turn": 53, "type": "TOLD", "to": ["crusher"], "fact": "F-073"}
 {"watch": 1, "turn": 53, "type": "DID", "decision": "Doctor, Tomas Reyhan is considering it. If he says yes, it'll be shipboard only. Answer by morning.", "changed": "Crusher wants him minding the ward while she is down; nothing from Juuso yet; she asks Lloyd to answer Wesley", "distance": {}}
 {"watch": 1, "turn": 53, "type": "MOVED", "by": "crusher", "what": "asked the first officer to answer Wesley's request either way", "cause": "npc:crusher"}
+{"watch": 1, "turn": 54, "type": "TURN", "stardate": 41175.488, "present": ["player", "crusher"], "speakers": ["crusher"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-54", "lore_touch": [{"what": "bridge access for civilians is the captain's decision", "layer": "rules"}]}
+{"watch": 1, "turn": 54, "type": "LORECHECK", "claim": "Wesley's bridge access is Picard's decision", "layer": "history-pre", "verdict": "consistent", "cards": [], "divergence": [], "agent": false, "precedent": "P-015", "note": "voices.md; Farpoint: Picard ordered Wesley off the bridge himself"}
+{"watch": 1, "turn": 54, "type": "PRECEDENT", "id": "P-015"}
+{"watch": 1, "turn": 54, "type": "DID", "decision": "I'll send him a message that will make that wait feel worth it.", "changed": "Crusher warns that the bridge is Picard's to give", "distance": {}}

@@ -111,6 +111,14 @@
    "reason": "Card K-050: canon's visual acuity transmitter, a La Forge and Data project of 2364, in field use by 41503.7; canon doesn't say when it was begun.",
    "source": "turn 34 (L:1:34); lore agent",
    "created_at": 41175.415
+  },
+  {
+   "id": "P-015",
+   "ruling": "Who may be on the bridge, civilians included, is the captain's decision; the first officer can arrange a visit only with his agreement.",
+   "kind": "procedure",
+   "reason": "voices.md: Wesley's bridge access is the captain's decision; canon season one shows Picard deciding it himself.",
+   "source": "turn 54 (L:1:54)",
+   "created_at": 41175.488
   }
  ]
 }
