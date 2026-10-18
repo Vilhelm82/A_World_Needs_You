@@ -801,3 +801,7 @@ The market is held every seventh day. The next is the day after tomorrow.
 *"Crusher."* She hears it out. *"Raw milk, hand-milked, at a camp on that stream. Yes. If the virus is on the animals or in the water, it's in the milk pail."* You can hear her writing as she talks. *"Asking her now. Boil all milk, hold the Ninth's dairy back from the market until it's tested, their decision. Milk and cheese on Mbatha's list."*
 
 A pause. *"She'll have to take that to the council herself. To the herders it'll sound like we've called their cheese poison before we've landed. I'll word it as carefully as I can. Sent."*
+
+## turn 79
+
+*"It's gone already."* A short breath. *"But that's better than what I wrote. I'll send it after as a line she can use: the sick children are the herders' own, and boiling the milk protects them first."* A pause. *"It'll reach her a minute behind the first. She can choose which one she reads out. Sending."*
