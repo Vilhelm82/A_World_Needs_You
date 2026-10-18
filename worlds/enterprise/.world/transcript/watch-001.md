@@ -449,3 +449,9 @@ It takes eleven minutes, not four. La Forge tells it the way he'd describe a fau
 "Recorded," Data says at last. "Eleven minutes and twenty seconds. The word *huh* occurs four times." He touches a control. "The file has been sent to the captain."
 
 La Forge comes back to conn and waits, very politely, beside the chair you're in.
+
+## turn 36
+
+"Warm and steady, aye." La Forge slides into the conn the ordinary way, from the side, and checks the board as if it might have changed in eleven minutes. It hasn't.
+
+The first officer's chair is where you left it. On its arm terminal your list is waiting: the Starfleet Medical request, the cargo bay, Mr. Reyhan, the nearest starbase.
