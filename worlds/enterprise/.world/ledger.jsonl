@@ -282,3 +282,6 @@
 {"watch": 1, "turn": 55, "type": "DID", "decision": "Message Wesley: no promise on the bridge pass, but I'll put it to the captain; pull every survey record on the Ninth's valley, my office 1600 tomorrow.", "changed": "Wesley takes the job at once (J-010); his regard warms", "distance": {"test-and-cull": [4, 4]}}
 {"watch": 1, "turn": 55, "type": "HAS", "item": "message to Wesley (chronicle 007)", "change": "+"}
 {"watch": 1, "turn": 55, "type": "MOVED", "by": "wesley", "what": "began searching the library for the Ninth's valley", "cause": "player"}
+{"watch": 1, "turn": 56, "type": "TURN", "stardate": 41175.492, "present": ["player", "data", "laforge", "crowd:relief-tactical-lieutenant"], "speakers": ["data"], "addressed": {"player": 2}, "initiated": ["data"], "transcript": "watch-001.md#turn-56"}
+{"watch": 1, "turn": 56, "type": "MOVED", "by": "crowd:crew", "what": "four crew messaged the counselor's office after the note", "cause": "player"}
+{"watch": 1, "turn": 56, "type": "MOVED", "by": "data", "what": "cargo bay four 40 percent cleared", "cause": "world"}

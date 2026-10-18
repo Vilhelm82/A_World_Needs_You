@@ -617,3 +617,9 @@ The message goes. The reply is back before the turbolift doors have opened on th
 And, thirty seconds later, a second one:
 
 *I'll stay clear of streams.*
+
+## turn 56
+
+Data rises from the centre seat as the turbolift opens. "Commander. The bridge is yours." He returns to ops and reports on his way there, in order. "Cargo bay four is forty per cent cleared; the personal effects are all in bay two. Course and speed unchanged. Nothing yet from Hesker IV." A small pause. "Since your note went out, the counselor's office has received four messages. I assume that was intended."
+
+At conn, La Forge's shoulders move in something like a laugh.
