@@ -14,7 +14,9 @@
   "F-059",
   "F-060",
   "F-061",
-  "F-065"
+  "F-065",
+  "F-078",
+  "F-079"
  ],
  "beliefs": [
   {
@@ -69,6 +71,7 @@
   "1300 briefing: Crusher's summary of the Hesker IV reports",
   "asked for an isolation ward in a cargo bay; said yes; wants O'Brien and two from damage control",
   "ward with her own people; XO clears the bay; he'll ask department heads if she wants margin",
-  "Data: cargo bay four empty about 1545; her eighteen hours start then"
+  "Data: cargo bay four empty about 1545; her eighteen hours start then",
+  "latch four after Hesker, clear space; asked for the captain's signature on paper and nine cells from emergency stores"
  ]
 }

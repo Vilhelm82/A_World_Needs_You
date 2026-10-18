@@ -691,13 +691,25 @@
    "id": "F-078",
    "statement": "Picard's decision on latch four: after Hesker IV, a controlled separation at sublight in clear space with MacDougal's procedure; no detour to Starbase 49. Lloyd to inform MacDougal.",
    "known_by": [
+    "data",
+    "macdougal",
     "picard",
-    "player",
-    "data"
+    "player"
    ],
    "surfaced_at": 41175.5,
    "source": "Picard",
    "created_at": 41175.5
+  },
+  {
+   "id": "F-079",
+   "statement": "MacDougal: at the replicators' rate she will have 31 purifier power cells by arrival, not 40; nine more are in the emergency stores, which need the first officer's code to release. She wants the captain's signature on the latch-four procedure itself, not only his message.",
+   "known_by": [
+    "macdougal",
+    "player"
+   ],
+   "surfaced_at": 41175.503,
+   "source": "MacDougal",
+   "created_at": 41175.503
   }
  ]
 }

@@ -127,6 +127,14 @@
    "reason": "Canon places Farpoint at the frontier beyond Deneb and gives no starbase nearby; a frontier region would have few large drydocks. Warp 6 as standard cruise follows the TNG writers' convention.",
    "source": "turn 58 (L:1:58)",
    "created_at": 41175.495
+  },
+  {
+   "id": "P-017",
+   "ruling": "[assumed] Emergency stores (power cells, medical and survival supplies held against disaster) are released only on a senior command code: the captain's or the first officer's.",
+   "kind": "procedure",
+   "reason": "Emergency reserves exist so they are there in an emergency; releasing them is a command decision with a record (deeds.md authorisation trace).",
+   "source": "turn 62 (L:1:62)",
+   "created_at": 41175.503
   }
  ]
 }

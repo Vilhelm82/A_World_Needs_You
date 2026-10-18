@@ -19,7 +19,7 @@
     {
      "name": "first officer's schedule and captain's approval",
      "status": "done",
-     "needs": "captain agrees: drydock at the nearest starbase after Hesker IV, or six hours at sublight in clear space; Lloyd to find which starbase and how far",
+     "needs": "captain's decision given (F-078); MacDougal wants his signature on the procedure itself",
      "cost": "a stop of some hours"
     },
     {
@@ -204,7 +204,7 @@
     {
      "name": "replicate",
      "status": "doing",
-     "needs": "replicator time; power cells",
+     "needs": "31 cells by arrival from the replicators; 9 more from emergency stores on the XO's code (F-079)",
      "cost": "power cells are the limit"
     },
     {
@@ -215,7 +215,9 @@
     }
    ],
    "status": "active",
-   "precedents": [],
+   "precedents": [
+    "P-017"
+   ],
    "started_at": 41175.375
   },
   {

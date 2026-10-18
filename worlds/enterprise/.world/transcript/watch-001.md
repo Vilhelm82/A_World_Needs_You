@@ -659,3 +659,11 @@ The reply comes from the ready room in under two minutes, and Data reads it alou
 ## turn 61
 
 *"MacDougal."* There's a high whine on her end, a replicator running hard, and someone counting power cells under their breath. *"Go ahead, sir."*
+
+## turn 62
+
+*"Clear space after Hesker."* She takes it without comment, which from her is agreement. *"I'd like his name on the line at the bottom of the procedure, sir, not just a message. When he has a minute. I've been on ships where 'the captain said' turned into 'the captain never said'."*
+
+The replicator whine dips and climbs again.
+
+*"And since you offer. Purifiers. The replicators are turning out power cells as fast as they'll go, and I'll have thirty-one by the time we arrive. You asked for forty."* A pause. *"There are cells in the emergency stores. Nine would do it. They need a command code to come out, and mine isn't one."*
