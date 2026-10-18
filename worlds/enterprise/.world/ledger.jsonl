@@ -407,3 +407,5 @@
 {"watch": 1, "turn": 89, "type": "MOVED", "by": "yar", "what": "sent the intruder protocol draft", "cause": "npc:yar"}
 {"watch": 1, "turn": 89, "type": "MOVED", "by": "macdougal", "what": "found the scones and sent two words", "cause": "player"}
 {"watch": 1, "turn": 89, "type": "HAS", "item": "Yar's protocol draft", "change": "+"}
+{"watch": 1, "turn": 90, "type": "TURN", "stardate": 41175.915, "present": ["player"], "speakers": ["yar"], "addressed": {"player": 1}, "initiated": [], "transcript": "watch-001.md#turn-90"}
+{"watch": 1, "turn": 90, "type": "DID", "decision": "Read the protocol from Lt. Yar.", "changed": "Lloyd has read the draft (chronicle 011)", "distance": {}}
