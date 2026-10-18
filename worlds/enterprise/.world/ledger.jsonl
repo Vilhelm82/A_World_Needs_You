@@ -253,3 +253,7 @@
 {"watch": 1, "turn": 47, "type": "TURN", "stardate": 41175.462, "present": ["player", "troi"], "speakers": ["troi"], "addressed": {"player": 3}, "initiated": ["troi"], "transcript": "watch-001.md#turn-47"}
 {"watch": 1, "turn": 47, "type": "DID", "decision": "Of course Counselor, I'll add that in. (revised note with her line)", "changed": "the note is ready for Picard (F-071); Troi asks for the off-duty word after his shift, place his to choose", "distance": {}}
 {"watch": 1, "turn": 47, "type": "MOVED", "by": "troi", "what": "set the off-duty word for after his shift", "cause": "npc:troi"}
+{"watch": 1, "turn": 48, "type": "TURN", "stardate": 41175.463, "present": ["player", "troi"], "speakers": ["troi"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-48", "lore_touch": [{"what": "Ten Forward in use in 2364", "layer": "history-pre"}]}
+{"watch": 1, "turn": 48, "type": "LORECHECK", "claim": "Ten Forward exists aboard in 2364, with no Guinan yet", "layer": "history-pre", "verdict": "consistent", "cards": ["K-002", "K-003"], "divergence": [], "agent": false}
+{"watch": 1, "turn": 48, "type": "DID", "decision": "Ten Forward nineteen hundred? Or if you'd prefer something more private.", "changed": "Troi chooses Ten Forward at 1900, deliberately public", "distance": {}}
+{"watch": 1, "turn": 48, "type": "DECIDED", "by": "troi", "what": "Ten Forward, 1900, a window table, because it is public", "without_player": false}

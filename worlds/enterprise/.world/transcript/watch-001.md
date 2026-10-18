@@ -535,3 +535,9 @@ Troi reads the new line where it sits, and nods once.
 You're at the door when she speaks again, in the same even voice, though she's looking at the names on her screen and not at you.
 
 "Will. After your shift." A small pause. "Somewhere that isn't an office."
+
+## turn 48
+
+She considers it, which takes a moment longer than it should.
+
+"Ten Forward." She looks up at last. "Nineteen hundred, a table by the window. Half the ship will see the first officer and the counselor having a drink and talking." Something in her face says she has thought this through. "That's rather the point."
