@@ -733,3 +733,13 @@ Fifteen twenty-eight. Stardate 41175.56. Warp eight, Hesker IV a little over thi
 ## turn 71
 
 "It is, Commander." Data turns from ops. "I sent the complete file to the captain at thirteen forty-two, when Geordi's account was finished. It contains the optical and sensor comparison, Geordi's account in his own words, and the observation about the clothing." A small pause. "I have not added anything since. There has been nothing to add."
+
+## turn 72
+
+The afternoon goes the way ship's business goes. Duty rosters for beta and gamma. A request from the transporter chief to recalibrate pad three, approved. A stores query, answered. At fifteen forty-eight Data reports cargo bay four empty, and two minutes later engineering acknowledges.
+
+At sixteen hundred the bridge changes shift around you. A beta-shift ensign takes the conn from La Forge, who collects a toolkit he must have brought up earlier and left behind the aft stations, nods to you, and is gone into the turbolift before anyone can find him something else to do. Worf takes tactical from the relief lieutenant with a word you don't catch.
+
+Data stays where he is. "Commander. I am scheduled for the long-range sensor calibration on beta shift, from the science station. If you are leaving the bridge, Lieutenant Worf could hold it, or I could defer the calibration."
+
+At tactical, Worf has gone very still in the way of a man trying not to look as though he wants something.

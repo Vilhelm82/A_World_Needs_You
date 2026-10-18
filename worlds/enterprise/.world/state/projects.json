@@ -239,13 +239,13 @@
     },
     {
      "name": "clear the bay",
-     "status": "doing",
-     "needs": "cargo transporters, an operator assigned by Data; done about 1545; the eleven owners told by Lloyd",
+     "status": "done",
+     "needs": "cargo bay four empty at 1548",
      "cost": "cargo moved elsewhere"
     },
     {
      "name": "seal and fit the bay",
-     "status": "todo",
+     "status": "doing",
      "needs": "MacDougal's own people, eighteen hours from when the bay is empty; Lloyd clears the bay",
      "cost": "a cargo bay out of use"
     },
