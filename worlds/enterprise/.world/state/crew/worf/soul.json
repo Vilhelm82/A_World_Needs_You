@@ -31,7 +31,7 @@
    "trust"
   ],
   "toward": {
-   "player": "Has watched him from relief stations only. Withholds judgment.",
+   "player": "Gave him the bridge on his first beta shift under this XO. Respect, guarded. The tribble joke noted.",
    "yar": "Respects her; the only one aboard who spars properly.",
    "picard": "His captain."
   }
@@ -69,7 +69,7 @@
   "beta": "bridge relief",
   "gamma": "holodeck exercise programme"
  },
- "location": "bridge",
+ "location": "bridge, in command",
  "access": {
   "areas": [
    "bridge",

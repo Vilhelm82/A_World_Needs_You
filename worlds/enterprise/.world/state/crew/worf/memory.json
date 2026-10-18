@@ -3,9 +3,17 @@
   "F-001",
   "F-002"
  ],
- "beliefs": [],
+ "beliefs": [
+  {
+   "about": "player",
+   "belief": "He gave me the bridge without hesitating. The joke was a test of temper, or merely a joke. I did not rise to it.",
+   "from": "witnessed",
+   "at": 41175.602
+  }
+ ],
  "recent": [
   "Farpoint",
-  "beta shift: tactical"
+  "beta shift: tactical",
+  "the first officer gave him the bridge on beta shift; made a joke about tribbles"
  ]
 }

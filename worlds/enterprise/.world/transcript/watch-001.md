@@ -743,3 +743,17 @@ At sixteen hundred the bridge changes shift around you. A beta-shift ensign take
 Data stays where he is. "Commander. I am scheduled for the long-range sensor calibration on beta shift, from the science station. If you are leaving the bridge, Lieutenant Worf could hold it, or I could defer the calibration."
 
 At tactical, Worf has gone very still in the way of a man trying not to look as though he wants something.
+
+## turn 73
+
+"Aye, Commander." Data rises for the science station.
+
+Worf comes out from behind tactical as though the deck has been raised an inch under him. "Aye, sir." He stands beside the centre seat, not yet in it.
+
+At the word *tribbles*, his jaw sets.
+
+You're in the turbolift before he answers, and when you turn, he is still standing exactly where he was, looking at you down the length of the bridge as the doors begin to close.
+
+"There are no tribbles," Worf says, with great dignity, "in this sector."
+
+The doors meet.
