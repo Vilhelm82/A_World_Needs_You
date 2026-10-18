@@ -309,7 +309,7 @@
     {
      "name": "Lloyd drafts",
      "status": "done",
-     "needs": "drafted (compressed): a medical call, the ship is healthy, no decision yet on patients aboard",
+     "needs": "drafted: F-070",
      "cost": "minutes"
     },
     {
