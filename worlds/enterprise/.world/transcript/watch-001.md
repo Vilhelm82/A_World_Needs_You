@@ -507,3 +507,7 @@ The ready room doors stay shut. At ops, Data's fingers pause over a readout. "Th
 "Aye, Commander. I have the bridge." Data rises from ops and takes the centre seat, settling into it upright, from the front.
 
 The turbolift doors close on La Forge watching him do it.
+
+## turn 45
+
+*"Troi here."* A short pause. *"My office. I'm reading the colony's reports. The names of the six." Another pause, shorter. "Come down, Will. I'll read it now."*

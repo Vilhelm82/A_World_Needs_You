@@ -245,3 +245,5 @@
 {"watch": 1, "turn": 43, "type": "MOVED", "by": "data", "what": "the cargo move under way: first personal effects in bay two", "cause": "world"}
 {"watch": 1, "turn": 44, "type": "TURN", "stardate": 41175.454, "present": ["player", "laforge", "data", "crowd:relief-tactical-lieutenant"], "speakers": ["data"], "addressed": {"player": 1}, "initiated": [], "transcript": "watch-001.md#turn-44"}
 {"watch": 1, "turn": 44, "type": "DID", "decision": "Mr Data, you have the bridge, I will return shortly.", "changed": "Data has the bridge; Lloyd leaves", "distance": {}}
+{"watch": 1, "turn": 45, "type": "TURN", "stardate": 41175.455, "present": ["player", "troi"], "speakers": ["troi"], "addressed": {"player": 2}, "initiated": [], "transcript": "watch-001.md#turn-45"}
+{"watch": 1, "turn": 45, "type": "DID", "decision": "Lloyd to Troi. I've got the ship-wide note for the Hesker mission. The captain wants you to read it first. Where can I find you?", "changed": "the draft exists (compressed); Troi is in her office reading the names of the dead and will read it now", "distance": {}}

@@ -308,13 +308,13 @@
    "stages": [
     {
      "name": "Lloyd drafts",
-     "status": "todo",
-     "needs": "Lloyd",
+     "status": "done",
+     "needs": "drafted (compressed): a medical call, the ship is healthy, no decision yet on patients aboard",
      "cost": "minutes"
     },
     {
      "name": "Troi reads it for the family decks",
-     "status": "todo",
+     "status": "doing",
      "needs": "Troi",
      "cost": "minutes"
     },
