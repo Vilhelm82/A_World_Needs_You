@@ -261,3 +261,7 @@
 {"watch": 1, "turn": 49, "type": "TOLD", "to": ["picard"], "fact": "F-071"}
 {"watch": 1, "turn": 49, "type": "DID", "decision": "Nineteen hundred. By the window. Send the note to Picard.", "changed": "Picard approves the note; it's Lloyd's to send", "distance": {}}
 {"watch": 1, "turn": 49, "type": "DECIDED", "by": "picard", "what": "approved the ship-wide note", "without_player": false}
+{"watch": 1, "turn": 50, "type": "TURN", "stardate": 41175.47, "present": ["player", "reyhan", "crowd:schoolchildren"], "speakers": ["crowd:computer", "reyhan", "crowd:schoolchildren", "crowd:girl-at-front-table"], "addressed": {"player": 3, "crowd:schoolchildren": 2}, "initiated": ["reyhan", "crowd:girl-at-front-table"], "transcript": "watch-001.md#turn-50", "lore_touch": [{"what": "computer locate by voice; a ship's school with children aboard", "layer": "rules"}]}
+{"watch": 1, "turn": 50, "type": "LORECHECK", "claim": "the computer locates a crew member on request; the ship has a school and children", "layer": "rules", "verdict": "consistent", "cards": ["K-021"], "divergence": [], "agent": false, "note": "law.md: families and children aboard"}
+{"watch": 1, "turn": 50, "type": "DID", "decision": "Send the note out ship-wide, then locate Mr. Reyhan and head there.", "changed": "the note is out (1412); Lloyd is at Reyhan's classroom", "distance": {}}
+{"watch": 1, "turn": 50, "type": "MOVED", "by": "crowd:crew", "what": "the crew read the ship-wide note", "cause": "player"}

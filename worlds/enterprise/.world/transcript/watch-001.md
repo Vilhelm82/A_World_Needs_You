@@ -547,3 +547,23 @@ She considers it, which takes a moment longer than it should.
 The turbolift is still two sections away when your padd chimes.
 
 *Approved. The counselor's line is well judged. Send it. — P.*
+
+## turn 50
+
+The note goes out at fourteen twelve. You can hear it land: two crewmen in the turbolift both glance at their padds at once.
+
+"Computer, locate Tomas Reyhan."
+
+*"Tomas Reyhan is in the ship's school, classroom two."*
+
+The school is a run of bright rooms with low tables and the sound of children in them. Classroom two's door is open. A dozen eight-year-olds are bent over trays of soil, and a broad, grey-haired man is walking between them saying, unhurriedly, "Not that deep. Seeds want to know which way is up."
+
+He sees you in the doorway and doesn't stop walking. A padd sits face up on his desk, with your note on it.
+
+Twelve heads turn the way his did.
+
+"Children," Reyhan says, "this is Commander Lloyd, the first officer. Say good afternoon."
+
+"*Good afternoon, Commander Lloyd*," says the room, nearly together.
+
+A girl at the front table, soil to her wrists, looks at you with great seriousness. "Are you the one who parks the saucer?"

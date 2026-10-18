@@ -1,0 +1,88 @@
+{
+ "id": "reyhan",
+ "name": "Tomas Reyhan",
+ "rank": "civilian",
+ "post": "teacher, ship's school (younger classes); formerly an emergency paramedic",
+ "tier": "recurring",
+ "created_at": 41175.47,
+ "persona": {
+  "values": [
+   "being useful",
+   "his daughter",
+   "telling children the truth at their size"
+  ],
+  "traits": [
+   "unhurried",
+   "watchful",
+   "dry",
+   "keeps his voice level by habit"
+  ],
+  "tired_of": "being introduced as the teacher who used to be a paramedic",
+  "wrong_about": "that twelve years out of emergency work has made his skills useless",
+  "cares_about": "his daughter Nadia, eight, and the garden he keeps in a hydroponics corner of their quarters"
+ },
+ "regard": {
+  "gives_freely": [
+   "warmth",
+   "candour"
+  ],
+  "gives_rarely": [
+   "praise",
+   "anger"
+  ],
+  "toward": {
+   "player": "Never met him. Read his note ten minutes ago."
+  }
+ },
+ "routing": {
+  "school": [],
+  "medical": [
+   "crusher"
+  ]
+ },
+ "agenda": [
+  {
+   "goal": "Keep Nadia's life ordinary aboard a ship that keeps going places",
+   "next_step": "finish the afternoon class",
+   "horizon": "week"
+  },
+  {
+   "goal": "Decide whether to work in sickbay for Hesker IV",
+   "next_step": "talk to his wife, Lt. Amira Reyhan (stellar cartography), tonight",
+   "horizon": "shift"
+  }
+ ],
+ "relationships": {
+  "player": "The first officer; met today."
+ },
+ "schedule": {
+  "alpha": "the school, younger classes",
+  "beta": "quarters with Nadia",
+  "gamma": "sleeps"
+ },
+ "location": "school",
+ "access": {
+  "areas": [
+   "school",
+   "crew-quarters",
+   "ten-forward",
+   "holodecks",
+   "science-labs"
+  ],
+  "systems": [
+   "replicators"
+  ],
+  "codes": [],
+  "skills": [
+   "emergency-medicine",
+   "triage",
+   "teaching"
+  ]
+ },
+ "roles": [],
+ "competence": {
+  "deduction": "medium",
+  "instruments": "a paramedic's eye for who is about to go wrong"
+ },
+ "voice": "voice.md"
+}

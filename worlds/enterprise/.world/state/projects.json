@@ -325,7 +325,7 @@
      "cost": "minutes"
     }
    ],
-   "status": "active",
+   "status": "done",
    "precedents": [],
    "started_at": 41175.452
   }
