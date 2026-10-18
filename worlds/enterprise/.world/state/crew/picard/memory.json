@@ -39,6 +39,12 @@
    "belief": "Prepares for my decision without presuming it. And wants to be in the council chamber; he must remember he is a guest there.",
    "from": "witnessed",
    "at": 41175.395
+  },
+  {
+   "about": "player",
+   "belief": "He sees the ship's mood before it reaches me. Useful. The families are precisely what I'd rather not manage.",
+   "from": "witnessed",
+   "at": 41175.452
   }
  ],
  "recent": [
@@ -56,6 +62,7 @@
   "Number One vouched for La Forge: saw Q through the VISOR, noticed something wrong, cleared by MacDougal",
   "La Forge's VISOR account of Q, via Number One; ordered it into Data's file in La Forge's own words",
   "Data's Q file arrived, with La Forge's account",
-  "signed Number One's request to Starfleet Medical"
+  "signed Number One's request to Starfleet Medical",
+  "Number One proposes a ship-wide note on Hesker IV before rumour; told him to draft it, Troi to see it first, then him"
  ]
 }

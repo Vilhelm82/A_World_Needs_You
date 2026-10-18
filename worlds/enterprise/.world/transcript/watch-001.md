@@ -491,3 +491,9 @@ Your terminal chimes twice before he's finished. The first reply reads: *Thank y
 The reply comes back inside a minute.
 
 *Understood, sir. Thanks for the straight answer. Patients aboard, though. Good to know. — R. Petrakis*
+
+## turn 42
+
+The reply from the ready room is three lines.
+
+*Agreed. Draft it. Counselor Troi should read it before I do; it will be read on the family decks, and she will know how. Then send it to me. — Picard*

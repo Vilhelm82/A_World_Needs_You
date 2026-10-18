@@ -294,6 +294,40 @@
     "P-014"
    ],
    "started_at": 41175.415
+  },
+  {
+   "id": "J-009",
+   "title": "Ship-wide note on Hesker IV",
+   "owner": "player",
+   "collaborators": [
+    "troi",
+    "picard"
+   ],
+   "kind": "duty",
+   "goal": "a brief ship-wide note: a medical call, the ship is healthy, no decision yet on bringing patients aboard; before rumour gets there first",
+   "stages": [
+    {
+     "name": "Lloyd drafts",
+     "status": "todo",
+     "needs": "Lloyd",
+     "cost": "minutes"
+    },
+    {
+     "name": "Troi reads it for the family decks",
+     "status": "todo",
+     "needs": "Troi",
+     "cost": "minutes"
+    },
+    {
+     "name": "Picard reads and approves",
+     "status": "todo",
+     "needs": "Picard",
+     "cost": "minutes"
+    }
+   ],
+   "status": "active",
+   "precedents": [],
+   "started_at": 41175.452
   }
  ]
 }
