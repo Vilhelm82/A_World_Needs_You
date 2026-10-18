@@ -595,3 +595,9 @@ He turns the cloth over in his hands. "Twelve years. I've kept my certifications
 Behind him, a child's voice rises: "*He's* drowning his!"
 
 "Excuse me," Reyhan says, and goes back in.
+
+## turn 53
+
+*"Crusher."* You can hear sickbay behind her: a console chirping, someone asking for a hypospray. *"Shipboard is exactly where I'd want him. Someone who's done triage, minding the ward while I'm down there. Thank you, Will."*
+
+*"Nothing from Dr. Juuso yet."* A pause. *"And while I have you. Wesley has checked his messages roughly every five minutes since this morning. I'm not asking you to say yes. I'm asking you to say something, before he wears out the terminal."*
