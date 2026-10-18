@@ -511,3 +511,17 @@ The turbolift doors close on La Forge watching him do it.
 ## turn 45
 
 *"Troi here."* A short pause. *"My office. I'm reading the colony's reports. The names of the six." Another pause, shorter. "Come down, Will. I'll read it now."*
+
+## turn 46
+
+The counselor's office is softer than anywhere else on the ship has had time to become: low seats, a wall of something green and living, a dish of something dark on the corner of the desk that she moves, without comment, behind the terminal as you come in.
+
+The screen still shows the colony's report. Six names, with ages beside them. The youngest is four.
+
+Troi takes the padd and reads the note through once, then again more slowly, her thumb resting on the edge.
+
+"It's honest," she says. "It tells them what we know." She looks up. "It doesn't tell them what they'll be afraid of. Every parent on this ship will read 'patients' and think 'my child's school is two decks from that cargo bay'."
+
+She taps the place where she'd put it. "One line. That if the captain decides to bring anyone aboard, they'll be kept entirely apart from the ship's air and its people, and that the school and the family quarters aren't affected." A pause. "And that my door is open. Some of them will want to say it out loud to someone before they can stop worrying about it."
+
+She hands it back. "Otherwise, send it to him. It's good, Will."

@@ -584,6 +584,17 @@
    "surfaced_at": null,
    "source": "truth: word spreading",
    "created_at": 41175.449
+  },
+  {
+   "id": "F-069",
+   "statement": "Troi on the ship-wide note: honest, tells the crew what is known, but not what parents will be afraid of. She wants one more line: that if the captain decides to bring patients aboard, they will be kept entirely apart from the ship's air and people, and that children's school and quarters are unaffected; and a line that the counselor's office is open to anyone with questions. The youngest of the six dead on Hesker IV was four.",
+   "known_by": [
+    "troi",
+    "player"
+   ],
+   "surfaced_at": 41175.46,
+   "source": "Troi; Juuso's reports",
+   "created_at": 41175.46
   }
  ]
 }
