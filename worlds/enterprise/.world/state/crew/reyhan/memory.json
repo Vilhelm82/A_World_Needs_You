@@ -1,6 +1,7 @@
 {
  "learned": [
-  "F-072"
+  "F-072",
+  "F-073"
  ],
  "beliefs": [
   {
@@ -8,11 +9,18 @@
    "belief": "Waited for the planting. Got down to Nadia's height without making a show of it. That's not nothing.",
    "from": "witnessed",
    "at": 41175.48
+  },
+  {
+   "about": "player",
+   "belief": "He did ask. Sideways, but honestly. Told me the worst of it first.",
+   "from": "witnessed",
+   "at": 41175.483
   }
  ],
  "recent": [
   "read the first officer's ship-wide note",
   "teaching the eight-year-olds about seeds",
-  "the first officer crouched to Nadia's height and answered her about the saucer; waited for the planting"
+  "the first officer crouched to Nadia's height and answered her about the saucer; waited for the planting",
+  "the first officer laid it out and left it to him; answer in the morning after talking to Amira"
  ]
 }

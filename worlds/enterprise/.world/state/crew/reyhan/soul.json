@@ -48,7 +48,7 @@
   },
   {
    "goal": "Decide whether to work in sickbay for Hesker IV",
-   "next_step": "talk to his wife, Lt. Amira Reyhan (stellar cartography), tonight",
+   "next_step": "talk to Amira tonight; answer the first officer in the morning: sickbay or the ward aboard, not the surface",
    "horizon": "shift"
   }
  ],

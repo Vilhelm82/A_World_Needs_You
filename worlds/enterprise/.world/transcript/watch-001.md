@@ -581,3 +581,17 @@ It takes him six more minutes to see the last seed covered and the trays watered
 He leaves the door open so he can see in.
 
 "That's my daughter. The fast one." He folds the cloth. "You're here about the note, Commander. Or about my file. I'd guess both."
+
+## turn 52
+
+Reyhan hears all of it without interrupting. When you look at Nadia, so does he.
+
+"You did ask, you know," he says at last. "Just sideways." It isn't a complaint. "And you told me the worst of it first. People mostly don't."
+
+He turns the cloth over in his hands. "Twelve years. I've kept my certifications current, but that isn't the same as having your hands do it without asking you first. I'd be slower than I was." A glance into the classroom. "And not down there. If I say yes, it's sickbay, or your cargo bay. Somewhere I come home from at the end of the shift."
+
+"I'll talk to Amira tonight. My wife; she's in stellar cartography." He tucks the cloth into his belt. "You'll have an answer in the morning, Commander. Either way."
+
+Behind him, a child's voice rises: "*He's* drowning his!"
+
+"Excuse me," Reyhan says, and goes back in.

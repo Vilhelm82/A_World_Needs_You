@@ -629,6 +629,17 @@
    "surfaced_at": 41175.47,
    "source": "ship-wide message",
    "created_at": 41175.47
+  },
+  {
+   "id": "F-073",
+   "statement": "Reyhan: twelve years out of emergency work, his hands out of date, he thinks. If he says yes, it will be to sickbay or the ward aboard, not the surface. He will talk to his wife, Lt. Amira Reyhan of stellar cartography, tonight, and give Lloyd an answer in the morning.",
+   "known_by": [
+    "reyhan",
+    "player"
+   ],
+   "surfaced_at": 41175.483,
+   "source": "Reyhan",
+   "created_at": 41175.483
   }
  ]
 }
