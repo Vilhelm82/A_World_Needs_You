@@ -623,3 +623,13 @@ And, thirty seconds later, a second one:
 Data rises from the centre seat as the turbolift opens. "Commander. The bridge is yours." He returns to ops and reports on his way there, in order. "Cargo bay four is forty per cent cleared; the personal effects are all in bay two. Course and speed unchanged. Nothing yet from Hesker IV." A small pause. "Since your note went out, the counselor's office has received four messages. I assume that was intended."
 
 At conn, La Forge's shoulders move in something like a laugh.
+
+## turn 57
+
+"Nothing on the VISOR, sir. Standing order's noted." La Forge half turns, grinning. "Just Data. *I assume that was intended.* He's getting the hang of us."
+
+Data considers this. "Am I?"
+
+"Little bit."
+
+Data appears to file it. "Thank you, Geordi." He returns to his board.
