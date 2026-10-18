@@ -689,3 +689,11 @@ Thirty-three cases now. Ten critical, in twelve beds. No more deaths.
 And at the end: *I do not dispute that the virus is found in stool. I dispute that it is ours. Nothing we brought does this.* The council meets the day after you arrive, to vote on burning the reedflies' breeding grounds. *I would welcome Starfleet's support. What I need from you is hearts.*
 
 *"Upstream,"* Crusher says over the channel. *"The herds are upstream of the camp."*
+
+## turn 65
+
+*"Then the samples will tell us whose it is."* Crusher sounds almost relieved to have someone keep the door open on Juuso's side. *"Above the herds, below the herds, the animals. I'll have Vantongeren's sequencer packed tonight."*
+
+*"I'll ask her about the four outside the Ninth. That's another hour and a half each way, near enough."* A pause, and the sound of her moving across sickbay. *"Hearts. All right. Sickbay has two portable cardiac support units. I want six more replicated before we arrive, and every one checked before it goes near a child, because I'm not trusting a replicated device on a four-year-old's heart without testing it."*
+
+*"Which means replicator time. And Commander MacDougal has the replicators making power cells."* She lets that sit. *"I'm not going to fight her for them. That's what you're for."*

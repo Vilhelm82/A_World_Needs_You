@@ -735,6 +735,27 @@
    "surfaced_at": 41175.52,
    "source": "Picard",
    "created_at": 41175.52
+  },
+  {
+   "id": "F-082",
+   "statement": "The four cases outside the Ninth: two in Javri households with relatives on the Ninth who visited the summer camp; one a Javri trader who buys cheese and milk from the Ninth's siidas for the town market; one a Javri child of six with no tie to the Ninth that anyone has found, whose family buys at that market.",
+   "known_by": [
+    "juuso"
+   ],
+   "surfaced_at": null,
+   "source": "truth: Juuso's case notes",
+   "created_at": 41175.525
+  },
+  {
+   "id": "F-083",
+   "statement": "Crusher's needs for the ten critical patients: replicator time for six portable cardiac support units (sickbay has two), each needing a stability check before use; the captain's decision on bringing patients aboard, which waits on a sample under her microscope on arrival; and the isolation ward. She will ask Juuso about the cases outside the Ninth.",
+   "known_by": [
+    "crusher",
+    "player"
+   ],
+   "surfaced_at": 41175.525,
+   "source": "Crusher",
+   "created_at": 41175.525
   }
  ]
 }

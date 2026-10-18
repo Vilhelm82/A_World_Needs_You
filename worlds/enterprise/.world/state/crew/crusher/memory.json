@@ -13,7 +13,8 @@
   "F-061",
   "F-073",
   "F-056",
-  "F-080"
+  "F-080",
+  "F-083"
  ],
  "beliefs": [
   {
@@ -39,6 +40,12 @@
    "belief": "Asked the right question about the stool before I did. He's serious.",
    "from": "witnessed",
    "at": 41175.37
+  },
+  {
+   "about": "player",
+   "belief": "Keeps Juuso's theory open while he tests mine. That's how it should be done.",
+   "from": "witnessed",
+   "at": 41175.525
   }
  ],
  "recent": [
@@ -50,6 +57,7 @@
   "Picard: no patients aboard until she's seen it under a microscope",
   "Reyhan may cover sickbay while her team is down; answer by morning; nothing from Juuso yet",
   "Will promised Wesley a message worth the wait; reminded him the bridge is Jean-Luc's to give",
-  "Juuso's reply: stream below the herds; 33 cases, 10 critical; burn vote the day after arrival; forwarded to Lloyd"
+  "Juuso's reply: stream below the herds; 33 cases, 10 critical; burn vote the day after arrival; forwarded to Lloyd",
+  "asked Juuso about the cases outside the Ninth; asked Lloyd for replicator time for six cardiac support units"
  ]
 }

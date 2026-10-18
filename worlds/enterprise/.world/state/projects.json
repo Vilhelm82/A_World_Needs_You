@@ -358,6 +358,35 @@
    "status": "active",
    "precedents": [],
    "started_at": 41175.49
+  },
+  {
+   "id": "J-011",
+   "title": "Cardiac support units",
+   "owner": "crusher",
+   "collaborators": [
+    "player"
+   ],
+   "kind": "duty",
+   "goal": "six portable cardiac support units replicated and stability-checked before arrival (sickbay has two)",
+   "stages": [
+    {
+     "name": "replicator time",
+     "status": "todo",
+     "needs": "Lloyd: replicators are busy with purifier power cells (J-006)",
+     "cost": "competes with the cells"
+    },
+    {
+     "name": "stability check each unit",
+     "status": "todo",
+     "needs": "sickbay",
+     "cost": "hours; some may fail (P-004 by analogy)"
+    }
+   ],
+   "status": "active",
+   "precedents": [
+    "P-004"
+   ],
+   "started_at": 41175.525
   }
  ]
 }
