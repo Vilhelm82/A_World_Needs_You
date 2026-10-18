@@ -243,3 +243,5 @@
 {"watch": 1, "turn": 42, "type": "DECIDED", "by": "picard", "what": "a ship-wide note on Hesker IV, drafted by Lloyd, read by Troi, then by him", "without_player": false}
 {"watch": 1, "turn": 43, "type": "TURN", "stardate": 41175.453, "present": ["player", "laforge", "data", "crowd:relief-tactical-lieutenant"], "speakers": ["data"], "addressed": {}, "initiated": ["data"], "transcript": "watch-001.md#turn-43"}
 {"watch": 1, "turn": 43, "type": "MOVED", "by": "data", "what": "the cargo move under way: first personal effects in bay two", "cause": "world"}
+{"watch": 1, "turn": 44, "type": "TURN", "stardate": 41175.454, "present": ["player", "laforge", "data", "crowd:relief-tactical-lieutenant"], "speakers": ["data"], "addressed": {"player": 1}, "initiated": [], "transcript": "watch-001.md#turn-44"}
+{"watch": 1, "turn": 44, "type": "DID", "decision": "Mr Data, you have the bridge, I will return shortly.", "changed": "Data has the bridge; Lloyd leaves", "distance": {}}

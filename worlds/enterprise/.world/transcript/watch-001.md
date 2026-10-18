@@ -501,3 +501,9 @@ The reply from the ready room is three lines.
 ## turn 43
 
 The ready room doors stay shut. At ops, Data's fingers pause over a readout. "The first crate of personal effects has arrived in cargo bay two," he reports, to no one in particular.
+
+## turn 44
+
+"Aye, Commander. I have the bridge." Data rises from ops and takes the centre seat, settling into it upright, from the front.
+
+The turbolift doors close on La Forge watching him do it.
