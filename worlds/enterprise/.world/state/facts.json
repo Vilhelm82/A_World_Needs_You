@@ -784,6 +784,14 @@
    "surfaced_at": 41175.75,
    "source": "Juuso (chronicle 010)",
    "created_at": 41175.75
+  },
+  {
+   "id": "F-086",
+   "statement": "Lt. Imra Vasquez wears operations gold because she is an operations officer assigned to maintain stellar cartography's sensor arrays, not a science officer; her son, eight, is in the ship's school.",
+   "known_by": [],
+   "surfaced_at": null,
+   "source": "truth: accounts for the uniform colour as told at turn 82",
+   "created_at": 41175.772
   }
  ]
 }
